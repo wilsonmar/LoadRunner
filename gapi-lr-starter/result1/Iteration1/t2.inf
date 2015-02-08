@@ -1,0 +1,10 @@
+[t2]
+SnapshotXmlFile=snapshot_2.xml
+ContentType=DummyContentType
+StepName=Custom Request: Shorten
+Total=1
+FileName1=t2.UNK
+RequestHeaderFile=t2_RequestHeader.txt
+ResponseHeaderFile=t2_ResponseHeader.txt
+RequestBodyFile=t2_RequestBody.txt
+URL1=file:
