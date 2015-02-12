@@ -31,6 +31,7 @@
 	// NOTE: No semicolon after static definitions.
 	
 //// Compiler directies used to reduce the szie of compiled executables (so more memory is available for more vusers instead of programs):
+	
 
 //// Run-Time Settings Attributes or command-line LPCSTR (LoadRunner Pointer C Strings) and associated variables:
 
@@ -94,6 +95,7 @@
 #ifdef  GEN_QR
 	LPCSTR			LPCSTR_SaveImageYN; // controls whether to get/get_google_short_url_qrcode_qrcode();
 	char*			       SaveImageYN_default="N";
+	char*			       strOutputLogFolder;
 #endif // GEN_QR
 
 //// Global variables:
@@ -102,7 +104,7 @@
 	unsigned int	original_log_option;
 	char 			global_unique_id[128]=""; 
 
-	// For use by wi_end_transaction():
+	// For update by wi_end_transaction():
 	int 			  intHttpRetCode;
 	int 			  intHttpMilliseconds;
 	float 			floatHttpMilliseconds;
@@ -153,8 +155,8 @@ int wi_set_unique_id(){
 
 	// NOTE: When run in VuGen: Controller=None, host=%MACHINENAME%, ScenarioID=0, vuser_group=None, iVuserID=-1.
   	wi_startPrintingInfo();
-	lr_output_message(">> Controller=%s, Host=%s, ScenarioID=%d, Group=%s, Vuser=%d." 
-  	                  ,my_controller_name ,my_host ,iScenarioID, vuser_group ,iVuserID );
+	lr_output_message(">> Controller=%s, Host=%s, ScenarioID=%d, Group=%s, Vuser=%d, PID=%d." 
+  	                  ,my_controller_name ,my_host ,iScenarioID, vuser_group ,iVuserID, vuser_pid );
 	wi_stopPrinting();
 	
 	sprintf( global_unique_id,"C%s.H%d.S%s.G%s.U%d.P%d"
@@ -187,8 +189,8 @@ int wi_set_unique_id(){
  */
 int lrlib_get_vuser_pid() {
     int rc=LR_PASS; // return code
-    int pid; // the process id
-    static int is_dll_loaded = FALSE; // A static variable inside a function keeps its value between
+    int pid=0; // the process id (usually 4 digits)
+    static int is_msvcrt_dll_loaded = FALSE; // A static variable inside a function keeps its value between
                                    // invocations. The FALSE value is assigned only on the first
                                    // invocation.
     char* dll_name = "MSVCRT.DLL"; // This DLL contains the _getpid() function. It is a standard
@@ -198,13 +200,13 @@ int lrlib_get_vuser_pid() {
                                    // used by the C++ function, LoadLibrary.
 
     // Only load the DLL the first time this function is called:
-    if (is_dll_loaded == FALSE) {
+    if (is_msvcrt_dll_loaded == FALSE) {
         rc = lr_load_dll(dll_name);
         if (rc != 0) {
             lr_error_message("Error loading %s.", dll_name);
             lr_abort();
         }
-        is_dll_loaded = TRUE;
+        is_msvcrt_dll_loaded = TRUE;
     }
 
     pid = _getpid();
@@ -246,6 +248,14 @@ wi_start_transaction(){
 int wi_end_transaction(){
 	int rc=LR_PASS;
 	
+	/* Defined as globals at top of vuser_init():
+	int 			  intHttpRetCode;
+	int 			  intHttpMilliseconds;
+	float 			floatHttpMilliseconds;
+	int 			  intHttpSize;
+	float 			floatHttpKBytes;
+	*/
+
 	// Using pTransName saved in wi_start_transaction before the transaction:
     lr_end_transaction(lr_eval_string("{pTransName}"),LR_AUTO);
 
@@ -339,6 +349,71 @@ wi_stopPrinting(){
 	return LR_PASS;
 }
 
+
+wi_EncodePlainToOAuth(const char *sIn, char *sOut){
+/*
+ *   wi_EncodePlainToOAuth converts a plain text string to an URL-form string, based on
+ *   http://tools.ietf.org/html/rfc5849#section-3.6
+ *   Characters in the unreserved character set as defined by
+ *   http://www.faqs.org/rfcs/rfc3986.html
+ *   http://tools.ietf.org/html/rfc5849
+ *   [RFC3986], Section 2.3 (ALPHA, DIGIT, "-", ".", "_", "~") MUST NOT be encoded.
+ *
+ *   web_convert_param() with "TargetEncoding=URL cannot be used because it has a different encoding scheme
+ *   This method is different from the encoding scheme used by the
+ *   "application/x-www-form-urlencoded" content-type (for example, it
+ *   encodes space characters as "%20" and not using the "+" character).
+ *  
+ *   Implements C library at http://liboauth.sourceforge.net//
+ *   Verify using: http://oauth.googlecode.com/svn/code/javascript/example/signature.html
+ *   https://dev.twitter.com/oauth/overview/percent-encoding-parameters
+ *
+ *   Parameters: sIn  - input string to be encoded to OAuth format
+ *               sOut - output buffer
+ *     Note: the size of "sOut" parameter should be at least equal to triple size
+ *           of "sIn" parameter plus one character(for end-terminator '\0')
+ *
+ *   Author: Wilson Mar 
+ *
+ *   Examples: "a-._~"       -> "a-._~"
+ *             "a b"         -> "a%20b"
+ *             "%&*+="       -> "%25%26%2A%3D"
+ */
+    int i;
+    char cCurChar;
+    char sCurStr[4] = {0};
+    sOut[0] = '\0';
+
+    for (i = 0; cCurChar = sIn[i]; i++){
+        // if this is a digit or an alphabetic letter:
+        if (isdigit(cCurChar) || isalpha(cCurChar)
+                || cCurChar=='-'
+                || cCurChar=='.'
+                || cCurChar=='_'
+                || cCurChar=='~'
+                || cCurChar=='='
+                || cCurChar=='&'
+           ){ // then write the current character "as is":
+            sprintf(sCurStr, "%c", cCurChar);
+        }else if ( cCurChar=='%') {
+        	strcpy(sCurStr,"%25");
+     // }else if ( cCurChar=='&') {
+     //   	strcpy(sCurStr,"%26");
+        }else if ( cCurChar=='*') {
+        	strcpy(sCurStr,"%2A");
+        }else if ( cCurChar=='+') {
+        	strcpy(sCurStr,"%2B");
+        }else if ( cCurChar=='=') {
+        	strcpy(sCurStr,"%3D");
+        }else{ // convert it to hex-form such as "_" -> "%5F" :
+            sprintf(sCurStr, "%%%X", cCurChar);
+        }
+        // append current item to the output string
+        strcat(sOut, sCurStr);
+    }
+    return LR_PASS;
+} // wi_EncodePlainToURL
+
 wi_EncodePlainToURL(const char *sIn, char *sOut){
 /*
  *   wi_EncodePlainToURL converts a plain text string to an URL-form string.
@@ -360,12 +435,11 @@ wi_EncodePlainToURL(const char *sIn, char *sOut){
     sOut[0] = '\0';
 
     for (i = 0; cCurChar = sIn[i]; i++){
-        // if this is a digit or an alphabetic letter
+        // if this is a digit or an alphabetic letter:
         if (isdigit(cCurChar) || isalpha(cCurChar)) {
             // then write the current character "as is"
             sprintf(sCurStr, "%c", cCurChar);
-        }else{
-            // else convert it to hex-form. "_" -> "%5F"
+        }else{ // convert it to hex-form. "_" -> "%5F" :
             sprintf(sCurStr, "%%%X", cCurChar);
         }
         // append current item to the output string
@@ -373,6 +447,7 @@ wi_EncodePlainToURL(const char *sIn, char *sOut){
     }
     return LR_PASS;
 } // wi_EncodePlainToURL
+
 
 int wi_WriteDataToFile(char *szFileName, const char *szBuf, int len){
 	
@@ -569,6 +644,7 @@ vi_set_URLSource_attribute(){
 
 	return LR_PASS;
 } // vi_set_URLSource_attribute()
+
 
 int vi_set_pURLtoShorten_file_recs(){
 	

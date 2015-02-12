@@ -39,11 +39,6 @@
 // Functions in this file are repeated for each Action iteration, defined in the sequence below (in calling hierarchy):
 	// Action()
 
-// Globals:
-		// For use by get_google_short_url_qrcode():
-		char            strFileName[256]; // largest size of file.
-		char           *szBuf;
-		unsigned long   nLength;
 		
 Action(){
 	int rc=LR_PASS;
@@ -61,6 +56,11 @@ Action(){
 		#ifdef GEN_QR
 	   	// FIXME: Code to obtain Windows user Documents folder path (Reg Query "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" |findstr "Personal">>DocPath.dat)
 	   	// TODO: 16. Specify folder where QR code image files (for each short URL) get stored:
+
+				
+		   	strOutputLogFolder=(char *)getenv("TEMP"); // returns zero if valid.
+		  	lr_output_message(">> strOutputLogFolder=%s.", strOutputLogFolder);
+
 		lr_save_string("C:\\Temp\\","pImageFilePath"); // Double back slashes for escaping back slash in get_google_short_url_qrcode().
 		wi_startPrintingInfo();
 	  	lr_output_message(">> pImageFilePath=%s.", lr_eval_string("{pImageFilePath}"));
@@ -75,10 +75,12 @@ Action(){
 		lr_save_string("get_google_short_url" ,"pTransSequence");
 		rc=get_google_short_url(); // to obtain LR parameter {pShortURL} by calling get_google_access_token() which calls get_pJWTAssertion().
 	
-	//FUTURE ENHANCEMENT: Add retrieval of URL shortened:
-	//FUTURE ENHANCEMENT: Add recognition of expired token and get new token using refresh token instead of auth token.
-	//FUTURE ENHANCEMENT: Add other Google APIs, Amazon APIs, etc. using same data:
-	// set_google_other_api();
+	//FUTURE ENHANCEMENTS: 
+	//  Add retrieval of URL shortened:
+	//  Add recognition of expired token and get new token using refresh token instead of auth token.
+	//  Add other Google APIs, Amazon APIs, etc. using same data:
+	//  set_google_other_api();
+	//  Add API calls for other fields in data (email gravatar from MD5, Zip code, lat/long calc, validations, etc.
 	
 	return rc;
 } // Action()

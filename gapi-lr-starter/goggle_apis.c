@@ -263,7 +263,7 @@ update_shorturl_in_VTS(){
 
 get_google_access_token(){
 		int rc=LR_PASS;
-	char sOut[100]; // used by wi_EncodePlainToURL()
+	char sOut[256]; // used by wi_EncodePlainToURL()
 
 	rc=get_pJWTAssertion(); // into parameter pJWTAssertion used by this function.
 	if( rc != LR_PASS ){ return rc; } // No input data to process.
@@ -282,14 +282,25 @@ get_google_access_token(){
 	    web_add_header("X-Frame-Options","deny"); // to protect against drag'n drop clickjacking attacks in older browsers.
 	    web_reg_save_param_ex("ParamName=pAccessToken","LB=\"access_token\" : \"","RB=\"",SEARCH_FILTERS,"Scope=body",LAST);
 
+	    // Example: "Body=grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion={pJWTAssertion}",
+	    wi_EncodePlainToOAuth("grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&assertion=",sOut );
+	    lr_save_string(sOut,"pJWTAssertion_request");
+			wi_startPrintingTrace();
+		    lr_output_message(">> sOut=\"%s\"."
+					,lr_eval_string("{pJWTAssertion_request}")
+					);
+			wi_stopPrinting();
+				
 		// TODO: 15. If you want to, change the transaction name suffix for access authorization requests.
 		sprintf( 	   tempString1, "%s_1access", lr_eval_string("{pTransSequence}") );
 		lr_save_string(tempString1,"pTransName");
 	    wi_start_transaction();
+	    // web_rest("Token",
 	    web_custom_request("Token",
                        "URL=https://accounts.google.com/o/oauth2/token",
                        "Method=POST",
-                       "Body=grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion={pJWTAssertion}",
+                       //"ResType=JSON",
+                       "Body={pJWTAssertion_request}{pJWTAssertion}",
                        LAST);
                        // The %3A are urlencoded from colons. (but %2D for the dash causes an "Invalid request" response):
                        // "Body=grant_type=urn:ietf:params:oauth:grant-type:jwt-bearer&assertion={pJWTAssertion}",
@@ -406,7 +417,10 @@ set_pShortHostKey_from_url(char* strURL){
 #ifdef GEN_QR
 get_google_short_url_qrcode(){
 	int rc=0;
-	
+		char            strFileName[256]; // largest size of file.
+		char           *szBuf;
+		unsigned long   nLength;
+
 	if( stricmp("Y",LPCSTR_SaveImageYN ) == FOUND ){ // Run-time Attribute "SaveImageYN" or command line option "-SaveImageYN"
 	   // continue if SaveImageYN was specified with Y
 	}else{
@@ -433,17 +447,16 @@ get_google_short_url_qrcode(){
     //        HREF="http://chart.googleapis.com/chart?cht=qr&amp;chs=150x150&amp;choe=UTF-8&amp;chld=H&amp;chl=http://goo.gl/x6wUIS">here</A>.\n
     	// &amp; needs to be coverted to & character in URLs.
     	
-		// FIXME: Use variable to extract URL in response from server.
 		// WARNING: The 150x150 in this URL may change over time as more characters are needed for uniqueness.
 		// Previously,  100x100 was being returned:
 		//    "URL={pShortURL}.qr",
-	    //    "URL=chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=H|0&chl={pShortURL}",
 		web_url("imagefile",
 	        "URL=http://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=H&chl={pShortURL}",
 	        "Resource=1",
 	        "RecContentType=image/png",
 	        "Snapshot=t1.inf",
 	        LAST);
+		// FIXME: File created has black box at bottom.
 	
 	    rc = wi_end_transaction();
 
