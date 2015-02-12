@@ -27,10 +27,10 @@
     <FileEntry Name="combined_gapi-lr-starter.c" Filter="2" />
     <FileEntry Name="pre_cci.c" Filter="2" />
     <FileEntry Name=".DS_Store" Filter="1" />
-    <FileEntry Name=".gitignore.txt" Filter="1" />
-    <FileEntry Name="11657093744.idx" Filter="1" />
-    <FileEntry Name="18482839544.idx" Filter="1" />
-    <FileEntry Name="22305124644.idx" Filter="1" />
+    <FileEntry Name=".gitignore" Filter="1" />
+    <FileEntry Name="13722558644.idx" Filter="1" />
+    <FileEntry Name="18923768744.idx" Filter="1" />
+    <FileEntry Name="24446162544.idx" Filter="1" />
     <FileEntry Name="gapi-lr-starter.c.pickle" Filter="1" />
     <FileEntry Name="gapi-lr-starter.ci" Filter="1" />
     <FileEntry Name="gapi-lr-starter.prm.bak" Filter="1" />
@@ -40,7 +40,6 @@
     <FileEntry Name="logfile.log" Filter="1" />
     <FileEntry Name="mdrv.log" Filter="1" />
     <FileEntry Name="mdrv_cmd.txt" Filter="1" />
-    <FileEntry Name="New Text Document.txt" Filter="1" />
     <FileEntry Name="oauthhelper.dll" Filter="1" />
     <FileEntry Name="options.txt" Filter="1" />
     <FileEntry Name="output.bak" Filter="1" />

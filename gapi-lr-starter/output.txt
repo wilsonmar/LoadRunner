@@ -1,13 +1,13 @@
-Virtual User Script started at : 2/10/2015 8:39:30 PM
+Virtual User Script started at : 2/12/2015 6:17:55 AM
 Starting action vuser_init.
 Web Turbo Replay of LoadRunner 12.0.0 for Windows 7; build 2739 (Nov 30 2014 23:13:05)  	[MsgId: MMSG-27143]
 Run mode: HTML  	[MsgId: MMSG-26993]
-Run-Time Settings file: "C:\StrataCare_LoadRunner_Scripts\gapi-lr-starter\\default.cfg"  	[MsgId: MMSG-27141]
-Vuser directory: "C:\StrataCare_LoadRunner_Scripts\gapi-lr-starter"  	[MsgId: MMSG-27052]
-Vuser output directory: "C:\StrataCare_LoadRunner_Scripts\gapi-lr-starter"  	[MsgId: MMSG-27050]
-Operating system's current working directory: "c:\stratacare_loadrunner_scripts\gapi-lr-starter"  	[MsgId: MMSG-27048]
-UTC (GMT) start date/time   : 2015-02-11 03:39:30  	[MsgId: MMSG-26992]
-LOCAL start date/time       : 2015-02-10 20:39:30  	[MsgId: MMSG-26991]
+Run-Time Settings file: "C:\LoadRunner\gapi-lr-starter\\default.cfg"  	[MsgId: MMSG-27141]
+Vuser directory: "C:\LoadRunner\gapi-lr-starter"  	[MsgId: MMSG-27052]
+Vuser output directory: "C:\LoadRunner\gapi-lr-starter"  	[MsgId: MMSG-27050]
+Operating system's current working directory: "c:\loadrunner\gapi-lr-starter"  	[MsgId: MMSG-27048]
+UTC (GMT) start date/time   : 2015-02-12 13:17:55  	[MsgId: MMSG-26992]
+LOCAL start date/time       : 2015-02-12 06:17:55  	[MsgId: MMSG-26991]
 Local daylight-Savings-Time : No  	[MsgId: MMSG-26990]
 Some of the Run-Time Settings:  	[MsgId: MMSG-27142]
     Download non-HTML resources: Yes  	[MsgId: MMSG-27018]
@@ -29,7 +29,7 @@ Some of the Run-Time Settings:  	[MsgId: MMSG-27142]
     Page download timeout (sec): 120  	[MsgId: MMSG-27030]
     Resource Page Timeout is a Warning: No  	[MsgId: MMSG-27029]
     ContentCheck enabled: Yes  	[MsgId: MMSG-27028]
-    ContentCheck script-level file: "C:\StrataCare_LoadRunner_Scripts\gapi-lr-starter\LrwiAedScript.xml"  	[MsgId: MMSG-27027]
+    ContentCheck script-level file: "C:\LoadRunner\gapi-lr-starter\LrwiAedScript.xml"  	[MsgId: MMSG-27027]
     Enable Web Page Breakdown: No  	[MsgId: MMSG-27026]
     Enable connection data points: Yes  	[MsgId: MMSG-27023]
     Process socket after reschedule: Yes  	[MsgId: MMSG-27022]
@@ -43,10 +43,10 @@ Some of the Run-Time Settings:  	[MsgId: MMSG-27142]
     Web recorder version ID: 8  	[MsgId: MMSG-26995]
 vuser_init.c(504): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
 vuser_init.c(504): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
-vuser_init.c(158): >> Controller=None, Host=WIN-HJA4A353DRG, ScenarioID=0, Group=None, Vuser=-1, PID=4072.
+vuser_init.c(158): >> Controller=None, Host=WIN-HJA4A353DRG, ScenarioID=0, Group=None, Vuser=-1, PID=4996.
 vuser_init.c(128): Notify: Saving Parameter "pRunConditions = no imposed impediments".
 vuser_init.c(535): >> Attribute "RunType"=All.
-vuser_init.c(229): >> Attribute floatThinkTimeSecs=100521864.000.
+vuser_init.c(229): >> Attribute floatThinkTimeSecs=100366288.000.
 vuser_init.c(568): >> Attribute "URLSource" not specified in command-line or run-time settings. Default to "2".
 vuser_init.c(652): Notify: Parameter Substitution: parameter "pURL_long" =  "http://www.hp.com"
 vuser_init.c(652): Notify: Saving Parameter "pURLtoShorten_first = http://www.hp.com".
@@ -55,7 +55,7 @@ vuser_init.c(658): Notify: Parameter Substitution: parameter "pURL_long" =  "htt
 vuser_init.c(606): >> nURLtoShorten_file_recs=1.
 vuser_init.c(686): >> Attribute "VTS_Host" not specified in command-line or run-time settings. Default to "localhost".
 vuser_init.c(699): >> Attribute "VTS_Port" not specified in command-line or run-time settings. Default to "8787".
-vuser_init.c(725): >> nVTS_row_count=505.
+vuser_init.c(725): >> nVTS_row_count=5.
 vuser_init.c(626): >> rc=0 from vi_set_VTS3() with status=1 (should=1) when iURLSource_setting=2.
 vuser_init.c(632): >> rc=0 with status=1 (should=1), so iUpdate_shorturl_in_VTS =1 (1=1Yes).
 Ending action vuser_init.
@@ -65,36 +65,37 @@ Warning -27077: The "vuser_init" section contains web function(s) when the "Simu
 Maximum number of concurrent connections per server: 2  	[MsgId: MMSG-26989]
 Starting action Action.
 Action.c(49): Notify: Saving Parameter "pServicePrivateKeyFile = google_urlshortener.p12".
-goggle_apis.c(204): Notify: Saving Parameter "pTimeExpire = 1423625970".
+goggle_apis.c(204): Notify: Saving Parameter "pTimeExpire = 1423747075".
 goggle_apis.c(216): Notify: Parameter Substitution: parameter "pServicePrivateKeyFile" =  "google_urlshortener.p12"
 Action.c(62): >> strOutputLogFolder=C:\Users\WILSON~1\AppData\Local\Temp.
 Action.c(64): Notify: Saving Parameter "pImageFilePath = C:\Temp\".
 Action.c(66): >> pImageFilePath=C:\Temp\.
-goggle_apis.c(509): >> Attribute "SaveImageYN"=Y. QR image files generated from short URLs. [in vuser_init]
+goggle_apis.c(510): >> Attribute "SaveImageYN"=Y. QR image files generated from short URLs. [in vuser_init]
 Action.c(75): Notify: Saving Parameter "pTransSequence = get_google_short_url".
-goggle_apis.c(163): Notify: Saving Parameter "pURLtoShorten = http://www.ingallsdonaldresq.com".
-goggle_apis.c(165): >> row 28 "shorturl" is needed for "web"=http://www.ingallsdonaldresq.com. rc=-10111.
+goggle_apis.c(163): Notify: Saving Parameter "pURLtoShorten = http://www.chanayjeffreyaesq.com".
+goggle_apis.c(165): >> row 2 "shorturl" is needed for "web"=http://www.chanayjeffreyaesq.com. rc=-10111.
 goggle_apis.c(47): Notify: Saving Parameter "pServiceScope = https://www.googleapis.com/auth/urlshortener".
 goggle_apis.c(50): Notify: Parameter Substitution: parameter "pTransSequence" =  "get_google_short_url"
 goggle_apis.c(51): Notify: Saving Parameter "pTransName = get_google_short_url_access".
-goggle_apis.c(337): Notify: Saving Parameter "pTimeNow = 1423625970".
-goggle_apis.c(338): Notify: Parameter Substitution: parameter "pTimeNow" =  "1423625970"
-goggle_apis.c(338): Notify: Parameter Substitution: parameter "pTimeExpire" =  "1423625970"
-goggle_apis.c(348): Notify: Saving Parameter "pTimeExpire = 1423627770".
-goggle_apis.c(352): Notify: Parameter Substitution: parameter "GoogleAPIServiceEmail" =  "467693042906@developer.gserviceaccount.com"
-goggle_apis.c(352): Notify: Parameter Substitution: parameter "pServiceScope" =  "https://www.googleapis.com/auth/urlshortener"
-goggle_apis.c(352): Notify: Parameter Substitution: parameter "pTimeExpire" =  "1423627770"
-goggle_apis.c(352): Notify: Parameter Substitution: parameter "pTimeNow" =  "1423625970"
-goggle_apis.c(352): Notify: Saving Parameter "JWTBody = {"iss":"467693042906@developer.gserviceaccount.com","scope":"https://www.googleapis.com/auth/urlshortener","aud":"https://accounts.google.com/o/oauth2/token","exp":1423627770,"iat":1423625970}".
-goggle_apis.c(365): Notify: Parameter Substitution: parameter "JWTBody" =  "{"iss":"467693042906@developer.gserviceaccount.com","scope":"https://www.googleapis.com/auth/urlshortener","aud":"https://accounts.google.com/o/oauth2/token","exp":1423627770,"iat":1423625970}"
-goggle_apis.c(365): Notify: Saving Parameter "pEncoded = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0Njc2OTMwNDI5MDZAZGV2ZWxvcGVyLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXJsc2hvcnRlbmVyIiwiYXVkIjoiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vb2F1dGgyL3Rva2VuIiwiZXhwIjoxNDIzNjI3NzcwLCJpYXQiOjE0MjM2MjU5NzB9".
-goggle_apis.c(373): Notify: Parameter Substitution: parameter "pEncoded" =  "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0Njc2OTMwNDI5MDZAZGV2ZWxvcGVyLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXJsc2hvcnRlbmVyIiwiYXVkIjoiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vb2F1dGgyL3Rva2VuIiwiZXhwIjoxNDIzNjI3NzcwLCJpYXQiOjE0MjM2MjU5NzB9"
-goggle_apis.c(374): Notify: Parameter Substitution: parameter "pEncoded" =  "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0Njc2OTMwNDI5MDZAZGV2ZWxvcGVyLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXJsc2hvcnRlbmVyIiwiYXVkIjoiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vb2F1dGgyL3Rva2VuIiwiZXhwIjoxNDIzNjI3NzcwLCJpYXQiOjE0MjM2MjU5NzB9"
-goggle_apis.c(374): Notify: Saving Parameter "pJWTAssertion = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0Njc2OTMwNDI5MDZAZGV2ZWxvcGVyLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXJsc2hvcnRlbmVyIiwiYXVkIjoiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vb2F1dGgyL3Rva2VuIiwiZXhwIjoxNDIzNjI3NzcwLCJpYXQiOjE0MjM2MjU5NzB9.cRmHJpx3%2BgFFiWpH8%2FyioYMKeEXJOSN3UeiyUOh3u0IzqoTRnzGJpDxuLT1bD99BFMz%2FGmQd3jnTYIXx6G7PiXodkYHDY%2Fbky8CeiqREifaKgcOAzkbeiwLxOGa64ZZayg4G%2BM91yuj0HyhJ959x2XTGbWlcQbjKnrPq0L0YRb0%3D".
-goggle_apis.c(381): >> JWTBody={"iss":"467693042906@developer.gserviceaccount.com","scope":"https://www.googleapis.com/auth/urlshortener","aud":"https://accounts.google.com/o/oauth2/token","exp":1423627770,"iat":1423625970}.
-goggle_apis.c(384): >> pEncoded=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0Njc2OTMwNDI5MDZAZGV2ZWxvcGVyLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXJsc2hvcnRlbmVyIiwiYXVkIjoiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vb2F1dGgyL3Rva2VuIiwiZXhwIjoxNDIzNjI3NzcwLCJpYXQiOjE0MjM2MjU5NzB9.
-goggle_apis.c(387): >> pJWTAssertion=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0Njc2OTMwNDI5MDZAZGV2ZWxvcGVyLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXJsc2hvcnRlbmVyIiwiYXVkIjoiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vb2F1dGgyL3Rva2VuIiwiZXhwIjoxNDIzNjI3NzcwLCJpYXQiOjE0MjM2MjU5NzB9.cRmHJpx3%2BgFFiWpH8%2FyioYMKeEXJOSN3UeiyUOh3u0IzqoTRnzGJpDxuLT1bD99BFMz%2FGmQd3jnTYIXx6G7PiXodkYHDY%2Fbky8CeiqREifaKgcOAzkbeiwLxOGa64ZZayg4G%2BM91yuj0HyhJ959x2XTGbWlcQbjKnrPq0L0YRb0%3D.
-goggle_apis.c(390): >> signature=cRmHJpx3+gFFiWpH8/yioYMKeEXJOSN3UeiyUOh3u0IzqoTRnzGJpDxuLT1bD99BFMz/GmQd3jnTYIXx6G7PiXodkYHDY/bky8CeiqREifaKgcOAzkbeiwLxOGa64ZZayg4G+M91yuj0HyhJ959x2XTGbWlcQbjKnrPq0L0YRb0=.
+goggle_apis.c(337): Notify: Saving Parameter "pTimeNow = 1423747075".
+goggle_apis.c(338): Notify: Saving Parameter "pTimeNow = 1423747075".
+goggle_apis.c(339): Notify: Parameter Substitution: parameter "pTimeNow" =  "1423747075"
+goggle_apis.c(339): Notify: Parameter Substitution: parameter "pTimeExpire" =  "1423747075"
+goggle_apis.c(349): Notify: Saving Parameter "pTimeExpire = 1423748875".
+goggle_apis.c(353): Notify: Parameter Substitution: parameter "GoogleAPIServiceEmail" =  "467693042906@developer.gserviceaccount.com"
+goggle_apis.c(353): Notify: Parameter Substitution: parameter "pServiceScope" =  "https://www.googleapis.com/auth/urlshortener"
+goggle_apis.c(353): Notify: Parameter Substitution: parameter "pTimeExpire" =  "1423748875"
+goggle_apis.c(353): Notify: Parameter Substitution: parameter "pTimeNow" =  "1423747075"
+goggle_apis.c(353): Notify: Saving Parameter "JWTBody = {"iss":"467693042906@developer.gserviceaccount.com","scope":"https://www.googleapis.com/auth/urlshortener","aud":"https://accounts.google.com/o/oauth2/token","exp":1423748875,"iat":1423747075}".
+goggle_apis.c(366): Notify: Parameter Substitution: parameter "JWTBody" =  "{"iss":"467693042906@developer.gserviceaccount.com","scope":"https://www.googleapis.com/auth/urlshortener","aud":"https://accounts.google.com/o/oauth2/token","exp":1423748875,"iat":1423747075}"
+goggle_apis.c(366): Notify: Saving Parameter "pEncoded = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0Njc2OTMwNDI5MDZAZGV2ZWxvcGVyLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXJsc2hvcnRlbmVyIiwiYXVkIjoiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vb2F1dGgyL3Rva2VuIiwiZXhwIjoxNDIzNzQ4ODc1LCJpYXQiOjE0MjM3NDcwNzV9".
+goggle_apis.c(374): Notify: Parameter Substitution: parameter "pEncoded" =  "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0Njc2OTMwNDI5MDZAZGV2ZWxvcGVyLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXJsc2hvcnRlbmVyIiwiYXVkIjoiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vb2F1dGgyL3Rva2VuIiwiZXhwIjoxNDIzNzQ4ODc1LCJpYXQiOjE0MjM3NDcwNzV9"
+goggle_apis.c(375): Notify: Parameter Substitution: parameter "pEncoded" =  "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0Njc2OTMwNDI5MDZAZGV2ZWxvcGVyLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXJsc2hvcnRlbmVyIiwiYXVkIjoiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vb2F1dGgyL3Rva2VuIiwiZXhwIjoxNDIzNzQ4ODc1LCJpYXQiOjE0MjM3NDcwNzV9"
+goggle_apis.c(375): Notify: Saving Parameter "pJWTAssertion = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0Njc2OTMwNDI5MDZAZGV2ZWxvcGVyLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXJsc2hvcnRlbmVyIiwiYXVkIjoiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vb2F1dGgyL3Rva2VuIiwiZXhwIjoxNDIzNzQ4ODc1LCJpYXQiOjE0MjM3NDcwNzV9.jyxGWzwtapvCK16se32ke7Q7DxDeU39UfkRMT9ctokPSHiX%2BgKcmJObi1aIjJu5KeuxzRY69XjWF1%2FDJmJfRcoKZqu99NUJte8EgWLqC1mm4PuJMWJUmQ3Ux0%2BzCC1Ds%2B0%2FwC70M%2BZVGCkhQGMtq4Ed3wGRVx1zhDdnr%2FkfbOQQ%3D".
+goggle_apis.c(382): >> JWTBody={"iss":"467693042906@developer.gserviceaccount.com","scope":"https://www.googleapis.com/auth/urlshortener","aud":"https://accounts.google.com/o/oauth2/token","exp":1423748875,"iat":1423747075}.
+goggle_apis.c(385): >> pEncoded=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0Njc2OTMwNDI5MDZAZGV2ZWxvcGVyLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXJsc2hvcnRlbmVyIiwiYXVkIjoiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vb2F1dGgyL3Rva2VuIiwiZXhwIjoxNDIzNzQ4ODc1LCJpYXQiOjE0MjM3NDcwNzV9.
+goggle_apis.c(388): >> pJWTAssertion=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0Njc2OTMwNDI5MDZAZGV2ZWxvcGVyLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXJsc2hvcnRlbmVyIiwiYXVkIjoiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vb2F1dGgyL3Rva2VuIiwiZXhwIjoxNDIzNzQ4ODc1LCJpYXQiOjE0MjM3NDcwNzV9.jyxGWzwtapvCK16se32ke7Q7DxDeU39UfkRMT9ctokPSHiX%2BgKcmJObi1aIjJu5KeuxzRY69XjWF1%2FDJmJfRcoKZqu99NUJte8EgWLqC1mm4PuJMWJUmQ3Ux0%2BzCC1Ds%2B0%2FwC70M%2BZVGCkhQGMtq4Ed3wGRVx1zhDdnr%2FkfbOQQ%3D.
+goggle_apis.c(391): >> signature=jyxGWzwtapvCK16se32ke7Q7DxDeU39UfkRMT9ctokPSHiX+gKcmJObi1aIjJu5KeuxzRY69XjWF1/DJmJfRcoKZqu99NUJte8EgWLqC1mm4PuJMWJUmQ3Ux0+zCC1Ds+0/wC70M+ZVGCkhQGMtq4Ed3wGRVx1zhDdnr/kfbOQQ=.
 goggle_apis.c(281): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
 goggle_apis.c(281): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
 goggle_apis.c(281): "Content-Type: application/x-www-form-urlencoded" header registered for adding to requests from the immediately following Action function  	[MsgId: MMSG-26506]
@@ -115,10 +116,10 @@ vuser_init.c(241): web_reg_save_param_ex started  	[MsgId: MMSG-26355]
 vuser_init.c(241): Registering web_reg_save_param_ex was successful  	[MsgId: MMSG-26390]
 goggle_apis.c(299): web_custom_request("Token") started  	[MsgId: MMSG-26355]
 goggle_apis.c(299): Notify: Parameter Substitution: parameter "pJWTAssertion_request" =  "grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion="
-goggle_apis.c(299): Notify: Parameter Substitution: parameter "pJWTAssertion" =  "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0Njc2OTMwNDI5MDZAZGV2ZWxvcGVyLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXJsc2hvcnRlbmVyIiwiYXVkIjoiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vb2F1dGgyL3Rva2VuIiwiZXhwIjoxNDIzNjI3NzcwLCJpYXQiOjE0MjM2MjU5NzB9.cRmHJpx3%2BgFFiWpH8%2FyioYMKeEXJOSN3UeiyUOh3u0IzqoTRnzGJpDxuLT1bD99BFMz%2FGmQd3jnTYIXx6G7PiXodkYHDY%2Fbky8CeiqREifaKgcOAzkbeiwLxOGa64ZZayg4G%2BM91yuj0HyhJ959x2XTGbWlcQbjKnrPq0L0YRb0%3D"
-goggle_apis.c(299): t=1419ms: Connecting [0] to host 216.58.216.141:443  	[MsgId: MMSG-26000]
-goggle_apis.c(299): t=1525ms: Connected socket [0] from 192.168.72.128:2281 to 216.58.216.141:443 in 106 ms  	[MsgId: MMSG-26000]
-goggle_apis.c(299): t=2712ms: 307-byte request headers for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299): Notify: Parameter Substitution: parameter "pJWTAssertion" =  "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0Njc2OTMwNDI5MDZAZGV2ZWxvcGVyLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXJsc2hvcnRlbmVyIiwiYXVkIjoiaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vb2F1dGgyL3Rva2VuIiwiZXhwIjoxNDIzNzQ4ODc1LCJpYXQiOjE0MjM3NDcwNzV9.jyxGWzwtapvCK16se32ke7Q7DxDeU39UfkRMT9ctokPSHiX%2BgKcmJObi1aIjJu5KeuxzRY69XjWF1%2FDJmJfRcoKZqu99NUJte8EgWLqC1mm4PuJMWJUmQ3Ux0%2BzCC1Ds%2B0%2FwC70M%2BZVGCkhQGMtq4Ed3wGRVx1zhDdnr%2FkfbOQQ%3D"
+goggle_apis.c(299): t=1510ms: Connecting [0] to host 216.58.216.141:443  	[MsgId: MMSG-26000]
+goggle_apis.c(299): t=1536ms: Connected socket [0] from 192.168.72.130:1452 to 216.58.216.141:443 in 24 ms  	[MsgId: MMSG-26000]
+goggle_apis.c(299): t=2634ms: 307-byte request headers for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
 goggle_apis.c(299):     POST /o/oauth2/token HTTP/1.1\r\n
 goggle_apis.c(299):     Content-Type: application/x-www-form-urlencoded\r\n
 goggle_apis.c(299):     Cache-Control: no-cache\r\n
@@ -128,90 +129,99 @@ goggle_apis.c(299):     Accept-Encoding: gzip, deflate\r\n
 goggle_apis.c(299):     Accept: */*\r\n
 goggle_apis.c(299):     Connection: Keep-Alive\r\n
 goggle_apis.c(299):     Host: accounts.google.com\r\n
-goggle_apis.c(299):     Content-Length: 553\r\n
+goggle_apis.c(299):     Content-Length: 557\r\n
 goggle_apis.c(299):     \r\n
-goggle_apis.c(299): t=2717ms: 553-byte request body for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299): t=2639ms: 557-byte request body for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
 goggle_apis.c(299):     grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=eyJhbGciOiJSUzI
 goggle_apis.c(299):     1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI0Njc2OTMwNDI5MDZAZGV2ZWxvcGVyLmdzZXJ2aWNlYWNjb3VudC5jb20i
 goggle_apis.c(299):     LCJzY29wZSI6Imh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXJsc2hvcnRlbmVyIiwiYXVkIjoiaHR0cH
-goggle_apis.c(299):     M6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vb2F1dGgyL3Rva2VuIiwiZXhwIjoxNDIzNjI3NzcwLCJpYXQiOjE0MjM2
-goggle_apis.c(299):     MjU5NzB9.cRmHJpx3%2BgFFiWpH8%2FyioYMKeEXJOSN3UeiyUOh3u0IzqoTRnzGJpDxuLT1bD99BFMz%2FGmQd3jn
-goggle_apis.c(299):     TYIXx6G7PiXodkYHDY%2Fbky8CeiqREifaKgcOAzkbeiwLxOGa64ZZayg4G%2BM91yuj0HyhJ959x2XTGbWlcQbjKn
-goggle_apis.c(299):     rPq0L0YRb0%3D
-goggle_apis.c(299): t=2828ms: 475-byte response headers for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299):     M6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vb2F1dGgyL3Rva2VuIiwiZXhwIjoxNDIzNzQ4ODc1LCJpYXQiOjE0MjM3
+goggle_apis.c(299):     NDcwNzV9.jyxGWzwtapvCK16se32ke7Q7DxDeU39UfkRMT9ctokPSHiX%2BgKcmJObi1aIjJu5KeuxzRY69XjWF1%2
+goggle_apis.c(299):     FDJmJfRcoKZqu99NUJte8EgWLqC1mm4PuJMWJUmQ3Ux0%2BzCC1Ds%2B0%2FwC70M%2BZVGCkhQGMtq4Ed3wGRVx1z
+goggle_apis.c(299):     hDdnr%2FkfbOQQ%3D
+goggle_apis.c(299): t=2697ms: 475-byte response headers for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
 goggle_apis.c(299):     HTTP/1.1 200 OK\r\n
 goggle_apis.c(299):     Content-Type: application/json; charset=utf-8\r\n
 goggle_apis.c(299):     Cache-Control: no-cache, no-store, max-age=0, must-revalidate\r\n
 goggle_apis.c(299):     Pragma: no-cache\r\n
 goggle_apis.c(299):     Expires: Fri, 01 Jan 1990 00:00:00 GMT\r\n
-goggle_apis.c(299):     Date: Wed, 11 Feb 2015 03:39:32 GMT\r\n
+goggle_apis.c(299):     Date: Thu, 12 Feb 2015 13:17:57 GMT\r\n
 goggle_apis.c(299):     Content-Disposition: attachment; filename="json.txt"\r\n
 goggle_apis.c(299):     Content-Encoding: gzip\r\n
 goggle_apis.c(299):     X-Content-Type-Options: nosniff\r\n
 goggle_apis.c(299):     X-Frame-Options: SAMEORIGIN\r\n
 goggle_apis.c(299):     X-XSS-Protection: 1; mode=block\r\n
 goggle_apis.c(299):     Server: GSE\r\n
-goggle_apis.c(299):     Alternate-Protocol: 443:quic,p=0.02\r\n
+goggle_apis.c(299):     Alternate-Protocol: 443:quic,p=0.08\r\n
 goggle_apis.c(299):     Transfer-Encoding: chunked\r\n
 goggle_apis.c(299):     \r\n
-goggle_apis.c(299): t=2834ms: 10-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299): t=2705ms: 10-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
 goggle_apis.c(299):     00000001\r\n
-goggle_apis.c(299): t=2835ms: 12-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
-goggle_apis.c(299):     \r\n
-goggle_apis.c(299):     00000001\r\n
-goggle_apis.c(299): t=2835ms: 12-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299): t=2705ms: 12-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
 goggle_apis.c(299):     \r\n
 goggle_apis.c(299):     00000001\r\n
-goggle_apis.c(299): t=2835ms: 12-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299): t=2705ms: 12-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
 goggle_apis.c(299):     \r\n
 goggle_apis.c(299):     00000001\r\n
-goggle_apis.c(299): t=2835ms: 9-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299): t=2705ms: 12-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
 goggle_apis.c(299):     \r\n
-goggle_apis.c(299):     00085\r\n
-goggle_apis.c(299): t=2835ms: 2-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299):     00000001\r\n
+goggle_apis.c(299): t=2706ms: 12-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
 goggle_apis.c(299):     \r\n
-goggle_apis.c(299): t=2835ms: 137-byte ENCODED response body received for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
-goggle_apis.c(299): t=2836ms: 136-byte DECODED response body for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299):     00000001\r\n
+goggle_apis.c(299): t=2706ms: 12-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299):     \r\n
+goggle_apis.c(299):     00000001\r\n
+goggle_apis.c(299): t=2706ms: 12-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299):     \r\n
+goggle_apis.c(299):     00000001\r\n
+goggle_apis.c(299): t=2706ms: 7-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299):     \r\n
+goggle_apis.c(299):     001\r\n
+goggle_apis.c(299): t=2706ms: 6-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299):     \r\n
+goggle_apis.c(299):     81\r\n
+goggle_apis.c(299): t=2706ms: 2-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299):     \r\n
+goggle_apis.c(299): t=2707ms: 137-byte ENCODED response body received for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299): t=2709ms: 136-byte DECODED response body for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
 goggle_apis.c(299):     {\n
-goggle_apis.c(299):       "access_token" : "ya29.FwHO29BYsw0fcQkkFYjBV7u9mxMRlX7FFpw8XkpwLEr1LxK7LyC8YdSE",\n
+goggle_apis.c(299):       "access_token" : "ya29.GAGVH_PLW5fbADTwdhpxF8jlkmaSE_YQYuq23ceh66hnusdT1H-sqgrk",\n
 goggle_apis.c(299):       "token_type" : "Bearer",\n
 goggle_apis.c(299):       "expires_in" : 3600\n
 goggle_apis.c(299):     }
-goggle_apis.c(299): Notify: Saving Parameter "pAccessToken = ya29.FwHO29BYsw0fcQkkFYjBV7u9mxMRlX7FFpw8XkpwLEr1LxK7LyC8YdSE".
-goggle_apis.c(299): Notify: Saving Parameter "pJSONResponse = \n  "access_token" : "ya29.FwHO29BYsw0fcQkkFYjBV7u9mxMRlX7FFpw8XkpwLEr1LxK7LyC8YdSE",\n  "token_type" : "Bearer",\n  "expires_in" : 3600\n".
+goggle_apis.c(299): Notify: Saving Parameter "pAccessToken = ya29.GAGVH_PLW5fbADTwdhpxF8jlkmaSE_YQYuq23ceh66hnusdT1H-sqgrk".
+goggle_apis.c(299): Notify: Saving Parameter "pJSONResponse = \n  "access_token" : "ya29.GAGVH_PLW5fbADTwdhpxF8jlkmaSE_YQYuq23ceh66hnusdT1H-sqgrk",\n  "token_type" : "Bearer",\n  "expires_in" : 3600\n".
 goggle_apis.c(299): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://accounts.google.com/o/oauth2/token"  	[MsgId: MMSG-26548]
-goggle_apis.c(299): t=2837ms: 10-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299): t=2711ms: 10-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
 goggle_apis.c(299):     00000001\r\n
-goggle_apis.c(299): t=2837ms: 12-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
-goggle_apis.c(299):     \r\n
-goggle_apis.c(299):     00000001\r\n
-goggle_apis.c(299): t=2837ms: 12-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299): t=2711ms: 12-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
 goggle_apis.c(299):     \r\n
 goggle_apis.c(299):     00000001\r\n
-goggle_apis.c(299): t=2837ms: 12-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299): t=2712ms: 12-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
 goggle_apis.c(299):     \r\n
 goggle_apis.c(299):     00000001\r\n
-goggle_apis.c(299): t=2838ms: 12-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299): t=2712ms: 12-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
 goggle_apis.c(299):     \r\n
 goggle_apis.c(299):     00000001\r\n
-goggle_apis.c(299): t=2838ms: 12-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299): t=2712ms: 12-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
 goggle_apis.c(299):     \r\n
 goggle_apis.c(299):     00000001\r\n
-goggle_apis.c(299): t=2838ms: 6-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299): t=2712ms: 12-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
 goggle_apis.c(299):     \r\n
-goggle_apis.c(299):     01\r\n
-goggle_apis.c(299): t=2838ms: 5-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299):     00000001\r\n
+goggle_apis.c(299): t=2712ms: 9-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
 goggle_apis.c(299):     \r\n
-goggle_apis.c(299):     3\r\n
-goggle_apis.c(299): t=2838ms: 7-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299):     00004\r\n
+goggle_apis.c(299): t=2712ms: 7-byte chunked response overhead for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
 goggle_apis.c(299):     \r\n
 goggle_apis.c(299):     0\r\n
 goggle_apis.c(299):     \r\n
-goggle_apis.c(299): t=2838ms: 10-byte ENCODED response body received for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
-goggle_apis.c(299): t=2839ms: Request done "https://accounts.google.com/o/oauth2/token"  	[MsgId: MMSG-26000]
-goggle_apis.c(299): web_custom_request("Token") was successful, 147 body bytes, 475 header bytes, 145 chunking overhead bytes  	[MsgId: MMSG-26385]
+goggle_apis.c(299): t=2713ms: 10-byte ENCODED response body received for "https://accounts.google.com/o/oauth2/token" (RelFrameId=1, Internal ID=1)
+goggle_apis.c(299): t=2713ms: Request done "https://accounts.google.com/o/oauth2/token"  	[MsgId: MMSG-26000]
+goggle_apis.c(299): web_custom_request("Token") was successful, 147 body bytes, 475 header bytes, 183 chunking overhead bytes  	[MsgId: MMSG-26385]
 vuser_init.c(260): Notify: Parameter Substitution: parameter "pTransName" =  "get_google_short_url_1access"
-vuser_init.c(260): Notify: Transaction "get_google_short_url_1access" ended with a "Pass" status (Duration: 1.5918 Wasted Time: 1.1058).
+vuser_init.c(260): Notify: Transaction "get_google_short_url_1access" ended with a "Pass" status (Duration: 1.2927 Wasted Time: 1.1275).
 vuser_init.c(264): web_get_int_property started  	[MsgId: MMSG-26355]
 vuser_init.c(264): web_get_int_property was successful  	[MsgId: MMSG-26392]
 vuser_init.c(265): web_get_int_property started  	[MsgId: MMSG-26355]
@@ -222,10 +232,10 @@ goggle_apis.c(66): web_reg_save_param_ex started  	[MsgId: MMSG-26355]
 goggle_apis.c(66): Registering web_reg_save_param_ex was successful  	[MsgId: MMSG-26390]
 goggle_apis.c(67): web_reg_save_param_ex started  	[MsgId: MMSG-26355]
 goggle_apis.c(67): Registering web_reg_save_param_ex was successful  	[MsgId: MMSG-26390]
-goggle_apis.c(70): Notify: Parameter Substitution: parameter "pAccessToken" =  "ya29.FwHO29BYsw0fcQkkFYjBV7u9mxMRlX7FFpw8XkpwLEr1LxK7LyC8YdSE"
+goggle_apis.c(70): Notify: Parameter Substitution: parameter "pAccessToken" =  "ya29.GAGVH_PLW5fbADTwdhpxF8jlkmaSE_YQYuq23ceh66hnusdT1H-sqgrk"
 goggle_apis.c(70): web_add_header("Authorization") started  	[MsgId: MMSG-26355]
 goggle_apis.c(70): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
-goggle_apis.c(70): "Authorization: Bearer ya29.FwHO29BYsw0fcQkkFYjBV7u9mxMRlX7FFpw8XkpwLEr1LxK7LyC8YdSE" header registered for adding to requests from the immediately following Action function  	[MsgId: MMSG-26506]
+goggle_apis.c(70): "Authorization: Bearer ya29.GAGVH_PLW5fbADTwdhpxF8jlkmaSE_YQYuq23ceh66hnusdT1H-sqgrk" header registered for adding to requests from the immediately following Action function  	[MsgId: MMSG-26506]
 goggle_apis.c(70): web_add_header("Authorization") highest severity level was "warning"  	[MsgId: MMSG-26391]
 goggle_apis.c(71): web_add_header("Content-Type") started  	[MsgId: MMSG-26355]
 goggle_apis.c(71): Warning -26593: The header being added may cause unpredictable results when applied to all ensuing URLs. It is added anyway  	[MsgId: MWAR-26593]
@@ -238,13 +248,13 @@ vuser_init.c(238): Notify: Transaction "get_google_short_url_2shorturl" started.
 vuser_init.c(241): web_reg_save_param_ex started  	[MsgId: MMSG-26355]
 vuser_init.c(241): Registering web_reg_save_param_ex was successful  	[MsgId: MMSG-26390]
 goggle_apis.c(77): web_custom_request("Shorten") started  	[MsgId: MMSG-26355]
-goggle_apis.c(77): Notify: Parameter Substitution: parameter "pURLtoShorten" =  "http://www.ingallsdonaldresq.com"
-goggle_apis.c(77): t=2977ms: Closed connection [0] to accounts.google.com:443 after completing 1 request  	[MsgId: MMSG-26000]
-goggle_apis.c(77): t=2977ms: Connecting [0] to host 173.194.79.95:443  	[MsgId: MMSG-26000]
-goggle_apis.c(77): t=3074ms: Connected socket [0] from 192.168.72.128:2282 to 173.194.79.95:443 in 97 ms  	[MsgId: MMSG-26000]
-goggle_apis.c(77): t=3285ms: 408-byte request headers for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): Notify: Parameter Substitution: parameter "pURLtoShorten" =  "http://www.chanayjeffreyaesq.com"
+goggle_apis.c(77): t=2783ms: Closed connection [0] to accounts.google.com:443 after completing 1 request  	[MsgId: MMSG-26000]
+goggle_apis.c(77): t=2783ms: Connecting [0] to host 74.125.28.95:443  	[MsgId: MMSG-26000]
+goggle_apis.c(77): t=2815ms: Connected socket [0] from 192.168.72.130:1453 to 74.125.28.95:443 in 32 ms  	[MsgId: MMSG-26000]
+goggle_apis.c(77): t=2882ms: 408-byte request headers for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     POST /urlshortener/v1/url HTTP/1.1\r\n
-goggle_apis.c(77):     Authorization: Bearer ya29.FwHO29BYsw0fcQkkFYjBV7u9mxMRlX7FFpw8XkpwLEr1LxK7LyC8YdSE\r\n
+goggle_apis.c(77):     Authorization: Bearer ya29.GAGVH_PLW5fbADTwdhpxF8jlkmaSE_YQYuq23ceh66hnusdT1H-sqgrk\r\n
 goggle_apis.c(77):     Content-Type: application/json\r\n
 goggle_apis.c(77):     Cache-Control: no-cache\r\n
 goggle_apis.c(77):     Referer: https://accounts.google.com/o/oauth2/token\r\n
@@ -255,15 +265,15 @@ goggle_apis.c(77):     Connection: Keep-Alive\r\n
 goggle_apis.c(77):     Host: www.googleapis.com\r\n
 goggle_apis.c(77):     Content-Length: 47\r\n
 goggle_apis.c(77):     \r\n
-goggle_apis.c(77): t=3286ms: 47-byte request body for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
-goggle_apis.c(77):     {"longUrl": "http://www.ingallsdonaldresq.com"}
-goggle_apis.c(77): t=3534ms: 516-byte response headers for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): t=2884ms: 47-byte request body for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77):     {"longUrl": "http://www.chanayjeffreyaesq.com"}
+goggle_apis.c(77): t=3183ms: 516-byte response headers for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     HTTP/1.1 200 OK\r\n
 goggle_apis.c(77):     Cache-Control: no-cache, no-store, max-age=0, must-revalidate\r\n
 goggle_apis.c(77):     Pragma: no-cache\r\n
 goggle_apis.c(77):     Expires: Fri, 01 Jan 1990 00:00:00 GMT\r\n
-goggle_apis.c(77):     Date: Wed, 11 Feb 2015 03:39:33 GMT\r\n
-goggle_apis.c(77):     ETag: "5dDxI_kPgit8A7UdnIx6n-eZ8Qw/Ns7Gb5SIYBnpMITxb3QNxbbxvQg"\r\n
+goggle_apis.c(77):     Date: Thu, 12 Feb 2015 13:17:58 GMT\r\n
+goggle_apis.c(77):     ETag: "5dDxI_kPgit8A7UdnIx6n-eZ8Qw/fBXtUQm0iWGgqZuJqcEsHkS4Arw"\r\n
 goggle_apis.c(77):     Vary: Origin\r\n
 goggle_apis.c(77):     Vary: X-Origin\r\n
 goggle_apis.c(77):     Content-Type: application/json; charset=UTF-8\r\n
@@ -272,149 +282,163 @@ goggle_apis.c(77):     X-Content-Type-Options: nosniff\r\n
 goggle_apis.c(77):     X-Frame-Options: SAMEORIGIN\r\n
 goggle_apis.c(77):     X-XSS-Protection: 1; mode=block\r\n
 goggle_apis.c(77):     Server: GSE\r\n
-goggle_apis.c(77):     Alternate-Protocol: 443:quic,p=0.02\r\n
+goggle_apis.c(77):     Alternate-Protocol: 443:quic,p=0.08\r\n
 goggle_apis.c(77):     Transfer-Encoding: chunked\r\n
 goggle_apis.c(77):     \r\n
-goggle_apis.c(77): t=3536ms: 10-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): t=3185ms: 10-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     00000001\r\n
-goggle_apis.c(77): t=3536ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): t=3186ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     \r\n
 goggle_apis.c(77):     00000001\r\n
-goggle_apis.c(77): t=3536ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): t=3186ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     \r\n
 goggle_apis.c(77):     00000001\r\n
-goggle_apis.c(77): t=3536ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): t=3186ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     \r\n
 goggle_apis.c(77):     00000001\r\n
-goggle_apis.c(77): t=3537ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): t=3186ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     \r\n
 goggle_apis.c(77):     00000001\r\n
-goggle_apis.c(77): t=3537ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): t=3186ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     \r\n
 goggle_apis.c(77):     00000001\r\n
-goggle_apis.c(77): t=3537ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): t=3187ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     \r\n
 goggle_apis.c(77):     00000001\r\n
-goggle_apis.c(77): t=3537ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): t=3187ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     \r\n
 goggle_apis.c(77):     00000001\r\n
-goggle_apis.c(77): t=3537ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): t=3187ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     \r\n
 goggle_apis.c(77):     00000001\r\n
-goggle_apis.c(77): t=3537ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): t=3187ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     \r\n
 goggle_apis.c(77):     00000001\r\n
-goggle_apis.c(77): t=3538ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): t=3188ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     \r\n
 goggle_apis.c(77):     00000001\r\n
-goggle_apis.c(77): t=3538ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): t=3188ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     \r\n
 goggle_apis.c(77):     00000001\r\n
-goggle_apis.c(77): t=3538ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): t=3189ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     \r\n
 goggle_apis.c(77):     00000001\r\n
-goggle_apis.c(77): t=3538ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): t=3189ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     \r\n
 goggle_apis.c(77):     00000001\r\n
-goggle_apis.c(77): t=3538ms: 7-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): t=3189ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77):     \r\n
+goggle_apis.c(77):     00000001\r\n
+goggle_apis.c(77): t=3189ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77):     \r\n
+goggle_apis.c(77):     00000001\r\n
+goggle_apis.c(77): t=3189ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77):     \r\n
+goggle_apis.c(77):     00000001\r\n
+goggle_apis.c(77): t=3190ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77):     \r\n
+goggle_apis.c(77):     00000001\r\n
+goggle_apis.c(77): t=3190ms: 12-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77):     \r\n
+goggle_apis.c(77):     00000001\r\n
+goggle_apis.c(77): t=3190ms: 7-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     \r\n
 goggle_apis.c(77):     001\r\n
-goggle_apis.c(77): t=3538ms: 6-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): t=3190ms: 6-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     \r\n
-goggle_apis.c(77):     63\r\n
-goggle_apis.c(77): t=3539ms: 7-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77):     5e\r\n
+goggle_apis.c(77): t=3190ms: 7-byte chunked response overhead for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     \r\n
 goggle_apis.c(77):     0\r\n
 goggle_apis.c(77):     \r\n
-goggle_apis.c(77): t=3539ms: 114-byte ENCODED response body received for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
-goggle_apis.c(77): t=3539ms: 112-byte DECODED response body for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): t=3191ms: 114-byte ENCODED response body received for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
+goggle_apis.c(77): t=3191ms: 112-byte DECODED response body for "https://www.googleapis.com/urlshortener/v1/url" (RelFrameId=1, Internal ID=2)
 goggle_apis.c(77):     {\n
 goggle_apis.c(77):      "kind": "urlshortener#url",\n
-goggle_apis.c(77):      "id": "http://goo.gl/TAziGo",\n
-goggle_apis.c(77):      "longUrl": "http://www.ingallsdonaldresq.com/"\n
+goggle_apis.c(77):      "id": "http://goo.gl/ge8uNj",\n
+goggle_apis.c(77):      "longUrl": "http://www.chanayjeffreyaesq.com/"\n
 goggle_apis.c(77):     }\n
-goggle_apis.c(77): Notify: Saving Parameter "pShortURL = http://goo.gl/TAziGo".
-goggle_apis.c(77): Notify: Saving Parameter "pLongURL = http://www.ingallsdonaldresq.com/".
-goggle_apis.c(77): Notify: Saving Parameter "pJSONResponse = \n "kind": "urlshortener#url",\n "id": "http://goo.gl/TAziGo",\n "longUrl": "http://www.ingallsdonaldresq.com/"\n".
+goggle_apis.c(77): Notify: Saving Parameter "pShortURL = http://goo.gl/ge8uNj".
+goggle_apis.c(77): Notify: Saving Parameter "pLongURL = http://www.chanayjeffreyaesq.com/".
+goggle_apis.c(77): Notify: Saving Parameter "pJSONResponse = \n "kind": "urlshortener#url",\n "id": "http://goo.gl/ge8uNj",\n "longUrl": "http://www.chanayjeffreyaesq.com/"\n".
 goggle_apis.c(77): HTML parsing not performed for Content-Type "application/json" ("ParseHtmlContentType" Run-Time Setting is "TEXT"). URL="https://www.googleapis.com/urlshortener/v1/url"  	[MsgId: MMSG-26548]
-goggle_apis.c(77): t=3540ms: Request done "https://www.googleapis.com/urlshortener/v1/url"  	[MsgId: MMSG-26000]
-goggle_apis.c(77): web_custom_request("Shorten") was successful, 114 body bytes, 516 header bytes, 186 chunking overhead bytes  	[MsgId: MMSG-26385]
+goggle_apis.c(77): t=3192ms: Request done "https://www.googleapis.com/urlshortener/v1/url"  	[MsgId: MMSG-26000]
+goggle_apis.c(77): web_custom_request("Shorten") was successful, 114 body bytes, 516 header bytes, 246 chunking overhead bytes  	[MsgId: MMSG-26385]
 vuser_init.c(260): Notify: Parameter Substitution: parameter "pTransName" =  "get_google_short_url_2shorturl"
-vuser_init.c(260): Notify: Transaction "get_google_short_url_2shorturl" ended with a "Pass" status (Duration: 0.6408 Wasted Time: 0.0015).
+vuser_init.c(260): Notify: Transaction "get_google_short_url_2shorturl" ended with a "Pass" status (Duration: 0.4245 Wasted Time: 0.0018).
 vuser_init.c(264): web_get_int_property started  	[MsgId: MMSG-26355]
 vuser_init.c(264): web_get_int_property was successful  	[MsgId: MMSG-26392]
 vuser_init.c(265): web_get_int_property started  	[MsgId: MMSG-26355]
 vuser_init.c(265): web_get_int_property was successful  	[MsgId: MMSG-26392]
 vuser_init.c(266): web_get_int_property started  	[MsgId: MMSG-26355]
 vuser_init.c(266): web_get_int_property was successful  	[MsgId: MMSG-26392]
-goggle_apis.c(98): >> done=1 LongURL=http://www.ingallsdonaldresq.com/ to pShortURL=http://goo.gl/TAziGo, seconds=    0.64 under no imposed impediments.
-goggle_apis.c(243): Notify: Parameter Substitution: parameter "pShortURL" =  "http://goo.gl/TAziGo"
-goggle_apis.c(246): >> update_shorturl_in_VTS rc=1 pShortURL=http://goo.gl/TAziGo, rc=0, status=1 (1=Pass, 0=Fail).
+goggle_apis.c(98): >> done=1 LongURL=http://www.chanayjeffreyaesq.com/ to pShortURL=http://goo.gl/ge8uNj, seconds=    0.42 under no imposed impediments.
+goggle_apis.c(243): Notify: Parameter Substitution: parameter "pShortURL" =  "http://goo.gl/ge8uNj"
+goggle_apis.c(246): >> update_shorturl_in_VTS rc=1 pShortURL=http://goo.gl/ge8uNj, rc=0, status=1 (1=Pass, 0=Fail).
 goggle_apis.c(114): Notify: Saving Parameter "pTransName = get_google_short_url_qrcode".
-goggle_apis.c(430): Notify: Parameter Substitution: parameter "pShortURL" =  "http://goo.gl/TAziGo"
-goggle_apis.c(407): Notify: Saving Parameter "pShortHostKey = goo.gl".
-goggle_apis.c(409): Notify: Saving Parameter "pShortHostKey = TAziGo".
-goggle_apis.c(438): web_reg_save_param_ex started  	[MsgId: MMSG-26355]
-goggle_apis.c(438): Registering web_reg_save_param_ex was successful  	[MsgId: MMSG-26390]
+goggle_apis.c(431): Notify: Parameter Substitution: parameter "pShortURL" =  "http://goo.gl/ge8uNj"
+goggle_apis.c(408): Notify: Saving Parameter "pShortHostKey = goo.gl".
+goggle_apis.c(410): Notify: Saving Parameter "pShortHostKey = ge8uNj".
 goggle_apis.c(439): web_reg_save_param_ex started  	[MsgId: MMSG-26355]
 goggle_apis.c(439): Registering web_reg_save_param_ex was successful  	[MsgId: MMSG-26390]
-goggle_apis.c(441): Notify: Parameter Substitution: parameter "pTransSequence" =  "get_google_short_url"
-goggle_apis.c(442): Notify: Saving Parameter "pTransName = get_google_short_url_3image".
+goggle_apis.c(440): web_reg_save_param_ex started  	[MsgId: MMSG-26355]
+goggle_apis.c(440): Registering web_reg_save_param_ex was successful  	[MsgId: MMSG-26390]
+goggle_apis.c(442): Notify: Parameter Substitution: parameter "pTransSequence" =  "get_google_short_url"
+goggle_apis.c(443): Notify: Saving Parameter "pTransName = get_google_short_url_3image".
 vuser_init.c(238): Notify: Parameter Substitution: parameter "pTransName" =  "get_google_short_url_3image"
 vuser_init.c(238): Notify: Transaction "get_google_short_url_3image" started.
 vuser_init.c(241): web_reg_save_param_ex started  	[MsgId: MMSG-26355]
 vuser_init.c(241): Registering web_reg_save_param_ex was successful  	[MsgId: MMSG-26390]
-goggle_apis.c(453): web_url("imagefile") started  	[MsgId: MMSG-26355]
-goggle_apis.c(453): Notify: Parameter Substitution: parameter "pShortURL" =  "http://goo.gl/TAziGo"
-goggle_apis.c(453): t=3604ms: Closed connection [0] to www.googleapis.com:443 after completing 1 request  	[MsgId: MMSG-26000]
-goggle_apis.c(453): t=3604ms: Connecting [0] to host 173.194.79.95:80  	[MsgId: MMSG-26000]
-goggle_apis.c(453): t=3652ms: Connected socket [0] from 192.168.72.128:2283 to 173.194.79.95:80 in 48 ms  	[MsgId: MMSG-26000]
-goggle_apis.c(453): t=3652ms: 299-byte request headers for "http://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=H&chl=http://goo.gl/TAziGo" (RelFrameId=1, Internal ID=3)
-goggle_apis.c(453):     GET /chart?cht=qr&chs=150x150&choe=UTF-8&chld=H&chl=http://goo.gl/TAziGo HTTP/1.1\r\n
-goggle_apis.c(453):     Referer: https://www.googleapis.com/urlshortener/v1/url\r\n
-goggle_apis.c(453):     User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT)\r\n
-goggle_apis.c(453):     Accept-Encoding: gzip, deflate\r\n
-goggle_apis.c(453):     Accept: */*\r\n
-goggle_apis.c(453):     Connection: Keep-Alive\r\n
-goggle_apis.c(453):     Host: chart.googleapis.com\r\n
-goggle_apis.c(453):     \r\n
-goggle_apis.c(453): t=3733ms: 415-byte response headers for "http://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=H&chl=http://goo.gl/TAziGo" (RelFrameId=1, Internal ID=3)
-goggle_apis.c(453):     HTTP/1.1 200 OK\r\n
-goggle_apis.c(453):     Date: Wed, 11 Feb 2015 03:39:33 GMT\r\n
-goggle_apis.c(453):     Expires: Thu, 12 Feb 2015 03:39:33 GMT\r\n
-goggle_apis.c(453):     Cache-Control: public, max-age=86400\r\n
-goggle_apis.c(453):     Last-Modified: Fri, 09-Jan-2015 21:49:29 GMT\r\n
-goggle_apis.c(453):     X-Frame-Options: ALLOWALL\r\n
-goggle_apis.c(453):     Access-Control-Allow-Origin: *\r\n
-goggle_apis.c(453):     Content-Type: image/png\r\n
-goggle_apis.c(453):     X-Content-Type-Options: nosniff\r\n
-goggle_apis.c(453):     Server: GoogleChartAPI/1.0\r\n
-goggle_apis.c(453):     Content-Length: 912\r\n
-goggle_apis.c(453):     X-XSS-Protection: 1; mode=block\r\n
-goggle_apis.c(453):     Alternate-Protocol: 80:quic,p=0.02\r\n
-goggle_apis.c(453):     \r\n
-goggle_apis.c(453): Notify: Saving Parameter "pImage_len = 912".
-goggle_apis.c(453): t=3735ms: 912-byte response body for "http://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=H&chl=http://goo.gl/TAziGo" (RelFrameId=1, Internal ID=3)
-goggle_apis.c(453): Notify: Saving Parameter "pImage = ‰PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00–\x00\x00\x00–\x08\x02\x00\x00\x00³cæµ\x00\x00\x00\x06bKGD\x00ÿ\x00ÿ\x00ÿ ½§“\x00\x00\x03EIDATxœí\x9dÑn#!\x0c\x00³Uÿÿ—ÓWT‰ÔÄ6Ë43\x8f\x11¡´#ŸÏ¬a¯çóù\x102_w/@²¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10Ï÷\x1bß¹®«|\x1dã“çqþÙçUóßµžÈÏ\rb\x14âQ!\x1e\x15ây'\x17Ždº§væÔH>‹|\x1eù¹«$ÿ\x0eF!\x1e\x15âQ!žl.\x1cY­·vÎ\x99©óVóbÇßá\x05F!\x1e\x15âQ!žÊ\XEU\x8d5›§£.¼\x11£\x10\x8f\nñ¨\x10Ï‰¹p¤c\x1fuçó¿\r\x18…xT\x88G…x*saUýTU«Ír[Õžjä»\x1b0\nñ¨\x10\x8f\nñdsá	µTÕ¾hÕ\x1a6c\x14âQ!\x1e\x15â¹\x0e|\x18Ö}¦bu\r\x99y6`\x14âQ!\x1e\x15â¹³\x8f4RŸerÒjîŒŒÏô\x886õ—\x1a…xT\x88G…x*ëÂÕÜ³šÏvæÑÌz".
-goggle_apis.c(453): t=3735ms: Request done "http://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=H&chl=http://goo.gl/TAziGo"  	[MsgId: MMSG-26000]
-goggle_apis.c(453): Warning -26377: No match found for the requested parameter "pJSONResponse". Check whether the requested boundaries exist in the response data. Also, if the data you want to save exceeds 20240 bytes, use web_set_max_html_param_len to increase the parameter size  	[MsgId: MWAR-26377]
-goggle_apis.c(453): Notify: Saving Parameter "pJSONResponse = ".
-goggle_apis.c(453): web_url("imagefile") highest severity level was "warning", 912 body bytes, 415 header bytes  	[MsgId: MMSG-26388]
+goggle_apis.c(454): web_url("imagefile") started  	[MsgId: MMSG-26355]
+goggle_apis.c(454): Notify: Parameter Substitution: parameter "pShortURL" =  "http://goo.gl/ge8uNj"
+goggle_apis.c(454): t=3221ms: Closed connection [0] to www.googleapis.com:443 after completing 1 request  	[MsgId: MMSG-26000]
+goggle_apis.c(454): t=3222ms: Connecting [0] to host 74.125.28.95:80  	[MsgId: MMSG-26000]
+goggle_apis.c(454): t=3254ms: Connected socket [0] from 192.168.72.130:1456 to 74.125.28.95:80 in 32 ms  	[MsgId: MMSG-26000]
+goggle_apis.c(454): t=3254ms: 299-byte request headers for "http://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=H&chl=http://goo.gl/ge8uNj" (RelFrameId=1, Internal ID=3)
+goggle_apis.c(454):     GET /chart?cht=qr&chs=150x150&choe=UTF-8&chld=H&chl=http://goo.gl/ge8uNj HTTP/1.1\r\n
+goggle_apis.c(454):     Referer: https://www.googleapis.com/urlshortener/v1/url\r\n
+goggle_apis.c(454):     User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT)\r\n
+goggle_apis.c(454):     Accept-Encoding: gzip, deflate\r\n
+goggle_apis.c(454):     Accept: */*\r\n
+goggle_apis.c(454):     Connection: Keep-Alive\r\n
+goggle_apis.c(454):     Host: chart.googleapis.com\r\n
+goggle_apis.c(454):     \r\n
+goggle_apis.c(454): t=3294ms: 415-byte response headers for "http://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=H&chl=http://goo.gl/ge8uNj" (RelFrameId=1, Internal ID=3)
+goggle_apis.c(454):     HTTP/1.1 200 OK\r\n
+goggle_apis.c(454):     Date: Thu, 12 Feb 2015 13:17:58 GMT\r\n
+goggle_apis.c(454):     Expires: Fri, 13 Feb 2015 13:17:58 GMT\r\n
+goggle_apis.c(454):     Cache-Control: public, max-age=86400\r\n
+goggle_apis.c(454):     Last-Modified: Fri, 09-Jan-2015 21:49:29 GMT\r\n
+goggle_apis.c(454):     X-Frame-Options: ALLOWALL\r\n
+goggle_apis.c(454):     Access-Control-Allow-Origin: *\r\n
+goggle_apis.c(454):     Content-Type: image/png\r\n
+goggle_apis.c(454):     X-Content-Type-Options: nosniff\r\n
+goggle_apis.c(454):     Server: GoogleChartAPI/1.0\r\n
+goggle_apis.c(454):     Content-Length: 923\r\n
+goggle_apis.c(454):     X-XSS-Protection: 1; mode=block\r\n
+goggle_apis.c(454):     Alternate-Protocol: 80:quic,p=0.08\r\n
+goggle_apis.c(454):     \r\n
+goggle_apis.c(454): Notify: Saving Parameter "pImage_len = 923".
+goggle_apis.c(454): t=3296ms: 923-byte response body for "http://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=H&chl=http://goo.gl/ge8uNj" (RelFrameId=1, Internal ID=3)
+goggle_apis.c(454): Notify: Saving Parameter "pJSONResponse = \x04+Ï*»Ç\x9dÎ\x17Ê\x07\x15âQ!ž®u¤»t¿\x17bv\x9dT^¦þ?8\x81U\x88G…xT\x88§z\x06[êŒ\x98'\x90š;\x1cÙ".
+goggle_apis.c(454): Notify: Saving Parameter "pImage = ‰PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00–\x00\x00\x00–\x08\x02\x00\x00\x00³cæµ\x00\x00\x00\x06bKGD\x00ÿ\x00ÿ\x00ÿ ½§“\x00\x00\x03PIDATxœí\x9dKrÛ0\x10\x05Å”ï\x7fee)l\x90\x00œ7$Ûê^º\x04\x12V×ø\x19Ä‡Çûý~	\x99?ww@ª¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10ÏÏ‰6ÇqÄû1›y\x1eï5~föóYÛî¾¥81\x03o\x15âQ!\x1e\x15â9“…#•ÕS³,Yùy*;+×\x1céø\x1e\x16±\nñ¨\x10\x8f\nñT³pdåoúJfìfØJÛ]ºÛ\x06W`[…xT\x88G…x’YØÁn¶­dg%_\x1f\x88U\x88G…xT\x88çéYx×Øn÷9ê\x8dX…xT\x88G…x’Y\x98Ê‰ÊÜÞÊu*}Xáâ¼´\nñ¨\x10\x8f\nñT³°c-e¥\x0f©Œ¼kÍê	¬B<*Ä£B<Ç\x03\x1fúUÖžtçÖ\x03¿.«\x10\x8f\nñ¨\x10Ï\x15Y¸›=©¹ºÝL­Œ/g×\i[T`\x15âQ!\x1e\x15âéÊÂî}\x05»kAwû°›sÝŸÿ\x07V!\x1e\x15âQ!žê¹3•½\x80©<èx.º›¯•Ìs¯ý·£B<*ÄsÅ:ÒÝg†»\x19Ù½Î35t\x0eæß\x88U\x88G…xT\x88§ëÜ\x99Ž9³ÝñåH*‡\x1e\x98‹V!\x1e\x15âQ!ž+æ\x0bSç‚VîÛAêw,öÙ*Ä£B<*ÄsçžŠÝ¹´Ž5Ÿ³ûÎÚºvFò¨\x10\x8f\nñT³°c¬såZ•ÊZ›Êú\x1a³P>¨\x10\x8f\nñt½¿°’U\x1d¹Õ½ŽtÖö\x02¬B<*Ä£B<gÆ…\x1dïÈ½kOý\n\x1dcGç\x0båƒ\nñ¨\x10Ï\x99qaj\x0f_åó+ãÈ•¶•=û©ë\x14±\nñ¨\x10\x8f\nñ$×Î¤ÖÂÌÚîÞk¥ŸÝ{êgm\x9d/”\x0f*Ä£B<ÉùÂÊ{ç;ÎméèCÇ8ÏóH¿\x1d\x15âQ!žä3ÒÔgR{\x04+Ï*»Ç\x9dÎ\x17Ê\x07\x15âQ!ž®u¤»t¿\x17bv\x9dT^¦þ?8\x81U\x88G…xT\x88§z\x06[êŒ\x98'\x90š;\x1cÙ}oð	¬B<*Ä£B<]ç‘Îèxæ\x99Ú\x8f‘:¿f¤û9ðË*ü\x05¨\x10\x8f\nñ$³0Å]ëKw¯ßq&À	¬B<*Ä£B<OÌÂ\x15*\x19yÁ\x19¡ÿ½oj\û²\n\x7f\x01*Ä£B<W¼¿°ƒÔ;žf{öS\ð\x9dX…xT\x88G…xªYØ½þee,5ûü\n•½ÿ©=\x12Î\x17~;*Ä£B<w¾³I".
+goggle_apis.c(454): t=3296ms: Request done "http://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=H&chl=http://goo.gl/ge8uNj"  	[MsgId: MMSG-26000]
+goggle_apis.c(454): web_url("imagefile") was successful, 923 body bytes, 415 header bytes  	[MsgId: MMSG-26386]
 vuser_init.c(260): Notify: Parameter Substitution: parameter "pTransName" =  "get_google_short_url_3image"
-vuser_init.c(260): Notify: Transaction "get_google_short_url_3image" ended with a "Pass" status (Duration: 0.1818 Wasted Time: 0.0060).
+vuser_init.c(260): Notify: Transaction "get_google_short_url_3image" ended with a "Pass" status (Duration: 0.0962 Wasted Time: 0.0077).
 vuser_init.c(264): web_get_int_property started  	[MsgId: MMSG-26355]
 vuser_init.c(264): web_get_int_property was successful  	[MsgId: MMSG-26392]
 vuser_init.c(265): web_get_int_property started  	[MsgId: MMSG-26355]
 vuser_init.c(265): web_get_int_property was successful  	[MsgId: MMSG-26392]
 vuser_init.c(266): web_get_int_property started  	[MsgId: MMSG-26355]
 vuser_init.c(266): web_get_int_property was successful  	[MsgId: MMSG-26392]
-goggle_apis.c(464): Notify: Saving Parameter "pYMDHMS = 20150210203933".
-goggle_apis.c(465): Notify: Parameter Substitution: parameter "pImageFilePath" =  "C:\Temp\"
-goggle_apis.c(465): Notify: Parameter Substitution: parameter "pYMDHMS" =  "20150210203933"
-goggle_apis.c(465): Notify: Parameter Substitution: parameter "pShortHostKey" =  "TAziGo"
-goggle_apis.c(465): Notify: Parameter Substitution: parameter "pImage_len" =  "912"
-goggle_apis.c(474): Notify: Parameter Substitution: parameter "pImage" =  "‰PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00–\x00\x00\x00–\x08\x02\x00\x00\x00³cæµ\x00\x00\x00\x06bKGD\x00ÿ\x00ÿ\x00ÿ ½§“\x00\x00\x03EIDATxœí\x9dÑn#!\x0c\x00³Uÿÿ—ÓWT‰ÔÄ6Ë43\x8f\x11¡´#ŸÏ¬a¯çóù\x102_w/@²¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10Ï÷\x1bß¹®«|\x1dã“çqþÙçUóßµžÈÏ\rb\x14âQ!\x1e\x15ây'\x17Ždº§væÔH>‹|\x1eù¹«$ÿ\x0eF!\x1e\x15âQ!žl.\x1cY­·vÎ\x99©óVóbÇßá\x05F!\x1e\x15âQ!žÊ\XEU\x8d5›§£.¼\x11£\x10\x8f\nñ¨\x10Ï‰¹p¤c\x1fuçó¿\r\x18…xT\x88G…x*saUýTU«Ír[Õžjä»\x1b0\nñ¨\x10\x8f\nñdsá	µTÕ¾hÕ\x1a6c\x14âQ!\x1e\x15â¹\x0e|\x18Ö}¦bu\r\x99y6`\x14âQ!\x1e\x15â¹³\x8f4RŸerÒjîŒŒÏô\x886õ—\x1a…xT\x88G…x*ëÂÕÜ³šÏvæÑÌz"
-goggle_apis.c(481): >> QRcode_image file created at "C:\Temp\CNone.H2007204604.S(null).GNone.U-1.P4072_1_T20150210203933_TAziGo_912.png".
+goggle_apis.c(465): Notify: Saving Parameter "pYMDHMS = 20150212061758".
+goggle_apis.c(466): Notify: Parameter Substitution: parameter "pImageFilePath" =  "C:\Temp\"
+goggle_apis.c(466): Notify: Parameter Substitution: parameter "pYMDHMS" =  "20150212061758"
+goggle_apis.c(466): Notify: Parameter Substitution: parameter "pShortHostKey" =  "ge8uNj"
+goggle_apis.c(466): Notify: Parameter Substitution: parameter "pImage_len" =  "923"
+goggle_apis.c(475): Notify: Parameter Substitution: parameter "pImage" =  "‰PNG\r\n\x1a\n\x00\x00\x00\rIHDR\x00\x00\x00–\x00\x00\x00–\x08\x02\x00\x00\x00³cæµ\x00\x00\x00\x06bKGD\x00ÿ\x00ÿ\x00ÿ ½§“\x00\x00\x03PIDATxœí\x9dKrÛ0\x10\x05Å”ï\x7fee)l\x90\x00œ7$Ûê^º\x04\x12V×ø\x19Ä‡Çûý~	\x99?ww@ª¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10\x8f\nñ¨\x10ÏÏ‰6ÇqÄû1›y\x1eï5~föóYÛî¾¥81\x03o\x15âQ!\x1e\x15â9“…#•ÕS³,Yùy*;+×\x1céø\x1e\x16±\nñ¨\x10\x8f\nñT³pdåoúJfìfØJÛ]ºÛ\x06W`[…xT\x88G…x’YØÁn¶­dg%_\x1f\x88U\x88G…xT\x88çéYx×Øn÷9ê\x8dX…xT\x88G…x’Y\x98Ê‰ÊÜÞÊu*}Xáâ¼´\nñ¨\x10\x8f\nñT³°c-e¥\x0f©Œ¼kÍê	¬B<*Ä£B<Ç\x03\x1fúUÖžtçÖ\x03¿.«\x10\x8f\nñ¨\x10Ï\x15Y¸›=©¹ºÝL­Œ/g×\i[T`\x15âQ!\x1e\x15âéÊÂî}\x05»kAwû°›sÝŸÿ\x07V!\x1e\x15âQ!žê¹3•½\x80©<èx.º›¯•Ìs¯ý·£B<*ÄsÅ:ÒÝg†»\x19Ù½Î35t\x0eæß\x88U\x88G…xT\x88§ëÜ\x99Ž9³ÝñåH*‡\x1e\x98‹V!\x1e\x15âQ!ž+æ\x0bSç‚VîÛAêw,öÙ*Ä£B<*ÄsçžŠÝ¹´Ž5Ÿ³ûÎÚºvFò¨\x10\x8f\nñT³°c¬såZ•ÊZ›Êú\x1a³P>¨\x10\x8f\nñt½¿°’U\x1d¹Õ½ŽtÖö\x02¬B<*Ä£B<gÆ…\x1dïÈ½kOý\n\x1dcGç\x0båƒ\nñ¨\x10Ï\x99qaj\x0f_åó+ãÈ•¶•=û©ë\x14±\nñ¨\x10\x8f\nñ$×Î¤ÖÂÌÚîÞk¥ŸÝ{êgm\x9d/”\x0f*Ä£B<ÉùÂÊ{ç;ÎméèCÇ8ÏóH¿\x1d\x15âQ!žä3ÒÔgR{\x04+Ï*»Ç\x9dÎ\x17Ê\x07\x15âQ!ž®u¤»t¿\x17bv\x9dT^¦þ?8\x81U\x88G…xT\x88§z\x06[êŒ\x98'\x90š;\x1cÙ}oð	¬B<*Ä£B<]ç‘Îèxæ\x99Ú\x8f‘:¿f¤û9ðË*ü\x05¨\x10\x8f\nñ$³0Å]ëKw¯ßq&À	¬B<*Ä£B<OÌÂ\x15*\x19yÁ\x19¡ÿ½oj\û²\n\x7f\x01*Ä£B<W¼¿°ƒÔ;žf{öS\ð\x9dX…xT\x88G…xªYØ½þee,5ûü\n•½ÿ©=\x12Î\x17~;*Ä£B<w¾³I"
+goggle_apis.c(482): >> QRcode_image file created at "C:\Temp\CNone.H1695384316.S(null).GNone.U-1.P4996_1_T20150212061758_ge8uNj_923.png".
 Ending action Action.
 Ending iteration 1.
 Ending Vuser...
@@ -422,4 +446,4 @@ Starting action vuser_end.
 vuser_end.c(4): >> iActionIterations=1, nURLtoShorten_done=1.
 Ending action vuser_end.
 Vuser Terminated.
-t=3753ms: Closed connection [0] to chart.googleapis.com:80 after completing 1 request  	[MsgId: MMSG-26000]
+t=3330ms: Closed connection [0] to chart.googleapis.com:80 after completing 1 request  	[MsgId: MMSG-26000]

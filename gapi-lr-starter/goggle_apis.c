@@ -334,7 +334,8 @@ get_pJWTAssertion(){
 
     // Google returns "invalid_grant" 400 error response if the previous token has not expired yet.
     // So loop is needed to re-use tokens until its expiration:
-    lr_param_sprintf("pTimeNow","%d",time(0)); // where time(0) generates 10-digits.
+             //lr_param_sprintf("pTimeNow","%d",time(0)); // where time(0) generates 10-digits.
+   	          lr_save_timestamp("pTimeNow","DIGITS=10",LAST);
     if( strcmp( lr_eval_string("{pTimeNow}"), lr_eval_string("{pTimeExpire}")) < 0 ){
     	wi_startPrintingTrace();
     	// Re-use assertion saved for use instead of running get_pJWTAssertion() again now.
