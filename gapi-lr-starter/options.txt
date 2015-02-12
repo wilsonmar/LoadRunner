@@ -1,9 +1,0 @@
--+
--DCCI
--D_IDA_XL
--DWINNT
--IC:\LoadRunner\gapi-lr-starter
--IC:\Program Files (x86)\HP\LoadRunner\include
--ec:\loadrunner\gapi-lr-starter\\logfile.log
-c:\loadrunner\gapi-lr-starter\\combined_gapi-lr-starter.c
-c:\loadrunner\gapi-lr-starter\\pre_cci.c
