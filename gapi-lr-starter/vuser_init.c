@@ -13,6 +13,7 @@
 		// wi_startPrintingTrace()
 		// wi_stopPrinting()
 
+		// wi_EncodePlainToOAuth()
 		// wi_EncodePlainToURL()
 		// wi_WriteDataToFile()
 		// others from Floris and Stuart.
@@ -30,8 +31,8 @@
 	#define FOUND 0
 	// NOTE: No semicolon after static definitions.
 	
-//// Compiler directies used to reduce the szie of compiled executables (so more memory is available for more vusers instead of programs):
-	
+//// Compiler directives used to reduce the szie of compiled executables (so more memory is available for more vusers instead of programs):
+	double atof(const char *string); 
 
 //// Run-Time Settings Attributes or command-line LPCSTR (LoadRunner Pointer C Strings) and associated variables:
 
@@ -46,11 +47,9 @@
 
 	LPCSTR			LPCSTR_RunType; // controls scope of script processing.
 
-	// For use by wi_start_transaction():
-	LPCSTR			  LPCSTR_ThinkTimeSecs;
-	float			    floatThinkTimeSecs; // numeric.
-	float			    floatThinkTimeSecs_default = 10.5; 
-					
+ 	// For use by wi_start_transaction():
+	float			   floatThinkTimeSecs; // numeric.
+
 	// For google_apis:
 	LPCSTR			LPCSTR_URLSource; // 1=local .dat file, 2=VTS, 3=Google spreadsheet online?, 4=MySQL?.
 	int				      iURLSource_default = 2;
@@ -216,20 +215,25 @@ int lrlib_get_vuser_pid() {
 
 
 int wi_set_Think_Time(){
-	
- 		 LPCSTR_ThinkTimeSecs = lr_get_attrib_string("ThinkTimeSecs");
+	char strTemp[48]; double doubleTemp;
+	LPCSTR			  LPCSTR_ThinkTimeSecs;
+	float			   floatThinkTimeSecs_default = 10.5;
+					
+  		 LPCSTR_ThinkTimeSecs = lr_get_attrib_string("ThinkTimeSecs");
 	if(  LPCSTR_ThinkTimeSecs==NULL){ // Not specified.
 	  	   floatThinkTimeSecs=floatThinkTimeSecs_default; // Default unless changed for subsequent transactions.
-	  	wi_startPrintingDebug();
+
+  	    wi_startPrintingDebug();
 		lr_output_message(">> floatThinkTimeSecs=%8.2f from coded default.", floatThinkTimeSecs);
 		wi_stopPrinting();
-	}else{ // use value from command attribute:
-	    floatThinkTimeSecs= atof(LPCSTR_ThinkTimeSecs); // atof() requires definition.
-	  	wi_startPrintingDebug();
+	}else{ // use value from command attribute: // floats have 24 significant bits, double 52.
+		// Not using strtof() per http://pubs.opengroup.org/onlinepubs/009695399/functions/strtod.html
+	    floatThinkTimeSecs= atof(LPCSTR_ThinkTimeSecs); // atof() requires definition at top of file.
+
+	    wi_startPrintingDebug();
 		lr_output_message(">> Attribute floatThinkTimeSecs=%8.3f.", floatThinkTimeSecs ); // FIXME: floatThinkTimeSecs=100721344.000 ?
 		wi_stopPrinting();
-	 }
- 
+	 } // For ftoa see http://www.performancecompetence.com/wordpress/?p=318
 	return LR_PASS;
 } // wi_set_Think_Time()
 	

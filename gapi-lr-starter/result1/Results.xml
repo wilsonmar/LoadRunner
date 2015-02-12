@@ -125,12 +125,12 @@
 <Step rID="T3">
 <Obj plainTxt="False" ><![CDATA[Service: Set Max Html Param Len]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>Maximum length of a HTML string that can be retrieved and saved set to <STRONG><FONT COLOR=#00AF00>20240</FONT></STRONG> characters</CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:55]]></Time>
+<Time><![CDATA[2/12/2015 - 8:48:24]]></Time>
 <NodeArgs eType="General" icon="3" nRep="6" >
 <Disp><![CDATA[Service: Set Max Html Param Len]]></Disp>
 </NodeArgs>
 </Step>
-<Summary sTime="2/12/2015 - 6:17:55" eTime="2/12/2015 - 6:17:55" passed="0" failed="0" warnings="0" ></Summary>
+<Summary sTime="2/12/2015 - 8:48:24" eTime="2/12/2015 - 8:48:24" passed="0" failed="0" warnings="0" ></Summary>
 <NodeArgs eType="StartAction" icon="2" nRep="5" >
 <Disp><![CDATA[vuser_init Summary]]></Disp>
 </NodeArgs>
@@ -141,7 +141,7 @@
 <Step rID="T6">
 <Obj plainTxt="False" ><![CDATA[Service: Add Header]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to the next HTTP request :<BR><STRONG><FONT COLOR=#00AF00>Content-Type: application/x-www-form-urlencoded</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:56]]></Time>
+<Time><![CDATA[2/12/2015 - 8:48:25]]></Time>
 <NodeArgs eType="General" icon="5" nRep="10" >
 <Disp><![CDATA[Service: Add Header]]></Disp>
 </NodeArgs>
@@ -149,7 +149,7 @@
 <Step rID="T7">
 <Obj plainTxt="False" ><![CDATA[Service: Add Header]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to the next HTTP request :<BR><STRONG><FONT COLOR=#00AF00>X-Frame-Options: deny</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:56]]></Time>
+<Time><![CDATA[2/12/2015 - 8:48:25]]></Time>
 <NodeArgs eType="General" icon="5" nRep="11" >
 <Disp><![CDATA[Service: Add Header]]></Disp>
 </NodeArgs>
@@ -157,7 +157,7 @@
 <Step rID="T8">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>pAccessToken</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="access_token" : "</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:56]]></Time>
+<Time><![CDATA[2/12/2015 - 8:48:25]]></Time>
 <NodeArgs eType="General" icon="6" nRep="12" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -165,7 +165,7 @@
 <Step rID="T9">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>pJSONResponse</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB={</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=}</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:56]]></Time>
+<Time><![CDATA[2/12/2015 - 8:48:25]]></Time>
 <NodeArgs eType="General" icon="6" nRep="13" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -173,7 +173,7 @@
 <Step rID="T10">
 <Obj plainTxt="False" ><![CDATA[Custom Request: Token]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:57]]></Time>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="7" nRep="14" status="Passed" >
 <Disp><![CDATA[Custom Request: Token]]></Disp>
 </NodeArgs>
@@ -181,23 +181,23 @@
 <Step rID="T11">
 <Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>HTTP return code : <STRONG><FONT COLOR=#00AF00>200</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:57]]></Time>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="8" nRep="15" >
 <Disp><![CDATA[Service: Get Int Property]]></Disp>
 </NodeArgs>
 </Step>
 <Step rID="T12">
 <Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER>Download size : <STRONG><FONT COLOR=#00AF00>805</FONT></STRONG> bytes</CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:57]]></Time>
+<Details plainTxt="False" ><![CDATA[<CENTER>Download size : <STRONG><FONT COLOR=#00AF00>859</FONT></STRONG> bytes</CENTER>]]></Details>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="8" nRep="16" >
 <Disp><![CDATA[Service: Get Int Property]]></Disp>
 </NodeArgs>
 </Step>
 <Step rID="T13">
 <Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER>Download time : <STRONG><FONT COLOR=#00AF00>1218</FONT></STRONG> milliseconds</CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:57]]></Time>
+<Details plainTxt="False" ><![CDATA[<CENTER>Download time : <STRONG><FONT COLOR=#00AF00>1210</FONT></STRONG> milliseconds</CENTER>]]></Details>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="8" nRep="17" >
 <Disp><![CDATA[Service: Get Int Property]]></Disp>
 </NodeArgs>
@@ -205,7 +205,7 @@
 <Step rID="T14">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>pLongURL</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="longUrl": "</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:57]]></Time>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="6" nRep="18" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -213,15 +213,15 @@
 <Step rID="T15">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>pShortURL</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB="id": "</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:57]]></Time>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="6" nRep="19" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
 </Step>
 <Step rID="T16">
 <Obj plainTxt="False" ><![CDATA[Service: Add Header]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to the next HTTP request :<BR><STRONG><FONT COLOR=#00AF00>Authorization: Bearer ya29.GAGVH_PLW5fbADTwdhpxF8jlkmaSE_YQYuq23ceh66hnusdT1H-sqgrk</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:57]]></Time>
+<Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to the next HTTP request :<BR><STRONG><FONT COLOR=#00AF00>Authorization: Bearer ya29.GAGtNNwWlq7Q2EeVdYzh_ACd-WRzRpSChkw85k87ZHtm9cw6khDKDLdM</FONT></STRONG></CENTER>]]></Details>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="5" nRep="20" >
 <Disp><![CDATA[Service: Add Header]]></Disp>
 </NodeArgs>
@@ -229,7 +229,7 @@
 <Step rID="T17">
 <Obj plainTxt="False" ><![CDATA[Service: Add Header]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>Add the following header to the next HTTP request :<BR><STRONG><FONT COLOR=#00AF00>Content-Type: application/json</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:57]]></Time>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="5" nRep="21" >
 <Disp><![CDATA[Service: Add Header]]></Disp>
 </NodeArgs>
@@ -237,7 +237,7 @@
 <Step rID="T18">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>pJSONResponse</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB={</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=}</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:57]]></Time>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="6" nRep="22" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -245,7 +245,7 @@
 <Step rID="T19">
 <Obj plainTxt="False" ><![CDATA[Custom Request: Shorten]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource of content type ""DummyContentType"" loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:58]]></Time>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="7" nRep="23" status="Passed" >
 <Disp><![CDATA[Custom Request: Shorten]]></Disp>
 </NodeArgs>
@@ -253,23 +253,23 @@
 <Step rID="T20">
 <Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>HTTP return code : <STRONG><FONT COLOR=#00AF00>200</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:58]]></Time>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="8" nRep="24" >
 <Disp><![CDATA[Service: Get Int Property]]></Disp>
 </NodeArgs>
 </Step>
 <Step rID="T21">
 <Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER>Download size : <STRONG><FONT COLOR=#00AF00>876</FONT></STRONG> bytes</CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:58]]></Time>
+<Details plainTxt="False" ><![CDATA[<CENTER>Download size : <STRONG><FONT COLOR=#00AF00>790</FONT></STRONG> bytes</CENTER>]]></Details>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="8" nRep="25" >
 <Disp><![CDATA[Service: Get Int Property]]></Disp>
 </NodeArgs>
 </Step>
 <Step rID="T22">
 <Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER>Download time : <STRONG><FONT COLOR=#00AF00>419</FONT></STRONG> milliseconds</CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:58]]></Time>
+<Details plainTxt="False" ><![CDATA[<CENTER>Download time : <STRONG><FONT COLOR=#00AF00>381</FONT></STRONG> milliseconds</CENTER>]]></Details>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="8" nRep="26" >
 <Disp><![CDATA[Service: Get Int Property]]></Disp>
 </NodeArgs>
@@ -279,7 +279,7 @@
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>pImage</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=
 
 </FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB="</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:58]]></Time>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="6" nRep="27" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -288,7 +288,7 @@
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>pImage_len</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB=Content-Length: </FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=
 </FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:58]]></Time>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="6" nRep="28" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -296,7 +296,7 @@
 <Step rID="T25">
 <Obj plainTxt="False" ><![CDATA[Service: Reg Save Param]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>ParamName =<STRONG><FONT COLOR=#00AF00>pJSONResponse</FONT></STRONG><BR>Left Boundary = <STRONG><FONT COLOR=#00AF00>LB={</FONT></STRONG><BR>Right Boundary = <STRONG><FONT COLOR=#00AF00>RB=}</FONT></STRONG><BR>Instance = <STRONG><FONT COLOR=#00AF00>Ord=1</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:58]]></Time>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="6" nRep="29" >
 <Disp><![CDATA[Service: Reg Save Param]]></Disp>
 </NodeArgs>
@@ -304,7 +304,7 @@
 <Step rID="T26">
 <Obj plainTxt="False" ><![CDATA[Url: imagefile]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER><STRONG><FONT COLOR=#009A63>Resource loaded successfully</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:58]]></Time>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="9" nRep="30" status="Passed" >
 <Disp><![CDATA[Url: imagefile]]></Disp>
 </NodeArgs>
@@ -312,28 +312,28 @@
 <Step rID="T27">
 <Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
 <Details plainTxt="False" ><![CDATA[<CENTER>HTTP return code : <STRONG><FONT COLOR=#00AF00>200</FONT></STRONG></CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:58]]></Time>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="8" nRep="31" >
 <Disp><![CDATA[Service: Get Int Property]]></Disp>
 </NodeArgs>
 </Step>
 <Step rID="T28">
 <Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER>Download size : <STRONG><FONT COLOR=#00AF00>1338</FONT></STRONG> bytes</CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:58]]></Time>
+<Details plainTxt="False" ><![CDATA[<CENTER>Download size : <STRONG><FONT COLOR=#00AF00>1350</FONT></STRONG> bytes</CENTER>]]></Details>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="8" nRep="32" >
 <Disp><![CDATA[Service: Get Int Property]]></Disp>
 </NodeArgs>
 </Step>
 <Step rID="T29">
 <Obj plainTxt="False" ><![CDATA[Service: Get Int Property]]></Obj>
-<Details plainTxt="False" ><![CDATA[<CENTER>Download time : <STRONG><FONT COLOR=#00AF00>90</FONT></STRONG> milliseconds</CENTER>]]></Details>
-<Time><![CDATA[2/12/2015 - 6:17:58]]></Time>
+<Details plainTxt="False" ><![CDATA[<CENTER>Download time : <STRONG><FONT COLOR=#00AF00>120</FONT></STRONG> milliseconds</CENTER>]]></Details>
+<Time><![CDATA[2/12/2015 - 8:48:27]]></Time>
 <NodeArgs eType="General" icon="8" nRep="33" >
 <Disp><![CDATA[Service: Get Int Property]]></Disp>
 </NodeArgs>
 </Step>
-<Summary sTime="2/12/2015 - 6:17:55" eTime="2/12/2015 - 6:17:58" passed="3" failed="0" warnings="0" ></Summary>
+<Summary sTime="2/12/2015 - 8:48:24" eTime="2/12/2015 - 8:48:27" passed="3" failed="0" warnings="0" ></Summary>
 <NodeArgs eType="StartAction" icon="2" nRep="9" status="Passed" >
 <Disp><![CDATA[Action Summary]]></Disp>
 </NodeArgs>
@@ -344,12 +344,12 @@
 </DIter>
 <Action rID="T30">
 <AName><![CDATA[vuser_end]]></AName>
-<Summary sTime="2/12/2015 - 6:17:58" eTime="2/12/2015 - 6:17:58" passed="0" failed="0" warnings="0" ></Summary>
+<Summary sTime="2/12/2015 - 8:48:27" eTime="2/12/2015 - 8:48:27" passed="0" failed="0" warnings="0" ></Summary>
 <NodeArgs eType="StartAction" icon="2" nRep="36" >
 <Disp><![CDATA[vuser_end Summary]]></Disp>
 </NodeArgs>
 </Action>
-<Summary sTime="2/12/2015 - 6:17:55" eTime="2/12/2015 - 6:17:58" passed="3" failed="0" warnings="0" ></Summary>
+<Summary sTime="2/12/2015 - 8:48:24" eTime="2/12/2015 - 8:48:27" passed="3" failed="0" warnings="0" ></Summary>
 <NodeArgs eType="StartTest" icon="1" nRep="4" status="Passed" >
 <Disp><![CDATA[Test gapi-lr-starter Summary]]></Disp>
 </NodeArgs>
