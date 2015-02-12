@@ -26,13 +26,16 @@
 		// vi_set_pURLtoShorten_file_recs()
 		// vi_set_VTS3()
 
+// VuGen files require explicit declaration of C functions that do not return integers. 
+// {3} function prototypes to force the intepreter to save chars in read/write memory. 
+// to avoid Error: "C interpreter runtime error - memory violation error during replay. 
+	double atof(const char *string); 
 		
 //// Define Statics (like built-in LR_PASS and LR_FAIL) and variables:
 	#define FOUND 0
 	// NOTE: No semicolon after static definitions.
 	
 //// Compiler directives used to reduce the szie of compiled executables (so more memory is available for more vusers instead of programs):
-	double atof(const char *string); 
 
 //// Run-Time Settings Attributes or command-line LPCSTR (LoadRunner Pointer C Strings) and associated variables:
 
@@ -231,7 +234,7 @@ int wi_set_Think_Time(){
 	    floatThinkTimeSecs= atof(LPCSTR_ThinkTimeSecs); // atof() requires definition at top of file.
 
 	    wi_startPrintingDebug();
-		lr_output_message(">> Attribute floatThinkTimeSecs=%8.3f.", floatThinkTimeSecs ); // FIXME: floatThinkTimeSecs=100721344.000 ?
+		lr_output_message(">> Attribute floatThinkTimeSecs=%8.3f.", floatThinkTimeSecs );
 		wi_stopPrinting();
 	 } // For ftoa see http://www.performancecompetence.com/wordpress/?p=318
 	return LR_PASS;
