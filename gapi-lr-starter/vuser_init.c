@@ -50,9 +50,6 @@
 
 	LPCSTR			LPCSTR_RunType; // controls scope of script processing.
 
- 	// For use by wi_start_transaction():
-	float			   floatThinkTimeSecs; // numeric.
-
 	// For google_apis:
 	LPCSTR			LPCSTR_URLSource; // 1=local .dat file, 2=VTS, 3=Google spreadsheet online?, 4=MySQL?.
 	int				      iURLSource_default = 2;
@@ -151,7 +148,7 @@ int wi_set_unique_id(){
 	
 	my_controller_name = lr_get_master_host_name(); 
 	my_host = lr_get_host_name();
-	vuser_pid = lrlib_get_vuser_pid();
+	vuser_pid = wi_get_vuser_pid();
 
 	lr_whoami(&iVuserID, &vuser_group, &iScenarioID); // lr_whoami returns void by design (no rc).
 
@@ -183,13 +180,13 @@ int wi_set_unique_id(){
  *
  * Example code:
  *     // Print the vuser's process ID
- *     int vuser_pid; vuser_pid = lrlib_get_vuser_pid();
+ *     int vuser_pid; vuser_pid = wi_get_vuser_pid();
  *     lr_output_message("vuser_pid: %d", vuser_pid);
  *
  * Note: This function only works on Windows.
  * From lr-libc.
  */
-int lrlib_get_vuser_pid() {
+int wi_get_vuser_pid() {
     int rc=LR_PASS; // return code
     int pid=0; // the process id (usually 4 digits)
     static int is_msvcrt_dll_loaded = FALSE; // A static variable inside a function keeps its value between
@@ -214,13 +211,15 @@ int lrlib_get_vuser_pid() {
     pid = _getpid();
 
     return pid;
-} // lrlib_get_vuser_pid
+} // wi_get_vuser_pid
 
 
 int wi_set_Think_Time(){
 	char strTemp[48]; double doubleTemp;
 	LPCSTR			  LPCSTR_ThinkTimeSecs;
 	float			   floatThinkTimeSecs_default = 10.5;
+ 	// For use by wi_start_transaction():
+	static float	floatThinkTimeSecs; // numeric.
 					
   		 LPCSTR_ThinkTimeSecs = lr_get_attrib_string("ThinkTimeSecs");
 	if(  LPCSTR_ThinkTimeSecs==NULL){ // Not specified.
@@ -241,6 +240,8 @@ int wi_set_Think_Time(){
 } // wi_set_Think_Time()
 	
 wi_start_transaction(){
+	static float	floatThinkTimeSecs; // defined in wi_set_Think_Time().
+
 	// lr_save_string( strTransName,"pTransName" ); // defined in Action().
 	lr_start_transaction(lr_eval_string("{pTransName}"));
 	
@@ -410,8 +411,8 @@ wi_EncodePlainToOAuth(const char *sIn, char *sOut){
         	strcpy(sCurStr,"%2A");
         }else if ( cCurChar=='+') {
         	strcpy(sCurStr,"%2B");
-        }else if ( cCurChar=='=') {
-        	strcpy(sCurStr,"%3D");
+      //}else if ( cCurChar=='=') {
+      //  	strcpy(sCurStr,"%3D");
         }else{ // convert it to hex-form such as "_" -> "%5F" :
             sprintf(sCurStr, "%%%X", cCurChar);
         }

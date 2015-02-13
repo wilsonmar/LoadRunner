@@ -14,6 +14,7 @@
 *		get_google_short_url_qrcode()
 *			set_gen_QR_attribute()
 *	get_long_url_from_short_url()
+*	get_gapi_url_hit_list()
 *
 * This script needs these globals defined at the top of vuser_init file :
 	LPCSTR			LPCSTR_URLSource; // 1=local .dat file, 2=VTS, 3=Google spreadsheet online?, 4=MySQL?.
@@ -45,7 +46,7 @@ get_google_short_url(){
 	
 	// Define the URL Shortener API Scope to Google:
 	lr_save_string("https://www.googleapis.com/auth/urlshortener","pServiceScope");
-					// Other Google API FAQ scopes: https://developers.google.com/gdata/faq#AuthScopes
+		// Other Google API FAQ scopes: https://developers.google.com/gdata/faq#AuthScopes
 
 	sprintf(       tempString1, "%s_access", lr_eval_string("{pTransSequence}") );
 	lr_save_string(tempString1,"pTransName");
@@ -119,15 +120,6 @@ get_google_short_url(){
 	return rc;
 } // get_google_short_url()
 
-get_long_url_from_short_url(){
-	int rc=LR_PASS;
-	int i=0;
-	
-	// FIXME: Re
-	
-	return rc;
-} // get_long_url_from_short_url()
-
 get_long_url_to_shorten(){
 	int rc=LR_PASS;
 	int i=0;
@@ -172,7 +164,7 @@ get_long_url_to_shorten(){
 					// unless this is the last row in the table:
 					if( i == nVTS_row_count ){
 						wi_startPrintingTrace();
-						lr_output_message(">> Last row at %d has a shorturl of \"%s\". So no more to process.", i, shorturl);
+						lr_output_message(">> Last row at %d has a shorturl of \"%s\". No more to process.", i, shorturl);
 						wi_stopPrinting();
 						vtc_free(shorturl);
 						rc = LR_FAIL;
@@ -523,5 +515,28 @@ int set_gen_QR_attribute(){
 	return LR_PASS;
 } // set_gen_QR_attribute()
 #endif // GEN_QR
+
+
+get_long_url_from_short_url(){
+	int rc=LR_PASS;
+	int i=0;
+	
+	// FIXME: Add long url lookup using short url 
+		// This is like someone clicking the short link in a Twitter post.
+
+	return rc;
+} // get_long_url_from_short_url()
+
+
+get_gapi_url_hit_list() {
+	int rc=LR_PASS;
+	int i=0;
+	
+	// FIXME: Add list of statistics URLs (short and log) from goo.gl.
+	// The response is a large web page containing graphics
+	
+	return rc;
+} // get_gapi_url_hit_list
+
 
 // END OF FILE //

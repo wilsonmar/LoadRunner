@@ -27,7 +27,7 @@
 // IN NO EVENT SHALL copyright holders BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 // These manual actions are described (with sample screen prints) in another document:
-	// TODO: 01. Obtain your own credentials from the Google APIs Console at https://code.google.com/apis/console/b/0/ or https://cloud.google.com/console#/project
+	// TODO: 01. Obtain your own credentials from the Google APIs Console at https://console.developers.google.com/project (formerly https://code.google.com/apis/console/b/0/) 
 
 	// Rather than using a command like lr_save_string("123456789012@developer.gserviceaccount.com","GoogleAPIServiceEmail");
 	// TODO: 02. Update file google_urlshortener_credentials.dat 1st field with the Google API Project name assigned to you by Google.
@@ -54,16 +54,17 @@ Action(){
 		if( rc != LR_PASS ){ return rc; } // No input data to process.
 		
 		#ifdef GEN_QR
-	   	// FIXME: Code to obtain Windows user Documents folder path (Reg Query "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" |findstr "Personal">>DocPath.dat)
-	   	// TODO: 16. Specify folder where QR code image files (for each short URL) get stored:
+	   	// TODO: 16. Specify folder where QR code image files (for each short URL) get stored:				
 
-				
+	   	// For information only (to add to next run's attributes):
+	   		// Code to obtain Windows user Documents folder path (Reg Query "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders" |findstr "Personal">>DocPath.dat)
 		   	strOutputLogFolder=(char *)getenv("TEMP"); // returns zero if valid.
-		  	lr_output_message(">> strOutputLogFolder=%s.", strOutputLogFolder);
+		   	lr_output_message(">> strOutputLogFolder=%s.", strOutputLogFolder);
+		   		// strOutputLogFolder=C:\Users\WILSON~1\AppData\Local\Temp
 
 		lr_save_string("C:\\Temp\\","pImageFilePath"); // Double back slashes for escaping back slash in get_google_short_url_qrcode().
 		wi_startPrintingInfo();
-	  	lr_output_message(">> pImageFilePath=%s.", lr_eval_string("{pImageFilePath}"));
+	  	lr_output_message(">> pImageFilePath=\"%s\".", lr_eval_string("{pImageFilePath}"));
 		wi_stopPrinting();
 
 		rc=set_gen_QR_attribute();
@@ -75,7 +76,7 @@ Action(){
 		lr_save_string("get_google_short_url" ,"pTransSequence");
 		rc=get_google_short_url(); // to obtain LR parameter {pShortURL} by calling get_google_access_token() which calls get_pJWTAssertion().
 	
-	//FUTURE ENHANCEMENTS: 
+	// FUTURE ENHANCEMENTS: FIXME: Use web_rest() to not send User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT)
 	//  Add retrieval of URL shortened:
 	//  Add recognition of expired token and get new token using refresh token instead of auth token.
 	//  Add other Google APIs, Amazon APIs, etc. using same data:
