@@ -1,0 +1,11 @@
+[t19]
+FileName1=t19.htm
+URL1=http://api.bing.com/qsml.aspx?query=http%3A%2F%2Fgoo.gl%2FSR00.q&maxwidth=32765&rowheight=20&sectionHeight=200&FORM=IE10SS&market=en-US
+Total=1
+RequestHeaderFile=t19_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t19_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_19.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

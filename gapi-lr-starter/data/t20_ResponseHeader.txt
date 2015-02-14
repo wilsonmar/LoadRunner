@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=utf-8
+Expires: -1
+Vary: Accept-Encoding
+Server: Microsoft-IIS/8.5
+X-UA-Compatible: IE=10
+P3P: CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+Content-Length: 330
+Date: Fri, 13 Feb 2015 17:40:15 GMT
+Connection: keep-alive
+Set-Cookie: _FS=mkt=en-US&NU=1; domain=.bing.com; path=/
+

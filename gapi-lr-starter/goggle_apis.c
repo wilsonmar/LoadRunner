@@ -442,7 +442,6 @@ get_google_short_url_qrcode(){
     	
 		// WARNING: The 150x150 in this URL may change over time as more characters are needed for uniqueness.
 		// Previously,  100x100 was being returned:
-		//    "URL={pShortURL}.qr",
 		web_url("imagefile",
 	        "URL=http://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=H&chl={pShortURL}",
 	        "Resource=1",
@@ -521,9 +520,17 @@ get_long_url_from_short_url(){
 	int rc=LR_PASS;
 	int i=0;
 	
-	// FIXME: Add long url lookup using short url 
-		// This is like someone clicking the short link in a Twitter post.
-
+	// This is like someone clicking the short link in a Twitter post.
+	// Such as http://goo.gl/SR00
+	web_url("SR00.info", 
+		"URL={pShortURL}", 
+		"Resource=0", 
+		"RecContentType=text/html", 
+		"Referer=", 
+		"Snapshot=t15.inf", 
+		"Mode=HTML", 
+		LAST);
+	
 	return rc;
 } // get_long_url_from_short_url()
 
@@ -532,8 +539,16 @@ get_gapi_url_hit_list() {
 	int rc=LR_PASS;
 	int i=0;
 	
-	// FIXME: Add list of statistics URLs (short and log) from goo.gl.
+	// Get list of statistics URLs (short and log) from goo.gl.
 	// The response is a large web page containing graphics
+	web_url("SR00.info", 
+		"URL={pShortURL}.info", 
+		"Resource=0", 
+		"RecContentType=text/html", 
+		"Referer=", 
+		"Snapshot=t15.inf", 
+		"Mode=HTML", 
+		LAST);
 	
 	return rc;
 } // get_gapi_url_hit_list

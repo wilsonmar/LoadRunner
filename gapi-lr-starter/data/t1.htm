@@ -1,0 +1,35 @@
+<html><head><title>Redirecting</title>
+
+<script type="text/javascript" language="javascript">
+      // Accessing window.external members can cause IE to throw exceptions.
+      // Any code that acesses window.external members must be try/catch wrapped
+      /** @preserveTry */
+      try {
+        if (top == self) {
+          if (window.gtbExternal) {
+            window.gtbExternal.setM();
+          } else {
+            window.external.setM();
+          }
+        }
+      }
+      catch(err) {
+      }
+    </script>
+<script type="text/javascript" language="javascript">
+      // If the HTML5 History API is available, and we don't want some tokens in
+      // the current url to be leaked into the Referer, update the current
+      // history entry.
+      if (!!(window.history && window.history.replaceState)) {
+        /** @preserveTry */
+        try {
+          window.history.replaceState(null, document.title,
+              "https://accounts.google.com/ServiceLogin?service\x3durlshortener\x26continue\x3dhttp%3A%2F%2Fgoo.gl%2F%3Fauthed%3D*\x26followup\x3dhttp%3A%2F%2Fgoo.gl%2F%3Fauthed%3D*\x26passive\x3dtrue\x26go\x3dtrue");
+        } catch (e) {
+        }
+      }
+    </script>
+<meta http-equiv="refresh" content="0; url=&#39;http://goo.gl/?authed=1&#39;"></head>
+<body bgcolor="#ffffff" text="#000000" link="#0000cc" vlink="#551a8b" alink="#ff0000"><script type="text/javascript" language="javascript">
+    location.replace("http://goo.gl/?authed\x3d1")
+  </script></body></html>

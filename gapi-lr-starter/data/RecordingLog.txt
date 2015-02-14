@@ -1,0 +1,785 @@
+[API Trapper      ( f20: ec4)] Recording in 32-bit mode: C:\Program Files (x86)\Internet Explorer\iexplore.exe
+[API Trapper      ( ac8: 708)] Recording in 64-bit mode: C:\Program Files\Internet Explorer\IEXPLORE.EXE
+[Network Analyzer ( ac8: f4c)] ------------------------------------------------------------------------------------------
+[Network Analyzer ( ac8: f4c)] Load Network Traffic Analyzers:
+[Network Analyzer ( ac8: f4c)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer ( ac8: f4c)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter_x64.dll)
+[Network Analyzer ( ac8: f4c)]     + Network Analyzer: api_http_filter_x64.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer ( ac8: f4c)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter_x64.dll
+[Network Analyzer ( ac8: f4c)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer_x64.dll)
+[Network Analyzer ( ac8: f4c)]     + Network Analyzer: WebSocketAnalyzer_x64.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer ( ac8: f4c)]     Analyzer Module: local_server (value=)
+[Network Analyzer ( ac8: f4c)] ------------------------------------------------------------------------------------------
+[Network Analyzer ( ac8: 9bc)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: a14)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: d88)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: a14)] Request Connection: Remote Server @ 173.194.33.103:80   (Service=)  (Sid=  1)  PROXIED!
+[Web Request      ( ac8: 9bc)] "GET /l6MS.info"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Client -> Server @ : 281 bytes (Service=HTTP)
+[Network Analyzer ( ac8: d88)] Request Connection: Remote Server @ 173.194.33.103:80   (Service=)  (Sid=  2)  PROXIED!
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Server -> Client : 633 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Client -> Server @ : 272 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Server -> Client : 826 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: b68)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: b68)] Request Connection: Remote Server @ 173.194.33.113:443   (Service=)  (Sid=  3)  PROXIED!
+[Network Analyzer ( ac8:1384)]   (Sid:  3) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ac8:1384)]   (Sid:  3) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer ( ac8: d88)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: d88)] Request Connection: Remote Server @ 173.194.33.99:80   (Service=)  (Sid=  4)  PROXIED!
+[Network Analyzer ( ac8: b10)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: b10)] Request Connection: Remote Server @ 173.194.33.100:80   (Service=)  (Sid=  5)  PROXIED!
+[Network Analyzer ( ac8: b10)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: b10)] Request Connection: Remote Server @ 173.194.33.113:443   (Service=)  (Sid=  6)  PROXIED!
+[Network Analyzer ( ac8: 260)]   (Sid:  6) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ac8: 260)]   (Sid:  6) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Web Request      ( ac8: 9bc)] "GET /accounts/ServiceLogin?service=urlshortener&continue=http://goo.gl/?authed%3D1&followup=http://goo.gl/?authed%3D1&passive=true&go=true"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Client -> Server @ : 413 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 538 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 470 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: b68)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: b68)] Request Connection: Remote Server @ 216.58.216.141:443   (Service=)  (Sid=  7)  PROXIED!
+[Network Analyzer ( ac8: 9bc)]   (Sid:  3) Connection Terminated (by Client)
+[Network Analyzer ( ac8: b3c)]   (Sid:  7) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ac8: b3c)]   (Sid:  7) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer ( ac8: b10)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: b10)] Request Connection: Remote Server @ 173.194.33.104:80   (Service=)  (Sid=  8)  PROXIED!
+[Network Analyzer ( ac8: b10)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: 9bc)]   (Sid:  7) Connection Terminated (by Client)
+[Network Analyzer ( ac8: b10)] Request Connection: Remote Server @ 216.58.216.141:443   (Service=)  (Sid=  9)  PROXIED!
+[Network Analyzer ( ac8: 9ac)]   (Sid:  9) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ac8: 9ac)]   (Sid:  9) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Web Request      ( ac8: 9bc)] "GET /ServiceLogin?service=urlshortener&continue=http%3A%2F%2Fgoo.gl%2F%3Fauthed%3D1&followup=http%3A%2F%2Fgoo.gl%2F%3Fauthed%3D1&passive=true&go=true"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  9) Client -> Server @ : 429 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  9) Server -> Client : 569 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  9) Server -> Client : 873 bytes (SSL) (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /?authed=1"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Client -> Server @ : 299 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Server -> Client : 566 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Client -> Server @ : 290 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Server -> Client : 361 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Server -> Client : 6051 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /gwt/2E5D7F6342CD2D6F974B8F1F08E48458.cache.js"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Client -> Server @ : 356 bytes (Service=HTTP)
+[Network Analyzer ( ac8: b10)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: b68)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: fa8)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Server -> Client : 2836 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Server -> Client : 15598 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: b10)] Request Connection: Remote Server @ 173.194.33.113:80   (Service=)  (Sid= 10)  PROXIED!
+[Web Request      ( ac8: 9bc)] "GET /js/bg/6p0tkERtAt2I-IL8i4NEGxnSAUzRlX5ta8iHeGw0_oE.js"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 10) Client -> Server @ : 353 bytes (Service=HTTP)
+[Network Analyzer ( ac8: b68)] Request Connection: Remote Server @ 173.194.33.113:80   (Service=)  (Sid= 11)  PROXIED!
+[Web Request      ( ac8: 9bc)] "GET /jsapi?autoload=%7B%22modules%22%3A%5B%7B%22name%22%3A%22visualization%22%2C%22version%22%3A%221.0%22%2C%22packages%22%3A%5B%22corechart%22%2C%22geochart%22%5D%7D%5D%7D"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 11) Client -> Server @ : 468 bytes (Service=HTTP)
+[Network Analyzer ( ac8: fa8)] Request Connection: Remote Server @ 173.194.33.113:80   (Service=)  (Sid= 12)  PROXIED!
+[Web Request      ( ac8: 9bc)] "GET /recaptcha/api.js"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Client -> Server @ : 317 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Server -> Client : 9926 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 10) Server -> Client : 6391 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Server -> Client : 11976 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 689 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 11) Server -> Client : 6640 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Server -> Client : 10099 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /uds/api/visualization/1.0/c87ae63acdbfcaca6f5ce7a34423cfbc/ui+en.css"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 11) Client -> Server @ : 344 bytes (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /uds/api/visualization/1.0/c87ae63acdbfcaca6f5ce7a34423cfbc/format+en,default+en,ui+en,geochart+en,corechart+en.I.js"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Client -> Server @ : 416 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 11) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 11) Server -> Client : 491 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 2836 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 11344 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 7722 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 2836 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 2836 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 5672 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 5672 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 15598 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 11344 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 3160 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 2836 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 2836 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 2836 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 4254 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 2836 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 2836 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 2836 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 2836 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 2836 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 2836 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 5672 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 4254 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 2836 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 12762 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 2836 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 4254 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 413 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: a14)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: a14)] Request Connection: Remote Server @ 173.194.33.111:443   (Service=)  (Sid= 13)  PROXIED!
+[Web Request      ( ac8: 9bc)] "GET /gwt/7967027EDBA445C608CA3B1F9608C883.cache.png"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Client -> Server @ : 374 bytes (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /images/logos/url_shortener_logo.gif"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Client -> Server @ : 353 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Server -> Client : 6126 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 4254 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /gwt/13C06F1CF8B6EAE4BBFE06245F2DDBF1.cache.png"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Client -> Server @ : 374 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 804)]   (Sid: 13) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Server -> Client : 2836 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Server -> Client : 8508 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Server -> Client : 11976 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 804)]   (Sid: 13) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Server -> Client : 5575 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Server -> Client : 83 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Client -> Server @ : 389 bytes (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "POST /api/bgprogram"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Client -> Server @ : 35 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Server -> Client : 401 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Server -> Client : 5332 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: a14)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: a14)] Request Connection: Remote Server @ 173.194.33.101:80   (Service=)  (Sid= 14)  PROXIED!
+[Network Analyzer ( ac8: 9bc)]   (Sid: 13) Connection Terminated (by Client)
+[Network Analyzer ( ac8: a14)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: a14)] Request Connection: Remote Server @ 173.194.33.111:443   (Service=)  (Sid= 15)  PROXIED!
+[Network Analyzer ( ac8: 868)]   (Sid: 15) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ac8: 868)]   (Sid: 15) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Web Request      ( ac8: 9bc)] "GET /recaptcha/api2/r20150202092117/recaptcha__en.js"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Client -> Server @ : 349 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 278 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 344 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: fa8)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: d88)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: 2f0)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: fa8)] Request Connection: Remote Server @ 173.194.33.111:80   (Service=)  (Sid= 16)  PROXIED!
+[Web Request      ( ac8: 9bc)] "GET /urlshortener/favicon.ico"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 16) Client -> Server @ : 247 bytes (Service=HTTP)
+[Network Analyzer ( ac8: d88)] Request Connection: Remote Server @ 173.194.33.100:443   (Service=)  (Sid= 17)  PROXIED!
+[Network Analyzer ( ac8: 2f0)] Request Connection: Remote Server @ 173.194.33.111:80   (Service=)  (Sid= 18)  PROXIED!
+[Network Analyzer ( ac8: 9bc)]   (Sid: 16) Server -> Client : 1292 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /gb/js/scm_6d7c1becb4ec17fdbc2dbc497c14b75a.js"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 18) Client -> Server @ : 347 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 18) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 18) Server -> Client : 5974 bytes  (Service=HTTP)
+[Network Analyzer ( ac8:13e0)]   (Sid: 17) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ac8:13e0)]   (Sid: 17) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer ( ac8: a14)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: a14)] Request Connection: Remote Server @ 173.194.33.102:80   (Service=)  (Sid= 19)  PROXIED!
+[Network Analyzer ( ac8: b10)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: b10)] Request Connection: Remote Server @ 131.253.40.40:443   (Service=)  (Sid= 20)  PROXIED!
+[Network Analyzer ( ac8: 9a8)]   (Sid: 20) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer ( ac8: 9a8)]   (Sid: 20) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 17) Connection Terminated (by Client)
+[Network Analyzer ( ac8: d88)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: d88)] Request Connection: Remote Server @ 173.194.33.100:443   (Service=)  (Sid= 21)  PROXIED!
+[Network Analyzer ( ac8: e48)]   (Sid: 21) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ac8: e48)]   (Sid: 21) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Web Request      ( ac8: 9bc)] "GET /js/api.js"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Client -> Server @ : 311 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 966 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 900 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 43 bytes (SSL) (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /_/scs/apps-static/_/js/k=oz.gapi.en_US.oAjF-LPHIRQ.O/m=gapi_iframes,gapi_iframes_style_common/rt=j/sv=1/d=1/ed=1/am=EQ/rs=AGLTcCNpM51T3Qub8yuxQB_gPzx8VaZ5DQ/t=zcms/cb=gapi.loaded_0"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Client -> Server @ : 627 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 770 bytes (SSL) (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /recaptcha/api2/anchor?k=6LchOvkSAAAAABtPQPc0LH1A6rqU5WR9CXFssNJV&co=aHR0cDovL2dvby5nbA%3D%3D&hl=en&v=r20150202092117&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.oAjF-LPHIRQ.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAGLTcCNpM51T3Qub8yuxQB_gPzx8VaZ5DQ"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Client -> Server @ : 751 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 339 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 152 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 482 bytes (SSL) (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /recaptcha/api2/r20150202092117/styles__ltr.css"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Client -> Server @ : 633 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 271 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1235 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 790 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: fa8)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: 2f0)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: fa8)] Request Connection: Remote Server @ 173.194.33.119:443   (Service=)  (Sid= 22)  PROXIED!
+[Network Analyzer ( ac8: 2f0)] Request Connection: Remote Server @ 173.194.33.119:443   (Service=)  (Sid= 23)  PROXIED!
+[Web Request      ( ac8: 9bc)] "GET /js/bg/YSzt6aFlaDOxCZP7s7crcmzyqldYrCzMlbxlcW09vjM.js"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Client -> Server @ : 808 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /recaptcha/api2/logo_48.png"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Client -> Server @ : 655 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 877 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 404)]   (Sid: 22) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 1215 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 79c)]   (Sid: 23) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ac8: 79c)]   (Sid: 23) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer ( ac8: 404)]   (Sid: 22) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer ( ac8: fa8)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: 334)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: 334)] Request Connection: Remote Server @ 173.194.33.119:443   (Service=)  (Sid= 24)  PROXIED!
+[Network Analyzer ( ac8: de8)]   (Sid: 24) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ac8: de8)]   (Sid: 24) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Web Request      ( ac8: 9bc)] "GET /s/roboto/v15/RxZJdnzeo3R5zSexge8UUT8E0i7KZn-EPnyo3HZu7kw.woff"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 24) Client -> Server @ : 677 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 24) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 24) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 24) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 24) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 24) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 24) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 24) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 24) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 24) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 24) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 24) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 24) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 24) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 24) Server -> Client : 1170 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  4) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 22) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 23) Connection Terminated (by Client)
+[Network Analyzer ( ac8: fa8)] Request Connection: Remote Server @ 173.194.33.119:443   (Service=)  (Sid= 25)  PROXIED!
+[Network Analyzer ( ac8: b68)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8:11f8)]   (Sid: 25) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ac8:11f8)]   (Sid: 25) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Web Request      ( ac8: 9bc)] "GET /s/roboto/v15/2UX7WLTfW3W8TclTUvlFyQ.woff"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 25) Client -> Server @ : 656 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: b68)] Request Connection: Remote Server @ 131.253.40.40:443   (Service=)  (Sid= 26)  PROXIED!
+[Network Analyzer ( ac8: 9bc)]   (Sid: 25) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 25) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 25) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 25) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 25) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 25) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 25) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 25) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 25) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 25) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 25) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 25) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 25) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 25) Server -> Client : 1114 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: c14)]   (Sid: 26) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer ( ac8: c14)]   (Sid: 26) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer ( ac8: 2f0)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: 2f0)] Request Connection: Remote Server @ 23.59.190.130:80   (Service=)  (Sid= 27)  PROXIED!
+[Network Analyzer ( ac8: a14)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: a14)] Request Connection: Remote Server @ 108.162.232.204:80   (Service=)  (Sid= 28)  PROXIED!
+[Network Analyzer ( ac8: 9bc)]   (Sid: 20) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  5) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 26) Connection Terminated (by Client)
+[User action                 ] StartTransactionEvent long to short [Network Analyzer ( ac8: d88)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: d88)] Request Connection: Remote Server @ 93.184.215.200:80   (Service=)  (Sid= 29)  PROXIED!
+[Network Analyzer ( ac8: 9bc)]   (Sid:  8) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 334)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: 334)] Request Connection: Remote Server @ 93.184.215.200:80   (Service=)  (Sid= 30)  PROXIED!
+[Network Analyzer ( ac8: 9bc)]   (Sid: 28) Connection Terminated (by Server)
+[Web Request      ( ac8: 9bc)] "GET /_/scs/apps-static/_/js/k=oz.gapi.en_US.oAjF-LPHIRQ.O/m=gapi_iframes_style_bubble/exm=gapi_iframes,gapi_iframes_style_common/rt=j/sv=1/d=1/ed=1/am=EQ/rs=AGLTcCNpM51T3Qub8yuxQB_gPzx8VaZ5DQ/t=zcms/cb=gapi.loaded_1"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Client -> Server @ : 657 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Server -> Client : 367 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: a14)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: 334)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Web Request      ( ac8: 9bc)] "GET /recaptcha/api2/frame?c=03AHJ_VusEo2vyruIBw_tynq-niGN2pgUySWM0NMDDap4vGfPvgM4S1jb6B0kXmAw3CATbmerOObs5HbyL70xPwuhShr15pdbGYQK7wShwzHarEqe-9mPTX1JQhM-agTpSWGunh5iP8Cqxtgpx-SRH2bfIMob_emLtv4GAuRt3op0DBI8lhgdwgn7KInGnEyJsGCds63G3Nfpe&hl=en&k=6LchOvkSAAAAABtPQPc0LH1A6rqU5WR9CXFssNJV&v=r20150202092117&bg=!dHJHUdBpihs-jOZBf4zTutwExMoHAAAA7lcAAAANLwC9DguobJekGAxozk006P0Y7IAtX1zXS4vhdzLYZYN_y2ljtCLI5X0VdD0JJtpyhtHzXa2JM59bPV_ft0Fh98kt00g969O4gYx39hGMrqFSxTgpmP3H0ofwduh88bFfZSpRAwghfNnvkiy_xaB_ClGSquzZC8Mcvq0YfR70f5L8EO_BiF7vv5QpwMwM99ScnwS9LC8hS0w-lCNPp9KuMeUWb9xnyA7yWzYdjZnc6FF9yzDqn9ImVPn8DAuVAycM&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.oAjF-LPHIRQ.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAGLTcCNpM51T3Qub8yuxQB_gPzx8VaZ5DQ"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Client -> Server @ : 1232 bytes (SSL)(Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /s2/oz/images/stars/po/bubblev1/border_3.gif"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 18) Client -> Server @ : 362 bytes (Service=HTTP)
+[Network Analyzer ( ac8: d88)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: b68)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: a14)] Request Connection: Remote Server @ 173.194.33.111:443   (Service=)  (Sid= 31)  PROXIED!
+[Network Analyzer ( ac8: b10)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: 334)] Request Connection: Remote Server @ 173.194.33.111:443   (Service=)  (Sid= 32)  PROXIED!
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 339 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1329 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 18) Server -> Client : 400 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /s2/oz/images/stars/po/bubblev1/bubbleSprite_3.png"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 18) Client -> Server @ : 368 bytes (Service=HTTP)
+[Network Analyzer ( ac8: b68)] Request Connection: Remote Server @ 173.194.33.111:80   (Service=)  (Sid= 33)  PROXIED!
+[Web Request      ( ac8: 9bc)] "GET /s2/oz/images/stars/po/bubblev1/bubbleDropR_3.png"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 33) Client -> Server @ : 367 bytes (Service=HTTP)
+[Network Analyzer ( ac8: d88)] Request Connection: Remote Server @ 173.194.33.111:80   (Service=)  (Sid= 34)  PROXIED!
+[Network Analyzer ( ac8: 9bc)]   (Sid: 18) Server -> Client : 676 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 33) Server -> Client : 474 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: b10)] Request Connection: Remote Server @ 173.194.33.111:80   (Service=)  (Sid= 35)  PROXIED!
+[Network Analyzer ( ac8: 884)]   (Sid: 31) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Web Request      ( ac8: 9bc)] "GET /s2/oz/images/stars/po/bubblev1/bubbleDropB_3.png"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 18) Client -> Server @ : 367 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 884)]   (Sid: 31) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 27) Server -> Client : 414 bytes 
+[Network Analyzer ( ac8: 9bc)]   (Sid: 18) Server -> Client : 475 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 27) Connection Terminated (by Server)
+[Network Analyzer ( ac8: a04)]   (Sid: 32) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ac8: a04)]   (Sid: 32) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer ( ac8: b68)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: b68)] Request Connection: Remote Server @ 173.194.33.111:443   (Service=)  (Sid= 36)  PROXIED!
+[Network Analyzer ( ac8: f68)]   (Sid: 36) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ac8: f68)]   (Sid: 36) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Web Request      ( ac8: 9bc)] "GET /s2/oz/images/stars/po/bubblev1/spacer.gif"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 36) Client -> Server @ : 360 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 36) Server -> Client : 401 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Client -> Server @ : 1454 bytes (SSL)(Service=HTTP)
+[Web Request      ( ac8: 9bc)] "POST /recaptcha/api2/reload?k=6LchOvkSAAAAABtPQPc0LH1A6rqU5WR9CXFssNJV"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Client -> Server @ : 672 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 375 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 109 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 453 bytes (SSL) (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /recaptcha/api2/payload?c=03AHJ_Vuukp5b1n-l6mB_3B_vDBkvC0z_CoiJFNw-WI2X_O9ZCTUgzdKuFbC8ov0vRqwoim5vdXuxoKGDlrDHsGsx7ndGnyZu4DciUKu-HL0Xsovq456A1nlNaqSHDBB8YLysoxXNrV41u_5MYTChGclkRngUNmIN5Ppi6l0z1tnaT0qmT7WWuaG4yGCwN36Qev1cePxTsnFMyErAa4gtmbqfAJzsCcFaT0SSX74GYl5EgOuHilBH0D2c&k=6LchOvkSAAAAABtPQPc0LH1A6rqU5WR9CXFssNJV"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Client -> Server @ : 1571 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 324 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 299 bytes (SSL) (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /recaptcha/api2/refresh.png"   
+[Network Analyzer ( ac8: b68)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Client -> Server @ : 1136 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 334)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Server -> Client : 703 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 334)] Request Connection: Remote Server @ 173.194.33.111:443   (Service=)  (Sid= 37)  PROXIED!
+[Network Analyzer ( ac8: b68)] Request Connection: Remote Server @ 173.194.33.111:443   (Service=)  (Sid= 38)  PROXIED!
+[Network Analyzer ( ac8: 9a0)]   (Sid: 37) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ac8: 9a0)]   (Sid: 37) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Web Request      ( ac8: 9bc)] "GET /recaptcha/api2/info.png"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 37) Client -> Server @ : 1133 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 37) Server -> Client : 751 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8:1110)]   (Sid: 38) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ac8:1110)]   (Sid: 38) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Web Request      ( ac8: 9bc)] "GET /recaptcha/api2/audio.png"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 38) Client -> Server @ : 1134 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 38) Server -> Client : 678 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 31) Connection Terminated (by Client)
+[Network Analyzer ( ac8: b10)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: 9bc)]   (Sid: 32) Connection Terminated (by Client)
+[Network Analyzer ( ac8: d88)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: b10)] Request Connection: Remote Server @ 173.194.33.111:443   (Service=)  (Sid= 39)  PROXIED!
+[Network Analyzer ( ac8: d88)] Request Connection: Remote Server @ 173.194.33.111:443   (Service=)  (Sid= 40)  PROXIED!
+[Network Analyzer ( ac8: 220)]   (Sid: 39) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ac8: 220)]   (Sid: 39) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Web Request      ( ac8: 9bc)] "GET /recaptcha/api2/image.png"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 39) Client -> Server @ : 1134 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 39) Server -> Client : 726 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8:1350)]   (Sid: 40) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ac8:1350)]   (Sid: 40) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Web Request      ( ac8: 9bc)] "GET /s2/oz/images/stars/po/bubblev1/border_3.gif"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 40) Client -> Server @ : 362 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 40) Server -> Client : 401 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Client -> Server @ : 1458 bytes (SSL)(Service=HTTP)
+[Web Request      ( ac8: 9bc)] "POST /recaptcha/api2/userverify?k=6LchOvkSAAAAABtPQPc0LH1A6rqU5WR9CXFssNJV"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Client -> Server @ : 621 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 360 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 26 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 130 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Client -> Server @ : 389 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  1) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 14) Connection Terminated (by Client)
+[Web Request      ( ac8: 9bc)] "POST /api/shorten"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Client -> Server @ : 1077 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Server -> Client : 752 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /recaptcha/api2/anchor?k=6LchOvkSAAAAABtPQPc0LH1A6rqU5WR9CXFssNJV&co=aHR0cDovL2dvby5nbA%3D%3D&hl=en&v=r20150202092117&usegapi=1&jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en_US.oAjF-LPHIRQ.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAGLTcCNpM51T3Qub8yuxQB_gPzx8VaZ5DQ"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Client -> Server @ : 751 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 339 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 247 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: d88)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: 9bc)]   (Sid:  6) Server -> Client : 536 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: d88)] Request Connection: Remote Server @ 173.194.33.113:443   (Service=)  (Sid= 41)  PROXIED!
+[Network Analyzer ( ac8: 3a0)]   (Sid: 41) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( ac8: 3a0)]   (Sid: 41) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Web Request      ( ac8: 9bc)] "GET /webpagethumbnail?c=41&r=4&s=300&d=http://cnn.com/&a=AIYkKU9UaJDVAB2qu8zKEDSL9wIohHdCSg"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Client -> Server @ : 549 bytes (SSL)(Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 849 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1303 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1303 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1303 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 293 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1010 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1303 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1289 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 1371 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 41) Server -> Client : 227 bytes (SSL) (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 19) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 334)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: a14)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: 9bc)]   (Sid: 29) Connection Terminated (by Client)
+[Network Analyzer ( ac8: a14)] Request Connection: Remote Server @ 23.59.191.178:80   (Service=)  (Sid= 42)  PROXIED!
+[Web Request      ( ac8: 9bc)] "GET /qsml.aspx?query=http%3A%2F%2Fgoo.gl%2FSR00&maxwidth=32765&rowheight=20&sectionHeight=200&FORM=IE10SS&market=en-US"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 42) Client -> Server @ : 357 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 334)] Request Connection: Remote Server @ 23.59.191.178:80   (Service=)  (Sid= 43)  PROXIED!
+[Network Analyzer ( ac8: 9bc)]   (Sid: 42) Server -> Client : 1272 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 16) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  9) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 12) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 10) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 11) Connection Terminated (by Client)
+[Web Request      ( ac8: 9bc)] "GET /qsml.aspx?query=http%3A%2F%2Fgoo.gl%2FSR00.&maxwidth=32765&rowheight=20&sectionHeight=200&FORM=IE10SS&market=en-US"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 42) Client -> Server @ : 587 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 42) Server -> Client : 745 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /qsml.aspx?query=http%3A%2F%2Fgoo.gl%2FSR00.i&maxwidth=32765&rowheight=20&sectionHeight=200&FORM=IE10SS&market=en-US"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 42) Client -> Server @ : 588 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 42) Server -> Client : 747 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /qsml.aspx?query=http%3A%2F%2Fgoo.gl%2FSR00.in&maxwidth=32765&rowheight=20&sectionHeight=200&FORM=IE10SS&market=en-US"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 42) Client -> Server @ : 589 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 42) Server -> Client : 749 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /qsml.aspx?query=http%3A%2F%2Fgoo.gl%2FSR00.inf&maxwidth=32765&rowheight=20&sectionHeight=200&FORM=IE10SS&market=en-US"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 42) Client -> Server @ : 590 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 42) Connection Terminated (by Client)
+[Web Request      ( ac8: 9bc)] "GET /qsml.aspx?query=http%3A%2F%2Fgoo.gl%2FSR00.info&maxwidth=32765&rowheight=20&sectionHeight=200&FORM=IE10SS&market=en-US"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 43) Client -> Server @ : 591 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 43) Server -> Client : 753 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /SR00.info"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Client -> Server @ : 299 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Server -> Client : 619 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Client -> Server @ : 290 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Server -> Client : 361 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Server -> Client : 6050 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 334)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: 334)] Request Connection: Remote Server @ 173.194.33.113:80   (Service=)  (Sid= 44)  PROXIED!
+[Network Analyzer ( ac8: fa8)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Web Request      ( ac8: 9bc)] "GET /recaptcha/api.js"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 44) Client -> Server @ : 493 bytes (Service=HTTP)
+[Network Analyzer ( ac8: fa8)] Request Connection: Remote Server @ 131.253.40.40:443   (Service=)  (Sid= 45)  PROXIED!
+[Network Analyzer ( ac8: 9bc)]   (Sid: 44) Server -> Client : 366 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 44) Server -> Client : 323 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Client -> Server @ : 420 bytes (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "POST /api/analytics"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Client -> Server @ : 46 bytes (Service=HTTP)
+[Network Analyzer ( ac8:1320)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8:139c)]   (Sid: 45) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer ( ac8:1320)] Request Connection: Remote Server @ 131.253.40.40:443   (Service=)  (Sid= 46)  PROXIED!
+[Network Analyzer ( ac8:139c)]   (Sid: 45) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 24) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 25) Connection Terminated (by Client)
+[Network Analyzer ( ac8:1298)]   (Sid: 46) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer ( ac8:1298)]   (Sid: 46) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 30) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Server -> Client : 765 bytes  (Service=HTTP)
+[Network Analyzer ( ac8:1320)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: fa8)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: fa8)] Request Connection: Remote Server @ 173.194.79.95:80   (Service=)  (Sid= 47)  PROXIED!
+[Network Analyzer ( ac8:1320)] Request Connection: Remote Server @ 173.194.79.95:80   (Service=)  (Sid= 48)  PROXIED!
+[Web Request      ( ac8: 9bc)] "GET /ajax/static/modules/gviz/1.0/core/tooltip.css"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 47) Client -> Server @ : 357 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 47) Server -> Client : 968 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /chart?cht=qr&chs=100x100&choe=UTF-8&chld=H|0&chl=http://goo.gl/SR00"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 48) Client -> Server @ : 422 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 48) Server -> Client : 1143 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 45) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 46) Connection Terminated (by Client)
+[Network Analyzer ( ac8:1320)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: d88)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: d88)] Request Connection: Remote Server @ 173.194.33.111:80   (Service=)  (Sid= 49)  PROXIED!
+[Web Request      ( ac8: 9bc)] "GET /charts/regioncoder/0/geocodes/countries_en.js"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 49) Client -> Server @ : 378 bytes (Service=HTTP)
+[Network Analyzer ( ac8:1320)] Request Connection: Remote Server @ 173.194.33.111:80   (Service=)  (Sid= 50)  PROXIED!
+[Web Request      ( ac8: 9bc)] "GET /charts/geochart/10/mapfiles/world_COUNTRIES.js"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 50) Client -> Server @ : 379 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 49) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 49) Server -> Client : 1602 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 50) Server -> Client : 4254 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 50) Server -> Client : 7090 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 50) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 50) Server -> Client : 5672 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 50) Server -> Client : 11344 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 50) Server -> Client : 4254 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 50) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 50) Server -> Client : 7090 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 50) Server -> Client : 1418 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 50) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 50) Server -> Client : 7800 bytes  (Service=HTTP)
+[User action                 ] StartTransactionEvent short to qr [Web Request      ( ac8: 9bc)] "GET /qsml.aspx?query=http%3A%2F%2Fgoo.gl%2FSR00&maxwidth=32765&rowheight=20&sectionHeight=200&FORM=IE10SS&market=en-US"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 43) Client -> Server @ : 586 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 43) Server -> Client : 743 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /qsml.aspx?query=http%3A%2F%2Fgoo.gl%2FSR00.&maxwidth=32765&rowheight=20&sectionHeight=200&FORM=IE10SS&market=en-US"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 43) Client -> Server @ : 587 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 43) Server -> Client : 745 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /qsml.aspx?query=http%3A%2F%2Fgoo.gl%2FSR00.q&maxwidth=32765&rowheight=20&sectionHeight=200&FORM=IE10SS&market=en-US"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 43) Client -> Server @ : 588 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 43) Server -> Client : 747 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /qsml.aspx?query=http%3A%2F%2Fgoo.gl%2FSR00.qr&maxwidth=32765&rowheight=20&sectionHeight=200&FORM=IE10SS&market=en-US"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 43) Client -> Server @ : 589 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 43) Server -> Client : 749 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /SR00.qr"   
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Client -> Server @ : 297 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Server -> Client : 484 bytes  (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid:  2) Server -> Client : 220 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /chart?cht=qr&chs=150x150&choe=UTF-8&chld=H&chl=http://goo.gl/SR00"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 48) Client -> Server @ : 351 bytes (Service=HTTP)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 48) Server -> Client : 1329 bytes  (Service=HTTP)
+[Web Request      ( ac8: 9bc)] "GET /favicon.ico"   
+[Network Analyzer ( ac8: 9bc)]   (Sid: 48) Client -> Server @ : 239 bytes (Service=HTTP)
+[Network Analyzer ( ac8: b10)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8:1064)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( ac8: 9bc)]   (Sid: 48) Server -> Client : 1375 bytes  (Service=HTTP)
+[Network Analyzer ( ac8:1064)] Request Connection: Remote Server @ 131.253.40.40:443   (Service=)  (Sid= 51)  PROXIED!
+[Network Analyzer ( ac8: b10)] Request Connection: Remote Server @ 131.253.40.40:443   (Service=)  (Sid= 52)  PROXIED!
+[Network Analyzer ( ac8: 128)]   (Sid: 51) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer ( ac8: 128)]   (Sid: 51) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 36) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 18) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 33) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 35) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 34) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 21) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 37) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 15) Connection Terminated (by Client)
+[Network Analyzer ( ac8: c18)]   (Sid: 52) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer ( ac8: c18)]   (Sid: 52) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 51) Connection Terminated (by Client)
+[Network Analyzer ( ac8: 9bc)]   (Sid: 52) Connection Terminated (by Client)
+[User action                 ] EndTransactionEvent short to qr [User action                 ] EndTransactionEvent long to short 
