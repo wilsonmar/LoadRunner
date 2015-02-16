@@ -49,7 +49,7 @@ file RandomBirthDate.js contains different calling functions and parameters.
 	and picks the corresponding age associated with the percentage.
 
 	The array is based on a the age range distribution derived for 
-    the country as a whole by the 2010 US Census, provided by API sites such as http://developer.usatoday.com/apps/.
+    the country as a whole by the 2010 US Census, provided by API sites such as https://www.census.gov/population/age/data/2012comp.html.
 	Different statistics are relevant for male vs. female and across
 	different geographies, and across time.
 
