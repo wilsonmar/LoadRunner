@@ -37,8 +37,8 @@ Below is sample LoadRunner code to obtain a text string into a LoadRunner parame
 lr_eval_string("{BirthYYYYMMDD}").
 The input specification YYYYMMDD is needed because there are different formats for dates.
 
-YYYYMMDD specifies a 4 digit year, 2 digit month, and 2 digit day of month.
-
+* var d = new Date("July 21, 1983 01:15:00"); // defines the date object using JavaScript code.
+* YYYYMMDD specifies a 4 digit year, 2 digit month, and 2 digit day of month.
 
 ```
     web_js_run(
@@ -50,6 +50,42 @@ YYYYMMDD specifies a 4 digit year, 2 digit month, and 2 digit day of month.
 ```
 
 The example above calls a file named **RandomBirthDate.js** stored in the script folder.
+
+CHALLENGE: Add the javascript file among Extra Files in your LoadRunner script.
+
+1. Paste the calling code at an approprite spot in your LoadRunner script.
+2. Right-click on Extra Files.
+3. Paste the JavaScript code into the file. Save the file.
+
+BEST PRACTICE IDEA: Take a test-driven approach to developing code. Code from the "outside in".
+Initially, inside a function, define the variable and a valid return value expected by the caller.
+
+Initially, create the library file that returns the correct format.
+That would be the birthdate for an 18 year old having a birthday today.
+
+```
+/* /file RandomBirthDate.js
+   /desc returns dates 
+    Example of caller: getWorkingAdultBirthDate('YYYYMMDD')
+*/
+
+function getWorkingAdultBirthDate(){
+    var formatted_date;
+    var years_worked = new Date();
+    var now = new Date();
+
+    // Random number between 18 and 64 years old today:
+    
+    // if YYYYMMDD:
+    // 2015 - 18 = 1997
+    formatted_date = (now.getFullYear() - 18) + "0503";
+
+    return formatted_date;
+}
+```
+
+BEST PRACTICE IDEA: Define functions to obtain the current date so that the propram still works in the future
+without need to change hard-coded text.
 
 During date of birth generation there is often a need to specify whether the birthdate is that of 
 an adult, a child, a retiree, or of an entire population.
@@ -64,38 +100,39 @@ Instead of a string, the input parameter can come from a LoadRunner parameter al
         "Code=getWorkingAdultBirthDate(LR.getParam('YYYYMMDD'));",
 ```
 
-BEST PRACTICE IDEA: Take a test-driven approach to developing code. Code from the "outside in".
-Initially, inside a function, define the variable and a valid return value expected by the caller.
-
-Create the library file that returns a hand-calcuated date in the correct format,
-the birthdate for an 18 year old having a birthday today.
-
-```
-/* /file RandomBirthDate.js
-   /desc returns dates 
-    Example of caller: getWorkingAdultBirthDate('YYYYMMDD')
-*/
-
-function getWorkingAdultBirthDate(){
-    var formatted_date, random_year, random_month, random_day;
-    
-    // if YYYYMMDD:
-    // 2015 - 18 = 1997
-    formatted_date = "19970503";
-    return formatted_date;
-}
-```
-
 First debug the script in a HTML file
 Better yet, avoid having to craft script library calls, use a (free) JavaScript environment such as:
 
 http://jsfiddle.net/wilsonmar/3nyjurtc/
 
+The HTML is:
+
+'''
+<form>
+<input type="button" value="Click me!" onclick="javascript:web_js_run('YYYYMMDD')" />
+</form>
+<p>Pressing "Click me"</p>
+working_age: <span id="working_age"></span>
+Result: <span id="result"></span>
+'''
+
+The JavaScript emulates LoadRunner calls:
+
+```
+    var working_age;
+
+function web_js_run(){
+    var Birth_YYYYMMDD;
+    Birth_YYYYMMDD = getWorkingAdultBirthDate('YYYYMMDD');
+    // alert(Birth_YYYYMMDD);
+    document.getElementById('result').innerHTML = Birth_YYYYMMDD;
+    document.getElementById('working_age').innerHTML = working_age;
+}
+```
+
+
 Click on the **Click me!** button in the Result pane for a pop-up with the answer.
 The web_js_run() function is the equivalent of what Loadrunner does.
-
-BEST PRACTICE IDEA: Define functions to obtain the current date so that the propram still works in the future
-without need to change hard-coded text.
 
 Invoke the LoadRunner program to make sure it returns what the LoadRunner script can use.
 
