@@ -84,5 +84,8 @@ window.updateMonth= function(iMonth, iDay) {
 }
 ```
 
+The coding is what is done in websites such as these:
+https://www.random.org/calendar-dates/
+
 	Note JavaScript objects are created within the script.
 
