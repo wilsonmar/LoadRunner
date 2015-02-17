@@ -42,31 +42,34 @@ an adult, a child, or of an entire population.
 To avoid the need for callers to craft code to calculate age,
 file RandomBirthDate.js contains different calling functions and parameters.
 
-    When invoked, first a random floating point number between 0 and 1.0 is generated.
+When invoked, first a random floating point number between 0 and 1.0 is generated.
 
-	The program then looks up the cumulative percentage between 0 and 100 
-	in the hard-coded array 
-	and picks the corresponding age associated with the percentage.
+The program then looks up the cumulative percentage between 0 and 100 
+in the hard-coded array 
+and picks the corresponding age associated with the percentage.
 
-	The array is based on a the age range distribution derived for 
-    the country as a whole by the 2010 US Census, provided by API sites such as https://www.census.gov/population/age/data/2012comp.html.
-	Different statistics are relevant for male vs. female and across
-	different geographies, and across time.
+The array is based on a the age range distribution derived for 
+the country as a whole by the 2010 US Census, provided by API sites such as 
 
-	So if you want to use a different set of statistics, just replace the array containing the same format.
-	A future enhancement may be to externalize the arrary as a JSON file so that other age distributions can be specified by
-	simplying putting another file in the script, or specifying the file path in another run-time attribute.
+https://www.census.gov/population/age/data/2012comp.html.
 
-	The age from the array is used to calculate the year of birth through subtraction from the current year.
+Different statistics are relevant for male vs. female and across
+different geographies, and across time.
 
-	The year of birth is used to determine whether the year isLeapYear.
+So if you want to use a different set of statistics, just replace the array containing the same format.
+A future enhancement may be to externalize the arrary as a JSON file so that other age distributions can be specified by
+simplying putting another file in the script, or specifying the file path in another run-time attribute.
 
-	The month is a random number evenely generated between 1 and 12.
+The age from the array is used to calculate the year of birth through subtraction from the current year.
 
-	The month and isLeapYear flag is input to a function to generate the number of days.
-	A random number is generated for Day of Birth between 1 and the number of days.
+The year of birth is used to determine whether the year isLeapYear.
 
-	The beginnings of the JavaScript functions is below:
+The month is a random number evenely generated between 1 and 12.
+
+The month and isLeapYear flag is input to a function to generate the number of days.
+A random number is generated for Day of Birth between 1 and the number of days.
+
+The beginnings of the JavaScript functions is below:
 
 ```
   /* automatically update days based on month */
@@ -85,6 +88,7 @@ window.updateMonth= function(iMonth, iDay) {
 ```
 
 The coding is what is done in websites such as these:
+
 https://www.random.org/calendar-dates/
 
 	Note JavaScript objects are created within the script.
