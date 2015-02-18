@@ -33,6 +33,8 @@ Below is sample LoadRunner C code to call a JavaScript library to
 return a text string into a LoadRunner parameter such as 
 lr_eval_string("{BirthYYYYMMDD}").
 
+1. Paste this code into an appropriate line in the script, such as after identifying a row in VTS.
+
 ```
     web_js_run(
         "Code=getWorkingAdultBirthDate('YYYY-MM-DD');",
@@ -42,9 +44,18 @@ lr_eval_string("{BirthYYYYMMDD}").
         LAST);
 ```
 
+2. While you are there, right-click on the LoadRunner code line **after** this and set a **Breakpoint** so 
+execution can pause there during debugging.
+
+The format specification 'YYYY-MM-DD' is needed because there are different formats for dates:
+
+* "YYYY-MM-DD" is for a date such as 2015-12-30. This is ISO 8601 popular everywhere outside the US.
+* YYYYMMDD specifies a 4 digit year, 2 digit month, and 2 digit day of month.
+* var d = new Date("July 21, 1983 01:15:00"); // defines the input to populate the data object using JavaScript code.
+
 This example calls a file named **lr_js_date_lib.js** stored in the script folder.
 
-Instead of a string, the input parameter can come from a LoadRunner parameter already defined:
+BTW, instead of a hard-coded string, the input parameter can come from a LoadRunner parameter already defined:
 
 ```
         "Code=getWorkingAdultBirthDate(LR.getParam('YYYY-MM-DD'));",
@@ -53,15 +64,17 @@ Instead of a string, the input parameter can come from a LoadRunner parameter al
 
 CHALLENGE: Add the javascript file among Extra Files in your LoadRunner script.
 
-1. Paste the calling code at an approprite spot in your LoadRunner script.
-2. Right-click on Extra Files within the VuGen Solution Explorer.
-3. Specify the JavaScript file name.
+3. Paste the calling code at an approprite spot in your LoadRunner script.
+4. Right-click on Extra Files within the VuGen Solution Explorer.
+5. Specify the JavaScript file name.
 
 
 PROTIP: Specify Doxygen tags for automatic generation of cross-reference documentation, whith
 sample code to call the function.
 
 CHALLENGE: Immediately after creating a file, at the top of the file add Doxygen tags.
+
+6. Copy the sample JavaScript multi-line comment and paste it at the top of new file lr_js_date_lib.js.
 
 ```
 /* /file lr_js_date_lib.js
@@ -80,22 +93,9 @@ PROTIP: Take a test-driven approach to developing code to finish quicker. Code f
 
 CHALLENGE: Initially, return a static value in the format expected to ensure that the script connects.
 
-4. Copy the sample JavaScript below and past it in file lr_js_date_lib.js.
-
-PROTIP: At the top of the file are Doxygen tags for automatic generation of cross-reference documentation.
+7. Copy the sample initial JavaScript below and paste it at the bottom of new file lr_js_date_lib.js.
 
 ```
-/* /file lr_js_date_lib.js
-   /desc returns dates 
-    Example of caller: 
-    web_js_run(
-        "Code=getWorkingAdultBirthDate('YYYY-MM-DD');",
-        "ResultParam=BirthYYYYMMDD",
-        SOURCES,
-        "File=lr_js_date_lib.js", ENDITEM,
-        LAST);
-*/
-
 function getWorkingAdultBirthDate( in_format ){
     // 2015 - 25 = 1990
     return "1990-05-03";
@@ -104,24 +104,22 @@ function getWorkingAdultBirthDate( in_format ){
 
 This intermediate example defines a static but valid return value expected by the caller.
 
-That would be the birthdate for an 18 year old having a birthday today.
+The comments notes this is the birthdate of a 25-year old.
 
-The format specification 'YYYY-MM-DD' is needed because there are different formats for dates.
-
-* "YYYY-MM-DD" is for a date such as 2015-12-30. This is ISO 8601 popular everywhere outside the US.
-* YYYYMMDD specifies a 4 digit year, 2 digit month, and 2 digit day of month.
-* var d = new Date("July 21, 1983 01:15:00"); // defines the input to populate the data object using JavaScript code.
-
-5. Save the LoadRunner script.
-6. Run (and debug) the LoadRunner script.
+8. Run (and debug) the LoadRunner script to the block.
 
 PROTIP: JavaScript within LoadRunner is difficult to debug, so first debug JavaScript outside LoadRunner
 using an interactive environment such as Codepen.io or JSFiddle.net at
 
+http://jsfiddle.net/wilsonmar/3nyjurtc/14/
+
+The remainder of this document defines how you can create your own.
 
 CHALLENGE: Define JavaScript and HTML that takes the place of how LoadRunner calls the underlying JavaScript functions.
 
-8. Paste this at the top of the JavaScript pane:
+1. Create your own account.
+2. Create a new file.
+3. Paste this at the top of the JavaScript pane:
 
 ```
 function web_js_run(){
@@ -134,7 +132,7 @@ function web_js_run(){
 
 CAUTION: Single quotes are used within JavaScript functios because there may be double quotes surrounding them.
 
-9. Paste this into the HTML pane:
+4. Paste this into the HTML pane:
 
 ```
 <form>
@@ -164,13 +162,6 @@ the library file contains different calling functions and parameters.
 Invoke the LoadRunner program to make sure it returns what the LoadRunner script can use.
 
 Next, define the various inputs into what is returned:
-
-```
-    var formatted_date, random_year, random_month, random_day;
-    // 1. Get 4 digit random year from 1997 
-    // 2. Get 2 digit month random from 1 to 12 
-    // 3. Get 2 digit day within month random valid day for month and perhaps leap year 
-```
 
 The month is a random number evenly generated between 1 and 12.
 We use a function that randomly returns a number within a range of two numbers:
@@ -205,10 +196,6 @@ The year is used to determine whether the year isLeapYear.
 The edge test case is someone born Feb. 29 during a leap year.
 For this purpose, we're saying such a person would have their birthday on the 28th during regular years.
 
-
 The month and isLeapYear flag is input to a function to generate the number of days.
 A random number is generated for Day of Birth between 1 and the number of days.
 
-	Note JavaScript objects are created within the script.
-
- 
