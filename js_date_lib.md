@@ -17,6 +17,8 @@ JavaScript coding for generating birth dates are in web pages such as :
 
 * http://stackoverflow.com/questions/9035627/elegant-method-to-generate-array-of-random-dates-within-two-dates
 
+# LoadRunner Usage of JavaScript Library
+
 Within a LoadRunner script, code based on [this web page](http://h30499.www3.hp.com/t5/HP-LoadRunner-and-Performance/How-to-use-JavaScript-in-your-HP-LoadRunner-scripts/ba-p/6197321#.VMqXGl7F8eU)
 can be used to reference established JavaScript functions.
 
@@ -24,58 +26,133 @@ The advantage of LoadRunner scripts reusing functions in a JavaScript utility li
 Time to write script code. Time to debug script code. Time to explain the code to others.
 And more importantly, work to overcome miscommunication between the tester and developers if they don't share a library.
 
-Below is sample LoadRunner code to obtain a text string into a LoadRunner parameter such as 
-lr_eval_string("{BirthYYYYMMDD}").
-The input specification YYYYMMDD is needed because there are different formats for dates.
+Notes on dates written in C for LoadRunner is at
+http://www.solutionmaniacs.com/blog/2012/8/24/loadrunner-date-handling-2-of-3-c-datetime-functions.html
 
-* var d = new Date("July 21, 1983 01:15:00"); // defines the date object using JavaScript code.
-* YYYYMMDD specifies a 4 digit year, 2 digit month, and 2 digit day of month.
+Below is sample LoadRunner C code to call a JavaScript library to 
+return a text string into a LoadRunner parameter such as 
+lr_eval_string("{BirthYYYYMMDD}").
 
 ```
     web_js_run(
-        "Code=getWorkingAdultBirthDate('YYYYMMDD');",
+        "Code=getWorkingAdultBirthDate('YYYY-MM-DD');",
         "ResultParam=BirthYYYYMMDD",
         SOURCES,
-        "File=RandomBirthDate.js", ENDITEM,
+        "File=lr_js_date_lib.js", ENDITEM,
         LAST);
 ```
 
-The example above calls a file named **RandomBirthDate.js** stored in the script folder.
+This example calls a file named **lr_js_date_lib.js** stored in the script folder.
+
+Instead of a string, the input parameter can come from a LoadRunner parameter already defined:
+
+```
+        "Code=getWorkingAdultBirthDate(LR.getParam('YYYY-MM-DD'));",
+```
+
 
 CHALLENGE: Add the javascript file among Extra Files in your LoadRunner script.
 
 1. Paste the calling code at an approprite spot in your LoadRunner script.
-2. Right-click on Extra Files.
-3. Paste the JavaScript code into the file. Save the file.
+2. Right-click on Extra Files within the VuGen Solution Explorer.
+3. Specify the JavaScript file name.
 
-BEST PRACTICE IDEA: Take a test-driven approach to developing code. Code from the "outside in".
-Initially, inside a function, define the variable and a valid return value expected by the caller.
 
-Initially, create the library file that returns the correct format.
-That would be the birthdate for an 18 year old having a birthday today.
+PROTIP: Specify Doxygen tags for automatic generation of cross-reference documentation, whith
+sample code to call the function.
+
+CHALLENGE: Immediately after creating a file, at the top of the file add Doxygen tags.
 
 ```
-/* /file RandomBirthDate.js
+/* /file lr_js_date_lib.js
    /desc returns dates 
-    Example of caller: getWorkingAdultBirthDate('YYYYMMDD')
+    Example of caller: 
+    web_js_run(
+        "Code=getWorkingAdultBirthDate('YYYY-MM-DD');",
+        "ResultParam=BirthYYYYMMDD",
+        SOURCES,
+        "File=lr_js_date_lib.js", ENDITEM,
+        LAST);
+*/
+```
+
+PROTIP: Take a test-driven approach to developing code to finish quicker. Code from the "outside in".
+
+CHALLENGE: Initially, return a static value in the format expected to ensure that the script connects.
+
+4. Copy the sample JavaScript below and past it in file lr_js_date_lib.js.
+
+PROTIP: At the top of the file are Doxygen tags for automatic generation of cross-reference documentation.
+
+```
+/* /file lr_js_date_lib.js
+   /desc returns dates 
+    Example of caller: 
+    web_js_run(
+        "Code=getWorkingAdultBirthDate('YYYY-MM-DD');",
+        "ResultParam=BirthYYYYMMDD",
+        SOURCES,
+        "File=lr_js_date_lib.js", ENDITEM,
+        LAST);
 */
 
-function getWorkingAdultBirthDate(){
-    var formatted_date;
-    var years_worked = new Date();
-    var now = new Date();
-
-    // Random number between 18 and 64 years old today:
-    
-    // if YYYYMMDD:
-    // 2015 - 18 = 1997
-    formatted_date = (now.getFullYear() - 18) + "0503";
-
-    return formatted_date;
+function getWorkingAdultBirthDate( in_format ){
+    // 2015 - 25 = 1990
+    return "1990-05-03";
 }
 ```
 
-BEST PRACTICE IDEA: Define functions to obtain the current date so that the propram still works in the future
+This intermediate example defines a static but valid return value expected by the caller.
+
+That would be the birthdate for an 18 year old having a birthday today.
+
+The format specification 'YYYY-MM-DD' is needed because there are different formats for dates.
+
+* "YYYY-MM-DD" is for a date such as 2015-12-30. This is ISO 8601 popular everywhere outside the US.
+* YYYYMMDD specifies a 4 digit year, 2 digit month, and 2 digit day of month.
+* var d = new Date("July 21, 1983 01:15:00"); // defines the input to populate the data object using JavaScript code.
+
+5. Save the LoadRunner script.
+6. Run (and debug) the LoadRunner script.
+
+PROTIP: JavaScript within LoadRunner is difficult to debug, so first debug JavaScript outside LoadRunner
+using an interactive environment such as Codepen.io or JSFiddle.net at
+
+
+CHALLENGE: Define JavaScript and HTML that takes the place of how LoadRunner calls the underlying JavaScript functions.
+
+8. Paste this at the top of the JavaScript pane:
+
+```
+function web_js_run(){
+    var Birth_YYYYMMDD;
+    Birth_YYYYMMDD = getWorkingAdultBirthDate('YYYY-MM-DD');
+    // alert(Birth_YYYYMMDD);
+    document.getElementById('result').innerHTML = Birth_YYYYMMDD;
+}
+```
+
+CAUTION: Single quotes are used within JavaScript functios because there may be double quotes surrounding them.
+
+9. Paste this into the HTML pane:
+
+```
+<form>
+<input type="button" value="Click me!" onclick="javascript:web_js_run()" />
+</form>
+<p>Pressing "Click me"</p>
+Today: <span id="today"></span><br />
+<!-- 
+PROTIP: When there are several substitutions on a line, to preserve spacing, and make updates less visually jarring, put placeholder characters where real values will go.
+-->
+Age: <span id="working_age">??</span>
+Result: <span id="result">YYYY-MM-DD</span>
+```
+
+This defines how values returned from the JavaScript function is displayed.
+
+
+PROTIP: Define functions to obtain the current date so that the program still works in the future
 without need to change hard-coded text.
 
 During date of birth generation there is often a need to specify whether the birthdate is that of 
@@ -83,47 +160,6 @@ an adult, a child, a retiree, or of an entire population.
 To avoid the need for callers to craft code to calculate age,
 the library file contains different calling functions and parameters.
 
-CAUTION: Quotes must be single quotes because they are within double quotes.
-
-Instead of a string, the input parameter can come from a LoadRunner parameter already defined:
-
-```
-        "Code=getWorkingAdultBirthDate(LR.getParam('YYYYMMDD'));",
-```
-
-First debug the script in a HTML file
-Better yet, avoid having to craft script library calls, use a (free) JavaScript environment such as:
-
-http://jsfiddle.net/wilsonmar/3nyjurtc/
-
-The HTML is:
-
-'''
-<form>
-<input type="button" value="Click me!" onclick="javascript:web_js_run('YYYYMMDD')" />
-</form>
-<p>Pressing "Click me"</p>
-working_age: <span id="working_age"></span>
-Result: <span id="result"></span>
-'''
-
-The JavaScript emulates LoadRunner calls:
-
-```
-    var working_age;
-
-function web_js_run(){
-    var Birth_YYYYMMDD;
-    Birth_YYYYMMDD = getWorkingAdultBirthDate('YYYYMMDD');
-    // alert(Birth_YYYYMMDD);
-    document.getElementById('result').innerHTML = Birth_YYYYMMDD;
-    document.getElementById('working_age').innerHTML = working_age;
-}
-```
-
-
-Click on the **Click me!** button in the Result pane for a pop-up with the answer.
-The web_js_run() function is the equivalent of what Loadrunner does.
 
 Invoke the LoadRunner program to make sure it returns what the LoadRunner script can use.
 
@@ -131,18 +167,16 @@ Next, define the various inputs into what is returned:
 
 ```
     var formatted_date, random_year, random_month, random_day;
-    // 1. Get 4 digit random year from 1997 (18 yo)
+    // 1. Get 4 digit random year from 1997 
     // 2. Get 2 digit month random from 1 to 12 
     // 3. Get 2 digit day within month random valid day for month and perhaps leap year 
-
-    // based on statistics array.
 ```
 
+The month is a random number evenly generated between 1 and 12.
+We use a function that randomly returns a number within a range of two numbers:
+This is similar to sample C code LoadRunner at:
 
-We could call a function that randomly obtains a date within a range of two boundign dates:
-
-* the birthdate of someone turning 65 (retiring) today
-* the birthdate of of someone turning 18 (becoming an an adult) today
+* http://www.codingunit.com/c-reference-stdlib-h-function-rand-generate-a-random-number
 
 That lower level function should use consider the relative chance of ages
 based on actual population statistics.
@@ -167,32 +201,14 @@ simplying putting another file in the script, or specifying the file path in ano
 The age from the array is used to calculate the year of birth through subtraction from the current year.
 For purposes of this exercise, we use the mid-point in each range of ages.
 
-The year of birth is used to determine whether the year isLeapYear.
+The year is used to determine whether the year isLeapYear.
 The edge test case is someone born Feb. 29 during a leap year.
 For this purpose, we're saying such a person would have their birthday on the 28th during regular years.
 
-The month is a random number evenely generated between 1 and 12.
 
 The month and isLeapYear flag is input to a function to generate the number of days.
 A random number is generated for Day of Birth between 1 and the number of days.
 
 	Note JavaScript objects are created within the script.
 
-The beginnings of that file is below:
-
-```
-function getAdultBirthDate(){
-    var from_year, from_month, from_day
-    // 	
-    return randomDate(new Date(from_year, from_month, from_day), new Date()); // random date generator.
-}
-
-
-```
-
-
-
-Sample C code LoadRunner may be able to use:
-
-* http://www.codingunit.com/c-reference-stdlib-h-function-rand-generate-a-random-number
  
