@@ -76,6 +76,17 @@ Action(){
 		lr_save_string("get_google_short_url" ,"pTransSequence");
 		rc=get_google_short_url(); // to obtain LR parameter {pShortURL} by calling get_google_access_token() which calls get_pJWTAssertion().
 	
+		// After “Enable running JavaScript code” is enabled in Run-Time Settings > Internet Protocol > Preferences > Set advanced options > Options
+	    rc=web_js_run(
+	        "Code=getWorkingAdultRandomBirthDate('YYYY-MM-DD');",
+	        "ResultParam=birth_date",
+	        SOURCES,
+	        "File=lr_js_date_lib.js", ENDITEM,
+	        LAST);
+		wi_startPrintingInfo();
+	  	lr_output_message(">> birth_date=\"%s\" rc=%d.", rc, lr_eval_string("{birth_date}") );
+		wi_stopPrinting();
+
 	// FUTURE ENHANCEMENTS: FIXME: Use web_rest() to not send User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT)
 	//  Add retrieval of URL shortened:
 	//  Add recognition of expired token and get new token using refresh token instead of auth token.

@@ -61,7 +61,7 @@ vuser_end=cci
 [TransactionsOrder]
 Order="long to short__*delimiter*__short to qr"
 [StateManagement]
-LastReplayStatus=3
+LastReplayStatus=1
 [ActiveReplay]
 LastReplayedRunName=result1
 ActiveRunName=result1
@@ -71,3 +71,5 @@ ActiveIterationName=Iteration1
 "short to qr"=
 [ExtraFilesToParse]
 AsyncCallbacks.c=
+[ManuallyExtraFiles]
+lr_js_date_lib.js=
