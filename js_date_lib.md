@@ -37,7 +37,7 @@ lr_eval_string("{BirthYYYYMMDD}").
 
 ```
     web_js_run(
-        "Code=getWorkingAdultBirthDate('YYYY-MM-DD');",
+        "Code=getWorkingAdultRandomBirthDate('YYYY-MM-DD');",
         "ResultParam=BirthYYYYMMDD",
         SOURCES,
         "File=lr_js_date_lib.js", ENDITEM,
@@ -58,7 +58,7 @@ This example calls a file named **lr_js_date_lib.js** stored in the script folde
 BTW, instead of a hard-coded string, the input parameter can come from a LoadRunner parameter already defined:
 
 ```
-        "Code=getWorkingAdultBirthDate(LR.getParam('YYYY-MM-DD'));",
+        "Code=getWorkingAdultRandomBirthDate(LR.getParam('YYYY-MM-DD'));",
 ```
 
 
@@ -81,8 +81,8 @@ CHALLENGE: Immediately after creating a file, at the top of the file add Doxygen
    /desc returns dates 
     Example of caller: 
     web_js_run(
-        "Code=getWorkingAdultBirthDate('YYYY-MM-DD');",
-        "ResultParam=BirthYYYYMMDD",
+        "Code=getWorkingAdultRandomBirthDate('YYYY-MM-DD');",
+        "ResultParam=Birth_date",
         SOURCES,
         "File=lr_js_date_lib.js", ENDITEM,
         LAST);
@@ -96,7 +96,7 @@ CHALLENGE: Initially, return a static value in the format expected to ensure tha
 7. Copy the sample initial JavaScript below and paste it at the bottom of new file lr_js_date_lib.js.
 
 ```
-function getWorkingAdultBirthDate( in_format ){
+function getWorkingAdultRandomBirthDate( in_format ){
     // 2015 - 25 = 1990
     return "1990-05-03";
 }
@@ -122,13 +122,20 @@ CHALLENGE: Define JavaScript and HTML that takes the place of how LoadRunner cal
 3. Paste this at the top of the JavaScript pane:
 
 ```
+'use strict';
+
 function web_js_run(){
-    var Birth_YYYYMMDD;
-    Birth_YYYYMMDD = getWorkingAdultBirthDate('YYYY-MM-DD');
-    // alert(Birth_YYYYMMDD);
-    document.getElementById('result').innerHTML = Birth_YYYYMMDD;
+var birth_date;
+    birth_date = getWorkingAdultRandomBirthDate('YYYY-MM-DD');
+    // alert("birth_date=" + birth_date);
+    document.getElementById('result').innerHTML = birth_date;
 }
 ```
+
+The `use strict` directive tells JavaScript to ensure that variables are specifically defined 
+by a statement such as `var Birth_date`.
+
+PROTIP: Where convenient, align variable names vertically to make it obvious where several lines of code are visually related.
 
 CAUTION: Single quotes are used within JavaScript functios because there may be double quotes surrounding them.
 
@@ -199,3 +206,10 @@ For this purpose, we're saying such a person would have their birthday on the 28
 The month and isLeapYear flag is input to a function to generate the number of days.
 A random number is generated for Day of Birth between 1 and the number of days.
 
+### Running and Watching JavaScript Engine Sizes in LoadRunner
+
+When the script is run, if you didn't “Enable running JavaScript code” in Replay (F4) Run-Time Settings > Preferences > JavaScript, this message appears:
+
+```
+Action.c(81): Error -35052: Step 'web_js_run' requires that JavaScript engine be enabled in the Run-Time Settings  	[MsgId: MERR-35052]
+```
