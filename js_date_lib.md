@@ -170,11 +170,15 @@ Invoke the LoadRunner program to make sure it returns what the LoadRunner script
 
 Next, define the various inputs into what is returned:
 
+### Month
+
 The month is a random number evenly generated between 1 and 12.
 We use a function that randomly returns a number within a range of two numbers:
 This is similar to sample C code LoadRunner at:
 
 * http://www.codingunit.com/c-reference-stdlib-h-function-rand-generate-a-random-number
+
+### Age
 
 That lower level function should use consider the relative chance of ages
 based on actual population statistics.
@@ -198,6 +202,10 @@ simplying putting another file in the script, or specifying the file path in ano
 
 The age from the array is used to calculate the year of birth through subtraction from the current year.
 For purposes of this exercise, we use the mid-point in each range of ages.
+
+       if (jQuery.inArray(name, names)!='-1') {
+ 
+### Year
 
 The year is used to determine whether the year isLeapYear.
 The edge test case is someone born Feb. 29 during a leap year.
