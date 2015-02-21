@@ -35,14 +35,14 @@ lr_eval_string("{BirthYYYYMMDD}").
 
 1. Paste this code into an appropriate line in the script, such as after identifying a row in VTS.
 
-```
+    ```
     web_js_run(
         "Code=getWorkingAdultRandomBirthDate('YYYY-MM-DD');",
         "ResultParam=BirthYYYYMMDD",
         SOURCES,
         "File=lr_js_date_lib.js", ENDITEM,
         LAST);
-```
+    ```
 
 2. While you are there, right-click on the LoadRunner code line **after** this and set a **Breakpoint** so 
 execution can pause there during debugging.
