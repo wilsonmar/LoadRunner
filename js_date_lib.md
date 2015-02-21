@@ -44,23 +44,14 @@ CHALLENGE: Call a JavaScript library to return a text string into a LoadRunner p
         LAST);
     ```
 
-BTW, instead of a hard-coded string, the input parameter can come from a LoadRunner parameter already defined:
+    BTW, instead of a hard-coded string, the input parameter can come from a LoadRunner parameter already defined:
 
-```
-        "Code=getWorkingAdultRandomBirthDate(LR.getParam('YYYY-MM-DD'));",
-```
+    ```
+    "Code=getWorkingAdultRandomBirthDate(LR.getParam('YYYY-MM-DD'));",
+    ```
 
 2. While you are there, right-click on the LoadRunner code line **after** this and set a **Breakpoint** so 
 execution can pause there during debugging. For example, at the return statement.
-
-
-#### Date formats
-
-The format specification 'YYYY-MM-DD' is needed because there are different formats for dates:
-
-* "YYYY-MM-DD" is for a date such as 2015-12-30. This is ISO 8601 popular everywhere outside the US.
-* YYYYMMDD specifies a 4 digit year, 2 digit month, and 2 digit day of month.
-* var d = new Date("July 21, 1983 01:15:00"); // defines the input to populate the data object using JavaScript code.
 
 
 ### <a name="add_js_file"></a> Add JavaScript Files in LoadRunner
@@ -114,6 +105,7 @@ CHALLENGE: Initially, return a static value in the format expected to ensure tha
 
 6. Run (and debug) the LoadRunner script to the block.
 
+
 ### <a name="debug_js_file"></a> Debug JavaScript Outside LoadRunner
 
 PROTIP: JavaScript within LoadRunner is difficult to debug, so first debug JavaScript outside LoadRunner
@@ -166,15 +158,87 @@ CHALLENGE: Define JavaScript and HTML that takes the place of how LoadRunner cal
     Result: <span id="result">YYYY-MM-DD</span>
     ```
 
-This defines how values returned from the JavaScript function is displayed.
+
+### <a name="format_return_value"></a> Define Return Values in Variables
+
+One may prefer to work first on the "substantive" aspects like calculations before the formatting.
+
+PROTIP: The format which data is requested can often change more often than calculations.
+So provide a flexible structure for responding to what format is needed by "customers" of the function.
+
+#### Date formats
+
+A format specification (such as 'YYYY-MM-DD') is needed because there are different formats for dates:
+
+* "YYYY-MM-DD" is for a date such as 2015-12-30. This is ISO 8601 popular everywhere outside the US.
+* YYYYMMDD specifies a 4 digit year, 2 digit month, and 2 digit day of month without divider markers.
+* var d = new Date("July 21, 1983 01:15:00"); // defines the input to populate the data object using JavaScript code.
+
+CHALLENGE: Before code to perform calculations can be developed, initially hard-code values into variables.
+
+    ```
+    f_year=1990; f_month= 05; f_mday=03;
+    
+    // PROTIP: Separate calculations and formatting concerns in separate functions.
+    return formatDate( f_year, f_month, f_mday, in_format );
+    ```
+
+PROTIP: The approach of coding from the output in provides for early determination of crucial aspects
+that may seem minor but can waste time at the end when changes are more difficult and thus more expensive.
+
+The variable name **mday** is used to avoid confusion between the word "date" which 
+may be mis-read as including year and month when it's really the day within the month.
+
+And what about number pre-padding?
 
 
 ### <a name="format_return_value"></a> Format Return Value
 
-One may prefer to work on the "substantive" aspects like calculations before the formatting.
 
-PROTIP: The format which data is requested can often change more quickly than the calculation.
-So provide a flexible structure for responding to what format is needed by "customers" of the function.
+```
+function formatDate( f_year, f_month, f_mday, in_format ){
+    var formatted_date;
+
+    if ( f_month <= 9 ){ // to zero fill:
+         f_month=  "0" + f_month;
+    }else{
+         f_month = f_month.toString();
+    }
+
+    if( f_mday <= 9 ){ // to zero fill:
+        f_mday = "0" + f_mday;
+    }else{
+        f_mday = f_mday.toString();
+    }
+    
+          if( in_format == 'YYYY-MM-DD' || in_format == 'ISO 8601' ){
+        formatted_date = f_year +"-"+ f_month +"-"+ f_mday;
+ 
+    }else if( in_format == 'YYYYMMDD' ){
+        formatted_date = f_year + f_month + f_mday;
+    }else if( in_format == 'YYMMDD' ){
+        f_year=f_year.substring(1, 2);
+        formatted_date = f_year + f_month + f_mday;
+    }else if( in_format == 'YY-MM-DD' ){
+        f_year=f_year.substring(1, 2);
+        formatted_date = f_year +"-"+ f_month +"-"+ f_mday;
+    }else if( in_format == 'YYYY/MM/DD' ){
+        formatted_date = f_year +"/"+ f_month +"/"+ f_mday;
+    }else if( in_format == 'MM/DD/YYYY' ){
+        formatted_date = f_month +"/"+ f_mday +"/"+ f_year;
+    }else if( in_format == 'DD/MM/YYYY' ){
+        formatted_date = f_mday +"/"+ f_month +"/"+ f_year;
+
+    }else{
+        // PROTIP: When using alert that can pop-up from any function, include the function name.
+        formatted_date = "Format " + in_format +" not recognized in formatDate().";
+        // PROTIP: For more complex date formats and calculations (different cultures, etc.), 
+        // consider using http://www.datejs.com/.
+    }
+
+	return formatted_date;
+}
+```
 
 
 
@@ -291,6 +355,7 @@ The year is used to determine whether the year isLeapYear.
 The edge test case is someone born Feb. 29 during a leap year.
 For this purpose, we're saying such a person would have their birthday on the 28th during regular years.
 
+
 ### <a name="month_calc"></a> Generate Random Month 
 
 The month is a random number evenly generated between 1 and 12.
@@ -303,9 +368,6 @@ This is similar to sample C code LoadRunner at:
 ### <a name="mday_calc"></a> Generate Random Day of Month
 
 The day of month needs to be calculated within month because of Leap Year.
-
-The variable name **mday** is used to avoid confusion between the word date which may be read as including year and month
-when it's really the day within the month.
 
 The month and isLeapYear flag is input to a function to generate the number of days.
 A random number is generated for Day of Birth between 1 and the number of days.
