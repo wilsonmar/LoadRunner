@@ -67,21 +67,22 @@ BTW, instead of a hard-coded string, the input parameter can come from a LoadRun
 
 CHALLENGE: Add the javascript file among Extra Files in your LoadRunner script.
 
- 3. Paste the calling code at an approprite spot in your LoadRunner script.
- 4. Right-click on Extra Files within the VuGen Solution Explorer.
- 5. Specify the JavaScript file name.
+ 1. Paste the calling code at an approprite spot in your LoadRunner script.
+ 2. Right-click on Extra Files within the VuGen Solution Explorer.
+ 3. Specify the JavaScript file name.
 
 
-PROTIP: Specify Doxygen tags for automatic generation of cross-reference documentation, whith
-sample code to call the function.
+    PROTIP: Specify Doxygen tags for automatic generation of cross-reference documentation, whith
+    sample code to call the function.
 
-CHALLENGE: Immediately after creating a file, at the top of the file add Doxygen tags.
+    CHALLENGE: Immediately after creating a file, at the top of the file add Doxygen tags.
 
- 6. Copy the sample JavaScript multi-line comment and paste it at the top of new file lr_js_date_lib.js.
+ 4. Copy the sample JavaScript multi-line comment and paste it at the top of new file lr_js_date_lib.js.
 
-```
-/* /file lr_js_date_lib.js
+    ```
+    /* /file lr_js_date_lib.js
    /desc returns dates 
+    
     Example of caller: 
     web_js_run(
         "Code=getWorkingAdultRandomBirthDate('YYYY-MM-DD');",
@@ -89,27 +90,27 @@ CHALLENGE: Immediately after creating a file, at the top of the file add Doxygen
         SOURCES,
         "File=lr_js_date_lib.js", ENDITEM,
         LAST);
-*/
-```
+    */
+    ```
 
-PROTIP: Take a test-driven approach to developing code to finish quicker. Code from the "outside in".
+    PROTIP: Take a test-driven approach to developing code to finish quicker. Code from the "outside in".
 
-CHALLENGE: Initially, return a static value in the format expected to ensure that the script connects.
+    CHALLENGE: Initially, return a static value in the format expected to ensure that the script connects.
 
-7. Copy the sample initial JavaScript below and paste it at the bottom of new file lr_js_date_lib.js.
+5. Copy the sample initial JavaScript below and paste it at the bottom of new file lr_js_date_lib.js.
 
-```
-function getWorkingAdultRandomBirthDate( in_format ){
-    // 2015 - 25 = 1990
-    return "1990-05-03";
-}
-```
+    ```
+    function getWorkingAdultRandomBirthDate( in_format ){
+        // 2015 - 25 = 1990
+        return "1990-05-03";
+    }
+    ```
 
-This intermediate example defines a static but valid return value expected by the caller.
+    This intermediate example defines a static but valid return value expected by the caller.
 
-The comments notes this is the birthdate of a 25-year old.
+    The comments notes this is the birthdate of a 25-year old.
 
-8. Run (and debug) the LoadRunner script to the block.
+6. Run (and debug) the LoadRunner script to the block.
 
 PROTIP: JavaScript within LoadRunner is difficult to debug, so first debug JavaScript outside LoadRunner
 using an interactive environment such as Codepen.io or JSFiddle.net at
