@@ -248,22 +248,22 @@ function formatDate( f_year, f_month, f_mday, in_format ){
 
 PROTIP: This is the core of the purpose of this code, so work on this before other calculations.
 
-    ```
+```
     var working_age;
 
     working_age = randomWorkingAdultAge(); 
-    ```
+```
 
 PROTIP: Create a function to make calculations in order to keep code undertstandable, 
 reduce debugging effort, and to enable more reuse.
 
 Initially, hard-code a number within the function.
 
-    ```
+```
     function randomWorkingAdultAge(){
     	return 33;
     }
-    ```
+```
 
 The lower level function should use consider the relative chance of ages
 based on actual population statistics.
@@ -355,9 +355,10 @@ Invoke the LoadRunner program to make sure it returns what the LoadRunner script
 PROTIP: Define functions to obtain the current date so that the program still works in the future
 without need to change hard-coded text.
 
-    ```
-        f_year  = now.getFullYear() - working_age ;
-    ```
+```
+f_year  = now.getFullYear() - working_age ;
+```
+
 The year is used to determine whether the year isLeapYear.
 The edge test case is someone born Feb. 29 during a leap year.
 For this purpose, we're saying such a person would have their birthday on the 28th during regular years.
@@ -367,9 +368,9 @@ For this purpose, we're saying such a person would have their birthday on the 28
 
 The month is a random number evenly generated between 1 and 12.
 
-	```
-        f_month = randomIntFromInterval(1,12);
-	```
+```
+	f_month = randomIntFromInterval(1,12);
+```
 
 We use a function that randomly returns a number within a range of two numbers:
 This is similar to sample C code LoadRunner at:
