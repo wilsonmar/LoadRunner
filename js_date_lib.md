@@ -117,9 +117,11 @@ CHALLENGE: Initially, return a static value in the format expected to ensure tha
 ### <a name="debug_js_file"></a> Debug JavaScript Outside LoadRunner
 
 PROTIP: JavaScript within LoadRunner is difficult to debug, so first debug JavaScript outside LoadRunner
-using an interactive environment such as Codepen.io or JSFiddle.net at
+using an interactive environment such as JSFiddle.net at
 
 http://jsfiddle.net/wilsonmar/3nyjurtc/14/
+
+There is also Codepen.io, which provides for instant invocation without needing to click Run and "Click me".
 
 The remainder of this document defines how you can create your own.
 
@@ -167,31 +169,29 @@ CHALLENGE: Define JavaScript and HTML that takes the place of how LoadRunner cal
 This defines how values returned from the JavaScript function is displayed.
 
 
-PROTIP: Define functions to obtain the current date so that the program still works in the future
-without need to change hard-coded text.
+### <a name="format_return_value"></a> Format Return Value
 
-During date of birth generation there is often a need to specify whether the birthdate is that of 
-an adult, a child, a retiree, or of an entire population.
-To avoid the need for callers to craft code to calculate age,
-the library file contains different calling functions and parameters.
+One may prefer to work on the "substantive" aspects like calculations before the formatting.
 
+PROTIP: The format which data is requested can often change more quickly than the calculation.
+So provide a flexible structure for responding to what format is needed by "customers" of the function.
 
-Invoke the LoadRunner program to make sure it returns what the LoadRunner script can use.
-
-Next, define the various inputs into what is returned:
-
-### <a name="month_calc"></a> Generate Random Month 
-
-The month is a random number evenly generated between 1 and 12.
-We use a function that randomly returns a number within a range of two numbers:
-This is similar to sample C code LoadRunner at:
-
-* http://www.codingunit.com/c-reference-stdlib-h-function-rand-generate-a-random-number
 
 
 ### <a name="age_calc"></a> Generate Random Age
 
-That lower level function should use consider the relative chance of ages
+PROTIP: This is the core of the purpose of this code, so work on this before other calculations.
+
+    ```
+    var working_age;
+
+    working_age = randomWorkingAdultAge(); 
+    ```
+
+PROTIP: Create a function to make calculations to keep code undertstandable, 
+reduce debugging effort, and to enable more reuse.
+
+The lower level function should use consider the relative chance of ages
 based on actual population statistics.
 So when function ___ is first envoked,
 a random floating point number between 0 and 1.0 is generated to pick where on a table of ages the lucky person lands.
@@ -207,24 +207,110 @@ https://www.census.gov/population/age/data/2012comp.html.
 Different statistics are relevant for male vs. female and across
 different geographies, and across time.
 
+```
+function randomWorkingAdultAge(){
+    // http://jsfiddle.net/wilsonmar/2qah2r8m/2/
+    
+    // This function retuns a randomly assigned valid age (used to calculate birth dates).
+    var out_age=-1;
+    // The age generated is designed to be within a range of 
+    // what is considered working age (20 to 65). This range is not specified
+    // by the caller because it is a "corporate" level "business rule" 
+    // that can change over time, encapsulated in this function library.
+    
+    // This function works by first obtaining a random number between 0 and 100 
+    // which is assumed to be evenly distributed across all values.
+    var point_in_curve;
+
+    // But we want to apply a probability distribution (such as a normal distribution).
+    // So we use a two-dimentional look-up matrix of the cumulative chance and the age.
+    // Each pair is like another column in the probability curve.
+    // With [23,29] : [0,0]=23, [0,1]=29, [0,2]=undefined beyond columns defined
+    // meaning there is 23% chance of between 25 and 29 years.
+    var a = [ 
+         [12,24]
+        ,[23,29]
+        ,[34,34]
+        ,[44,39]
+        ,[56,44]
+        ,[67,49]
+        ,[79,55]
+        ,[91,59]
+        ,[100,64] 
+    ]; 
+    // Age values on the right are the max age of each age band defined by 
+    // the US Census at https://www.census.gov/population/age/data/cps.html
+    // Smaller bands would provide a more realistic distribution.
+
+    var i;
+    
+    point_in_curve = randomIntFromInterval( 0, 100 ); // func. within same js file.
+    // document.getElementById('point_in_curve').innerHTML = point_in_curve; // DEBUGGING
+ 
+    for (var i = 0; i < 9; i++){ // size of matrix = 9 items (i value 0 to 8).
+        if( point_in_curve > a[i][0] ){ // left dimension (cum. popularity of each band)
+            // loop though for next i (and higher cumulative chance).
+        }else{
+            out_age = a[i][1];
+            break;
+        }
+    }
+    return out_age;
+}
+```
+
 If you want to use a different set of statistics, just replace the array containing the same format.
 A future enhancement may be to externalize the arrary as a JSON file so that other age distributions can be specified by
 simplying putting another file in the script, or specifying the file path in another run-time attribute.
 
 The age from the array is used to calculate the year of birth through subtraction from the current year.
+
 For purposes of this exercise, we use the mid-point in each range of ages.
 
        if (jQuery.inArray(name, names)!='-1') {
  
  
-### <a name="year_calc"></a> Generate Random Year
+ 
+During date of birth generation there is often a need to specify whether the birthdate is that of 
+an adult, a child, a retiree, or of an entire population.
+To avoid the need for callers to craft code to calculate age,
+the library file contains different calling functions and parameters.
 
+Invoke the LoadRunner program to make sure it returns what the LoadRunner script can use.
+
+
+### <a name="year_calc"></a> Generate Random Year (Adjusting for Leap Year)
+
+PROTIP: Define functions to obtain the current date so that the program still works in the future
+without need to change hard-coded text.
+
+    ```
+        f_year  = now.getFullYear() - working_age ;
+    ```
 The year is used to determine whether the year isLeapYear.
 The edge test case is someone born Feb. 29 during a leap year.
 For this purpose, we're saying such a person would have their birthday on the 28th during regular years.
 
+### <a name="month_calc"></a> Generate Random Month 
+
+The month is a random number evenly generated between 1 and 12.
+We use a function that randomly returns a number within a range of two numbers:
+This is similar to sample C code LoadRunner at:
+
+* http://www.codingunit.com/c-reference-stdlib-h-function-rand-generate-a-random-number
+
+
+### <a name="mday_calc"></a> Generate Random Day of Month
+
+The day of month needs to be calculated within month because of Leap Year.
+
+The variable name **mday** is used to avoid confusion between the word date which may be read as including year and month
+when it's really the day within the month.
+
 The month and isLeapYear flag is input to a function to generate the number of days.
 A random number is generated for Day of Birth between 1 and the number of days.
+
+
 
 
 ### <a name="js_parsing"></a> Enable JavaScript Parsing in LoadRunner
