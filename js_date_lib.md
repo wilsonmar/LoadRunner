@@ -29,9 +29,9 @@ Time to write script code. Time to debug script code. Time to explain the code t
 And more importantly, work to overcome miscommunication between the tester and developers if they don't share a library.
 
 
-## <a name="birthdays"></a> Random Birthdays from Calling a JavaScript library
+### <a name="lr_call_js"></a> Call JavaScript function in C code
 
-CHALLENGE: Dall a JavaScript library to return a text string into a LoadRunner parameter.
+CHALLENGE: Call a JavaScript library to return a text string into a LoadRunner parameter.
 
 1. Paste this code into an appropriate line in the script, such as after identifying a row in VTS.
 
@@ -44,11 +44,17 @@ CHALLENGE: Dall a JavaScript library to return a text string into a LoadRunner p
         LAST);
     ```
 
+BTW, instead of a hard-coded string, the input parameter can come from a LoadRunner parameter already defined:
+
+```
+        "Code=getWorkingAdultRandomBirthDate(LR.getParam('YYYY-MM-DD'));",
+```
+
 2. While you are there, right-click on the LoadRunner code line **after** this and set a **Breakpoint** so 
-execution can pause there during debugging.
+execution can pause there during debugging. For example, at the return statement.
 
 
-### Date formats
+#### Date formats
 
 The format specification 'YYYY-MM-DD' is needed because there are different formats for dates:
 
@@ -56,16 +62,8 @@ The format specification 'YYYY-MM-DD' is needed because there are different form
 * YYYYMMDD specifies a 4 digit year, 2 digit month, and 2 digit day of month.
 * var d = new Date("July 21, 1983 01:15:00"); // defines the input to populate the data object using JavaScript code.
 
-This example calls a file named **lr_js_date_lib.js** stored in the script folder.
 
-BTW, instead of a hard-coded string, the input parameter can come from a LoadRunner parameter already defined:
-
-```
-        "Code=getWorkingAdultRandomBirthDate(LR.getParam('YYYY-MM-DD'));",
-```
-
-
-### Add JavaScript Files in LoadRunner
+### <a name="add_js_file"></a> Add JavaScript Files in LoadRunner
 
 CHALLENGE: Add the javascript file among Extra Files in your LoadRunner script.
 
@@ -95,11 +93,13 @@ CHALLENGE: Add the javascript file among Extra Files in your LoadRunner script.
     */
     ```
 
-    PROTIP: Take a test-driven approach to developing code to finish quicker. Code from the "outside in".
+### <a name="initial_js_file"></a> Test JavaScript Response in LoadRunner
 
-    CHALLENGE: Initially, return a static value in the format expected to ensure that the script connects.
+PROTIP: Take a test-driven approach to developing code to finish quicker. Code from the "outside in".
 
-5. Copy the sample initial JavaScript below and paste it at the bottom of new file lr_js_date_lib.js.
+CHALLENGE: Initially, return a static value in the format expected to ensure that the script connects.
+
+1. Copy this sample initial JavaScript and paste it at the bottom of new file lr_js_date_lib.js.
 
     ```
     function getWorkingAdultRandomBirthDate( in_format ){
@@ -114,6 +114,8 @@ CHALLENGE: Add the javascript file among Extra Files in your LoadRunner script.
 
 6. Run (and debug) the LoadRunner script to the block.
 
+### <a name="debug_js_file"></a> Debug JavaScript Outside LoadRunner
+
 PROTIP: JavaScript within LoadRunner is difficult to debug, so first debug JavaScript outside LoadRunner
 using an interactive environment such as Codepen.io or JSFiddle.net at
 
@@ -127,38 +129,40 @@ CHALLENGE: Define JavaScript and HTML that takes the place of how LoadRunner cal
 2. Create a new file.
 3. Paste this at the top of the JavaScript pane:
 
-```
-'use strict';
+    ```
+    'use strict';
 
-function web_js_run(){
-var birth_date;
-    birth_date = getWorkingAdultRandomBirthDate('YYYY-MM-DD');
-    // alert("birth_date=" + birth_date);
-    document.getElementById('result').innerHTML = birth_date;
-}
-```
+    function web_js_run(){
+    var birth_date;
+        birth_date = getWorkingAdultRandomBirthDate('YYYY-MM-DD');
+        // alert("birth_date=" + birth_date);
+        document.getElementById('result').innerHTML = birth_date;
+    }
+    ```
 
-The `use strict` directive tells JavaScript to ensure that variables are specifically defined 
-by a statement such as `var Birth_date`.
+    The `use strict` directive tells JavaScript to ensure that variables are specifically defined 
+    by a statement such as `var Birth_date`.
 
-PROTIP: Where convenient, align variable names vertically to make it obvious where several lines of code are visually related.
+    PROTIP: Where convenient, align variable names vertically to 
+    make it obvious where several lines of code are visually related.
 
-CAUTION: Single quotes are used within JavaScript functios because there may be double quotes surrounding them.
+    CAUTION: Single quotes are used within JavaScript functios because there may be double quotes surrounding them.
 
 4. Paste this into the HTML pane:
 
-```
-<form>
-<input type="button" value="Click me!" onclick="javascript:web_js_run()" />
-</form>
-<p>Pressing "Click me"</p>
-Today: <span id="today"></span><br />
-<!-- 
-PROTIP: When there are several substitutions on a line, to preserve spacing, and make updates less visually jarring, put placeholder characters where real values will go.
--->
-Age: <span id="working_age">??</span>
-Result: <span id="result">YYYY-MM-DD</span>
-```
+    ```
+    <form>
+    <input type="button" value="Click me!" onclick="javascript:web_js_run()" />
+    </form>
+    <p>Pressing "Click me"</p>
+    Today: <span id="today"></span><br />
+    <!-- 
+    PROTIP: When there are several substitutions on a line, to preserve spacing, and make 
+    updates less visually jarring, put placeholder characters where real values will go.
+    -->
+    Age: <span id="working_age">??</span>
+    Result: <span id="result">YYYY-MM-DD</span>
+    ```
 
 This defines how values returned from the JavaScript function is displayed.
 
@@ -176,7 +180,7 @@ Invoke the LoadRunner program to make sure it returns what the LoadRunner script
 
 Next, define the various inputs into what is returned:
 
-### Month
+### <a name="month_calc"></a> Generate Random Month 
 
 The month is a random number evenly generated between 1 and 12.
 We use a function that randomly returns a number within a range of two numbers:
@@ -184,7 +188,8 @@ This is similar to sample C code LoadRunner at:
 
 * http://www.codingunit.com/c-reference-stdlib-h-function-rand-generate-a-random-number
 
-### Age
+
+### <a name="age_calc"></a> Generate Random Age
 
 That lower level function should use consider the relative chance of ages
 based on actual population statistics.
@@ -211,7 +216,8 @@ For purposes of this exercise, we use the mid-point in each range of ages.
 
        if (jQuery.inArray(name, names)!='-1') {
  
-### Year
+ 
+### <a name="year_calc"></a> Generate Random Year
 
 The year is used to determine whether the year isLeapYear.
 The edge test case is someone born Feb. 29 during a leap year.
@@ -220,7 +226,8 @@ For this purpose, we're saying such a person would have their birthday on the 28
 The month and isLeapYear flag is input to a function to generate the number of days.
 A random number is generated for Day of Birth between 1 and the number of days.
 
-### Enable JavaScript Parsing in LoadRunner
+
+### <a name="js_parsing"></a> Enable JavaScript Parsing in LoadRunner
 
 When the script is run, if you didn't “Enable running JavaScript code” in Replay (F4) Run-Time Settings > Preferences > JavaScript, this message appears:
 
