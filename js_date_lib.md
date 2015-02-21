@@ -1,12 +1,13 @@
 
-## Coding Challenges:
-
-### <a name="birthdays"></a> Random Birthdays from Calling a JavaScript library
+## <a name="random_birthdays"></a> Random Birthdays
 
 A birthday may need to be generated even when it can be provided because
 each person's real birthday can be used as the basis for authentication and thus identity theft
 and thus needs to be protected as secrets.
 So generating a birth date randomly can be useful and expedient during testing.
+
+Notes on dates written in C for LoadRunner is at
+http://www.solutionmaniacs.com/blog/2012/8/24/loadrunner-date-handling-2-of-3-c-datetime-functions.html
 
 DateofBirth fields can be gen'd using JavaScript functions in a UI such as 
 
@@ -17,7 +18,8 @@ JavaScript coding for generating birth dates are in web pages such as :
 
 * http://stackoverflow.com/questions/9035627/elegant-method-to-generate-array-of-random-dates-within-two-dates
 
-# LoadRunner Usage of JavaScript Library
+
+### <a name="why_lr_js"></a> Why Would LoadRunner Use a JavaScript Library?
 
 Within a LoadRunner script, code based on [this web page](http://h30499.www3.hp.com/t5/HP-LoadRunner-and-Performance/How-to-use-JavaScript-in-your-HP-LoadRunner-scripts/ba-p/6197321#.VMqXGl7F8eU)
 can be used to reference established JavaScript functions.
@@ -26,12 +28,10 @@ The advantage of LoadRunner scripts reusing functions in a JavaScript utility li
 Time to write script code. Time to debug script code. Time to explain the code to others.
 And more importantly, work to overcome miscommunication between the tester and developers if they don't share a library.
 
-Notes on dates written in C for LoadRunner is at
-http://www.solutionmaniacs.com/blog/2012/8/24/loadrunner-date-handling-2-of-3-c-datetime-functions.html
 
-Below is sample LoadRunner C code to call a JavaScript library to 
-return a text string into a LoadRunner parameter such as 
-lr_eval_string("{BirthYYYYMMDD}").
+## <a name="birthdays"></a> Random Birthdays from Calling a JavaScript library
+
+CHALLENGE: Dall a JavaScript library to return a text string into a LoadRunner parameter.
 
 1. Paste this code into an appropriate line in the script, such as after identifying a row in VTS.
 
@@ -46,6 +46,7 @@ lr_eval_string("{BirthYYYYMMDD}").
 
 2. While you are there, right-click on the LoadRunner code line **after** this and set a **Breakpoint** so 
 execution can pause there during debugging.
+
 
 ### Date formats
 
@@ -62,6 +63,7 @@ BTW, instead of a hard-coded string, the input parameter can come from a LoadRun
 ```
         "Code=getWorkingAdultRandomBirthDate(LR.getParam('YYYY-MM-DD'));",
 ```
+
 
 ### Add JavaScript Files in LoadRunner
 
