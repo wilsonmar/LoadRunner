@@ -248,11 +248,11 @@ function formatDate( f_year, f_month, f_mday, in_format ){
 
 PROTIP: This is the core of the purpose of this code, so work on this before other calculations.
 
-```
+    ```
     var working_age;
 
     working_age = randomWorkingAdultAge(); 
-```
+    ```
 
 PROTIP: Create a function to make calculations in order to keep code undertstandable, 
 reduce debugging effort, and to enable more reuse.
