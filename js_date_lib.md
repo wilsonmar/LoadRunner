@@ -47,6 +47,8 @@ lr_eval_string("{BirthYYYYMMDD}").
 2. While you are there, right-click on the LoadRunner code line **after** this and set a **Breakpoint** so 
 execution can pause there during debugging.
 
+### Date formats
+
 The format specification 'YYYY-MM-DD' is needed because there are different formats for dates:
 
 * "YYYY-MM-DD" is for a date such as 2015-12-30. This is ISO 8601 popular everywhere outside the US.
@@ -214,10 +216,14 @@ For this purpose, we're saying such a person would have their birthday on the 28
 The month and isLeapYear flag is input to a function to generate the number of days.
 A random number is generated for Day of Birth between 1 and the number of days.
 
-### Running and Watching JavaScript Engine Sizes in LoadRunner
+### Enable JavaScript Parsing in LoadRunner
 
 When the script is run, if you didn't “Enable running JavaScript code” in Replay (F4) Run-Time Settings > Preferences > JavaScript, this message appears:
 
 ```
 Action.c(81): Error -35052: Step 'web_js_run' requires that JavaScript engine be enabled in the Run-Time Settings  	[MsgId: MERR-35052]
 ```
+
+### Watching JavaScript Engine Sizes in LoadRunner
+
+TODO: 
