@@ -166,13 +166,16 @@ One may prefer to work first on the "substantive" aspects like calculations befo
 PROTIP: The format which data is requested can often change more often than calculations.
 So provide a flexible structure for responding to what format is needed by "customers" of the function.
 
-#### Date formats
+
+#### Date Formats and Names
 
 A format specification (such as 'YYYY-MM-DD') is needed because there are different formats for dates:
 
 * "YYYY-MM-DD" is for a date such as 2015-12-30. This is ISO 8601 popular everywhere outside the US.
 * YYYYMMDD specifies a 4 digit year, 2 digit month, and 2 digit day of month without divider markers.
 * var d = new Date("July 21, 1983 01:15:00"); // defines the input to populate the data object using JavaScript code.
+* The number of seconds since the epoch starting point of midnight Jan 1, 1970.
+* There are many others.
 
 CHALLENGE: Before code to perform calculations can be developed, initially hard-code values into variables.
 
@@ -189,10 +192,9 @@ that may seem minor but can waste time at the end when changes are more difficul
 The variable name **mday** is used to avoid confusion between the word "date" which 
 may be mis-read as including year and month when it's really the day within the month.
 
-And what about number pre-padding?
+And what about number pre-padding of numbers?
 
-
-### <a name="format_return_value"></a> Format Return Value
+#### <a name="format_return_value"></a> Function to format Date
 
 
 ```
@@ -252,8 +254,16 @@ PROTIP: This is the core of the purpose of this code, so work on this before oth
     working_age = randomWorkingAdultAge(); 
     ```
 
-PROTIP: Create a function to make calculations to keep code undertstandable, 
+PROTIP: Create a function to make calculations in order to keep code undertstandable, 
 reduce debugging effort, and to enable more reuse.
+
+Initially, hard-code a number within the function.
+
+    ```
+    function randomWorkingAdultAge(){
+    	return 33;
+    }
+    ```
 
 The lower level function should use consider the relative chance of ages
 based on actual population statistics.
@@ -263,13 +273,21 @@ The function then looks up the cumulative percentage between 0 and 100
 in the hard-coded array 
 and picks the corresponding age associated with the percentage.
 
+During date of birth generation there is often a need to specify whether the birthdate is that of 
+an adult, a child, a retiree, or of an entire population.
+To avoid the need for callers to craft code to calculate age,
+the library file contains different calling functions and parameters.
+
 The array is based on a the age range distribution derived for 
 the country as a whole by the US Census, provided by API sites such as 
 
 https://www.census.gov/population/age/data/2012comp.html.
 
+For purposes of this exercise, we use the mid-point in each range of ages.
+
 Different statistics are relevant for male vs. female and across
-different geographies, and across time.
+different geographies, and across time. 
+But that base information is not available to vary the calculation.
 
 ```
 function randomWorkingAdultAge(){
@@ -329,21 +347,10 @@ simplying putting another file in the script, or specifying the file path in ano
 
 The age from the array is used to calculate the year of birth through subtraction from the current year.
 
-For purposes of this exercise, we use the mid-point in each range of ages.
-
-       if (jQuery.inArray(name, names)!='-1') {
- 
- 
- 
-During date of birth generation there is often a need to specify whether the birthdate is that of 
-an adult, a child, a retiree, or of an entire population.
-To avoid the need for callers to craft code to calculate age,
-the library file contains different calling functions and parameters.
-
 Invoke the LoadRunner program to make sure it returns what the LoadRunner script can use.
 
 
-### <a name="year_calc"></a> Generate Random Year (Adjusting for Leap Year)
+### <a name="year_calc"></a> Generate Random Year
 
 PROTIP: Define functions to obtain the current date so that the program still works in the future
 without need to change hard-coded text.
@@ -359,20 +366,45 @@ For this purpose, we're saying such a person would have their birthday on the 28
 ### <a name="month_calc"></a> Generate Random Month 
 
 The month is a random number evenly generated between 1 and 12.
+
+	```
+        f_month = randomIntFromInterval(1,12);
+	```
+
 We use a function that randomly returns a number within a range of two numbers:
 This is similar to sample C code LoadRunner at:
 
 * http://www.codingunit.com/c-reference-stdlib-h-function-rand-generate-a-random-number
-
+	
 
 ### <a name="mday_calc"></a> Generate Random Day of Month
 
 The day of month needs to be calculated within month because of Leap Year.
 
 The month and isLeapYear flag is input to a function to generate the number of days.
-A random number is generated for Day of Birth between 1 and the number of days.
 
+    ```
+    if( f_month == 2){
+        //  isLeapYear = isLeapYear( f_year );
+            isLeapYear = ((f_year % 4 === 0 && f_year % 100 !== 0) || f_year % 400 === 0); 
+        if( isLeapYear ){
+            f_mday = randomIntFromInterval(1,29);
+        }else{
+            f_mday = randomIntFromInterval(1,28);
+        }
+    }else{
+        iDays_in_month = daysInMonth( f_month, f_year );
+        f_mday = randomIntFromInterval(1,iDays_in_month);
+    }
+    ```
 
+The daysInMonth function provides the number of days for the month.
+
+```
+function daysInMonth( iMonth, iYear ){
+	return 32 - new Date(iYear, iMonth, 32).getDate();
+}
+```
 
 
 ### <a name="js_parsing"></a> Enable JavaScript Parsing in LoadRunner
