@@ -63,12 +63,13 @@ BTW, instead of a hard-coded string, the input parameter can come from a LoadRun
         "Code=getWorkingAdultRandomBirthDate(LR.getParam('YYYY-MM-DD'));",
 ```
 
+### Add JavaScript Files in LoadRunner
 
 CHALLENGE: Add the javascript file among Extra Files in your LoadRunner script.
 
-3. Paste the calling code at an approprite spot in your LoadRunner script.
-4. Right-click on Extra Files within the VuGen Solution Explorer.
-5. Specify the JavaScript file name.
+ 3. Paste the calling code at an approprite spot in your LoadRunner script.
+ 4. Right-click on Extra Files within the VuGen Solution Explorer.
+ 5. Specify the JavaScript file name.
 
 
 PROTIP: Specify Doxygen tags for automatic generation of cross-reference documentation, whith
@@ -76,7 +77,7 @@ sample code to call the function.
 
 CHALLENGE: Immediately after creating a file, at the top of the file add Doxygen tags.
 
-6. Copy the sample JavaScript multi-line comment and paste it at the top of new file lr_js_date_lib.js.
+ 6. Copy the sample JavaScript multi-line comment and paste it at the top of new file lr_js_date_lib.js.
 
 ```
 /* /file lr_js_date_lib.js
