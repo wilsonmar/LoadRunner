@@ -1,0 +1,19 @@
+Virtual User Script started at : 2/22/2015 9:29:32 AM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.0.0 for Windows 7; build 2739 (Nov 30 2014 23:13:05)  	[MsgId: MMSG-27143]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Run-Time Settings file: "C:\LoadRunner\random_birthdate\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.c(5): web_js_run started  	[MsgId: MMSG-26355]
+Action.c(5): web_js_run was successful  	[MsgId: MMSG-26392]
+Action.c(13): >> birth_date="1976-06-05" rc=0.
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.
