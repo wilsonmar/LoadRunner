@@ -1,13 +1,25 @@
-# .gitignore file for LoadRunner scripts ignores
-# On macs:
+# .gitignore standard file for LoadRunner scripts ignores:
+
+# On macs only:
 .DS_Store
+
 # Unnecessary files added as a standard VuGen script template:
-Breakpoints.xml
 *.sdf
 ReplaySummaryReport.xml
+ScriptUploadMetadata.xml
 ThumbnailsCache.tmp
 UserTasks.xml
- 
+
+
+# Files created during recording:
+# Data folder contains recording snapshots and script regeneration (optional)
+# Note: may have a problem if there are any other version controlled folders 
+# called "data"
+# data/
+
+lrw_custom_body.h
+
+
 # Files created during compilation:
 combined_*.c
 CompilerLogMetadata.xml
@@ -18,13 +30,14 @@ mdrv_cmd.txt
 options.txt
 pre_cci.c
  
-# Files needed for recording snapshots and script regeneration (optional)
-# Note: may have a problem if there are any other version controlled folders 
-# called "data"
-# data/
- 
+
+# Files created during editing in VuGen:
+Breakpoints.xml
+Bookmarks.xml
+*.bak
+
+
 # Files created during script replay (definitely don't need these)
 result[1234567890]*/
 mdrv.log
 # output.txt - keep to show it working on local VuGen.
-*.bak
