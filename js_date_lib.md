@@ -1,5 +1,5 @@
 
-## <a name="random_birthdays"></a> Random Birthdays
+## <a name="random_birthdays"></a> Why Random Birthdays?
 
 A birthday may need to be generated even when it can be provided because
 each person's real birthday can be used as the basis for authentication and thus identity theft
@@ -8,6 +8,8 @@ So generating a birth date randomly can be useful and expedient during testing.
 
 Notes on dates written in C for LoadRunner is at
 http://www.solutionmaniacs.com/blog/2012/8/24/loadrunner-date-handling-2-of-3-c-datetime-functions.html
+
+However, you may want to reuse a library from a JavaScript developer.
 
 DateofBirth fields can be gen'd using JavaScript functions in a UI such as 
 
@@ -42,6 +44,7 @@ CHALLENGE: Call a JavaScript library to return a text string into a LoadRunner p
         SOURCES,
         "File=lr_js_date_lib.js", ENDITEM,
         LAST);
+    // web_js_reset() not invoked to leave js code in memory for repeated calls.
     ```
 
     BTW, instead of a hard-coded string, the input parameter can come from a LoadRunner parameter already defined:
