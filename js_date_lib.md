@@ -174,7 +174,8 @@ So provide a flexible structure for responding to what format is needed by "cust
 
 A format specification (such as 'YYYY-MM-DD') is needed because there are different formats for dates:
 
-* "YYYY-MM-DD" is for a date such as 2015-12-30. This is ISO 8601 popular everywhere outside the US.
+* "YYYY-MM-DD" is for a date such as 2015-12-30T13:07:54-08:00. This is ISO 8601 popular everywhere outside the US for XML.
+* "Mon, 07 Nov 2008 13:07:54 -0800" is RFC-822 format used for RSS feeds.
 * YYYYMMDD specifies a 4 digit year, 2 digit month, and 2 digit day of month without divider markers.
 * var d = new Date("July 21, 1983 01:15:00"); // defines the input to populate the data object using JavaScript code.
 * The number of seconds since the epoch starting point of midnight Jan 1, 1970.
