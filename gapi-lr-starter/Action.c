@@ -72,17 +72,27 @@ Action(){
 		#endif // GEN_QR
 	}
 
+	if( stricmp("All",LPCSTR_RunType ) == FOUND ){ // Run-time Attribute "RunType" or command line option "-RunType"
 		// TODO: 17. Customize your own transaction name prefix for get_google_short_url call.
 		lr_save_string("get_google_short_url" ,"pTransSequence");
 		rc=get_google_short_url(); // to obtain LR parameter {pShortURL} by calling get_google_access_token() which calls get_pJWTAssertion().
-	
+	}
+	#ifdef GEN_QR
+	if( rc == LR_PASS ){ // bURLtoShorten_success
+		// TODO: 19. Customize your own transaction name for calling get_google_short_url_qrcode().
+		lr_save_string("get_google_short_url_qrcode","pTransName"); 
+		get_google_short_url_qrcode(); // using pShortURL and pImageFilePath, depending on command flag LPCSTR_SaveImageYN.
+	}
+	#endif // GEN_QR
+
+
 	// FUTURE ENHANCEMENTS: FIXME: Use web_rest() to not send User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT)
 	//  Add retrieval of URL shortened:
 	//  Add recognition of expired token and get new token using refresh token instead of auth token.
 	//  Add other Google APIs, Amazon APIs, etc. using same data:
 	//  set_google_other_api();
 	//  Add API calls for other fields in data (email gravatar from MD5, Zip code, lat/long calc, validations, etc.
-	
+		    
 	return rc;
 } // Action()
 

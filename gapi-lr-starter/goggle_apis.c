@@ -39,7 +39,7 @@ get_google_short_url(){
 	// Forum on this:   https://groups.google.com/forum/#!forum/google-url-shortener
 
 	int rc=LR_PASS;
-	int	bURLtoShorten_success=LR_PASS;
+	int	bURLtoShorten_success=LR_FAIL;
 
 	rc=get_long_url_to_shorten();
 	if( rc != LR_PASS ){ return rc; } // No input data to process.
@@ -88,8 +88,7 @@ get_google_short_url(){
 		//		"longUrl": "http://www.hp.com/"\n
 		//	}
 
-		rc = wi_end_transaction();
-
+	  	    rc = wi_end_transaction();
 		if( rc == LR_PASS ){
 			bURLtoShorten_success=LR_PASS;
 			nURLtoShorten_done++; // increment.
@@ -108,14 +107,6 @@ get_google_short_url(){
 	#ifdef USE_VTS
 	update_shorturl_in_VTS();
 	#endif // USE_VTS
-
-	#ifdef GEN_QR
-	if( bURLtoShorten_success == LR_PASS ){
-		// TODO: 19. Customize your own transaction name for calling get_google_short_url_qrcode().
-		lr_save_string("get_google_short_url_qrcode","pTransName"); 
-		get_google_short_url_qrcode(); // using pShortURL and pImageFilePath, depending on command flag LPCSTR_SaveImageYN.
-	}
-	#endif // GEN_QR
 
 	return rc;
 } // get_google_short_url()
@@ -466,7 +457,9 @@ get_google_short_url_qrcode(){
 		lr_eval_string_ext("{pImage}", strlen("{pImage}"), &szBuf, &nLength, 0, 0, -1);
 		// lr_eval_string_ext( in_str, in_len,    pointer out_str, out_len, Reserved for future use. 
 		if( nLength <= 0 ){
-			lr_error_message(">> No image returned for %s.",strFileName);
+				wi_startPrintingError();
+				lr_output_message(">> No image returned for %s.",strFileName);
+				wi_stopPrinting();
 		}else{
 			if( wi_WriteDataToFile(strFileName, szBuf, nLength) == LR_PASS ){
 				wi_startPrintingInfo();

@@ -27,16 +27,14 @@
 		// vi_set_VTS3()
 
 // VuGen files require explicit declaration of C functions that do not return integers. 
-// {3} function prototypes to force the intepreter to save chars in read/write memory. 
-// to avoid Error: "C interpreter runtime error - memory violation error during replay. 
+// Function prototypes below force the intepreter to save chars in read/write memory, which
+// serves to avoid Error: "C interpreter runtime error - memory violation error" during replay. 
 	double atof(const char *string); 
 		
 //// Define Statics (like built-in LR_PASS and LR_FAIL) and variables:
 	#define FOUND 0
 	// NOTE: No semicolon after static definitions.
 	
-//// Compiler directives used to reduce the szie of compiled executables (so more memory is available for more vusers instead of programs):
-
 //// Run-Time Settings Attributes or command-line LPCSTR (LoadRunner Pointer C Strings) and associated variables:
 
 	// TODO: 08. Specify 4 during script development, then 2 during test runs.
@@ -79,6 +77,14 @@
 	int				      nVTS_row_count; // &colcount
 	int				iUpdate_shorturl_in_VTS; // 1=Yes, 0=No.
 
+// TODO: 13. If not using QR image generation, comment out (substitute) # with //:
+#define GEN_QR
+#ifdef  GEN_QR
+	LPCSTR			LPCSTR_SaveImageYN; // controls whether to get/get_google_short_url_qrcode_qrcode();
+	char*			       SaveImageYN_default="N";
+	char*			       strOutputLogFolder;
+#endif // GEN_QR
+
 	// Naming based on examples within HP Function Reference:
 	PVCI2			pvci = 0; // Windows internal process handle number.
 	char 			**outValues  = NULL; // ** defines a C array.
@@ -89,13 +95,6 @@
 	char            *shorturl = NULL;
 #endif // USE_VTS
 
-// TODO: 13. If not using QR image generation, comment out (substitute) # with //:
-#define GEN_QR
-#ifdef  GEN_QR
-	LPCSTR			LPCSTR_SaveImageYN; // controls whether to get/get_google_short_url_qrcode_qrcode();
-	char*			       SaveImageYN_default="N";
-	char*			       strOutputLogFolder;
-#endif // GEN_QR
 
 //// Global variables:
 
@@ -113,8 +112,8 @@
 	// Temporary field names for local use within custom functions carried over from samples in LR docs:
 	char*			tempChar1;
 	char*			tempChar2;
-	char			tempString1[256];
-	char			tempString2[256];
+	char			tempString1[2560];
+	char			tempString2[2560];
 	char*			token;
 
 vuser_init(){
@@ -123,7 +122,8 @@ vuser_init(){
 
 	original_log_option = lr_get_debug_message(); // Save run-time setting as set in script or scenario.
 	vi_set_Verbosity_attribute();
-	wi_set_unique_id(); // sets global_unique_id.
+	wi_set_unique_id(); // sets global_unique_id base string.
+	
 	lr_save_string("no imposed impediments","pRunConditions"); // output in logs.
 
 	rc=vi_set_RunType_attribute();
