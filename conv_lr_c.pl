@@ -18,7 +18,7 @@
 #    b. Two slashes are added in front of any line containing "web_add_cookie(" or "lr_think_time".
 #    c. Slashes are also added in front of continuing lines commented out but not completed with ;.
 
-use 5.12.1; # version in LR 12.01
+use 5.8.8; # version in LR 12.01 # version 5.8.8 for mysysgit
 use utf8;
 use strict;
 use warnings;
