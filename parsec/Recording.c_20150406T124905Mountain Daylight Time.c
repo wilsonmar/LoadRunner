@@ -1,4 +1,4 @@
-// parsec.pl processed this file on 20150402T083328Mountain Daylight Time.
+// parsec.pl processed this file on 20150406T124905Mountain Daylight Time.
 Recording()
 {
 	// This is a sample file for testing parsec.pl
@@ -13,13 +13,13 @@ Recording()
 	// 		"and some more"
 	// 		"and even more");
 
-	lr_think_time( floatThinkTime ); // TODO: substitute so number remains, and only once.
-	lr_think_time( floatThinkTime ); // TODO: substitute so number remains, and only once.
+	// 	// This should be converted to lr_think_time( floatThinkTime ); during parsing:
+	// 	lr_think_time(28);
 
 	// During parsing this should be converted to two lines: lr_save_string("url","pTransName");
 	// and wi_start_transaction("url"); 
-	lr_save_string("url","pTransName");
 	wi_start_transaction(); // in wi_functions.c
+	lr_start_transaction("url");
 
 	web_url("signon.html", 
 		"URL=https://paqa1.daytonastate.edu/PAQA1/signon.html", 

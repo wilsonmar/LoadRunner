@@ -78,13 +78,19 @@ while (my $row = <$f_in>) { # loop through lines:
     # If previous row did not complete a multi-line phrase:
     if( $line_num == $comment_needs_completion ){ 
  #       print $f_out "A: comment_needs_completion = $comment_needs_completion & should_comment = $should_comment\n";
-           $should_comment = 1; # 0=No
+        $should_comment = 1; # 1=Yes, comment this line out.
         if ($row =~ /;/){ # in current row:
            $comment_needs_completion = 0;
         }else{
            $comment_needs_completion = $line_num + 1; # 1=Yes.
        }
     }
+
+	if( $row =~ /lr_think_time\(/){ # TODO: substitute rather than replace to retain number in function.
+        $should_comment = 1; # 1=Yes, comment this line out.
+        # print $f_out "\tlr_think_time( floatThinkTime ); // TODO: substitute so number remains, and only once.\n";
+	
+	}
 
     if( $should_comment == 1 ){ 
         print $f_out "\t// $row\n";
@@ -99,13 +105,10 @@ while (my $row = <$f_in>) { # loop through lines:
             $comment_needs_completion = $line_num + 1; # 1=Yes.
         }
  
-	}elsif( $row =~ /lr_think_time\(/){ # TODO: substitute rather than replace to retain number in function.
-        print $f_out "\tlr_think_time( floatThinkTime ); // TODO: substitute so number remains, and only once.\n";
-
 	}elsif( $row =~ /lr_start_transaction\(/){
+        $should_comment = 0; 
+ 		
 		# TODO: Extract out transaction name field:
-		
-        print $f_out "\tlr_save_string(\"url\",\"pTransName\");\n";
         print $f_out "\twi_start_transaction(); // in wi_functions.c\n";
 
 	}elsif( $row =~ /lr_end_transaction\(/){

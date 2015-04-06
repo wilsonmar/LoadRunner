@@ -1,0 +1,4 @@
+Travel()
+{
+	return 0;
+}
