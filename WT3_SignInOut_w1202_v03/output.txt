@@ -1,0 +1,1218 @@
+Virtual User Script started at : 4/9/2015 12:30:44 PM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.0.0 for Windows 7; build 2739 (Nov 30 2014 23:13:05)  	[MsgId: MMSG-27143]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Run-Time Settings file: "C:\LoadRunner\WT3_SignInOut_w1202_v03\\default.cfg"  	[MsgId: MMSG-27141]
+Vuser directory: "C:\LoadRunner\WT3_SignInOut_w1202_v03"  	[MsgId: MMSG-27052]
+Vuser output directory: "C:\LoadRunner\WT3_SignInOut_w1202_v03"  	[MsgId: MMSG-27050]
+Operating system's current working directory: "c:\loadrunner\wt3_signinout_w1202_v03"  	[MsgId: MMSG-27048]
+UTC (GMT) start date/time   : 2015-04-09 18:30:44  	[MsgId: MMSG-26992]
+LOCAL start date/time       : 2015-04-09 12:30:44  	[MsgId: MMSG-26991]
+Local daylight-Savings-Time : Yes  	[MsgId: MMSG-26990]
+Some of the Run-Time Settings:  	[MsgId: MMSG-27142]
+    Download non-HTML resources: Yes  	[MsgId: MMSG-27018]
+    Verification checks: Yes  	[MsgId: MMSG-27017]
+    Convert from/to UTF-8: No  	[MsgId: MMSG-27016]
+    Simulate a new user each iteration: No  	[MsgId: MMSG-27009]
+    Non-critical item errors as warnings: Yes  	[MsgId: MMSG-27008]
+    HTTP errors as warnings: No  	[MsgId: MMSG-27007]
+    WinInet replay instead of Sockets: No  	[MsgId: MMSG-27006]
+    HTTP version: 1.1  	[MsgId: MMSG-27005]
+    Keep-Alive HTTP connections: Yes  	[MsgId: MMSG-27004]
+    Max self Meta refresh updates: 2  	[MsgId: MMSG-27003]
+    No proxy is used (direct connection to the Internet)  	[MsgId: MMSG-27171]
+    DNS caching: Yes  	[MsgId: MMSG-27035]
+    Simulate browser cache: Yes  	[MsgId: MMSG-27034]
+        Cache URLs requiring content (e.g., HTMLs): Yes  	[MsgId: MMSG-27033]
+            Additional URLs requiring content: text/xml;text/plain  	[MsgId: MMSG-27032]
+        Check for newer versions every visit to the page: No  	[MsgId: MMSG-27031]
+    Page download timeout (sec): 120  	[MsgId: MMSG-27030]
+    Resource Page Timeout is a Warning: No  	[MsgId: MMSG-27029]
+    ContentCheck enabled: Yes  	[MsgId: MMSG-27028]
+    ContentCheck script-level file: "C:\LoadRunner\WT3_SignInOut_w1202_v03\LrwiAedScript.xml"  	[MsgId: MMSG-27027]
+    Enable Web Page Breakdown: No  	[MsgId: MMSG-27026]
+    Enable connection data points: Yes  	[MsgId: MMSG-27023]
+    Process socket after reschedule: Yes  	[MsgId: MMSG-27022]
+    Snapshot on error: No  	[MsgId: MMSG-27021]
+    Define each step as a transaction: No  	[MsgId: MMSG-27020]
+    Read beyond Content-Length: No  	[MsgId: MMSG-26994]
+    Parse HTML Content-Type: TEXT  	[MsgId: MMSG-26999]
+    Graph hits per second and HTTP status codes: Yes  	[MsgId: MMSG-26998]
+    Graph response bytes per second: Yes  	[MsgId: MMSG-26997]
+    Graph pages per second: No  	[MsgId: MMSG-26996]
+    Web recorder version ID: 10  	[MsgId: MMSG-26995]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Action.
+wi_functions.c(407): >> Attribute "Verbosity" not specified in command-line or run-time settings. Default to "4".
+wi_functions.c(427): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
+wi_functions.c(427): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+wi_functions.c(28): >> Controller=None, Host=WIN-HJA4A353DRG, ScenarioID=0, Group=None, Vuser=-1, PID=3396.
+wi_functions.c(476): >> Attribute "RunType"="SignUp".
+wi_functions.c(101): >> floatThinkTimeSecs=   10.50 from coded default.
+SignInOut.c(24): web_set_sockets_option started  	[MsgId: MMSG-26355]
+SignInOut.c(24): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+SignInOut.c(53): web_reg_find started  	[MsgId: MMSG-26355]
+SignInOut.c(53): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+wi_functions.c(118): Notify: Transaction "T03_URL_Landing" started.
+SignInOut.c(57): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+SignInOut.c(57): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+SignInOut.c(66): web_url("index.htm") started  	[MsgId: MMSG-26355]
+SignInOut.c(66): t=258ms: Connecting [0] to host 127.0.0.1:1080  	[MsgId: MMSG-26000]
+SignInOut.c(66): t=259ms: Connected socket [0] from 127.0.0.1:9666 to 127.0.0.1:1080 in 0 ms  	[MsgId: MMSG-26000]
+SignInOut.c(66): t=259ms: 256-byte request headers for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
+SignInOut.c(66):     GET /WebTours/index.htm HTTP/1.1\r\n
+SignInOut.c(66):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+SignInOut.c(66):     \n
+SignInOut.c(66):     Accept-Encoding: gzip, deflate, sdch\r\n
+SignInOut.c(66):     Accept-Language: en-US,en;q=0.8\r\n
+SignInOut.c(66):     Accept: */*\r\n
+SignInOut.c(66):     Connection: Keep-Alive\r\n
+SignInOut.c(66):     Host: 127.0.0.1:1080\r\n
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=264ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
+SignInOut.c(66):     HTTP/1.1 200 OK\r\n
+SignInOut.c(66):     Date: Thu, 09 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(66):     Server: Apache/2.2.21 (Win32)\r\n
+SignInOut.c(66):     Last-Modified: Mon, 27 May 2013 20:20:21 GMT\r\n
+SignInOut.c(66):     ETag: "200000001d7ca-16e-4ddb8e0bc4b40"\r\n
+SignInOut.c(66):     Accept-Ranges: bytes\r\n
+SignInOut.c(66):     Content-Length: 366\r\n
+SignInOut.c(66):     Keep-Alive: timeout=5, max=100\r\n
+SignInOut.c(66):     Connection: Keep-Alive\r\n
+SignInOut.c(66):     Content-Type: text/html\r\n
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=277ms: 366-byte response body for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
+SignInOut.c(66):     <HTML>\n
+SignInOut.c(66):     <HEAD>\n
+SignInOut.c(66):     <title>Web Tours</title>\n
+SignInOut.c(66):     <frameset rows = "65,*" border="1" bordercolor="#E0E7F1">\n
+SignInOut.c(66):     <frame name="header" src="header.html" scrolling="no" noresize="noresize" marginheight="2"
+SignInOut.c(66):      marginwidth="2"/>\n
+SignInOut.c(66):     <frame name="body" src="/cgi-bin/welcome.pl?signOff=true" scrolling="auto" noresize="nores
+SignInOut.c(66):     ize" marginheight="2" marginwidth="2" />\n
+SignInOut.c(66):     </frameset>\n
+SignInOut.c(66):     </HEAD>\n
+SignInOut.c(66):     </HTML>\n
+SignInOut.c(66):     \n
+SignInOut.c(66): Detected non-resource "http://127.0.0.1:1080/WebTours/header.html" in "http://127.0.0.1:1080/WebTours/index.htm"  	[MsgId: MMSG-26574]
+SignInOut.c(66): Detected non-resource "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" in "http://127.0.0.1:1080/WebTours/index.htm"  	[MsgId: MMSG-26574]
+SignInOut.c(66): t=279ms: Request done "http://127.0.0.1:1080/WebTours/index.htm"  	[MsgId: MMSG-26000]
+SignInOut.c(66): Search registration for "userSession" parameter is filtered by "Request URL"  	[MsgId: MMSG-26000]
+SignInOut.c(66): t=286ms: Connecting [1] to host 127.0.0.1:1080  	[MsgId: MMSG-26000]
+SignInOut.c(66): t=286ms: Connecting [2] to host 127.0.0.1:1080  	[MsgId: MMSG-26000]
+SignInOut.c(66): t=287ms: Connected socket [1] from 127.0.0.1:9667 to 127.0.0.1:1080 in 1 ms  	[MsgId: MMSG-26000]
+SignInOut.c(66): t=287ms: 309-byte request headers for "http://127.0.0.1:1080/WebTours/header.html" (RelFrameId=1.1, Internal ID=2)
+SignInOut.c(66):     GET /WebTours/header.html HTTP/1.1\r\n
+SignInOut.c(66):     Referer: http://127.0.0.1:1080/WebTours/index.htm\r\n
+SignInOut.c(66):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+SignInOut.c(66):     \n
+SignInOut.c(66):     Accept-Encoding: gzip, deflate, sdch\r\n
+SignInOut.c(66):     Accept-Language: en-US,en;q=0.8\r\n
+SignInOut.c(66):     Accept: */*\r\n
+SignInOut.c(66):     Connection: Keep-Alive\r\n
+SignInOut.c(66):     Host: 127.0.0.1:1080\r\n
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=287ms: Connected socket [2] from 127.0.0.1:9668 to 127.0.0.1:1080 in 1 ms  	[MsgId: MMSG-26000]
+SignInOut.c(66): t=287ms: 320-byte request headers for "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" (RelFrameId=1.2, Internal ID=3)
+SignInOut.c(66):     GET /cgi-bin/welcome.pl?signOff=true HTTP/1.1\r\n
+SignInOut.c(66):     Referer: http://127.0.0.1:1080/WebTours/index.htm\r\n
+SignInOut.c(66):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+SignInOut.c(66):     \n
+SignInOut.c(66):     Accept-Encoding: gzip, deflate, sdch\r\n
+SignInOut.c(66):     Accept-Language: en-US,en;q=0.8\r\n
+SignInOut.c(66):     Accept: */*\r\n
+SignInOut.c(66):     Connection: Keep-Alive\r\n
+SignInOut.c(66):     Host: 127.0.0.1:1080\r\n
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=289ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/header.html" (RelFrameId=1.1, Internal ID=2)
+SignInOut.c(66):     HTTP/1.1 200 OK\r\n
+SignInOut.c(66):     Date: Thu, 09 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(66):     Server: Apache/2.2.21 (Win32)\r\n
+SignInOut.c(66):     Last-Modified: Mon, 27 May 2013 20:20:21 GMT\r\n
+SignInOut.c(66):     ETag: "200000001d7b0-2c6-4ddb8e0bc4b40"\r\n
+SignInOut.c(66):     Accept-Ranges: bytes\r\n
+SignInOut.c(66):     Content-Length: 710\r\n
+SignInOut.c(66):     Keep-Alive: timeout=5, max=100\r\n
+SignInOut.c(66):     Connection: Keep-Alive\r\n
+SignInOut.c(66):     Content-Type: text/html\r\n
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=290ms: 710-byte response body for "http://127.0.0.1:1080/WebTours/header.html" (RelFrameId=1.1, Internal ID=2)
+SignInOut.c(66):     <!DOCTYPE html>\n
+SignInOut.c(66):     <HTML xmlns="http://www.w3.org/1999/xhtml">\n
+SignInOut.c(66):     <HEAD></HEAD>\n
+SignInOut.c(66):     <BODY bgcolor="#003366" leftmargin="0" marginheight="0" marginwidth="0" topmargin="0">\n
+SignInOut.c(66):     \t\t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n
+SignInOut.c(66):     bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \n
+SignInOut.c(66):     \t\t<table width="100%" border="0" cellspacing="0" cellpadding="0">\n
+SignInOut.c(66):     \t\t\t<tr>\n
+SignInOut.c(66):     \t\t\t\t<td align="left" valign="middle" width="50%"><img src="images/hp_logo.png" alt="" 
+SignInOut.c(66):     height="45" width="69" align="absmiddle" border="0"/><img src="images/webtours.png" alt=""
+SignInOut.c(66):      height="45" width="130" align="absmiddle" border="0"/></td>\n
+SignInOut.c(66):     \t\t\t\t<td align="right"></td>\n
+SignInOut.c(66):     \t\t\t\t<td></td>\n
+SignInOut.c(66):     \t\t\t</tr>\n
+SignInOut.c(66):     \t\t</table>\n
+SignInOut.c(66):     \t</BODY>\n
+SignInOut.c(66):     </HTML>
+SignInOut.c(66): Found resource "http://127.0.0.1:1080/WebTours/images/hp_logo.png" in HTML "http://127.0.0.1:1080/WebTours/header.html"  	[MsgId: MMSG-26659]
+SignInOut.c(66): Found resource "http://127.0.0.1:1080/WebTours/images/webtours.png" in HTML "http://127.0.0.1:1080/WebTours/header.html"  	[MsgId: MMSG-26659]
+SignInOut.c(66): t=291ms: Request done "http://127.0.0.1:1080/WebTours/header.html"  	[MsgId: MMSG-26000]
+SignInOut.c(66): Search registration for "userSession" parameter is filtered by "Request URL"  	[MsgId: MMSG-26000]
+SignInOut.c(66): t=292ms: Already connected [0] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+SignInOut.c(66): t=292ms: 318-byte request headers for "http://127.0.0.1:1080/WebTours/images/hp_logo.png" (RelFrameId=, Internal ID=4)
+SignInOut.c(66):     GET /WebTours/images/hp_logo.png HTTP/1.1\r\n
+SignInOut.c(66):     Referer: http://127.0.0.1:1080/WebTours/header.html\r\n
+SignInOut.c(66):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+SignInOut.c(66):     \n
+SignInOut.c(66):     Accept-Encoding: gzip, deflate, sdch\r\n
+SignInOut.c(66):     Accept-Language: en-US,en;q=0.8\r\n
+SignInOut.c(66):     Accept: */*\r\n
+SignInOut.c(66):     Connection: Keep-Alive\r\n
+SignInOut.c(66):     Host: 127.0.0.1:1080\r\n
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=292ms: Connecting [3] to host 127.0.0.1:1080  	[MsgId: MMSG-26000]
+SignInOut.c(66): t=293ms: Connected socket [3] from 127.0.0.1:9669 to 127.0.0.1:1080 in 1 ms  	[MsgId: MMSG-26000]
+SignInOut.c(66): t=293ms: 319-byte request headers for "http://127.0.0.1:1080/WebTours/images/webtours.png" (RelFrameId=, Internal ID=5)
+SignInOut.c(66):     GET /WebTours/images/webtours.png HTTP/1.1\r\n
+SignInOut.c(66):     Referer: http://127.0.0.1:1080/WebTours/header.html\r\n
+SignInOut.c(66):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+SignInOut.c(66):     \n
+SignInOut.c(66):     Accept-Encoding: gzip, deflate, sdch\r\n
+SignInOut.c(66):     Accept-Language: en-US,en;q=0.8\r\n
+SignInOut.c(66):     Accept: */*\r\n
+SignInOut.c(66):     Connection: Keep-Alive\r\n
+SignInOut.c(66):     Host: 127.0.0.1:1080\r\n
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=294ms: 297-byte response headers for "http://127.0.0.1:1080/WebTours/images/hp_logo.png" (RelFrameId=, Internal ID=4)
+SignInOut.c(66):     HTTP/1.1 200 OK\r\n
+SignInOut.c(66):     Date: Thu, 09 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(66):     Server: Apache/2.2.21 (Win32)\r\n
+SignInOut.c(66):     Last-Modified: Thu, 12 Jan 2012 22:30:26 GMT\r\n
+SignInOut.c(66):     ETag: "200000001d7bd-259-4b65c4b744480"\r\n
+SignInOut.c(66):     Accept-Ranges: bytes\r\n
+SignInOut.c(66):     Content-Length: 601\r\n
+SignInOut.c(66):     Keep-Alive: timeout=5, max=99\r\n
+SignInOut.c(66):     Connection: Keep-Alive\r\n
+SignInOut.c(66):     Content-Type: image/png\r\n
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=295ms: 601-byte response body for "http://127.0.0.1:1080/WebTours/images/hp_logo.png" (RelFrameId=, Internal ID=4)
+SignInOut.c(66): t=295ms: Request done "http://127.0.0.1:1080/WebTours/images/hp_logo.png"  	[MsgId: MMSG-26000]
+SignInOut.c(66): Search registration for "userSession" parameter is filtered by "Request URL"  	[MsgId: MMSG-26000]
+SignInOut.c(66): t=296ms: 300-byte response headers for "http://127.0.0.1:1080/WebTours/images/webtours.png" (RelFrameId=, Internal ID=5)
+SignInOut.c(66):     HTTP/1.1 200 OK\r\n
+SignInOut.c(66):     Date: Thu, 09 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(66):     Server: Apache/2.2.21 (Win32)\r\n
+SignInOut.c(66):     Last-Modified: Mon, 04 Nov 2013 22:47:01 GMT\r\n
+SignInOut.c(66):     ETag: "200000001d7c9-105b-4ea61b1b50340"\r\n
+SignInOut.c(66):     Accept-Ranges: bytes\r\n
+SignInOut.c(66):     Content-Length: 4187\r\n
+SignInOut.c(66):     Keep-Alive: timeout=5, max=100\r\n
+SignInOut.c(66):     Connection: Keep-Alive\r\n
+SignInOut.c(66):     Content-Type: image/png\r\n
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=297ms: 4187-byte response body for "http://127.0.0.1:1080/WebTours/images/webtours.png" (RelFrameId=, Internal ID=5)
+SignInOut.c(66): t=297ms: Request done "http://127.0.0.1:1080/WebTours/images/webtours.png"  	[MsgId: MMSG-26000]
+SignInOut.c(66): Search registration for "userSession" parameter is filtered by "Request URL"  	[MsgId: MMSG-26000]
+SignInOut.c(66): t=337ms: 328-byte response headers for "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" (RelFrameId=1.2, Internal ID=3)
+SignInOut.c(66):     HTTP/1.1 200 OK\r\n
+SignInOut.c(66):     Date: Thu, 09 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(66):     Server: Apache/2.2.21 (Win32)\r\n
+SignInOut.c(66):     Set-Cookie: MSO=SID&1428604244; path=/\r\n
+SignInOut.c(66):     Set-Cookie: MTUserInfo=; path=/; expires=Wed, 08-Apr-2015 18:30:44 GMT\r\n
+SignInOut.c(66):     Keep-Alive: timeout=5, max=100\r\n
+SignInOut.c(66):     Connection: Keep-Alive\r\n
+SignInOut.c(66):     Transfer-Encoding: chunked\r\n
+SignInOut.c(66):     Content-Type: text/html; charset=ISO-8859-1\r\n
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=337ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" (RelFrameId=1.2, Internal ID=3)
+SignInOut.c(66):     2ae\r\n
+SignInOut.c(66): t=338ms: 2-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" (RelFrameId=1.2, Internal ID=3)
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=338ms: 686-byte chunked response body for "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" (RelFrameId=1.2, Internal ID=3)
+SignInOut.c(66):     <!-- \n
+SignInOut.c(66):      A Session ID has been created and loaded into a cookie called MSO.\n
+SignInOut.c(66):      Also, the server options have been loaded into the cookie called\n
+SignInOut.c(66):      MSO as well.  The server options can be set via the Admin page.\n
+SignInOut.c(66):      --->\n
+SignInOut.c(66):     \n
+SignInOut.c(66):     <html>\n
+SignInOut.c(66):     <title>Web Tours</title>\n
+SignInOut.c(66):        <!-- Frame Set -->\n
+SignInOut.c(66):        <frameset cols="160,*" border="1" frameborder="1">\n
+SignInOut.c(66):           <!-- Navigation Frame -->\n
+SignInOut.c(66):           <frame src="nav.pl?in=home" name="navbar" marginheight="2" marginwidth="2" \n
+SignInOut.c(66):                 noresize="noresize" scrolling="auto"/>\n
+SignInOut.c(66):           <!-- Home Frame -->\n
+SignInOut.c(66):           <frame src="/WebTours/home.html" name="info" marginheight="2" marginwidth="2" \n
+SignInOut.c(66):                 noresize="noresize" scrolling="auto"/>\n
+SignInOut.c(66):        </frameset>\n
+SignInOut.c(66):     </html>\n
+SignInOut.c(66):     \n
+SignInOut.c(66):     </body>\n
+SignInOut.c(66):     </html>
+SignInOut.c(66): Detected non-resource "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true"  	[MsgId: MMSG-26574]
+SignInOut.c(66): Detected non-resource "http://127.0.0.1:1080/WebTours/home.html" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true"  	[MsgId: MMSG-26574]
+SignInOut.c(66): t=348ms: Already connected [0] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+SignInOut.c(66): t=348ms: 352-byte request headers for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.2.1, Internal ID=6)
+SignInOut.c(66):     GET /cgi-bin/nav.pl?in=home HTTP/1.1\r\n
+SignInOut.c(66):     Referer: http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true\r\n
+SignInOut.c(66):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+SignInOut.c(66):     \n
+SignInOut.c(66):     Accept-Encoding: gzip, deflate, sdch\r\n
+SignInOut.c(66):     Accept-Language: en-US,en;q=0.8\r\n
+SignInOut.c(66):     Accept: */*\r\n
+SignInOut.c(66):     Connection: Keep-Alive\r\n
+SignInOut.c(66):     Host: 127.0.0.1:1080\r\n
+SignInOut.c(66):     Cookie: MSO=SID&1428604244\r\n
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=349ms: Already connected [1] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+SignInOut.c(66): t=349ms: 348-byte request headers for "http://127.0.0.1:1080/WebTours/home.html" (RelFrameId=1.2.2, Internal ID=7)
+SignInOut.c(66):     GET /WebTours/home.html HTTP/1.1\r\n
+SignInOut.c(66):     Referer: http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true\r\n
+SignInOut.c(66):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+SignInOut.c(66):     \n
+SignInOut.c(66):     Accept-Encoding: gzip, deflate, sdch\r\n
+SignInOut.c(66):     Accept-Language: en-US,en;q=0.8\r\n
+SignInOut.c(66):     Accept: */*\r\n
+SignInOut.c(66):     Connection: Keep-Alive\r\n
+SignInOut.c(66):     Host: 127.0.0.1:1080\r\n
+SignInOut.c(66):     Cookie: MSO=SID&1428604244\r\n
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=350ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" (RelFrameId=1.2, Internal ID=3)
+SignInOut.c(66):     0\r\n
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=350ms: Request done "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true"  	[MsgId: MMSG-26000]
+SignInOut.c(66): Search registration for "userSession" parameter is filtered by "Request URL"  	[MsgId: MMSG-26000]
+SignInOut.c(66): t=356ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/home.html" (RelFrameId=1.2.2, Internal ID=7)
+SignInOut.c(66):     HTTP/1.1 200 OK\r\n
+SignInOut.c(66):     Date: Thu, 09 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(66):     Server: Apache/2.2.21 (Win32)\r\n
+SignInOut.c(66):     Last-Modified: Mon, 27 May 2013 20:20:21 GMT\r\n
+SignInOut.c(66):     ETag: "200000001d7b1-551-4ddb8e0bc4b40"\r\n
+SignInOut.c(66):     Accept-Ranges: bytes\r\n
+SignInOut.c(66):     Content-Length: 1361\r\n
+SignInOut.c(66):     Keep-Alive: timeout=5, max=99\r\n
+SignInOut.c(66):     Connection: Keep-Alive\r\n
+SignInOut.c(66):     Content-Type: text/html\r\n
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=357ms: 1361-byte response body for "http://127.0.0.1:1080/WebTours/home.html" (RelFrameId=1.2.2, Internal ID=7)
+SignInOut.c(66):     <HTML>\n
+SignInOut.c(66):     <HEAD>\n
+SignInOut.c(66):     \t<title>Web Tours</title>\n
+SignInOut.c(66):     </HEAD>\n
+SignInOut.c(66):     <style>\n
+SignInOut.c(66):     \tblockquote {font-family: tahoma; font-size : 10pt}\n
+SignInOut.c(66):     \tH1 {font-family: tahoma; font-size : 22pt; color: #003366}\n
+SignInOut.c(66):     \tsmall {font-family: tahoma; font-size : 8pt}\n
+SignInOut.c(66):     \tH3{font-family: tahoma; font-size : 10pt; color: black}\n
+SignInOut.c(66):     \tA {FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Tahoma; TEXT-DECORATIO
+SignInOut.c(66):     N: none}\n
+SignInOut.c(66):     \tA:hover{ FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #993333; FONT-FAMILY: Tahoma;TEXT-DE
+SignInOut.c(66):     CORATION: underline}\n
+SignInOut.c(66):     \tTD {font-family: tahoma; font-size : 10pt; color: black}\n
+SignInOut.c(66):     </style>\n
+SignInOut.c(66):     <body bgcolor="#e0e7f1">\n
+SignInOut.c(66):     <BR/>\n
+SignInOut.c(66):     <BR/>\n
+SignInOut.c(66):     <BR/>\n
+SignInOut.c(66):     <br/>\n
+SignInOut.c(66):     <table border="0">\n
+SignInOut.c(66):     <tr><td></td></tr>\n
+SignInOut.c(66):     <TR><TD></TD></TR>\n
+SignInOut.c(66):     <TR><TD>\n
+SignInOut.c(66):     <blockquote>\n
+SignInOut.c(66):     <H1><b>Web Tours</b></H1>\n
+SignInOut.c(66):     Welcome to the Web Tours site.\n
+SignInOut.c(66):     <br/>\n
+SignInOut.c(66):     To make reservations,please enter your account information to the left.\n
+SignInOut.c(66):     <br/>\n
+SignInOut.c(66):     If you haven't registered yet, <A href="/cgi-bin/login.pl?username=&amp;password=&amp;getI
+SignInOut.c(66):     nfo=true" ><B>sign up now</B></A> to get access to all our resources.\n
+SignInOut.c(66):     <br/>\n
+SignInOut.c(66):     To configure the server options, use <A href="/cgi-bin/admin.pl" target="body" ><b>adminis
+SignInOut.c(66):     tration</b></A> link.\n
+SignInOut.c(66):     <br/><br/><br/><br/><br/><br/>\n
+SignInOut.c(66):     <br/><small>\n
+SignInOut.c(66):     This product uses parts of the SMT Kernel, Copyright (c) 1991-99 <A href="http://www.imati
+SignInOut.c(66):     x.com" target="new"><B><small>iMatix Corporation</small></B></A> \n
+SignInOut.c(66):     </small>\n
+SignInOut.c(66):     </blockquote></TD>\n
+SignInOut.c(66):     <TD></TD></TR>\n
+SignInOut.c(66):     </table>\n
+SignInOut.c(66):     </body>\n
+SignInOut.c(66):     </HTML>\n
+SignInOut.c(66): t=360ms: Request done "http://127.0.0.1:1080/WebTours/home.html"  	[MsgId: MMSG-26000]
+SignInOut.c(66): Search registration for "userSession" parameter is filtered by "Request URL"  	[MsgId: MMSG-26000]
+SignInOut.c(66): t=410ms: 255-byte response headers for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.2.1, Internal ID=6)
+SignInOut.c(66):     HTTP/1.1 200 OK\r\n
+SignInOut.c(66):     Date: Thu, 09 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(66):     Server: Apache/2.2.21 (Win32)\r\n
+SignInOut.c(66):     Expires: Wed, 08 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(66):     Keep-Alive: timeout=5, max=98\r\n
+SignInOut.c(66):     Connection: Keep-Alive\r\n
+SignInOut.c(66):     Transfer-Encoding: chunked\r\n
+SignInOut.c(66):     Content-Type: text/html; charset=ISO-8859-1\r\n
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=412ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.2.1, Internal ID=6)
+SignInOut.c(66):     5cf\r\n
+SignInOut.c(66): t=412ms: 2-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.2.1, Internal ID=6)
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=413ms: 1487-byte chunked response body for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.2.1, Internal ID=6)
+SignInOut.c(66):     <!DOCTYPE html\n
+SignInOut.c(66):     \tPUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"\n
+SignInOut.c(66):     \t "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n
+SignInOut.c(66):     <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">\n
+SignInOut.c(66):     <head>\n
+SignInOut.c(66):     <title>Web Tours Navigation Bar</title>\n
+SignInOut.c(66):     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />\n
+SignInOut.c(66):     </head>\n
+SignInOut.c(66):     <body bgcolor="#E0E7F1">\n
+SignInOut.c(66):     <style>\n
+SignInOut.c(66):     blockquote {font-family: tahoma; font-size : 10pt}\n
+SignInOut.c(66):     H1 {font-family: tahoma; font-size : 22pt; color: #993333}\n
+SignInOut.c(66):     H3 {font-family: tahoma; font-size : 10pt; color: black}\n
+SignInOut.c(66):     small {font-family: tahoma; font-size : 8pt}\n
+SignInOut.c(66):     </style>\n
+SignInOut.c(66):     <form method="post" action="/cgi-bin/login.pl" target="body">\n
+SignInOut.c(66):     <input type="hidden" name="userSession" value="115723.30854597fQfcfVHpziDDDDDDDfHVfpVAzV"/
+SignInOut.c(66):     >\n
+SignInOut.c(66):     <table border="0"><tr><td>&nbsp;</td>\n
+SignInOut.c(66):     <td>&nbsp;</td></tr>\n
+SignInOut.c(66):     <tr><td>&nbsp;</td>\n
+SignInOut.c(66):     <td>&nbsp;</td></tr>\n
+SignInOut.c(66):     <tr><td>&nbsp;</td>\n
+SignInOut.c(66):     <td><small>&nbsp;Username</small></td></tr>\n
+SignInOut.c(66):     <tr><td>&nbsp;</td>\n
+SignInOut.c(66):     <td><input type="text" name="username" value="" size="14" maxlength="14"/></td></tr>\n
+SignInOut.c(66):     <tr><td>&nbsp;</td>\n
+SignInOut.c(66):     <td><small>&nbsp;Password</small></td>\n
+SignInOut.c(66):     <tr><td>&nbsp;</td>\n
+SignInOut.c(66):     <td><input type="password" name="password" value="" size="14" maxlength="14"/></td></tr>\n
+SignInOut.c(66):     <tr><td>&nbsp;</td>\n
+SignInOut.c(66):     <td>&nbsp;</td></tr>\n
+SignInOut.c(66):     <tr><td>&nbsp;</td>\n
+SignInOut.c(66):     <td><input type="image" name="login" value="Login" alt="Login" border="1" \n
+SignInOut.c(66):     src="/WebTours/images/mer_login.gif"/></td></tr>\n
+SignInOut.c(66):     <tr><td>&nbsp;</td><td>&nbsp;</td></tr>\n
+SignInOut.c(66):     </table><input type="hidden" name="JSFormSubmit" value="off"/>\n
+SignInOut.c(66):     </form>\n
+SignInOut.c(66):     \n
+SignInOut.c(66):     </body>\n
+SignInOut.c(66):     </html>\n
+SignInOut.c(66): Found resource "http://127.0.0.1:1080/WebTours/images/mer_login.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home"  	[MsgId: MMSG-26659]
+SignInOut.c(66): t=417ms: Already connected [1] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+SignInOut.c(66): t=417ms: 350-byte request headers for "http://127.0.0.1:1080/WebTours/images/mer_login.gif" (RelFrameId=, Internal ID=8)
+SignInOut.c(66):     GET /WebTours/images/mer_login.gif HTTP/1.1\r\n
+SignInOut.c(66):     Referer: http://127.0.0.1:1080/cgi-bin/nav.pl?in=home\r\n
+SignInOut.c(66):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+SignInOut.c(66):     \n
+SignInOut.c(66):     Accept-Encoding: gzip, deflate, sdch\r\n
+SignInOut.c(66):     Accept-Language: en-US,en;q=0.8\r\n
+SignInOut.c(66):     Accept: */*\r\n
+SignInOut.c(66):     Connection: Keep-Alive\r\n
+SignInOut.c(66):     Host: 127.0.0.1:1080\r\n
+SignInOut.c(66):     Cookie: MSO=SID&1428604244\r\n
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=418ms: 297-byte response headers for "http://127.0.0.1:1080/WebTours/images/mer_login.gif" (RelFrameId=, Internal ID=8)
+SignInOut.c(66):     HTTP/1.1 200 OK\r\n
+SignInOut.c(66):     Date: Thu, 09 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(66):     Server: Apache/2.2.21 (Win32)\r\n
+SignInOut.c(66):     Last-Modified: Thu, 12 Jan 2012 22:30:26 GMT\r\n
+SignInOut.c(66):     ETag: "200000001d7c4-2a7-4b65c4b744480"\r\n
+SignInOut.c(66):     Accept-Ranges: bytes\r\n
+SignInOut.c(66):     Content-Length: 679\r\n
+SignInOut.c(66):     Keep-Alive: timeout=5, max=98\r\n
+SignInOut.c(66):     Connection: Keep-Alive\r\n
+SignInOut.c(66):     Content-Type: image/gif\r\n
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=420ms: 679-byte response body for "http://127.0.0.1:1080/WebTours/images/mer_login.gif" (RelFrameId=, Internal ID=8)
+SignInOut.c(66): t=420ms: Request done "http://127.0.0.1:1080/WebTours/images/mer_login.gif"  	[MsgId: MMSG-26000]
+SignInOut.c(66): Search registration for "userSession" parameter is filtered by "Request URL"  	[MsgId: MMSG-26000]
+SignInOut.c(66): t=424ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.2.1, Internal ID=6)
+SignInOut.c(66):     0\r\n
+SignInOut.c(66):     \r\n
+SignInOut.c(66): t=425ms: Request done "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home"  	[MsgId: MMSG-26000]
+SignInOut.c(66): Registered web_reg_find successful for "Text=Welcome to the Web Tours site" (count=1)  	[MsgId: MMSG-26364]
+SignInOut.c(66): web_url("index.htm") was successful, 10077 body bytes, 2371 header bytes, 24 chunking overhead bytes  	[MsgId: MMSG-26385]
+wi_functions.c(151): Notify: Transaction "T03_URL_Landing" ended with a "Pass" status (Duration: 0.2580 Wasted Time: 0.1195).
+wi_functions.c(156): web_get_int_property started  	[MsgId: MMSG-26355]
+wi_functions.c(156): web_get_int_property was successful  	[MsgId: MMSG-26392]
+wi_functions.c(157): web_get_int_property started  	[MsgId: MMSG-26355]
+wi_functions.c(157): web_get_int_property was successful  	[MsgId: MMSG-26392]
+wi_functions.c(158): web_get_int_property started  	[MsgId: MMSG-26355]
+wi_functions.c(158): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Action.c(65): >> Iteration=1 User="jojo03" timezoneOffset="{timezoneOffset}".
+SignInOut.c(120): web_reg_find started  	[MsgId: MMSG-26355]
+SignInOut.c(120): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+wi_functions.c(118): Notify: Transaction "T05_SignUp" started.
+SignInOut.c(122): web_submit_data("T05_SignUp") started  	[MsgId: MMSG-26355]
+SignInOut.c(122): t=494ms: Already connected [0] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+SignInOut.c(122): t=494ms: 460-byte request headers for "http://127.0.0.1:1080/cgi-bin/login.pl" (RelFrameId=1, Internal ID=9)
+SignInOut.c(122):     POST /cgi-bin/login.pl HTTP/1.1\r\n
+SignInOut.c(122):     Content-Type: application/x-www-form-urlencoded\r\n
+SignInOut.c(122):     Cache-Control: no-cache\r\n
+SignInOut.c(122):     Referer: http://127.0.0.1:1080/cgi-bin/login.pl?username=&password=&getInfo=true\r\n
+SignInOut.c(122):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+SignInOut.c(122):     \n
+SignInOut.c(122):     Accept-Encoding: gzip, deflate, sdch\r\n
+SignInOut.c(122):     Accept-Language: en-US,en;q=0.8\r\n
+SignInOut.c(122):     Accept: */*\r\n
+SignInOut.c(122):     Connection: Keep-Alive\r\n
+SignInOut.c(122):     Host: 127.0.0.1:1080\r\n
+SignInOut.c(122):     Cookie: MSO=SID&1428604244\r\n
+SignInOut.c(122):     Content-Length: 169\r\n
+SignInOut.c(122):     \r\n
+SignInOut.c(122): t=495ms: 169-byte request body for "http://127.0.0.1:1080/cgi-bin/login.pl" (RelFrameId=1, Internal ID=9)
+SignInOut.c(122):     username=jojo03&password=bean&passwordConfirm=bean&firstName=jojo03&lastName=CNone.H178431
+SignInOut.c(122):     6668.S%28null%29.GNone.U-1.P3396&address1=&address2=&register.x=50&register.y=5
+SignInOut.c(122): t=546ms: 228-byte response headers for "http://127.0.0.1:1080/cgi-bin/login.pl" (RelFrameId=1, Internal ID=9)
+SignInOut.c(122):     HTTP/1.1 200 OK\r\n
+SignInOut.c(122):     Date: Thu, 09 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(122):     Server: Apache/2.2.21 (Win32)\r\n
+SignInOut.c(122):     Expires: 5s\r\n
+SignInOut.c(122):     Keep-Alive: timeout=5, max=97\r\n
+SignInOut.c(122):     Connection: Keep-Alive\r\n
+SignInOut.c(122):     Transfer-Encoding: chunked\r\n
+SignInOut.c(122):     Content-Type: text/html; charset=ISO-8859-1\r\n
+SignInOut.c(122):     \r\n
+SignInOut.c(122): t=548ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/login.pl" (RelFrameId=1, Internal ID=9)
+SignInOut.c(122):     aa9\r\n
+SignInOut.c(122): t=548ms: 2-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/login.pl" (RelFrameId=1, Internal ID=9)
+SignInOut.c(122):     \r\n
+SignInOut.c(122): t=549ms: 2729-byte chunked response body for "http://127.0.0.1:1080/cgi-bin/login.pl" (RelFrameId=1, Internal ID=9)
+SignInOut.c(122):     <!DOCTYPE html\n
+SignInOut.c(122):     \tPUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"\n
+SignInOut.c(122):     \t "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n
+SignInOut.c(122):     <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">\n
+SignInOut.c(122):     <head>\n
+SignInOut.c(122):     <title>User Information</title>\n
+SignInOut.c(122):     <script src="/WebTours/profileValidate.js" type="text/JavaScript"></script>\n
+SignInOut.c(122):     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />\n
+SignInOut.c(122):     </head>\n
+SignInOut.c(122):     <body bgcolor="#E0E7F1">\n
+SignInOut.c(122):     <style>blockquote {font-family: tahoma; font-size : 10pt}H1 {font-family: tahoma; font-siz
+SignInOut.c(122):     e : 22pt; color: #993333}small {font-family: tahoma; font-size : 8pt}H3 {font-family: taho
+SignInOut.c(122):     ma; font-size : 10pt; color: black}TD {font-family: tahoma; font-size : 10pt; color: black
+SignInOut.c(122):     }</style><BR/><center><H1><b><font color="#003366">Customer Profile</font></b></H1></cente
+SignInOut.c(122):     r><blockquote><tr><td><B>First time registering? Please complete the form below.</B><BR/>P
+SignInOut.c(122):     lease choose a username and password combination for your account.<BR/>We'd also like some
+SignInOut.c(122):      additional contact information for yourself. We'll use it as default shipping and billing
+SignInOut.c(122):      information when making all your travel arrangements.<P><tr><td align=center><center><H3>
+SignInOut.c(122):     <font color=red>Your username is taken.  Please choose another (usually adding a personall
+SignInOut.c(122):     y significant number to the end of your username will create a unique name).</font></H3></
+SignInOut.c(122):     center><form method="post" action="login.pl" enctype="application/x-www-form-urlencoded" t
+SignInOut.c(122):     arget="info" onsubmit>\n
+SignInOut.c(122):     <table><tr><td align="left"><blockquote>Username : </td> <td align="left"><input type="tex
+SignInOut.c(122):     t" name="username" value="jojo03" size="20" /></td></tr> <tr><td align="left"><blockquote>
+SignInOut.c(122):     Password : </td> <td align="left"><input type="password" name="password" value="bean" size
+SignInOut.c(122):     ="20" /></td></tr> <tr><td align="left"><blockquote>Confirm : </td> <td align="left"><inpu
+SignInOut.c(122):     t type="password" name="passwordConfirm" value="bean" size="20" /></td></tr> <tr><td> </td
+SignInOut.c(122):     ></tr> <tr><td align="left"><blockquote>First Name : </td> <td align="left"><input type="t
+SignInOut.c(122):     ext" name="firstName" value="jojo03" size="20" /></td></tr> <tr><td align="left"><blockquo
+SignInOut.c(122):     te>Last Name : </td> <td align="left"><input type="text" name="lastName" value="CNone.H178
+SignInOut.c(122):     4316668.S(null).GNone.U-1.P3396" size="20" /></td></tr> <tr><td align="left"><blockquote>S
+SignInOut.c(122):     treet Address : </td> <td align="left"><input type="text" name="address1"  size="30" /></t
+SignInOut.c(122):     d></tr> <tr><td align="left"><blockquote>City/State/Zip : </td> <td align="left"><input ty
+SignInOut.c(122):     pe="text" name="address2"  size="30" /></td></tr> <tr><td align="left">&nbsp;</td> <td ali
+SignInOut.c(122):     gn="right">&nbsp;</td></tr> <tr><td align="center" colspan="2"><input type="image" name="r
+SignInOut.c(122):     egister" src="/WebTours/images/button_next.gif" border="0" /></td></tr></table></form></ta
+SignInOut.c(122):     ble></blockquote>\n
+SignInOut.c(122):     </body>\n
+SignInOut.c(122):     </html>\n
+SignInOut.c(122): Found resource "http://127.0.0.1:1080/WebTours/profileValidate.js" in HTML "http://127.0.0.1:1080/cgi-bin/login.pl"  	[MsgId: MMSG-26659]
+SignInOut.c(122): Found resource "http://127.0.0.1:1080/WebTours/images/button_next.gif" in HTML "http://127.0.0.1:1080/cgi-bin/login.pl"  	[MsgId: MMSG-26659]
+SignInOut.c(122): t=551ms: Already connected [1] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+SignInOut.c(122): t=551ms: 342-byte request headers for "http://127.0.0.1:1080/WebTours/profileValidate.js" (RelFrameId=, Internal ID=10)
+SignInOut.c(122):     GET /WebTours/profileValidate.js HTTP/1.1\r\n
+SignInOut.c(122):     Referer: http://127.0.0.1:1080/cgi-bin/login.pl\r\n
+SignInOut.c(122):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+SignInOut.c(122):     \n
+SignInOut.c(122):     Accept-Encoding: gzip, deflate, sdch\r\n
+SignInOut.c(122):     Accept-Language: en-US,en;q=0.8\r\n
+SignInOut.c(122):     Accept: */*\r\n
+SignInOut.c(122):     Connection: Keep-Alive\r\n
+SignInOut.c(122):     Host: 127.0.0.1:1080\r\n
+SignInOut.c(122):     Cookie: MSO=SID&1428604244\r\n
+SignInOut.c(122):     \r\n
+SignInOut.c(122): t=553ms: Already connected [2] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+SignInOut.c(122): t=553ms: 346-byte request headers for "http://127.0.0.1:1080/WebTours/images/button_next.gif" (RelFrameId=, Internal ID=11)
+SignInOut.c(122):     GET /WebTours/images/button_next.gif HTTP/1.1\r\n
+SignInOut.c(122):     Referer: http://127.0.0.1:1080/cgi-bin/login.pl\r\n
+SignInOut.c(122):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+SignInOut.c(122):     \n
+SignInOut.c(122):     Accept-Encoding: gzip, deflate, sdch\r\n
+SignInOut.c(122):     Accept-Language: en-US,en;q=0.8\r\n
+SignInOut.c(122):     Accept: */*\r\n
+SignInOut.c(122):     Connection: Keep-Alive\r\n
+SignInOut.c(122):     Host: 127.0.0.1:1080\r\n
+SignInOut.c(122):     Cookie: MSO=SID&1428604244\r\n
+SignInOut.c(122):     \r\n
+SignInOut.c(122): t=560ms: 313-byte response headers for "http://127.0.0.1:1080/WebTours/profileValidate.js" (RelFrameId=, Internal ID=10)
+SignInOut.c(122):     HTTP/1.1 200 OK\r\n
+SignInOut.c(122):     Date: Thu, 09 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(122):     Server: Apache/2.2.21 (Win32)\r\n
+SignInOut.c(122):     Last-Modified: Sun, 22 Apr 2012 10:47:46 GMT\r\n
+SignInOut.c(122):     ETag: "200000001d7cd-2c18-4be42407e9880"\r\n
+SignInOut.c(122):     Accept-Ranges: bytes\r\n
+SignInOut.c(122):     Content-Length: 11288\r\n
+SignInOut.c(122):     Keep-Alive: timeout=5, max=97\r\n
+SignInOut.c(122):     Connection: Keep-Alive\r\n
+SignInOut.c(122):     Content-Type: application/javascript\r\n
+SignInOut.c(122):     \r\n
+SignInOut.c(122): t=562ms: 8447-byte response body for "http://127.0.0.1:1080/WebTours/profileValidate.js" (RelFrameId=, Internal ID=10)
+SignInOut.c(122):     // check for IE3\n
+SignInOut.c(122):     var isIE3 = (navigator.appVersion.indexOf('MSIE 3') != -1);\n
+SignInOut.c(122):     \n
+SignInOut.c(122):     \n
+SignInOut.c(122):     /***************************************************************\n
+SignInOut.c(122):     ** define and instantiate validation objects\n
+SignInOut.c(122):     ** the validation object accepts the following parameters:\n
+SignInOut.c(122):     **\n
+SignInOut.c(122):     **   realName: name used in the alerts (same as label on the page)\n
+SignInOut.c(122):     **\n
+SignInOut.c(122):     **   formEltName: this must be the name of the corresponding\n
+SignInOut.c(122):     **       HTML form element; make it the same as the object name\n
+SignInOut.c(122):     **\n
+SignInOut.c(122):     **   eltType: element type (we have to create this since IE3\n
+SignInOut.c(122):     **       doesn't support the type property for for elements)\n
+SignInOut.c(122):     **     text\n
+SignInOut.c(122):     **     textarea\n
+SignInOut.c(122):     **     checkbox\n
+SignInOut.c(122):     **     radio\n
+SignInOut.c(122):     **     select\n
+SignInOut.c(122):     **\n
+SignInOut.c(122):     **   uptoSnuff: function call that's evaluated during validation check\n
+SignInOut.c(122):     **     isText(str)\n
+SignInOut.c(122):     **     isSelect(formObj)\n
+SignInOut.c(122):     **     isRadio(formObj)\n
+SignInOut.c(122):     **     isCheck(formObj, form, [index of first checkbox in group],\n
+SignInOut.c(122):     **         [number of checkboxes])\n
+SignInOut.c(122):     **     isEmail(str)\n
+SignInOut.c(122):     **     isState(str)\n
+SignInOut.c(122):     **     isZipCode(str)\n
+SignInOut.c(122):     **     isPhoneNum(str)\n
+SignInOut.c(122):     **     isDate(str)\n
+SignInOut.c(122):     **\n
+SignInOut.c(122):     **   format: text representation of required format;\n
+SignInOut.c(122):     **       pass 'null' if no required format;\n
+SignInOut.c(122):     **       used in alert as an aid to user\n
+SignInOut.c(122):     ***************************************************************/\n
+SignInOut.c(122):     \n
+SignInOut.c(122):     // object definition\n
+SignInOut.c(122):     function validation(realName, formEltName, eltType, upToSnuff, format) {\n
+SignInOut.c(122):       this.realName = realName;\n
+SignInOut.c(122):       this.formEltName = formEltName;\n
+SignInOut.c(122):       this.eltType = eltType;\n
+SignInOut.c(122):       this.upToSnuff = upToSnuff;\n
+SignInOut.c(122):       this.format = format;\n
+SignInOut.c(122):     }\n
+SignInOut.c(122):     \n
+SignInOut.c(122):     /***************************************************************\n
+SignInOut.c(122):     ** create a new object for each form element you need to validate\n
+SignInOut.c(122):     ** for example:\n
+SignInOut.c(122):     ** var lastName = new validation('last name', 'lastName', 'text', 'isText(str)', null);\n
+SignInOut.c(122):     ** var phoneNum = new validation('phone number', 'phoneNum', 'text', 'isPhoneNum(str)', 'x
+SignInOut.c(122):     xx-xxx-xxxx');\n
+SignInOut.c(122):     ** var reason = new validation('reason for reading this', 'reason', 'checkbox', 'isCheck(f
+SignInOut.c(122):     ormObj, form, 14, 3)', null);\n
+SignInOut.c(122):     ***************************************************************/\n
+SignInOut.c(122):     // create objects here:\n
+SignInOut.c(122):     \n
+SignInOut.c(122):     \n
+SignInOut.c(122):     var username = new validation('a username', 'username', 'text', 'isText(str)', null);\n
+SignInOut.c(122):     var password = new validation('a password', 'password', 'text', 'isText(str)', null);\n
+SignInOut.c(122):     var passwordC = new validation('a password confirmation', 'passwordConfirm', 'text', 'isTe
+SignInOut.c(122):     xt(str)', null);\n
+SignInOut.c(122):     var firstN = new validation('your first name', 'firstName', 'text', 'isText(str)', null);\n
+SignInOut.c(122):     var lastN = new validation('your last name', 'lastName', 'text', 'isText(str)', null);\n
+SignInOut.c(122):     var address = new validation('your address', 'address1', 'text', 'isText(str)', null);\n
+SignInOut.c(122):     var csz = new validation('your City/State/Zip', 'address2', 'text', 'isText(str)', null);\n
+SignInOut.c(122):     \n
+SignInOut.c(122):     \n
+SignInOut.c(122):     \n
+SignInOut.c(122):     \n
+SignInOut.c(122):     /***************************************************************\n
+SignInOut.c(122):     ** Define the elts array:\n
+SignInOut.c(122):     ** Add a new item to the array for each object you create above\n
+SignInOut.c(122):     ** Make sure the value of the array element is the same as\n
+SignInOut.c(122):     ** the name of the object, and that the array elements are listed\n
+SignInOut.c(122):     ** in the same order the corresponding objects appear in the form\n
+SignInOut.c(122):     ** (it's more clear to the user that way)\n
+SignInOut.c(122):     ** for example:\n
+SignInOut.c(122):     ** var elts = new Array(lastName, phoneNum, reason)\n
+SignInOut.c(122):     ***************************************************************/\n
+SignInOut.c(122):     var elts = new Array(username, password, passwordC, firstN, lastN, address, csz);\n
+SignInOut.c(122):     \n
+SignInOut.c(122):     \n
+SignInOut.c(122):     \n
+SignInOut.c(122):     /***************************************************************\n
+SignInOut.c(122):     ** The main function keeps track of which fields the user missed\n
+SignInOut.c(122):     ** or filled in incorrectly, and alerts the user so they can go\n
+SignInOut.c(122):     ** back and fix what's wrong.\n
+SignInOut.c(122):     ** Set allAtOnce to true if you want this "validation help" to\n
+SignInOut.c(122):     ** alert the user to all mistakes at once; set it to false if\n
+SignInOut.c(122):     ** you want it to show one mistake at a time\n
+SignInOut.c(122):     ***************************************************************/\n
+SignInOut.c(122):     var allAtOnce = true;\n
+SignInOut.c(122):     \n
+SignInOut.c(122):     \n
+SignInOut.c(122):     /***************************************************************\n
+SignInOut.c(122):     ** change text for alerts here\n
+SignInOut.c(122):     ** unspecified field (text): "Please include [field name]."\n
+SignInOut.c(122):     ** unspecified field (other): "Please choose [field name]."\n
+SignInOut.c(122):     ** invalid text field entries: "[field value] is an invalid [field name]!"\n
+SignInOut.c(122):     ** help with format: "Use this format: "\n
+SignInOut.c(122):     ***************************************************************/\n
+SignInOut.c(122):     var beginRequestAlertForText = "Please include ";\n
+SignInOut.c(122):     var beginRequestAlertGeneric = "Please choose ";\n
+SignInOut.c(122):     var endRequestAlert = ".";\n
+SignInOut.c(122):     var beginInvalidAlert = " is an invalid ";\n
+SignInOut.c(122):     var endInvalidAlert = "!";\n
+SignInOut.c(122):     var beginFormatAlert = "  Use this format: ";\n
+SignInOut.c(122):     \n
+SignInOut.c(122):     \n
+SignInOut.c(122):     /***************************************************************\n
+SignInOut.c(122):     ** these functions validate the string or form object passed in,\n
+SignInOut.c(122):     ** and return true or false based on whether the test succeeds or fails\n
+SignInOut.c(122):     **\n
+SignInOut.c(122):     ** validate existence of input\n
+SignInOut.c(122):     **   isText(str): verifies text input or textarea is not empty\n
+SignInOut.c(122):     **   isSelect(formObj): verifies item from a select menu is chosen\n
+SignInOut.c(122):     **   isRadio(formObj): verifies one of a group of radio buttons is chosen\n
+SignInOut.c(122):     **   isCheck(formObj, form, [begin], [num]): verifies at least one\n
+SignInOut.c(122):     **       of a group of checkboxes is checked\n
+SignInOut.c(122):     **     for [begin], fill in the index number in the elements array\n
+SignInOut.c(122):     **         of the first checkbox (remember to start counting from zero)\n
+SignInOut.c(122):     **     for [num], fill in the number of checkboxes in the group\n
+SignInOut.c(122):     **\n
+SignInOut.c(122):     ** validate text in text input or textarea matches pattern\n
+SignInOut.c(122):     **   isEmail(str): verifies email address (contains "@" and ".")\n
+SignInOut.c(122):     **   isState(str): verifies U.S. State Code\n
+SignInOut.c(122):     **   isZipCode(str): verifies zip code of form xxxxx or xxxxx-xxxx\n
+SignInOut.c(122):     **   isPhoneNum(str): verifies phone number of form xxx-xxx-xxxx\n
+SignInOut.c(122):     **   isDate(str): verifies date of form mm/dd/yyyy\n
+SignInOut.c(122):     ***************************************************************/\n
+SignInOut.c(122):     \n
+SignInOut.c(122):     function isText(str) {\n
+SignInOut.c(122):       return (str != "");\n
+SignInOut.c(122):     }\n
+SignInOut.c(122):     \n
+SignInOut.c(122):     function isSelect(formObj) {\n
+SignInOut.c(122):       return (formObj.selectedIndex != 0);\n
+SignInOut.c(122):     }\n
+SignInOut.c(122):     \n
+SignInOut.c(122):     function isRadio(formObj) {\n
+SignInOut.c(122):       for (j=0; j<formObj.length; j++) {\n
+SignInOut.c(122):         if (formObj[j].checked) {\n
+SignInOut.c(122):           return true;\n
+SignInOut.c(122):         }\n
+SignInOut.c(122):       }\n
+SignInOut.c(122):       return false;\n
+SignInOut.c(122):     }\n
+SignInOut.c(122):     \n
+SignInOut.c(122):     function isCheck(formObj, form, begin, num) {\n
+SignInOut.c(122):       for (j=begin; j<begin+num; j++) {\n
+SignInOut.c(122):         if (form.elements[j].checked) {\n
+SignInOut.c(122):           return true;\n
+SignInOut.c(122):         }\n
+SignInOut.c(122):       }\n
+SignInOut.c(122):       return false;\n
+SignInOut.c(122):     }\n
+SignInOut.c(122):     \n
+SignInOut.c(122):     function isEmail(str) {\n
+SignInOut.c(122):       return ((str != "") && (str.indexOf("@") != -1) && (str.indexOf(".") != -1));\n
+SignInOut.c(122):     }\n
+SignInOut.c(122):     \n
+SignInOut.c(122):     function isState(str) {\n
+SignInOut.c(122):       str = str.toUpperCase();\n
+SignInOut.c(122):       return ( (str == "AK") || (str == "AL") || (str == "AR") || (str == "AZ") || (str == "CA
+SignInOut.c(122):     ") || (str == "CO") || (str == "CT") || (str == "DC") || (str == "DE") || (str == "FL") ||
+SignInOut.c(122):      (str == "GA") || (str == "HI") || (str == "IA") || (str == "ID") || (str == "IL") || (str
+SignInOut.c(122):      == "IN") || (str == "KS") || (str == "KY") || (str == "LA") || (str == "MA") || (str == "
+SignInOut.c(122):     MD") || (str == "ME") || (str == "MI") || (str == "MN") || (str == "MO") || (str == "MS") 
+SignInOut.c(122):     || (str == "MT") || (str == "NB") || (str == "NC") || (str == "ND") || (str == "NH") || (s
+SignInOut.c(122):     tr == "NJ") || (str == "NM") || (str == "NV") || (str == "NY") || (str == "OH") || (str ==
+SignInOut.c(122):      "OK") || (str == "OR") || (str == "PA") || (str == "RI") || (str == "SC") || (str == "SD"
+SignInOut.c(122):     ) || (str == "TN") || (str == "TX") || (str == "UT") || (str == "VA") || (str == "VT") || 
+SignInOut.c(122):     (str == "WA") || (str == "WI") || (str == "WV") || (str == "WY") );\n
+SignInOut.c(122):     }\n
+SignInOut.c(122):     \n
+SignInOut.c(122):     function isZipCode(str) {\n
+SignInOut.c(122):       var l = str.length;\n
+SignInOut.c(122):       if ((l != 5) && (l != 10)) { return false }\n
+SignInOut.c(122):       for (j=0; j<l; j++) {\n
+SignInOut.c(122):         if ((l == 10) && (j == 5)) {\n
+SignInOut.c(122):           if (str.charAt(j) != "-") { return false }\n
+SignInOut.c(122):         } else {\n
+SignInOut.c(122):           if ((str.charAt(j) < "0") || (str.charAt(j) > "9")) { return false }\n
+SignInOut.c(122):         }\n
+SignInOut.c(122):       }\n
+SignInOut.c(122):       return true;\n
+SignInOut.c(122):     }\n
+SignInOut.c(122):     \n
+SignInOut.c(122):     function isPhoneNum(str) {\n
+SignInOut.c(122):       if (str.length != 12) { return false }\n
+SignInOut.c(122):       for (j=0; j<str.length; j++) {\n
+SignInOut.c(122):         if ((j == 3) || (j == 7)) {\n
+SignInOut.c(122):           if (str.charAt(j) != "-") { return false }\n
+SignInOut.c(122):         } else {\n
+SignInOut.c(122):           if ((str.charAt(j) < "0") || (str.charAt(j) > "9")) { return false }\n
+SignInOut.c(122):         }\n
+SignInOut.c(122):       }\n
+SignInOut.c(122):       return true;\n
+SignInOut.c(122):     }\n
+SignInOut.c(122):     \n
+SignInOut.c(122):     function isDate(str) {\n
+SignInOut.c(122):       if (str.length != 10) { return false }\n
+SignInOut.c(122):     \n
+SignInOut.c(122):       for (j=0; j<str.length; j++) {\n
+SignInOut.c(122):         if ((j == 2) || (j == 5)) {\n
+SignInOut.c(122):           if (str.charAt(j) != "/") { return false }\n
+SignInOut.c(122):         } else {\n
+SignInOut.c(122):           if ((str.charAt(j) < "0") || (str.charAt(j) > "9")) { return false }\n
+SignInOut.c(122):         }\n
+SignInOut.c(122):       }\n
+SignInOut.c(122):     \n
+SignInOut.c(122):       var month = str.charAt(0) == "0" ? parseInt(str.substring(1,2)) : parseInt(str.substring
+SignInOut.c(122):     (0,2));\n
+SignInOut.c(122):       var day = str.charAt(3) == "0" ? parseInt(str.substring(4,5)) : parseInt(str.substring(3
+SignInOut.c(122):     ,5));\n
+SignInOut.c(122):       var begin = str.charAt(6) == "0" ? (str.charAt(7) == "0" ? (str.charAt(8) == "0" ? 9 : 8
+SignInOut.c(122):     ) : 7) : 6;\n
+SignInOut.c(122):       var year = parseInt(str.substring(begin, 10));\n
+SignInOut.c(122):     \n
+SignInOut.c(122):       if (day == 0) { return false }\n
+SignInOut.c(122):       if (month == 0 || month > 12) { return false }\n
+SignInOut.c(122):       if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 ||
+SignInOut.c(122):      month == 12) {\n
+SignInOut.c(122):         if (day > 31) { return
+SignInOut.c(122): t=581ms: 2841-byte response body for "http://127.0.0.1:1080/WebTours/profileValidate.js" (RelFrameId=, Internal ID=10)
+SignInOut.c(122):      false }\n
+SignInOut.c(122):       } else {\n
+SignInOut.c(122):         if (month == 4 || month == 6 || month == 9 || month == 11) {\n
+SignInOut.c(122):           if (day > 30) { return false }\n
+SignInOut.c(122):         } else {\n
+SignInOut.c(122):           if (year%4 != 0) {\n
+SignInOut.c(122):             if (day > 28) { return false }\n
+SignInOut.c(122):           } else {\n
+SignInOut.c(122):             if (day > 29) { return false }\n
+SignInOut.c(122):           }\n
+SignInOut.c(122):         }\n
+SignInOut.c(122):       }\n
+SignInOut.c(122):       return true;\n
+SignInOut.c(122):     }\n
+SignInOut.c(122):     \n
+SignInOut.c(122):     \n
+SignInOut.c(122):     /***************************************************************\n
+SignInOut.c(122):     ** The validateForm() function validates the form elements\n
+SignInOut.c(122):     ** previously defined as validation objects and as members of\n
+SignInOut.c(122):     ** the elts array. We loop through the elts array, testing each\n
+SignInOut.c(122):     ** element in turn, and alerting the user when they've missed\n
+SignInOut.c(122):     ** a required field\n
+SignInOut.c(122):     ***************************************************************/\n
+SignInOut.c(122):     \n
+SignInOut.c(122):     function validateForm(form) {\n
+SignInOut.c(122):       var formEltName = "";\n
+SignInOut.c(122):       var formObj = "";\n
+SignInOut.c(122):       var str = "";\n
+SignInOut.c(122):       var realName = "";\n
+SignInOut.c(122):       var alertText = "";\n
+SignInOut.c(122):       var firstMissingElt = null;\n
+SignInOut.c(122):       var hardReturn = "\\r\\n";\n
+SignInOut.c(122):     \n
+SignInOut.c(122):       for (i=0; i<elts.length; i++) {\n
+SignInOut.c(122):         formEltName = elts[i].formEltName;\n
+SignInOut.c(122):         formObj = eval("form." + formEltName);\n
+SignInOut.c(122):         realName = elts[i].realName;\n
+SignInOut.c(122):     \n
+SignInOut.c(122):         if (elts[i].eltType == "text") {\n
+SignInOut.c(122):           str = formObj.value;\n
+SignInOut.c(122):     \n
+SignInOut.c(122):           if (eval(elts[i].upToSnuff)) continue;\n
+SignInOut.c(122):     \n
+SignInOut.c(122):           if (str == "") {\n
+SignInOut.c(122):             if (allAtOnce) {\n
+SignInOut.c(122):               alertText += beginRequestAlertForText + realName + endRequestAlert + hardReturn;
+SignInOut.c(122):     \n
+SignInOut.c(122):               if (firstMissingElt == null) {firstMissingElt = formObj};\n
+SignInOut.c(122):             } else {\n
+SignInOut.c(122):               alertText = beginRequestAlertForText + realName + endRequestAlert + hardReturn;\n
+SignInOut.c(122):               alert(alertText);\n
+SignInOut.c(122):             }\n
+SignInOut.c(122):           } else {\n
+SignInOut.c(122):             if (allAtOnce) {\n
+SignInOut.c(122):               alertText += str + beginInvalidAlert + realName + endInvalidAlert + hardReturn;\n
+SignInOut.c(122):             } else {\n
+SignInOut.c(122):               alertText = str + beginInvalidAlert + realName + endInvalidAlert + hardReturn;\n
+SignInOut.c(122):             }\n
+SignInOut.c(122):             if (elts[i].format != null) {\n
+SignInOut.c(122):               alertText += beginFormatAlert + elts[i].format + hardReturn;\n
+SignInOut.c(122):             }\n
+SignInOut.c(122):             if (allAtOnce) {\n
+SignInOut.c(122):               if (firstMissingElt == null) {firstMissingElt = formObj};\n
+SignInOut.c(122):             } else {\n
+SignInOut.c(122):               alert(alertText);\n
+SignInOut.c(122):             }\n
+SignInOut.c(122):           }\n
+SignInOut.c(122):         } else {\n
+SignInOut.c(122):           if (eval(elts[i].upToSnuff)) continue;\n
+SignInOut.c(122):           if (allAtOnce) {\n
+SignInOut.c(122):             alertText += beginRequestAlertGeneric + realName + endRequestAlert + hardReturn;\n
+SignInOut.c(122):             if (firstMissingElt == null) {firstMissingElt = formObj};\n
+SignInOut.c(122):           } else {\n
+SignInOut.c(122):             alertText = beginRequestAlertGeneric + realName + endRequestAlert + hardReturn;\n
+SignInOut.c(122):             alert(alertText);\n
+SignInOut.c(122):           }\n
+SignInOut.c(122):         }\n
+SignInOut.c(122):         if (!isIE3) {\n
+SignInOut.c(122):           var goToObj = (allAtOnce) ? firstMissingElt : formObj;\n
+SignInOut.c(122):           if (goToObj.select) goToObj.select();\n
+SignInOut.c(122):           if (goToObj.focus) goToObj.focus();\n
+SignInOut.c(122):         }\n
+SignInOut.c(122):         if (!allAtOnce) {return false};\n
+SignInOut.c(122):       }\n
+SignInOut.c(122):       if (allAtOnce) {\n
+SignInOut.c(122):         if (alertText != "") {\n
+SignInOut.c(122):           alert(alertText);\n
+SignInOut.c(122):           return false;\n
+SignInOut.c(122):         }\n
+SignInOut.c(122):       } \n
+SignInOut.c(122):     //  alert("I am valid!"); //remove this line when you use the code\n
+SignInOut.c(122):       return true; //change this to return true to make the form submit\n
+SignInOut.c(122):     }\n
+SignInOut.c(122): t=589ms: Request done "http://127.0.0.1:1080/WebTours/profileValidate.js"  	[MsgId: MMSG-26000]
+SignInOut.c(122): t=590ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/login.pl" (RelFrameId=1, Internal ID=9)
+SignInOut.c(122):     0\r\n
+SignInOut.c(122):     \r\n
+SignInOut.c(122): t=591ms: Request done "http://127.0.0.1:1080/cgi-bin/login.pl"  	[MsgId: MMSG-26000]
+SignInOut.c(122): t=591ms: 297-byte response headers for "http://127.0.0.1:1080/WebTours/images/button_next.gif" (RelFrameId=, Internal ID=11)
+SignInOut.c(122):     HTTP/1.1 200 OK\r\n
+SignInOut.c(122):     Date: Thu, 09 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(122):     Server: Apache/2.2.21 (Win32)\r\n
+SignInOut.c(122):     Last-Modified: Thu, 12 Jan 2012 22:30:26 GMT\r\n
+SignInOut.c(122):     ETag: "200000001d7b5-2f6-4b65c4b744480"\r\n
+SignInOut.c(122):     Accept-Ranges: bytes\r\n
+SignInOut.c(122):     Content-Length: 758\r\n
+SignInOut.c(122):     Keep-Alive: timeout=5, max=99\r\n
+SignInOut.c(122):     Connection: Keep-Alive\r\n
+SignInOut.c(122):     Content-Type: image/gif\r\n
+SignInOut.c(122):     \r\n
+SignInOut.c(122): t=592ms: 758-byte response body for "http://127.0.0.1:1080/WebTours/images/button_next.gif" (RelFrameId=, Internal ID=11)
+SignInOut.c(122): t=592ms: Request done "http://127.0.0.1:1080/WebTours/images/button_next.gif"  	[MsgId: MMSG-26000]
+SignInOut.c(122): Registered web_reg_find successful for "Text=Thank you, <b>"  	[MsgId: MMSG-26362]
+SignInOut.c(122): web_submit_data("T05_SignUp") was successful, 14775 body bytes, 838 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+wi_functions.c(151): Notify: Transaction "T05_SignUp" ended with a "Pass" status (Duration: 0.1029 Wasted Time: 0.0024).
+wi_functions.c(156): web_get_int_property started  	[MsgId: MMSG-26355]
+wi_functions.c(156): web_get_int_property was successful  	[MsgId: MMSG-26392]
+wi_functions.c(157): web_get_int_property started  	[MsgId: MMSG-26355]
+wi_functions.c(157): web_get_int_property was successful  	[MsgId: MMSG-26392]
+wi_functions.c(158): web_get_int_property started  	[MsgId: MMSG-26355]
+wi_functions.c(158): web_get_int_property was successful  	[MsgId: MMSG-26392]
+wi_functions.c(118): Notify: Transaction "T06_SignUp_Continue" started.
+SignInOut.c(151): web_url("button_next.gif") started  	[MsgId: MMSG-26355]
+SignInOut.c(151): t=599ms: Already connected [0] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+SignInOut.c(151): t=599ms: 344-byte request headers for "http://127.0.0.1:1080/cgi-bin/welcome.pl?page=menus" (RelFrameId=1, Internal ID=12)
+SignInOut.c(151):     GET /cgi-bin/welcome.pl?page=menus HTTP/1.1\r\n
+SignInOut.c(151):     Referer: http://127.0.0.1:1080/cgi-bin/login.pl\r\n
+SignInOut.c(151):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+SignInOut.c(151):     \n
+SignInOut.c(151):     Accept-Encoding: gzip, deflate, sdch\r\n
+SignInOut.c(151):     Accept-Language: en-US,en;q=0.8\r\n
+SignInOut.c(151):     Accept: */*\r\n
+SignInOut.c(151):     Connection: Keep-Alive\r\n
+SignInOut.c(151):     Host: 127.0.0.1:1080\r\n
+SignInOut.c(151):     Cookie: MSO=SID&1428604244\r\n
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=644ms: 215-byte response headers for "http://127.0.0.1:1080/cgi-bin/welcome.pl?page=menus" (RelFrameId=1, Internal ID=12)
+SignInOut.c(151):     HTTP/1.1 200 OK\r\n
+SignInOut.c(151):     Date: Thu, 09 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(151):     Server: Apache/2.2.21 (Win32)\r\n
+SignInOut.c(151):     Keep-Alive: timeout=5, max=96\r\n
+SignInOut.c(151):     Connection: Keep-Alive\r\n
+SignInOut.c(151):     Transfer-Encoding: chunked\r\n
+SignInOut.c(151):     Content-Type: text/html; charset=ISO-8859-1\r\n
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=646ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/welcome.pl?page=menus" (RelFrameId=1, Internal ID=12)
+SignInOut.c(151):     254\r\n
+SignInOut.c(151): t=646ms: 2-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/welcome.pl?page=menus" (RelFrameId=1, Internal ID=12)
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=646ms: 596-byte chunked response body for "http://127.0.0.1:1080/cgi-bin/welcome.pl?page=menus" (RelFrameId=1, Internal ID=12)
+SignInOut.c(151):     <!-- \n
+SignInOut.c(151):      User has returned to the home page.  Since user has already logged on,\n
+SignInOut.c(151):      we can give them the menu in the navbar.\n
+SignInOut.c(151):      --->\n
+SignInOut.c(151):     \n
+SignInOut.c(151):     <html>\n
+SignInOut.c(151):     <title>Web Tours</title>\n
+SignInOut.c(151):        <!-- Frame Set -->\n
+SignInOut.c(151):        <frameset cols="160,*" border="1" frameborder="1">\n
+SignInOut.c(151):           <!-- Navigation Frame -->\n
+SignInOut.c(151):           <frame src="nav.pl?page=menu&in=home" name="navbar" \n
+SignInOut.c(151):                 marginheight="2" marginwidth="2" noresize="noresize" scrolling="auto"/>\n
+SignInOut.c(151):           <!-- Intro Frame -->\n
+SignInOut.c(151):           <frame src="login.pl?intro=true" name="info" \n
+SignInOut.c(151):                 marginheight="2" marginwidth="2" norseize="noresize" scrolling="auto"/>\n
+SignInOut.c(151):        </frameset>\n
+SignInOut.c(151):     </html>\n
+SignInOut.c(151): Detected non-resource "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?page=menus"  	[MsgId: MMSG-26574]
+SignInOut.c(151): Detected non-resource "http://127.0.0.1:1080/cgi-bin/login.pl?intro=true" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?page=menus"  	[MsgId: MMSG-26574]
+SignInOut.c(151): t=647ms: Already connected [1] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+SignInOut.c(151): t=647ms: 360-byte request headers for "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home" (RelFrameId=1.1, Internal ID=13)
+SignInOut.c(151):     GET /cgi-bin/nav.pl?page=menu&in=home HTTP/1.1\r\n
+SignInOut.c(151):     Referer: http://127.0.0.1:1080/cgi-bin/welcome.pl?page=menus\r\n
+SignInOut.c(151):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+SignInOut.c(151):     \n
+SignInOut.c(151):     Accept-Encoding: gzip, deflate, sdch\r\n
+SignInOut.c(151):     Accept-Language: en-US,en;q=0.8\r\n
+SignInOut.c(151):     Accept: */*\r\n
+SignInOut.c(151):     Connection: Keep-Alive\r\n
+SignInOut.c(151):     Host: 127.0.0.1:1080\r\n
+SignInOut.c(151):     Cookie: MSO=SID&1428604244\r\n
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=650ms: Already connected [2] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+SignInOut.c(151): t=650ms: 355-byte request headers for "http://127.0.0.1:1080/cgi-bin/login.pl?intro=true" (RelFrameId=1.2, Internal ID=14)
+SignInOut.c(151):     GET /cgi-bin/login.pl?intro=true HTTP/1.1\r\n
+SignInOut.c(151):     Referer: http://127.0.0.1:1080/cgi-bin/welcome.pl?page=menus\r\n
+SignInOut.c(151):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+SignInOut.c(151):     \n
+SignInOut.c(151):     Accept-Encoding: gzip, deflate, sdch\r\n
+SignInOut.c(151):     Accept-Language: en-US,en;q=0.8\r\n
+SignInOut.c(151):     Accept: */*\r\n
+SignInOut.c(151):     Connection: Keep-Alive\r\n
+SignInOut.c(151):     Host: 127.0.0.1:1080\r\n
+SignInOut.c(151):     Cookie: MSO=SID&1428604244\r\n
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=700ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/welcome.pl?page=menus" (RelFrameId=1, Internal ID=12)
+SignInOut.c(151):     0\r\n
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=701ms: Request done "http://127.0.0.1:1080/cgi-bin/welcome.pl?page=menus"  	[MsgId: MMSG-26000]
+SignInOut.c(151): t=708ms: 228-byte response headers for "http://127.0.0.1:1080/cgi-bin/login.pl?intro=true" (RelFrameId=1.2, Internal ID=14)
+SignInOut.c(151):     HTTP/1.1 200 OK\r\n
+SignInOut.c(151):     Date: Thu, 09 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(151):     Server: Apache/2.2.21 (Win32)\r\n
+SignInOut.c(151):     Expires: 5s\r\n
+SignInOut.c(151):     Keep-Alive: timeout=5, max=98\r\n
+SignInOut.c(151):     Connection: Keep-Alive\r\n
+SignInOut.c(151):     Transfer-Encoding: chunked\r\n
+SignInOut.c(151):     Content-Type: text/html; charset=ISO-8859-1\r\n
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=708ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/login.pl?intro=true" (RelFrameId=1.2, Internal ID=14)
+SignInOut.c(151):     392\r\n
+SignInOut.c(151): t=709ms: 2-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/login.pl?intro=true" (RelFrameId=1.2, Internal ID=14)
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=709ms: 914-byte chunked response body for "http://127.0.0.1:1080/cgi-bin/login.pl?intro=true" (RelFrameId=1.2, Internal ID=14)
+SignInOut.c(151):     <!DOCTYPE html\n
+SignInOut.c(151):     \tPUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"\n
+SignInOut.c(151):     \t "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n
+SignInOut.c(151):     <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">\n
+SignInOut.c(151):     <head>\n
+SignInOut.c(151):     <title>Welcome to Web Tours</title>\n
+SignInOut.c(151):     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />\n
+SignInOut.c(151):     </head>\n
+SignInOut.c(151):     <body bgcolor="#E0E7F1">\n
+SignInOut.c(151):     <p /><style>blockquote {font-family: tahoma; font-size : 10pt}H1 {font-family: tahoma; fon
+SignInOut.c(151):     t-size : 22pt; color: #993333}small {font-family: tahoma; font-size : 8pt}H3 {font-family:
+SignInOut.c(151):      tahoma; font-size : 10pt; color: black}TD {font-family: tahoma; font-size : 10pt; color: 
+SignInOut.c(151):     black}</style><BR/><BR/><BR/><BR/><BR/><blockquote>Welcome, <b></b>, to the Web Tours rese
+SignInOut.c(151):     rvation pages.<BR/>Using the menu to the left, you can search for new flights to book, \n
+SignInOut.c(151):     or review/edit the flights already booked.  Don't forget to sign off when\n
+SignInOut.c(151):     you're done!\n
+SignInOut.c(151):     </blockquote>\n
+SignInOut.c(151):     </body>\n
+SignInOut.c(151):     </html>
+SignInOut.c(151): t=714ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/login.pl?intro=true" (RelFrameId=1.2, Internal ID=14)
+SignInOut.c(151):     0\r\n
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=715ms: Request done "http://127.0.0.1:1080/cgi-bin/login.pl?intro=true"  	[MsgId: MMSG-26000]
+SignInOut.c(151): t=734ms: 255-byte response headers for "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home" (RelFrameId=1.1, Internal ID=13)
+SignInOut.c(151):     HTTP/1.1 200 OK\r\n
+SignInOut.c(151):     Date: Thu, 09 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(151):     Server: Apache/2.2.21 (Win32)\r\n
+SignInOut.c(151):     Expires: Wed, 08 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(151):     Keep-Alive: timeout=5, max=96\r\n
+SignInOut.c(151):     Connection: Keep-Alive\r\n
+SignInOut.c(151):     Transfer-Encoding: chunked\r\n
+SignInOut.c(151):     Content-Type: text/html; charset=ISO-8859-1\r\n
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=735ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home" (RelFrameId=1.1, Internal ID=13)
+SignInOut.c(151):     5ca\r\n
+SignInOut.c(151): t=735ms: 2-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home" (RelFrameId=1.1, Internal ID=13)
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=736ms: 1482-byte chunked response body for "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home" (RelFrameId=1.1, Internal ID=13)
+SignInOut.c(151):     <!DOCTYPE html\n
+SignInOut.c(151):     \tPUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"\n
+SignInOut.c(151):     \t "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n
+SignInOut.c(151):     <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">\n
+SignInOut.c(151):     <head>\n
+SignInOut.c(151):     <title>Web Tours Navigation Bar</title>\n
+SignInOut.c(151):     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />\n
+SignInOut.c(151):     </head>\n
+SignInOut.c(151):     <body bgcolor="#E0E7F1">\n
+SignInOut.c(151):     \n
+SignInOut.c(151):     <style>\n
+SignInOut.c(151):     \tblockquote {font-family: tahoma; font-size : 10pt}\n
+SignInOut.c(151):     \tH1 {font-family: tahoma; font-size : 22pt; color: #993333}\n
+SignInOut.c(151):     \tsmall {font-family: tahoma; font-size : 8pt}\n
+SignInOut.c(151):     \tH3{font-family: tahoma; font-size : 10pt; color: black}\n
+SignInOut.c(151):     \tA {FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Tahoma; TEXT-DECORATIO
+SignInOut.c(151):     N: none}\n
+SignInOut.c(151):     \tA:hover{ FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #993333; FONT-FAMILY: Tahoma;TEXT-DE
+SignInOut.c(151):     CORATION: underline}\n
+SignInOut.c(151):     \tTD {font-family: tahoma; font-size : 10pt; color: black}\n
+SignInOut.c(151):     </style>\n
+SignInOut.c(151):     \n
+SignInOut.c(151):     <BR><BR><center>\n
+SignInOut.c(151):     \n
+SignInOut.c(151):     <br clear="both"/><center><A HREF="welcome.pl?page=search" TARGET="body"><IMG BORDER="0" S
+SignInOut.c(151):     RC="/WebTours/images/flights.gif" \n
+SignInOut.c(151):     ALT="Search Flights Button"/></A>\n
+SignInOut.c(151):     <br clear="both"/><A HREF="welcome.pl?page=itinerary" TARGET="body"><IMG BORDER="0" SRC="/
+SignInOut.c(151):     WebTours/images/itinerary.gif" \n
+SignInOut.c(151):     ALT="Itinerary Button"/></A>\n
+SignInOut.c(151):     <br clear="both"/><A HREF="welcome.pl?page=menus" TARGET="body"><IMG BORDER="0" SRC="/WebT
+SignInOut.c(151):     ours/images/in_home.gif" \n
+SignInOut.c(151):     ALT="Home Button"/></A>\n
+SignInOut.c(151):     <br clear><A HREF="welcome.pl?signOff=1" TARGET="body"><IMG BORDER="0" SRC="/WebTours/imag
+SignInOut.c(151):     es/signoff.gif" \n
+SignInOut.c(151):     ALT="SignOff Button"/></A></center>\n
+SignInOut.c(151):     \n
+SignInOut.c(151):     </body>\n
+SignInOut.c(151):     </html>\n
+SignInOut.c(151): Found resource "http://127.0.0.1:1080/WebTours/images/flights.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+SignInOut.c(151): Found resource "http://127.0.0.1:1080/WebTours/images/itinerary.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+SignInOut.c(151): Found resource "http://127.0.0.1:1080/WebTours/images/in_home.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+SignInOut.c(151): Found resource "http://127.0.0.1:1080/WebTours/images/signoff.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+SignInOut.c(151): t=739ms: Already connected [2] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+SignInOut.c(151): t=739ms: 360-byte request headers for "http://127.0.0.1:1080/WebTours/images/itinerary.gif" (RelFrameId=, Internal ID=16)
+SignInOut.c(151):     GET /WebTours/images/itinerary.gif HTTP/1.1\r\n
+SignInOut.c(151):     Referer: http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home\r\n
+SignInOut.c(151):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+SignInOut.c(151):     \n
+SignInOut.c(151):     Accept-Encoding: gzip, deflate, sdch\r\n
+SignInOut.c(151):     Accept-Language: en-US,en;q=0.8\r\n
+SignInOut.c(151):     Accept: */*\r\n
+SignInOut.c(151):     Connection: Keep-Alive\r\n
+SignInOut.c(151):     Host: 127.0.0.1:1080\r\n
+SignInOut.c(151):     Cookie: MSO=SID&1428604244\r\n
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=740ms: Already connected [3] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+SignInOut.c(151): t=740ms: 358-byte request headers for "http://127.0.0.1:1080/WebTours/images/in_home.gif" (RelFrameId=, Internal ID=17)
+SignInOut.c(151):     GET /WebTours/images/in_home.gif HTTP/1.1\r\n
+SignInOut.c(151):     Referer: http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home\r\n
+SignInOut.c(151):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+SignInOut.c(151):     \n
+SignInOut.c(151):     Accept-Encoding: gzip, deflate, sdch\r\n
+SignInOut.c(151):     Accept-Language: en-US,en;q=0.8\r\n
+SignInOut.c(151):     Accept: */*\r\n
+SignInOut.c(151):     Connection: Keep-Alive\r\n
+SignInOut.c(151):     Host: 127.0.0.1:1080\r\n
+SignInOut.c(151):     Cookie: MSO=SID&1428604244\r\n
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=741ms: Connecting [4] to host 127.0.0.1:1080  	[MsgId: MMSG-26000]
+SignInOut.c(151): t=741ms: Already connected [0] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+SignInOut.c(151): t=741ms: 358-byte request headers for "http://127.0.0.1:1080/WebTours/images/flights.gif" (RelFrameId=, Internal ID=15)
+SignInOut.c(151):     GET /WebTours/images/flights.gif HTTP/1.1\r\n
+SignInOut.c(151):     Referer: http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home\r\n
+SignInOut.c(151):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+SignInOut.c(151):     \n
+SignInOut.c(151):     Accept-Encoding: gzip, deflate, sdch\r\n
+SignInOut.c(151):     Accept-Language: en-US,en;q=0.8\r\n
+SignInOut.c(151):     Accept: */*\r\n
+SignInOut.c(151):     Connection: Keep-Alive\r\n
+SignInOut.c(151):     Host: 127.0.0.1:1080\r\n
+SignInOut.c(151):     Cookie: MSO=SID&1428604244\r\n
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=742ms: Connected socket [4] from 127.0.0.1:9670 to 127.0.0.1:1080 in 1 ms  	[MsgId: MMSG-26000]
+SignInOut.c(151): t=742ms: 358-byte request headers for "http://127.0.0.1:1080/WebTours/images/signoff.gif" (RelFrameId=, Internal ID=18)
+SignInOut.c(151):     GET /WebTours/images/signoff.gif HTTP/1.1\r\n
+SignInOut.c(151):     Referer: http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home\r\n
+SignInOut.c(151):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+SignInOut.c(151):     \n
+SignInOut.c(151):     Accept-Encoding: gzip, deflate, sdch\r\n
+SignInOut.c(151):     Accept-Language: en-US,en;q=0.8\r\n
+SignInOut.c(151):     Accept: */*\r\n
+SignInOut.c(151):     Connection: Keep-Alive\r\n
+SignInOut.c(151):     Host: 127.0.0.1:1080\r\n
+SignInOut.c(151):     Cookie: MSO=SID&1428604244\r\n
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=743ms: 297-byte response headers for "http://127.0.0.1:1080/WebTours/images/in_home.gif" (RelFrameId=, Internal ID=17)
+SignInOut.c(151):     HTTP/1.1 200 OK\r\n
+SignInOut.c(151):     Date: Thu, 09 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(151):     Server: Apache/2.2.21 (Win32)\r\n
+SignInOut.c(151):     Last-Modified: Thu, 12 Jan 2012 22:30:26 GMT\r\n
+SignInOut.c(151):     ETag: "200000001d7bf-2b0-4b65c4b744480"\r\n
+SignInOut.c(151):     Accept-Ranges: bytes\r\n
+SignInOut.c(151):     Content-Length: 688\r\n
+SignInOut.c(151):     Keep-Alive: timeout=5, max=99\r\n
+SignInOut.c(151):     Connection: Keep-Alive\r\n
+SignInOut.c(151):     Content-Type: image/gif\r\n
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=744ms: 688-byte response body for "http://127.0.0.1:1080/WebTours/images/in_home.gif" (RelFrameId=, Internal ID=17)
+SignInOut.c(151): t=745ms: Request done "http://127.0.0.1:1080/WebTours/images/in_home.gif"  	[MsgId: MMSG-26000]
+SignInOut.c(151): t=745ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/images/signoff.gif" (RelFrameId=, Internal ID=18)
+SignInOut.c(151):     HTTP/1.1 200 OK\r\n
+SignInOut.c(151):     Date: Thu, 09 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(151):     Server: Apache/2.2.21 (Win32)\r\n
+SignInOut.c(151):     Last-Modified: Thu, 12 Jan 2012 22:30:26 GMT\r\n
+SignInOut.c(151):     ETag: "200000001d7c8-2ef-4b65c4b744480"\r\n
+SignInOut.c(151):     Accept-Ranges: bytes\r\n
+SignInOut.c(151):     Content-Length: 751\r\n
+SignInOut.c(151):     Keep-Alive: timeout=5, max=100\r\n
+SignInOut.c(151):     Connection: Keep-Alive\r\n
+SignInOut.c(151):     Content-Type: image/gif\r\n
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=746ms: 751-byte response body for "http://127.0.0.1:1080/WebTours/images/signoff.gif" (RelFrameId=, Internal ID=18)
+SignInOut.c(151): t=746ms: Request done "http://127.0.0.1:1080/WebTours/images/signoff.gif"  	[MsgId: MMSG-26000]
+SignInOut.c(151): t=747ms: 297-byte response headers for "http://127.0.0.1:1080/WebTours/images/flights.gif" (RelFrameId=, Internal ID=15)
+SignInOut.c(151):     HTTP/1.1 200 OK\r\n
+SignInOut.c(151):     Date: Thu, 09 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(151):     Server: Apache/2.2.21 (Win32)\r\n
+SignInOut.c(151):     Last-Modified: Thu, 12 Jan 2012 22:30:26 GMT\r\n
+SignInOut.c(151):     ETag: "200000001d7b8-2d6-4b65c4b744480"\r\n
+SignInOut.c(151):     Accept-Ranges: bytes\r\n
+SignInOut.c(151):     Content-Length: 726\r\n
+SignInOut.c(151):     Keep-Alive: timeout=5, max=95\r\n
+SignInOut.c(151):     Connection: Keep-Alive\r\n
+SignInOut.c(151):     Content-Type: image/gif\r\n
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=747ms: 726-byte response body for "http://127.0.0.1:1080/WebTours/images/flights.gif" (RelFrameId=, Internal ID=15)
+SignInOut.c(151): t=748ms: Request done "http://127.0.0.1:1080/WebTours/images/flights.gif"  	[MsgId: MMSG-26000]
+SignInOut.c(151): t=752ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home" (RelFrameId=1.1, Internal ID=13)
+SignInOut.c(151):     0\r\n
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=752ms: Request done "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26000]
+SignInOut.c(151): t=760ms: 297-byte response headers for "http://127.0.0.1:1080/WebTours/images/itinerary.gif" (RelFrameId=, Internal ID=16)
+SignInOut.c(151):     HTTP/1.1 200 OK\r\n
+SignInOut.c(151):     Date: Thu, 09 Apr 2015 18:30:44 GMT\r\n
+SignInOut.c(151):     Server: Apache/2.2.21 (Win32)\r\n
+SignInOut.c(151):     Last-Modified: Thu, 12 Jan 2012 22:30:26 GMT\r\n
+SignInOut.c(151):     ETag: "200000001d7c2-2dd-4b65c4b744480"\r\n
+SignInOut.c(151):     Accept-Ranges: bytes\r\n
+SignInOut.c(151):     Content-Length: 733\r\n
+SignInOut.c(151):     Keep-Alive: timeout=5, max=97\r\n
+SignInOut.c(151):     Connection: Keep-Alive\r\n
+SignInOut.c(151):     Content-Type: image/gif\r\n
+SignInOut.c(151):     \r\n
+SignInOut.c(151): t=761ms: 733-byte response body for "http://127.0.0.1:1080/WebTours/images/itinerary.gif" (RelFrameId=, Internal ID=16)
+SignInOut.c(151): t=761ms: Request done "http://127.0.0.1:1080/WebTours/images/itinerary.gif"  	[MsgId: MMSG-26000]
+SignInOut.c(151): web_url("button_next.gif") was successful, 5890 body bytes, 1887 header bytes, 36 chunking overhead bytes  	[MsgId: MMSG-26385]
+wi_functions.c(151): Notify: Transaction "T06_SignUp_Continue" ended with a "Pass" status (Duration: 0.1834 Wasted Time: 0.0028).
+wi_functions.c(156): web_get_int_property started  	[MsgId: MMSG-26355]
+wi_functions.c(156): web_get_int_property was successful  	[MsgId: MMSG-26392]
+wi_functions.c(157): web_get_int_property started  	[MsgId: MMSG-26355]
+wi_functions.c(157): web_get_int_property was successful  	[MsgId: MMSG-26392]
+wi_functions.c(158): web_get_int_property started  	[MsgId: MMSG-26355]
+wi_functions.c(158): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.
+t=1462ms: Closed connection [0] to 127.0.0.1:1080 after completing 6 requests  	[MsgId: MMSG-26000]
+t=1462ms: Closed connection [1] to 127.0.0.1:1080 after completing 5 requests  	[MsgId: MMSG-26000]
+t=1462ms: Closed connection [2] to 127.0.0.1:1080 after completing 4 requests  	[MsgId: MMSG-26000]
+t=1462ms: Closed connection [3] to 127.0.0.1:1080 after completing 2 requests  	[MsgId: MMSG-26000]
+t=1462ms: Closed connection [4] to 127.0.0.1:1080 after completing 1 request  	[MsgId: MMSG-26000]

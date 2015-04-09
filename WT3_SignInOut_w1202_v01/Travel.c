@@ -1,4 +1,0 @@
-Travel()
-{
-	return 0;
-}

@@ -1,19 +1,21 @@
 #!perl
 
-# $Id: parsec.pl,v 1.1 2014-08-11 09:34:12 wilsonmar@gmail.com Exp $ [MISCCSID]
+# $Id: parsec.pl,v 1.1 2014-08-11 09:34:12 wilsonmar@gmail.com
 
 # Sample call: perl parsec.pl --in Recording.c --out Action.commented.c
 
-# From http://github.com/wilsonmar/loadrunner/parsec.pl
-# 1. Ensure you have perl that comes with LoadRunner 12.02 or before: perl -v
+# From http://github.com/wilsonmar/loadrunner/parsec/parsec.pl
+# 1. Ensure that perl version 5.12.1 that comes with LoadRunner 12.02 can process the script.
 # 2. cd to the folder where your LoadRunner script/
-# 3. Copy conv_lr_c.pl into the script folder.
-# 4. Invoke "conv_lr_c.pl Action.c" (without the ") which specifies a C-language script generated within LoadRunner.
+# 3. Copy parsec.pl into the script folder. QUESTION: This required?
+# 4. Invoke "parse.pl Recording.c" (without the ") which specifies a C-language script generated within LoadRunner.
 # 5. If no file is specified, this program looks for a .c file.
 # 6. If no file is found, the program aborts.
-# For each .c file found:
 # 7. This program generates a file with a timestamp containing the specified file's contents.
-# 8. The original file name contains updated by this program.
+#    The timestamp should contain the local time zone abbreviation.
+# 8. After processing, the original file name should contain text output by this program.
+#    That's unless a run parameter requests otherwise.
+# 9. A line remains unchanged unless:
 #    a. A comment is added in the first line to detect and prevent repeat executions.
 #    b. Two slashes are added in front of any line containing "web_add_cookie(" or "lr_think_time".
 #    c. Slashes are also added in front of continuing lines commented out but not completed with ;.
@@ -58,6 +60,7 @@ open(my $f_out, '>', $file_out) or die ">>> Could not open '$file_out' for writi
 # Declare working flags:
 my $comment_needs_completion = 0; # 0=NO to begin loop.
 my $should_comment = 0; # Assuming no.
+my $web_reg_find = 0; # Assuming no.
 
 while (my $row = <$f_in>) { # loop through lines:
     chomp $row;
@@ -88,8 +91,13 @@ while (my $row = <$f_in>) { # loop through lines:
 
 	if( $row =~ /lr_think_time\(/){ # TODO: substitute rather than replace to retain number in function.
         $should_comment = 1; # 1=Yes, comment this line out.
-        # print $f_out "\tlr_think_time( floatThinkTime ); // TODO: substitute so number remains, and only once.\n";
-	
+		# lr_think_time(32); not needed because it's handled within wi_start_transaction(); 
+ 	}elsif( $row =~ /web_reg_find\(/){ # response check logic encountered.
+		$web_reg_find = 1;
+	}elsif( $row =~ /web_url\(/){ # web_url() encountered.
+		if( $web_reg_find == 0 ){ # add a line if a web_reg_find was not generated.
+			print $f_out "//\tweb_reg_find(\"Text=???\",LAST);\n";
+ 		}
 	}
 
     if( $should_comment == 1 ){ 
@@ -118,7 +126,7 @@ while (my $row = <$f_in>) { # loop through lines:
         print $f_out "$row\n"; # all other lines print out as is.
     }
     
-}# while loop
+}# while loopThis should be commented out 
 
 close $f_in;
 close $f_out;
