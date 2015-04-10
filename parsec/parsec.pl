@@ -30,11 +30,17 @@ use File::Basename; # for GetOptions()
 use Getopt::Long;   # for GetOptions()
 
 # Initialize variables:
+# Aakash start
+my $UTC_OFFSET_HOUR = -3;
+my $input_filename ="";
+my $output_filename ="";
+#Aakash End
+
 my $file_in  = "";
 my $logging_time = getLoggingTime(); # prints immediate!
 my $file_out = "";
 my $file_switch  = "";
-my $file_temp = "";
+#my $file_temp = "";  ## commented by Aakash No Need for this
 
 my $USAGE = "$0 --in <file to process> --out <file to write to>";
 
@@ -48,12 +54,26 @@ if (! $file_in || ! -e $file_in){
 }
 
 if (! $file_out){
-    $file_out = $file_in . '_' . $logging_time . '.c';
-    print ">>> No output file specified, so it's $file_out.\n";
+	#$file_out = $file_in . '_' . $logging_time . '.c';
+    print ">>> No output file specified.\n";
 }
 
-    $file_temp = $file_in . '_' . $logging_time . '.c.txt';
-	
+#START : Fetching input filename ## Aakash
+
+my ($name,$path,$suffix) = fileparse($file_in,qr"\..[^.]*$");
+	$input_filename= $name;
+	#print $name
+
+
+($name,$path,$suffix) = fileparse($file_out,qr"\..[^.]*$");
+	$output_filename= $name.$suffix;
+	#print $name
+#END
+
+$file_out = 'tmp'.$logging_time . '.txt'; # Added by Aakash
+
+#$file_temp = $file_in . '_' . $logging_time . '.c.txt';  ## commented by Aakash No Need for this
+	  
 open(my $f_in, '<:encoding(UTF-8)', $file_in) or die ">>> Could not open file '$file_in': $!";
 open(my $f_out, '>', $file_out) or die ">>> Could not open '$file_out' for writing: $!";
 
@@ -96,7 +116,7 @@ while (my $row = <$f_in>) { # loop through lines:
 		$web_reg_find = 1;
 	}elsif( $row =~ /web_url\(/){ # web_url() encountered.
 		if( $web_reg_find == 0 ){ # add a line if a web_reg_find was not generated.
-			print $f_out "//\tweb_reg_find(\"Text=???\",LAST);\n";
+			print $f_out "\t// web_reg_find(\"Text=???\",LAST);\n";
  		}
 	}
 
@@ -139,14 +159,37 @@ close $f_out;
 #        rename $f_out,  $f_in
 #    }
 
-print ">>> $0 done from $file_in to $file_out\n";
+# START : Switching the files. ## Added by Aakash
+if( $file_switch eq 'no' ){ 
+        # skip renaming is default action
+    }
+else{
+       rename $file_in, $logging_time.'.txt'  || die ( "Error in renaming input file to .txt file" );
+
+       rename $file_out,  $input_filename.'.c' || die ( "Error in renaming output file to .c file" );
+}
+# END
+
+print ">>> $0 done from $file_in to $output_filename\n";
 
 
 sub getLoggingTime {
-    my $tz = strftime("%z", localtime());
+	#START : to add UTC time and return a date time string for filename.
+	my $START_YEAR = 1900;
+	# my $tz = strftime("%z", localtime()); ## Use this if you need to show the offset code. Currently the time itself is UTC-3.00
 
-    my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)=localtime(time);
-    my $nice_timestamp = sprintf ( "%04d%02d%02dT%02d%02d%02d%s",
-                                   $year+1900,$mon+1,$mday,$hour,$min,$sec,$tz);
-    return $nice_timestamp;
+	my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)  = gmtime();
+
+	my $nice_timestamp = sprintf("%04d%02d%02dT%02d%02d",$year+$START_YEAR,$mon+1,$mday,$hour + $UTC_OFFSET_HOUR,$min);
+	#print $nice_timestamp;
+	# END 
+
+## START : Prev code commented
+# my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)=localtime(time);
+#   my $nice_timestamp = sprintf ( "%04d%02d%02dT%02d%02d%02d%s",
+#                                 $year+1900,$mon+1,$mday,$hour,$min,$sec,$tz);
+#print $nice_timestamp;
+## END 
+
+	return $nice_timestamp;
 }
