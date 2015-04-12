@@ -30,17 +30,17 @@ use File::Basename; # for GetOptions()
 use Getopt::Long;   # for GetOptions()
 
 # Initialize variables:
-# Aakash start
-my $UTC_OFFSET_HOUR = -3;
+
 my $input_filename ="";
 my $output_filename ="";
-#Aakash End
 
 my $file_in  = "";
-my $logging_time = getLoggingTime(); # prints immediate!
 my $file_out = "";
+
+my $UTC_OFFSET_HOUR = -3; # TODO: Get local client timezone code (PST, MDT, CST, EST, IST, etc.)
+my $logging_time = getLoggingTime(); # prints immediate!
+
 my $file_switch  = "";
-#my $file_temp = "";  ## commented by Aakash No Need for this
 
 my $USAGE = "$0 --in <file to process> --out <file to write to>";
 
@@ -63,7 +63,6 @@ if (! $file_out){
 my ($name,$path,$suffix) = fileparse($file_in,qr"\..[^.]*$");
 	$input_filename= $name;
 	#print $name
-
 
 ($name,$path,$suffix) = fileparse($file_out,qr"\..[^.]*$");
 	$output_filename= $name.$suffix;
@@ -146,27 +145,15 @@ while (my $row = <$f_in>) { # loop through lines:
         print $f_out "$row\n"; # all other lines print out as is.
     }
     
-}# while loopThis should be commented out 
+}# while loop through lines. 
 
 close $f_in;
 close $f_out;
 
-# TODO: Switch file names so no one is the wiser for the processing.
-#    if( $file_switch == "no" ){ 
-        # skip renaming is default action
-#    }else{
-#        rename $f_in,   $f_temp
-#        rename $f_out,  $f_in
-#    }
-
-# START : Switching the files. ## Added by Aakash
-if( $file_switch eq 'no' ){ 
-        # skip renaming is default action
-    }
-else{
-       rename $file_in, $logging_time.'.txt'  || die ( "Error in renaming input file to .txt file" );
-
-       rename $file_out,  $input_filename.'.c' || die ( "Error in renaming output file to .c file" );
+if( $file_switch eq 'y' ){ 
+	# Switch file names so the processed file is changed, with original file renamed:
+	rename $file_in,  $logging_time.'.txt'  || die ( "Error in renaming input file to .txt file" );
+    rename $file_out, $input_filename.'.c' || die ( "Error in renaming output file to .c file" );
 }
 # END
 
@@ -177,19 +164,7 @@ sub getLoggingTime {
 	#START : to add UTC time and return a date time string for filename.
 	my $START_YEAR = 1900;
 	# my $tz = strftime("%z", localtime()); ## Use this if you need to show the offset code. Currently the time itself is UTC-3.00
-
 	my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)  = gmtime();
-
 	my $nice_timestamp = sprintf("%04d%02d%02dT%02d%02d",$year+$START_YEAR,$mon+1,$mday,$hour + $UTC_OFFSET_HOUR,$min);
-	#print $nice_timestamp;
-	# END 
-
-## START : Prev code commented
-# my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)=localtime(time);
-#   my $nice_timestamp = sprintf ( "%04d%02d%02dT%02d%02d%02d%s",
-#                                 $year+1900,$mon+1,$mday,$hour,$min,$sec,$tz);
-#print $nice_timestamp;
-## END 
-
 	return $nice_timestamp;
 }
