@@ -1,9 +1,0 @@
-POST /safebrowsing/downloads?client=googlechrome&appver=41.0.2272.118&pver=3.0&key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw HTTP/1.1
-Host: safebrowsing.google.com
-Connection: keep-alive
-Content-Length: 1440
-Content-Type: text/plain
-User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36
-Accept-Encoding: gzip, deflate
-Cookie: PREF=ID=cb22963409466525:TM=1407152021:LM=1423701561:S=pXj_qE_4NQ4gzCTB
-

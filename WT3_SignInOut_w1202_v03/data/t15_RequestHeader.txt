@@ -1,8 +1,0 @@
-GET /searchdomaincheck?format=url&type=chrome HTTP/1.1
-Host: www.google.com
-Connection: keep-alive
-User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36
-Accept-Encoding: gzip, deflate, sdch
-Accept-Language: en-US,en;q=0.8
-Cookie: HSID=A-u-Ic_EOvB6jWoiQ; SSID=A7W2ZQLXgqH4vODBD; APISID=gksmEmV34lJZYnuW/AX6V0w027NS3qB7Sg; SAPISID=t2kEgxOCKeYg-78x/AdjlxijaT06ceDCqn; NID=67=m1gXbJUQFW0BP4b3LiulHJZXnndUdsEpumsroR-Hss7uQltiEEEO2-ue7CVLS_NTCOfAmOhRaU0SqfouwHpo7--FFrzGsPonWFKR5M3NU7NOCl9BDtZmShQEtfS-PDTvgOH1QlVhVxEwahrCaiSTlbWVeIGA6u4IZZw-jHLFx5mdtLGLTcx7ja9mjpsexA-9rp9cR47X_XsOFmXTi2Yx; PREF=ID=85ed335aa1e9049f:U=55fde6301f47998e:FF=0:LD=en:TM=1407351399:LM=1426269142:GM=1:SG=1:S=WGQBz_h-fY13p3Br; SID=DQAAAAkBAAA2_nCu0_5UQHutexMccNwfI6Ptde8LIPuQ8AIJ4hS571rkcldlWmTluQSAkOGMb8UDLnj_3SNuDXWAUQA3hUa_Y1JBuTgeN-msPCbFmATy_2dwosggqp8zCkBkySyqIN13-VAeMrrRK-bVvb67cTiGUWdcGKJnihQN1VMKYZvgQkhZC4HqULN_Isn-AAUWlhPunj60qCHvGrGsbuidfJTrb7lRgetLJrSPY9w70Aa5W3dOl0cHvVOGMtvoP58_f1J6sG2w8tltc52d9VOVUj6zII6Bh3Cjq6gqmo2-sh5mabko4zeq0lHt0oJcVrbGA2LB1JoxwWo7E__YzjdXNQoJ3TZZBk2ntWppLUK4JohUIA
-
