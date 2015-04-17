@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Type: application/json
+Last-Modified: Mon, 11 Feb 2013 09:48:51 GMT
+Date: Thu, 09 Apr 2015 17:56:11 GMT
+Expires: Thu, 09 Apr 2015 17:56:11 GMT
+X-Content-Type-Options: nosniff
+Server: sffe
+Content-Length: 1895
+X-XSS-Protection: 1; mode=block
+Cache-Control: public, max-age=0
+Age: 0
+Alternate-Protocol: 443:quic,p=0.5
+

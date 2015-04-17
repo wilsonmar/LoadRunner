@@ -1,0 +1,13 @@
+[t10]
+FileName1=t9_crx.xml
+URL1=https://clients2.google.com/service/update2/crx?os=win&arch=x86&nacl_arch=x86-64&prod=chromecrx&prodchannel=stable&prodversion=41.0.2272.118&lang=en-US&x=id%3Dlccekmodgklaepjeofjdjpbminllajkg%26v%3D0.0.0.0%26uc%26ping%3Dr%253D-1%2526e%253D1&x=id%3Daohghmighlieiainnegkcijnfilokake%26v%3D0.9%26uc&x=id%3Dapdfllckaahabafndbhieahigkjlhalf%26v%3D6.4%26uc&x=id%3Dblpcfgokakmgnkcojhhkbfbldkacnbeo%26v%3D4.2.7%26uc&x=id%3Dcoobgpohoikkiipiblmjeljniedjpjpf%26v%3D0.0.0.30%26uc&x=id%3Dnmmhkkegccagdldgiimedpiccmgmieda%26v%3D0.1.0.0%26uc&x=id%3Dpjkljhegncpnkpknbcohdijeoejaedia%26v%3D8.1%26uc
+Total=2
+SnapshotXmlFile=snapshot_10.xml
+RequestHeaderFile=t10_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t10_ResponseHeader.txt
+FileName2=t10_mer_login.gif
+URL2=http://127.0.0.1:1080/WebTours/images/mer_login.gif
+ContentType=image/gif
+[ProtocolInfo]
+ProtocolId=QTWeb
