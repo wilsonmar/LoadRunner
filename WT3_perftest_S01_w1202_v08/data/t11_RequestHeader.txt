@@ -1,9 +1,0 @@
-POST /chromewebstore/v1.1/items/verify HTTP/1.1
-Host: www.googleapis.com
-Connection: keep-alive
-Content-Length: 119
-Content-Type: application/json
-User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36
-Accept-Encoding: gzip, deflate
-Accept-Language: en-US,en;q=0.8
-
