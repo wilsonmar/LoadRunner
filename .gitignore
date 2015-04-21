@@ -29,7 +29,6 @@ logfile.log
 mdrv_cmd.txt
 options.txt
 pre_cci.c
- 
 
 # Files created during editing in VuGen:
 Breakpoints.xml
@@ -38,6 +37,7 @@ Bookmarks.xml
 
 
 # Files created during script replay (definitely don't need these)
+*.idx
 result[1234567890]*/
 mdrv.log
 # output.txt - keep to show it working on local VuGen.
