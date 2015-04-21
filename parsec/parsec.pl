@@ -58,35 +58,30 @@ if (! $file_out){
     print ">>> No output file specified.\n";
 }
 
-#START : Fetching input filename ## Aakash
-
 my ($name,$path,$suffix) = fileparse($file_in,qr"\..[^.]*$");
 	$input_filename= $name;
 	#print $name
-
-($name,$path,$suffix) = fileparse($file_out,qr"\..[^.]*$");
+   ($name,$path,$suffix) = fileparse($file_out,qr"\..[^.]*$");
 	$output_filename= $name.$suffix;
 	#print $name
-#END
+$file_out = $input_filename. '.c.prased.' .$logging_time . '.txt';
 
-$file_out = 'tmp'.$logging_time . '.txt'; # Added by Aakash
-
-#$file_temp = $file_in . '_' . $logging_time . '.c.txt';  ## commented by Aakash No Need for this
-	  
 open(my $f_in, '<:encoding(UTF-8)', $file_in) or die ">>> Could not open file '$file_in': $!";
 open(my $f_out, '>', $file_out) or die ">>> Could not open '$file_out' for writing: $!";
 
 # Declare working flags:
 my $comment_needs_completion = 0; # 0=NO to begin loop.
 my $should_comment = 0; # Assuming no.
-my $web_reg_find = 0; # Assuming no.
+my $web_reg_found = 0; # Assuming no.
+my $start_trans_found = 0;
+my $end_trans_found = 0;
 
 while (my $row = <$f_in>) { # loop through lines:
     chomp $row;
 
     my $line_num = $.;
 
-    if( $line_num == 1){ # in first or 2nd line.
+    if( $line_num == 1){ # in first line.
         my $script_name = basename($0);
         if( $row =~ /$script_name/ ){
             print ">>> This file was already processed by $script_name.\n";
@@ -97,7 +92,7 @@ while (my $row = <$f_in>) { # loop through lines:
         }
     }
 
-    # If previous row did not complete a multi-line phrase:
+    ##### Before row processing: See if previous row completed a multi-line phrase:
     if( $line_num == $comment_needs_completion ){ 
  #       print $f_out "A: comment_needs_completion = $comment_needs_completion & should_comment = $should_comment\n";
         $should_comment = 1; # 1=Yes, comment this line out.
@@ -108,17 +103,29 @@ while (my $row = <$f_in>) { # loop through lines:
        }
     }
 
-	if( $row =~ /lr_think_time\(/){ # TODO: substitute rather than replace to retain number in function.
+	##### Current row pre-processing:
+ 	if( $row =~ /lr_think_time\(/){ # (rather than substitute think time number in function.)
         $should_comment = 1; # 1=Yes, comment this line out.
 		# lr_think_time(32); not needed because it's handled within wi_start_transaction(); 
- 	}elsif( $row =~ /web_reg_find\(/){ # response check logic encountered.
-		$web_reg_find = 1;
+ 
+	}elsif( $row =~ /web_reg_find\(/){ # response check condition encountered.
+		$web_reg_found = 1;
+
 	}elsif( $row =~ /web_url\(/){ # web_url() encountered.
-		if( $web_reg_find == 0 ){ # add a line if a web_reg_find was not generated.
-			print $f_out "\t// web_reg_find(\"Text=???\",LAST);\n";
+		# TODO: Add OR others - web_submit(, web_custom_submit, etc.
+
+		if( $web_reg_found == 0 ){ # add a line if a web_reg_find was not generated.
+			print $f_out "\t// web_reg_find(\"Text=???\",LAST); // TODO: Specify unique text to verify.\n";
+			$web_reg_found = 1;
+ 		}
+		
+		if( $start_trans_found == 0 ){ # add a line if a lr_start_transaction() was not generated.
+			print $f_out "\twi_start_transaction(); // TODO: Specify transaction name in {pTransName}.\n";
+			$start_trans_found = 1;
  		}
 	}
 
+	
     if( $should_comment == 1 ){ 
         print $f_out "\t// $row\n";
         $should_comment = 0;
@@ -134,31 +141,38 @@ while (my $row = <$f_in>) { # loop through lines:
  
 	}elsif( $row =~ /lr_start_transaction\(/){
         $should_comment = 0; 
- 		
+ 		$start_trans_found = 1;
+
 		# TODO: Extract out transaction name field:
         print $f_out "\twi_start_transaction(); // in wi_functions.c\n";
 
 	}elsif( $row =~ /lr_end_transaction\(/){
         print $f_out "\twi_end_transaction(); // in wi_functions.c\n";
+		$end_trans_found = 1;
+		# TODO: Add end_transaction after request if $end_trans_found = 0;
 
 	}else{
         print $f_out "$row\n"; # all other lines print out as is.
     }
+	
+	##### After line processing:
+	if( $end_trans_found == 0 ){ # add a line if a lr_start_transaction() was not generated.
+			print $f_out "\t// wi_end_transaction(); // in wi_functions.c\n";
+			$end_trans_found = 1;
+ 		}
+
     
 }# while loop through lines. 
 
 close $f_in;
 close $f_out;
-
 if( $file_switch eq 'y' ){ 
 	# Switch file names so the processed file is changed, with original file renamed:
 	rename $file_in,  $logging_time.'.txt'  || die ( "Error in renaming input file to .txt file" );
     rename $file_out, $input_filename.'.c' || die ( "Error in renaming output file to .c file" );
 }
-# END
 
-print ">>> $0 done from $file_in to $output_filename\n";
-
+print ">>> $0 done from $file_in to $output_filename.\n";
 
 sub getLoggingTime {
 	#START : to add UTC time and return a date time string for filename.
@@ -167,4 +181,4 @@ sub getLoggingTime {
 	my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst)  = gmtime();
 	my $nice_timestamp = sprintf("%04d%02d%02dT%02d%02d",$year+$START_YEAR,$mon+1,$mday,$hour + $UTC_OFFSET_HOUR,$min);
 	return $nice_timestamp;
-}
+}#sub getLoggingTime

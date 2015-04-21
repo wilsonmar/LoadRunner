@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Date: Thu, 09 Apr 2015 17:55:42 GMT
+Expires: Thu, 09 Apr 2015 17:55:42 GMT
+Cache-Control: private, max-age=5184000
+Vary: Cookie
+Content-Type: text/plain; charset=UTF-8
+Content-Encoding: gzip
+Server: gws
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Alternate-Protocol: 443:quic,p=0.5
+Transfer-Encoding: chunked
+
