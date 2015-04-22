@@ -25,8 +25,8 @@ WT3_Travel(){ // call from within Action.c.
 		||  stricmp("Search",LPCSTR_UseCase ) == FOUND
 		||  stricmp("Book",LPCSTR_UseCase ) == FOUND
    		){
-			lr_save_string("WT3_T23_Travel_Flight_Lookup","pTransName");
-			web_reg_find("Text=Flight departing from", "Fail=NotFound", LAST);
+			lr_save_string("WT3_T22_Travel_Search_Flight","pTransName");
+			web_reg_find("Text=Find Flight", "Fail=NotFound", LAST);
 			rc=WT3_T22_Travel_Search_Flight();
 			if( rc != LR_PASS ){ return rc; }
 
@@ -40,9 +40,14 @@ WT3_Travel(){ // call from within Action.c.
 		if( stricmp("All",LPCSTR_UseCase ) == FOUND
 		||  stricmp("Book",LPCSTR_UseCase ) == FOUND
    		){
-		// rc=WT3_T24_Travel_Payment_Details();
+		
+			lr_save_string("WT3_T24_Travel_Payment_Details","pTransName");
+			web_reg_find("Text=Payment Details", "Fail=NotFound", LAST);
+			 rc=WT3_T24_Travel_Payment_Details();
 			if( rc != LR_PASS ){ return rc; }
-
+			
+			lr_save_string("WT3_T25_Travel_Invoice","pTransName");
+			web_reg_find("Text=Payment Details", "Fail=NotFound", LAST);
 			// rc=WT3_T25_Travel_Invoice();
 			if( rc != LR_PASS ){ return rc; }
 
@@ -67,14 +72,16 @@ WT3_Travel(){ // call from within Action.c.
 		||  stricmp("Itinerary",LPCSTR_UseCase ) == FOUND
    		){
 			lr_save_string("WT3_T31_Travel_Check_Itinerary","pTransName");
-			web_reg_find("Text=Flight departing from", "Fail=NotFound", LAST);
+			web_reg_find("Text=Itinerary", "Fail=NotFound", LAST);
 			rc=WT3_T31_Travel_Check_Itinerary();			
 			if( rc != LR_PASS ){ return rc; }
 
 			lr_save_string("WT3_T22_Travel_Search_Flight","pTransName");
-			web_reg_find("Text=Flight departing from", "Fail=NotFound", LAST);
+			web_reg_find("Text=Find Flight", "Fail=NotFound", LAST);
 			rc=WT3_T22_Travel_Search_Flight();
 			if( rc != LR_PASS ){ return rc; }
+			
+			
 		}
 	
 		if( stricmp("All",LPCSTR_UseCase ) == FOUND
@@ -120,9 +127,8 @@ WT3_T22_Travel_Search_Flight(){
 	
 WT3_T23_Travel_Flight_Lookup(){
 	int rc=LR_PASS;
-
-	web_reg_find("Text=Flight departing from", 
-		LAST);
+//TODO: WT3_T23_Travel_Flight_Lookup Add Airport starting and endeing route in this function.
+	web_reg_find("Text=Flight departing from",LAST);
 	wi_start_transaction();
 	web_submit_form("reservations.pl", 
 		"Snapshot=t34.inf", 
