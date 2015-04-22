@@ -80,7 +80,7 @@ vuser_end=cci
 [TransactionsOrder]
 Order="WT3_T25_Travel_Invoice__*delimiter*__T30_Invoice2__*delimiter*__continue__*delimiter*__signoff__*delimiter*__Invoke_URL__*delimiter*__LogIn__*delimiter*__T21_Home__*delimiter*__T22_Search_Flight__*delimiter*__T23_ Flight_Lookup__*delimiter*__T24_ Payment_Details__*delimiter*__T25_Invoice__*delimiter*__T26_ Click_Book Another __*delimiter*__T27_Search_Flight2__*delimiter*__T28_ Flight_Lookup2__*delimiter*__T29_ Payment_Details2__*delimiter*__T30_Invoice2__*delimiter*__T31_Check_Itinerary__*delimiter*__LogOff"
 [StateManagement]
-LastReplayStatus=1
+LastReplayStatus=2
 [ActiveReplay]
 LastReplayedRunName=result1
 ActiveRunName=result1

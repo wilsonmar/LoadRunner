@@ -1,5 +1,5 @@
 WT3_Travel(){ // call from within Action.c.
-	int rc=LR_PASS;
+	int rc=LR_PASS; int i=0;
 
 	// WT3_T21_Travel_Home()
 	// WT3_T22_Travel_Search_Flight()
@@ -29,6 +29,14 @@ WT3_Travel(){ // call from within Action.c.
 			web_reg_find("Text=Find Flight", "Fail=NotFound", LAST);
 			rc=WT3_T22_Travel_Search_Flight();
 			if( rc != LR_PASS ){ return rc; }
+		}
+
+		if( stricmp("Search",LPCSTR_UseCase ) == FOUND
+   		){
+			lr_save_string("WT3_T22_Travel_Search_Flight","pTransName");
+			web_reg_find("Text=Find Flight", "Fail=NotFound", LAST);
+			rc=WT3_T22_Travel_Search_Flight();
+			if( rc != LR_PASS ){ return rc; }
 
 			lr_save_string("WT3_T23_Travel_Flight_Lookup","pTransName");
 			web_reg_find("Text=Flight departing from", "Fail=NotFound", LAST);
@@ -40,19 +48,22 @@ WT3_Travel(){ // call from within Action.c.
 		if( stricmp("All",LPCSTR_UseCase ) == FOUND
 		||  stricmp("Book",LPCSTR_UseCase ) == FOUND
    		){
-		
+
+		for(i=1; i<2; i++){ // 1,2,3 (3 times)
+			
 			lr_save_string("WT3_T24_Travel_Payment_Details","pTransName");
 			web_reg_find("Text=Payment Details", "Fail=NotFound", LAST);
 			 rc=WT3_T24_Travel_Payment_Details();
 			if( rc != LR_PASS ){ return rc; }
 			
-			lr_save_string("WT3_T25_Travel_Invoice","pTransName");
-			web_reg_find("Text=Payment Details", "Fail=NotFound", LAST);
-			// rc=WT3_T25_Travel_Invoice();
-			if( rc != LR_PASS ){ return rc; }
+			//	rc=WT3_T25_Travel_Invoice(); // does not send data to server.
 
-			// rc=WT3_T26_Travel_Click_Book_Another();
+			lr_save_string("WT3_T26_Travel_Click_Book_Another","pTransName");
+			web_reg_find("Text=Find Flight", "Fail=NotFound", LAST);
+			rc=WT3_T26_Travel_Click_Book_Another();
 			if( rc != LR_PASS ){ return rc; }
+			
+		} // for(i=1; i<2; i++){ // 1,2,3 (3 times)
 
 			// rc=WT3_T27_Travel_Search_Flight2();
 			if( rc != LR_PASS ){ return rc; }

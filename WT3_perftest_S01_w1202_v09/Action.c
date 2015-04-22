@@ -31,8 +31,9 @@ Action()
 	if( stricmp("SignUpErr",LPCSTR_RunType ) == FOUND 
 	){ // Signing up a known user already defined:
 
+		// Try to sign up a known existing (built-in) userid and password:
 			lr_save_string("jojo","parm_userid");
-			lr_save_string("bean","parm_pwd");
+			lr_save_string("bean","parm_pwd"); 
 			
 			lr_save_string("WT3_T04_SignUp_Err","pTransName");
 	 		rc=T04_SignUp_Err();

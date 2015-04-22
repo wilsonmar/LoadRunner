@@ -31,7 +31,7 @@ MercIniTreeFather="RunLogicErrorHandlerRoot"
 RunLogicActionType="VuserErrorHandler"
 [Profile Actions]
 MercIniTreeSectionName="Profile Actions"
-Profile Actions name=vuser_init,Action,goggle_apis,Recording,vuser_end
+Profile Actions name=vuser_init,Action,goggle_apis,vuser_end
 MercIniTreeFather=""
 [RunLogicRunRoot]
 RunLogicRandomPaceMin="60.000"

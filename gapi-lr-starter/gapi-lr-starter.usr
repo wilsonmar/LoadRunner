@@ -23,7 +23,6 @@ Description=
 vuser_init=vuser_init.c
 Action=Action.c
 goggle_apis=goggle_apis.c
-Recording=Recording.c
 vuser_end=vuser_end.c
 [RunLogicFiles]
 Default Profile=default.usp
@@ -32,42 +31,32 @@ Profiles=Default Profile
 [CfgFiles]
 Default Profile=default.cfg
 [ExtraFiles]
-AsyncCallbacks.c=
 globals.h=
 [Modified Actions]
 vuser_init=1
 Action=1
 goggle_apis=1
-Recording=1
 vuser_end=1
 [Recorded Actions]
 vuser_init=0
 Action=0
 goggle_apis=0
-Recording=1
 vuser_end=0
 [Replayed Actions]
 vuser_init=1
 Action=1
 goggle_apis=1
-Recording=1
 vuser_end=1
 [Interpreters]
 vuser_init=cci
 Action=cci
 goggle_apis=cci
-Recording=cci
 vuser_end=cci
 [TransactionsOrder]
-Order="long to short__*delimiter*__short to qr"
+Order=
 [StateManagement]
 LastReplayStatus=1
 [ActiveReplay]
 LastReplayedRunName=result1
 ActiveRunName=result1
 ActiveIterationName=Iteration1
-[Transactions]
-"long to short"=
-"short to qr"=
-[ExtraFilesToParse]
-AsyncCallbacks.c=

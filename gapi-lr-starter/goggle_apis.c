@@ -14,7 +14,6 @@
 *		get_google_short_url_qrcode()
 *			set_gen_QR_attribute()
 *	get_long_url_from_short_url()
-*	get_gapi_url_hit_list()
 *
 * This script needs these globals defined at the top of vuser_init file :
 	LPCSTR			LPCSTR_URLSource; // 1=local .dat file, 2=VTS, 3=Google spreadsheet online?, 4=MySQL?.
@@ -27,8 +26,7 @@
 	int				nURLtoShorten_done; // counter of rows processed.
 */
 	
-goggle_apis()
-{	
+goggle_apis(){ // Function needed to	
 	return 0;
 }
 
@@ -39,14 +37,14 @@ get_google_short_url(){
 	// Forum on this:   https://groups.google.com/forum/#!forum/google-url-shortener
 
 	int rc=LR_PASS;
-	int	bURLtoShorten_success=LR_FAIL;
+	int	bURLtoShorten_success=LR_PASS;
 
 	rc=get_long_url_to_shorten();
 	if( rc != LR_PASS ){ return rc; } // No input data to process.
 	
 	// Define the URL Shortener API Scope to Google:
 	lr_save_string("https://www.googleapis.com/auth/urlshortener","pServiceScope");
-		// Other Google API FAQ scopes: https://developers.google.com/gdata/faq#AuthScopes
+					// Other Google API FAQ scopes: https://developers.google.com/gdata/faq#AuthScopes
 
 	sprintf(       tempString1, "%s_access", lr_eval_string("{pTransSequence}") );
 	lr_save_string(tempString1,"pTransName");
@@ -88,7 +86,8 @@ get_google_short_url(){
 		//		"longUrl": "http://www.hp.com/"\n
 		//	}
 
-	  	    rc = wi_end_transaction();
+		rc = wi_end_transaction();
+
 		if( rc == LR_PASS ){
 			bURLtoShorten_success=LR_PASS;
 			nURLtoShorten_done++; // increment.
@@ -108,8 +107,25 @@ get_google_short_url(){
 	update_shorturl_in_VTS();
 	#endif // USE_VTS
 
+	#ifdef GEN_QR
+	if( bURLtoShorten_success == LR_PASS ){
+		// TODO: 19. Customize your own transaction name for calling get_google_short_url_qrcode().
+		lr_save_string("get_google_short_url_qrcode","pTransName"); 
+		get_google_short_url_qrcode(); // using pShortURL and pImageFilePath, depending on command flag LPCSTR_SaveImageYN.
+	}
+	#endif // GEN_QR
+
 	return rc;
 } // get_google_short_url()
+
+get_long_url_from_short_url(){
+	int rc=LR_PASS;
+	int i=0;
+	
+	// FIXME: Re
+	
+	return rc;
+} // get_long_url_from_short_url()
 
 get_long_url_to_shorten(){
 	int rc=LR_PASS;
@@ -155,7 +171,7 @@ get_long_url_to_shorten(){
 					// unless this is the last row in the table:
 					if( i == nVTS_row_count ){
 						wi_startPrintingTrace();
-						lr_output_message(">> Last row at %d has a shorturl of \"%s\". No more to process.", i, shorturl);
+						lr_output_message(">> Last row at %d has a shorturl of \"%s\". So no more to process.", i, shorturl);
 						wi_stopPrinting();
 						vtc_free(shorturl);
 						rc = LR_FAIL;
@@ -317,8 +333,7 @@ get_pJWTAssertion(){
 
     // Google returns "invalid_grant" 400 error response if the previous token has not expired yet.
     // So loop is needed to re-use tokens until its expiration:
-             //lr_param_sprintf("pTimeNow","%d",time(0)); // where time(0) generates 10-digits.
-   	          lr_save_timestamp("pTimeNow","DIGITS=10",LAST);
+    lr_param_sprintf("pTimeNow","%d",time(0)); // where time(0) generates 10-digits.
     if( strcmp( lr_eval_string("{pTimeNow}"), lr_eval_string("{pTimeExpire}")) < 0 ){
     	wi_startPrintingTrace();
     	// Re-use assertion saved for use instead of running get_pJWTAssertion() again now.
@@ -433,6 +448,7 @@ get_google_short_url_qrcode(){
     	
 		// WARNING: The 150x150 in this URL may change over time as more characters are needed for uniqueness.
 		// Previously,  100x100 was being returned:
+		//    "URL={pShortURL}.qr",
 		web_url("imagefile",
 	        "URL=http://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=H&chl={pShortURL}",
 	        "Resource=1",
@@ -457,9 +473,7 @@ get_google_short_url_qrcode(){
 		lr_eval_string_ext("{pImage}", strlen("{pImage}"), &szBuf, &nLength, 0, 0, -1);
 		// lr_eval_string_ext( in_str, in_len,    pointer out_str, out_len, Reserved for future use. 
 		if( nLength <= 0 ){
-				wi_startPrintingError();
-				lr_output_message(">> No image returned for %s.",strFileName);
-				wi_stopPrinting();
+			lr_error_message(">> No image returned for %s.",strFileName);
 		}else{
 			if( wi_WriteDataToFile(strFileName, szBuf, nLength) == LR_PASS ){
 				wi_startPrintingInfo();
@@ -507,44 +521,5 @@ int set_gen_QR_attribute(){
 	return LR_PASS;
 } // set_gen_QR_attribute()
 #endif // GEN_QR
-
-
-get_long_url_from_short_url(){
-	int rc=LR_PASS;
-	int i=0;
-	
-	// This is like someone clicking the short link in a Twitter post.
-	// Such as http://goo.gl/SR00
-	web_url("SR00.info", 
-		"URL={pShortURL}", 
-		"Resource=0", 
-		"RecContentType=text/html", 
-		"Referer=", 
-		"Snapshot=t15.inf", 
-		"Mode=HTML", 
-		LAST);
-	
-	return rc;
-} // get_long_url_from_short_url()
-
-
-get_gapi_url_hit_list() {
-	int rc=LR_PASS;
-	int i=0;
-	
-	// Get list of statistics URLs (short and log) from goo.gl.
-	// The response is a large web page containing graphics
-	web_url("SR00.info", 
-		"URL={pShortURL}.info", 
-		"Resource=0", 
-		"RecContentType=text/html", 
-		"Referer=", 
-		"Snapshot=t15.inf", 
-		"Mode=HTML", 
-		LAST);
-	
-	return rc;
-} // get_gapi_url_hit_list
-
 
 // END OF FILE //
