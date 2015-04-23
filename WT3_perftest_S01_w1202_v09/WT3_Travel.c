@@ -1,6 +1,7 @@
 WT3_Travel(){ // call from within Action.c.
 	int rc=LR_PASS; int i=0;
 
+	// WT3_T20_Travel_Data()
 	// WT3_T21_Travel_Home()
 	// WT3_T22_Travel_Search_Flight()
 	// WT3_T23_Travel_Flight_Lookup()
@@ -8,33 +9,27 @@ WT3_Travel(){ // call from within Action.c.
 	// WT3_T25_Travel_Payment_Details()
 	// WT3_T26_Travel_Invoice()
 	// WT3_T27_Travel_Click_Book_Another()
-	// WT3_T28_Travel_Search_Flight2()
-	// WT3_T29_Travel_Flight_Lookup2()
-	// WT3_T30_Find_Flight2()
-	// WT3_T31_Travel_Payment_Details2()
-	// WT3_T32_Travel_Invoice2()
 	// WT3_T33_Travel_Check_Itinerary()
-	
-	lr_save_datetime("%m/%d/%Y", DATE_NOW   ,"slashed_mmddyy_today"); // 04/14/2015 format
-	lr_save_datetime("%m/%d/%Y", DATE_NOW +1,"slashed_mmddyy_tomorow");
+
+	WT3_T20_Travel_Data();
 	
 	// Search UseCase
 	// Book UseCase
 	// Itinerary UseCase
 	// No check-in UseCase
 	
-		if( stricmp("All",LPCSTR_UseCase ) == FOUND
-		||  stricmp("Search",LPCSTR_UseCase ) == FOUND
-		||  stricmp("Book",LPCSTR_UseCase ) == FOUND
-   		){
+	if( stricmp("All",LPCSTR_UseCase ) == FOUND
+	||  stricmp("Search",LPCSTR_UseCase ) == FOUND
+	||  stricmp("Book",LPCSTR_UseCase ) == FOUND
+	){
 			lr_save_string("WT3_T22_Travel_Search_Flight","pTransName");
 			web_reg_find("Text=Find Flight", "Fail=NotFound", LAST);
 			rc=WT3_T22_Travel_Search_Flight();
 			if( rc != LR_PASS ){ return rc; }
-		}
+	}
 
-		if( stricmp("Search",LPCSTR_UseCase ) == FOUND
-   		){
+	if( stricmp("Search",LPCSTR_UseCase ) == FOUND
+	){
 		
 			//lr_save_string("WT3_T22_Travel_Search_Flight","pTransName");
 			//web_reg_find("Text=Find Flight", "Fail=NotFound", LAST);
@@ -53,10 +48,12 @@ WT3_Travel(){ // call from within Action.c.
 			if( rc != LR_PASS ){ return rc; }
 		}
 
-		if( stricmp("All",LPCSTR_UseCase ) == FOUND
-		||  stricmp("Book",LPCSTR_UseCase ) == FOUND
-   		){
+	if( stricmp("All",LPCSTR_UseCase ) == FOUND
+	||  stricmp("Book",LPCSTR_UseCase ) == FOUND
+	){
 
+		// TODO: Loop through several flights before checkout.
+		
 		for(i=1; i<2; i++){ // 1,2,3 (3 times)
 			
 			lr_save_string("WT3_T23_Travel_Flight_Lookup","pTransName");
@@ -80,24 +77,10 @@ WT3_Travel(){ // call from within Action.c.
 			web_reg_find("Text=Find Flight", "Fail=NotFound", LAST);
 			rc=WT3_T27_Travel_Click_Book_Another();
 			if( rc != LR_PASS ){ return rc; }
-					
-		}//for(i=1; i<2; i++){ // 1,2,3 (3 times)
-
-			// rc=WT3_T28_Travel_Search_Flight2();
-			if( rc != LR_PASS ){ return rc; }
-
-			// rc=WT3_T29_Travel_Flight_Lookup2();
-			if( rc != LR_PASS ){ return rc; }
-
-			//rc=WT3_T30_Find_Flight2()
-			if( rc != LR_PASS ){ return rc; }
 				
-			// rc=WT3_T31_Travel_Payment_Details2();
-			if( rc != LR_PASS ){ return rc; }
-
-			// rc=WT3_T32_Travel_Invoice2();
-			if( rc != LR_PASS ){ return rc; }
-		}
+		}//for(i=1; i<2; i++){ // 1,2,3 (3 times)
+	}
+		
 		if( stricmp("All",LPCSTR_UseCase ) == FOUND
 		||  stricmp("Book",LPCSTR_UseCase ) == FOUND
 		||  stricmp("Itinerary",LPCSTR_UseCase ) == FOUND
@@ -106,16 +89,8 @@ WT3_Travel(){ // call from within Action.c.
 			web_reg_find("Text=Itinerary", "Fail=NotFound", LAST);
 			rc=WT3_T33_Travel_Check_Itinerary();			
 			if( rc != LR_PASS ){ return rc; }
-}
-	
-    { 
-		//lr_save_string("WT3_T22_Travel_Search_Flight","pTransName");
-		//web_reg_find("Text=Find Flight", "Fail=NotFound", LAST);
-		//rc=WT3_T22_Travel_Search_Flight();
-		//if( rc != LR_PASS ){ return rc; }
-		
-	}
-			
+		}
+				
 		if( stricmp("All",LPCSTR_UseCase ) == FOUND
 		||  stricmp("Home",LPCSTR_UseCase ) == FOUND
    		){
@@ -124,7 +99,18 @@ WT3_Travel(){ // call from within Action.c.
 			rc=WT3_T21_Travel_Home();
 			if( rc != LR_PASS ){ return rc; }
 		}
+	
 	return rc;
+}
+
+WT3_T20_Travel_Data(){
+	
+	lr_save_datetime("%m/%d/%Y", DATE_NOW   ,"parm_departDate"); // 04/14/2015 format
+	lr_save_datetime("%m/%d/%Y", DATE_NOW +7,"parm_returnDate");
+	
+	// TODO: Vary departCity and returnCity each sub-iteration.
+
+	return 0;
 }
 
 WT3_T21_Travel_Home(){
@@ -154,15 +140,15 @@ int rc=LR_PASS;
 WT3_T23_Travel_Flight_Lookup(){
 int rc=LR_PASS;
 //TODO: WT3_T23_Travel_Flight_Lookup Add Airport starting and endeing route in this function.
-	web_reg_find("Text=Flight departing from",LAST);
+//	web_reg_find("Text=Flight departing from",LAST);
 	  wi_start_transaction();
 	web_submit_form("reservations.pl",
 		"Snapshot=t34.inf",
 		ITEMDATA,
 		"Name=depart", "Value=Denver", ENDITEM,
-		"Name=departDate", "Value={slashed_mmddyy_today}", ENDITEM,
+		"Name=departDate", "Value={parm_departDate}", ENDITEM,
 		"Name=arrive", "Value=Los Angeles", ENDITEM,
-		"Name=returnDate", "Value={slashed_mmddyy_tomorrow}", ENDITEM,
+		"Name=returnDate", "Value={parm_returnDate}", ENDITEM,
 		"Name=numPassengers", "Value=1", ENDITEM,
 		"Name=roundtrip", "Value=<OFF>", ENDITEM,
 		"Name=seatPref", "Value=None", ENDITEM,
@@ -181,7 +167,7 @@ int rc=LR_PASS;
 	web_submit_form("reservations.pl_2", 
 		"Snapshot=t35.inf", 
 		ITEMDATA, 
-		"Name=outboundFlight", "Value=030;251;{slashed_mmddyy_today}", ENDITEM, 
+		"Name=outboundFlight", "Value=030;251;{parm_departDate}", ENDITEM, 
 		"Name=reserveFlights.x", "Value=46", ENDITEM, 
 		"Name=reserveFlights.y", "Value=11", ENDITEM, 
 		LAST);
@@ -202,8 +188,8 @@ WT3_T25_Travel_Payment_Details(){
 		"Name=address1", "Value=whatever", ENDITEM, 
 		"Name=address2", "Value=whatever", ENDITEM, 
 		"Name=pass1", "Value=whatever whatever", ENDITEM, 
-		"Name=creditCard", "Value=", ENDITEM, 
-		"Name=expDate", "Value=", ENDITEM, 
+		"Name=creditCard", "Value=12345678", ENDITEM, 
+		"Name=expDate", "Value=15/16", ENDITEM, 
 		"Name=saveCC", "Value=<OFF>", ENDITEM, 
 		"Name=buyFlights.x", "Value=41", ENDITEM, 
 		"Name=buyFlights.y", "Value=9", ENDITEM, 
@@ -236,88 +222,6 @@ WT3_T27_Travel_Click_Book_Another(){
 	rc=wi_end_transaction();
 	return rc;
 	} //WT3_T27_Travel_Click_Book_Another
-	
-WT3_T28_Travel_Search_Flight2(){
-	int rc=LR_PASS;
-	web_reg_find("Text=Find Flight",LAST);
-	  wi_start_transaction();
-	web_image("Search Flights Button_2", 
-		"Alt=Search Flights Button", 
-		"Snapshot=t38.inf", 
-		LAST);
-	 rc=wi_end_transaction();
-return rc;
-} //T28_Travel_Search_Flight2
-	
-WT3_T29_Travel_Flight_Lookup2(){
-	int rc=LR_PASS;		
-	web_reg_find("Text=Flight departing from", LAST);
-	   wi_start_transaction();
-	web_submit_form("reservations.pl_5", 
-		"Snapshot=t39.inf", 
-		ITEMDATA, 
-		"Name=depart", "Value=Denver", ENDITEM, 
-		"Name=departDate", "Value={slashed_mmddyy_today}", ENDITEM, 
-		"Name=arrive", "Value=Portland", ENDITEM, 
-		"Name=returnDate", "Value={slashed_mmddyy_tomorrow}", ENDITEM, 
-		"Name=numPassengers", "Value=1", ENDITEM, 
-		"Name=roundtrip", "Value=<OFF>", ENDITEM, 
-		"Name=seatPref", "Value=None", ENDITEM, 
-		"Name=seatType", "Value=Coach", ENDITEM, 
-		"Name=findFlights.x", "Value=18", ENDITEM, 
-		"Name=findFlights.y", "Value=10", ENDITEM, 
-		LAST);
-	   rc=wi_end_transaction();
-	return rc;
-} //T29_Travel_Flight_Lookup2
-
-WT3_T30_Find_Flight(){
-	int rc=LR_PASS;	
-	
-	web_reg_find("Text=Payment Details",LAST);
-	   wi_start_transaction();
-	   web_submit_form("reservations.pl_6", 
-		"Snapshot=t40.inf", 
-		ITEMDATA, 
-		"Name=outboundFlight", "Value=050;275;{slashed_mmddyy_today}", ENDITEM, 
-		"Name=reserveFlights.x", "Value=64", ENDITEM, 
-		"Name=reserveFlights.y", "Value=6", ENDITEM, 
-		LAST);
-	  rc=wi_end_transaction();
-	return rc;
-} //WT3_T30_Find_Flight2	
-	
-WT3_T31_Travel_Payment_Details2(){
-	int rc=LR_PASS;
-	web_reg_find("Text=Thank you for booking",LAST);
-	    wi_start_transaction();
-	web_submit_form("reservations.pl_7", 
-		"Snapshot=t41.inf", 
-		ITEMDATA, 
-		"Name=firstName", "Value=whatever", ENDITEM, 
-		"Name=lastName", "Value=whatever", ENDITEM, 
-		"Name=address1", "Value=whatever", ENDITEM, 
-		"Name=address2", "Value=whatever", ENDITEM, 
-		"Name=pass1", "Value=whatever whatever", ENDITEM, 
-		"Name=creditCard", "Value=12345678", ENDITEM, 
-		"Name=expDate", "Value=15/16", ENDITEM, 
-		"Name=saveCC", "Value=<OFF>", ENDITEM, 
-		"Name=buyFlights.x", "Value=34", ENDITEM, 
-		"Name=buyFlights.y", "Value=6", ENDITEM, 
-		LAST);
-	   rc=wi_end_transaction();
-	return rc;
-	} //WT3_T31_Travel_Payment_Details2
-	
-WT3_T32_Travel_Invoice2(){
-	int rc=LR_PASS;
-	lr_start_transaction("T32_Invoice2");
-
-	// Clicking on Invoice does not cause request to server.
-	
-	lr_end_transaction("T32_Invoice2",LR_AUTO);
-	return rc;
-} //WT3_T32_Travel_Invoice2
 	
 	
 WT3_T33_Travel_Check_Itinerary(){
