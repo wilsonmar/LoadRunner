@@ -166,7 +166,7 @@ Registry settings:
 		default	false
 	TestDir
 		(Default)	
-		default	C:\LR_Master1\WT3_SignInOut_w1202_v04\data\
+		default	C:\Users\Mainali\LoadRunner\WT3_perftest_S01_w1202_v09\data\
 	TrapOnClient
 		default	true
 	TrapOnMainThreadOnly

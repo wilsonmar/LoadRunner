@@ -86,7 +86,7 @@ Recording_Travel()
 
 	lr_end_transaction("T23_ Flight_Lookup",LR_AUTO);
 
-	lr_start_transaction("T24_ Payment_Details");
+	//lr_start_transaction("T24_ Payment_Details");
 
 	web_reg_find("Text=Payment Details", 
 		LAST);
