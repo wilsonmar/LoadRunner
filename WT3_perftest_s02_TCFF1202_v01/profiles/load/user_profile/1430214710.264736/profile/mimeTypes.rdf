@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="urn:root"
+                   NC:en-US_defaultHandlersVersion="4" />
+  <RDF:Seq RDF:about="urn:schemes:root">
+    <RDF:li RDF:resource="urn:scheme:webcal"/>
+  </RDF:Seq>
+  <RDF:Description RDF:about="urn:schemes">
+    <NC:Protocol-Schemes RDF:resource="urn:schemes:root"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="urn:scheme:webcal"
+                   NC:value="webcal">
+    <NC:handlerProp RDF:resource="urn:scheme:handler:webcal"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="urn:handler:web:https://30boxes.com/external/widget?refer=ff&amp;url=%s"
+                   NC:prettyName="30 Boxes"
+                   NC:uriTemplate="https://30boxes.com/external/widget?refer=ff&amp;url=%s" />
+  <RDF:Description RDF:about="urn:scheme:handler:webcal"
+                   NC:useSystemDefault="true"
+                   NC:alwaysAsk="false">
+    <NC:possibleApplication RDF:resource="urn:handler:web:https://30boxes.com/external/widget?refer=ff&amp;url=%s"/>
+  </RDF:Description>
+</RDF:RDF>

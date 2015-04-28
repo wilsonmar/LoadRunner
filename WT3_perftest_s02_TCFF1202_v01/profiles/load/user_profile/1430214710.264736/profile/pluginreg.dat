@@ -1,0 +1,25 @@
+Generated File. Do not edit.
+
+[HEADER]
+Version|0.17|$
+Arch|x86-msvc|$
+
+[PLUGINS]
+npgoogletalk.dll|$
+C:\Users\Mainali\AppData\Roaming\Mozilla\plugins\npgoogletalk.dll|$
+5.41.2.0|$
+1429304152000|0|0|0|$
+Version 5.41.2.0|$
+Google Talk Plugin|$
+1
+0|application/googletalk|Google voice and video chat|googletalk|$
+npo1d.dll|$
+C:\Users\Mainali\AppData\Roaming\Mozilla\plugins\npo1d.dll|$
+5.41.2.0|$
+1429304152000|0|0|0|$
+Version 5.41.2.0|$
+Google Talk Plugin Video Renderer|$
+1
+0|application/o1d|Google Talk Plugin Video Renderer|o1d|$
+
+[INVALID]
