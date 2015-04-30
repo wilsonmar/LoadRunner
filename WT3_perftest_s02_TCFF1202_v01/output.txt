@@ -1,14 +1,14 @@
-Virtual User Script started at : 2015-04-28 04:51:52
-TruClient Replay for LoadRunner 12.0.0, build 2739. OS: Windows 7, initialized on 2015/04/28 at 04:51:50 (0000.000s)
+Virtual User Script started at : 2015-04-30 03:32:49
+TruClient Replay for LoadRunner 12.0.0, build 2739. OS: Windows 7, initialized on 2015/04/30 at 03:32:46 (0000.000s)
 Starting action Init.
-t=00002091ms: ** 2: Evaluate JavaScript code // Log of run conditions....getUserIP );    ** started    [MsgId: MMSG-205180]
-t=00002092ms: document.lastModified=04/28/2015 04:51:51    [MsgId: MMSG-205180]
-t=00002092ms: >> LR.scriptDir=C:\LR_Master1\WT3_perftest_s02_TCFF1202_v01\\    [MsgId: MMSG-205180]
-t=00002092ms: >> LR.outputDir=C:\LR_Master1\WT3_perftest_s02_TCFF1202_v01\    [MsgId: MMSG-205180]
-t=00002093ms: >> LR.userId=-1    [MsgId: MMSG-205180]
-t=00002093ms: >> LR.scenarioId=0    [MsgId: MMSG-205180]
-t=00002094ms: >> LR.groupName=None    [MsgId: MMSG-205180]
-t=00002094ms: >> LR.getUserIP=function () { 
+t=00004039ms: ** 2: Evaluate JavaScript code // Log of run conditions....getUserIP );    ** started    [MsgId: MMSG-205180]
+t=00004040ms: document.lastModified=04/30/2015 03:32:50    [MsgId: MMSG-205180]
+t=00004040ms: >> LR.scriptDir=C:\Users\Mainali\LoadRunner\WT3_perftest_s02_TCFF1202_v01\\    [MsgId: MMSG-205180]
+t=00004041ms: >> LR.outputDir=C:\Users\Mainali\LoadRunner\WT3_perftest_s02_TCFF1202_v01\    [MsgId: MMSG-205180]
+t=00004041ms: >> LR.userId=-1    [MsgId: MMSG-205180]
+t=00004042ms: >> LR.scenarioId=0    [MsgId: MMSG-205180]
+t=00004043ms: >> LR.groupName=None    [MsgId: MMSG-205180]
+t=00004043ms: >> LR.getUserIP=function () { 
 			var args = Array.prototype.slice.call(arguments, 0), err; 
 			var errors = Schema.validate(args, schemas[funcName]); 
 			if (errors.length) { 
@@ -30,121 +30,143 @@ t=00002094ms: >> LR.getUserIP=function () {
 				throw err; 
 			} 
 		}    [MsgId: MMSG-205180]
-t=00002297ms: ** 2: Evaluate JavaScript code // Log of run conditions....getUserIP );    ** successfully completed    [MsgId: MMSG-205180]
-t=00002300ms: ** 3: Evaluate JavaScript code // document. items : // ...ocEmbeds ); //=  ** started    [MsgId: MMSG-205180]
-t=00002301ms: document.readyState=complete    [MsgId: MMSG-205180]
-t=00002301ms: document.referrer=    [MsgId: MMSG-205180]
-t=00002301ms: document.URL=about:blank    [MsgId: MMSG-205180]
-t=00002302ms: document.doctype=null    [MsgId: MMSG-205180]
-t=00002302ms: document.domain=null    [MsgId: MMSG-205180]
-t=00002304ms: document.documentURI=about:blank    [MsgId: MMSG-205180]
-t=00002318ms: document.cookie=    [MsgId: MMSG-205180]
-t=00002318ms: document.head=[object XrayWrapper [object HTMLHeadElement]]    [MsgId: MMSG-205180]
-t=00002318ms: document.anchors=[object XrayWrapper [object HTMLCollection]]    [MsgId: MMSG-205180]
-t=00002318ms: document.embeds=[object XrayWrapper [object HTMLCollection]]    [MsgId: MMSG-205180]
-t=00002535ms: ** 3: Evaluate JavaScript code // document. items : // ...ocEmbeds ); //=  ** successfully completed    [MsgId: MMSG-205180]
+t=00004246ms: ** 2: Evaluate JavaScript code // Log of run conditions....getUserIP );    ** successfully completed    [MsgId: MMSG-205180]
+t=00004248ms: ** 3: Evaluate JavaScript code // document. items : // ...ocEmbeds ); //=  ** started    [MsgId: MMSG-205180]
+t=00004249ms: document.readyState=complete    [MsgId: MMSG-205180]
+t=00004249ms: document.referrer=    [MsgId: MMSG-205180]
+t=00004250ms: document.URL=about:blank    [MsgId: MMSG-205180]
+t=00004250ms: document.doctype=null    [MsgId: MMSG-205180]
+t=00004250ms: document.domain=null    [MsgId: MMSG-205180]
+t=00004250ms: document.documentURI=about:blank    [MsgId: MMSG-205180]
+t=00004311ms: document.cookie=    [MsgId: MMSG-205180]
+t=00004311ms: document.head=[object XrayWrapper [object HTMLHeadElement]]    [MsgId: MMSG-205180]
+t=00004311ms: document.anchors=[object XrayWrapper [object HTMLCollection]]    [MsgId: MMSG-205180]
+t=00004311ms: document.embeds=[object XrayWrapper [object HTMLCollection]]    [MsgId: MMSG-205180]
+t=00004518ms: ** 3: Evaluate JavaScript code // document. items : // ...ocEmbeds ); //=  ** successfully completed    [MsgId: MMSG-205180]
 Ending action Init.
 Running Vuser...
 Starting iteration 1.
 Starting action Action.
 Notify: Transaction "T03_WT3_URL_Landing" started.
-t=00003063ms: ** 1: Navigate to "http://127.0.0.1:1080/WebTours/index.htm" ** started    [MsgId: MMSG-205180]
-t=00003611ms: ** 1: Navigate to "http://127.0.0.1:1080/WebTours/index.htm" ** successfully completed    [MsgId: MMSG-205180]
-Notify: Transaction "T03_WT3_URL_Landing" ended with a "Pass" status (Duration: 0.5540 Wasted Time: 0.2120).
+t=00005031ms: ** 1: Navigate to "http://127.0.0.1:1080/WebTours/index.htm" ** started    [MsgId: MMSG-205180]
+t=00005491ms: ** 1: Navigate to "http://127.0.0.1:1080/WebTours/index.htm" ** successfully completed    [MsgId: MMSG-205180]
+Notify: Transaction "T03_WT3_URL_Landing" ended with a "Pass" status (Duration: 0.4600 Wasted Time: 0.2010).
+t=00005507ms: ** 2: Verify sign up now's "Visible Text" Contain sign up now ** started    [MsgId: MMSG-205180]
+t=00005756ms: ** 2: Verify sign up now's "Visible Text" Contain sign up now ** successfully completed    [MsgId: MMSG-205180]
 Notify: Transaction "T04_WT3_SignUp_Error" started.
-t=00004125ms: ** 2: Click on sign up now link ** started    [MsgId: MMSG-205180]
-t=00004504ms: ** 2: Click on sign up now link ** successfully completed    [MsgId: MMSG-205180]
-t=00005042ms: ** 3: Click on Username  textbox ** started    [MsgId: MMSG-205180]
-t=00005275ms: ** 3: Click on Username  textbox ** successfully completed    [MsgId: MMSG-205180]
-t=00005821ms: ** 4: Type jojo in Username  textbox ** started    [MsgId: MMSG-205180]
-t=00007603ms: ** 4: Type jojo in Username  textbox ** successfully completed    [MsgId: MMSG-205180]
-t=00008143ms: ** 5: Type **** in Password  passwordbox ** started    [MsgId: MMSG-205180]
-t=00009803ms: ** 5: Type **** in Password  passwordbox ** successfully completed    [MsgId: MMSG-205180]
-t=00010348ms: ** 6: Type **** in Confirm  passwordbox ** started    [MsgId: MMSG-205180]
-t=00012505ms: ** 6: Type **** in Confirm  passwordbox ** successfully completed    [MsgId: MMSG-205180]
-t=00013016ms: ** 7: Click on register button ** started    [MsgId: MMSG-205180]
-t=00013572ms: ** 7: Click on register button ** successfully completed    [MsgId: MMSG-205180]
-Notify: Transaction "T04_WT3_SignUp_Error" ended with a "Pass" status (Duration: 9.4460 Wasted Time: 3.7790).
+t=00006259ms: ** 3: Click on sign up now link ** started    [MsgId: MMSG-205180]
+t=00006550ms: ** 3: Click on sign up now link ** successfully completed    [MsgId: MMSG-205180]
+t=00007076ms: ** 4: Click on Username  textbox ** started    [MsgId: MMSG-205180]
+t=00007304ms: ** 4: Click on Username  textbox ** successfully completed    [MsgId: MMSG-205180]
+t=00007827ms: ** 5: Type jojo in Username  textbox ** started    [MsgId: MMSG-205180]
+t=00009040ms: ** 5: Type jojo in Username  textbox ** successfully completed    [MsgId: MMSG-205180]
+t=00009567ms: ** 6: Type **** in Password  passwordbox ** started    [MsgId: MMSG-205180]
+t=00011070ms: ** 6: Type **** in Password  passwordbox ** successfully completed    [MsgId: MMSG-205180]
+t=00011579ms: ** 7: Type **** in Confirm  passwordbox ** started    [MsgId: MMSG-205180]
+t=00013334ms: ** 7: Type **** in Confirm  passwordbox ** successfully completed    [MsgId: MMSG-205180]
+t=00013857ms: ** 8: Click on register button ** started    [MsgId: MMSG-205180]
+t=00014342ms: ** 8: Click on register button ** successfully completed    [MsgId: MMSG-205180]
+Notify: Transaction "T04_WT3_SignUp_Error" ended with a "Pass" status (Duration: 8.0850 Wasted Time: 3.7510).
+t=00014379ms: ** 9: Verify Your username is taken....'s "Visible Text" Contain Your username is taken. ... a unique name). ** started    [MsgId: MMSG-205180]
+t=00014617ms: ** 9: Verify Your username is taken....'s "Visible Text" Contain Your username is taken. ... a unique name). ** successfully completed    [MsgId: MMSG-205180]
 Notify: Transaction "T05_WT3_SignUp" started.
-t=00014073ms: ** 8: Click on jojo textbox ** started    [MsgId: MMSG-205180]
-t=00014336ms: ** 8: Click on jojo textbox ** successfully completed    [MsgId: MMSG-205180]
-t=00014863ms: ** 9: Type jojo102 in jojo textbox ** started    [MsgId: MMSG-205180]
-t=00018130ms: ** 9: Type jojo102 in jojo textbox ** successfully completed    [MsgId: MMSG-205180]
-t=00018683ms: ** 10: Type **** in Password  passwordbox ** started    [MsgId: MMSG-205180]
-t=00019936ms: ** 10: Type **** in Password  passwordbox ** successfully completed    [MsgId: MMSG-205180]
-t=00020451ms: ** 11: Type **** in Confirm  passwordbox ** started    [MsgId: MMSG-205180]
-t=00022468ms: ** 11: Type **** in Confirm  passwordbox ** successfully completed    [MsgId: MMSG-205180]
-t=00023007ms: ** 12: Click on First Name  textbox ** started    [MsgId: MMSG-205180]
-t=00023247ms: ** 12: Click on First Name  textbox ** successfully completed    [MsgId: MMSG-205180]
-t=00023787ms: ** 13: Type whatever in First Name  textbox ** started    [MsgId: MMSG-205180]
-t=00027400ms: ** 13: Type whatever in First Name  textbox ** successfully completed    [MsgId: MMSG-205180]
-t=00027955ms: ** 14: Type whatever in Last Name  textbox ** started    [MsgId: MMSG-205180]
-t=00031160ms: ** 14: Type whatever in Last Name  textbox ** successfully completed    [MsgId: MMSG-205180]
-t=00031685ms: ** 15: Type whatever in Street Address  textbox ** started    [MsgId: MMSG-205180]
-t=00034881ms: ** 15: Type whatever in Street Address  textbox ** successfully completed    [MsgId: MMSG-205180]
-t=00035423ms: ** 16: Type whatever in City/State/Zip  textbox ** started    [MsgId: MMSG-205180]
-t=00038328ms: ** 16: Type whatever in City/State/Zip  textbox ** successfully completed    [MsgId: MMSG-205180]
-t=00038841ms: ** 17: Click on register button ** started    [MsgId: MMSG-205180]
-t=00039344ms: ** 17: Click on register button ** successfully completed    [MsgId: MMSG-205180]
-Notify: Transaction "T05_WT3_SignUp" ended with a "Pass" status (Duration: 25.2740 Wasted Time: 6.8230).
+t=00015119ms: ** 10: Click on jojo textbox ** started    [MsgId: MMSG-205180]
+t=00015367ms: ** 10: Click on jojo textbox ** successfully completed    [MsgId: MMSG-205180]
+t=00015897ms: ** 11: Type jojo102 in jojo textbox ** started    [MsgId: MMSG-205180]
+t=00018825ms: ** 11: Type jojo102 in jojo textbox ** successfully completed    [MsgId: MMSG-205180]
+t=00019346ms: ** 12: Type **** in Password  passwordbox ** started    [MsgId: MMSG-205180]
+t=00021180ms: ** 12: Type **** in Password  passwordbox ** successfully completed    [MsgId: MMSG-205180]
+t=00021716ms: ** 13: Type **** in Confirm  passwordbox ** started    [MsgId: MMSG-205180]
+t=00023338ms: ** 13: Type **** in Confirm  passwordbox ** successfully completed    [MsgId: MMSG-205180]
+t=00023840ms: ** 14: Click on First Name  textbox ** started    [MsgId: MMSG-205180]
+t=00024120ms: ** 14: Click on First Name  textbox ** successfully completed    [MsgId: MMSG-205180]
+t=00024656ms: ** 15: Type whatever in First Name  textbox ** started    [MsgId: MMSG-205180]
+t=00028352ms: ** 15: Type whatever in First Name  textbox ** successfully completed    [MsgId: MMSG-205180]
+t=00028886ms: ** 16: Type whatever in Last Name  textbox ** started    [MsgId: MMSG-205180]
+t=00031709ms: ** 16: Type whatever in Last Name  textbox ** successfully completed    [MsgId: MMSG-205180]
+t=00032246ms: ** 17: Type whatever in Street Address  textbox ** started    [MsgId: MMSG-205180]
+t=00034993ms: ** 17: Type whatever in Street Address  textbox ** successfully completed    [MsgId: MMSG-205180]
+t=00035516ms: ** 18: Type whatever in City/State/Zip  textbox ** started    [MsgId: MMSG-205180]
+t=00038832ms: ** 18: Type whatever in City/State/Zip  textbox ** successfully completed    [MsgId: MMSG-205180]
+t=00039356ms: ** 19: Click on register button ** started    [MsgId: MMSG-205180]
+t=00039838ms: ** 19: Click on register button ** successfully completed    [MsgId: MMSG-205180]
+Notify: Transaction "T05_WT3_SignUp" ended with a "Pass" status (Duration: 24.7200 Wasted Time: 6.7100).
 Notify: Transaction "T08_WT3_SignIn_Error" started.
-t=00039856ms: ** 18: Click on Username textbox ** started    [MsgId: MMSG-205180]
-t=00040110ms: ** 18: Click on Username textbox ** successfully completed    [MsgId: MMSG-205180]
-t=00040643ms: ** 19: Type jojo in Username textbox ** started    [MsgId: MMSG-205180]
-t=00042456ms: ** 19: Type jojo in Username textbox ** successfully completed    [MsgId: MMSG-205180]
-t=00043011ms: ** 20: Type *** in Password passwordbox ** started    [MsgId: MMSG-205180]
-t=00043581ms: ** 20: Type *** in Password passwordbox ** successfully completed    [MsgId: MMSG-205180]
-t=00044123ms: ** 21: Click on Login button ** started    [MsgId: MMSG-205180]
-t=00044689ms: ** 21: Click on Login button ** successfully completed    [MsgId: MMSG-205180]
-Notify: Transaction "T08_WT3_SignIn_Error" ended with a "Pass" status (Duration: 4.8350 Wasted Time: 2.5370).
+t=00040340ms: ** 20: Click on Username textbox ** started    [MsgId: MMSG-205180]
+t=00040597ms: ** 20: Click on Username textbox ** successfully completed    [MsgId: MMSG-205180]
+t=00041125ms: ** 21: Type jojo in Username textbox ** started    [MsgId: MMSG-205180]
+t=00042514ms: ** 21: Type jojo in Username textbox ** successfully completed    [MsgId: MMSG-205180]
+t=00043045ms: ** 22: Type *** in Password passwordbox ** started    [MsgId: MMSG-205180]
+t=00044097ms: ** 22: Type *** in Password passwordbox ** successfully completed    [MsgId: MMSG-205180]
+t=00044635ms: ** 23: Click on Login button ** started    [MsgId: MMSG-205180]
+t=00045178ms: ** 23: Click on Login button ** successfully completed    [MsgId: MMSG-205180]
+Notify: Transaction "T08_WT3_SignIn_Error" ended with a "Pass" status (Duration: 4.8410 Wasted Time: 2.5030).
+t=00045213ms: ** 24: Verify Web Tours Error   Incorrect...'s "Visible Text" Contain Web Tours Error - Incorrect Password ** started    [MsgId: MMSG-205180]
+t=00045438ms: ** 24: Verify Web Tours Error   Incorrect...'s "Visible Text" Contain Web Tours Error - Incorrect Password ** successfully completed    [MsgId: MMSG-205180]
 Notify: Transaction "T12_WT3_SignIn" started.
-t=00045202ms: ** 22: Click on Username textbox ** started    [MsgId: MMSG-205180]
-t=00045451ms: ** 22: Click on Username textbox ** successfully completed    [MsgId: MMSG-205180]
-t=00045996ms: ** 23: Type jojo102 in Username textbox ** started    [MsgId: MMSG-205180]
-t=00048800ms: ** 23: Type jojo102 in Username textbox ** successfully completed    [MsgId: MMSG-205180]
-t=00049331ms: ** 24: Type **** in Password passwordbox ** started    [MsgId: MMSG-205180]
-t=00051608ms: ** 24: Type **** in Password passwordbox ** successfully completed    [MsgId: MMSG-205180]
-t=00052167ms: ** 25: Click on Login button ** started    [MsgId: MMSG-205180]
-t=00052721ms: ** 25: Click on Login button ** successfully completed    [MsgId: MMSG-205180]
-Notify: Transaction "T12_WT3_SignIn" ended with a "Pass" status (Duration: 7.5210 Wasted Time: 2.5630).
+t=00045942ms: ** 25: Click on Username textbox ** started    [MsgId: MMSG-205180]
+t=00046192ms: ** 25: Click on Username textbox ** successfully completed    [MsgId: MMSG-205180]
+t=00046694ms: ** 26: Type jojo102 in Username textbox ** started    [MsgId: MMSG-205180]
+t=00049108ms: ** 26: Type jojo102 in Username textbox ** successfully completed    [MsgId: MMSG-205180]
+t=00049646ms: ** 27: Type **** in Password passwordbox ** started    [MsgId: MMSG-205180]
+t=00051178ms: ** 27: Type **** in Password passwordbox ** successfully completed    [MsgId: MMSG-205180]
+t=00051716ms: ** 28: Click on Login button ** started    [MsgId: MMSG-205180]
+t=00052278ms: ** 28: Click on Login button ** successfully completed    [MsgId: MMSG-205180]
+Notify: Transaction "T12_WT3_SignIn" ended with a "Pass" status (Duration: 6.3370 Wasted Time: 2.5070).
+t=00052317ms: ** 29: Verify Welcome, 's "Visible Text" Contain Welcome, jojo102, to the...hen you're done! ** started    [MsgId: MMSG-205180]
+t=00052552ms: ** 29: Verify Welcome, 's "Visible Text" Contain Welcome, jojo102, to the...hen you're done! ** successfully completed    [MsgId: MMSG-205180]
 Notify: Transaction "WT3_T21_Travel_Home" started.
-t=00053234ms: ** 26: Click on Home Button image ** started    [MsgId: MMSG-205180]
-t=00053793ms: ** 26: Click on Home Button image ** successfully completed    [MsgId: MMSG-205180]
-Notify: Transaction "WT3_T21_Travel_Home" ended with a "Pass" status (Duration: 0.5630 Wasted Time: 0.4030).
+t=00053055ms: ** 30: Click on Home Button image ** started    [MsgId: MMSG-205180]
+t=00053640ms: ** 30: Click on Home Button image ** successfully completed    [MsgId: MMSG-205180]
+Notify: Transaction "WT3_T21_Travel_Home" ended with a "Pass" status (Duration: 0.5870 Wasted Time: 0.4010).
+t=00053670ms: ** 31: Verify Search Flights Button's "Visible Text" Contain [Value] ** started    [MsgId: MMSG-205180]
+t=00053913ms: ** 31: Verify Search Flights Button's "Visible Text" Contain [Value] ** successfully completed    [MsgId: MMSG-205180]
 Notify: Transaction "WT3_T22_Travel_Search_Flight" started.
-t=00054306ms: ** 27: Click on Search Flights Button image ** started    [MsgId: MMSG-205180]
-t=00054900ms: ** 27: Click on Search Flights Button image ** successfully completed    [MsgId: MMSG-205180]
-Notify: Transaction "WT3_T22_Travel_Search_Flight" ended with a "Pass" status (Duration: 0.5960 Wasted Time: 0.4010).
+t=00054415ms: ** 32: Click on Search Flights Button image ** started    [MsgId: MMSG-205180]
+t=00055016ms: ** 32: Click on Search Flights Button image ** successfully completed    [MsgId: MMSG-205180]
+Notify: Transaction "WT3_T22_Travel_Search_Flight" ended with a "Pass" status (Duration: 0.6070 Wasted Time: 0.4010).
+t=00055047ms: ** 33: Verify Find Flight's "Visible Text" Contain Find Flight ** started    [MsgId: MMSG-205180]
+t=00055283ms: ** 33: Verify Find Flight's "Visible Text" Contain Find Flight ** successfully completed    [MsgId: MMSG-205180]
 Notify: Transaction "WT3_T23_Travel_Flight_Lookup" started.
-t=00055413ms: ** 28: Select Los Angeles from Arrival City  listbox ** started    [MsgId: MMSG-205180]
-t=00055487ms: ** 28: Select Los Angeles from Arrival City  listbox ** successfully completed    [MsgId: MMSG-205180]
-t=00056028ms: ** 29: Click on findFlights button ** started    [MsgId: MMSG-205180]
-t=00056507ms: ** 29: Click on findFlights button ** successfully completed    [MsgId: MMSG-205180]
-Notify: Transaction "WT3_T23_Travel_Flight_Lookup" ended with a "Pass" status (Duration: 1.0950 Wasted Time: 0.9200).
+t=00055789ms: ** 34: Select Los Angeles from Arrival City  listbox ** started    [MsgId: MMSG-205180]
+t=00055851ms: ** 34: Select Los Angeles from Arrival City  listbox ** successfully completed    [MsgId: MMSG-205180]
+t=00056395ms: ** 35: Click on findFlights button ** started    [MsgId: MMSG-205180]
+t=00056862ms: ** 35: Click on findFlights button ** successfully completed    [MsgId: MMSG-205180]
+Notify: Transaction "WT3_T23_Travel_Flight_Lookup" ended with a "Pass" status (Duration: 1.0750 Wasted Time: 0.9020).
+t=00056888ms: ** 36: Verify Flight departing from...'s "Visible Text" Contain Flight departing from ** started    [MsgId: MMSG-205180]
+t=00057122ms: ** 36: Verify Flight departing from...'s "Visible Text" Contain Flight departing from ** successfully completed    [MsgId: MMSG-205180]
 Notify: Transaction "WT3_T24_Find_Flight" started.
-t=00057023ms: ** 30: Click on reserveFlights button ** started    [MsgId: MMSG-205180]
-t=00057522ms: ** 30: Click on reserveFlights button ** successfully completed    [MsgId: MMSG-205180]
-Notify: Transaction "WT3_T24_Find_Flight" ended with a "Pass" status (Duration: 0.5030 Wasted Time: 0.4040).
+t=00057627ms: ** 37: Click on reserveFlights button ** started    [MsgId: MMSG-205180]
+t=00058124ms: ** 37: Click on reserveFlights button ** successfully completed    [MsgId: MMSG-205180]
+Notify: Transaction "WT3_T24_Find_Flight" ended with a "Pass" status (Duration: 0.4990 Wasted Time: 0.4010).
+t=00058149ms: ** 38: Verify Payment Details's "Visible Text" Contain Payment Details ** started    [MsgId: MMSG-205180]
+t=00058382ms: ** 38: Verify Payment Details's "Visible Text" Contain Payment Details ** successfully completed    [MsgId: MMSG-205180]
 Notify: Transaction "WT3_T25_Travel_Payment_Details" started.
-t=00058035ms: ** 31: Click on Credit Card  textbox ** started    [MsgId: MMSG-205180]
-t=00058298ms: ** 31: Click on Credit Card  textbox ** successfully completed    [MsgId: MMSG-205180]
-t=00058827ms: ** 32: Type 123456789 in Credit Card  textbox ** started    [MsgId: MMSG-205180]
-t=00062125ms: ** 32: Type 123456789 in Credit Card  textbox ** successfully completed    [MsgId: MMSG-205180]
-t=00062665ms: ** 33: Click on Exp Date  textbox ** started    [MsgId: MMSG-205180]
-t=00062900ms: ** 33: Click on Exp Date  textbox ** successfully completed    [MsgId: MMSG-205180]
-t=00063445ms: ** 34: Type 12/20 in Exp Date  textbox ** started    [MsgId: MMSG-205180]
-t=00065183ms: ** 34: Type 12/20 in Exp Date  textbox ** successfully completed    [MsgId: MMSG-205180]
-t=00065722ms: ** 35: Click on buyFlights button ** started    [MsgId: MMSG-205180]
-t=00066229ms: ** 35: Click on buyFlights button ** successfully completed    [MsgId: MMSG-205180]
-Notify: Transaction "WT3_T25_Travel_Payment_Details" ended with a "Pass" status (Duration: 8.1960 Wasted Time: 3.2560).
+t=00058886ms: ** 39: Click on Credit Card  textbox ** started    [MsgId: MMSG-205180]
+t=00059151ms: ** 39: Click on Credit Card  textbox ** successfully completed    [MsgId: MMSG-205180]
+t=00059695ms: ** 40: Type 123456789 in Credit Card  textbox ** started    [MsgId: MMSG-205180]
+t=00062704ms: ** 40: Type 123456789 in Credit Card  textbox ** successfully completed    [MsgId: MMSG-205180]
+t=00063235ms: ** 41: Click on Exp Date  textbox ** started    [MsgId: MMSG-205180]
+t=00063472ms: ** 41: Click on Exp Date  textbox ** successfully completed    [MsgId: MMSG-205180]
+t=00064015ms: ** 42: Type 12/20 in Exp Date  textbox ** started    [MsgId: MMSG-205180]
+t=00065848ms: ** 42: Type 12/20 in Exp Date  textbox ** successfully completed    [MsgId: MMSG-205180]
+t=00066379ms: ** 43: Click on buyFlights button ** started    [MsgId: MMSG-205180]
+t=00066901ms: ** 43: Click on buyFlights button ** successfully completed    [MsgId: MMSG-205180]
+Notify: Transaction "WT3_T25_Travel_Payment_Details" ended with a "Pass" status (Duration: 8.0170 Wasted Time: 3.2030).
+t=00066936ms: ** 44: Verify Invoice's "Visible Text" Contain Invoice ** started    [MsgId: MMSG-205180]
+t=00067182ms: ** 44: Verify Invoice's "Visible Text" Contain Invoice ** successfully completed    [MsgId: MMSG-205180]
 Notify: Transaction "WT3_T33_Travel_Check_Itinerary" started.
-t=00066741ms: ** 36: Double click on Itinerary Button image ** started    [MsgId: MMSG-205180]
-t=00067319ms: ** 36: Double click on Itinerary Button image ** successfully completed    [MsgId: MMSG-205180]
-Notify: Transaction "WT3_T33_Travel_Check_Itinerary" ended with a "Pass" status (Duration: 0.5800 Wasted Time: 0.4030).
+t=00067681ms: ** 45: Double click on Itinerary Button image ** started    [MsgId: MMSG-205180]
+t=00068308ms: ** 45: Double click on Itinerary Button image ** successfully completed    [MsgId: MMSG-205180]
+Notify: Transaction "WT3_T33_Travel_Check_Itinerary" ended with a "Pass" status (Duration: 0.6310 Wasted Time: 0.4000).
+t=00068337ms: ** 46: Verify Itinerary's "Visible Text" Contain Itinerary ** started    [MsgId: MMSG-205180]
+t=00068584ms: ** 46: Verify Itinerary's "Visible Text" Contain Itinerary ** successfully completed    [MsgId: MMSG-205180]
 Notify: Transaction "T34_WT3_SignOut" started.
-t=00067833ms: ** 37: Click on SignOff Button image ** started    [MsgId: MMSG-205180]
-t=00068396ms: ** 37: Click on SignOff Button image ** successfully completed    [MsgId: MMSG-205180]
-Notify: Transaction "T34_WT3_SignOut" ended with a "Pass" status (Duration: 0.5650 Wasted Time: 0.4040).
+t=00069086ms: ** 47: Click on SignOff Button image ** started    [MsgId: MMSG-205180]
+t=00069639ms: ** 47: Click on SignOff Button image ** successfully completed    [MsgId: MMSG-205180]
+Notify: Transaction "T34_WT3_SignOut" ended with a "Pass" status (Duration: 0.5550 Wasted Time: 0.4010).
+t=00069666ms: ** 48: Verify administration's "Visible Text" Contain administration ** started    [MsgId: MMSG-205180]
+t=00069902ms: ** 48: Verify administration's "Visible Text" Contain administration ** successfully completed    [MsgId: MMSG-205180]
 Ending action Action.
 Ending iteration 1.
 Ending Vuser...
