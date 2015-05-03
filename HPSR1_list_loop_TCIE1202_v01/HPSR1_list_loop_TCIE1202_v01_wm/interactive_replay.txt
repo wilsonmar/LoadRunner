@@ -1,0 +1,327 @@
+Virtual User Script started at : 2015-05-02 19:47:15
+TruClient Replay for LoadRunner 12.0.0, build 2739. OS: Windows 7, initialized on 2015/05/02 at 19:47:15 (0000.000s)
+Selected Run-Time Settings:
+    Simulate a new user on each iteration...............: 1
+    Using system proxy settings
+    Check for newer versions of stored pages: 4 (Automatically)
+    Keep-Alive..........................................: 1
+    Proxy Keep-Alive....................................: 1
+    Keep-Alive timeout (ms).............................: 60000
+    HTTP Version........................................: 1.1
+    Proxy HTTP Version..................................: 1.1
+    DNS cache timeout (ms)..............................: 1800
+    Run-Time Settings file..............................: "C:\LoadRunner\HPSR1_list_loop_TCIE1202_v01_wm\\default.cfg"
+    Vuser directory.....................................: "C:\LoadRunner\HPSR1_list_loop_TCIE1202_v01_wm"
+    Vuser output directory..............................: "C:\LoadRunner\HPSR1_list_loop_TCIE1202_v01_wm"
+End of selected Run-Time Settings
+Please refer to the ReadMe file in the LoadRunner installation directory for notes about measurements and logging
+Starting action Init.
+t=00000697ms: ** 1: If (false) ** started    [MsgId: MMSG-205180]
+t=00000769ms: ** 1: If (true) ** successfully completed    [MsgId: MMSG-205180]
+t=00000794ms: ** 2: If (false) ** started    [MsgId: MMSG-205180]
+t=00000861ms: ** 2: If (true) ** successfully completed    [MsgId: MMSG-205180]
+Ending action Init.
+Warning: The "vuser_init" section contains step(s) when the "Simulate a new user on each iteration" Run-Time Setting is ON.  This may produce unpredictable results with multiple iterations.
+Running Vuser...
+Starting iteration 1.
+Starting action A1_EvalXPathMatchParam.
+t=00001385ms: ** 1: If (true) ** started    [MsgId: MMSG-205180]
+t=00001916ms: ** 1.1: Navigate to http://stormhelp.saas.hp.../html/links.html ** started    [MsgId: MMSG-205180]
+t=00001923ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/links.html" (internal ID=257)    [MsgId: MMSG-204692]
+t=00001994ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/links.html" (internal ID=257)    [MsgId: MMSG-204694]
+t=00001994ms: Response body for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/links.html" (1024 byte(s), decoded) (internal ID=257)    [MsgId: MMSG-204696]
+		  		  <!DOCTYPE>
+		  		  <html>
+		  		  <title> Fill-Out Form Support </title>
+		  		  <head>
+		  		      <link type="text/css" href="css/truclient.css" rel="stylesheet"/>
+		  		      <link type="text/css" href="css/jquery-ui.css" rel="stylesheet"/>
+		  		      <link type="text/css" href="css/contextmenu.css" rel="stylesheet"/>
+		  		      <script src="js/jquery.min.js"></script>
+		  		      <script src="js/jquery-ui.min.js"></script>
+		  		  </head>
+		  		  <body>
+		  		    <div class="hp_header">
+		  		      <div class="hp_header_container hf_clf">
+		  		        <div class="hp_logo">
+		  		          <img class="hf_no_printable" src="images/hp-logo.png" alt="HP® Official Site   | Laptop Computers, Desktops , Printers, Servers and more"</img>
+		  		          <!--<img class="hf_no_printable" src="images/tc-logo.png" alt="TruClient® Official Site   | Web performance testing tool"</img>-->
+		  		        </div>
+		  		        <div class="hp_learning_header"> Sample Pages for Custom Object Identification </div>
+		  		        <div id="tcmenu">
+		  		          <ul>
+		  		            <li class='has-sub'><a href='tc_samples.html'>Examples</a>
+		  		              <ul>
+t=00001995ms: Response body for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/links.html" (2209 byte(s), decoded) (internal ID=257)    [MsgId: MMSG-204696]
+		  		  
+		  		                <li><a href='links.html'>Links</a></li>
+		  		                <li class='has-sub'><a href='#'>Tables</a>
+		  		                  <ul><li><a href='table1.html'>Selectable</a></li><li><a href='table2.html'>Clickable</a></li></ul>
+		  		                </li>
+		  		                <li><a href='dynamic_value.html'>Dynamic Value</a></li>
+		  		              </ul>
+		  		            </li>
+		  		          </ul>
+		  		        </div>
+		  		      </div>
+		  		    </div>
+		  		  <div class="container-color">
+		  		    <div class="container" style="height: 300px !important;">
+		  		      <div class="row content-top">
+		  		        <div class="content-top-tc-logo"><img class="tc-image-logo" src="images/TC_Logo_Gray.png"></img></div>
+		  		        <div class="content_left_text">
+		  		          <h3> Various links </h3>
+		  		          <p> This page contains several links to an example page.
+		  		              <br> Use [Michal - fill script name] with this page to learn how to iterate through links list. </p>
+		  		        </div>
+		  		      </div>
+		  		    </div>
+		  		    </div>
+		  		      <div class="container"  style="padding-left:20% !important">
+		  		          <div class="item-list">
+		  		            <a href="empty.html"><div class="item"><ul class="list-item"><li>Link 1 - this is an example</li></ul></div></a>
+		  		            <a href="empty.html"><div class="item"><ul class="list-item"><li>Link 2 - this is an example</li></ul></div></a>
+		  		            <a href="empty.html"><div class="item"><ul class="list-item"><li>Link 3 - this is an example</li></ul></div></a>
+		  		            <a href="empty.html"><div class="item"><ul class="list-item"><li>Link 4 - this is an example</li></ul></div></a>
+		  		            <a href="empty.html"><div class="item"><ul class="list-item"><li>Link 5 - this is an example</li></ul></div></a>
+		  		            <a href="empty.html"><div class="item"><ul class="list-item"><li>Link 6 - this is an example</li></ul></div></a>
+		  		            <a href="empty.html"><div class="item"><ul class="list-item"><li>Link 7 - this is an example</li></ul></div></a>
+		  		            <a href="empty.html"><div class="item"><ul class="list-item"><li>Link 8 - this is an example</li></ul></div></a>
+		  		            <a href="empty.html"><div class="item"><ul class="list-item"><li>Link 9 - this is an example</li></ul></div></a>
+		  		          </div>
+		  		      </div>
+		  		    </body>
+		  		  </html>
+t=00002000ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/links.html" (internal ID=257) ended    [MsgId: MMSG-204685]
+t=00002004ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/truclient.css" (internal ID=258)    [MsgId: MMSG-204692]
+t=00002008ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/jquery-ui.css" (internal ID=259)    [MsgId: MMSG-204692]
+t=00002012ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/contextmenu.css" (internal ID=260)    [MsgId: MMSG-204692]
+t=00002015ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/js/jquery.min.js" (internal ID=261)    [MsgId: MMSG-204692]
+t=00002021ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/js/jquery-ui.min.js" (internal ID=262)    [MsgId: MMSG-204692]
+t=00002026ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/hp-logo.png" (internal ID=263)    [MsgId: MMSG-204692]
+t=00002032ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/TC_Logo_Gray.png" (internal ID=264)    [MsgId: MMSG-204692]
+t=00002132ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/hp-logo.png" (internal ID=263)    [MsgId: MMSG-204694]
+t=00002132ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/truclient.css" (internal ID=258)    [MsgId: MMSG-204694]
+t=00002132ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/js/jquery.min.js" (internal ID=261)    [MsgId: MMSG-204694]
+t=00002132ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/js/jquery-ui.min.js" (internal ID=262)    [MsgId: MMSG-204694]
+t=00002132ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/jquery-ui.css" (internal ID=259)    [MsgId: MMSG-204694]
+t=00002134ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/contextmenu.css" (internal ID=260)    [MsgId: MMSG-204694]
+t=00002141ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/hp-logo.png" (internal ID=263) ended    [MsgId: MMSG-204685]
+t=00002174ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/js/jquery-ui.min.js" (internal ID=262) ended    [MsgId: MMSG-204685]
+t=00002174ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/jquery-ui.css" (internal ID=259) ended    [MsgId: MMSG-204685]
+t=00002175ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/contextmenu.css" (internal ID=260) ended    [MsgId: MMSG-204685]
+t=00002176ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/TC_Logo_Gray.png" (internal ID=264)    [MsgId: MMSG-204694]
+t=00002177ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/truclient.css" (internal ID=258) ended    [MsgId: MMSG-204685]
+t=00002182ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/TC_Logo_Gray.png" (internal ID=264) ended    [MsgId: MMSG-204685]
+t=00002238ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/fonts/TC_HPSimplified.ttf" (internal ID=265)    [MsgId: MMSG-204692]
+t=00002239ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/fonts/TC_HPSimplified_Rg.ttf" (internal ID=266)    [MsgId: MMSG-204692]
+t=00002249ms: Request initiated for "http://stormhelp.saas.hp.com:80/favicon.ico" (internal ID=267)    [MsgId: MMSG-204692]
+t=00002443ms: "http://stormhelp.saas.hp.com:80/favicon.ico" (internal ID=267) ended    [MsgId: MMSG-204685]
+t=00002467ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/tc_bg.png" (internal ID=268)    [MsgId: MMSG-204692]
+t=00002493ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/fonts/TC_HPSimplified_Rg.ttf" (internal ID=266)    [MsgId: MMSG-204694]
+t=00002497ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/js/jquery.min.js" (internal ID=261) ended    [MsgId: MMSG-204685]
+t=00002500ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/fonts/TC_HPSimplified.ttf" (internal ID=265)    [MsgId: MMSG-204694]
+t=00002512ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/tc_bg.png" (internal ID=268)    [MsgId: MMSG-204694]
+t=00002775ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/tc_bg.png" (internal ID=268) ended    [MsgId: MMSG-204685]
+t=00003048ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/fonts/TC_HPSimplified_Rg.ttf" (internal ID=266) ended    [MsgId: MMSG-204685]
+t=00003049ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/fonts/TC_HPSimplified.ttf" (internal ID=265) ended    [MsgId: MMSG-204685]
+t=00003466ms: ** 1.1: Navigate to http://stormhelp.saas.hp.../html/links.html ** successfully completed    [MsgId: MMSG-205180]
+t=00003505ms: ** 1: If (true) ** successfully completed    [MsgId: MMSG-205180]
+t=00003513ms: ** 2: For (var i = 1; i < 2; i++) ** started    [MsgId: MMSG-205180]
+t=00003529ms: ** 2: For loop 1 ** started    [MsgId: MMSG-205180]
+t=00004066ms: ** 2.1: Click on Link 1   this is an examp... link ** started    [MsgId: MMSG-205180]
+t=00004141ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/empty.html" (internal ID=269)    [MsgId: MMSG-204692]
+t=00004180ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/empty.html" (internal ID=269)    [MsgId: MMSG-204694]
+t=00004180ms: Response body for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/empty.html" (1024 byte(s), decoded) (internal ID=269)    [MsgId: MMSG-204696]
+		  		  <!DOCTYPE>
+		  		  <html>
+		  		  <title> Fill-Out Form Support </title>
+		  		  <head>
+		  		    	<link type="text/css" href="css/truclient.css" rel="stylesheet"/>
+		  		      <link type="text/css" href="css/jquery-ui.css" rel="stylesheet"/>
+		  		      <link type="text/css" href="css/contextmenu.css" rel="stylesheet"/>
+		  		      <script src="js/jquery.min.js"></script>
+		  		      <script src="js/jquery-ui.min.js"></script>
+		  		  </head>
+		  		  <body>
+		  		    <div class="hp_header">
+		  		      <div class="hp_header_container hf_clf">
+		  		        <div class="hp_logo">
+		  		          <img class="hf_no_printable" src="images/hp-logo.png" alt="HP® Official Site   | Laptop Computers, Desktops , Printers, Servers and more"</img>
+		  		          <!--<img class="hf_no_printable" src="images/tc-logo.png" alt="TruClient® Official Site   | Web performance testing tool"</img>-->
+		  		        </div>
+		  		        <div class="hp_learning_header"> Sample Pages for Custom Object Identification </div>
+		  		        <div id="tcmenu">
+		  		          <ul>
+		  		            <li class='has-sub'><a href='tc_samples.html'>Examples</a>
+		  		              <ul>\\r
+t=00004181ms: Response body for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/empty.html" (886 byte(s), decoded) (internal ID=269)    [MsgId: MMSG-204696]
+		  		  
+		  		                <li><a href='links.html'>Links</a></li>
+		  		                <li class='has-sub'><a href='#'>Tables</a>
+		  		                  <ul><li><a href='table1.html'>Selectable</a></li><li><a href='table2.html'>Clickable</a></li></ul>
+		  		                </li>
+		  		                <li><a href='dynamic_value.html'>Dynamic Value</a></li>
+		  		              </ul>
+		  		            </li>
+		  		          </ul>
+		  		        </div>
+		  		      </div>
+		  		    </div>
+		  		    <div class="header" style="margin-top:7px">
+		  		      <div class="container" style="margin-left:0px !important">
+		  		        <div class="header-text">
+		  		            <h1>TruClient Rocks!!!<h1>
+		  		            <h2>BEST CHOICE FOR YOUR WEB PERFORMANCE TESTING</h2>
+		  		            <p>TruClient technology</p>
+		  		        </div>
+		  		      </div>
+		  		    </div>
+		  		  
+		  		      <a href='links.html' class="button" style="margin-top:10px; margin-right:10px !important; float: right;">Back to Links page</a>
+		  		  
+		  		  </body>
+		  		  </html>
+t=00004186ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/empty.html" (internal ID=269) ended    [MsgId: MMSG-204685]
+t=00004189ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/truclient.css" (internal ID=270)    [MsgId: MMSG-204692]
+t=00004193ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/jquery-ui.css" (internal ID=271)    [MsgId: MMSG-204692]
+t=00004196ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/contextmenu.css" (internal ID=272)    [MsgId: MMSG-204692]
+t=00004201ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/js/jquery.min.js" (internal ID=273)    [MsgId: MMSG-204692]
+t=00004205ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/js/jquery-ui.min.js" (internal ID=274)    [MsgId: MMSG-204692]
+t=00004209ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/hp-logo.png" (internal ID=275)    [MsgId: MMSG-204692]
+t=00004311ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/hp-logo.png" (internal ID=275)    [MsgId: MMSG-204694]
+t=00004312ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/contextmenu.css" (internal ID=272)    [MsgId: MMSG-204694]
+t=00004312ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/js/jquery-ui.min.js" (internal ID=274)    [MsgId: MMSG-204694]
+t=00004313ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/jquery-ui.css" (internal ID=271)    [MsgId: MMSG-204694]
+t=00004313ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/truclient.css" (internal ID=270)    [MsgId: MMSG-204694]
+t=00004316ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/js/jquery.min.js" (internal ID=273)    [MsgId: MMSG-204694]
+t=00004322ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/hp-logo.png" (internal ID=275) ended    [MsgId: MMSG-204685]
+t=00004328ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/contextmenu.css" (internal ID=272) ended    [MsgId: MMSG-204685]
+t=00004328ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/jquery-ui.css" (internal ID=271) ended    [MsgId: MMSG-204685]
+t=00004354ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/js/jquery-ui.min.js" (internal ID=274) ended    [MsgId: MMSG-204685]
+t=00004356ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/truclient.css" (internal ID=270) ended    [MsgId: MMSG-204685]
+t=00004417ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/fonts/TC_HPSimplified.ttf" (internal ID=276)    [MsgId: MMSG-204692]
+t=00004419ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/fonts/TC_HPSimplified_Rg.ttf" (internal ID=277)    [MsgId: MMSG-204692]
+t=00004425ms: Request initiated for "http://stormhelp.saas.hp.com:80/favicon.ico" (internal ID=278)    [MsgId: MMSG-204692]
+t=00004523ms: "http://stormhelp.saas.hp.com:80/favicon.ico" (internal ID=278) ended    [MsgId: MMSG-204685]
+t=00004534ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/tc_bg.png" (internal ID=279)    [MsgId: MMSG-204692]
+t=00004538ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/js/jquery.min.js" (internal ID=273) ended    [MsgId: MMSG-204685]
+t=00004542ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/fonts/TC_HPSimplified.ttf" (internal ID=276)    [MsgId: MMSG-204694]
+t=00004544ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/fonts/TC_HPSimplified_Rg.ttf" (internal ID=277)    [MsgId: MMSG-204694]
+t=00004663ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/tc_bg.png" (internal ID=279)    [MsgId: MMSG-204694]
+t=00004672ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/tc_bg.png" (internal ID=279) ended    [MsgId: MMSG-204685]
+t=00004777ms: ** 2.1: Click on Link 1   this is an examp... link ** successfully completed    [MsgId: MMSG-205180]
+t=00004801ms: ** 2.2: Evaluate JavaScript code LR.advanceParam("LinkText"); ** started    [MsgId: MMSG-205180]
+Notify: Next row for parameter LinkText = 2 [table  = LinkText].
+Notify: Getting new value for parameter 'LinkText': table = 'LinkText.dat' column = '0' row = '2'.
+t=00005044ms: ** 2.2: Evaluate JavaScript code LR.advanceParam("LinkText"); ** successfully completed    [MsgId: MMSG-205180]
+t=00005112ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/fonts/TC_HPSimplified.ttf" (internal ID=276) ended    [MsgId: MMSG-204685]
+t=00005136ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/fonts/TC_HPSimplified_Rg.ttf" (internal ID=277) ended    [MsgId: MMSG-204685]
+t=00005571ms: ** 2.3: Click on Back to Links page link ** started    [MsgId: MMSG-205180]
+t=00005613ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/links.html" (internal ID=280)    [MsgId: MMSG-204692]
+t=00005657ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/links.html" (internal ID=280)    [MsgId: MMSG-204694]
+t=00005664ms: Response body for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/links.html" (1024 byte(s), decoded) (internal ID=280)    [MsgId: MMSG-204696]
+		  		  <!DOCTYPE>
+		  		  <html>
+		  		  <title> Fill-Out Form Support </title>
+		  		  <head>
+		  		      <link type="text/css" href="css/truclient.css" rel="stylesheet"/>
+		  		      <link type="text/css" href="css/jquery-ui.css" rel="stylesheet"/>
+		  		      <link type="text/css" href="css/contextmenu.css" rel="stylesheet"/>
+		  		      <script src="js/jquery.min.js"></script>
+		  		      <script src="js/jquery-ui.min.js"></script>
+		  		  </head>
+		  		  <body>
+		  		    <div class="hp_header">
+		  		      <div class="hp_header_container hf_clf">
+		  		        <div class="hp_logo">
+		  		          <img class="hf_no_printable" src="images/hp-logo.png" alt="HP® Official Site   | Laptop Computers, Desktops , Printers, Servers and more"</img>
+		  		          <!--<img class="hf_no_printable" src="images/tc-logo.png" alt="TruClient® Official Site   | Web performance testing tool"</img>-->
+		  		        </div>
+		  		        <div class="hp_learning_header"> Sample Pages for Custom Object Identification </div>
+		  		        <div id="tcmenu">
+		  		          <ul>
+		  		            <li class='has-sub'><a href='tc_samples.html'>Examples</a>
+		  		              <ul>
+t=00005665ms: Response body for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/links.html" (2209 byte(s), decoded) (internal ID=280)    [MsgId: MMSG-204696]
+		  		  
+		  		                <li><a href='links.html'>Links</a></li>
+		  		                <li class='has-sub'><a href='#'>Tables</a>
+		  		                  <ul><li><a href='table1.html'>Selectable</a></li><li><a href='table2.html'>Clickable</a></li></ul>
+		  		                </li>
+		  		                <li><a href='dynamic_value.html'>Dynamic Value</a></li>
+		  		              </ul>
+		  		            </li>
+		  		          </ul>
+		  		        </div>
+		  		      </div>
+		  		    </div>
+		  		  <div class="container-color">
+		  		    <div class="container" style="height: 300px !important;">
+		  		      <div class="row content-top">
+		  		        <div class="content-top-tc-logo"><img class="tc-image-logo" src="images/TC_Logo_Gray.png"></img></div>
+		  		        <div class="content_left_text">
+		  		          <h3> Various links </h3>
+		  		          <p> This page contains several links to an example page.
+		  		              <br> Use [Michal - fill script name] with this page to learn how to iterate through links list. </p>
+		  		        </div>
+		  		      </div>
+		  		    </div>
+		  		    </div>
+		  		      <div class="container"  style="padding-left:20% !important">
+		  		          <div class="item-list">
+		  		            <a href="empty.html"><div class="item"><ul class="list-item"><li>Link 1 - this is an example</li></ul></div></a>
+		  		            <a href="empty.html"><div class="item"><ul class="list-item"><li>Link 2 - this is an example</li></ul></div></a>
+		  		            <a href="empty.html"><div class="item"><ul class="list-item"><li>Link 3 - this is an example</li></ul></div></a>
+		  		            <a href="empty.html"><div class="item"><ul class="list-item"><li>Link 4 - this is an example</li></ul></div></a>
+		  		            <a href="empty.html"><div class="item"><ul class="list-item"><li>Link 5 - this is an example</li></ul></div></a>
+		  		            <a href="empty.html"><div class="item"><ul class="list-item"><li>Link 6 - this is an example</li></ul></div></a>
+		  		            <a href="empty.html"><div class="item"><ul class="list-item"><li>Link 7 - this is an example</li></ul></div></a>
+		  		            <a href="empty.html"><div class="item"><ul class="list-item"><li>Link 8 - this is an example</li></ul></div></a>
+		  		            <a href="empty.html"><div class="item"><ul class="list-item"><li>Link 9 - this is an example</li></ul></div></a>
+		  		          </div>
+		  		      </div>
+		  		    </body>
+		  		  </html>
+t=00005673ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/links.html" (internal ID=280) ended    [MsgId: MMSG-204685]
+t=00005676ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/truclient.css" (internal ID=281)    [MsgId: MMSG-204692]
+t=00005698ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/jquery-ui.css" (internal ID=282)    [MsgId: MMSG-204692]
+t=00005701ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/contextmenu.css" (internal ID=283)    [MsgId: MMSG-204692]
+t=00005705ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/js/jquery.min.js" (internal ID=284)    [MsgId: MMSG-204692]
+t=00005710ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/js/jquery-ui.min.js" (internal ID=285)    [MsgId: MMSG-204692]
+t=00005714ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/hp-logo.png" (internal ID=286)    [MsgId: MMSG-204692]
+t=00005718ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/TC_Logo_Gray.png" (internal ID=287)    [MsgId: MMSG-204692]
+t=00005775ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/contextmenu.css" (internal ID=283)    [MsgId: MMSG-204694]
+t=00005776ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/js/jquery.min.js" (internal ID=284)    [MsgId: MMSG-204694]
+t=00005776ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/jquery-ui.css" (internal ID=282)    [MsgId: MMSG-204694]
+t=00005777ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/truclient.css" (internal ID=281)    [MsgId: MMSG-204694]
+t=00005787ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/contextmenu.css" (internal ID=283) ended    [MsgId: MMSG-204685]
+t=00005797ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/jquery-ui.css" (internal ID=282) ended    [MsgId: MMSG-204685]
+t=00005820ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/css/truclient.css" (internal ID=281) ended    [MsgId: MMSG-204685]
+t=00005899ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/hp-logo.png" (internal ID=286)    [MsgId: MMSG-204694]
+t=00005902ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/js/jquery-ui.min.js" (internal ID=285)    [MsgId: MMSG-204694]
+t=00005935ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/fonts/TC_HPSimplified.ttf" (internal ID=288)    [MsgId: MMSG-204692]
+t=00005937ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/fonts/TC_HPSimplified_Rg.ttf" (internal ID=289)    [MsgId: MMSG-204692]
+t=00005941ms: Request initiated for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/tc_bg.png" (internal ID=290)    [MsgId: MMSG-204692]
+t=00005905ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/js/jquery.min.js" (internal ID=284) ended    [MsgId: MMSG-204685]
+t=00005907ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/TC_Logo_Gray.png" (internal ID=287)    [MsgId: MMSG-204694]
+t=00005908ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/hp-logo.png" (internal ID=286) ended    [MsgId: MMSG-204685]
+t=00005911ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/js/jquery-ui.min.js" (internal ID=285) ended    [MsgId: MMSG-204685]
+t=00005954ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/TC_Logo_Gray.png" (internal ID=287) ended    [MsgId: MMSG-204685]
+t=00005977ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/fonts/TC_HPSimplified.ttf" (internal ID=288)    [MsgId: MMSG-204694]
+t=00006111ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/fonts/TC_HPSimplified_Rg.ttf" (internal ID=289)    [MsgId: MMSG-204694]
+t=00006142ms: First response segment received for "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/tc_bg.png" (internal ID=290)    [MsgId: MMSG-204694]
+t=00006360ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/images/tc_bg.png" (internal ID=290) ended    [MsgId: MMSG-204685]
+t=00006561ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/fonts/TC_HPSimplified.ttf" (internal ID=288) ended    [MsgId: MMSG-204685]
+t=00006743ms: Request initiated for "http://stormhelp.saas.hp.com:80/favicon.ico" (internal ID=291)    [MsgId: MMSG-204692]
+t=00006783ms: "http://stormhelp.saas.hp.com:80/favicon.ico" (internal ID=291) ended    [MsgId: MMSG-204685]
+t=00006807ms: "http://stormhelp.saas.hp.com/TruClient/TruClientExamples/html/fonts/TC_HPSimplified_Rg.ttf" (internal ID=289) ended    [MsgId: MMSG-204685]
+t=00007051ms: ** 2.3: Click on Back to Links page link ** successfully completed    [MsgId: MMSG-205180]
+t=00007070ms: ** 2: For loop 1 ** ended    [MsgId: MMSG-205180]
+t=00007088ms: ** 2: For (var i = 1; i < 2; i++) ** successfully completed    [MsgId: MMSG-205180]
+Ending action A1_EvalXPathMatchParam.
+Ending iteration 1.
+Ending Vuser...
+Starting action End.
+Ending action End.
+Vuser Terminated.
