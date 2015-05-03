@@ -85,7 +85,7 @@ vuser_end=1
 [TransactionsOrder]
 Order=
 [StateManagement]
-LastReplayStatus=3
+LastReplayStatus=1
 [ActiveReplay]
 LastReplayedRunName=result1
 ActiveRunName=
