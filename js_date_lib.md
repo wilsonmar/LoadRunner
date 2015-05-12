@@ -1,3 +1,6 @@
+This tutorial describes the **process** of coding LoadRunner C-language test automation scripts
+to generate random birthdates, as an example of how to call a JavaScript function from inside LoadRunner,
+explained one step at a time.
 
 ## <a name="random_birthdays"></a> Why Random Birthdays?
 
@@ -6,10 +9,10 @@ each person's real birthday can be used as the basis for authentication and thus
 and thus needs to be protected as secrets.
 So generating a birth date randomly can be useful and expedient during testing.
 
-Notes on dates written in C for LoadRunner is at
-http://www.solutionmaniacs.com/blog/2012/8/24/loadrunner-date-handling-2-of-3-c-datetime-functions.html
+## <a name="date_techniques"></a> Date Handling Coding Techniques
 
-However, you may want to reuse a library from a JavaScript developer.
+Several JavaScript techniques are shown here, including using a static array
+to yield a pseudo-random distribution of working ages similar to that of the population.
 
 DateofBirth fields can be gen'd using JavaScript functions in a UI such as 
 
@@ -20,11 +23,14 @@ JavaScript coding for generating birth dates are in web pages such as :
 
 * http://stackoverflow.com/questions/9035627/elegant-method-to-generate-array-of-random-dates-within-two-dates
 
-
-### <a name="why_lr_js"></a> Why Would LoadRunner Use a JavaScript Library?
-
 Within a LoadRunner script, code based on [this web page](http://h30499.www3.hp.com/t5/HP-LoadRunner-and-Performance/How-to-use-JavaScript-in-your-HP-LoadRunner-scripts/ba-p/6197321#.VMqXGl7F8eU)
 can be used to reference established JavaScript functions.
+
+If you're looking for how to write LoadRunner C functions to calculate dates, see
+http://www.solutionmaniacs.com/blog/2012/8/24/loadrunner-date-handling-2-of-3-c-datetime-functions.html
+
+
+### <a name="why_lr_js"></a> Why Would LoadRunner Use a JavaScript Library?
 
 The advantage of LoadRunner scripts reusing functions in a JavaScript utility library is to avoid losing time:
 Time to write script code. Time to debug script code. Time to explain the code to others.
@@ -422,4 +428,4 @@ Action.c(81): Error -35052: Step 'web_js_run' requires that JavaScript engine be
 
 ### Watching JavaScript Engine Sizes in LoadRunner
 
-TODO: 
+TODO: How much memory does this trick take when running in a load generator?
