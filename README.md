@@ -1,8 +1,7 @@
 You are at http://github.com/wilsonmar/LoadRunner
 
 The chatroom associated with this repo is at https://gitter.im/wilsonmar/LoadRunner
-
-    [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/wilsonmar/LoadRunner?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/wilsonmar/LoadRunner?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
 
 This repository contains several public resources referenced during my training classes.
 
