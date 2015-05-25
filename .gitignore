@@ -1,8 +1,5 @@
 # .gitignore standard file for LoadRunner scripts ignores:
 
-# On macs only:
-.DS_Store
-
 # Unnecessary files added as a standard VuGen script template:
 *.sdf
 ReplaySummaryReport.xml
@@ -17,8 +14,7 @@ UserTasks.xml
 # called "data"
 # data/
 
-lrw_custom_body.h
-
+# lrw_custom_body.h
 
 # Files created during compilation:
 combined_*.c
@@ -41,3 +37,8 @@ Bookmarks.xml
 result[1234567890]*/
 mdrv.log
 # output.txt - keep to show it working on local VuGen.
+
+
+# On macs only:
+.DS_Store
+
