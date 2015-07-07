@@ -86,12 +86,14 @@ function randomWorkingAdultAge(){
     // the US Census at https://www.census.gov/population/age/data/cps.html
     // Smaller bands would provide a more realistic distribution.
 
-    var i;
+    var i; 
+    var n;
     
     point_in_curve = randomIntFromInterval( 0, 100 ); // func. within same js file.
     // document.getElementById('point_in_curve').innerHTML = point_in_curve; // DEBUGGING
  
-    for (var i = 0; i < 9; i++){ // size of matrix = 9 items (i value 0 to 8).
+    n = a.length - 1; // to adjust for 0 starting index rather than length ordinal counter.
+    for (var i = 0; i < n; i++){ // size of matrix = 9 items (i value 0 to 8).
         if( point_in_curve > a[i][0] ){ // left dimension (cum. popularity of each band)
             // loop though for next i (and higher cumulative chance).
         }else{
