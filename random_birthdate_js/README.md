@@ -45,14 +45,19 @@ The advantage of LoadRunner scripts reusing functions in a JavaScript utility li
 Time to write script code. Time to debug script code. Time to explain the code to others.
 And more importantly, work to overcome miscommunication between the tester and developers if they don't share a library.
 
+### <a name="lr_call_js"> Completed Script Walkthrough</a>
 
-### <a name="lr_call_js"></a> Call JavaScript function in C code
+
+
+### <a name="lr_call_js"> Call JavaScript function in C code</a>
 
 CHALLENGE: Call a JavaScript library to return a text string into a LoadRunner parameter.
 
-0. In LoadRunner VuGen, create a C script file.
+1. In LoadRunner VuGen, create a C script file.
 
-1. Paste this code into the Action section. 
+   In this initial exercise, we just want to invoke a shell.
+
+2. Paste this code into the Action section. 
 
     ```
     Action(){
@@ -68,11 +73,19 @@ CHALLENGE: Call a JavaScript library to return a text string into a LoadRunner p
     }
     ```
 
+3. Execute the script.
+
+
+### <a name="add_js_file"></a> Add JavaScript Files in LoadRunner
+
+
     BTW, instead of a hard-coded string, the input parameter can come from a LoadRunner parameter already defined:
 
     ```
     "Code=getWorkingAdultRandomBirthDate(LR.getParam('YYYY-MM-DD'));",
     ```
+
+
 
 2. While you are there, right-click on the LoadRunner code line **after** this and set a **Breakpoint** so 
 execution can pause there during debugging. For example, at the return statement.
