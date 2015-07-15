@@ -50,16 +50,22 @@ And more importantly, work to overcome miscommunication between the tester and d
 
 CHALLENGE: Call a JavaScript library to return a text string into a LoadRunner parameter.
 
-1. Paste this code into an appropriate line in the script, such as after identifying a row in VTS.
+0. In LoadRunner VuGen, create a C script file.
+
+1. Paste this code into the Action section. 
 
     ```
-    web_js_run(
-        "Code=getWorkingAdultRandomBirthDate('YYYY-MM-DD');",
-        "ResultParam=BirthYYYYMMDD",
-        SOURCES,
-        "File=lr_js_date_lib.js", ENDITEM,
-        LAST);
-    // web_js_reset() not invoked to leave js code in memory for repeated calls.
+    Action(){
+    
+    	web_js_run(
+        	"Code=getWorkingAdultRandomBirthDate('YYYY-MM-DD');",
+	        "ResultParam=BirthYYYYMMDD",
+        	SOURCES,
+        	"File=lr_js_date_lib.js", ENDITEM,
+        	LAST);
+    		// web_js_reset() not invoked to leave js code in memory for repeated calls.
+    	}
+    }
     ```
 
     BTW, instead of a hard-coded string, the input parameter can come from a LoadRunner parameter already defined:
