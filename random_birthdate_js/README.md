@@ -47,13 +47,18 @@ And more importantly, work to overcome miscommunication between the tester and d
 
 ### <a name="lr_call_js"> Completed Script Walkthrough</a>
 
+1. If you do not want to install a Git client on your machine, 
+   click "Download ZIP" to downloaded into your machine's Downloads folder
+   a file named random_birthdate_js-master.zip, which is the MASTER branch.
+
+The remainder of this page explains how the script was created.
 
 
 ### <a name="lr_call_js"> Call JavaScript function in C code</a>
 
 CHALLENGE: Call a JavaScript library to return a text string into a LoadRunner parameter.
 
-1. In LoadRunner VuGen, create a C script file.
+1. In LoadRunner VuGen, create a new C script file.
 
    In this initial exercise, we just want to invoke a shell.
 
