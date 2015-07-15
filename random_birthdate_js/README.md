@@ -6,10 +6,17 @@ explained one step at a time.
 
 ## <a name="random_birthdays"></a> Why Random Birthdays?
 
-A birthday may need to be generated even when it can be provided because
-each person's real birthday can be used as the basis for authentication and thus identity theft
+Generating a birth date randomly can be useful and expedient during testing:
+
+* <strong>Even when it can be provided</stropng>, a birthday is generated because
+each person's real birthday can be used as the basis for authentication,
 and thus needs to be protected as secrets.
-So generating a birth date randomly can be useful and expedient during testing.
+Generatating the date provides "cleansed" data for testing 
+without exposing actual data values to possible identity theft.
+
+* Generating birthdates enable data values to have a pre-determined range of values
+  that impacts how often certain processeing functions are invoked.
+
 
 ## <a name="date_techniques"></a> Date Handling Coding Techniques
 
