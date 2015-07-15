@@ -8,7 +8,7 @@ explained one step at a time.
 
 Generating a birth date randomly can be useful and expedient during testing:
 
-* <strong>Even when it can be provided</stropng>, a birthday is generated because
+* <strong>Even when it can be provided</strong>, a birthday is generated because
 each person's real birthday can be used as the basis for authentication,
 and thus needs to be protected as secrets.
 Generatating the date provides "cleansed" data for testing 
