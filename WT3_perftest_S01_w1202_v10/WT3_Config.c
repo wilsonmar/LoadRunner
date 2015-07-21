@@ -14,11 +14,12 @@ if( stricmp("All",LPCSTR_RunType ) == FOUND
 
 
 int WT3_Config_Run_Conditions(){ // after landing
+	// TODO: Separate 
 
 	// Switch from "<OFF>" to "on":
-	lr_save_string("on","MSO_Comments");
+	lr_save_string("<OFF>","MSO_Comments");
 	lr_save_string("<OFF>","MSO_JSCalc");
-	lr_save_string("<OFF>","MSO_JSFormSubmit1");
+	lr_save_string("on","MSO_JSFormSubmit1"); // Set LOGIN form's action tag to an error page. 
 	lr_save_string("<OFF>","MSO_JSFormSubmit2");
 	lr_save_string("<OFF>","MSO_JSVerify");
 	lr_save_string("<OFF>","MSO_JSWPages");
