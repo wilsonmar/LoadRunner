@@ -1,0 +1,649 @@
+[API Trapper      (1920:22d4)] Recording in 32-bit mode: C:\Program Files (x86)\Internet Explorer\iexplore.exe
+[API Trapper      (206c:1cec)] Recording in 64-bit mode: C:\Program Files\Internet Explorer\IEXPLORE.EXE
+[Network Analyzer (206c: 8e0)] ------------------------------------------------------------------------------------------
+[Network Analyzer (206c: 8e0)] Load Network Traffic Analyzers:
+[Network Analyzer (206c: 8e0)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer (206c: 8e0)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter_x64.dll)
+[Network Analyzer (206c: 8e0)]     + Network Analyzer: api_http_filter_x64.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer (206c: 8e0)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter_x64.dll
+[Network Analyzer (206c: 8e0)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer_x64.dll)
+[Network Analyzer (206c: 8e0)]     + Network Analyzer: WebSocketAnalyzer_x64.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer (206c: 8e0)] ------------------------------------------------------------------------------------------
+[Network Analyzer (206c:279c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:260c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1c3c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  1)  PROXIED!
+[Web Request      (206c:279c)] "GET /WebTours/index.htm"   
+[Network Analyzer (206c:279c)]   (Sid:  1) Client -> Server @ : 298 bytes (Service=HTTP)
+[Network Analyzer (206c:1c3c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  2)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid:  1) Server -> Client : 664 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /WebTours/header.html"   
+[Network Analyzer (206c:279c)]   (Sid:  1) Client -> Server @ : 351 bytes (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid:  1) Server -> Client : 1007 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /cgi-bin/welcome.pl?signOff=true"   
+[Network Analyzer (206c:279c)]   (Sid:  2) Client -> Server @ : 362 bytes (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid:  2) Server -> Client : 1067 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid:  2) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /WebTours/images/hp_logo.png"   
+[Network Analyzer (206c:279c)]   (Sid:  2) Client -> Server @ : 447 bytes (Service=HTTP)
+[Web Request      (206c:279c)] "GET /WebTours/images/webtours.png"   
+[Network Analyzer (206c:279c)]   (Sid:  1) Client -> Server @ : 448 bytes (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid:  1) Server -> Client : 4486 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid:  2) Server -> Client : 898 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /cgi-bin/nav.pl?in=home"   
+[Network Analyzer (206c:279c)]   (Sid:  1) Client -> Server @ : 440 bytes (Service=HTTP)
+[Web Request      (206c:279c)] "GET /WebTours/home.html"   
+[Network Analyzer (206c:279c)]   (Sid:  2) Client -> Server @ : 436 bytes (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid:  2) Server -> Client : 1659 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid:  1) Server -> Client : 1745 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid:  1) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /WebTours/images/mer_login.gif"   
+[Network Analyzer (206c:279c)]   (Sid:  1) Client -> Server @ : 451 bytes (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid:  1) Server -> Client : 976 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /favicon.ico"   
+[Network Analyzer (206c:279c)]   (Sid:  1) Client -> Server @ : 307 bytes (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid:  1) Server -> Client : 424 bytes  (Service=HTTP)
+[Network Analyzer (206c:260c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1c3c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:27d0)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c: d08)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:23a4)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid=  3)  PROXIED!
+[Network Analyzer (206c:1c3c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid=  4)  PROXIED!
+[Network Analyzer (206c:27d0)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid=  5)  PROXIED!
+[Network Analyzer (206c: d08)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid=  6)  PROXIED!
+[Network Analyzer (206c:23a4)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid=  7)  PROXIED!
+[Network Analyzer (206c:21d4)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:21d4)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid=  8)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid:  2) Connection Terminated (by Server)
+[Network Analyzer (206c:279c)]   (Sid:  1) Connection Terminated (by Server)
+[Network Analyzer (206c:1ddc)]   (Sid:  6) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1ddc)]   (Sid:  6) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:1350)]   (Sid:  4) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1350)]   (Sid:  4) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:1008)]   (Sid:  3) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1008)]   (Sid:  3) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:1e7c)]   (Sid:  5) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1e7c)]   (Sid:  5) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:103c)]   (Sid:  7) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:103c)]   (Sid:  7) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:1e28)]   (Sid:  8) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1e28)]   (Sid:  8) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:1cf8)] Request Connection: Remote Server @ 2400:CB00:2048:0001:0000:0000:6CA2:E8CC - 80  (Service=)  (Sid=  9)  PROXIED!
+[Network Analyzer (206c:2b74)] Request Connection: Remote Server @ 2400:CB00:2048:0001:0000:0000:6CA2:E8CC - 80  (Service=)  (Sid= 10)  PROXIED!
+[Network Analyzer (206c:2854)] Request Connection: Remote Server @ 2400:CB00:2048:0001:0000:0000:6CA2:E8CC - 80  (Service=)  (Sid= 11)  PROXIED!
+[Network Analyzer (206c:2738)] Request Connection: Remote Server @ 2400:CB00:2048:0001:0000:0000:6CA2:E8CD - 80  (Service=)  (Sid= 12)  PROXIED!
+[Network Analyzer (206c:2a34)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1ba0)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1ba0)] Request Connection: Remote Server @ 108.162.232.204:80   (Service=)  (Sid= 13)  PROXIED!
+[Network Analyzer (206c:2a34)] Request Connection: Remote Server @ 108.162.232.204:80   (Service=)  (Sid= 14)  PROXIED!
+[Network Analyzer (206c:1ba0)] Request Connection: Remote Server @ 2606:2800:011F:179A:1972:2405:035B:0459 - 80  (Service=)  (Sid= 15)  PROXIED!
+[Network Analyzer (206c:2a34)] Request Connection: Remote Server @ 2606:2800:011F:179A:1972:2405:035B:0459 - 80  (Service=)  (Sid= 16)  PROXIED!
+[Network Analyzer (206c:2a34)] Request Connection: Remote Server @ 2606:2800:011F:179A:1972:2405:035B:0459 - 80  (Service=)  (Sid= 17)  PROXIED!
+[Network Analyzer (206c:2a34)] Request Connection: Remote Server @ 2606:2800:011F:179A:1972:2405:035B:0459 - 80  (Service=)  (Sid= 18)  PROXIED!
+[Network Analyzer (206c:2a34)] Request Connection: Remote Server @ 2606:2800:011F:179A:1972:2405:035B:0459 - 80  (Service=)  (Sid= 19)  PROXIED!
+[Network Analyzer (206c:2a34)] Request Connection: Remote Server @ 2606:2800:011F:179A:1972:2405:035B:0459 - 80  (Service=)  (Sid= 20)  PROXIED!
+[Network Analyzer (206c:2a34)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:2a34)] Request Connection: Remote Server @ 96.16.7.74:80   (Service=)  (Sid= 21)  PROXIED!
+[Network Analyzer (206c:2a34)] Request Connection: Remote Server @ 2001:0668:0108:001E:0000:0000:2E21:4C0B - 80  (Service=)  (Sid= 22)  PROXIED!
+[Network Analyzer (206c:2738)] Request Connection: Remote Server @ 2001:0668:0108:001E:0000:0000:2E21:4C0B - 80  (Service=)  (Sid= 23)  PROXIED!
+[Network Analyzer (206c:1ba0)] Request Connection: Remote Server @ 2001:0668:0108:001E:0000:0000:2E21:4C0B - 80  (Service=)  (Sid= 24)  PROXIED!
+[Network Analyzer (206c:2b74)] Request Connection: Remote Server @ 2001:0668:0108:001E:0000:0000:2E21:4C0B - 80  (Service=)  (Sid= 25)  PROXIED!
+[Network Analyzer (206c:1ba0)] Request Connection: Remote Server @ 2001:0668:0108:001E:0000:0000:2E21:4C0B - 80  (Service=)  (Sid= 26)  PROXIED!
+[Network Analyzer (206c:1850)]   (Sid: 10) Connection Terminated (by Server)
+[Network Analyzer (206c:1850)]   (Sid:  9) Connection Terminated (by Server)
+[Network Analyzer (206c:1850)]   (Sid: 11) Connection Terminated (by Server)
+[Network Analyzer (206c:1850)]   (Sid: 12) Connection Terminated (by Server)
+[Network Analyzer (206c:279c)]   (Sid:  6) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid:  4) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid:  3) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid:  5) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid:  7) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid:  8) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 14) Connection Terminated (by Server)
+[Network Analyzer (206c:279c)]   (Sid: 13) Connection Terminated (by Server)
+[Network Analyzer (206c:279c)]   (Sid: 21) Server -> Client : 414 bytes 
+[Network Analyzer (206c:279c)]   (Sid: 21) Connection Terminated (by Server)
+[Network Analyzer (206c:1850)]   (Sid: 22) Server -> Client : 413 bytes 
+[Network Analyzer (206c:1850)]   (Sid: 22) Connection Terminated (by Server)
+[Network Analyzer (206c:1850)]   (Sid: 23) Server -> Client : 413 bytes 
+[Network Analyzer (206c:1850)]   (Sid: 24) Server -> Client : 413 bytes 
+[Network Analyzer (206c:1850)]   (Sid: 23) Connection Terminated (by Server)
+[Network Analyzer (206c:1850)]   (Sid: 24) Connection Terminated (by Server)
+[Network Analyzer (206c:1850)]   (Sid: 25) Server -> Client : 413 bytes 
+[Network Analyzer (206c:1850)]   (Sid: 25) Connection Terminated (by Server)
+[Network Analyzer (206c:1850)]   (Sid: 26) Server -> Client : 413 bytes 
+[Network Analyzer (206c:1850)]   (Sid: 26) Connection Terminated (by Server)
+[Network Analyzer (206c:27d0)] Request Connection: Remote Server @ 2606:2800:011F:179A:1972:2405:035B:0459 - 443  (Service=)  (Sid= 27)  PROXIED!
+[Network Analyzer (206c:21d4)] Request Connection: Remote Server @ 2606:2800:011F:179A:1972:2405:035B:0459 - 443  (Service=)  (Sid= 28)  PROXIED!
+[Network Analyzer (206c: 39c)]   (Sid: 27) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-RC4-SHA)
+[Network Analyzer (206c: 39c)]   (Sid: 27) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c: 248)]   (Sid: 28) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-RC4-SHA)
+[Network Analyzer (206c: 248)]   (Sid: 28) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 2400:CB00:2048:0001:0000:0000:6CA2:E8CC - 80  (Service=)  (Sid= 29)  PROXIED!
+[Network Analyzer (206c:1c3c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1c3c)] Request Connection: Remote Server @ 108.162.232.200:80   (Service=)  (Sid= 30)  PROXIED!
+[Network Analyzer (206c:1850)]   (Sid: 27) Connection Terminated (by Client)
+[Network Analyzer (206c:1850)]   (Sid: 28) Connection Terminated (by Client)
+[Network Analyzer (206c:21d4)] Request Connection: Remote Server @ 2606:2800:011F:179A:1972:2405:035B:0459 - 443  (Service=)  (Sid= 31)  PROXIED!
+[Network Analyzer (206c:20ec)]   (Sid: 31) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-RC4-SHA)
+[Network Analyzer (206c:20ec)]   (Sid: 31) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Web Request      (206c:1850)] "GET /IE10/1152921505002013023/iecompatviewlist.xml"   
+[Network Analyzer (206c:1850)]   (Sid: 31) Client -> Server @ : 481 bytes (SSL)(Service=HTTP)
+[Network Analyzer (206c:1850)]   (Sid: 31) Server -> Client : 467 bytes (SSL) (Service=HTTP)
+[Network Analyzer (206c:1850)]   (Sid: 31) Server -> Client : 4095 bytes (SSL) (Service=HTTP)
+[Network Analyzer (206c:1850)]   (Sid: 31) Server -> Client : 4095 bytes (SSL) (Service=HTTP)
+[Network Analyzer (206c:1850)]   (Sid: 31) Server -> Client : 4095 bytes (SSL) (Service=HTTP)
+[Network Analyzer (206c:1850)]   (Sid: 31) Server -> Client : 4095 bytes (SSL) (Service=HTTP)
+[Network Analyzer (206c:1850)]   (Sid: 31) Server -> Client : 4095 bytes (SSL) (Service=HTTP)
+[Network Analyzer (206c:1850)]   (Sid: 31) Server -> Client : 2989 bytes (SSL) (Service=HTTP)
+[Network Analyzer (206c:1850)]   (Sid: 29) Connection Terminated (by Server)
+[Network Analyzer (206c:1850)]   (Sid: 15) Connection Terminated (by Client)
+[Network Analyzer (206c:1850)]   (Sid: 16) Connection Terminated (by Client)
+[Network Analyzer (206c:1850)]   (Sid: 17) Connection Terminated (by Client)
+[Network Analyzer (206c:1850)]   (Sid: 18) Connection Terminated (by Client)
+[Network Analyzer (206c:1850)]   (Sid: 19) Connection Terminated (by Client)
+[Network Analyzer (206c:1850)]   (Sid: 20) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 30) Connection Terminated (by Server)
+[User action                 ] StartTransactionEvent LogIn [Network Analyzer (206c:21d4)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:21d4)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 32)  PROXIED!
+[Network Analyzer (206c:27d0)] Address lookup for Mainali-PC = 192.168.1.69
+[Web Request      (206c:279c)] "POST /cgi-bin/login.pl"   
+[Network Analyzer (206c:279c)]   (Sid: 32) Client -> Server @ : 637 bytes (Service=HTTP)
+[Network Analyzer (206c:27d0)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 33)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 32) Server -> Client : 872 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 32) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /cgi-bin/nav.pl?page=menu&in=home"   
+[Network Analyzer (206c:279c)]   (Sid: 32) Client -> Server @ : 570 bytes (Service=HTTP)
+[Web Request      (206c:279c)] "GET /cgi-bin/login.pl?intro=true"   
+[Network Analyzer (206c:279c)]   (Sid: 33) Client -> Server @ : 565 bytes (Service=HTTP)
+[Network Analyzer (206c:260c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:279c)]   (Sid: 32) Server -> Client : 1744 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 32) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /WebTours/images/flights.gif"   
+[Network Analyzer (206c:279c)]   (Sid: 32) Client -> Server @ : 594 bytes (Service=HTTP)
+[Network Analyzer (206c:1c3c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:27d0)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:23a4)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:21d4)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1c3c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 34)  PROXIED!
+[Web Request      (206c:279c)] "GET /WebTours/images/in_home.gif"   
+[Network Analyzer (206c:279c)]   (Sid: 34) Client -> Server @ : 594 bytes (Service=HTTP)
+[Network Analyzer (206c:27d0)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 35)  PROXIED!
+[Web Request      (206c:279c)] "GET /WebTours/images/signoff.gif"   
+[Network Analyzer (206c:279c)]   (Sid: 35) Client -> Server @ : 594 bytes (Service=HTTP)
+[Network Analyzer (206c:23a4)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 36)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 34) Server -> Client : 986 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 33) Server -> Client : 1155 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 35) Server -> Client : 1049 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 33) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /WebTours/images/itinerary.gif"   
+[Network Analyzer (206c:279c)]   (Sid: 36) Client -> Server @ : 596 bytes (Service=HTTP)
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 37)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 36) Server -> Client : 1031 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 32) Server -> Client : 1023 bytes  (Service=HTTP)
+[Network Analyzer (206c:21d4)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 38)  PROXIED!
+[Network Analyzer (206c:1c3c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1ef0)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1c3c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 39)  PROXIED!
+[Network Analyzer (206c:1ef0)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 40)  PROXIED!
+[Network Analyzer (206c:2ae4)]   (Sid: 37) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:2ae4)]   (Sid: 37) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:2b60)]   (Sid: 38) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:2b60)]   (Sid: 38) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:2150)]   (Sid: 39) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:2150)]   (Sid: 39) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:183c)]   (Sid: 40) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:183c)]   (Sid: 40) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:279c)]   (Sid: 37) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 38) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 39) Connection Terminated (by Client)
+[Network Analyzer (206c:21d4)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:21d4)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 41)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 40) Connection Terminated (by Client)
+[Network Analyzer (206c:13f0)]   (Sid: 41) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:13f0)]   (Sid: 41) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:279c)]   (Sid: 41) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 34) Connection Terminated (by Server)
+[Network Analyzer (206c:279c)]   (Sid: 35) Connection Terminated (by Server)
+[Network Analyzer (206c:279c)]   (Sid: 36) Connection Terminated (by Server)
+[Network Analyzer (206c:279c)]   (Sid: 32) Connection Terminated (by Server)
+[Network Analyzer (206c:279c)]   (Sid: 33) Connection Terminated (by Server)
+[User action                 ] EndTransactionEvent LogIn [User action                 ] StartTransactionEvent WT3_T21_Travel_Home [Network Analyzer (206c:21d4)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1ef0)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:21d4)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 42)  PROXIED!
+[Web Request      (206c:279c)] "GET /cgi-bin/welcome.pl?page=menus"   
+[Network Analyzer (206c:279c)]   (Sid: 42) Client -> Server @ : 583 bytes (Service=HTTP)
+[Network Analyzer (206c:1ef0)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 43)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 42) Server -> Client : 819 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 42) Server -> Client : 5 bytes  (Service=HTTP)
+[Network Analyzer (206c:1850)]   (Sid: 31) Connection Terminated (by Client)
+[Web Request      (206c:279c)] "GET /cgi-bin/nav.pl?page=menu&in=home"   
+[Network Analyzer (206c:279c)]   (Sid: 42) Client -> Server @ : 583 bytes (Service=HTTP)
+[Web Request      (206c:279c)] "GET /cgi-bin/login.pl?intro=true"   
+[Network Analyzer (206c:279c)]   (Sid: 43) Client -> Server @ : 578 bytes (Service=HTTP)
+[Network Analyzer (206c:260c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:279c)]   (Sid: 43) Server -> Client : 1155 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 43) Server -> Client : 5 bytes  (Service=HTTP)
+[Network Analyzer (206c:1c3c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:21d4)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:279c)]   (Sid: 42) Server -> Client : 1744 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 42) Server -> Client : 5 bytes  (Service=HTTP)
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 44)  PROXIED!
+[Network Analyzer (206c:1ef0)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1c3c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 45)  PROXIED!
+[Network Analyzer (206c:21d4)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 46)  PROXIED!
+[Network Analyzer (206c:1ef0)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 47)  PROXIED!
+[Network Analyzer (206c:247c)]   (Sid: 44) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:247c)]   (Sid: 44) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:197c)]   (Sid: 45) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:197c)]   (Sid: 45) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:1790)]   (Sid: 46) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1790)]   (Sid: 46) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:260c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1f64)]   (Sid: 47) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1f64)]   (Sid: 47) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:279c)]   (Sid: 44) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 45) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 46) Connection Terminated (by Client)
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 48)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 47) Connection Terminated (by Client)
+[Network Analyzer (206c:23c0)]   (Sid: 48) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:23c0)]   (Sid: 48) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:279c)]   (Sid: 48) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 43) Connection Terminated (by Server)
+[Network Analyzer (206c:279c)]   (Sid: 42) Connection Terminated (by Server)
+[WebMultiInProcNotify_x64:  (206c:24a8)] Insert Text Check: "Welcome"
+[User action                 ] EndTransactionEvent WT3_T21_Travel_Home [User action                 ] StartTransactionEvent WT3_T22_Travel_Search_Flight [Network Analyzer (206c:21d4)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:260c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:21d4)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 49)  PROXIED!
+[Web Request      (206c:279c)] "GET /cgi-bin/welcome.pl?page=search"   
+[Network Analyzer (206c:279c)]   (Sid: 49) Client -> Server @ : 584 bytes (Service=HTTP)
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 50)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 49) Server -> Client : 839 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 49) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /cgi-bin/nav.pl?page=menu&in=flights"   
+[Network Analyzer (206c:279c)]   (Sid: 49) Client -> Server @ : 587 bytes (Service=HTTP)
+[Web Request      (206c:279c)] "GET /cgi-bin/reservations.pl?page=welcome"   
+[Network Analyzer (206c:279c)]   (Sid: 50) Client -> Server @ : 588 bytes (Service=HTTP)
+[Network Analyzer (206c:21d4)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:279c)]   (Sid: 50) Server -> Client : 4235 bytes  (Service=HTTP)
+[Network Analyzer (206c:21d4)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 51)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 50) Server -> Client : 281 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 50) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /WebTours/images/button_next.gif"   
+[Network Analyzer (206c:279c)]   (Sid: 50) Client -> Server @ : 602 bytes (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 49) Server -> Client : 1744 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 49) Server -> Client : 5 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 50) Server -> Client : 1055 bytes  (Service=HTTP)
+[Network Analyzer (206c: 394)]   (Sid: 51) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Web Request      (206c:279c)] "GET /WebTours/classes/"   
+[Network Analyzer (206c:279c)]   (Sid: 50) Client -> Server @ : 590 bytes (Service=HTTP)
+[Network Analyzer (206c: 394)]   (Sid: 51) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:1ef0)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:279c)]   (Sid: 50) Server -> Client : 434 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /WebTours/images/in_flights.gif"   
+[Network Analyzer (206c:279c)]   (Sid: 50) Client -> Server @ : 600 bytes (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 50) Server -> Client : 1023 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /WebTours/images/home.gif"   
+[Network Analyzer (206c:279c)]   (Sid: 49) Client -> Server @ : 594 bytes (Service=HTTP)
+[Network Analyzer (206c:260c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:279c)]   (Sid: 49) Server -> Client : 985 bytes  (Service=HTTP)
+[Network Analyzer (206c:27d0)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1c3c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1ef0)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 52)  PROXIED!
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 53)  PROXIED!
+[Network Analyzer (206c:27d0)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 54)  PROXIED!
+[Network Analyzer (206c:1c3c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 55)  PROXIED!
+[Network Analyzer (206c:13cc)]   (Sid: 52) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:13cc)]   (Sid: 52) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Web Request      (206c:279c)] "GET /WebTours/classes/"   
+[Network Analyzer (206c:279c)]   (Sid: 49) Client -> Server @ : 590 bytes (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 49) Server -> Client : 434 bytes  (Service=HTTP)
+[Network Analyzer (206c: 53c)]   (Sid: 53) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c: 53c)]   (Sid: 53) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:1978)]   (Sid: 54) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1978)]   (Sid: 54) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:279c)]   (Sid: 51) Connection Terminated (by Client)
+[Network Analyzer (206c:1de4)]   (Sid: 55) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1de4)]   (Sid: 55) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:279c)]   (Sid: 52) Connection Terminated (by Client)
+[Network Analyzer (206c:21d4)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:21d4)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 56)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 53) Connection Terminated (by Client)
+[Network Analyzer (206c:2a60)]   (Sid: 56) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:279c)]   (Sid: 54) Connection Terminated (by Client)
+[Network Analyzer (206c:2a60)]   (Sid: 56) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:1c3c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:279c)]   (Sid: 55) Connection Terminated (by Client)
+[Network Analyzer (206c:1c3c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 57)  PROXIED!
+[Network Analyzer (206c:15e0)]   (Sid: 57) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:15e0)]   (Sid: 57) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:279c)]   (Sid: 56) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 57) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 50) Connection Terminated (by Server)
+[Network Analyzer (206c:279c)]   (Sid: 49) Connection Terminated (by Server)
+[WebMultiInProcNotify_x64:  (206c:24a8)] Insert Text Check: "Find Flight"
+[User action                 ] EndTransactionEvent WT3_T22_Travel_Search_Flight [User action                 ] StartTransactionEvent WT3_T23_Travel_Flight_Lookup [Network Analyzer (206c:260c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:21d4)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:21d4)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 58)  PROXIED!
+[Web Request      (206c:279c)] "POST /cgi-bin/reservations.pl"   
+[Network Analyzer (206c:279c)]   (Sid: 58) Client -> Server @ : 919 bytes (Service=HTTP)
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 59)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 58) Server -> Client : 2709 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 58) Server -> Client : 5 bytes  (Service=HTTP)
+[Network Analyzer (206c:21fc)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:260c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:21fc)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 60)  PROXIED!
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 61)  PROXIED!
+[Network Analyzer (206c:1de0)]   (Sid: 60) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1de0)]   (Sid: 60) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:2460)]   (Sid: 61) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:2460)]   (Sid: 61) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:279c)]   (Sid: 60) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 61) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 58) Connection Terminated (by Server)
+[WebMultiInProcNotify_x64:  (206c:24a8)] Insert Text Check: "Find Flight"
+[User action                 ] EndTransactionEvent WT3_T23_Travel_Flight_Lookup [Network Analyzer (206c:279c)]   (Sid: 59) Connection Terminated (by Client)
+[User action                 ] StartTransactionEvent WT3_T24_Find_Flight [Network Analyzer (206c: c90)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:21fc)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c: c90)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 62)  PROXIED!
+[Web Request      (206c:279c)] "POST /cgi-bin/reservations.pl"   
+[Network Analyzer (206c:279c)]   (Sid: 62) Client -> Server @ : 807 bytes (Service=HTTP)
+[Network Analyzer (206c:21fc)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 63)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 62) Server -> Client : 3009 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 62) Server -> Client : 5 bytes  (Service=HTTP)
+[Network Analyzer (206c:260c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:25fc)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 64)  PROXIED!
+[Network Analyzer (206c:25fc)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 65)  PROXIED!
+[Network Analyzer (206c:1ba4)]   (Sid: 64) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1ba4)]   (Sid: 64) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:1848)]   (Sid: 65) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1848)]   (Sid: 65) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:279c)]   (Sid: 64) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 65) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 62) Connection Terminated (by Server)
+[WebMultiInProcNotify_x64:  (206c:24a8)] Insert Text Check: "Payment Details"
+[User action                 ] EndTransactionEvent WT3_T24_Find_Flight [User action                 ] StartTransactionEvent WT3_T25_Travel_Payment_Details [Network Analyzer (206c:279c)]   (Sid: 63) Connection Terminated (by Client)
+[Network Analyzer (206c:260c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c: d08)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c: d08)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 66)  PROXIED!
+[Web Request      (206c:279c)] "POST /cgi-bin/reservations.pl"   
+[Network Analyzer (206c:279c)]   (Sid: 66) Client -> Server @ : 995 bytes (Service=HTTP)
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 67)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 66) Server -> Client : 2882 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 66) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /WebTours/images/bookanother.gif"   
+[Network Analyzer (206c:279c)]   (Sid: 66) Client -> Server @ : 565 bytes (Service=HTTP)
+[Network Analyzer (206c: 29c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:279c)]   (Sid: 66) Server -> Client : 1103 bytes  (Service=HTTP)
+[Network Analyzer (206c: d08)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c: 29c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 68)  PROXIED!
+[Network Analyzer (206c: d08)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 69)  PROXIED!
+[Network Analyzer (206c:1b38)]   (Sid: 68) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1b38)]   (Sid: 68) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:2858)]   (Sid: 69) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:2858)]   (Sid: 69) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:279c)]   (Sid: 68) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 69) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 66) Connection Terminated (by Server)
+[User action                 ] EndTransactionEvent WT3_T25_Travel_Payment_Details [User action                 ] StartTransactionEvent WT3_T26_Travel_Invoice [User action                 ] EndTransactionEvent WT3_T26_Travel_Invoice [User action                 ] StartTransactionEvent WT3_T27_Travel_Click_Book_Another [Network Analyzer (206c: 29c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c: d08)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:279c)]   (Sid: 67) Connection Terminated (by Client)
+[Network Analyzer (206c: d08)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 70)  PROXIED!
+[Web Request      (206c:279c)] "POST /cgi-bin/reservations.pl"   
+[Network Analyzer (206c:279c)]   (Sid: 70) Client -> Server @ : 673 bytes (Service=HTTP)
+[Network Analyzer (206c: 29c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 71)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 70) Server -> Client : 4235 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 70) Server -> Client : 286 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /WebTours/classes/"   
+[Network Analyzer (206c:279c)]   (Sid: 70) Client -> Server @ : 566 bytes (Service=HTTP)
+[Network Analyzer (206c:260c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c: 29c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:279c)]   (Sid: 70) Server -> Client : 434 bytes  (Service=HTTP)
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 72)  PROXIED!
+[Network Analyzer (206c: 29c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 73)  PROXIED!
+[Network Analyzer (206c:2130)]   (Sid: 72) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:2130)]   (Sid: 72) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:2920)]   (Sid: 73) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:2920)]   (Sid: 73) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Web Request      (206c:279c)] "GET /WebTours/classes/"   
+[Network Analyzer (206c:279c)]   (Sid: 70) Client -> Server @ : 566 bytes (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 70) Server -> Client : 434 bytes  (Service=HTTP)
+[Network Analyzer (206c:260c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 74)  PROXIED!
+[Network Analyzer (206c:273c)]   (Sid: 74) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:273c)]   (Sid: 74) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:260c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 75)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 72) Connection Terminated (by Client)
+[Network Analyzer (206c:1c30)]   (Sid: 75) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1c30)]   (Sid: 75) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:279c)]   (Sid: 73) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 74) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 75) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 70) Connection Terminated (by Server)
+[WebMultiInProcNotify_x64:  (206c:24a8)] Insert Text Check: "Find Flight"
+[WebMultiInProcNotify_x64:  (206c:24a8)] Call for OpenClipboard failed with 5 in MyEmptyClipboard
+[WebMultiInProcNotify_x64:  (206c:24a8)] Call for OpenClipboard failed with 5 in GetStringFromClipboard
+[User action                 ] EndTransactionEvent WT3_T27_Travel_Click_Book_Another [User action                 ] StartTransactionEvent WT3_T28_Travel_Search_Flight2 [Network Analyzer (206c:260c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 76)  PROXIED!
+[Web Request      (206c:279c)] "GET /cgi-bin/welcome.pl?page=search"   
+[Network Analyzer (206c:279c)]   (Sid: 76) Client -> Server @ : 563 bytes (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 76) Server -> Client : 839 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 71) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 76) Server -> Client : 5 bytes  (Service=HTTP)
+[Network Analyzer (206c: 29c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c: 29c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 77)  PROXIED!
+[Web Request      (206c:279c)] "GET /cgi-bin/nav.pl?page=menu&in=flights"   
+[Network Analyzer (206c:279c)]   (Sid: 76) Client -> Server @ : 563 bytes (Service=HTTP)
+[Web Request      (206c:279c)] "GET /cgi-bin/reservations.pl?page=welcome"   
+[Network Analyzer (206c:279c)]   (Sid: 77) Client -> Server @ : 564 bytes (Service=HTTP)
+[Network Analyzer (206c:260c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 78)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 76) Server -> Client : 1744 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 76) Server -> Client : 5 bytes  (Service=HTTP)
+[Network Analyzer (206c: 29c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:279c)]   (Sid: 77) Server -> Client : 4235 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 77) Server -> Client : 281 bytes  (Service=HTTP)
+[Network Analyzer (206c:1384)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:279c)]   (Sid: 77) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /WebTours/classes/"   
+[Network Analyzer (206c:279c)]   (Sid: 77) Client -> Server @ : 566 bytes (Service=HTTP)
+[Network Analyzer (206c:2810)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c: 734)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:279c)]   (Sid: 77) Server -> Client : 434 bytes  (Service=HTTP)
+[Network Analyzer (206c: 29c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 79)  PROXIED!
+[Network Analyzer (206c:1384)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 80)  PROXIED!
+[Network Analyzer (206c:2810)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 81)  PROXIED!
+[Network Analyzer (206c: 734)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 82)  PROXIED!
+[Network Analyzer (206c:27bc)]   (Sid: 78) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:27bc)]   (Sid: 78) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c: 584)]   (Sid: 79) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c: 584)]   (Sid: 79) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:1058)]   (Sid: 80) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1058)]   (Sid: 80) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:2124)]   (Sid: 81) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:2124)]   (Sid: 81) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Web Request      (206c:279c)] "GET /WebTours/classes/"   
+[Network Analyzer (206c:279c)]   (Sid: 77) Client -> Server @ : 566 bytes (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 77) Server -> Client : 434 bytes  (Service=HTTP)
+[Network Analyzer (206c:1384)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1384)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 83)  PROXIED!
+[Network Analyzer (206c:18ac)]   (Sid: 82) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:18ac)]   (Sid: 82) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c: 92c)]   (Sid: 83) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c: 92c)]   (Sid: 83) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:1384)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1384)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 84)  PROXIED!
+[Network Analyzer (206c:14c4)]   (Sid: 84) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:14c4)]   (Sid: 84) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c: 734)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:279c)]   (Sid: 78) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 79) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 80) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 81) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 82) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 83) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 84) Connection Terminated (by Client)
+[Network Analyzer (206c: 734)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 85)  PROXIED!
+[Network Analyzer (206c:1f84)]   (Sid: 85) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1f84)]   (Sid: 85) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:279c)]   (Sid: 85) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 76) Connection Terminated (by Server)
+[Network Analyzer (206c:279c)]   (Sid: 77) Connection Terminated (by Server)
+[WebMultiInProcNotify_x64:  (206c:24a8)] Insert Text Check: "Find Flight"
+[User action                 ] EndTransactionEvent WT3_T28_Travel_Search_Flight2 [User action                 ] StartTransactionEvent WT3_T29_Travel_Flight_Lookup2 [Network Analyzer (206c:1384)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1384)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 86)  PROXIED!
+[Network Analyzer (206c: 734)] Address lookup for Mainali-PC = 192.168.1.69
+[Web Request      (206c:279c)] "POST /cgi-bin/reservations.pl"   
+[Network Analyzer (206c:279c)]   (Sid: 86) Client -> Server @ : 894 bytes (Service=HTTP)
+[Network Analyzer (206c: 734)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 87)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 86) Server -> Client : 2709 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 86) Server -> Client : 5 bytes  (Service=HTTP)
+[Network Analyzer (206c:260c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c: 29c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 88)  PROXIED!
+[Network Analyzer (206c: 29c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 89)  PROXIED!
+[Network Analyzer (206c:1278)]   (Sid: 88) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1278)]   (Sid: 88) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:160c)]   (Sid: 89) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:160c)]   (Sid: 89) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:279c)]   (Sid: 88) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 89) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 86) Connection Terminated (by Server)
+[WebMultiInProcNotify_x64:  (206c:24a8)] Insert Text Check: "Find Flight"
+[User action                 ] EndTransactionEvent WT3_T29_Travel_Flight_Lookup2 [User action                 ] StartTransactionEvent WT3_T30_Travel_Find_Flight2 [Network Analyzer (206c:279c)]   (Sid: 87) Connection Terminated (by Client)
+[Network Analyzer (206c:260c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c: 29c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 90)  PROXIED!
+[Web Request      (206c:279c)] "POST /cgi-bin/reservations.pl"   
+[Network Analyzer (206c:279c)]   (Sid: 90) Client -> Server @ : 783 bytes (Service=HTTP)
+[Network Analyzer (206c: 29c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 91)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 90) Server -> Client : 2996 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 90) Server -> Client : 5 bytes  (Service=HTTP)
+[Network Analyzer (206c:1ef4)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c: 29c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1ef4)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 92)  PROXIED!
+[Network Analyzer (206c: 29c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 93)  PROXIED!
+[Network Analyzer (206c:1ed0)]   (Sid: 92) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1ed0)]   (Sid: 92) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c: 768)]   (Sid: 93) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c: 768)]   (Sid: 93) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:279c)]   (Sid: 92) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 93) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 90) Connection Terminated (by Server)
+[WebMultiInProcNotify_x64:  (206c:24a8)] Insert Text Check: "Payment Details"
+[User action                 ] EndTransactionEvent WT3_T30_Travel_Find_Flight2 [User action                 ] StartTransactionEvent WT3_T31_Travel_Payment_Details2 [Network Analyzer (206c: d08)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c: d08)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 94)  PROXIED!
+[Web Request      (206c:279c)] "POST /cgi-bin/reservations.pl"   
+[Network Analyzer (206c:279c)]   (Sid: 94) Client -> Server @ : 971 bytes (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 94) Server -> Client : 2882 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 94) Server -> Client : 5 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 91) Connection Terminated (by Client)
+[Network Analyzer (206c:1ef4)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1ef4)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 95)  PROXIED!
+[Network Analyzer (206c:260c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c: 29c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:260c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 96)  PROXIED!
+[Network Analyzer (206c: 29c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid= 97)  PROXIED!
+[Network Analyzer (206c:1794)]   (Sid: 96) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1794)]   (Sid: 96) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:2624)]   (Sid: 97) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:2624)]   (Sid: 97) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:279c)]   (Sid: 96) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 97) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 94) Connection Terminated (by Server)
+[WebMultiInProcNotify_x64:  (206c:24a8)] Insert Text Check: "Invoice"
+[User action                 ] EndTransactionEvent WT3_T31_Travel_Payment_Details2 [User action                 ] StartTransactionEvent WT3_T32_Travel_Invoice2 [User action                 ] EndTransactionEvent WT3_T32_Travel_Invoice2 [User action                 ] StartTransactionEvent WT3_T33_Travel_Check_Itinerary [Network Analyzer (206c: d08)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c: d08)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 98)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 95) Connection Terminated (by Client)
+[Web Request      (206c:279c)] "GET /cgi-bin/welcome.pl?page=itinerary"   
+[Network Analyzer (206c:279c)]   (Sid: 98) Client -> Server @ : 566 bytes (Service=HTTP)
+[Network Analyzer (206c: 29c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c: 29c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 99)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 98) Server -> Client : 814 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 98) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /cgi-bin/nav.pl?page=menu&in=itinerary"   
+[Network Analyzer (206c:279c)]   (Sid: 98) Client -> Server @ : 568 bytes (Service=HTTP)
+[Web Request      (206c:279c)] "GET /cgi-bin/itinerary.pl"   
+[Network Analyzer (206c:279c)]   (Sid: 99) Client -> Server @ : 551 bytes (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 99) Server -> Client : 4065 bytes  (Service=HTTP)
+[Network Analyzer (206c: d08)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:279c)]   (Sid: 99) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /WebTours/images/cancelreservation.gif"   
+[Network Analyzer (206c:279c)]   (Sid: 99) Client -> Server @ : 568 bytes (Service=HTTP)
+[Network Analyzer (206c: 29c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:279c)]   (Sid: 99) Server -> Client : 1128 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid: 98) Server -> Client : 1749 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /WebTours/images/cancelallreservations.gif"   
+[Network Analyzer (206c:279c)]   (Sid: 99) Client -> Server @ : 572 bytes (Service=HTTP)
+[Network Analyzer (206c: 29c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=100)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid: 99) Server -> Client : 1039 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /WebTours/images/in_itinerary.gif"   
+[Network Analyzer (206c:279c)]   (Sid: 98) Client -> Server @ : 580 bytes (Service=HTTP)
+[Network Analyzer (206c: d08)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid=101)  PROXIED!
+[Network Analyzer (206c:2b04)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c: d6c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1610)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:279c)]   (Sid: 98) Server -> Client : 1030 bytes  (Service=HTTP)
+[Network Analyzer (206c:2b04)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid=102)  PROXIED!
+[Network Analyzer (206c: d6c)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid=103)  PROXIED!
+[Network Analyzer (206c:1610)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid=104)  PROXIED!
+[Network Analyzer (206c: a9c)]   (Sid:101) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c: a9c)]   (Sid:101) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:22b8)]   (Sid:102) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:22b8)]   (Sid:102) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:27a4)]   (Sid:103) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:27a4)]   (Sid:103) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:1188)]   (Sid:104) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1188)]   (Sid:104) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:2b04)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:279c)]   (Sid:101) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid:102) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid:103) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid:104) Connection Terminated (by Client)
+[Network Analyzer (206c:2b04)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid=105)  PROXIED!
+[Network Analyzer (206c: eec)]   (Sid:105) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c: eec)]   (Sid:105) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:279c)]   (Sid:105) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid: 99) Connection Terminated (by Server)
+[Network Analyzer (206c:279c)]   (Sid: 98) Connection Terminated (by Server)
+[WebMultiInProcNotify_x64:  (206c:24a8)] Insert Text Check: "Itinerary"
+[User action                 ] EndTransactionEvent WT3_T33_Travel_Check_Itinerary [User action                 ] StartTransactionEvent logout [Web Request      (206c:279c)] "GET /cgi-bin/welcome.pl?signOff=1"   
+[Network Analyzer (206c:279c)]   (Sid:100) Client -> Server @ : 563 bytes (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid:100) Server -> Client : 1067 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid:100) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /cgi-bin/nav.pl?in=home"   
+[Network Analyzer (206c:279c)]   (Sid:100) Client -> Server @ : 437 bytes (Service=HTTP)
+[Network Analyzer (206c:1610)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:2724)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1610)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=106)  PROXIED!
+[Network Analyzer (206c:279c)]   (Sid:100) Server -> Client : 1748 bytes  (Service=HTTP)
+[Web Request      (206c:279c)] "GET /WebTours/home.html"   
+[Network Analyzer (206c:279c)]   (Sid:106) Client -> Server @ : 533 bytes (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid:100) Server -> Client : 5 bytes  (Service=HTTP)
+[Network Analyzer (206c:279c)]   (Sid:106) Server -> Client : 194 bytes  (Service=HTTP)
+[Network Analyzer (206c:2b04)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:1610)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c: d08)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (206c:2724)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid=107)  PROXIED!
+[Network Analyzer (206c:2b04)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid=108)  PROXIED!
+[Network Analyzer (206c:1610)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid=109)  PROXIED!
+[Network Analyzer (206c: d08)] Request Connection: Remote Server @ 134.170.21.246:443   (Service=)  (Sid=110)  PROXIED!
+[Network Analyzer (206c: 9c0)]   (Sid:107) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c: 9c0)]   (Sid:107) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:2030)]   (Sid:108) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:2030)]   (Sid:108) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:1c50)]   (Sid:109) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:1c50)]   (Sid:109) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:2628)]   (Sid:110) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:AES128-SHA)
+[Network Analyzer (206c:2628)]   (Sid:110) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES256-GCM-SHA384)
+[Network Analyzer (206c:279c)]   (Sid:107) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid:108) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid:109) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid:110) Connection Terminated (by Client)
+[Network Analyzer (206c:279c)]   (Sid:106) Connection Terminated (by Server)
+[Network Analyzer (206c:279c)]   (Sid:100) Connection Terminated (by Server)
+[User action                 ] EndTransactionEvent logout 

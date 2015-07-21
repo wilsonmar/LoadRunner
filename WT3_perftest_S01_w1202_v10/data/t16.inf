@@ -1,0 +1,15 @@
+[t16]
+FileName1=t16.htm
+URL1=http://127.0.0.1:1080/cgi-bin/login.pl?username=&password=&getInfo=true
+Total=3
+RequestHeaderFile=t16_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t16_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_16.xml
+FileName2=t16_profileValidate.html
+URL2=http://127.0.0.1:1080/WebTours/profileValidate.js
+FileName3=t16_button_next.gif
+URL3=http://127.0.0.1:1080/WebTours/images/button_next.gif
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,10 @@
+[t22]
+FileName1=t21.html
+URL1=https://safebrowsing.google.com/safebrowsing/downloads?client=googlechrome&appver=41.0.2272.118&pver=3.0&key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw
+Total=1
+SnapshotXmlFile=snapshot_22.xml
+RequestHeaderFile=t22_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t22_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Date: Mon, 13 Apr 2015 20:24:40 GMT
+Server: Apache/2.2.21 (Win32)
+Expires: Sun, 12 Apr 2015 20:24:40 GMT
+Set-Cookie: MTUserInfo=firstName&whatever&username&jojo1&address2&whatever&hash&81&address1&whatever&lastName&whatever%0A; path=/
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=ISO-8859-1
+
