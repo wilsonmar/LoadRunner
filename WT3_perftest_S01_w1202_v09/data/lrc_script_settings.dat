@@ -3,7 +3,7 @@ Registry settings:
 	General Options
 		ThinkTimeThreshold	true
 		ThinkTimeThresholdVal	3
-		GenerateRecordingLog	false
+		GenerateRecordingLog	true
 		RecordPreInvocationMessages	true
 		RecordPostInvocationMessages	true
 		RecoverDeletedActions	false

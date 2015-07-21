@@ -1,0 +1,11 @@
+[t190]
+FileName1=t190.htm
+URL1=http://127.0.0.1:1080/cgi-bin/reservations.pl
+Total=1
+RequestHeaderFile=t190_RequestHeader.txt
+RequestBodyFile=t190_RequestBody.txt
+ResponseHeaderFile=t190_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_190.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

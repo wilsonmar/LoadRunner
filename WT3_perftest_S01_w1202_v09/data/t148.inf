@@ -1,0 +1,13 @@
+[t148]
+FileName1=t148.htm
+URL1=http://127.0.0.1:1080/cgi-bin/reservations.pl
+Total=2
+RequestHeaderFile=t148_RequestHeader.txt
+RequestBodyFile=t148_RequestBody.txt
+ResponseHeaderFile=t148_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_148.xml
+FileName2=t148_bookanother.gif
+URL2=http://127.0.0.1:1080/WebTours/images/bookanother.gif
+[ProtocolInfo]
+ProtocolId=QTWeb

@@ -1,0 +1,12 @@
+GET /cgi-bin/welcome.pl?page=search HTTP/1.1
+Accept: text/html, application/xhtml+xml, */*
+Referer: http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home
+Accept-Language: en-US
+User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)
+UA-CPU: AMD64
+Accept-Encoding: gzip, deflate
+Host: 127.0.0.1:1080
+DNT: 1
+Connection: Keep-Alive
+Cookie: MSO=SID&1436996605&MSO_JSFormSubmit1&on&MSO_JSVerify&on&MSO_SLoad&on&MSO_SErrors&on&MSO_JSFormSubmit2&on&MSO_ServerErrorsProb&50&MSO_ServerLoadProb&50; MTUserInfo=firstName&Jojo&address2&&username&jojo&hash&47&lastName&Bean%0A&address1&&creditCard&&expDate&%0A
+

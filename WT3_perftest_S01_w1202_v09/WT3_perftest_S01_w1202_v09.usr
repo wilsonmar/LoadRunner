@@ -28,7 +28,6 @@ WT3_Travel=WT3_Travel.c
 wi_functions=wi_functions.c
 Recording=Recording.c
 Recording_Travel=Recording_Travel.c
-WT3_Config=WT3_Config.c
 Recording_Travel_For_Validation=Recording_Travel_For_Validation.c
 vuser_end=vuser_end.c
 [RunLogicFiles]
@@ -48,7 +47,6 @@ WT3_Travel=1
 wi_functions=1
 Recording=1
 Recording_Travel=1
-WT3_Config=1
 Recording_Travel_For_Validation=1
 vuser_end=1
 [Recorded Actions]
@@ -60,7 +58,6 @@ WT3_Travel=0
 wi_functions=0
 Recording=1
 Recording_Travel=1
-WT3_Config=0
 Recording_Travel_For_Validation=1
 vuser_end=0
 [Replayed Actions]
@@ -72,7 +69,6 @@ WT3_Travel=1
 wi_functions=1
 Recording=1
 Recording_Travel=1
-WT3_Config=1
 Recording_Travel_For_Validation=1
 vuser_end=1
 [Interpreters]
@@ -84,7 +80,6 @@ WT3_Travel=cci
 wi_functions=cci
 Recording=cci
 Recording_Travel=cci
-WT3_Config=cci
 Recording_Travel_For_Validation=cci
 vuser_end=cci
 [TransactionsOrder]

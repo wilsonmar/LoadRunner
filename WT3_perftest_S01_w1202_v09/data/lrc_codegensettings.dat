@@ -18,7 +18,7 @@
           Cleanup    : CleanExtraEvents_CleanUp
                        
     ( 2) ApiEventParser  (name=ApiEventParser)
-          State      : OFF
+          State      : ON
           Protocols  : 
           Module     : api_event_parser.dll
           Initialize : ApiEventParser_Init

@@ -1,0 +1,88 @@
+f84
+<!-- Comments option is ON 
+
+These are used to make the automated parsing difficult.
+User must try and get the UserSession value.  There are several here, with similar boundaries.
+But none are the right value.
+
+<!DOCTYPE HTML>
+<HTML><HEAD><TITLE>Web Tours Navigation Bar</TITLE>
+<style>
+	blockquote {font-family: tahoma; font-size : 10pt}
+	H1 {font-family: tahoma; font-size : 22pt;color: #993333}
+	small {font-family: tahoma; font-size : 8pt}
+</style>
+</HEAD><BODY BGCOLOR="#E0E7F1"><br clear="both"/>
+<form method="post" action="login.pl" target="body">
+<input type="hidden" name="userSession" value="1943116438.02308627fQiQciApiVcfDfQDfpzitiHf"/>
+<form method="post" action="error.pl" onSubmit="doJSformSubmit1(this)" target="body">
+<input type="hidden" name="userSession" value="1116438.02308627fQiQciApiVcfDfQDfpzitiHf"/>
+<table border="0">
+<tr><td><font face="sans-serif" size=2>&nbsp;</font></td></tr>
+<tr><td><font face="sans-serif" size=2>&nbsp;Username</font></td></tr>
+<tr><td><input type="text" name="username" value="" size="18" maxlength="30">
+<tr><td><font face="sans-serif" size="2">&nbsp;Password</font></td></tr>
+<tr><td><input type="password" name="password" value="" size="18" maxlength="30"/></td></tr>
+<tr><td><input type="image" name="login" value="Login" alt="Login" border="1" src="/WebTours/images/mer_login.gif"/></td></tr>
+</table></form></form>
+</BODY></HTML>
+-->
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>Web Tours Navigation Bar</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body bgcolor="#E0E7F1">
+<script language="Javascript" src="/WebTours/JSFormSubmit.js"> <!--- 
+ //Form submit is ON 
+ --> </script>
+<script language=JavaScript> <!---
+// This JavaScript will uses it's own write methods to display all the HTML code.
+// This means that the HTML code is generated on the client side - not the server side.
+// In some cases, if there was some calculation done to create the HTML, there could
+// problems discovering what the HTML actually is.  To examine those problems in more 
+// detail, look into the other Server Options --> set/change URLs and calculating 
+// data before it is put into a hidden field.
+
+
+
+document.writeln ("<style>")
+document.writeln ("blockquote {font-family: tahoma; font-size : 10pt}")
+document.writeln ("H1 {font-family: tahoma; font-size : 22pt; color: #993333}")
+document.writeln ("H3 {font-family: tahoma; font-size : 10pt; color: black}")
+document.writeln ("small {font-family: tahoma; font-size : 8pt}")
+document.writeln ("</style>")
+document.writeln ("<form method="post" action="error.pl"  onSubmit="doJSFormSubmit1(this)" target="body">")
+document.writeln ("<input type="hidden" name="userSession" value="116438.02308627fQiQciApiVcfDfQDfpzitiHf"/>")
+document.writeln ("<table border="0"><tr><td>&nbsp;</td>")
+document.writeln ("<td>&nbsp;</td></tr>")
+document.writeln ("<tr><td>&nbsp;</td>")
+document.writeln ("<td>&nbsp;</td></tr>")
+document.writeln ("<tr><td>&nbsp;</td>")
+document.writeln ("<td><small>&nbsp;Username</small></td></tr>")
+document.writeln ("<tr><td>&nbsp;</td>")
+document.writeln ("<td><input type="text" name="username" value="" size="14" maxlength="14"/></td></tr>")
+document.writeln ("<tr><td>&nbsp;</td>")
+document.writeln ("<td><small>&nbsp;Password</small></td>")
+document.writeln ("<tr><td>&nbsp;</td>")
+document.writeln ("<td><input type="password" name="password" value="" size="14" maxlength="14"/></td></tr>")
+document.writeln ("<tr><td>&nbsp;</td>")
+document.writeln ("<td>&nbsp;</td></tr>")
+document.writeln ("<tr><td>&nbsp;</td>")
+document.writeln ("<td><input type="image" name="login" value="Login" alt="Login" border="1" ")
+document.writeln ("src="/WebTours/images/mer_login.gif"/></td></tr>")
+document.writeln ("<tr><td>&nbsp;</td><td>&nbsp;</td></t
+98
+r>")
+document.writeln ("</table><input type="hidden" name="JSFormSubmit" value="off"/>")
+document.writeln ("</form>")
+//  --></script>
+
+</body>
+</html>
+
+0
+

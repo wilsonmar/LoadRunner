@@ -1,0 +1,5 @@
+"MSO_Comments=on&MSO_JSCalc=on&MSO_JSFormSubmit1=on&MSO_JSFormSubmit2=on&MSO_JSVerify=on&MSO_JS"
+"WPages=on&MSO_Redirect=on&MSO_Redirects=on&MSO_SErrors=on&MSO_ServerErrorsProb=50&MSO_SLoad=on"
+"&MSO_ServerLoadProb=50&save=Update&.cgifields=MSO_Redirect&.cgifields=MSO_JSVerify&.cgifields="
+"MSO_JSFormSubmit1&.cgifields=MSO_JSCalc&.cgifields=MSO_SLoad&.cgifields=MSO_Redirects&.cgifiel"
+"ds=MSO_JSWPages&.cgifields=MSO_Comments&.cgifields=MSO_SErrors&.cgifields=MSO_JSFormSubmit2"

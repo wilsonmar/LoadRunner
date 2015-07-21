@@ -26,6 +26,9 @@ Action()
 		}
 	}
 
+	WT3_Admin_Run_Conditions();
+	
+		
 // --- Do the rest every iteration:
 
 	if( stricmp("SignUpErr",LPCSTR_RunType ) == FOUND 
