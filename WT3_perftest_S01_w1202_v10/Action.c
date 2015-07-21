@@ -6,9 +6,16 @@ Action()
 	     iActionIterations++; // increment from zero value defined in vuser_init.
 	 if( iActionIterations == 1){
 	     WT3_SignUpInOut_Init(); // establish variables.
+  
+		 lr_save_string("WT3_T03_URL_Landing_1","pTransName");
+ 		 WT3_Config_Run_Conditions();
+	     rc=WT3_URL_Landing(); // just for establishing state to invoke run conditions.
+ 		 WT3_Config_Run_Conditions();
+ 		 WT3_Invoke_Run_Conditions();
 	 }
 
-	if( stricmp("LandingOnly",LPCSTR_RunType ) == FOUND 
+
+	     if( stricmp("LandingOnly",LPCSTR_RunType ) == FOUND
 	||  stricmp("SignUp",LPCSTR_RunType ) == FOUND 
 	||  stricmp("SignInOnly",LPCSTR_RunType ) == FOUND 
 	||  stricmp("SignInOut",LPCSTR_RunType ) == FOUND 
@@ -24,10 +31,6 @@ Action()
 			lr_save_string("WT3_T03_URL_Landing","pTransName");
 			rc=WT3_URL_Landing();
 		}
-	}
-
-	if( iActionIterations == 1){
-		WT3_Config_Run_Conditions();
 	}
 	     
 // --- Do the rest every iteration:

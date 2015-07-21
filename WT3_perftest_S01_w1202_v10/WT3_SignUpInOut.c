@@ -73,25 +73,36 @@ WT3_URL_Landing(){
 	web_reg_find("Text=Welcome to the Web Tours site", 
 		LAST);
 	wi_start_transaction();
-/*Correlation comment - Do not change!  Original value='115695.667719725fQfVAQfpQAiDDDDDDfHAzpfHftf' Name ='userSession' Type ='ResponseBased'*/
-	web_reg_save_param_regexp(
-		"ParamName=userSession",
+	
+	if( stricmp("on", lr_eval_string("{MSO_JSFormSubmit1}") ) == FOUND
+	){
+		// Correlatie from response <input type="hidden" name="userSession" value="116443.360064804fQiQfffpDDDDDDDDDfQDHpDDc"/
+		// Regular expression:
+		// Only for Referer RequestURL containing /nav.pl:
+		web_reg_save_param_regexp( 
+		"ParamName=CorrelationParameter",
 		"RegExp=name=\"userSession\"\\ value=\"(.*?)\"/>\\\n<table\\ border",
-		SEARCH_FILTERS,
+		"SEARCH_FILTERS",
 		"Scope=Body",
 		"IgnoreRedirections=No",
 		"RequestUrl=*/nav.pl*",
 		LAST);
+	}
 
-	web_url("index.htm", 
+	web_url("index.htm",
 		"URL=http://127.0.0.1:1080/WebTours/index.htm", 
 		"Resource=0", 
 		"RecContentType=text/html", 
-		"Referer=", 
+		"Referer=http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home", 
 		"Snapshot=t1.inf", 
 		"Mode=HTML", 
 		LAST);
-		rc=wi_end_transaction();
+	lr_output_message(">> ParamName=CorrelationParameter=%s for MSO_JSFormSubmit1=%s."
+	                  ,lr_eval_string("{CorrelationParameter}")
+	                  ,lr_eval_string("{MSO_JSFormSubmit1}")
+	                  );
+
+	rc=wi_end_transaction();
 
 return 0;		
 } //WT3_URL_Landing	
