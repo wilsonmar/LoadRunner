@@ -54,6 +54,12 @@ WT3_SignUpInOut_Init(){ // Called from Action() on first iteration:
 	// Other countries have different daylight savings time dates.
 	//	lr_save_string("330","timezoneOffset"); // India Time, which has no daylight savings.
 	// WARNING: this number changes from 120 to 180 during daylight savings time.
+
+			lr_output_message(">> Iteration=%d timezoneOffset=\"%s\"."
+		                  ,iActionIterations
+		                  ,lr_eval_string("{timezoneOffset}")
+		                 );
+
 #endif // USE_TIMEZONEOFFSET
 	
 	return 0;

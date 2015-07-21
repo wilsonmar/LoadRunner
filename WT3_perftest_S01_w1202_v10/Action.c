@@ -26,7 +26,9 @@ Action()
 		}
 	}
 
-	WT3_Config_Run_Conditions();
+	if( iActionIterations == 1){
+		WT3_Config_Run_Conditions();
+	}
 	     
 // --- Do the rest every iteration:
 
@@ -44,11 +46,9 @@ Action()
 		lr_save_string(lr_eval_string("{UserIds_userid}"),"parm_userid");
 		lr_save_string(lr_eval_string("{UserIds_pwd}"),"parm_pwd");
 		wi_startPrintingInfo();
-		lr_output_message(">> Iteration=%d User=\"%s\" timezoneOffset=\"%s\"."
+		lr_output_message(">> Iteration=%d User=\"%s\"."
 		                  ,iActionIterations
-		                  ,lr_eval_string("{parm_userid}")
-		                  ,lr_eval_string("{timezoneOffset}")
-		                 );
+		                  ,lr_eval_string("{parm_userid}")		                 );
 		wi_stopPrinting();
 
 

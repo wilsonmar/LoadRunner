@@ -14,6 +14,7 @@ if( stricmp("All",LPCSTR_RunType ) == FOUND
 
 
 int WT3_Config_Run_Conditions(){ // after landing
+	// TODO: Separate 
 
 	// Switch from "<OFF>" to "on":
 	lr_save_string("on","MSO_Comments");
