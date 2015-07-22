@@ -30,6 +30,23 @@ int WT3_Config_Run_Conditions(){ // after landing
 	lr_save_string("<OFF>","MSO_SLoad");
 	lr_save_string("50","MSO_ServerLoadProb");
 
+	lr_output_message(">> MSO_Comments=%s",lr_eval_string("{MSO_Comments}"));
+	lr_output_message(">> MSO_JSCalc=%s",lr_eval_string("{MSO_JSCalc}"));
+	lr_output_message(">> MSO_JSCalc=%s",lr_eval_string("{MSO_JSCalc}"));
+	lr_output_message(">> MSO_JSFormSubmit1=%s",lr_eval_string("{MSO_JSFormSubmit1}"));
+	lr_output_message(">> MSO_JSFormSubmit2=%s",lr_eval_string("{MSO_JSFormSubmit2}"));
+	lr_output_message(">> MSO_JSVerify=%s",lr_eval_string("{MSO_JSVerify}"));
+	lr_output_message(">> MSO_JSWPages=%s",lr_eval_string("{MSO_JSWPages}"));
+	lr_output_message(">> MSO_Redirect=%s",lr_eval_string("{MSO_Redirect}"));
+	lr_output_message(">> MSO_Redirects=%s",lr_eval_string("{MSO_Redirects}"));
+	lr_output_message(">> MSO_SErrors=%s (%s%%)",lr_eval_string("{MSO_SErrors}"),lr_eval_string("{MSO_ServerErrorsProb}"));
+	lr_output_message(">> MSO_SLoad=%s (%s%%)",lr_eval_string("{MSO_SLoad}"),lr_eval_string("{MSO_ServerLoadProb}"));
+
+	return 0;
+}
+int WT3_Invoke_Run_Conditions(){ // after landing
+	// TODO: Separate 
+
 	web_link("administration", 
 		"Text=administration", 
 		"Snapshot=t2.inf", 
@@ -52,18 +69,6 @@ int WT3_Config_Run_Conditions(){ // after landing
 		"Name=MSO_ServerLoadProb", "Value={MSO_ServerLoadProb}", ENDITEM, 
 		"Name=save", "Value=Update", ENDITEM, 
 		LAST);
-
-	lr_output_message(">> MSO_Comments=%s",lr_eval_string("{MSO_Comments}"));
-	lr_output_message(">> MSO_JSCalc=%s",lr_eval_string("{MSO_JSCalc}"));
-	lr_output_message(">> MSO_JSCalc=%s",lr_eval_string("{MSO_JSCalc}"));
-	lr_output_message(">> MSO_JSFormSubmit1=%s",lr_eval_string("{MSO_JSFormSubmit1}"));
-	lr_output_message(">> MSO_JSFormSubmit2=%s",lr_eval_string("{MSO_JSFormSubmit2}"));
-	lr_output_message(">> MSO_JSVerify=%s",lr_eval_string("{MSO_JSVerify}"));
-	lr_output_message(">> MSO_JSWPages=%s",lr_eval_string("{MSO_JSWPages}"));
-	lr_output_message(">> MSO_Redirect=%s",lr_eval_string("{MSO_Redirect}"));
-	lr_output_message(">> MSO_Redirects=%s",lr_eval_string("{MSO_Redirects}"));
-	lr_output_message(">> MSO_SErrors=%s (%s%%)",lr_eval_string("{MSO_SErrors}"),lr_eval_string("{MSO_ServerErrorsProb}"));
-	lr_output_message(">> MSO_SLoad=%s (%s%%)",lr_eval_string("{MSO_SLoad}"),lr_eval_string("{MSO_ServerLoadProb}"));
 
 	web_url("Return to the Web Tours Homepage", 
 		"URL=http://127.0.0.1:1080/cgi-bin/welcome.pl", 
