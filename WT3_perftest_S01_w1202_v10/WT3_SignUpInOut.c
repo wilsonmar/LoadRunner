@@ -1,20 +1,24 @@
+/*! 
+\file WT3_SignUpInOut.c
+\brief Contains functions common to most apps.
+
+WT3_SignUpInOut_Init()
+WT3_Customer_attribute_set(){
+WT3_UseCase_attribute_set(){
+
+WT3_URL_Landing()
+WT3_SignUpErr()
+WT3_SignUp()
+WT3_SignInErr()
+WT3_SignIn()
+WT3_SignOut()
+
+*/
+
 WT3_SignUpInOut()
 {
-	// This file contains these functions:
-
-	// WT3_SignUpInOut_Init()
-	// WT3_Customer_attribute_set(){
-	// WT3_UseCase_attribute_set(){
-
-	// WT3_URL_Landing()
-	// WT3_SignUpErr()
-	// WT3_SignUp()
-	// WT3_SignInErr()
-	// WT3_SignIn()
-	// WT3_SignOut()
-
 	return 0;
-} // WT3_SignUpInOut()
+}
 
 WT3_SignUpInOut_Init(){ // Called from Action() on first iteration:
 	int rc=LR_PASS;

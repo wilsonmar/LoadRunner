@@ -1,3 +1,9 @@
+/*! 
+\file WT3_Config.c
+\brief Contains functions to establish run conditions and other configurations.
+
+*/
+
 WT3_Config()
 {
 	return 0;

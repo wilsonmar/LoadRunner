@@ -1,5 +1,6 @@
-WT3_Travel(){ // call from within Action.c.
-	int rc=LR_PASS; int i=0;
+/*! 
+\file WT3_Travel.c
+\brief Contains functions specific to Travel booking functionality in WebTours app (hence the WT3_ prefix).
 
 	// WT3_T20_Travel_Data()
 	// WT3_T21_Travel_Home()
@@ -10,6 +11,11 @@ WT3_Travel(){ // call from within Action.c.
 	// WT3_T26_Travel_Invoice()
 	// WT3_T27_Travel_Click_Book_Another()
 	// WT3_T33_Travel_Check_Itinerary()
+
+*/
+
+WT3_Travel(){ // call from within Action.c.
+	int rc=LR_PASS; int i=0;
 
 	WT3_T20_Travel_Data();
 	
@@ -109,6 +115,13 @@ WT3_T20_Travel_Data(){
 	lr_save_datetime("%m/%d/%Y", DATE_NOW +7,"parm_returnDate");
 	
 	// TODO: Vary departCity and returnCity each sub-iteration.
+	lr_save_string("Denver","parm_departCity");
+	lr_save_string("030","parm_departCityNum");
+
+	lr_save_string("Los Angeles","parm_arriveCity");
+	lr_save_string("251","parm_arriveCityNum");
+
+	lr_save_string("1","parm_numPassengers");
 
 	return 0;
 }
@@ -145,18 +158,18 @@ int rc=LR_PASS;
 	web_submit_form("reservations.pl",
 		"Snapshot=t34.inf",
 		ITEMDATA,
-		"Name=depart", "Value=Denver", ENDITEM,
+		"Name=depart", "Value={parm_departCity}", ENDITEM,
 		"Name=departDate", "Value={parm_departDate}", ENDITEM,
-		"Name=arrive", "Value=Los Angeles", ENDITEM,
+		"Name=arrive", "Value={parm_arriveCity}", ENDITEM,
 		"Name=returnDate", "Value={parm_returnDate}", ENDITEM,
-		"Name=numPassengers", "Value=1", ENDITEM,
+		"Name=numPassengers", "Value={parm_numPassengers}", ENDITEM,
 		"Name=roundtrip", "Value=<OFF>", ENDITEM,
 		"Name=seatPref", "Value=None", ENDITEM,
 		"Name=seatType", "Value=Coach", ENDITEM,
 		"Name=findFlights.x", "Value=40", ENDITEM,
 		"Name=findFlights.y", "Value=6", ENDITEM,
 		LAST);
-	   rc=wi_end_transaction();
+	   rc=wi_end_transaction(); // 
 	return rc;
 } //WT3_T23_Travel_Flight_Lookup
 	
@@ -178,25 +191,49 @@ int rc=LR_PASS;
 WT3_T25_Travel_Payment_Details(){
 	int rc=LR_PASS;
 		
-	web_reg_find("Text=Invoice",LAST);
-	   wi_start_transaction();
-	web_submit_form("reservations.pl_3", 
-		"Snapshot=t36.inf", 
-		ITEMDATA, 
-		"Name=firstName", "Value=whatever", ENDITEM, 
-		"Name=lastName", "Value=whatever", ENDITEM, 
-		"Name=address1", "Value=whatever", ENDITEM, 
-		"Name=address2", "Value=whatever", ENDITEM, 
-		"Name=pass1", "Value=whatever whatever", ENDITEM, 
-		"Name=creditCard", "Value=12345678", ENDITEM, 
-		"Name=expDate", "Value=15/16", ENDITEM, 
-		"Name=saveCC", "Value=<OFF>", ENDITEM, 
-		"Name=buyFlights.x", "Value=41", ENDITEM, 
-		"Name=buyFlights.y", "Value=9", ENDITEM, 
-		LAST);
-	  rc=wi_end_transaction();
+	int iteration_number=0;
+	int x=0;
+	do {
+		iteration_number +=1;
+		if( iteration_number == 3){ // if retry more than several times:
+			rc = LR_FAIL; // Mark as error.
+			break; // out of do while loop.
+		}
+
+		web_reg_find("Text=Invoice",LAST);
+
+		wi_start_transaction();
+	
+		// TODO: Add sample names and addresses to reservation payment details.
+		// TODO: If one sample record is found invalid, skip to the next record set.
+	
+		web_submit_form("reservations.pl_3", 
+			"Snapshot=t36.inf", 
+			ITEMDATA, 
+			"Name=firstName", "Value=whatever", ENDITEM, 
+			"Name=lastName", "Value=whatever", ENDITEM, 
+			"Name=address1", "Value=whatever", ENDITEM, 
+			"Name=address2", "Value=whatever", ENDITEM, 
+			"Name=pass1", "Value=whatever whatever", ENDITEM, 
+			"Name=creditCard", "Value=12345678", ENDITEM, 
+			"Name=expDate", "Value=15/16", ENDITEM, 
+			"Name=saveCC", "Value=<OFF>", ENDITEM, 
+			"Name=buyFlights.x", "Value=41", ENDITEM, 
+			"Name=buyFlights.y", "Value=9", ENDITEM, 
+			LAST);
+ 	    // These values are validated only if MSO_JSVerify="on".
+		rc=wi_end_transaction();
+	  	// if "Server Database Error" is returned // if MSO_SLoad="on".
+		
+			// lr_user_data_point("WT3_T25_Travel_Payment_Details_retry",1); // to track retries occuring.
+		// }else{ // No error:
+		//	 break; // out of do/while loop.
+		// }		
+	}
+	while(x==0);
+	
 	return rc;
-	} //WT3_T25_Travel_Payment_Details
+} //WT3_T25_Travel_Payment_Details
 
 WT3_T26_Travel_Invoice(){
 	int rc=LR_PASS;
