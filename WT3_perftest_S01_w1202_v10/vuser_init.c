@@ -1,4 +1,11 @@
-// Global definitions within vuser_init.c
+/*! 
+\file vuser_init.c
+\brief Contains vuser_init() function invoked one-time at beginning of run. 
+       But we put such code in Action.c within if( iActionIterations == 1){.
+Also contains declaration of global variables accessible from functions in all other action files.
+*/
+
+// Global definitions within vuser_init.c:
 
 // VuGen files require explicit declaration of C functions that do not return integers. 
 // Function prototypes below force the intepreter to save chars in read/write memory, which
@@ -7,6 +14,10 @@
 		
 //// Define C Statics (like built-in LR_PASS and LR_FAIL) and variables:
 	#define FOUND 0
+  //	0 = FALSE/NO in C if statements:
+	#define TRUE  0
+  //   !0 = TRUE/YES in C if statements:
+	#define FALSE -1
 	// NOTE: No semicolon after static definitions.
 
 //// Run-Time Settings Attributes or command-line LPCSTR (LoadRunner Pointer C Strings) and associated variables:
@@ -65,11 +76,6 @@
 
 vuser_init()
 {
-//	Recording_Travel();
-//	lr_output_message(">> Just stop here.");
-		
-	// First iteration activity is in SignInOut.c
-	
 	return 0;
 }
 

@@ -1,3 +1,8 @@
+/*! 
+\file Action.c
+\brief Contains Action() function compiler looks for to invoke every iteration during run. 
+*/
+
 Action()
 {
 	int rc=LR_PASS;

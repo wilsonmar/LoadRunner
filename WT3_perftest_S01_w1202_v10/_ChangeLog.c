@@ -1,3 +1,10 @@
+/*! 
+\file _ChangeLog.c
+\brief Contains a short description of changes to the set of coding and data files.
+*/
+
+// v10 2015.07.23 wm: Add Doxygen file headers.
+
 // v09 2015.04.23 wm: Rename to parm_departDate and parm_returnDate
 // v09 2015.04.23 am: Add lr_save_string functions
 // v09 2015.04.23 am: Add "WT3_T24_Travel_Find_Flight" and "WT3_T30_Travel_Find_Flight2" Transacion name.

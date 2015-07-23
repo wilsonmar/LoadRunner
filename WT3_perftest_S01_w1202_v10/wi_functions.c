@@ -1,5 +1,7 @@
-wi_functions()
-{
+/*! 
+\file wi_functions.c
+\brief Contains functions to enhance capability that can be used by other LoadRunner scripts.
+
 	// int wi_set_unique_id(){
 	// int wi_get_vuser_pid(){
 	// int wi_set_Think_Time(){
@@ -9,7 +11,7 @@ wi_functions()
 	// wi_set_URLSource_attribute(){
 
 	// wi_start_transaction(){
-	// int wi_end_transaction(){
+	// wi_end_transaction(){
 
 	// wi_setPrinting(){
 	// wi_startPrintingError(){
@@ -26,6 +28,10 @@ wi_functions()
 	// int wi_set_pURLtoShorten_file_recs(){
 	// int wi_set_VTS3(){
 
+*/
+
+wi_functions()
+{
 	return 0;
 }
 
