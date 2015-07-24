@@ -124,3 +124,5 @@ WT3_T31_Travel_Payment_Details2=
 WT3_T32_Travel_Invoice2=
 WT3_T33_Travel_Check_Itinerary=
 logout=
+[UserDataPoint]
+DBErr_retries=
