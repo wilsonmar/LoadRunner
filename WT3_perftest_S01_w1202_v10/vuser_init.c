@@ -14,10 +14,8 @@ Also contains declaration of global variables accessible from functions in all o
 		
 //// Define C Statics (like built-in LR_PASS and LR_FAIL) and variables:
 	#define FOUND 0
-  //	0 = FALSE/NO in C if statements:
-	#define TRUE  0
-  //   !0 = TRUE/YES in C if statements:
-	#define FALSE -1
+  //	0 = FALSE/NO in C if statements
+  //   !0 = TRUE/YES in C if statements
 	// NOTE: No semicolon after static definitions.
 
 //// Run-Time Settings Attributes or command-line LPCSTR (LoadRunner Pointer C Strings) and associated variables:

@@ -141,6 +141,7 @@ WT3_T22_Travel_Search_Flight(){
 int rc=LR_PASS;
 	web_reg_find("Text=Find Flight", LAST);
 	wi_start_transaction();
+	// Click "Fights" button on Home screen after login:
 	web_image("Search Flights Button", 
 		"Alt=Search Flights Button", 
 		"Snapshot=t33.inf", 
@@ -186,7 +187,7 @@ int rc=LR_PASS;
 		LAST);
 	 rc=wi_end_transaction();
 	return rc;
-	} //WT3_T24_Find_Flight
+} // WT3_T24_Find_Flight
 
 WT3_T25_Travel_Payment_Details(){
 	int rc=LR_PASS;
@@ -201,6 +202,9 @@ WT3_T25_Travel_Payment_Details(){
 		}
 
 		web_reg_find("Text=Invoice",LAST);
+		web_reg_find("Text=Server Database Error" ,"SaveCount=DBErr_count", LAST );
+
+		lr_save_string("John Joe"			,"SignUp_pass1"); // Passenger Names:
 
 		wi_start_transaction();
 	
@@ -210,25 +214,29 @@ WT3_T25_Travel_Payment_Details(){
 		web_submit_form("reservations.pl_3", 
 			"Snapshot=t36.inf", 
 			ITEMDATA, 
-			"Name=firstName", "Value=whatever", ENDITEM, 
-			"Name=lastName", "Value=whatever", ENDITEM, 
-			"Name=address1", "Value=whatever", ENDITEM, 
-			"Name=address2", "Value=whatever", ENDITEM, 
-			"Name=pass1", "Value=whatever whatever", ENDITEM, 
-			"Name=creditCard", "Value=12345678", ENDITEM, 
+			"Name=firstName"		,"Value={SignUp_firstName}", ENDITEM,
+			"Name=lastName"			,"Value={SignUp_lastName}", ENDITEM,
+			"Name=address1"			,"Value={SignUp_address1}", ENDITEM,
+			"Name=address2"			,"Value={SignUp_address2}", ENDITEM,
+			"Name=pass1"			,"Value={SignUp_pass1}", ENDITEM, 
+			"Name=creditCard","Value=12345678", ENDITEM, 
 			"Name=expDate", "Value=15/16", ENDITEM, 
 			"Name=saveCC", "Value=<OFF>", ENDITEM, 
 			"Name=buyFlights.x", "Value=41", ENDITEM, 
 			"Name=buyFlights.y", "Value=9", ENDITEM, 
 			LAST);
  	    // These values are validated only if MSO_JSVerify="on".
-		rc=wi_end_transaction();
-	  	// if "Server Database Error" is returned // if MSO_SLoad="on".
-		
-			// lr_user_data_point("WT3_T25_Travel_Payment_Details_retry",1); // to track retries occuring.
-		// }else{ // No error:
-		//	 break; // out of do/while loop.
-		// }		
+
+  	    // if run condition MSO_SLoad="on" and selected by probability:
+ 	    if( atoi( lr_eval_string("{DBErr_count}") ) > 0 ){ // DBErr found:
+				rc=wi_end_transaction();
+				//lr_user_data_point(lr_eval_string("{pTransName}"),1); // to track retries occuring due to DBErr.
+				lr_user_data_point("DBErr_retries",1); // to track retries occuring due to DBErr.
+				// Continue to loop again to handle error with retry (not end script run)
+  	    }else{ // normal no error:
+			rc=wi_end_transaction();
+			break; // out of do/while loop.
+  	    }		
 	}
 	while(x==0);
 	

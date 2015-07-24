@@ -112,7 +112,16 @@ return 0;
 } //WT3_URL_Landing	
 	
 
+
+WT3_SignUp_Data(){ // one-time only.
 	
+	lr_save_string("POBOX 1"			,"SignUp_address1");
+	lr_save_string("Anywhere, CA 92341"	,"SignUp_address2");
+
+return 0;
+} //WT3_URL_Landing	
+
+
 WT3_SignUp_Error(){
 	int rc=LR_PASS;
 
@@ -167,8 +176,8 @@ WT3_SignUp(){
 		"Name=passwordConfirm", "Value={parm_pwd}", ENDITEM, 
 		"Name=firstName", "Value={parm_userid}", ENDITEM, 
 		"Name=lastName", "Value={global_unique_id}", ENDITEM, 
-		"Name=address1", "Value=", ENDITEM, 
-		"Name=address2", "Value=", ENDITEM, 
+		"Name=address1"			,"Value={SignUp_address1}", ENDITEM,
+		"Name=address2"			,"Value={SignUp_address2}", ENDITEM,
 		"Name=register.x", "Value=50", ENDITEM, 
 		"Name=register.y", "Value=5", ENDITEM, 
 		LAST);

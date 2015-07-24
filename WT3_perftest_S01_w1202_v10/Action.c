@@ -17,6 +17,7 @@ Action()
 	     rc=WT3_URL_Landing(); // just for establishing state to invoke run conditions.
  		 WT3_Config_Run_Conditions();
  		 WT3_Invoke_Run_Conditions();
+ 		 WT3_SignUp_Data();
 	 }
 
 
