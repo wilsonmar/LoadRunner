@@ -1,0 +1,1294 @@
+Virtual User Script started at : 7/21/2015 11:38:24 AM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.0.0 for Windows 7; build 2739 (Nov 30 2014 23:13:05)  	[MsgId: MMSG-27143]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Run-Time Settings file: "C:\githubs\LoadRunner\WT3_perftest_S01_w1202_v10\\default.cfg"  	[MsgId: MMSG-27141]
+Vuser directory: "C:\githubs\LoadRunner\WT3_perftest_S01_w1202_v10"  	[MsgId: MMSG-27052]
+Vuser output directory: "C:\githubs\LoadRunner\WT3_perftest_S01_w1202_v10"  	[MsgId: MMSG-27050]
+Operating system's current working directory: "c:\githubs\loadrunner\wt3_perftest_s01_w1202_v10"  	[MsgId: MMSG-27048]
+UTC (GMT) start date/time   : 2015-07-21 17:38:24  	[MsgId: MMSG-26992]
+LOCAL start date/time       : 2015-07-21 11:38:24  	[MsgId: MMSG-26991]
+Local daylight-Savings-Time : Yes  	[MsgId: MMSG-26990]
+Some of the Run-Time Settings:  	[MsgId: MMSG-27142]
+    Download non-HTML resources: Yes  	[MsgId: MMSG-27018]
+    Verification checks: Yes  	[MsgId: MMSG-27017]
+    Convert from/to UTF-8: No  	[MsgId: MMSG-27016]
+    Simulate a new user each iteration: No  	[MsgId: MMSG-27009]
+    Non-critical item errors as warnings: Yes  	[MsgId: MMSG-27008]
+    HTTP errors as warnings: No  	[MsgId: MMSG-27007]
+    WinInet replay instead of Sockets: No  	[MsgId: MMSG-27006]
+    HTTP version: 1.1  	[MsgId: MMSG-27005]
+    Keep-Alive HTTP connections: Yes  	[MsgId: MMSG-27004]
+    Max self Meta refresh updates: 2  	[MsgId: MMSG-27003]
+    No proxy is used (direct connection to the Internet)  	[MsgId: MMSG-27171]
+    DNS caching: Yes  	[MsgId: MMSG-27035]
+    Simulate browser cache: Yes  	[MsgId: MMSG-27034]
+        Cache URLs requiring content (e.g., HTMLs): Yes  	[MsgId: MMSG-27033]
+            Additional URLs requiring content: text/xml;text/plain  	[MsgId: MMSG-27032]
+        Check for newer versions every visit to the page: No  	[MsgId: MMSG-27031]
+    Page download timeout (sec): 120  	[MsgId: MMSG-27030]
+    Resource Page Timeout is a Warning: No  	[MsgId: MMSG-27029]
+    ContentCheck enabled: Yes  	[MsgId: MMSG-27028]
+    ContentCheck script-level file: "C:\githubs\LoadRunner\WT3_perftest_S01_w1202_v10\LrwiAedScript.xml"  	[MsgId: MMSG-27027]
+    Enable Web Page Breakdown: No  	[MsgId: MMSG-27026]
+    Enable connection data points: Yes  	[MsgId: MMSG-27023]
+    Process socket after reschedule: Yes  	[MsgId: MMSG-27022]
+    Snapshot on error: No  	[MsgId: MMSG-27021]
+    Define each step as a transaction: No  	[MsgId: MMSG-27020]
+    Read beyond Content-Length: No  	[MsgId: MMSG-26994]
+    Parse HTML Content-Type: TEXT  	[MsgId: MMSG-26999]
+    Graph hits per second and HTTP status codes: Yes  	[MsgId: MMSG-26998]
+    Graph response bytes per second: Yes  	[MsgId: MMSG-26997]
+    Graph pages per second: No  	[MsgId: MMSG-26996]
+    Web recorder version ID: 10  	[MsgId: MMSG-26995]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Starting action Action.
+wi_functions.c(440): >> Attribute "Verbosity" not specified in command-line or run-time settings. Default to "4".
+wi_functions.c(460): web_set_max_html_param_len started  	[MsgId: MMSG-26355]
+wi_functions.c(460): web_set_max_html_param_len was successful  	[MsgId: MMSG-26392]
+wi_functions.c(54): >> Controller=None, Host=WIN-HJA4A353DRG, ScenarioID=0, Group=None, Vuser=-1, PID=3828.
+wi_functions.c(523): >> Attribute "RunType"="SignInOnly".
+wi_functions.c(616): >> Attribute "UseCase"=NoOp for no operation.
+wi_functions.c(127): >> floatThinkTimeSecs=   10.50 from coded default.
+WT3_SignUpInOut.c(38): web_set_sockets_option started  	[MsgId: MMSG-26355]
+WT3_SignUpInOut.c(38): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+WT3_SignUpInOut.c(73): web_reg_find started  	[MsgId: MMSG-26355]
+WT3_SignUpInOut.c(73): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+wi_functions.c(145): Notify: Transaction "WT3_T03_URL_Landing" started.
+WT3_SignUpInOut.c(77): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+WT3_SignUpInOut.c(77): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+WT3_SignUpInOut.c(86): web_url("index.htm") started  	[MsgId: MMSG-26355]
+WT3_SignUpInOut.c(86): t=392ms: Connecting [0] to host 127.0.0.1:1080  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): t=393ms: Connected socket [0] from 127.0.0.1:4972 to 127.0.0.1:1080 in 1 ms  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): t=393ms: 241-byte request headers for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
+WT3_SignUpInOut.c(86):     GET /WebTours/index.htm HTTP/1.1\r\n
+WT3_SignUpInOut.c(86):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+WT3_SignUpInOut.c(86):     \n
+WT3_SignUpInOut.c(86):     Accept-Encoding: gzip, deflate\r\n
+WT3_SignUpInOut.c(86):     Accept-Language: en-US\r\n
+WT3_SignUpInOut.c(86):     Accept: */*\r\n
+WT3_SignUpInOut.c(86):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(86):     Host: 127.0.0.1:1080\r\n
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=409ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
+WT3_SignUpInOut.c(86):     HTTP/1.1 200 OK\r\n
+WT3_SignUpInOut.c(86):     Date: Tue, 21 Jul 2015 17:38:24 GMT\r\n
+WT3_SignUpInOut.c(86):     Server: Apache/2.2.21 (Win32)\r\n
+WT3_SignUpInOut.c(86):     Last-Modified: Mon, 27 May 2013 20:20:21 GMT\r\n
+WT3_SignUpInOut.c(86):     ETag: "200000001d7ca-16e-4ddb8e0bc4b40"\r\n
+WT3_SignUpInOut.c(86):     Accept-Ranges: bytes\r\n
+WT3_SignUpInOut.c(86):     Content-Length: 366\r\n
+WT3_SignUpInOut.c(86):     Keep-Alive: timeout=5, max=100\r\n
+WT3_SignUpInOut.c(86):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(86):     Content-Type: text/html\r\n
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=421ms: 366-byte response body for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
+WT3_SignUpInOut.c(86):     <HTML>\n
+WT3_SignUpInOut.c(86):     <HEAD>\n
+WT3_SignUpInOut.c(86):     <title>Web Tours</title>\n
+WT3_SignUpInOut.c(86):     <frameset rows = "65,*" border="1" bordercolor="#E0E7F1">\n
+WT3_SignUpInOut.c(86):     <frame name="header" src="header.html" scrolling="no" noresize="noresize" marginheight="2"
+WT3_SignUpInOut.c(86):      marginwidth="2"/>\n
+WT3_SignUpInOut.c(86):     <frame name="body" src="/cgi-bin/welcome.pl?signOff=true" scrolling="auto" noresize="nores
+WT3_SignUpInOut.c(86):     ize" marginheight="2" marginwidth="2" />\n
+WT3_SignUpInOut.c(86):     </frameset>\n
+WT3_SignUpInOut.c(86):     </HEAD>\n
+WT3_SignUpInOut.c(86):     </HTML>\n
+WT3_SignUpInOut.c(86):     \n
+WT3_SignUpInOut.c(86): Detected non-resource "http://127.0.0.1:1080/WebTours/header.html" in "http://127.0.0.1:1080/WebTours/index.htm"  	[MsgId: MMSG-26574]
+WT3_SignUpInOut.c(86): Detected non-resource "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" in "http://127.0.0.1:1080/WebTours/index.htm"  	[MsgId: MMSG-26574]
+WT3_SignUpInOut.c(86): t=423ms: Request done "http://127.0.0.1:1080/WebTours/index.htm"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): Search registration for "userSession" parameter is filtered by "Request URL"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): t=427ms: Connecting [1] to host 127.0.0.1:1080  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): t=428ms: Connecting [2] to host 127.0.0.1:1080  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): t=428ms: Connected socket [1] from 127.0.0.1:4973 to 127.0.0.1:1080 in 1 ms  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): t=428ms: 294-byte request headers for "http://127.0.0.1:1080/WebTours/header.html" (RelFrameId=1.1, Internal ID=2)
+WT3_SignUpInOut.c(86):     GET /WebTours/header.html HTTP/1.1\r\n
+WT3_SignUpInOut.c(86):     Referer: http://127.0.0.1:1080/WebTours/index.htm\r\n
+WT3_SignUpInOut.c(86):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+WT3_SignUpInOut.c(86):     \n
+WT3_SignUpInOut.c(86):     Accept-Encoding: gzip, deflate\r\n
+WT3_SignUpInOut.c(86):     Accept-Language: en-US\r\n
+WT3_SignUpInOut.c(86):     Accept: */*\r\n
+WT3_SignUpInOut.c(86):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(86):     Host: 127.0.0.1:1080\r\n
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=430ms: Connected socket [2] from 127.0.0.1:4974 to 127.0.0.1:1080 in 2 ms  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): t=430ms: 305-byte request headers for "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" (RelFrameId=1.2, Internal ID=3)
+WT3_SignUpInOut.c(86):     GET /cgi-bin/welcome.pl?signOff=true HTTP/1.1\r\n
+WT3_SignUpInOut.c(86):     Referer: http://127.0.0.1:1080/WebTours/index.htm\r\n
+WT3_SignUpInOut.c(86):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+WT3_SignUpInOut.c(86):     \n
+WT3_SignUpInOut.c(86):     Accept-Encoding: gzip, deflate\r\n
+WT3_SignUpInOut.c(86):     Accept-Language: en-US\r\n
+WT3_SignUpInOut.c(86):     Accept: */*\r\n
+WT3_SignUpInOut.c(86):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(86):     Host: 127.0.0.1:1080\r\n
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=436ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/header.html" (RelFrameId=1.1, Internal ID=2)
+WT3_SignUpInOut.c(86):     HTTP/1.1 200 OK\r\n
+WT3_SignUpInOut.c(86):     Date: Tue, 21 Jul 2015 17:38:24 GMT\r\n
+WT3_SignUpInOut.c(86):     Server: Apache/2.2.21 (Win32)\r\n
+WT3_SignUpInOut.c(86):     Last-Modified: Mon, 27 May 2013 20:20:21 GMT\r\n
+WT3_SignUpInOut.c(86):     ETag: "200000001d7b0-2c6-4ddb8e0bc4b40"\r\n
+WT3_SignUpInOut.c(86):     Accept-Ranges: bytes\r\n
+WT3_SignUpInOut.c(86):     Content-Length: 710\r\n
+WT3_SignUpInOut.c(86):     Keep-Alive: timeout=5, max=100\r\n
+WT3_SignUpInOut.c(86):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(86):     Content-Type: text/html\r\n
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=437ms: 710-byte response body for "http://127.0.0.1:1080/WebTours/header.html" (RelFrameId=1.1, Internal ID=2)
+WT3_SignUpInOut.c(86):     <!DOCTYPE html>\n
+WT3_SignUpInOut.c(86):     <HTML xmlns="http://www.w3.org/1999/xhtml">\n
+WT3_SignUpInOut.c(86):     <HEAD></HEAD>\n
+WT3_SignUpInOut.c(86):     <BODY bgcolor="#003366" leftmargin="0" marginheight="0" marginwidth="0" topmargin="0">\n
+WT3_SignUpInOut.c(86):     \t\t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n
+WT3_SignUpInOut.c(86):     bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \n
+WT3_SignUpInOut.c(86):     \t\t<table width="100%" border="0" cellspacing="0" cellpadding="0">\n
+WT3_SignUpInOut.c(86):     \t\t\t<tr>\n
+WT3_SignUpInOut.c(86):     \t\t\t\t<td align="left" valign="middle" width="50%"><img src="images/hp_logo.png" alt="" 
+WT3_SignUpInOut.c(86):     height="45" width="69" align="absmiddle" border="0"/><img src="images/webtours.png" alt=""
+WT3_SignUpInOut.c(86):      height="45" width="130" align="absmiddle" border="0"/></td>\n
+WT3_SignUpInOut.c(86):     \t\t\t\t<td align="right"></td>\n
+WT3_SignUpInOut.c(86):     \t\t\t\t<td></td>\n
+WT3_SignUpInOut.c(86):     \t\t\t</tr>\n
+WT3_SignUpInOut.c(86):     \t\t</table>\n
+WT3_SignUpInOut.c(86):     \t</BODY>\n
+WT3_SignUpInOut.c(86):     </HTML>
+WT3_SignUpInOut.c(86): Found resource "http://127.0.0.1:1080/WebTours/images/hp_logo.png" in HTML "http://127.0.0.1:1080/WebTours/header.html"  	[MsgId: MMSG-26659]
+WT3_SignUpInOut.c(86): Found resource "http://127.0.0.1:1080/WebTours/images/webtours.png" in HTML "http://127.0.0.1:1080/WebTours/header.html"  	[MsgId: MMSG-26659]
+WT3_SignUpInOut.c(86): t=438ms: Request done "http://127.0.0.1:1080/WebTours/header.html"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): Search registration for "userSession" parameter is filtered by "Request URL"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): t=439ms: Already connected [0] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): t=439ms: 303-byte request headers for "http://127.0.0.1:1080/WebTours/images/hp_logo.png" (RelFrameId=, Internal ID=4)
+WT3_SignUpInOut.c(86):     GET /WebTours/images/hp_logo.png HTTP/1.1\r\n
+WT3_SignUpInOut.c(86):     Referer: http://127.0.0.1:1080/WebTours/header.html\r\n
+WT3_SignUpInOut.c(86):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+WT3_SignUpInOut.c(86):     \n
+WT3_SignUpInOut.c(86):     Accept-Encoding: gzip, deflate\r\n
+WT3_SignUpInOut.c(86):     Accept-Language: en-US\r\n
+WT3_SignUpInOut.c(86):     Accept: */*\r\n
+WT3_SignUpInOut.c(86):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(86):     Host: 127.0.0.1:1080\r\n
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=439ms: Connecting [3] to host 127.0.0.1:1080  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): t=440ms: Connected socket [3] from 127.0.0.1:4975 to 127.0.0.1:1080 in 1 ms  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): t=440ms: 304-byte request headers for "http://127.0.0.1:1080/WebTours/images/webtours.png" (RelFrameId=, Internal ID=5)
+WT3_SignUpInOut.c(86):     GET /WebTours/images/webtours.png HTTP/1.1\r\n
+WT3_SignUpInOut.c(86):     Referer: http://127.0.0.1:1080/WebTours/header.html\r\n
+WT3_SignUpInOut.c(86):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+WT3_SignUpInOut.c(86):     \n
+WT3_SignUpInOut.c(86):     Accept-Encoding: gzip, deflate\r\n
+WT3_SignUpInOut.c(86):     Accept-Language: en-US\r\n
+WT3_SignUpInOut.c(86):     Accept: */*\r\n
+WT3_SignUpInOut.c(86):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(86):     Host: 127.0.0.1:1080\r\n
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=441ms: 297-byte response headers for "http://127.0.0.1:1080/WebTours/images/hp_logo.png" (RelFrameId=, Internal ID=4)
+WT3_SignUpInOut.c(86):     HTTP/1.1 200 OK\r\n
+WT3_SignUpInOut.c(86):     Date: Tue, 21 Jul 2015 17:38:24 GMT\r\n
+WT3_SignUpInOut.c(86):     Server: Apache/2.2.21 (Win32)\r\n
+WT3_SignUpInOut.c(86):     Last-Modified: Thu, 12 Jan 2012 22:30:26 GMT\r\n
+WT3_SignUpInOut.c(86):     ETag: "200000001d7bd-259-4b65c4b744480"\r\n
+WT3_SignUpInOut.c(86):     Accept-Ranges: bytes\r\n
+WT3_SignUpInOut.c(86):     Content-Length: 601\r\n
+WT3_SignUpInOut.c(86):     Keep-Alive: timeout=5, max=99\r\n
+WT3_SignUpInOut.c(86):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(86):     Content-Type: image/png\r\n
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=442ms: 601-byte response body for "http://127.0.0.1:1080/WebTours/images/hp_logo.png" (RelFrameId=, Internal ID=4)
+WT3_SignUpInOut.c(86): t=443ms: Request done "http://127.0.0.1:1080/WebTours/images/hp_logo.png"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): Search registration for "userSession" parameter is filtered by "Request URL"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): t=443ms: 300-byte response headers for "http://127.0.0.1:1080/WebTours/images/webtours.png" (RelFrameId=, Internal ID=5)
+WT3_SignUpInOut.c(86):     HTTP/1.1 200 OK\r\n
+WT3_SignUpInOut.c(86):     Date: Tue, 21 Jul 2015 17:38:24 GMT\r\n
+WT3_SignUpInOut.c(86):     Server: Apache/2.2.21 (Win32)\r\n
+WT3_SignUpInOut.c(86):     Last-Modified: Mon, 04 Nov 2013 22:47:01 GMT\r\n
+WT3_SignUpInOut.c(86):     ETag: "200000001d7c9-105b-4ea61b1b50340"\r\n
+WT3_SignUpInOut.c(86):     Accept-Ranges: bytes\r\n
+WT3_SignUpInOut.c(86):     Content-Length: 4187\r\n
+WT3_SignUpInOut.c(86):     Keep-Alive: timeout=5, max=100\r\n
+WT3_SignUpInOut.c(86):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(86):     Content-Type: image/png\r\n
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=445ms: 4187-byte response body for "http://127.0.0.1:1080/WebTours/images/webtours.png" (RelFrameId=, Internal ID=5)
+WT3_SignUpInOut.c(86): t=445ms: Request done "http://127.0.0.1:1080/WebTours/images/webtours.png"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): Search registration for "userSession" parameter is filtered by "Request URL"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): t=481ms: 390-byte response headers for "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" (RelFrameId=1.2, Internal ID=3)
+WT3_SignUpInOut.c(86):     HTTP/1.1 200 OK\r\n
+WT3_SignUpInOut.c(86):     Date: Tue, 21 Jul 2015 17:38:24 GMT\r\n
+WT3_SignUpInOut.c(86):     Server: Apache/2.2.21 (Win32)\r\n
+WT3_SignUpInOut.c(86):     Set-Cookie: MSO=SID&1437500304&MSO_Comments&on&MSO_ServerErrorsProb&50&MSO_ServerLoadProb&
+WT3_SignUpInOut.c(86):     50; path=/\r\n
+WT3_SignUpInOut.c(86):     Set-Cookie: MTUserInfo=; path=/; expires=Mon, 20-Jul-2015 17:38:24 GMT\r\n
+WT3_SignUpInOut.c(86):     Keep-Alive: timeout=5, max=100\r\n
+WT3_SignUpInOut.c(86):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(86):     Transfer-Encoding: chunked\r\n
+WT3_SignUpInOut.c(86):     Content-Type: text/html; charset=ISO-8859-1\r\n
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=482ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" (RelFrameId=1.2, Internal ID=3)
+WT3_SignUpInOut.c(86):     2ae\r\n
+WT3_SignUpInOut.c(86): t=482ms: 2-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" (RelFrameId=1.2, Internal ID=3)
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=483ms: 686-byte chunked response body for "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" (RelFrameId=1.2, Internal ID=3)
+WT3_SignUpInOut.c(86):     <!-- \n
+WT3_SignUpInOut.c(86):      A Session ID has been created and loaded into a cookie called MSO.\n
+WT3_SignUpInOut.c(86):      Also, the server options have been loaded into the cookie called\n
+WT3_SignUpInOut.c(86):      MSO as well.  The server options can be set via the Admin page.\n
+WT3_SignUpInOut.c(86):      --->\n
+WT3_SignUpInOut.c(86):     \n
+WT3_SignUpInOut.c(86):     <html>\n
+WT3_SignUpInOut.c(86):     <title>Web Tours</title>\n
+WT3_SignUpInOut.c(86):        <!-- Frame Set -->\n
+WT3_SignUpInOut.c(86):        <frameset cols="160,*" border="1" frameborder="1">\n
+WT3_SignUpInOut.c(86):           <!-- Navigation Frame -->\n
+WT3_SignUpInOut.c(86):           <frame src="nav.pl?in=home" name="navbar" marginheight="2" marginwidth="2" \n
+WT3_SignUpInOut.c(86):                 noresize="noresize" scrolling="auto"/>\n
+WT3_SignUpInOut.c(86):           <!-- Home Frame -->\n
+WT3_SignUpInOut.c(86):           <frame src="/WebTours/home.html" name="info" marginheight="2" marginwidth="2" \n
+WT3_SignUpInOut.c(86):                 noresize="noresize" scrolling="auto"/>\n
+WT3_SignUpInOut.c(86):        </frameset>\n
+WT3_SignUpInOut.c(86):     </html>\n
+WT3_SignUpInOut.c(86):     \n
+WT3_SignUpInOut.c(86):     </body>\n
+WT3_SignUpInOut.c(86):     </html>
+WT3_SignUpInOut.c(86): Detected non-resource "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true"  	[MsgId: MMSG-26574]
+WT3_SignUpInOut.c(86): Detected non-resource "http://127.0.0.1:1080/WebTours/home.html" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true"  	[MsgId: MMSG-26574]
+WT3_SignUpInOut.c(86): t=488ms: Already connected [0] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): t=488ms: 399-byte request headers for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.2.1, Internal ID=6)
+WT3_SignUpInOut.c(86):     GET /cgi-bin/nav.pl?in=home HTTP/1.1\r\n
+WT3_SignUpInOut.c(86):     Referer: http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true\r\n
+WT3_SignUpInOut.c(86):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+WT3_SignUpInOut.c(86):     \n
+WT3_SignUpInOut.c(86):     Accept-Encoding: gzip, deflate\r\n
+WT3_SignUpInOut.c(86):     Accept-Language: en-US\r\n
+WT3_SignUpInOut.c(86):     Accept: */*\r\n
+WT3_SignUpInOut.c(86):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(86):     Host: 127.0.0.1:1080\r\n
+WT3_SignUpInOut.c(86):     Cookie: MSO=SID&1437500304&MSO_Comments&on&MSO_ServerErrorsProb&50&MSO_ServerLoadProb&50\r
+WT3_SignUpInOut.c(86):     \n
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=489ms: Already connected [1] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): t=489ms: 395-byte request headers for "http://127.0.0.1:1080/WebTours/home.html" (RelFrameId=1.2.2, Internal ID=7)
+WT3_SignUpInOut.c(86):     GET /WebTours/home.html HTTP/1.1\r\n
+WT3_SignUpInOut.c(86):     Referer: http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true\r\n
+WT3_SignUpInOut.c(86):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+WT3_SignUpInOut.c(86):     \n
+WT3_SignUpInOut.c(86):     Accept-Encoding: gzip, deflate\r\n
+WT3_SignUpInOut.c(86):     Accept-Language: en-US\r\n
+WT3_SignUpInOut.c(86):     Accept: */*\r\n
+WT3_SignUpInOut.c(86):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(86):     Host: 127.0.0.1:1080\r\n
+WT3_SignUpInOut.c(86):     Cookie: MSO=SID&1437500304&MSO_Comments&on&MSO_ServerErrorsProb&50&MSO_ServerLoadProb&50\r
+WT3_SignUpInOut.c(86):     \n
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=490ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" (RelFrameId=1.2, Internal ID=3)
+WT3_SignUpInOut.c(86):     0\r\n
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=491ms: Request done "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): Search registration for "userSession" parameter is filtered by "Request URL"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): t=500ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/home.html" (RelFrameId=1.2.2, Internal ID=7)
+WT3_SignUpInOut.c(86):     HTTP/1.1 200 OK\r\n
+WT3_SignUpInOut.c(86):     Date: Tue, 21 Jul 2015 17:38:24 GMT\r\n
+WT3_SignUpInOut.c(86):     Server: Apache/2.2.21 (Win32)\r\n
+WT3_SignUpInOut.c(86):     Last-Modified: Mon, 27 May 2013 20:20:21 GMT\r\n
+WT3_SignUpInOut.c(86):     ETag: "200000001d7b1-551-4ddb8e0bc4b40"\r\n
+WT3_SignUpInOut.c(86):     Accept-Ranges: bytes\r\n
+WT3_SignUpInOut.c(86):     Content-Length: 1361\r\n
+WT3_SignUpInOut.c(86):     Keep-Alive: timeout=5, max=99\r\n
+WT3_SignUpInOut.c(86):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(86):     Content-Type: text/html\r\n
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=501ms: 1361-byte response body for "http://127.0.0.1:1080/WebTours/home.html" (RelFrameId=1.2.2, Internal ID=7)
+WT3_SignUpInOut.c(86):     <HTML>\n
+WT3_SignUpInOut.c(86):     <HEAD>\n
+WT3_SignUpInOut.c(86):     \t<title>Web Tours</title>\n
+WT3_SignUpInOut.c(86):     </HEAD>\n
+WT3_SignUpInOut.c(86):     <style>\n
+WT3_SignUpInOut.c(86):     \tblockquote {font-family: tahoma; font-size : 10pt}\n
+WT3_SignUpInOut.c(86):     \tH1 {font-family: tahoma; font-size : 22pt; color: #003366}\n
+WT3_SignUpInOut.c(86):     \tsmall {font-family: tahoma; font-size : 8pt}\n
+WT3_SignUpInOut.c(86):     \tH3{font-family: tahoma; font-size : 10pt; color: black}\n
+WT3_SignUpInOut.c(86):     \tA {FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Tahoma; TEXT-DECORATIO
+WT3_SignUpInOut.c(86):     N: none}\n
+WT3_SignUpInOut.c(86):     \tA:hover{ FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #993333; FONT-FAMILY: Tahoma;TEXT-DE
+WT3_SignUpInOut.c(86):     CORATION: underline}\n
+WT3_SignUpInOut.c(86):     \tTD {font-family: tahoma; font-size : 10pt; color: black}\n
+WT3_SignUpInOut.c(86):     </style>\n
+WT3_SignUpInOut.c(86):     <body bgcolor="#e0e7f1">\n
+WT3_SignUpInOut.c(86):     <BR/>\n
+WT3_SignUpInOut.c(86):     <BR/>\n
+WT3_SignUpInOut.c(86):     <BR/>\n
+WT3_SignUpInOut.c(86):     <br/>\n
+WT3_SignUpInOut.c(86):     <table border="0">\n
+WT3_SignUpInOut.c(86):     <tr><td></td></tr>\n
+WT3_SignUpInOut.c(86):     <TR><TD></TD></TR>\n
+WT3_SignUpInOut.c(86):     <TR><TD>\n
+WT3_SignUpInOut.c(86):     <blockquote>\n
+WT3_SignUpInOut.c(86):     <H1><b>Web Tours</b></H1>\n
+WT3_SignUpInOut.c(86):     Welcome to the Web Tours site.\n
+WT3_SignUpInOut.c(86):     <br/>\n
+WT3_SignUpInOut.c(86):     To make reservations,please enter your account information to the left.\n
+WT3_SignUpInOut.c(86):     <br/>\n
+WT3_SignUpInOut.c(86):     If you haven't registered yet, <A href="/cgi-bin/login.pl?username=&amp;password=&amp;getI
+WT3_SignUpInOut.c(86):     nfo=true" ><B>sign up now</B></A> to get access to all our resources.\n
+WT3_SignUpInOut.c(86):     <br/>\n
+WT3_SignUpInOut.c(86):     To configure the server options, use <A href="/cgi-bin/admin.pl" target="body" ><b>adminis
+WT3_SignUpInOut.c(86):     tration</b></A> link.\n
+WT3_SignUpInOut.c(86):     <br/><br/><br/><br/><br/><br/>\n
+WT3_SignUpInOut.c(86):     <br/><small>\n
+WT3_SignUpInOut.c(86):     This product uses parts of the SMT Kernel, Copyright (c) 1991-99 <A href="http://www.imati
+WT3_SignUpInOut.c(86):     x.com" target="new"><B><small>iMatix Corporation</small></B></A> \n
+WT3_SignUpInOut.c(86):     </small>\n
+WT3_SignUpInOut.c(86):     </blockquote></TD>\n
+WT3_SignUpInOut.c(86):     <TD></TD></TR>\n
+WT3_SignUpInOut.c(86):     </table>\n
+WT3_SignUpInOut.c(86):     </body>\n
+WT3_SignUpInOut.c(86):     </HTML>\n
+WT3_SignUpInOut.c(86): t=506ms: Request done "http://127.0.0.1:1080/WebTours/home.html"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): Search registration for "userSession" parameter is filtered by "Request URL"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): t=543ms: 255-byte response headers for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.2.1, Internal ID=6)
+WT3_SignUpInOut.c(86):     HTTP/1.1 200 OK\r\n
+WT3_SignUpInOut.c(86):     Date: Tue, 21 Jul 2015 17:38:24 GMT\r\n
+WT3_SignUpInOut.c(86):     Server: Apache/2.2.21 (Win32)\r\n
+WT3_SignUpInOut.c(86):     Expires: Mon, 20 Jul 2015 17:38:24 GMT\r\n
+WT3_SignUpInOut.c(86):     Keep-Alive: timeout=5, max=98\r\n
+WT3_SignUpInOut.c(86):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(86):     Transfer-Encoding: chunked\r\n
+WT3_SignUpInOut.c(86):     Content-Type: text/html; charset=ISO-8859-1\r\n
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=544ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.2.1, Internal ID=6)
+WT3_SignUpInOut.c(86):     b32\r\n
+WT3_SignUpInOut.c(86): t=544ms: 2-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.2.1, Internal ID=6)
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=545ms: 2866-byte chunked response body for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.2.1, Internal ID=6)
+WT3_SignUpInOut.c(86):     <!-- Comments option is ON \n
+WT3_SignUpInOut.c(86):     \n
+WT3_SignUpInOut.c(86):     These are used to make the automated parsing difficult.\n
+WT3_SignUpInOut.c(86):     User must try and get the UserSession value.  There are several here, with similar boundar
+WT3_SignUpInOut.c(86):     ies.\n
+WT3_SignUpInOut.c(86):     But none are the right value.\n
+WT3_SignUpInOut.c(86):     \n
+WT3_SignUpInOut.c(86):     <!DOCTYPE HTML>\n
+WT3_SignUpInOut.c(86):     <HTML><HEAD><TITLE>Web Tours Navigation Bar</TITLE>\n
+WT3_SignUpInOut.c(86):     <style>\n
+WT3_SignUpInOut.c(86):     \tblockquote {font-family: tahoma; font-size : 10pt}\n
+WT3_SignUpInOut.c(86):     \tH1 {font-family: tahoma; font-size : 22pt;color: #993333}\n
+WT3_SignUpInOut.c(86):     \tsmall {font-family: tahoma; font-size : 8pt}\n
+WT3_SignUpInOut.c(86):     </style>\n
+WT3_SignUpInOut.c(86):     </HEAD><BODY BGCOLOR="#E0E7F1"><br clear="both"/>\n
+WT3_SignUpInOut.c(86):     <form method="post" action="login.pl" target="body">\n
+WT3_SignUpInOut.c(86):     <input type="hidden" name="userSession" value="6489116443.929040097fQiQfitpzDfQDHpfAHz"/>\n
+WT3_SignUpInOut.c(86):     <form method="post" action="error.pl" onSubmit="doJSformSubmit1(this)" target="body">\n
+WT3_SignUpInOut.c(86):     <input type="hidden" name="userSession" value="1116443.929040097fQiQfitpzDfQDHpfAHz"/>\n
+WT3_SignUpInOut.c(86):     <table border="0">\n
+WT3_SignUpInOut.c(86):     <tr><td><font face="sans-serif" size=2>&nbsp;</font></td></tr>\n
+WT3_SignUpInOut.c(86):     <tr><td><font face="sans-serif" size=2>&nbsp;Username</font></td></tr>\n
+WT3_SignUpInOut.c(86):     <tr><td><input type="text" name="username" value="" size="18" maxlength="30">\n
+WT3_SignUpInOut.c(86):     <tr><td><font face="sans-serif" size="2">&nbsp;Password</font></td></tr>\n
+WT3_SignUpInOut.c(86):     <tr><td><input type="password" name="password" value="" size="18" maxlength="30"/></td></t
+WT3_SignUpInOut.c(86):     r>\n
+WT3_SignUpInOut.c(86):     <tr><td><input type="image" name="login" value="Login" alt="Login" border="1" src="/WebTou
+WT3_SignUpInOut.c(86):     rs/images/mer_login.gif"/></td></tr>\n
+WT3_SignUpInOut.c(86):     </table></form></form>\n
+WT3_SignUpInOut.c(86):     </BODY></HTML>\n
+WT3_SignUpInOut.c(86):     -->\n
+WT3_SignUpInOut.c(86):     <!DOCTYPE html\n
+WT3_SignUpInOut.c(86):     \tPUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"\n
+WT3_SignUpInOut.c(86):     \t "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n
+WT3_SignUpInOut.c(86):     <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">\n
+WT3_SignUpInOut.c(86):     <head>\n
+WT3_SignUpInOut.c(86):     <title>Web Tours Navigation Bar</title>\n
+WT3_SignUpInOut.c(86):     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />\n
+WT3_SignUpInOut.c(86):     </head>\n
+WT3_SignUpInOut.c(86):     <body bgcolor="#E0E7F1">\n
+WT3_SignUpInOut.c(86):     <style>\n
+WT3_SignUpInOut.c(86):     blockquote {font-family: tahoma; font-size : 10pt}\n
+WT3_SignUpInOut.c(86):     H1 {font-family: tahoma; font-size : 22pt; color: #993333}\n
+WT3_SignUpInOut.c(86):     H3 {font-family: tahoma; font-size : 10pt; color: black}\n
+WT3_SignUpInOut.c(86):     small {font-family: tahoma; font-size : 8pt}\n
+WT3_SignUpInOut.c(86):     </style>\n
+WT3_SignUpInOut.c(86):     <form method="post" action="/cgi-bin/login.pl" target="body">\n
+WT3_SignUpInOut.c(86):     <input type="hidden" name="userSession" value="116443.929040097fQiQfitpzDfQDHpfAHz"/>\n
+WT3_SignUpInOut.c(86):     <table border="0"><tr><td>&nbsp;</td>\n
+WT3_SignUpInOut.c(86):     <td>&nbsp;</td></tr>\n
+WT3_SignUpInOut.c(86):     <tr><td>&nbsp;</td>\n
+WT3_SignUpInOut.c(86):     <td>&nbsp;</td></tr>\n
+WT3_SignUpInOut.c(86):     <tr><td>&nbsp;</td>\n
+WT3_SignUpInOut.c(86):     <td><small>&nbsp;Username</small></td></tr>\n
+WT3_SignUpInOut.c(86):     <tr><td>&nbsp;</td>\n
+WT3_SignUpInOut.c(86):     <td><input type="text" name="username" value="" size="14" maxlength="14"/></td></tr>\n
+WT3_SignUpInOut.c(86):     <tr><td>&nbsp;</td>\n
+WT3_SignUpInOut.c(86):     <td><small>&nbsp;Password</small></td>\n
+WT3_SignUpInOut.c(86):     <tr><td>&nbsp;</td>\n
+WT3_SignUpInOut.c(86):     <td><input type="password" name="password" value="" size="14" maxlength="14"/></td></tr>\n
+WT3_SignUpInOut.c(86):     <tr><td>&nbsp;</td>\n
+WT3_SignUpInOut.c(86):     <td>&nbsp;</td></tr>\n
+WT3_SignUpInOut.c(86):     <tr><td>&nbsp;</td>\n
+WT3_SignUpInOut.c(86):     <td><input type="image" name="login" value="Login" alt="Login" border="1" \n
+WT3_SignUpInOut.c(86):     src="/WebTours/images/mer_login.gif"/></td></tr>\n
+WT3_SignUpInOut.c(86):     <tr><td>&nbsp;</td><td>&nbsp;</td></tr>\n
+WT3_SignUpInOut.c(86):     </table><input type="hidden" name="JSFormSubmit" value="off"/>\n
+WT3_SignUpInOut.c(86):     </form>\n
+WT3_SignUpInOut.c(86):     \n
+WT3_SignUpInOut.c(86):     </body>\n
+WT3_SignUpInOut.c(86):     </html>\n
+WT3_SignUpInOut.c(86): Found resource "http://127.0.0.1:1080/WebTours/images/mer_login.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home"  	[MsgId: MMSG-26659]
+WT3_SignUpInOut.c(86): t=552ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.2.1, Internal ID=6)
+WT3_SignUpInOut.c(86):     0\r\n
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=552ms: Request done "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): t=553ms: Already connected [1] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): t=553ms: 397-byte request headers for "http://127.0.0.1:1080/WebTours/images/mer_login.gif" (RelFrameId=, Internal ID=8)
+WT3_SignUpInOut.c(86):     GET /WebTours/images/mer_login.gif HTTP/1.1\r\n
+WT3_SignUpInOut.c(86):     Referer: http://127.0.0.1:1080/cgi-bin/nav.pl?in=home\r\n
+WT3_SignUpInOut.c(86):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+WT3_SignUpInOut.c(86):     \n
+WT3_SignUpInOut.c(86):     Accept-Encoding: gzip, deflate\r\n
+WT3_SignUpInOut.c(86):     Accept-Language: en-US\r\n
+WT3_SignUpInOut.c(86):     Accept: */*\r\n
+WT3_SignUpInOut.c(86):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(86):     Host: 127.0.0.1:1080\r\n
+WT3_SignUpInOut.c(86):     Cookie: MSO=SID&1437500304&MSO_Comments&on&MSO_ServerErrorsProb&50&MSO_ServerLoadProb&50\r
+WT3_SignUpInOut.c(86):     \n
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=554ms: 297-byte response headers for "http://127.0.0.1:1080/WebTours/images/mer_login.gif" (RelFrameId=, Internal ID=8)
+WT3_SignUpInOut.c(86):     HTTP/1.1 200 OK\r\n
+WT3_SignUpInOut.c(86):     Date: Tue, 21 Jul 2015 17:38:24 GMT\r\n
+WT3_SignUpInOut.c(86):     Server: Apache/2.2.21 (Win32)\r\n
+WT3_SignUpInOut.c(86):     Last-Modified: Thu, 12 Jan 2012 22:30:26 GMT\r\n
+WT3_SignUpInOut.c(86):     ETag: "200000001d7c4-2a7-4b65c4b744480"\r\n
+WT3_SignUpInOut.c(86):     Accept-Ranges: bytes\r\n
+WT3_SignUpInOut.c(86):     Content-Length: 679\r\n
+WT3_SignUpInOut.c(86):     Keep-Alive: timeout=5, max=98\r\n
+WT3_SignUpInOut.c(86):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(86):     Content-Type: image/gif\r\n
+WT3_SignUpInOut.c(86):     \r\n
+WT3_SignUpInOut.c(86): t=555ms: 679-byte response body for "http://127.0.0.1:1080/WebTours/images/mer_login.gif" (RelFrameId=, Internal ID=8)
+WT3_SignUpInOut.c(86): t=556ms: Request done "http://127.0.0.1:1080/WebTours/images/mer_login.gif"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(86): Registered web_reg_find successful for "Text=Welcome to the Web Tours site" (count=1)  	[MsgId: MMSG-26364]
+WT3_SignUpInOut.c(86): web_url("index.htm") was successful, 11456 body bytes, 2433 header bytes, 24 chunking overhead bytes  	[MsgId: MMSG-26385]
+wi_functions.c(184): Notify: Transaction "WT3_T03_URL_Landing" ended with a "Pass" status (Duration: 0.2430 Wasted Time: 0.1155).
+wi_functions.c(189): web_get_int_property started  	[MsgId: MMSG-26355]
+wi_functions.c(189): web_get_int_property was successful  	[MsgId: MMSG-26392]
+wi_functions.c(190): web_get_int_property started  	[MsgId: MMSG-26355]
+wi_functions.c(190): web_get_int_property was successful  	[MsgId: MMSG-26392]
+wi_functions.c(191): web_get_int_property started  	[MsgId: MMSG-26355]
+wi_functions.c(191): web_get_int_property was successful  	[MsgId: MMSG-26392]
+WT3_Config.c(33): web_link("administration") started  	[MsgId: MMSG-26355]
+WT3_Config.c(33): Linking to "http://127.0.0.1:1080/cgi-bin/admin.pl", Target Frame="body"  	[MsgId: MMSG-27994]
+WT3_Config.c(33): t=607ms: Already connected [0] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+WT3_Config.c(33): t=607ms: 380-byte request headers for "http://127.0.0.1:1080/cgi-bin/admin.pl" (RelFrameId=1, Internal ID=9)
+WT3_Config.c(33):     GET /cgi-bin/admin.pl HTTP/1.1\r\n
+WT3_Config.c(33):     Referer: http://127.0.0.1:1080/WebTours/home.html\r\n
+WT3_Config.c(33):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+WT3_Config.c(33):     \n
+WT3_Config.c(33):     Accept-Encoding: gzip, deflate\r\n
+WT3_Config.c(33):     Accept-Language: en-US\r\n
+WT3_Config.c(33):     Accept: */*\r\n
+WT3_Config.c(33):     Connection: Keep-Alive\r\n
+WT3_Config.c(33):     Host: 127.0.0.1:1080\r\n
+WT3_Config.c(33):     Cookie: MSO=SID&1437500304&MSO_Comments&on&MSO_ServerErrorsProb&50&MSO_ServerLoadProb&50\r
+WT3_Config.c(33):     \n
+WT3_Config.c(33):     \r\n
+WT3_Config.c(33): t=659ms: 317-byte response headers for "http://127.0.0.1:1080/cgi-bin/admin.pl" (RelFrameId=1, Internal ID=9)
+WT3_Config.c(33):     HTTP/1.1 200 OK\r\n
+WT3_Config.c(33):     Date: Tue, 21 Jul 2015 17:38:25 GMT\r\n
+WT3_Config.c(33):     Server: Apache/2.2.21 (Win32)\r\n
+WT3_Config.c(33):     Set-Cookie: MSO=SID&1437500304&MSO_Comments&on&MSO_ServerLoadProb&50&MSO_ServerErrorsProb&
+WT3_Config.c(33):     50; path=/\r\n
+WT3_Config.c(33):     Keep-Alive: timeout=5, max=97\r\n
+WT3_Config.c(33):     Connection: Keep-Alive\r\n
+WT3_Config.c(33):     Transfer-Encoding: chunked\r\n
+WT3_Config.c(33):     Content-Type: text/html; charset=ISO-8859-1\r\n
+WT3_Config.c(33):     \r\n
+WT3_Config.c(33): t=661ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/admin.pl" (RelFrameId=1, Internal ID=9)
+WT3_Config.c(33):     f46\r\n
+WT3_Config.c(33): t=661ms: 2-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/admin.pl" (RelFrameId=1, Internal ID=9)
+WT3_Config.c(33):     \r\n
+WT3_Config.c(33): t=661ms: 3910-byte chunked response body for "http://127.0.0.1:1080/cgi-bin/admin.pl" (RelFrameId=1, Internal ID=9)
+WT3_Config.c(33):     <!DOCTYPE html\n
+WT3_Config.c(33):     \tPUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"\n
+WT3_Config.c(33):     \t "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n
+WT3_Config.c(33):     <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">\n
+WT3_Config.c(33):     <head>\n
+WT3_Config.c(33):     <title>Web Tours Admin Page</title>\n
+WT3_Config.c(33):     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />\n
+WT3_Config.c(33):     </head>\n
+WT3_Config.c(33):     <body bgcolor="#E0E7F1">\n
+WT3_Config.c(33):     <style>blockquote {font-family: tahoma; font-size : 10pt}H1 {font-family: tahoma; font-siz
+WT3_Config.c(33):     e : 22pt; color: #993333}small {font-family: tahoma; font-size : 8pt}H3 {font-family: taho
+WT3_Config.c(33):     ma; font-size : 10pt; color: black}</style>&nbsp;<center><H1><b><font color="#003366">Admi
+WT3_Config.c(33):     nistration Page</font></b></H1></center><form method="post" action="admin.pl" enctype="app
+WT3_Config.c(33):     lication/x-www-form-urlencoded">\n
+WT3_Config.c(33):     <center><table border="0" cellspacing="0" width="80%">\n
+WT3_Config.c(33):     <tr><td colspan="2" bgcolor="#5E7884">&nbsp;<tr><td valign="top" bgcolor="#EFF2F7"><label>
+WT3_Config.c(33):     <input type="checkbox" name="MSO_Comments" value="on" checked="checked" /></label><td bgco
+WT3_Config.c(33):     lor="#EFF2F7"><SMALL><B>Add extra HTML form code to the page within HTML comments.</B><BR/
+WT3_Config.c(33):     >The extra HTML code is ignored by the browsers, but it could pose a problem for parsers.<
+WT3_Config.c(33):     /SMALL>\n
+WT3_Config.c(33):     <tr><td colspan="2" hight="1" bgcolor="#EFF2F7" valign="top"><HR/><tr><td valign="top" bgc
+WT3_Config.c(33):     olor="#EFF2F7"><label><input type="checkbox" name="MSO_JSCalc" value="on" /></label><td bg
+WT3_Config.c(33):     color="#EFF2F7"><SMALL><B>Add additional JavaScript that will calculate the days in advanc
+WT3_Config.c(33):     e for the ticket purchase.</B><BR/>It appears on the first Flight reservation page and wil
+WT3_Config.c(33):     l calculate the days in advance on the submission of the initial flight information form.<
+WT3_Config.c(33):     /SMALL>\n
+WT3_Config.c(33):     <tr><td colspan="2" hight="1" bgcolor="#EFF2F7" valign="top"><HR/><tr><td valign="top" bgc
+WT3_Config.c(33):     olor="#EFF2F7"><label><input type="checkbox" name="MSO_JSFormSubmit1" value="on" /></label
+WT3_Config.c(33):     ><td bgcolor="#EFF2F7"><SMALL><B>Set LOGIN form's action tag to an error page.</B><BR/>Whe
+WT3_Config.c(33):     n the user submits the form, a javascript routine will re-set the action tag and alter the
+WT3_Config.c(33):      hidden field flag. The login.pl (what the action tag is reset to by javascript) script ch
+WT3_Config.c(33):     ecks to make sure the hidden field flag has been set.</SMALL>\n
+WT3_Config.c(33):     <tr><td colspan="2" hight="1" bgcolor="#EFF2F7" valign="top"><HR/><tr><td valign="top" bgc
+WT3_Config.c(33):     olor="#EFF2F7"><label><input type="checkbox" name="MSO_JSFormSubmit2" value="on" /></label
+WT3_Config.c(33):     ><td bgcolor="#EFF2F7"><SMALL><B>Set RESERVATION form's action tag to an error page.</B><B
+WT3_Config.c(33):     R/>When the user submits the form, a javascript routine will re-set the action tag and alt
+WT3_Config.c(33):     er the hidden field flag. The reservation.pl (what the action tag is reset to by javascrip
+WT3_Config.c(33):     t) script checks to make sure the hidden field flag has been set.</SMALL>\n
+WT3_Config.c(33):     <tr><td colspan="2" hight="1" bgcolor="#EFF2F7" valign="top"><HR/><tr><td valign="top" bgc
+WT3_Config.c(33):     olor="#EFF2F7"><label><input type="checkbox" name="MSO_JSVerify" value="on" /></label><td 
+WT3_Config.c(33):     bgcolor="#EFF2F7"><SMALL><B>Set cliend-side verfication of user data.</B><BR/>This turns o
+WT3_Config.c(33):     n verification of the user data on the client side in the necessary spots during the reser
+WT3_Config.c(33):     vation and signup processes.\n
+WT3_Config.c(33):     <tr><td colspan="2" hight="1" bgcolor="#EFF2F7" valign="top"><HR/><tr><td valign="top" bgc
+WT3_Config.c(33):     olor="#EFF2F7"><label><input type="checkbox" name="MSO_JSWPages" value="on" /></label><td 
+WT3_Config.c(33):     bgcolor="#EFF2F7"><SMALL><B>Generate HTML code on the client side instead of server side.<
+WT3_Config.c(33):     /B><BR/>In some cases, if there was some calculation done to create the HTML, there could 
+WT3_Config.c(33):     problems discovering what the HTML actually is.Additionally, there is a form on this page.
+WT3_Config.c(33):     ..creating a bit of trouble when using web_submit_form.</SMALL>\n
+WT3_Config.c(33):     <tr><td colspan="2" hight="1" bgcolor="#EFF2F7" valign="top"><HR/><tr><td valign="top" bgc
+WT3_Config.c(33):     olor="#EFF2F7"><label><input type="checkbox" name="MSO_Redirect" value="on" /></label><td 
+WT3_Config.c(33):     bgcolor="#EFF2F7"><SMALL><B>Set redirects the user to a temporary .html file.</B><BR/>Inst
+WT3_Config.c(33):     ead of the CGI output going to the user, it is saved into a temporary .html f
+WT3_Config.c(33): t=666ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/admin.pl" (RelFrameId=1, Internal ID=9)
+WT3_Config.c(33):     a76\r\n
+WT3_Config.c(33): t=670ms: 7-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/admin.pl" (RelFrameId=1, Internal ID=9)
+WT3_Config.c(33):     \r\n
+WT3_Config.c(33):     0\r\n
+WT3_Config.c(33):     \r\n
+WT3_Config.c(33): t=671ms: 2678-byte chunked response body for "http://127.0.0.1:1080/cgi-bin/admin.pl" (RelFrameId=1, Internal ID=9)
+WT3_Config.c(33):     ile. The user is then redirected to that .html file, in order to see the results.</SMALL>\n
+WT3_Config.c(33):     <tr><td colspan="2" hight="1" bgcolor="#EFF2F7" valign="top"><HR/><tr><td valign="top" bgc
+WT3_Config.c(33):     olor="#EFF2F7"><label><input type="checkbox" name="MSO_Redirects" value="on" /></label><td
+WT3_Config.c(33):      bgcolor="#EFF2F7"><SMALL><B>Set this option to turn on some server side redirects.</B><BR
+WT3_Config.c(33):     />Instead of a CGI script returning HTML to display, the CGI script returns a new URL for 
+WT3_Config.c(33):     the browser to goto.</SMALL>\n
+WT3_Config.c(33):     <tr><td colspan="2" hight="1" bgcolor="#EFF2F7" valign="top"><HR/><tr><td valign="top" bgc
+WT3_Config.c(33):     olor="#EFF2F7"><label><input type="checkbox" name="MSO_SErrors" value="on" /></label><td b
+WT3_Config.c(33):     gcolor="#EFF2F7"><SMALL><B>Set probability (in percentages) of the server making an illega
+WT3_Config.c(33):     l function call.</B><BR/>The CGI process then will crash, resulting in an 'Internal Server
+WT3_Config.c(33):      Error' generated by the Web server. This error provides no options for the user to contin
+WT3_Config.c(33):     ue with.</SMALL>\n
+WT3_Config.c(33):     <br/><SMALL>Frequency (in percent) for the server process error: <input type="text" name="
+WT3_Config.c(33):     MSO_ServerErrorsProb" value="50" size="2" /><tr><td colspan="2" hight="1" bgcolor="#EFF2F7
+WT3_Config.c(33):     " valign="top"><HR/><tr><td valign="top" bgcolor="#EFF2F7"><label><input type="checkbox" n
+WT3_Config.c(33):     ame="MSO_SLoad" value="on" /></label><td bgcolor="#EFF2F7"><SMALL><B>Set probability (in p
+WT3_Config.c(33):     ercentages) of the server simulating a load problem.</B><BR/>Instead of the process crashi
+WT3_Config.c(33):     ng, an HTML page is generated that notifies the user of the problem. The user can choose t
+WT3_Config.c(33):     o either try again (re-submit the same data over again) or to restart their reservation pr
+WT3_Config.c(33):     ocess.</SMALL>\n
+WT3_Config.c(33):     <br/><SMALL>Frequency (in percent) for the server load problem: <input type="text" name="M
+WT3_Config.c(33):     SO_ServerLoadProb" value="50" size="2" /><tr><td colspan="2" hight="1" bgcolor="#EFF2F7" v
+WT3_Config.c(33):     align="top"><HR/></table><BR/><div bgcolor="#EFF2F7" align="center"><input type="submit" n
+WT3_Config.c(33):     ame="save" value="Update" /></div><p /><blockquote><a href="welcome.pl" target="body">Retu
+WT3_Config.c(33):     rn to the Web Tours Homepage</a></blockquote><div><input type="hidden" name=".cgifields" v
+WT3_Config.c(33):     alue="MSO_Redirect"  /><input type="hidden" name=".cgifields" value="MSO_JSVerify"  /><inp
+WT3_Config.c(33):     ut type="hidden" name=".cgifields" value="MSO_JSFormSubmit1"  /><input type="hidden" name=
+WT3_Config.c(33):     ".cgifields" value="MSO_JSCalc"  /><input type="hidden" name=".cgifields" value="MSO_SLoad
+WT3_Config.c(33):     "  /><input type="hidden" name=".cgifields" value="MSO_Redirects"  /><input type="hidden" 
+WT3_Config.c(33):     name=".cgifields" value="MSO_JSWPages"  /><input type="hidden" name=".cgifields" value="MS
+WT3_Config.c(33):     O_Comments"  /><input type="hidden" name=".cgifields" value="MSO_SErrors"  /><input type="
+WT3_Config.c(33):     hidden" name=".cgifields" value="MSO_JSFormSubmit2"  /></div></form></blockquote>\n
+WT3_Config.c(33):     </body>\n
+WT3_Config.c(33):     </html>
+WT3_Config.c(33): t=673ms: Request done "http://127.0.0.1:1080/cgi-bin/admin.pl"  	[MsgId: MMSG-26000]
+WT3_Config.c(33): web_link("administration") was successful, 6588 body bytes, 317 header bytes, 19 chunking overhead bytes  	[MsgId: MMSG-26385]
+WT3_Config.c(38): web_submit_form("admin.pl") started  	[MsgId: MMSG-26355]
+WT3_Config.c(38): Submitting form to "http://127.0.0.1:1080/cgi-bin/admin.pl", Target Frame=""  	[MsgId: MMSG-27978]
+WT3_Config.c(38): t=679ms: Already connected [0] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+WT3_Config.c(38): t=679ms: 474-byte request headers for "http://127.0.0.1:1080/cgi-bin/admin.pl" (RelFrameId=1, Internal ID=10)
+WT3_Config.c(38):     POST /cgi-bin/admin.pl HTTP/1.1\r\n
+WT3_Config.c(38):     Content-Type: application/x-www-form-urlencoded\r\n
+WT3_Config.c(38):     Cache-Control: no-cache\r\n
+WT3_Config.c(38):     Referer: http://127.0.0.1:1080/cgi-bin/admin.pl\r\n
+WT3_Config.c(38):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+WT3_Config.c(38):     \n
+WT3_Config.c(38):     Accept-Encoding: gzip, deflate\r\n
+WT3_Config.c(38):     Accept-Language: en-US\r\n
+WT3_Config.c(38):     Accept: */*\r\n
+WT3_Config.c(38):     Connection: Keep-Alive\r\n
+WT3_Config.c(38):     Host: 127.0.0.1:1080\r\n
+WT3_Config.c(38):     Cookie: MSO=SID&1437500304&MSO_Comments&on&MSO_ServerLoadProb&50&MSO_ServerErrorsProb&50\r
+WT3_Config.c(38):     \n
+WT3_Config.c(38):     Content-Length: 318\r\n
+WT3_Config.c(38):     \r\n
+WT3_Config.c(38): t=680ms: 318-byte request body for "http://127.0.0.1:1080/cgi-bin/admin.pl" (RelFrameId=1, Internal ID=10)
+WT3_Config.c(38):     MSO_Comments=on&MSO_ServerErrorsProb=50&MSO_ServerLoadProb=50&.cgifields=MSO_Redirect&.cgi
+WT3_Config.c(38):     fields=MSO_JSVerify&.cgifields=MSO_JSFormSubmit1&.cgifields=MSO_JSCalc&.cgifields=MSO_SLoa
+WT3_Config.c(38):     d&.cgifields=MSO_Redirects&.cgifields=MSO_JSWPages&.cgifields=MSO_Comments&.cgifields=MSO_
+WT3_Config.c(38):     SErrors&.cgifields=MSO_JSFormSubmit2&save=Update
+WT3_Config.c(38): t=727ms: 317-byte response headers for "http://127.0.0.1:1080/cgi-bin/admin.pl" (RelFrameId=1, Internal ID=10)
+WT3_Config.c(38):     HTTP/1.1 200 OK\r\n
+WT3_Config.c(38):     Date: Tue, 21 Jul 2015 17:38:25 GMT\r\n
+WT3_Config.c(38):     Server: Apache/2.2.21 (Win32)\r\n
+WT3_Config.c(38):     Set-Cookie: MSO=SID&1437500304&MSO_Comments&on&MSO_ServerLoadProb&50&MSO_ServerErrorsProb&
+WT3_Config.c(38):     50; path=/\r\n
+WT3_Config.c(38):     Keep-Alive: timeout=5, max=96\r\n
+WT3_Config.c(38):     Connection: Keep-Alive\r\n
+WT3_Config.c(38):     Transfer-Encoding: chunked\r\n
+WT3_Config.c(38):     Content-Type: text/html; charset=ISO-8859-1\r\n
+WT3_Config.c(38):     \r\n
+WT3_Config.c(38): t=729ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/admin.pl" (RelFrameId=1, Internal ID=10)
+WT3_Config.c(38):     f46\r\n
+WT3_Config.c(38): t=729ms: 2-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/admin.pl" (RelFrameId=1, Internal ID=10)
+WT3_Config.c(38):     \r\n
+WT3_Config.c(38): t=729ms: 3910-byte chunked response body for "http://127.0.0.1:1080/cgi-bin/admin.pl" (RelFrameId=1, Internal ID=10)
+WT3_Config.c(38):     <!DOCTYPE html\n
+WT3_Config.c(38):     \tPUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"\n
+WT3_Config.c(38):     \t "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n
+WT3_Config.c(38):     <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">\n
+WT3_Config.c(38):     <head>\n
+WT3_Config.c(38):     <title>Web Tours Admin Page</title>\n
+WT3_Config.c(38):     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />\n
+WT3_Config.c(38):     </head>\n
+WT3_Config.c(38):     <body bgcolor="#E0E7F1">\n
+WT3_Config.c(38):     <style>blockquote {font-family: tahoma; font-size : 10pt}H1 {font-family: tahoma; font-siz
+WT3_Config.c(38):     e : 22pt; color: #993333}small {font-family: tahoma; font-size : 8pt}H3 {font-family: taho
+WT3_Config.c(38):     ma; font-size : 10pt; color: black}</style>&nbsp;<center><H1><b><font color="#003366">Admi
+WT3_Config.c(38):     nistration Page</font></b></H1></center><h3 align="center">Server Reconfigured.</h3><form 
+WT3_Config.c(38):     method="post" action="admin.pl" enctype="application/x-www-form-urlencoded">\n
+WT3_Config.c(38):     <center><table border="0" cellspacing="0" width="80%">\n
+WT3_Config.c(38):     <tr><td colspan="2" bgcolor="#5E7884">&nbsp;<tr><td valign="top" bgcolor="#EFF2F7"><label>
+WT3_Config.c(38):     <input type="checkbox" name="MSO_Comments" value="on" checked="checked" /></label><td bgco
+WT3_Config.c(38):     lor="#EFF2F7"><SMALL><B>Add extra HTML form code to the page within HTML comments.</B><BR/
+WT3_Config.c(38):     >The extra HTML code is ignored by the browsers, but it could pose a problem for parsers.<
+WT3_Config.c(38):     /SMALL>\n
+WT3_Config.c(38):     <tr><td colspan="2" hight="1" bgcolor="#EFF2F7" valign="top"><HR/><tr><td valign="top" bgc
+WT3_Config.c(38):     olor="#EFF2F7"><label><input type="checkbox" name="MSO_JSCalc" value="on" /></label><td bg
+WT3_Config.c(38):     color="#EFF2F7"><SMALL><B>Add additional JavaScript that will calculate the days in advanc
+WT3_Config.c(38):     e for the ticket purchase.</B><BR/>It appears on the first Flight reservation page and wil
+WT3_Config.c(38):     l calculate the days in advance on the submission of the initial flight information form.<
+WT3_Config.c(38):     /SMALL>\n
+WT3_Config.c(38):     <tr><td colspan="2" hight="1" bgcolor="#EFF2F7" valign="top"><HR/><tr><td valign="top" bgc
+WT3_Config.c(38):     olor="#EFF2F7"><label><input type="checkbox" name="MSO_JSFormSubmit1" value="on" /></label
+WT3_Config.c(38):     ><td bgcolor="#EFF2F7"><SMALL><B>Set LOGIN form's action tag to an error page.</B><BR/>Whe
+WT3_Config.c(38):     n the user submits the form, a javascript routine will re-set the action tag and alter the
+WT3_Config.c(38):      hidden field flag. The login.pl (what the action tag is reset to by javascript) script ch
+WT3_Config.c(38):     ecks to make sure the hidden field flag has been set.</SMALL>\n
+WT3_Config.c(38):     <tr><td colspan="2" hight="1" bgcolor="#EFF2F7" valign="top"><HR/><tr><td valign="top" bgc
+WT3_Config.c(38):     olor="#EFF2F7"><label><input type="checkbox" name="MSO_JSFormSubmit2" value="on" /></label
+WT3_Config.c(38):     ><td bgcolor="#EFF2F7"><SMALL><B>Set RESERVATION form's action tag to an error page.</B><B
+WT3_Config.c(38):     R/>When the user submits the form, a javascript routine will re-set the action tag and alt
+WT3_Config.c(38):     er the hidden field flag. The reservation.pl (what the action tag is reset to by javascrip
+WT3_Config.c(38):     t) script checks to make sure the hidden field flag has been set.</SMALL>\n
+WT3_Config.c(38):     <tr><td colspan="2" hight="1" bgcolor="#EFF2F7" valign="top"><HR/><tr><td valign="top" bgc
+WT3_Config.c(38):     olor="#EFF2F7"><label><input type="checkbox" name="MSO_JSVerify" value="on" /></label><td 
+WT3_Config.c(38):     bgcolor="#EFF2F7"><SMALL><B>Set cliend-side verfication of user data.</B><BR/>This turns o
+WT3_Config.c(38):     n verification of the user data on the client side in the necessary spots during the reser
+WT3_Config.c(38):     vation and signup processes.\n
+WT3_Config.c(38):     <tr><td colspan="2" hight="1" bgcolor="#EFF2F7" valign="top"><HR/><tr><td valign="top" bgc
+WT3_Config.c(38):     olor="#EFF2F7"><label><input type="checkbox" name="MSO_JSWPages" value="on" /></label><td 
+WT3_Config.c(38):     bgcolor="#EFF2F7"><SMALL><B>Generate HTML code on the client side instead of server side.<
+WT3_Config.c(38):     /B><BR/>In some cases, if there was some calculation done to create the HTML, there could 
+WT3_Config.c(38):     problems discovering what the HTML actually is.Additionally, there is a form on this page.
+WT3_Config.c(38):     ..creating a bit of trouble when using web_submit_form.</SMALL>\n
+WT3_Config.c(38):     <tr><td colspan="2" hight="1" bgcolor="#EFF2F7" valign="top"><HR/><tr><td valign="top" bgc
+WT3_Config.c(38):     olor="#EFF2F7"><label><input type="checkbox" name="MSO_Redirect" value="on" /></label><td 
+WT3_Config.c(38):     bgcolor="#EFF2F7"><SMALL><B>Set redirects the user to a temporary .html file.</B><BR/>Inst
+WT3_Config.c(38):     ead of the CGI output going to th
+WT3_Config.c(38): t=734ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/admin.pl" (RelFrameId=1, Internal ID=10)
+WT3_Config.c(38):     aa2\r\n
+WT3_Config.c(38): t=734ms: 2-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/admin.pl" (RelFrameId=1, Internal ID=10)
+WT3_Config.c(38):     \r\n
+WT3_Config.c(38): t=735ms: 2722-byte chunked response body for "http://127.0.0.1:1080/cgi-bin/admin.pl" (RelFrameId=1, Internal ID=10)
+WT3_Config.c(38):     e user, it is saved into a temporary .html file. The user is then redirected to that .html
+WT3_Config.c(38):      file, in order to see the results.</SMALL>\n
+WT3_Config.c(38):     <tr><td colspan="2" hight="1" bgcolor="#EFF2F7" valign="top"><HR/><tr><td valign="top" bgc
+WT3_Config.c(38):     olor="#EFF2F7"><label><input type="checkbox" name="MSO_Redirects" value="on" /></label><td
+WT3_Config.c(38):      bgcolor="#EFF2F7"><SMALL><B>Set this option to turn on some server side redirects.</B><BR
+WT3_Config.c(38):     />Instead of a CGI script returning HTML to display, the CGI script returns a new URL for 
+WT3_Config.c(38):     the browser to goto.</SMALL>\n
+WT3_Config.c(38):     <tr><td colspan="2" hight="1" bgcolor="#EFF2F7" valign="top"><HR/><tr><td valign="top" bgc
+WT3_Config.c(38):     olor="#EFF2F7"><label><input type="checkbox" name="MSO_SErrors" value="on" /></label><td b
+WT3_Config.c(38):     gcolor="#EFF2F7"><SMALL><B>Set probability (in percentages) of the server making an illega
+WT3_Config.c(38):     l function call.</B><BR/>The CGI process then will crash, resulting in an 'Internal Server
+WT3_Config.c(38):      Error' generated by the Web server. This error provides no options for the user to contin
+WT3_Config.c(38):     ue with.</SMALL>\n
+WT3_Config.c(38):     <br/><SMALL>Frequency (in percent) for the server process error: <input type="text" name="
+WT3_Config.c(38):     MSO_ServerErrorsProb" value="50" size="2" /><tr><td colspan="2" hight="1" bgcolor="#EFF2F7
+WT3_Config.c(38):     " valign="top"><HR/><tr><td valign="top" bgcolor="#EFF2F7"><label><input type="checkbox" n
+WT3_Config.c(38):     ame="MSO_SLoad" value="on" /></label><td bgcolor="#EFF2F7"><SMALL><B>Set probability (in p
+WT3_Config.c(38):     ercentages) of the server simulating a load problem.</B><BR/>Instead of the process crashi
+WT3_Config.c(38):     ng, an HTML page is generated that notifies the user of the problem. The user can choose t
+WT3_Config.c(38):     o either try again (re-submit the same data over again) or to restart their reservation pr
+WT3_Config.c(38):     ocess.</SMALL>\n
+WT3_Config.c(38):     <br/><SMALL>Frequency (in percent) for the server load problem: <input type="text" name="M
+WT3_Config.c(38):     SO_ServerLoadProb" value="50" size="2" /><tr><td colspan="2" hight="1" bgcolor="#EFF2F7" v
+WT3_Config.c(38):     align="top"><HR/></table><BR/><div bgcolor="#EFF2F7" align="center"><input type="submit" n
+WT3_Config.c(38):     ame="save" value="Update" /></div><p /><blockquote><a href="welcome.pl" target="body">Retu
+WT3_Config.c(38):     rn to the Web Tours Homepage</a></blockquote><div><input type="hidden" name=".cgifields" v
+WT3_Config.c(38):     alue="MSO_Redirect"  /><input type="hidden" name=".cgifields" value="MSO_JSVerify"  /><inp
+WT3_Config.c(38):     ut type="hidden" name=".cgifields" value="MSO_JSFormSubmit1"  /><input type="hidden" name=
+WT3_Config.c(38):     ".cgifields" value="MSO_JSCalc"  /><input type="hidden" name=".cgifields" value="MSO_SLoad
+WT3_Config.c(38):     "  /><input type="hidden" name=".cgifields" value="MSO_Redirects"  /><input type="hidden" 
+WT3_Config.c(38):     name=".cgifields" value="MSO_JSWPages"  /><input type="hidden" name=".cgifields" value="MS
+WT3_Config.c(38):     O_Comments"  /><input type="hidden" name=".cgifields" value="MSO_SErrors"  /><input type="
+WT3_Config.c(38):     hidden" name=".cgifields" value="MSO_JSFormSubmit2"  /></div></form></blockquote>\n
+WT3_Config.c(38):     </body>\n
+WT3_Config.c(38):     </html>
+WT3_Config.c(38): t=737ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/admin.pl" (RelFrameId=1, Internal ID=10)
+WT3_Config.c(38):     0\r\n
+WT3_Config.c(38):     \r\n
+WT3_Config.c(38): t=738ms: Request done "http://127.0.0.1:1080/cgi-bin/admin.pl"  	[MsgId: MMSG-26000]
+WT3_Config.c(38): web_submit_form("admin.pl") was successful, 6632 body bytes, 317 header bytes, 19 chunking overhead bytes  	[MsgId: MMSG-26385]
+WT3_Config.c(56): >> MSO_Comments=on
+WT3_Config.c(57): >> MSO_JSCalc=<OFF>
+WT3_Config.c(58): >> MSO_JSCalc=<OFF>
+WT3_Config.c(59): >> MSO_JSFormSubmit1=<OFF>
+WT3_Config.c(60): >> MSO_JSFormSubmit2=<OFF>
+WT3_Config.c(61): >> MSO_JSVerify=<OFF>
+WT3_Config.c(62): >> MSO_JSWPages=<OFF>
+WT3_Config.c(63): >> MSO_Redirect=<OFF>
+WT3_Config.c(64): >> MSO_Redirects=<OFF>
+WT3_Config.c(65): >> MSO_SErrors=<OFF> (50%)
+WT3_Config.c(66): >> MSO_SLoad=<OFF> (50%)
+WT3_Config.c(68): web_url("Return to the Web Tours Homepage") started  	[MsgId: MMSG-26355]
+WT3_Config.c(68): t=744ms: Already connected [0] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+WT3_Config.c(68): t=744ms: 380-byte request headers for "http://127.0.0.1:1080/cgi-bin/welcome.pl" (RelFrameId=1, Internal ID=11)
+WT3_Config.c(68):     GET /cgi-bin/welcome.pl HTTP/1.1\r\n
+WT3_Config.c(68):     Referer: http://127.0.0.1:1080/cgi-bin/admin.pl\r\n
+WT3_Config.c(68):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+WT3_Config.c(68):     \n
+WT3_Config.c(68):     Accept-Encoding: gzip, deflate\r\n
+WT3_Config.c(68):     Accept-Language: en-US\r\n
+WT3_Config.c(68):     Accept: */*\r\n
+WT3_Config.c(68):     Connection: Keep-Alive\r\n
+WT3_Config.c(68):     Host: 127.0.0.1:1080\r\n
+WT3_Config.c(68):     Cookie: MSO=SID&1437500304&MSO_Comments&on&MSO_ServerLoadProb&50&MSO_ServerErrorsProb&50\r
+WT3_Config.c(68):     \n
+WT3_Config.c(68):     \r\n
+WT3_Config.c(68): t=781ms: 215-byte response headers for "http://127.0.0.1:1080/cgi-bin/welcome.pl" (RelFrameId=1, Internal ID=11)
+WT3_Config.c(68):     HTTP/1.1 200 OK\r\n
+WT3_Config.c(68):     Date: Tue, 21 Jul 2015 17:38:25 GMT\r\n
+WT3_Config.c(68):     Server: Apache/2.2.21 (Win32)\r\n
+WT3_Config.c(68):     Keep-Alive: timeout=5, max=95\r\n
+WT3_Config.c(68):     Connection: Keep-Alive\r\n
+WT3_Config.c(68):     Transfer-Encoding: chunked\r\n
+WT3_Config.c(68):     Content-Type: text/html; charset=ISO-8859-1\r\n
+WT3_Config.c(68):     \r\n
+WT3_Config.c(68): t=782ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/welcome.pl" (RelFrameId=1, Internal ID=11)
+WT3_Config.c(68):     2ae\r\n
+WT3_Config.c(68): t=782ms: 2-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/welcome.pl" (RelFrameId=1, Internal ID=11)
+WT3_Config.c(68):     \r\n
+WT3_Config.c(68): t=782ms: 686-byte chunked response body for "http://127.0.0.1:1080/cgi-bin/welcome.pl" (RelFrameId=1, Internal ID=11)
+WT3_Config.c(68):     <!-- \n
+WT3_Config.c(68):      A Session ID has been created and loaded into a cookie called MSO.\n
+WT3_Config.c(68):      Also, the server options have been loaded into the cookie called\n
+WT3_Config.c(68):      MSO as well.  The server options can be set via the Admin page.\n
+WT3_Config.c(68):      --->\n
+WT3_Config.c(68):     \n
+WT3_Config.c(68):     <html>\n
+WT3_Config.c(68):     <title>Web Tours</title>\n
+WT3_Config.c(68):        <!-- Frame Set -->\n
+WT3_Config.c(68):        <frameset cols="160,*" border="1" frameborder="1">\n
+WT3_Config.c(68):           <!-- Navigation Frame -->\n
+WT3_Config.c(68):           <frame src="nav.pl?in=home" name="navbar" marginheight="2" marginwidth="2" \n
+WT3_Config.c(68):                 noresize="noresize" scrolling="auto"/>\n
+WT3_Config.c(68):           <!-- Home Frame -->\n
+WT3_Config.c(68):           <frame src="/WebTours/home.html" name="info" marginheight="2" marginwidth="2" \n
+WT3_Config.c(68):                 noresize="noresize" scrolling="auto"/>\n
+WT3_Config.c(68):        </frameset>\n
+WT3_Config.c(68):     </html>\n
+WT3_Config.c(68):     \n
+WT3_Config.c(68):     </body>\n
+WT3_Config.c(68):     </html>
+WT3_Config.c(68): Detected non-resource "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" in "http://127.0.0.1:1080/cgi-bin/welcome.pl"  	[MsgId: MMSG-26574]
+WT3_Config.c(68): Detected non-resource "http://127.0.0.1:1080/WebTours/home.html" in "http://127.0.0.1:1080/cgi-bin/welcome.pl"  	[MsgId: MMSG-26574]
+WT3_Config.c(68): Retrieving data from cache for "http://127.0.0.1:1080/WebTours/home.html"  	[MsgId: MMSG-26558]
+WT3_Config.c(68): t=784ms: 1361-byte response body retrieved from cache for "http://127.0.0.1:1080/WebTours/home.html" (RelFrameId=1.2, Internal ID=13)
+WT3_Config.c(68):     <HTML>\n
+WT3_Config.c(68):     <HEAD>\n
+WT3_Config.c(68):     \t<title>Web Tours</title>\n
+WT3_Config.c(68):     </HEAD>\n
+WT3_Config.c(68):     <style>\n
+WT3_Config.c(68):     \tblockquote {font-family: tahoma; font-size : 10pt}\n
+WT3_Config.c(68):     \tH1 {font-family: tahoma; font-size : 22pt; color: #003366}\n
+WT3_Config.c(68):     \tsmall {font-family: tahoma; font-size : 8pt}\n
+WT3_Config.c(68):     \tH3{font-family: tahoma; font-size : 10pt; color: black}\n
+WT3_Config.c(68):     \tA {FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Tahoma; TEXT-DECORATIO
+WT3_Config.c(68):     N: none}\n
+WT3_Config.c(68):     \tA:hover{ FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #993333; FONT-FAMILY: Tahoma;TEXT-DE
+WT3_Config.c(68):     CORATION: underline}\n
+WT3_Config.c(68):     \tTD {font-family: tahoma; font-size : 10pt; color: black}\n
+WT3_Config.c(68):     </style>\n
+WT3_Config.c(68):     <body bgcolor="#e0e7f1">\n
+WT3_Config.c(68):     <BR/>\n
+WT3_Config.c(68):     <BR/>\n
+WT3_Config.c(68):     <BR/>\n
+WT3_Config.c(68):     <br/>\n
+WT3_Config.c(68):     <table border="0">\n
+WT3_Config.c(68):     <tr><td></td></tr>\n
+WT3_Config.c(68):     <TR><TD></TD></TR>\n
+WT3_Config.c(68):     <TR><TD>\n
+WT3_Config.c(68):     <blockquote>\n
+WT3_Config.c(68):     <H1><b>Web Tours</b></H1>\n
+WT3_Config.c(68):     Welcome to the Web Tours site.\n
+WT3_Config.c(68):     <br/>\n
+WT3_Config.c(68):     To make reservations,please enter your account information to the left.\n
+WT3_Config.c(68):     <br/>\n
+WT3_Config.c(68):     If you haven't registered yet, <A href="/cgi-bin/login.pl?username=&amp;password=&amp;getI
+WT3_Config.c(68):     nfo=true" ><B>sign up now</B></A> to get access to all our resources.\n
+WT3_Config.c(68):     <br/>\n
+WT3_Config.c(68):     To configure the server options, use <A href="/cgi-bin/admin.pl" target="body" ><b>adminis
+WT3_Config.c(68):     tration</b></A> link.\n
+WT3_Config.c(68):     <br/><br/><br/><br/><br/><br/>\n
+WT3_Config.c(68):     <br/><small>\n
+WT3_Config.c(68):     This product uses parts of the SMT Kernel, Copyright (c) 1991-99 <A href="http://www.imati
+WT3_Config.c(68):     x.com" target="new"><B><small>iMatix Corporation</small></B></A> \n
+WT3_Config.c(68):     </small>\n
+WT3_Config.c(68):     </blockquote></TD>\n
+WT3_Config.c(68):     <TD></TD></TR>\n
+WT3_Config.c(68):     </table>\n
+WT3_Config.c(68):     </body>\n
+WT3_Config.c(68):     </HTML>\n
+WT3_Config.c(68): t=787ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/welcome.pl" (RelFrameId=1, Internal ID=11)
+WT3_Config.c(68):     0\r\n
+WT3_Config.c(68):     \r\n
+WT3_Config.c(68): t=787ms: Request done "http://127.0.0.1:1080/cgi-bin/welcome.pl"  	[MsgId: MMSG-26000]
+WT3_Config.c(68): t=788ms: Already connected [1] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+WT3_Config.c(68): t=788ms: 386-byte request headers for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.1, Internal ID=12)
+WT3_Config.c(68):     GET /cgi-bin/nav.pl?in=home HTTP/1.1\r\n
+WT3_Config.c(68):     Referer: http://127.0.0.1:1080/cgi-bin/welcome.pl\r\n
+WT3_Config.c(68):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+WT3_Config.c(68):     \n
+WT3_Config.c(68):     Accept-Encoding: gzip, deflate\r\n
+WT3_Config.c(68):     Accept-Language: en-US\r\n
+WT3_Config.c(68):     Accept: */*\r\n
+WT3_Config.c(68):     Connection: Keep-Alive\r\n
+WT3_Config.c(68):     Host: 127.0.0.1:1080\r\n
+WT3_Config.c(68):     Cookie: MSO=SID&1437500304&MSO_Comments&on&MSO_ServerLoadProb&50&MSO_ServerErrorsProb&50\r
+WT3_Config.c(68):     \n
+WT3_Config.c(68):     \r\n
+WT3_Config.c(68): t=830ms: 255-byte response headers for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.1, Internal ID=12)
+WT3_Config.c(68):     HTTP/1.1 200 OK\r\n
+WT3_Config.c(68):     Date: Tue, 21 Jul 2015 17:38:25 GMT\r\n
+WT3_Config.c(68):     Server: Apache/2.2.21 (Win32)\r\n
+WT3_Config.c(68):     Expires: Mon, 20 Jul 2015 17:38:25 GMT\r\n
+WT3_Config.c(68):     Keep-Alive: timeout=5, max=97\r\n
+WT3_Config.c(68):     Connection: Keep-Alive\r\n
+WT3_Config.c(68):     Transfer-Encoding: chunked\r\n
+WT3_Config.c(68):     Content-Type: text/html; charset=ISO-8859-1\r\n
+WT3_Config.c(68):     \r\n
+WT3_Config.c(68): t=831ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.1, Internal ID=12)
+WT3_Config.c(68):     b32\r\n
+WT3_Config.c(68): t=831ms: 2-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.1, Internal ID=12)
+WT3_Config.c(68):     \r\n
+WT3_Config.c(68): t=835ms: 2866-byte chunked response body for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.1, Internal ID=12)
+WT3_Config.c(68):     <!-- Comments option is ON \n
+WT3_Config.c(68):     \n
+WT3_Config.c(68):     These are used to make the automated parsing difficult.\n
+WT3_Config.c(68):     User must try and get the UserSession value.  There are several here, with similar boundar
+WT3_Config.c(68):     ies.\n
+WT3_Config.c(68):     But none are the right value.\n
+WT3_Config.c(68):     \n
+WT3_Config.c(68):     <!DOCTYPE HTML>\n
+WT3_Config.c(68):     <HTML><HEAD><TITLE>Web Tours Navigation Bar</TITLE>\n
+WT3_Config.c(68):     <style>\n
+WT3_Config.c(68):     \tblockquote {font-family: tahoma; font-size : 10pt}\n
+WT3_Config.c(68):     \tH1 {font-family: tahoma; font-size : 22pt;color: #993333}\n
+WT3_Config.c(68):     \tsmall {font-family: tahoma; font-size : 8pt}\n
+WT3_Config.c(68):     </style>\n
+WT3_Config.c(68):     </HEAD><BODY BGCOLOR="#E0E7F1"><br clear="both"/>\n
+WT3_Config.c(68):     <form method="post" action="login.pl" target="body">\n
+WT3_Config.c(68):     <input type="hidden" name="userSession" value="8853116443.929040097fQiQfitpzDfQDHpfAHz"/>\n
+WT3_Config.c(68):     <form method="post" action="error.pl" onSubmit="doJSformSubmit1(this)" target="body">\n
+WT3_Config.c(68):     <input type="hidden" name="userSession" value="1116443.929040097fQiQfitpzDfQDHpfAHz"/>\n
+WT3_Config.c(68):     <table border="0">\n
+WT3_Config.c(68):     <tr><td><font face="sans-serif" size=2>&nbsp;</font></td></tr>\n
+WT3_Config.c(68):     <tr><td><font face="sans-serif" size=2>&nbsp;Username</font></td></tr>\n
+WT3_Config.c(68):     <tr><td><input type="text" name="username" value="" size="18" maxlength="30">\n
+WT3_Config.c(68):     <tr><td><font face="sans-serif" size="2">&nbsp;Password</font></td></tr>\n
+WT3_Config.c(68):     <tr><td><input type="password" name="password" value="" size="18" maxlength="30"/></td></t
+WT3_Config.c(68):     r>\n
+WT3_Config.c(68):     <tr><td><input type="image" name="login" value="Login" alt="Login" border="1" src="/WebTou
+WT3_Config.c(68):     rs/images/mer_login.gif"/></td></tr>\n
+WT3_Config.c(68):     </table></form></form>\n
+WT3_Config.c(68):     </BODY></HTML>\n
+WT3_Config.c(68):     -->\n
+WT3_Config.c(68):     <!DOCTYPE html\n
+WT3_Config.c(68):     \tPUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"\n
+WT3_Config.c(68):     \t "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n
+WT3_Config.c(68):     <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">\n
+WT3_Config.c(68):     <head>\n
+WT3_Config.c(68):     <title>Web Tours Navigation Bar</title>\n
+WT3_Config.c(68):     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />\n
+WT3_Config.c(68):     </head>\n
+WT3_Config.c(68):     <body bgcolor="#E0E7F1">\n
+WT3_Config.c(68):     <style>\n
+WT3_Config.c(68):     blockquote {font-family: tahoma; font-size : 10pt}\n
+WT3_Config.c(68):     H1 {font-family: tahoma; font-size : 22pt; color: #993333}\n
+WT3_Config.c(68):     H3 {font-family: tahoma; font-size : 10pt; color: black}\n
+WT3_Config.c(68):     small {font-family: tahoma; font-size : 8pt}\n
+WT3_Config.c(68):     </style>\n
+WT3_Config.c(68):     <form method="post" action="/cgi-bin/login.pl" target="body">\n
+WT3_Config.c(68):     <input type="hidden" name="userSession" value="116443.929040097fQiQfitpzDfQDHpfAHz"/>\n
+WT3_Config.c(68):     <table border="0"><tr><td>&nbsp;</td>\n
+WT3_Config.c(68):     <td>&nbsp;</td></tr>\n
+WT3_Config.c(68):     <tr><td>&nbsp;</td>\n
+WT3_Config.c(68):     <td>&nbsp;</td></tr>\n
+WT3_Config.c(68):     <tr><td>&nbsp;</td>\n
+WT3_Config.c(68):     <td><small>&nbsp;Username</small></td></tr>\n
+WT3_Config.c(68):     <tr><td>&nbsp;</td>\n
+WT3_Config.c(68):     <td><input type="text" name="username" value="" size="14" maxlength="14"/></td></tr>\n
+WT3_Config.c(68):     <tr><td>&nbsp;</td>\n
+WT3_Config.c(68):     <td><small>&nbsp;Password</small></td>\n
+WT3_Config.c(68):     <tr><td>&nbsp;</td>\n
+WT3_Config.c(68):     <td><input type="password" name="password" value="" size="14" maxlength="14"/></td></tr>\n
+WT3_Config.c(68):     <tr><td>&nbsp;</td>\n
+WT3_Config.c(68):     <td>&nbsp;</td></tr>\n
+WT3_Config.c(68):     <tr><td>&nbsp;</td>\n
+WT3_Config.c(68):     <td><input type="image" name="login" value="Login" alt="Login" border="1" \n
+WT3_Config.c(68):     src="/WebTours/images/mer_login.gif"/></td></tr>\n
+WT3_Config.c(68):     <tr><td>&nbsp;</td><td>&nbsp;</td></tr>\n
+WT3_Config.c(68):     </table><input type="hidden" name="JSFormSubmit" value="off"/>\n
+WT3_Config.c(68):     </form>\n
+WT3_Config.c(68):     \n
+WT3_Config.c(68):     </body>\n
+WT3_Config.c(68):     </html>\n
+WT3_Config.c(68): Resource "http://127.0.0.1:1080/WebTours/images/mer_login.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+WT3_Config.c(68): t=839ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.1, Internal ID=12)
+WT3_Config.c(68):     0\r\n
+WT3_Config.c(68):     \r\n
+WT3_Config.c(68): t=840ms: Request done "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home"  	[MsgId: MMSG-26000]
+WT3_Config.c(68): web_url("Return to the Web Tours Homepage") was successful, 3552 body bytes, 470 header bytes, 24 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(49): >> Iteration=1 User="jojo".
+WT3_SignUpInOut.c(213): web_reg_find started  	[MsgId: MMSG-26355]
+WT3_SignUpInOut.c(213): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+wi_functions.c(145): Notify: Transaction "WT3_T07_SignIn" started.
+WT3_SignUpInOut.c(216): web_submit_form("SignIn.pl_4") started  	[MsgId: MMSG-26355]
+WT3_SignUpInOut.c(216): Submitting form to "http://127.0.0.1:1080/cgi-bin/login.pl", Target Frame="body"  	[MsgId: MMSG-27978]
+WT3_SignUpInOut.c(216): t=846ms: Already connected [0] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(216): t=846ms: 480-byte request headers for "http://127.0.0.1:1080/cgi-bin/login.pl" (RelFrameId=1, Internal ID=14)
+WT3_SignUpInOut.c(216):     POST /cgi-bin/login.pl HTTP/1.1\r\n
+WT3_SignUpInOut.c(216):     Content-Type: application/x-www-form-urlencoded\r\n
+WT3_SignUpInOut.c(216):     Cache-Control: no-cache\r\n
+WT3_SignUpInOut.c(216):     Referer: http://127.0.0.1:1080/cgi-bin/nav.pl?in=home\r\n
+WT3_SignUpInOut.c(216):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+WT3_SignUpInOut.c(216):     \n
+WT3_SignUpInOut.c(216):     Accept-Encoding: gzip, deflate\r\n
+WT3_SignUpInOut.c(216):     Accept-Language: en-US\r\n
+WT3_SignUpInOut.c(216):     Accept: */*\r\n
+WT3_SignUpInOut.c(216):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(216):     Host: 127.0.0.1:1080\r\n
+WT3_SignUpInOut.c(216):     Cookie: MSO=SID&1437500304&MSO_Comments&on&MSO_ServerLoadProb&50&MSO_ServerErrorsProb&50\r
+WT3_SignUpInOut.c(216):     \n
+WT3_SignUpInOut.c(216):     Content-Length: 114\r\n
+WT3_SignUpInOut.c(216):     \r\n
+WT3_SignUpInOut.c(216): t=847ms: 114-byte request body for "http://127.0.0.1:1080/cgi-bin/login.pl" (RelFrameId=1, Internal ID=14)
+WT3_SignUpInOut.c(216):     userSession=116443.929040097fQiQfitpzDfQDHpfAHz&username=jojo&password=bean&JSFormSubmit=o
+WT3_SignUpInOut.c(216):     ff&login.x=29&login.y=10
+WT3_SignUpInOut.c(216): t=883ms: 358-byte response headers for "http://127.0.0.1:1080/cgi-bin/login.pl" (RelFrameId=1, Internal ID=14)
+WT3_SignUpInOut.c(216):     HTTP/1.1 200 OK\r\n
+WT3_SignUpInOut.c(216):     Date: Tue, 21 Jul 2015 17:38:25 GMT\r\n
+WT3_SignUpInOut.c(216):     Server: Apache/2.2.21 (Win32)\r\n
+WT3_SignUpInOut.c(216):     Expires: 5s\r\n
+WT3_SignUpInOut.c(216):     Set-Cookie: MTUserInfo=firstName&Jojo&address2&&username&jojo&hash&47&lastName&Bean%0A&add
+WT3_SignUpInOut.c(216):     ress1&&creditCard&&expDate&%0A; path=/\r\n
+WT3_SignUpInOut.c(216):     Keep-Alive: timeout=5, max=94\r\n
+WT3_SignUpInOut.c(216):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(216):     Transfer-Encoding: chunked\r\n
+WT3_SignUpInOut.c(216):     Content-Type: text/html; charset=ISO-8859-1\r\n
+WT3_SignUpInOut.c(216):     \r\n
+WT3_SignUpInOut.c(216): t=886ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/login.pl" (RelFrameId=1, Internal ID=14)
+WT3_SignUpInOut.c(216):     1e1\r\n
+WT3_SignUpInOut.c(216): t=886ms: 2-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/login.pl" (RelFrameId=1, Internal ID=14)
+WT3_SignUpInOut.c(216):     \r\n
+WT3_SignUpInOut.c(216): t=886ms: 481-byte chunked response body for "http://127.0.0.1:1080/cgi-bin/login.pl" (RelFrameId=1, Internal ID=14)
+WT3_SignUpInOut.c(216):     <!--\n
+WT3_SignUpInOut.c(216):     User password was correct - added a cookie with the user's default\n
+WT3_SignUpInOut.c(216):     information.  Set the user up to make reservations...\n
+WT3_SignUpInOut.c(216):     \n
+WT3_SignUpInOut.c(216):     --->\n
+WT3_SignUpInOut.c(216):     \n
+WT3_SignUpInOut.c(216):     <html>\n
+WT3_SignUpInOut.c(216):     <title>Web Tours</title>\n
+WT3_SignUpInOut.c(216):     <frameset cols="160,*" border=1 frameborder=1>\n
+WT3_SignUpInOut.c(216):     <frame src="nav.pl?page=menu&in=home" name="navbar" marginheight="2" marginwidth="2" nores
+WT3_SignUpInOut.c(216):     ize="noresize" scrolling="auto"/>\n
+WT3_SignUpInOut.c(216):     <frame src="login.pl?intro=true" name="info" marginheight="2" marginwidth="2" noresize="no
+WT3_SignUpInOut.c(216):     resize" scrolling="auto"/>\n
+WT3_SignUpInOut.c(216):     </frameset>\n
+WT3_SignUpInOut.c(216):     \n
+WT3_SignUpInOut.c(216):     </body>\n
+WT3_SignUpInOut.c(216):     </html>
+WT3_SignUpInOut.c(216): Detected non-resource "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home" in "http://127.0.0.1:1080/cgi-bin/login.pl"  	[MsgId: MMSG-26574]
+WT3_SignUpInOut.c(216): Detected non-resource "http://127.0.0.1:1080/cgi-bin/login.pl?intro=true" in "http://127.0.0.1:1080/cgi-bin/login.pl"  	[MsgId: MMSG-26574]
+WT3_SignUpInOut.c(216): t=889ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/login.pl" (RelFrameId=1, Internal ID=14)
+WT3_SignUpInOut.c(216):     0\r\n
+WT3_SignUpInOut.c(216):     \r\n
+WT3_SignUpInOut.c(216): t=889ms: Request done "http://127.0.0.1:1080/cgi-bin/login.pl"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(216): t=889ms: Already connected [1] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(216): t=889ms: 504-byte request headers for "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home" (RelFrameId=1.1, Internal ID=15)
+WT3_SignUpInOut.c(216):     GET /cgi-bin/nav.pl?page=menu&in=home HTTP/1.1\r\n
+WT3_SignUpInOut.c(216):     Referer: http://127.0.0.1:1080/cgi-bin/login.pl\r\n
+WT3_SignUpInOut.c(216):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+WT3_SignUpInOut.c(216):     \n
+WT3_SignUpInOut.c(216):     Accept-Encoding: gzip, deflate\r\n
+WT3_SignUpInOut.c(216):     Accept-Language: en-US\r\n
+WT3_SignUpInOut.c(216):     Accept: */*\r\n
+WT3_SignUpInOut.c(216):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(216):     Host: 127.0.0.1:1080\r\n
+WT3_SignUpInOut.c(216):     Cookie: MSO=SID&1437500304&MSO_Comments&on&MSO_ServerLoadProb&50&MSO_ServerErrorsProb&50; 
+WT3_SignUpInOut.c(216):     MTUserInfo=firstName&Jojo&address2&&username&jojo&hash&47&lastName&Bean%0A&address1&&credi
+WT3_SignUpInOut.c(216):     tCard&&expDate&%0A\r\n
+WT3_SignUpInOut.c(216):     \r\n
+WT3_SignUpInOut.c(216): t=891ms: Already connected [2] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(216): t=891ms: 499-byte request headers for "http://127.0.0.1:1080/cgi-bin/login.pl?intro=true" (RelFrameId=1.2, Internal ID=16)
+WT3_SignUpInOut.c(216):     GET /cgi-bin/login.pl?intro=true HTTP/1.1\r\n
+WT3_SignUpInOut.c(216):     Referer: http://127.0.0.1:1080/cgi-bin/login.pl\r\n
+WT3_SignUpInOut.c(216):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+WT3_SignUpInOut.c(216):     \n
+WT3_SignUpInOut.c(216):     Accept-Encoding: gzip, deflate\r\n
+WT3_SignUpInOut.c(216):     Accept-Language: en-US\r\n
+WT3_SignUpInOut.c(216):     Accept: */*\r\n
+WT3_SignUpInOut.c(216):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(216):     Host: 127.0.0.1:1080\r\n
+WT3_SignUpInOut.c(216):     Cookie: MSO=SID&1437500304&MSO_Comments&on&MSO_ServerLoadProb&50&MSO_ServerErrorsProb&50; 
+WT3_SignUpInOut.c(216):     MTUserInfo=firstName&Jojo&address2&&username&jojo&hash&47&lastName&Bean%0A&address1&&credi
+WT3_SignUpInOut.c(216):     tCard&&expDate&%0A\r\n
+WT3_SignUpInOut.c(216):     \r\n
+WT3_SignUpInOut.c(216): t=929ms: 255-byte response headers for "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home" (RelFrameId=1.1, Internal ID=15)
+WT3_SignUpInOut.c(216):     HTTP/1.1 200 OK\r\n
+WT3_SignUpInOut.c(216):     Date: Tue, 21 Jul 2015 17:38:25 GMT\r\n
+WT3_SignUpInOut.c(216):     Server: Apache/2.2.21 (Win32)\r\n
+WT3_SignUpInOut.c(216):     Expires: Mon, 20 Jul 2015 17:38:25 GMT\r\n
+WT3_SignUpInOut.c(216):     Keep-Alive: timeout=5, max=96\r\n
+WT3_SignUpInOut.c(216):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(216):     Transfer-Encoding: chunked\r\n
+WT3_SignUpInOut.c(216):     Content-Type: text/html; charset=ISO-8859-1\r\n
+WT3_SignUpInOut.c(216):     \r\n
+WT3_SignUpInOut.c(216): t=929ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home" (RelFrameId=1.1, Internal ID=15)
+WT3_SignUpInOut.c(216):     5ca\r\n
+WT3_SignUpInOut.c(216): t=930ms: 2-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home" (RelFrameId=1.1, Internal ID=15)
+WT3_SignUpInOut.c(216):     \r\n
+WT3_SignUpInOut.c(216): t=930ms: 1482-byte chunked response body for "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home" (RelFrameId=1.1, Internal ID=15)
+WT3_SignUpInOut.c(216):     <!DOCTYPE html\n
+WT3_SignUpInOut.c(216):     \tPUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"\n
+WT3_SignUpInOut.c(216):     \t "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n
+WT3_SignUpInOut.c(216):     <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">\n
+WT3_SignUpInOut.c(216):     <head>\n
+WT3_SignUpInOut.c(216):     <title>Web Tours Navigation Bar</title>\n
+WT3_SignUpInOut.c(216):     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />\n
+WT3_SignUpInOut.c(216):     </head>\n
+WT3_SignUpInOut.c(216):     <body bgcolor="#E0E7F1">\n
+WT3_SignUpInOut.c(216):     \n
+WT3_SignUpInOut.c(216):     <style>\n
+WT3_SignUpInOut.c(216):     \tblockquote {font-family: tahoma; font-size : 10pt}\n
+WT3_SignUpInOut.c(216):     \tH1 {font-family: tahoma; font-size : 22pt; color: #993333}\n
+WT3_SignUpInOut.c(216):     \tsmall {font-family: tahoma; font-size : 8pt}\n
+WT3_SignUpInOut.c(216):     \tH3{font-family: tahoma; font-size : 10pt; color: black}\n
+WT3_SignUpInOut.c(216):     \tA {FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Tahoma; TEXT-DECORATIO
+WT3_SignUpInOut.c(216):     N: none}\n
+WT3_SignUpInOut.c(216):     \tA:hover{ FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #993333; FONT-FAMILY: Tahoma;TEXT-DE
+WT3_SignUpInOut.c(216):     CORATION: underline}\n
+WT3_SignUpInOut.c(216):     \tTD {font-family: tahoma; font-size : 10pt; color: black}\n
+WT3_SignUpInOut.c(216):     </style>\n
+WT3_SignUpInOut.c(216):     \n
+WT3_SignUpInOut.c(216):     <BR><BR><center>\n
+WT3_SignUpInOut.c(216):     \n
+WT3_SignUpInOut.c(216):     <br clear="both"/><center><A HREF="welcome.pl?page=search" TARGET="body"><IMG BORDER="0" S
+WT3_SignUpInOut.c(216):     RC="/WebTours/images/flights.gif" \n
+WT3_SignUpInOut.c(216):     ALT="Search Flights Button"/></A>\n
+WT3_SignUpInOut.c(216):     <br clear="both"/><A HREF="welcome.pl?page=itinerary" TARGET="body"><IMG BORDER="0" SRC="/
+WT3_SignUpInOut.c(216):     WebTours/images/itinerary.gif" \n
+WT3_SignUpInOut.c(216):     ALT="Itinerary Button"/></A>\n
+WT3_SignUpInOut.c(216):     <br clear="both"/><A HREF="welcome.pl?page=menus" TARGET="body"><IMG BORDER="0" SRC="/WebT
+WT3_SignUpInOut.c(216):     ours/images/in_home.gif" \n
+WT3_SignUpInOut.c(216):     ALT="Home Button"/></A>\n
+WT3_SignUpInOut.c(216):     <br clear><A HREF="welcome.pl?signOff=1" TARGET="body"><IMG BORDER="0" SRC="/WebTours/imag
+WT3_SignUpInOut.c(216):     es/signoff.gif" \n
+WT3_SignUpInOut.c(216):     ALT="SignOff Button"/></A></center>\n
+WT3_SignUpInOut.c(216):     \n
+WT3_SignUpInOut.c(216):     </body>\n
+WT3_SignUpInOut.c(216):     </html>\n
+WT3_SignUpInOut.c(216): Found resource "http://127.0.0.1:1080/WebTours/images/flights.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+WT3_SignUpInOut.c(216): Found resource "http://127.0.0.1:1080/WebTours/images/itinerary.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+WT3_SignUpInOut.c(216): Found resource "http://127.0.0.1:1080/WebTours/images/in_home.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+WT3_SignUpInOut.c(216): Found resource "http://127.0.0.1:1080/WebTours/images/signoff.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+WT3_SignUpInOut.c(216): t=933ms: Already connected [3] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(216): t=933ms: 517-byte request headers for "http://127.0.0.1:1080/WebTours/images/itinerary.gif" (RelFrameId=, Internal ID=18)
+WT3_SignUpInOut.c(216):     GET /WebTours/images/itinerary.gif HTTP/1.1\r\n
+WT3_SignUpInOut.c(216):     Referer: http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home\r\n
+WT3_SignUpInOut.c(216):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+WT3_SignUpInOut.c(216):     \n
+WT3_SignUpInOut.c(216):     Accept-Encoding: gzip, deflate\r\n
+WT3_SignUpInOut.c(216):     Accept-Language: en-US\r\n
+WT3_SignUpInOut.c(216):     Accept: */*\r\n
+WT3_SignUpInOut.c(216):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(216):     Host: 127.0.0.1:1080\r\n
+WT3_SignUpInOut.c(216):     Cookie: MSO=SID&1437500304&MSO_Comments&on&MSO_ServerLoadProb&50&MSO_ServerErrorsProb&50; 
+WT3_SignUpInOut.c(216):     MTUserInfo=firstName&Jojo&address2&&username&jojo&hash&47&lastName&Bean%0A&address1&&credi
+WT3_SignUpInOut.c(216):     tCard&&expDate&%0A\r\n
+WT3_SignUpInOut.c(216):     \r\n
+WT3_SignUpInOut.c(216): t=935ms: 297-byte response headers for "http://127.0.0.1:1080/WebTours/images/itinerary.gif" (RelFrameId=, Internal ID=18)
+WT3_SignUpInOut.c(216):     HTTP/1.1 200 OK\r\n
+WT3_SignUpInOut.c(216):     Date: Tue, 21 Jul 2015 17:38:25 GMT\r\n
+WT3_SignUpInOut.c(216):     Server: Apache/2.2.21 (Win32)\r\n
+WT3_SignUpInOut.c(216):     Last-Modified: Thu, 12 Jan 2012 22:30:26 GMT\r\n
+WT3_SignUpInOut.c(216):     ETag: "200000001d7c2-2dd-4b65c4b744480"\r\n
+WT3_SignUpInOut.c(216):     Accept-Ranges: bytes\r\n
+WT3_SignUpInOut.c(216):     Content-Length: 733\r\n
+WT3_SignUpInOut.c(216):     Keep-Alive: timeout=5, max=99\r\n
+WT3_SignUpInOut.c(216):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(216):     Content-Type: image/gif\r\n
+WT3_SignUpInOut.c(216):     \r\n
+WT3_SignUpInOut.c(216): t=936ms: 733-byte response body for "http://127.0.0.1:1080/WebTours/images/itinerary.gif" (RelFrameId=, Internal ID=18)
+WT3_SignUpInOut.c(216): t=936ms: Request done "http://127.0.0.1:1080/WebTours/images/itinerary.gif"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(216): t=936ms: Already connected [0] to 127.0.0.1:1080  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(216): t=936ms: 515-byte request headers for "http://127.0.0.1:1080/WebTours/images/flights.gif" (RelFrameId=, Internal ID=17)
+WT3_SignUpInOut.c(216):     GET /WebTours/images/flights.gif HTTP/1.1\r\n
+WT3_SignUpInOut.c(216):     Referer: http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home\r\n
+WT3_SignUpInOut.c(216):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+WT3_SignUpInOut.c(216):     \n
+WT3_SignUpInOut.c(216):     Accept-Encoding: gzip, deflate\r\n
+WT3_SignUpInOut.c(216):     Accept-Language: en-US\r\n
+WT3_SignUpInOut.c(216):     Accept: */*\r\n
+WT3_SignUpInOut.c(216):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(216):     Host: 127.0.0.1:1080\r\n
+WT3_SignUpInOut.c(216):     Cookie: MSO=SID&1437500304&MSO_Comments&on&MSO_ServerLoadProb&50&MSO_ServerErrorsProb&50; 
+WT3_SignUpInOut.c(216):     MTUserInfo=firstName&Jojo&address2&&username&jojo&hash&47&lastName&Bean%0A&address1&&credi
+WT3_SignUpInOut.c(216):     tCard&&expDate&%0A\r\n
+WT3_SignUpInOut.c(216):     \r\n
+WT3_SignUpInOut.c(216): t=937ms: Connecting [4] to host 127.0.0.1:1080  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(216): t=938ms: Connecting [5] to host 127.0.0.1:1080  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(216): t=938ms: Connected socket [4] from 127.0.0.1:4976 to 127.0.0.1:1080 in 0 ms  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(216): t=938ms: 515-byte request headers for "http://127.0.0.1:1080/WebTours/images/in_home.gif" (RelFrameId=, Internal ID=19)
+WT3_SignUpInOut.c(216):     GET /WebTours/images/in_home.gif HTTP/1.1\r\n
+WT3_SignUpInOut.c(216):     Referer: http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home\r\n
+WT3_SignUpInOut.c(216):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+WT3_SignUpInOut.c(216):     \n
+WT3_SignUpInOut.c(216):     Accept-Encoding: gzip, deflate\r\n
+WT3_SignUpInOut.c(216):     Accept-Language: en-US\r\n
+WT3_SignUpInOut.c(216):     Accept: */*\r\n
+WT3_SignUpInOut.c(216):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(216):     Host: 127.0.0.1:1080\r\n
+WT3_SignUpInOut.c(216):     Cookie: MSO=SID&1437500304&MSO_Comments&on&MSO_ServerLoadProb&50&MSO_ServerErrorsProb&50; 
+WT3_SignUpInOut.c(216):     MTUserInfo=firstName&Jojo&address2&&username&jojo&hash&47&lastName&Bean%0A&address1&&credi
+WT3_SignUpInOut.c(216):     tCard&&expDate&%0A\r\n
+WT3_SignUpInOut.c(216):     \r\n
+WT3_SignUpInOut.c(216): t=940ms: 221-byte response headers for "http://127.0.0.1:1080/cgi-bin/login.pl?intro=true" (RelFrameId=1.2, Internal ID=16)
+WT3_SignUpInOut.c(216):     HTTP/1.1 200 OK\r\n
+WT3_SignUpInOut.c(216):     Date: Tue, 21 Jul 2015 17:38:25 GMT\r\n
+WT3_SignUpInOut.c(216):     Server: Apache/2.2.21 (Win32)\r\n
+WT3_SignUpInOut.c(216):     Expires: 5s\r\n
+WT3_SignUpInOut.c(216):     Content-Length: 918\r\n
+WT3_SignUpInOut.c(216):     Keep-Alive: timeout=5, max=99\r\n
+WT3_SignUpInOut.c(216):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(216):     Content-Type: text/html; charset=ISO-8859-1\r\n
+WT3_SignUpInOut.c(216):     \r\n
+WT3_SignUpInOut.c(216): t=941ms: 918-byte response body for "http://127.0.0.1:1080/cgi-bin/login.pl?intro=true" (RelFrameId=1.2, Internal ID=16)
+WT3_SignUpInOut.c(216):     <!DOCTYPE html\n
+WT3_SignUpInOut.c(216):     \tPUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"\n
+WT3_SignUpInOut.c(216):     \t "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n
+WT3_SignUpInOut.c(216):     <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">\n
+WT3_SignUpInOut.c(216):     <head>\n
+WT3_SignUpInOut.c(216):     <title>Welcome to Web Tours</title>\n
+WT3_SignUpInOut.c(216):     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />\n
+WT3_SignUpInOut.c(216):     </head>\n
+WT3_SignUpInOut.c(216):     <body bgcolor="#E0E7F1">\n
+WT3_SignUpInOut.c(216):     <p /><style>blockquote {font-family: tahoma; font-size : 10pt}H1 {font-family: tahoma; fon
+WT3_SignUpInOut.c(216):     t-size : 22pt; color: #993333}small {font-family: tahoma; font-size : 8pt}H3 {font-family:
+WT3_SignUpInOut.c(216):      tahoma; font-size : 10pt; color: black}TD {font-family: tahoma; font-size : 10pt; color: 
+WT3_SignUpInOut.c(216):     black}</style><BR/><BR/><BR/><BR/><BR/><blockquote>Welcome, <b>jojo</b>, to the Web Tours 
+WT3_SignUpInOut.c(216):     reservation pages.<BR/>Using the menu to the left, you can search for new flights to book,
+WT3_SignUpInOut.c(216):      \n
+WT3_SignUpInOut.c(216):     or review/edit the flights already booked.  Don't forget to sign off when\n
+WT3_SignUpInOut.c(216):     you're done!\n
+WT3_SignUpInOut.c(216):     </blockquote>\n
+WT3_SignUpInOut.c(216):     </body>\n
+WT3_SignUpInOut.c(216):     </html>
+WT3_SignUpInOut.c(216): t=943ms: Request done "http://127.0.0.1:1080/cgi-bin/login.pl?intro=true"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(216): t=943ms: 297-byte response headers for "http://127.0.0.1:1080/WebTours/images/flights.gif" (RelFrameId=, Internal ID=17)
+WT3_SignUpInOut.c(216):     HTTP/1.1 200 OK\r\n
+WT3_SignUpInOut.c(216):     Date: Tue, 21 Jul 2015 17:38:25 GMT\r\n
+WT3_SignUpInOut.c(216):     Server: Apache/2.2.21 (Win32)\r\n
+WT3_SignUpInOut.c(216):     Last-Modified: Thu, 12 Jan 2012 22:30:26 GMT\r\n
+WT3_SignUpInOut.c(216):     ETag: "200000001d7b8-2d6-4b65c4b744480"\r\n
+WT3_SignUpInOut.c(216):     Accept-Ranges: bytes\r\n
+WT3_SignUpInOut.c(216):     Content-Length: 726\r\n
+WT3_SignUpInOut.c(216):     Keep-Alive: timeout=5, max=93\r\n
+WT3_SignUpInOut.c(216):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(216):     Content-Type: image/gif\r\n
+WT3_SignUpInOut.c(216):     \r\n
+WT3_SignUpInOut.c(216): t=946ms: 726-byte response body for "http://127.0.0.1:1080/WebTours/images/flights.gif" (RelFrameId=, Internal ID=17)
+WT3_SignUpInOut.c(216): t=946ms: Request done "http://127.0.0.1:1080/WebTours/images/flights.gif"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(216): t=946ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home" (RelFrameId=1.1, Internal ID=15)
+WT3_SignUpInOut.c(216):     0\r\n
+WT3_SignUpInOut.c(216):     \r\n
+WT3_SignUpInOut.c(216): t=946ms: Request done "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(216): t=947ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/images/in_home.gif" (RelFrameId=, Internal ID=19)
+WT3_SignUpInOut.c(216):     HTTP/1.1 200 OK\r\n
+WT3_SignUpInOut.c(216):     Date: Tue, 21 Jul 2015 17:38:25 GMT\r\n
+WT3_SignUpInOut.c(216):     Server: Apache/2.2.21 (Win32)\r\n
+WT3_SignUpInOut.c(216):     Last-Modified: Thu, 12 Jan 2012 22:30:26 GMT\r\n
+WT3_SignUpInOut.c(216):     ETag: "200000001d7bf-2b0-4b65c4b744480"\r\n
+WT3_SignUpInOut.c(216):     Accept-Ranges: bytes\r\n
+WT3_SignUpInOut.c(216):     Content-Length: 688\r\n
+WT3_SignUpInOut.c(216):     Keep-Alive: timeout=5, max=100\r\n
+WT3_SignUpInOut.c(216):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(216):     Content-Type: image/gif\r\n
+WT3_SignUpInOut.c(216):     \r\n
+WT3_SignUpInOut.c(216): t=948ms: 688-byte response body for "http://127.0.0.1:1080/WebTours/images/in_home.gif" (RelFrameId=, Internal ID=19)
+WT3_SignUpInOut.c(216): t=948ms: Request done "http://127.0.0.1:1080/WebTours/images/in_home.gif"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(216): t=948ms: Connected socket [5] from 127.0.0.1:4977 to 127.0.0.1:1080 in 10 ms  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(216): t=948ms: 515-byte request headers for "http://127.0.0.1:1080/WebTours/images/signoff.gif" (RelFrameId=, Internal ID=20)
+WT3_SignUpInOut.c(216):     GET /WebTours/images/signoff.gif HTTP/1.1\r\n
+WT3_SignUpInOut.c(216):     Referer: http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home\r\n
+WT3_SignUpInOut.c(216):     User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r
+WT3_SignUpInOut.c(216):     \n
+WT3_SignUpInOut.c(216):     Accept-Encoding: gzip, deflate\r\n
+WT3_SignUpInOut.c(216):     Accept-Language: en-US\r\n
+WT3_SignUpInOut.c(216):     Accept: */*\r\n
+WT3_SignUpInOut.c(216):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(216):     Host: 127.0.0.1:1080\r\n
+WT3_SignUpInOut.c(216):     Cookie: MSO=SID&1437500304&MSO_Comments&on&MSO_ServerLoadProb&50&MSO_ServerErrorsProb&50; 
+WT3_SignUpInOut.c(216):     MTUserInfo=firstName&Jojo&address2&&username&jojo&hash&47&lastName&Bean%0A&address1&&credi
+WT3_SignUpInOut.c(216):     tCard&&expDate&%0A\r\n
+WT3_SignUpInOut.c(216):     \r\n
+WT3_SignUpInOut.c(216): t=949ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/images/signoff.gif" (RelFrameId=, Internal ID=20)
+WT3_SignUpInOut.c(216):     HTTP/1.1 200 OK\r\n
+WT3_SignUpInOut.c(216):     Date: Tue, 21 Jul 2015 17:38:25 GMT\r\n
+WT3_SignUpInOut.c(216):     Server: Apache/2.2.21 (Win32)\r\n
+WT3_SignUpInOut.c(216):     Last-Modified: Thu, 12 Jan 2012 22:30:26 GMT\r\n
+WT3_SignUpInOut.c(216):     ETag: "200000001d7c8-2ef-4b65c4b744480"\r\n
+WT3_SignUpInOut.c(216):     Accept-Ranges: bytes\r\n
+WT3_SignUpInOut.c(216):     Content-Length: 751\r\n
+WT3_SignUpInOut.c(216):     Keep-Alive: timeout=5, max=100\r\n
+WT3_SignUpInOut.c(216):     Connection: Keep-Alive\r\n
+WT3_SignUpInOut.c(216):     Content-Type: image/gif\r\n
+WT3_SignUpInOut.c(216):     \r\n
+WT3_SignUpInOut.c(216): t=951ms: 751-byte response body for "http://127.0.0.1:1080/WebTours/images/signoff.gif" (RelFrameId=, Internal ID=20)
+WT3_SignUpInOut.c(216): t=951ms: Request done "http://127.0.0.1:1080/WebTours/images/signoff.gif"  	[MsgId: MMSG-26000]
+WT3_SignUpInOut.c(216): Registered web_reg_find successful for "Text=Welcome, <b>" (count=1)  	[MsgId: MMSG-26364]
+WT3_SignUpInOut.c(216): web_submit_form("SignIn.pl_4") was successful, 5779 body bytes, 2024 header bytes, 24 chunking overhead bytes  	[MsgId: MMSG-26385]
+wi_functions.c(184): Notify: Transaction "WT3_T07_SignIn" ended with a "Pass" status (Duration: 0.1104 Wasted Time: 0.0029).
+wi_functions.c(189): web_get_int_property started  	[MsgId: MMSG-26355]
+wi_functions.c(189): web_get_int_property was successful  	[MsgId: MMSG-26392]
+wi_functions.c(190): web_get_int_property started  	[MsgId: MMSG-26355]
+wi_functions.c(190): web_get_int_property was successful  	[MsgId: MMSG-26392]
+wi_functions.c(191): web_get_int_property started  	[MsgId: MMSG-26355]
+wi_functions.c(191): web_get_int_property was successful  	[MsgId: MMSG-26392]
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.
+t=976ms: Closed connection [0] to 127.0.0.1:1080 after completing 8 requests  	[MsgId: MMSG-26000]
+t=976ms: Closed connection [1] to 127.0.0.1:1080 after completing 5 requests  	[MsgId: MMSG-26000]
+t=976ms: Closed connection [2] to 127.0.0.1:1080 after completing 2 requests  	[MsgId: MMSG-26000]
+t=976ms: Closed connection [3] to 127.0.0.1:1080 after completing 2 requests  	[MsgId: MMSG-26000]
+t=976ms: Closed connection [4] to 127.0.0.1:1080 after completing 1 request  	[MsgId: MMSG-26000]
+t=976ms: Closed connection [5] to 127.0.0.1:1080 after completing 1 request  	[MsgId: MMSG-26000]
