@@ -15,6 +15,8 @@ WT3_SignOut()
 
 */
 
+
+	
 WT3_SignUpInOut()
 {
 	return 0;
@@ -38,7 +40,7 @@ WT3_SignUpInOut_Init(){ // Called from Action() on first iteration:
 	rc=vi_set_UseCase_attribute();
 	rc=wi_set_Think_Time();
 
-	lr_save_string("http://127.0.0.1:1080","pProtocolHostPort");
+	lr_save_string("{WebToursPath}","pProtocolHostPort");
 	web_set_sockets_option("SSL_VERSION", "TLS1.1"); // Windows Internet Options has TLS1.1 and TLS1.2 selected.
 
 //define USE_TIMEZONEOFFSET
@@ -70,44 +72,51 @@ WT3_SignUpInOut_Init(){ // Called from Action() on first iteration:
 } // WT3_SignUpInOut_Init
 	
 WT3_URL_Landing(){
-	int rc=LR_PASS;
+	int rc=LR_FAIL; // Unless positive if returned by sub-functions.
+	int i;
+	for(i=1; i < iRequestRetries; i++){ // 5 times retry: 1,2,3,4,5
+		wi_retry_add_time( i );
 
-	// URL Landing page appears after invoking URL.
+		// URL Landing page appears after invoking URL:
 	
-	web_reg_find("Text=Welcome to the Web Tours site", 
-		LAST);
-	wi_start_transaction();
+		web_reg_find("Text=Welcome to the Web Tours site", 
+			LAST);
+		
+		wi_start_transaction();
 	
-	if( stricmp("on", lr_eval_string("{MSO_JSFormSubmit1}") ) == FOUND
-	){
+		// regardless if( stricmp("on", lr_eval_string("{MSO_JSFormSubmit1}") ) == FOUND
+	
 		// Correlatie from response <input type="hidden" name="userSession" value="116443.360064804fQiQfffpDDDDDDDDDfQDHpDDc"/
-		// Regular expression:
-		// Only for Referer RequestURL containing /nav.pl:
+		// Regular expression is only for Referer RequestURL containing /nav.pl:
 		web_reg_save_param_regexp( 
-		"ParamName=CorrelationParameter",
-		"RegExp=name=\"userSession\"\\ value=\"(.*?)\"/>\\\n<table\\ border",
-		"SEARCH_FILTERS",
-		"Scope=Body",
-		"IgnoreRedirections=No",
-		"RequestUrl=*/nav.pl*",
-		LAST);
-	}
+			"ParamName=userSession_capture",
+			"RegExp=name=\"userSession\"\\ value=\"(.*?)\"/>\\\n<table\\ border",
+			"SEARCH_FILTERS",
+			"Scope=Body",
+			"IgnoreRedirections=No",
+			"RequestUrl=*/nav.pl*",
+			LAST);
+	
+		web_url("index.htm",
+			"URL={WebToursPath}/WebTours/index.htm", 
+			"Resource=0", 
+			"RecContentType=text/html", 
+			"Referer={WebToursPath}/cgi-bin/nav.pl?page=menu&in=home", 
+			"Snapshot=t1.inf", 
+			"Mode=HTML", 
+			LAST);
 
-	web_url("index.htm",
-		"URL=http://127.0.0.1:1080/WebTours/index.htm", 
-		"Resource=0", 
-		"RecContentType=text/html", 
-		"Referer=http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home", 
-		"Snapshot=t1.inf", 
-		"Mode=HTML", 
-		LAST);
-	lr_output_message(">> ParamName=CorrelationParameter=%s for MSO_JSFormSubmit1=%s."
-	                  ,lr_eval_string("{CorrelationParameter}")
+		// Debug level (internal / not user-level data):
+		lr_output_message(">> ParamName=userSession_capture=%s for MSO_JSFormSubmit1=%s."
+	                  ,lr_eval_string("{userSession_capture}")
 	                  ,lr_eval_string("{MSO_JSFormSubmit1}")
 	                  );
 
-	rc=wi_end_transaction();
+		rc=wi_end_transaction();
 
+		break;
+	}
+	
 return 0;		
 } //WT3_URL_Landing	
 	
@@ -139,15 +148,15 @@ WT3_SignUp_Error(){
 	web_submit_form("SignIn.pl", 
 		"Snapshot=t3.inf", 
 		ITEMDATA, 
-		"Name=username", "Value={parm_userid}", ENDITEM, 
-		"Name=password", "Value={parm_pwd}", ENDITEM, 
-		"Name=passwordConfirm", "Value={parm_pwd}", ENDITEM, 
-		"Name=firstName", "Value=", ENDITEM, 
-		"Name=lastName", "Value=", ENDITEM, 
-		"Name=address1", "Value=", ENDITEM, 
-		"Name=address2", "Value=", ENDITEM, 
-		"Name=register.x", "Value=40", ENDITEM, 
-		"Name=register.y", "Value=7", ENDITEM, 
+		"Name=username"			,"Value={parm_userid}", ENDITEM, 
+		"Name=password"			,"Value={parm_pwd}", ENDITEM, 
+		"Name=passwordConfirm"	,"Value={parm_pwd}", ENDITEM, 
+		"Name=firstName"		,"Value=", ENDITEM, 
+		"Name=lastName"			,"Value=", ENDITEM, 
+		"Name=address1"			,"Value=", ENDITEM, 
+		"Name=address2"			,"Value=", ENDITEM, 
+		"Name=register.x"		,"Value=40", ENDITEM, 
+		"Name=register.y"		,"Value=7", ENDITEM, 
 		LAST);
 	rc=wi_end_transaction();
 
@@ -163,23 +172,23 @@ WT3_SignUp(){
 	web_reg_find("Text=Thank you, <b>","SaveCount=T05_SignUp_savecount", LAST);
 	wi_start_transaction();
 	web_submit_data("T05_SignUp", 
-		"Action=http://127.0.0.1:1080/cgi-bin/login.pl", 
+		"Action={WebToursPath}/cgi-bin/login.pl", 
 		"Method=POST", 
 		"TargetFrame=", 
 		"RecContentType=text/html", 
-		"Referer=http://127.0.0.1:1080/cgi-bin/login.pl?username=&password=&getInfo=true", 
+		"Referer={WebToursPath}/cgi-bin/login.pl?username=&password=&getInfo=true", 
 		"Snapshot=t19.inf", 
 		"Mode=HTML", 
 		ITEMDATA, 
-		"Name=username", "Value={parm_userid}", ENDITEM, 
-		"Name=password", "Value={parm_pwd}", ENDITEM, 
-		"Name=passwordConfirm", "Value={parm_pwd}", ENDITEM, 
-		"Name=firstName", "Value={parm_userid}", ENDITEM, 
-		"Name=lastName", "Value={global_unique_id}", ENDITEM, 
-		"Name=address1"			,"Value={SignUp_address1}", ENDITEM,
-		"Name=address2"			,"Value={SignUp_address2}", ENDITEM,
-		"Name=register.x", "Value=50", ENDITEM, 
-		"Name=register.y", "Value=5", ENDITEM, 
+		"Name=username"				,"Value={parm_userid}", ENDITEM, 
+		"Name=password"				,"Value={parm_pwd}", ENDITEM, 
+		"Name=passwordConfirm"		,"Value={parm_pwd}", ENDITEM, 
+		"Name=firstName"			,"Value={parm_userid}", ENDITEM, 
+		"Name=lastName"				,"Value={global_unique_id}", ENDITEM, 
+		"Name=address1"				,"Value={SignUp_address1}", ENDITEM,
+		"Name=address2"				,"Value={SignUp_address2}", ENDITEM,
+		"Name=register.x"			,"Value=50", ENDITEM, 
+		"Name=register.y"			,"Value=5", ENDITEM, 
 		LAST);
 	rc=wi_end_transaction();
 	
@@ -192,11 +201,11 @@ WT3_SignUp_Continue(){
 //	web_reg_find("Text=Thank you, <b>", LAST);
 	wi_start_transaction();
 	web_url("button_next.gif", 
-		"URL=http://127.0.0.1:1080/cgi-bin/welcome.pl?page=menus", 
+		"URL={WebToursPath}/cgi-bin/welcome.pl?page=menus", 
 		"TargetFrame=body", 
 		"Resource=0", 
 		"RecContentType=text/html", 
-		"Referer=http://127.0.0.1:1080/cgi-bin/login.pl", 
+		"Referer={WebToursPath}/cgi-bin/login.pl", 
 		"Snapshot=t20.inf", 
 		"Mode=HTML", 
 		LAST);
@@ -213,12 +222,13 @@ WT3_SignIn_Error(){
 	// username as jojo01 and password as bean.
 
 	web_reg_find("Text=Web Tours Error - Incorrect Password", "Fail=NotFOund", LAST); // Error is intended.
+	// Instead of {parm_userid} and {parm_pwd}
 	wi_start_transaction();
 	web_submit_form("SignIn.pl_4", 
 		"Snapshot=t6.inf", 
 		ITEMDATA, 
-		"Name=username", "Value={parm_userid}", ENDITEM, 
-		"Name=password", "Value={parm_pwd}", ENDITEM, 
+		"Name=username", "Value=Something", ENDITEM, 
+		"Name=password", "Value=Unknown", ENDITEM, 
 		"Name=login.x", "Value=29", ENDITEM, 
 		"Name=login.y", "Value=10", ENDITEM, 
 		LAST);

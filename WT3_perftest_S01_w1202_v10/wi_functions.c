@@ -1,9 +1,15 @@
 /*! 
 \file wi_functions.c
 \brief Contains functions to enhance capability that can be used by other LoadRunner scripts.
-
+       These are designed so they should not need to be changed for a specific organization or system.
+       
 	// int wi_set_unique_id(){
+	// int wi_set_timezone(){
+	// int wi_load_kernel32_dll(){
 	// int wi_get_vuser_pid(){
+	// wi_save_request_header();
+	// wi_show_user_agent(){
+
 	// int wi_set_Think_Time(){
 
 	// wi_set_Customer_attribute(){
@@ -12,6 +18,7 @@
 
 	// wi_start_transaction(){
 	// wi_end_transaction(){
+	// wi_retry_add_time( i ){
 
 	// wi_setPrinting(){
 	// wi_startPrintingError(){
@@ -22,11 +29,13 @@
 
 	// wi_EncodePlainToOAuth(const char *sIn, char *sOut){
 	// wi_EncodePlainToURL(const char *sIn, char *sOut){
+
 	// int wi_WriteDataToFile(char *szFileName, const char *szBuf, int len){
 	// int wi_set_Verbosity_attribute(){
 
 	// int wi_set_pURLtoShorten_file_recs(){
 	// int wi_set_VTS3(){
+
 
 */
 
@@ -76,9 +85,34 @@ int wi_set_unique_id(){
 
 
 
+wi_load_kernel32_dll(){
+	int rc=LR_PASS;
+    static int is_kernel32_dll_loaded = FALSE; // A static C variable inside a function retains its value between invocations.
+                                 // The FALSE value is assigned only on the first invocation.
+
+	#ifdef  WIN32
+
+	char* dll_name = "KERNEL32.DLL"; // In C:/Windows/System32 that comes with Windows.
+			// Its File Description: "Windows NT BASE API Client DLL".
+
+	if (is_kernel32_dll_loaded == FALSE) {
+        rc = lr_load_dll(dll_name);
+        if (rc == 0) {
+			is_kernel32_dll_loaded = TRUE;
+        }else{
+			is_kernel32_dll_loaded = FALSE;
+            lr_error_message(">> Error loading %s.", dll_name);
+            // lr_abort();
+        }
+    }
+
+	#endif // WIN32
+
+	return rc;
+}
+
 /**
- * Gets the process ID of the mmdrv.exe process that is running the VuGen script that called
- * this function.
+ * Gets the process ID of the mmdrv.exe process running the VuGen script calling this function.
  *
  * @return    This function returns the process ID of the calling process.
  *
@@ -98,24 +132,29 @@ int wi_get_vuser_pid() {
                                    // invocation.
     char* dll_name = "MSVCRT.DLL"; // This DLL contains the _getpid() function. It is a standard
                                    // Windows DLL, usually found in C:\WINDOWS\system32.
-                                   // Note: on Windows platforms, if you do not specify a path,
-                                   // lr_load_dll searches for the DLL using the standard sequence
-                                   // used by the C++ function, LoadLibrary.
+                                   // On Windows platforms, if a path is not specified,
+                                   // lr_load_dll searches for the DLL using the standard sequence.
+
+ 	#ifdef  WIN32
 
     // Only load the DLL the first time this function is called:
     if (is_msvcrt_dll_loaded == FALSE) {
         rc = lr_load_dll(dll_name);
-        if (rc != 0) {
-            lr_error_message("Error loading %s.", dll_name);
-            lr_abort();
+        if (rc == 0) {
+	        is_msvcrt_dll_loaded = TRUE;
+		    pid = _getpid();
+        }else{
+	        is_msvcrt_dll_loaded = FALSE;
+		    lr_error_message(">> Error loading %s to get WIN32 pid in wi_get_vuser_pid.", dll_name);
+            // lr_abort();
         }
-        is_msvcrt_dll_loaded = TRUE;
     }
 
-    pid = _getpid();
+	#endif // WIN32
 
-    return pid;
+	return pid;
 } // wi_get_vuser_pid
+
 
 
 int wi_set_Think_Time(){
@@ -144,6 +183,85 @@ int wi_set_Think_Time(){
 } // wi_set_Think_Time()
 	
 
+wi_retry_add_time( int in_retries ){
+	int rc=LR_PASS;
+	int milliseconds;
+	
+	if( in_retries <= 0 ){
+		return LR_PASS;
+	}else{
+		// Since lr_think_time is already used:
+		// This is a cross-platforam approach to
+		// TODO: Calculate geometrically more time with each successive retry:
+		milliseconds = in_retries * 1000; // for now.
+
+		#ifdef WIN32
+		if (is_kernel32_dll_loaded == FALSE) {
+			rc=wi_load_kernel32_dll(); // unresolved symbol error will occur unless library is loaded.
+			if( rc == LR_PASS ){
+				Sleep(milliseconds); 				
+			}
+		}
+		// TODO: Test sleep in Linux environment
+		#elif _POSIX_C_SOURCE >= 199309L
+		    struct timespec ts;
+		    ts.tv_sec = milliseconds / 1000;
+		    ts.tv_nsec = (milliseconds % 1000) * 1000000;
+			// nanosleep() function is not supposed to effect the action or blockage of any signal.
+		    nanosleep(&ts, NULL);
+		#else
+		    // Deprecated now:
+		    usleep(milliseconds * 1000); // uses the useconds_t structure
+		#endif
+
+		return LR_PASS;
+	}
+}
+
+void wi_sleep_ms(int milliseconds) // cross-platform sleep function
+{
+	// makes use of global data structures defined in vuser_init.c
+#ifdef WIN32
+//	Debugging:
+//	Sleep(milliseconds); // unresolved symbol error will occur unless library is included.
+#elif _POSIX_C_SOURCE >= 199309L
+    struct timespec ts;
+    ts.tv_sec = milliseconds / 1000;
+    ts.tv_nsec = (milliseconds % 1000) * 1000000;
+	// nanosleep() function is not supposed to effect the action or blockage of any signal.
+    nanosleep(&ts, NULL);
+#else
+    // Deprecated now:
+    usleep(milliseconds * 1000); // uses the useconds_t structure
+#endif
+}
+
+wi_save_request_header(){
+	
+	web_save_header(REQUEST,"request_header");
+	 
+	return 0;
+}
+
+wi_show_user_agent(){
+	// This makes use of the request_header captured by this invoked before a call:
+	//    web_save_header(REQUEST,"request_header");
+	// Which only needs to be done once if the client Agent String does not change during a run.
+	
+	char * headers = lr_eval_string("{request_header}");
+ 
+ 	lr_save_param_regexp(headers,
+        strlen(headers),
+   		"RegExp=User-Agent: (.+)\\r\\n",
+   		"ResultParam=userAgent",
+   		LAST );
+
+	// {userAgent} is one of the run conditions shown one time for whole run:
+ 	lr_output_message(">> {userAgent}=%s.", lr_eval_string("{userAgent}"));
+	// TODO: Intrepret raw agent string to summarize the browser name and version.
+
+	return 0;
+}
 wi_start_transaction(){
 	static float	floatThinkTimeSecs; // defined in wi_set_Think_Time().
 
@@ -215,6 +333,7 @@ int wi_end_transaction(){
     return rc;
 } // wi_end_transaction
 
+		
 wi_setPrinting(){
 	
 	if( iVerbosity >= 1 ){

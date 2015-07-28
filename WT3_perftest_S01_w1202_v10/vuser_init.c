@@ -2,7 +2,7 @@
 \file vuser_init.c
 \brief Contains vuser_init() function invoked one-time at beginning of run. 
        But we put such code in Action.c within if( iActionIterations == 1){.
-Also contains declaration of global variables accessible from functions in all other action files.
+Also contains declaration of app-specific global variables accessible from functions in all other action files.
 */
 
 // Global definitions within vuser_init.c:
@@ -17,6 +17,25 @@ Also contains declaration of global variables accessible from functions in all o
   //	0 = FALSE/NO in C if statements
   //   !0 = TRUE/YES in C if statements
 	// NOTE: No semicolon after static definitions.
+
+	
+//// See ftp://ftp.sgi.com/opengl/contrib/blythe/advanced99/notes/node389.html	
+////     (Windows and Linux portability).
+//// For use within wi_sleep_ms(int milliseconds) // cross-platform sleep function
+//// referenced by wi_retry_add_time() in app-specific functions:
+	#define WIN32
+	//define POSIX
+//ifdef WIN32
+//	#include <windows.h>
+//#elif _POSIX_C_SOURCE >= 199309L
+//	#include <time.h>   // for nanosleep
+//#else
+//	#include <unistd.h> // for usleep
+//	#endif
+
+
+		// TODO: 09. If not using VTS, comment out (substitute) # with //:
+//define USE_VTS
 
 //// Run-Time Settings Attributes or command-line LPCSTR (LoadRunner Pointer C Strings) and associated variables:
 
@@ -44,8 +63,18 @@ Also contains declaration of global variables accessible from functions in all o
 	long			nURLtoShorten_index; // like i.
 	int				nURLtoShorten_done; // counter of rows processed.
 
-	// TODO: 09. If not using VTS, comment out (substitute) # with //:
-//define USE_VTS
+//// Global variables used within wi_functions.c - don't change:
+
+	int 			iActionIterations = 0; // incremented within Action() to 
+	unsigned int	original_log_option;
+	char 			global_unique_id[128]=""; // included in every log output.
+	int				is_msvcrt_dll_loaded = FALSE;
+	int				is_kernel32_dll_loaded = FALSE;
+
+//// Global variables referenced within WT3_ app-specific functions:
+
+	int				iRequestRetries = 5; // maximum number of retries before giving up.
+	
 #ifdef  USE_VTS
 	// For use by VTS within vi_set_VTS3() below.
 	// TODO: 10. Follow instructions in the Getting Started Hands-on Guide to install VTS, invoke VTS, and import data into it.
@@ -65,12 +94,6 @@ Also contains declaration of global variables accessible from functions in all o
 	int				iUpdate_shorturl_in_VTS; // 1=Yes, 0=No.
 #endif // USE_VTS
 
-
-//// Global variables:
-
-	int 			iActionIterations = 0; // incremented within Action() to 
-	unsigned int	original_log_option;
-	char 			global_unique_id[128]=""; // included in every log output.
 
 vuser_init()
 {

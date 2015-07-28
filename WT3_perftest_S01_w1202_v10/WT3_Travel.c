@@ -24,9 +24,9 @@ WT3_Travel(){ // call from within Action.c.
 	// Itinerary UseCase
 	// No check-in UseCase
 	
-	if( stricmp("All",LPCSTR_UseCase ) == FOUND
+	if( stricmp("All"   ,LPCSTR_UseCase ) == FOUND
 	||  stricmp("Search",LPCSTR_UseCase ) == FOUND
-	||  stricmp("Book",LPCSTR_UseCase ) == FOUND
+	||  stricmp("Book"  ,LPCSTR_UseCase ) == FOUND
 	){
 			lr_save_string("WT3_T22_Travel_Search_Flight","pTransName");
 			web_reg_find("Text=Find Flight", "Fail=NotFound", LAST);
@@ -177,7 +177,8 @@ int rc=LR_PASS;
 WT3_T24_Find_Flight(){
 int rc=LR_PASS;
 	web_reg_find("Text=Payment Details",LAST);
-	 wi_start_transaction();
+	// WT3_T25_Travel_Payment_Details_Capture();
+	wi_start_transaction();
 	web_submit_form("reservations.pl_2", 
 		"Snapshot=t35.inf", 
 		ITEMDATA, 
@@ -189,22 +190,45 @@ int rc=LR_PASS;
 	return rc;
 } // WT3_T24_Find_Flight
 
-WT3_T25_Travel_Payment_Details(){
-	int rc=LR_PASS;
-		
-	int iteration_number=0;
-	int x=0;
-	do {
-		iteration_number +=1;
-		if( iteration_number == 3){ // if retry more than several times:
-			rc = LR_FAIL; // Mark as error.
-			break; // out of do while loop.
-		}
+WT3_T25_Travel_Payment_Details_Capture(){
 
+/*
+	web_reg_save_param_ex("ParamName=SignUp_firstName"
+		,"LB/IC=??"
+		,"RB/IC=??"
+		,"Ordinal=1"
+		,"SaveLen=-1"
+		,"DFEs=UrlEncoding"
+		,SEARCH_FILTERS
+        ,"Scope=body"
+        ,LAST );
+ 
+	web_reg_save_param_ex("ParamName=SignUp_lastName" 
+		,"LB/IC=???"
+		,"RB/IC=???"
+		,"Ordinal=1"
+		,"SaveLen=-1"
+		,"DFEs=UrlEncoding"
+		,SEARCH_FILTERS
+        ,"Scope=body"
+        ,LAST );
+ 	web_reg_save_param_ex("ParamName=SignUp_address1"
+
+	web_reg_save_param_ex("ParamName=SignUp_address2"
+*/
+		lr_save_string("John Joe"			,"SignUp_pass1"); // Passenger Names:
+
+	return 0;
+}
+WT3_T25_Travel_Payment_Details(){
+	int rc=LR_FAIL; // Unless positive if returned by sub-functions.
+	int i;
+	for(i=1; i<iRequestRetries; i++){ // 5 times retry: 1,2,3,4,5
+
+		wi_retry_add_time( i );
+		
 		web_reg_find("Text=Invoice",LAST);
 		web_reg_find("Text=Server Database Error" ,"SaveCount=DBErr_count", LAST );
-
-		lr_save_string("John Joe"			,"SignUp_pass1"); // Passenger Names:
 
 		wi_start_transaction();
 	
@@ -229,16 +253,16 @@ WT3_T25_Travel_Payment_Details(){
 
   	    // if run condition MSO_SLoad="on" and selected by probability:
  	    if( atoi( lr_eval_string("{DBErr_count}") ) > 0 ){ // DBErr found:
-				rc=wi_end_transaction();
+			rc=wi_end_transaction();
 				//lr_user_data_point(lr_eval_string("{pTransName}"),1); // to track retries occuring due to DBErr.
 				lr_user_data_point("DBErr_retries",1); // to track retries occuring due to DBErr.
 				// Continue to loop again to handle error with retry (not end script run)
+ 			break;
   	    }else{ // normal no error:
 			rc=wi_end_transaction();
 			break; // out of do/while loop.
   	    }		
 	}
-	while(x==0);
 	
 	return rc;
 } //WT3_T25_Travel_Payment_Details

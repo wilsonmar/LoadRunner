@@ -25,7 +25,7 @@ int WT3_Config_Run_Conditions(){ // after landing
 	// Switch from "<OFF>" to "on":
 	lr_save_string("<OFF>","MSO_Comments");
 	lr_save_string("<OFF>","MSO_JSCalc");
-	lr_save_string("on","MSO_JSFormSubmit1"); // Set LOGIN form's action tag to an error page. 
+	lr_save_string("<OFF>","MSO_JSFormSubmit1"); // Set LOGIN form's action tag to an error page. 
 	lr_save_string("<OFF>","MSO_JSFormSubmit2");
 	lr_save_string("<OFF>","MSO_JSVerify");
 	lr_save_string("<OFF>","MSO_JSWPages");
@@ -77,11 +77,11 @@ int WT3_Invoke_Run_Conditions(){ // after landing
 		LAST);
 
 	web_url("Return to the Web Tours Homepage", 
-		"URL=http://127.0.0.1:1080/cgi-bin/welcome.pl", 
+		"URL={WebToursPath}/cgi-bin/welcome.pl", 
 		"TargetFrame=body", 
 		"Resource=0", 
 		"RecContentType=text/html", 
-		"Referer=http://127.0.0.1:1080/cgi-bin/admin.pl", 
+		"Referer={WebToursPath}/cgi-bin/admin.pl", 
 		"Snapshot=t4.inf", 
 		"Mode=HTML", 
 		LAST);

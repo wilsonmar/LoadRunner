@@ -2,7 +2,7 @@ Recording_Travel_For_Validation()
 {
 
 	web_url("index.htm", 
-		"URL=http://127.0.0.1:1080/WebTours/index.htm", 
+		"URL={WebToursPath}/WebTours/index.htm", 
 		"Resource=0", 
 		"RecContentType=text/html", 
 		"Referer=", 
@@ -12,7 +12,7 @@ Recording_Travel_For_Validation()
 
 	web_set_sockets_option("SSL_VERSION", "TLS1.1");
 
-	/* Request with GET method to URL "http://127.0.0.1:1080/favicon.ico" failed during recording. Server response : 404*/
+	/* Request with GET method to URL "{WebToursPath}/favicon.ico" failed during recording. Server response : 404*/
 
 	web_add_cookie("MSFPC=ID=0a483d9b404672469c36676c7ba16f34&CS=1&LV=201504&V=1; DOMAIN=iecvlist.microsoft.com");
 
@@ -42,10 +42,10 @@ Recording_Travel_For_Validation()
 	lr_think_time(39);
 
 	web_submit_data("login.pl", 
-		"Action=http://127.0.0.1:1080/cgi-bin/login.pl", 
+		"Action={WebToursPath}/cgi-bin/login.pl", 
 		"Method=POST", 
 		"RecContentType=text/html", 
-		"Referer=http://127.0.0.1:1080/cgi-bin/nav.pl?in=home", 
+		"Referer={WebToursPath}/cgi-bin/nav.pl?in=home", 
 		"Snapshot=t56.inf", 
 		"Mode=HTML", 
 		ITEMDATA, 
@@ -83,9 +83,9 @@ Recording_Travel_For_Validation()
 		"Snapshot=t58.inf", 
 		LAST);
 
-	/* Request with GET method to URL "http://127.0.0.1:1080/WebTours/classes/" failed during recording. Server response : 403*/
+	/* Request with GET method to URL "{WebToursPath}/WebTours/classes/" failed during recording. Server response : 403*/
 
-	/* Request with GET method to URL "http://127.0.0.1:1080/WebTours/classes/" failed during recording. Server response : 403*/
+	/* Request with GET method to URL "{WebToursPath}/WebTours/classes/" failed during recording. Server response : 403*/
 
 	lr_end_transaction("WT3_T22_Travel_Search_Flight",LR_AUTO);
 
@@ -169,9 +169,9 @@ Recording_Travel_For_Validation()
 		"Name=Book Another.y", "Value=1", ENDITEM, 
 		LAST);
 
-	/* Request with GET method to URL "http://127.0.0.1:1080/WebTours/classes/" failed during recording. Server response : 403*/
+	/* Request with GET method to URL "{WebToursPath}/WebTours/classes/" failed during recording. Server response : 403*/
 
-	/* Request with GET method to URL "http://127.0.0.1:1080/WebTours/classes/" failed during recording. Server response : 403*/
+	/* Request with GET method to URL "{WebToursPath}/WebTours/classes/" failed during recording. Server response : 403*/
 
 	lr_end_transaction("WT3_T27_Travel_Click_Book_Another",LR_AUTO);
 
@@ -188,9 +188,9 @@ Recording_Travel_For_Validation()
 		"Snapshot=t63.inf", 
 		LAST);
 
-	/* Request with GET method to URL "http://127.0.0.1:1080/WebTours/classes/" failed during recording. Server response : 403*/
+	/* Request with GET method to URL "{WebToursPath}/WebTours/classes/" failed during recording. Server response : 403*/
 
-	/* Request with GET method to URL "http://127.0.0.1:1080/WebTours/classes/" failed during recording. Server response : 403*/
+	/* Request with GET method to URL "{WebToursPath}/WebTours/classes/" failed during recording. Server response : 403*/
 
 	lr_end_transaction("WT3_T28_Travel_Search_Flight2",LR_AUTO);
 

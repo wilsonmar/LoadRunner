@@ -10,18 +10,23 @@ Action()
 	
 	     iActionIterations++; // increment from zero value defined in vuser_init.
 	 if( iActionIterations == 1){
-	     WT3_SignUpInOut_Init(); // establish variables.
+		WT3_SignUpInOut_Init(); // establish variables.
   
-		 lr_save_string("WT3_T03_URL_Landing_1","pTransName");
- 		 WT3_Config_Run_Conditions();
-	     rc=WT3_URL_Landing(); // just for establishing state to invoke run conditions.
- 		 WT3_Config_Run_Conditions();
- 		 WT3_Invoke_Run_Conditions();
- 		 WT3_SignUp_Data();
+		lr_save_string("http://127.0.0.1:1080","WebToursPath");
+		lr_output_message(">> {WebToursPath}=%s", lr_eval_string("{WebToursPath}"));
+		wi_save_request_header(); // to wi_show_user_agent() later.
+		
+		lr_save_string("WT3_T03_URL_Landing_1","pTransName");
+ 		rc=WT3_URL_Landing(); // just for establishing state to invoke run conditions.
+ 		wi_show_user_agent();
+ 		WT3_Config_Run_Conditions();
+ 		WT3_Invoke_Run_Conditions();
+
+ 		WT3_SignUp_Data();
 	 }
 
 
-	     if( stricmp("LandingOnly",LPCSTR_RunType ) == FOUND
+	if( stricmp("LandingOnly",LPCSTR_RunType ) == FOUND
 	||  stricmp("SignUp",LPCSTR_RunType ) == FOUND 
 	||  stricmp("SignInOnly",LPCSTR_RunType ) == FOUND 
 	||  stricmp("SignInOut",LPCSTR_RunType ) == FOUND 

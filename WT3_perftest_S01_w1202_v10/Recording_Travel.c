@@ -2,7 +2,7 @@ Recording_Travel()
 {
 
 	web_url("index.htm", 
-		"URL=http://127.0.0.1:1080/WebTours/index.htm", 
+		"URL={WebToursPath}/WebTours/index.htm", 
 		"Resource=0", 
 		"RecContentType=text/html", 
 		"Referer=", 
@@ -12,7 +12,7 @@ Recording_Travel()
 
 	web_set_sockets_option("SSL_VERSION", "TLS1.1");
 
-	/* Request with GET method to URL "http://127.0.0.1:1080/favicon.ico" failed during recording. Server response : 404*/
+	/* Request with GET method to URL "{WebToursPath}/favicon.ico" failed during recording. Server response : 404*/
 
 	lr_think_time(60);
 
@@ -56,9 +56,9 @@ Recording_Travel()
 		"Snapshot=t33.inf", 
 		LAST);
 
-	/* Request with GET method to URL "http://127.0.0.1:1080/WebTours/classes/" failed during recording. Server response : 403*/
+	/* Request with GET method to URL "{WebToursPath}/WebTours/classes/" failed during recording. Server response : 403*/
 
-	/* Request with GET method to URL "http://127.0.0.1:1080/WebTours/classes/" failed during recording. Server response : 403*/
+	/* Request with GET method to URL "{WebToursPath}/WebTours/classes/" failed during recording. Server response : 403*/
 
 	lr_end_transaction("T22_Search_Flight",LR_AUTO);
 
@@ -141,9 +141,9 @@ Recording_Travel()
 		"Name=Book Another.y", "Value=6", ENDITEM, 
 		LAST);
 
-	/* Request with GET method to URL "http://127.0.0.1:1080/WebTours/classes/" failed during recording. Server response : 403*/
+	/* Request with GET method to URL "{WebToursPath}/WebTours/classes/" failed during recording. Server response : 403*/
 
-	/* Request with GET method to URL "http://127.0.0.1:1080/WebTours/classes/" failed during recording. Server response : 403*/
+	/* Request with GET method to URL "{WebToursPath}/WebTours/classes/" failed during recording. Server response : 403*/
 
 	lr_end_transaction("T26_ Click_Book Another ",LR_AUTO);
 
@@ -159,9 +159,9 @@ Recording_Travel()
 		"Snapshot=t38.inf", 
 		LAST);
 
-	/* Request with GET method to URL "http://127.0.0.1:1080/WebTours/classes/" failed during recording. Server response : 403*/
+	/* Request with GET method to URL "{WebToursPath}/WebTours/classes/" failed during recording. Server response : 403*/
 
-	/* Request with GET method to URL "http://127.0.0.1:1080/WebTours/classes/" failed during recording. Server response : 403*/
+	/* Request with GET method to URL "{WebToursPath}/WebTours/classes/" failed during recording. Server response : 403*/
 
 	web_reg_find("Text=Flight departing from", LAST);
 	lr_think_time(25);

@@ -2,7 +2,7 @@ Recording()
 {
 
 	web_url("index.htm", 
-		"URL=http://127.0.0.1:1080/WebTours/index.htm", 
+		"URL={WebToursPath}/WebTours/index.htm", 
 		"TargetFrame=", 
 		"Resource=0", 
 		"RecContentType=text/html", 
@@ -89,11 +89,11 @@ Recording()
 	lr_think_time(42);
 
 	web_url("login.pl", 
-		"URL=http://127.0.0.1:1080/cgi-bin/login.pl?username=&password=&getInfo=true", 
+		"URL={WebToursPath}/cgi-bin/login.pl?username=&password=&getInfo=true", 
 		"TargetFrame=", 
 		"Resource=0", 
 		"RecContentType=text/html", 
-		"Referer=http://127.0.0.1:1080/WebTours/home.html", 
+		"Referer={WebToursPath}/WebTours/home.html", 
 		"Snapshot=t16.inf", 
 		"Mode=HTML", 
 		LAST);
@@ -125,11 +125,11 @@ Recording()
 	lr_think_time(13);
 
 	web_submit_data("login.pl_2", 
-		"Action=http://127.0.0.1:1080/cgi-bin/login.pl", 
+		"Action={WebToursPath}/cgi-bin/login.pl", 
 		"Method=POST", 
 		"TargetFrame=", 
 		"RecContentType=text/html", 
-		"Referer=http://127.0.0.1:1080/cgi-bin/login.pl?username=&password=&getInfo=true", 
+		"Referer={WebToursPath}/cgi-bin/login.pl?username=&password=&getInfo=true", 
 		"Snapshot=t19.inf", 
 		"Mode=HTML", 
 		ITEMDATA, 
@@ -149,11 +149,11 @@ Recording()
 	lr_start_transaction("continue");
 
 	web_url("button_next.gif", 
-		"URL=http://127.0.0.1:1080/cgi-bin/welcome.pl?page=menus", 
+		"URL={WebToursPath}/cgi-bin/welcome.pl?page=menus", 
 		"TargetFrame=body", 
 		"Resource=0", 
 		"RecContentType=text/html", 
-		"Referer=http://127.0.0.1:1080/cgi-bin/login.pl", 
+		"Referer={WebToursPath}/cgi-bin/login.pl", 
 		"Snapshot=t20.inf", 
 		"Mode=HTML", 
 		LAST);
@@ -226,11 +226,11 @@ Recording()
 	lr_start_transaction("signoff");
 
 	web_url("welcome.pl", 
-		"URL=http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=1", 
+		"URL={WebToursPath}/cgi-bin/welcome.pl?signOff=1", 
 		"TargetFrame=", 
 		"Resource=0", 
 		"RecContentType=text/html", 
-		"Referer=http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home", 
+		"Referer={WebToursPath}/cgi-bin/nav.pl?page=menu&in=home", 
 		"Snapshot=t26.inf", 
 		"Mode=HTML", 
 		LAST);
