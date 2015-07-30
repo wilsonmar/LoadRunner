@@ -257,8 +257,8 @@ WT3_SignIn(){
 	// singning in with valid username and password which is just created
 	// Such as username as jojo01 and password as bean.
 
-//	web_reg_find("Text=Welcome, {parm_userid},", "Fail=NOTFOUND", LAST);
-	web_reg_find("Text=Welcome, {parm_userid},", "Fail=NOTFOUND", LAST);
+	// Response HTML: <blockquote>Welcome, <b>jaja01</b>, to the Web Tour
+	web_reg_find("Text=Welcome, <b>{parm_userid}</b>,", "Fail=NOTFOUND", LAST);
 
 	wi_start_transaction();
 	web_submit_form("SignIn.pl_4", 

@@ -20,7 +20,7 @@ if( stricmp("All",LPCSTR_RunType ) == FOUND
 
 
 int WT3_Config_Run_Conditions(){ // after landing
-	// TODO: Separate 
+	// TODO: Enable Run-time Attribute change of run conditions
 
 	// Switch from "<OFF>" to "on":
 	lr_save_string("<OFF>","MSO_Comments");
