@@ -193,24 +193,33 @@ WT3_SignUp(){
 		"Name=register.x"			,"Value=50", ENDITEM, 
 		"Name=register.y"			,"Value=5", ENDITEM, 
 		LAST);
+	rc=wi_end_transaction();
 
-	if( atoi( lr_eval_string("{Err_count}") ) > 0 ){ // Err found:
+	// Consider moving this to Action section because it contains a TransName:
+	if( atoi( lr_eval_string("{Err_count}") ) > 0 ){ // 1 or more Err found:
 		// This is OK TODO: handle error: retry or end script run.
 		if( stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND
 		){
-			// It's OK if user is already signed up. Continue to sign-in.
+			// It's OK if user is already signed up. Sign-in.
+		}else{
+			// Because there is no "Cancel" button in the SignUp screen:
+			lr_save_string("WT3_T03_URL_Landing","pTransName");
+ 			rc=WT3_URL_Landing(); // just for establishing state to invoke run conditions.
 		}
+	}else{
+			//  stricmp("SignUp",LPCSTR_RunType ) == FOUND
+			lr_save_string("WT3_T04_SignUp_Continue","pTransName");
+			rc=WT3_SignUp_Continue();
 	}
 
-	rc=wi_end_transaction();
-	
 	return rc;
 } //T05_SignUp
 	
 WT3_SignUp_Continue(){
 	int rc=LR_PASS;
 
-//	web_reg_find("Text=Thank you, <b>", LAST);
+	web_reg_find("Text=Welcome, <b>{parm_userid}", LAST);
+	
 	wi_start_transaction();
 	web_url("button_next.gif", 
 		"URL={WebToursPath}/cgi-bin/welcome.pl?page=menus", 
@@ -257,6 +266,8 @@ WT3_SignIn(){
 	// singning in with valid username and password which is just created
 	// Such as username as jojo01 and password as bean.
 
+	// TODO: If {parm_userid} is blank, return as error.
+	
 	// Response HTML: <blockquote>Welcome, <b>jaja01</b>, to the Web Tour
 	web_reg_find("Text=Welcome, <b>{parm_userid}</b>,", "Fail=NOTFOUND", LAST);
 
@@ -270,6 +281,11 @@ WT3_SignIn(){
 		"Name=login.y", "Value=10", ENDITEM, 
 		LAST);
 	rc=wi_end_transaction();
+	if(rc == LR_PASS){
+		isSignedIn = TRUE;
+	}else{
+		isSignedIn = FALSE;
+	}
 	
 	return 0;		
 } //WT3_SignIn
@@ -280,14 +296,17 @@ WT3_SignOut(){
 	
 	// Siging off from the application:
 
-	web_reg_find("Text=Welcome to the Web Tours site", "Fail=NOTFOUND", LAST);
-	wi_start_transaction();
-	web_image("SignOff Button", 
-		"Alt=SignOff Button", 
-		"Snapshot=t7.inf", 
-		LAST);
-	rc=wi_end_transaction();
+	if(isSignedIn == TRUE){
+	
+		web_reg_find("Text=Welcome to the Web Tours site", "Fail=NOTFOUND", LAST);
+		wi_start_transaction();
+		web_image("SignOff Button", 
+			"Alt=SignOff Button", 
+			"Snapshot=t7.inf", 
+			LAST);
+		rc=wi_end_transaction();
 
+	} // if(isSignedIn == TRUE)
 	
 	return 0;
 }//WT3_SignOut

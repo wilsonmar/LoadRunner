@@ -73,10 +73,6 @@ Action()
     ){
 		lr_save_string("WT3_T05_SignUp","pTransName");
 		rc=WT3_SignUp();
-		if( rc == 0 ){
-			lr_save_string("WT3_T04_SignUp_Continue","pTransName");
-			rc=WT3_SignUp_Continue();
-		}
 	}
 
 

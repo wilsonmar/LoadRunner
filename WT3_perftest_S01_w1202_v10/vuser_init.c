@@ -66,6 +66,7 @@ Also contains declaration of app-specific global variables accessible from funct
 //// Global variables used within wi_functions.c - don't change:
 
 	int 			iActionIterations = 0; // incremented within Action() to 
+	int				isSignedIn = FALSE;
 	unsigned int	original_log_option;
 	char 			global_unique_id[128]=""; // included in every log output.
 	int				is_msvcrt_dll_loaded = FALSE;
