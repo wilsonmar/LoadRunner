@@ -1,9 +1,0 @@
-HTTP/1.1 200 OK
-Date: Thu, 16 Jul 2015 20:51:10 GMT
-Server: Apache/2.2.21 (Win32)
-Expires: Wed, 15 Jul 2015 20:51:10 GMT
-Keep-Alive: timeout=5, max=99
-Connection: Keep-Alive
-Transfer-Encoding: chunked
-Content-Type: text/html; charset=ISO-8859-1
-

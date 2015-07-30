@@ -174,6 +174,10 @@ WT3_SignUp(){
 	web_reg_find("Text=Your username is taken","SaveCount=Err_count", LAST ); // negative test
 
 	wi_start_transaction();
+
+	//	"Name=firstName"			,"Value={parm_userid}", ENDITEM,
+	// DEBUGGING: Blank to trigger MSO_JSVerify error.
+	
 	web_submit_data("T05_SignUp", 
 		"Action={WebToursPath}/cgi-bin/login.pl", 
 		"Method=POST", 
@@ -186,7 +190,7 @@ WT3_SignUp(){
 		"Name=username"				,"Value={parm_userid}", ENDITEM, 
 		"Name=password"				,"Value={parm_pwd}", ENDITEM, 
 		"Name=passwordConfirm"		,"Value={parm_pwd}", ENDITEM, 
-		"Name=firstName"			,"Value={parm_userid}", ENDITEM, 
+		"Name=firstName"			,"Value=", ENDITEM, 
 		"Name=lastName"				,"Value={global_unique_id}", ENDITEM, 
 		"Name=address1"				,"Value={SignUp_address1}", ENDITEM,
 		"Name=address2"				,"Value={SignUp_address2}", ENDITEM,

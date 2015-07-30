@@ -1,7 +1,0 @@
-GET /service/update2/crx?os=win&arch=x86&nacl_arch=x86-64&prod=chromecrx&prodchannel=stable&prodversion=41.0.2272.118&lang=en-US&x=id%3Dlccekmodgklaepjeofjdjpbminllajkg%26v%3D0.0.0.0%26uc%26ping%3Dr%253D-1%2526e%253D1&x=id%3Daohghmighlieiainnegkcijnfilokake%26v%3D0.9%26uc&x=id%3Dapdfllckaahabafndbhieahigkjlhalf%26v%3D6.4%26uc&x=id%3Dblpcfgokakmgnkcojhhkbfbldkacnbeo%26v%3D4.2.7%26uc&x=id%3Dcoobgpohoikkiipiblmjeljniedjpjpf%26v%3D0.0.0.30%26uc&x=id%3Dnmmhkkegccagdldgiimedpiccmgmieda%26v%3D0.1.0.0%26uc&x=id%3Dpjkljhegncpnkpknbcohdijeoejaedia%26v%3D8.1%26uc HTTP/1.1
-Host: clients2.google.com
-Connection: keep-alive
-User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36
-Accept-Encoding: gzip, deflate, sdch
-Accept-Language: en-US,en;q=0.8
-

@@ -1,2 +1,0 @@
-"userSession=116429.837829081fQiiifQpHiDDDDDDDfQDDpVfiH&username=jojo&password=bean&JSFormSubmi"
-"t=on&login.x=22&login.y=6"

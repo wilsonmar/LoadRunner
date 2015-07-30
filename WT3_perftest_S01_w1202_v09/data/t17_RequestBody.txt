@@ -1,5 +1,0 @@
-"<?xml version=\"1.0\" encoding=\"UTF-8\"?><autofillquery clientversion=\"6.1.1715.1442/en (GGL"
-"L)\"><form signature=\"12525329521802119436\"><field signature=\"239111655\"/><field signature"
-"=\"2051817934\"/><field signature=\"2273916472\"/><field signature=\"1855613035\"/><field sign"
-"ature=\"4163345999\"/><field signature=\"2267517795\"/><field signature=\"1236818338\"/></form"
-"></autofillquery>"
