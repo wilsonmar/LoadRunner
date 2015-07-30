@@ -1,3 +1,4 @@
+// v10 2015.07.20 am: Recorded "Recording_Admin_Config" and moved it to "WT3_Admin_Config"
 // v09 2015.04.23 wm: Rename to parm_departDate and parm_returnDate
 // v09 2015.04.23 am: Add lr_save_string functions
 // v09 2015.04.23 am: Add "WT3_T24_Travel_Find_Flight" and "WT3_T30_Travel_Find_Flight2" Transacion name.

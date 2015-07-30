@@ -63,8 +63,8 @@ Order="T03_WT3_URL_Landing__*delimiter*__T04_WT3_SignUp_Error__*delimiter*__T05_
 [StateManagement]
 LastReplayStatus=1
 [ActiveReplay]
-LastReplayedRunName=result1
-ActiveRunName=result1
+LastReplayedRunName=
+ActiveRunName=
 [Transactions]
 T03_WT3_URL_Landing=
 T04_WT3_SignUp_Error=

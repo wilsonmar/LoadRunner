@@ -2,11 +2,10 @@
 \file _ChangeLog.c
 \brief Contains a short description of changes to the set of coding and data files.
 */
+// TODO: v?? 2015.07.24 am: Fixed the web_reg_find issue with longin
+// TODO: v?? 2015.07.24 am: Add logic for handling "Internal Server Error" MSO_SErrors.
 
-// v11 2015.07.24 am: Add logic for handling "Internal Server Error" MSO_SErrors.
-
-// v10 2015.07.25 wm: Move #USE_VTS to top of wi_functions.c which needs it.
-// v10 2015.07.25 wm: Change data in SignUp.dat to standard values (all y, sequence from 01).
+// v10 2015.07.26 wm: Returned UserId.dat to start with jojo01 instead of jojo.
 // v10 2015.07.23 wm: Add parameters in reservations form and data setup function
 // v10 2015.07.23 wm: Add logic for handling DBErr / MSO_SLoad script logic as described in v33 doc
 // v10 2015.07.23 wm: Add Doxygen file headers.

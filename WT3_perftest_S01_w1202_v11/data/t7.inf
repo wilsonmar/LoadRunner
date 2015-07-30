@@ -1,0 +1,15 @@
+[t7]
+FileName1=t7.htm
+URL1=http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=1
+Total=2
+RequestHeaderFile=t7_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t7_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_7.xml
+FileName2=t7f0.htm
+URL2=http://127.0.0.1:1080/cgi-bin/nav.pl?in=home
+FrameIndex2=0.0
+UseFrameIndex=1
+[ProtocolInfo]
+ProtocolId=QTWeb

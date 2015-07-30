@@ -27,6 +27,7 @@ Action()
 
 
 	if( stricmp("LandingOnly",LPCSTR_RunType ) == FOUND
+	||  stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND 
 	||  stricmp("SignUp",LPCSTR_RunType ) == FOUND 
 	||  stricmp("SignInOnly",LPCSTR_RunType ) == FOUND 
 	||  stricmp("SignInOut",LPCSTR_RunType ) == FOUND 
@@ -67,6 +68,7 @@ Action()
 
 
 	if( stricmp("All",LPCSTR_RunType ) == FOUND
+	||  stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND 
 	||  stricmp("SignUp",LPCSTR_RunType ) == FOUND 
     ){
 		lr_save_string("WT3_T05_SignUp","pTransName");
@@ -80,15 +82,13 @@ Action()
 
 	if( stricmp("SignInErr",LPCSTR_RunType ) == FOUND 
 	){
-//	 	for(i=0; i<4; i++){ // 0,1,2,3 (4 times)
-
 			lr_save_string("XXX","parm_pwd"); // error!
 			lr_save_string("WT3_T05_SignIn_Err","pTransName");
 	 		rc=T04_SignIn_Err();
-//	 	}
 	}
 
 
+	//  stricmp("SignUpInOut" not necessary because SignUp also logs in.
 	if( stricmp("All",LPCSTR_RunType ) == FOUND
 	||  stricmp("SignInOnly",LPCSTR_RunType ) == FOUND 
     ||  stricmp("SignInOut",LPCSTR_RunType ) == FOUND 
@@ -100,7 +100,9 @@ Action()
 		rc=WT3_Travel(); // to handle UseCase attribute.
 
 
-		if( stricmp("All",LPCSTR_RunType ) == FOUND
+	// Process SignUp becuase this app logs users in automatically after signup.
+	if( stricmp("All",LPCSTR_RunType ) == FOUND
+	||  stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND 
 	||  stricmp("SignUp",LPCSTR_RunType ) == FOUND 
 	||  stricmp("SignInOut",LPCSTR_RunType ) == FOUND
 	){

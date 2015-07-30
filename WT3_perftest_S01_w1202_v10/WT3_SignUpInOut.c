@@ -79,12 +79,10 @@ WT3_URL_Landing(){
 
 		// URL Landing page appears after invoking URL:
 	
-		web_reg_find("Text=Welcome to the Web Tours site", 
-			LAST);
-		
-		wi_start_transaction();
-	
-		// regardless if( stricmp("on", lr_eval_string("{MSO_JSFormSubmit1}") ) == FOUND
+	web_reg_find("Text=Welcome to the Web Tours site", LAST);
+	wi_start_transaction();
+
+	// regardless if( stricmp("on", lr_eval_string("{MSO_JSFormSubmit1}") ) == FOUND
 	
 		// Correlatie from response <input type="hidden" name="userSession" value="116443.360064804fQiQfffpDDDDDDDDDfQDHpDDc"/
 		// Regular expression is only for Referer RequestURL containing /nav.pl:
@@ -142,8 +140,9 @@ WT3_SignUp_Error(){
 		"Snapshot=t2.inf", 
 		LAST);
 
-	web_reg_find("Text=Your username is taken", "Fail=NotFound", LAST); // Intended error message.
-	
+//	web_reg_find("Text=Your username is taken", "Fail=NotFound", LAST); // Intended error message.
+	web_reg_find("Text=Your username is taken","SaveCount=DBErr_count", LAST );
+
 	wi_start_transaction();
 	web_submit_form("SignIn.pl", 
 		"Snapshot=t3.inf", 
@@ -158,6 +157,8 @@ WT3_SignUp_Error(){
 		"Name=register.x"		,"Value=40", ENDITEM, 
 		"Name=register.y"		,"Value=7", ENDITEM, 
 		LAST);
+	// TDO: 
+	// TODO: Add logic to loop thru data if error occurs.
 	rc=wi_end_transaction();
 
 	return 0;		
@@ -169,7 +170,9 @@ WT3_SignUp(){
 
 	// signing up with new username and password to populate in database.
 
-	web_reg_find("Text=Thank you, <b>","SaveCount=T05_SignUp_savecount", LAST);
+	web_reg_find("Text=Thank you, <b>","SaveCount=T05_SignUp_savecount", LAST); // positive test
+	web_reg_find("Text=Your username is taken","SaveCount=Err_count", LAST ); // negative test
+
 	wi_start_transaction();
 	web_submit_data("T05_SignUp", 
 		"Action={WebToursPath}/cgi-bin/login.pl", 
@@ -190,6 +193,15 @@ WT3_SignUp(){
 		"Name=register.x"			,"Value=50", ENDITEM, 
 		"Name=register.y"			,"Value=5", ENDITEM, 
 		LAST);
+
+	if( atoi( lr_eval_string("{Err_count}") ) > 0 ){ // Err found:
+		// This is OK TODO: handle error: retry or end script run.
+		if( stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND
+		){
+			// It's OK if user is already signed up. Continue to sign-in.
+		}
+	}
+
 	rc=wi_end_transaction();
 	
 	return rc;
@@ -209,6 +221,7 @@ WT3_SignUp_Continue(){
 		"Snapshot=t20.inf", 
 		"Mode=HTML", 
 		LAST);
+
 	rc=wi_end_transaction();
 	
 	return rc;
@@ -244,7 +257,8 @@ WT3_SignIn(){
 	// singning in with valid username and password which is just created
 	// Such as username as jojo01 and password as bean.
 
-	web_reg_find("Text=Welcome, <b>", "Fail=NOTFOUND", LAST);
+//	web_reg_find("Text=Welcome, {parm_userid},", "Fail=NOTFOUND", LAST);
+	web_reg_find("Text=Welcome, {parm_userid},", "Fail=NOTFOUND", LAST);
 
 	wi_start_transaction();
 	web_submit_form("SignIn.pl_4", 
@@ -266,7 +280,7 @@ WT3_SignOut(){
 	
 	// Siging off from the application:
 
-	// web_find("Text Check", "What=Welcome to the Web Tours site", LAST);
+	web_reg_find("Text=Welcome to the Web Tours site", "Fail=NOTFOUND", LAST);
 	wi_start_transaction();
 	web_image("SignOff Button", 
 		"Alt=SignOff Button", 

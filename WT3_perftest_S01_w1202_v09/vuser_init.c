@@ -13,7 +13,7 @@
 
 	// TODO: 08. Specify 4 during script development, then 2 during test runs.
 	LPCSTR			LPCSTR_Verbosity; // used within vi_set_Verbosity_attribute() below.
-	int					  iVerbosity_default = 4; 
+	int					  iVerbosity_default = 9; 
 	int 			      iVerbosity;
 	                        // iVerbosity=1; to mute messages. Only wi_startPrintingError will print.
 							//   2 = wi_startPrintingError and wi_startPrintingInfo will print.
@@ -65,6 +65,8 @@
 
 vuser_init()
 {
+	
+	
 //	Recording_Travel();
 //	lr_output_message(">> Just stop here.");
 		

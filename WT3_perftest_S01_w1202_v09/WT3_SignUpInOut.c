@@ -37,7 +37,7 @@ WT3_SignUpInOut_Init(){ // Called from Action() on first iteration:
 	lr_save_string("http://127.0.0.1:1080","pProtocolHostPort");
 	web_set_sockets_option("SSL_VERSION", "TLS1.1"); // Windows Internet Options has TLS1.1 and TLS1.2 selected.
 
-//define USE_TIMEZONEOFFSET
+#define USE_TIMEZONEOFFSET
 #ifdef  USE_TIMEZONEOFFSET
 // WT3 does not use client timezoneoffset:
 	

@@ -1,0 +1,1697 @@
+------------------------------------------------------------------------------------------
+| HP - LoadRunner Recording Log File                                    |
+| Date Generated : Mon Jul 20 16:27:16 2015                                              |
+------------------------------------------------------------------------------------------
+
+[Op#:     1]------------------------------------------------------------------------------
+Record Section      : Recording_Admin_Config
+
+[Op#:     2]------------------------------------------------------------------------------
+Start Record        : 15
+
+[Op#:     3]------------------------------------------------------------------------------
+Api Event (6034)    : Id=WPLUS Proc=2704:1a50  Start=11773083  End=11773083  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "(null)"
+Argument#  2  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Return Value      : (void)
+
+[Op#:     4]------------------------------------------------------------------------------
+Api Event (6035)    : Id=WPLUS Proc=2704:1a50  Start=11773083  End=11773083  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = ""
+Argument#  2  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Return Value      : (void)
+
+[Op#:     5]------------------------------------------------------------------------------
+Api Event (6036)    : Id=WPLUS Proc=2704:1734  Start=11773192  End=11773192  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "Mainali-PC"
+Argument#  2  IN  : [ipaddress] = 192.168.1.69 (4501a8c0)
+Return Value      : (void)
+
+[Op#:     6]------------------------------------------------------------------------------
+Api Event (6037)    : Id=WPLUS Proc=2704:2830  Start=11773348  End=11773348  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "Mainali-PC"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "\xfe\x80\x00\x00\x00\x00\x00\x00A1\xf5\x8f\xc2\xa5*5" }
+Argument#  5  IN  : [scope_id] = 15
+Return Value      : (void)
+
+[Op#:     7]------------------------------------------------------------------------------
+Api Event (6038)    : Id=WPLUS Proc=2704:2830  Start=11773348  End=11773348  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "Mainali-PC"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "&\x02\x03\x06\xcf\x86\xf40A1\xf5\x8f\xc2\xa5*5" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:     8]------------------------------------------------------------------------------
+Api Event (6039)    : Id=WPLUS Proc=2704:2830  Start=11773348  End=11773348  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "Mainali-PC"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "&\x02\x03\x06\xcf\x86\xf40M\x8e\x07.\x1b\x85nX" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:     9]------------------------------------------------------------------------------
+Api Event (6040)    : Id=WPLUS Proc=2704:2830  Start=11773348  End=11773348  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "Mainali-PC"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "\xfe\x80\x00\x00\x00\x00\x00\x00A1\xf5\x8f\xc2\xa5*5" }
+Argument#  5  IN  : [scope_id] = 15
+Return Value      : (void)
+
+[Op#:    10]------------------------------------------------------------------------------
+Api Event (6041)    : Id=WPLUS Proc=2704:2830  Start=11773348  End=11773348  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "Mainali-PC"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "&\x02\x03\x06\xcf\x86\xf40A1\xf5\x8f\xc2\xa5*5" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:    11]------------------------------------------------------------------------------
+Api Event (6042)    : Id=WPLUS Proc=2704:2830  Start=11773348  End=11773348  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "Mainali-PC"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "&\x02\x03\x06\xcf\x86\xf40M\x8e\x07.\x1b\x85nX" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:    12]------------------------------------------------------------------------------
+Api Event (6043)    : Id=WPLUS Proc=2704:1bdc  Start=11773676  End=11773676  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "Mainali-PC"
+Argument#  2  IN  : [ipaddress] = 192.168.1.69 (4501a8c0)
+Return Value      : (void)
+
+[Op#:    13]------------------------------------------------------------------------------
+Api Event (6044)    : Id=WPLUS Proc=2704:30b8  Start=11773676  End=11773676  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "Mainali-PC"
+Argument#  2  IN  : [ipaddress] = 192.168.1.69 (4501a8c0)
+Return Value      : (void)
+
+[Op#:    14]------------------------------------------------------------------------------
+Api Event (6045)    : Id=WPLUS Proc=2704:1bdc  Start=11773676  End=11773676  Duration=0 msec
+Operation Name      : wplus_connect
+Argument#  1  IN  : [session_id] = 1
+Argument#  2  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  3  IN  : [portnum] = 1080
+Argument#  4  IN  : [local_portnum] = 0
+Argument#  5  IN  : [flags] = 0
+Return Value      : (void)
+
+[Op#:    15]------------------------------------------------------------------------------
+Api Event (6046)    : Id=WPLUS Proc=2704:30b8  Start=11773691  End=11773691  Duration=0 msec
+Operation Name      : wplus_connect
+Argument#  1  IN  : [session_id] = 2
+Argument#  2  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  3  IN  : [portnum] = 1080
+Argument#  4  IN  : [local_portnum] = 0
+Argument#  5  IN  : [flags] = 0
+Return Value      : (void)
+
+[Op#:    16]------------------------------------------------------------------------------
+Api Event (6047)    : Id=HTTP Proc=2704:800c90c9  Start=11773707  End=11773707  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 1
+Argument#  2  IN  : [http_id] = 1
+Argument#  3  IN  : [buflen] = ->664
+Argument#  3  OUT : [buflen] = ->664
+Return Value      : (void)
+
+[Op#:    17]------------------------------------------------------------------------------
+Api Event (6048)    : Id=HTTP Proc=2704:80001001  Start=11773707  End=11773707  Duration=0 msec
+Operation Name      : wplus_http_wsock_request_ex
+Argument#  1  IN  : [session_id] = 1
+Argument#  2  IN  : [http_id] = 1
+Argument#  3  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  4  IN  : [portnum] = 1080
+Argument#  5  IN  : [urladdress] = ""
+Argument#  6  IN  : [hdr_buffer] = ->Array[0:298]{ "GET /WebTours/index.htm HTTP/1.1\r\n"
+							"Accept: text/html, application/xhtml+xml, */*\r\n"
+							"Accept-Language: en-US\r\n"
+							"User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r\n"
+							"UA-CPU: AMD64\r\n"
+							"Accept-Encoding: gzip, deflate\r\n"
+							"Host: 127.0.0.1:1080\r\n"
+							"DNT: 1\r\n"
+							"Connection: Keep-Alive\r\n"
+							"\r\n"
+							"" }
+Argument#  6  OUT : [hdr_buffer] = ->Array[0:298]{ "HTTP/1.1 200 OK\r\n"
+							"Date: Mon, 20 Jul 2015 21:23:15 GMT\r\n"
+							"Server: Apache/2.2.21 (Win32)\r\n"
+							"Last-Modified: Mon, 27 May 2013 19:20:21 GMT\r\n"
+							"ETag: ""2000000041084-16e-4ddb80a28a740""\r\n"
+							"Accept-Ranges: bytes\r\n"
+							"Content-Length: 366\r\n"
+							"Keep-Alive: timeout=5, max=100\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Content-Type: text/html\r\n"
+							"\r\n"
+							"" }
+Argument#  7  IN  : [hdr_buflen] = ->298
+Argument#  7  OUT : [hdr_buflen] = ->298
+Argument#  8  IN  : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  8  OUT : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  9  IN  : [body_buflen] = ->0
+Argument#  9  OUT : [body_buflen] = ->0
+Argument# 10  IN  : [body_filename] = ->Array[0:0]{ NULL }
+Argument# 10  OUT : [body_filename] = ->Array[0:88]{ "C:\\Users\\Mainali\\LoadRunner\\WT3_perftest_S01_w1202_v09\\data\\http.db\\resp_001_001_014.dat" }
+Argument# 11  IN  : [body_filelen] = ->0
+Argument# 11  OUT : [body_filelen] = ->88
+Argument# 12  IN  : [flags] = ->0
+Argument# 12  OUT : [flags] = ->0
+Argument# 13  IN  : [sourceipaddress] = 192.168.1.69 (4501a8c0)
+Argument# 14  IN  : [sourceportnum] = 9933
+Return Value      : (void)
+
+[Op#:    18]------------------------------------------------------------------------------
+Api Event (6049)    : Id=HTTP Proc=2704:800c90ca  Start=11774128  End=11774128  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 1
+Argument#  2  IN  : [http_id] = 2
+Argument#  3  IN  : [buflen] = ->1007
+Argument#  3  OUT : [buflen] = ->1007
+Return Value      : (void)
+
+[Op#:    19]------------------------------------------------------------------------------
+Api Event (6050)    : Id=HTTP Proc=2704:80001002  Start=11774128  End=11774128  Duration=0 msec
+Operation Name      : wplus_http_wsock_request_ex
+Argument#  1  IN  : [session_id] = 1
+Argument#  2  IN  : [http_id] = 2
+Argument#  3  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  4  IN  : [portnum] = 1080
+Argument#  5  IN  : [urladdress] = ""
+Argument#  6  IN  : [hdr_buffer] = ->Array[0:351]{ "GET /WebTours/header.html HTTP/1.1\r\n"
+							"Accept: text/html, application/xhtml+xml, */*\r\n"
+							"Referer: http://127.0.0.1:1080/WebTours/index.htm\r\n"
+							"Accept-Language: en-US\r\n"
+							"User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r\n"
+							"UA-CPU: AMD64\r\n"
+							"Accept-Encoding: gzip, deflate\r\n"
+							"Host: 127.0.0.1:1080\r\n"
+							"DNT: 1\r\n"
+							"Connection: Keep-Alive\r\n"
+							"\r\n"
+							"" }
+Argument#  6  OUT : [hdr_buffer] = ->Array[0:297]{ "HTTP/1.1 200 OK\r\n"
+							"Date: Mon, 20 Jul 2015 21:23:15 GMT\r\n"
+							"Server: Apache/2.2.21 (Win32)\r\n"
+							"Last-Modified: Mon, 27 May 2013 19:20:21 GMT\r\n"
+							"ETag: ""200000004106a-2c6-4ddb80a28a740""\r\n"
+							"Accept-Ranges: bytes\r\n"
+							"Content-Length: 710\r\n"
+							"Keep-Alive: timeout=5, max=99\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Content-Type: text/html\r\n"
+							"\r\n"
+							"" }
+Argument#  7  IN  : [hdr_buflen] = ->351
+Argument#  7  OUT : [hdr_buflen] = ->297
+Argument#  8  IN  : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  8  OUT : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  9  IN  : [body_buflen] = ->0
+Argument#  9  OUT : [body_buflen] = ->0
+Argument# 10  IN  : [body_filename] = ->Array[0:0]{ NULL }
+Argument# 10  OUT : [body_filename] = ->Array[0:88]{ "C:\\Users\\Mainali\\LoadRunner\\WT3_perftest_S01_w1202_v09\\data\\http.db\\resp_001_002_013.dat" }
+Argument# 11  IN  : [body_filelen] = ->0
+Argument# 11  OUT : [body_filelen] = ->88
+Argument# 12  IN  : [flags] = ->0
+Argument# 12  OUT : [flags] = ->0
+Argument# 13  IN  : [sourceipaddress] = 192.168.1.69 (4501a8c0)
+Argument# 14  IN  : [sourceportnum] = 9933
+Return Value      : (void)
+
+[Op#:    20]------------------------------------------------------------------------------
+Api Event (6051)    : Id=HTTP Proc=2704:800c90cb  Start=11774175  End=11774175  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 1
+Argument#  2  IN  : [http_id] = 3
+Argument#  3  IN  : [buflen] = ->898
+Argument#  3  OUT : [buflen] = ->898
+Return Value      : (void)
+
+[Op#:    21]------------------------------------------------------------------------------
+Api Event (6052)    : Id=WPLUS Proc=2704:2514  Start=11774175  End=11774175  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "Mainali-PC"
+Argument#  2  IN  : [ipaddress] = 192.168.1.69 (4501a8c0)
+Return Value      : (void)
+
+[Op#:    22]------------------------------------------------------------------------------
+Api Event (6053)    : Id=HTTP Proc=2704:80001003  Start=11774175  End=11774175  Duration=0 msec
+Operation Name      : wplus_http_wsock_request_ex
+Argument#  1  IN  : [session_id] = 1
+Argument#  2  IN  : [http_id] = 3
+Argument#  3  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  4  IN  : [portnum] = 1080
+Argument#  5  IN  : [urladdress] = ""
+Argument#  6  IN  : [hdr_buffer] = ->Array[0:373]{ "GET /WebTours/images/hp_logo.png HTTP/1.1\r\n"
+							"Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5\r\n"
+							"Referer: http://127.0.0.1:1080/WebTours/header.html\r\n"
+							"Accept-Language: en-US\r\n"
+							"User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r\n"
+							"UA-CPU: AMD64\r\n"
+							"Accept-Encoding: gzip, deflate\r\n"
+							"Host: 127.0.0.1:1080\r\n"
+							"DNT: 1\r\n"
+							"Connection: Keep-Alive\r\n"
+							"\r\n"
+							"" }
+Argument#  6  OUT : [hdr_buffer] = ->Array[0:297]{ "HTTP/1.1 200 OK\r\n"
+							"Date: Mon, 20 Jul 2015 21:23:15 GMT\r\n"
+							"Server: Apache/2.2.21 (Win32)\r\n"
+							"Last-Modified: Thu, 12 Jan 2012 21:30:26 GMT\r\n"
+							"ETag: ""2000000041077-259-4b65b74e0a080""\r\n"
+							"Accept-Ranges: bytes\r\n"
+							"Content-Length: 601\r\n"
+							"Keep-Alive: timeout=5, max=98\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Content-Type: image/png\r\n"
+							"\r\n"
+							"" }
+Argument#  7  IN  : [hdr_buflen] = ->373
+Argument#  7  OUT : [hdr_buflen] = ->297
+Argument#  8  IN  : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  8  OUT : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  9  IN  : [body_buflen] = ->0
+Argument#  9  OUT : [body_buflen] = ->0
+Argument# 10  IN  : [body_filename] = ->Array[0:0]{ NULL }
+Argument# 10  OUT : [body_filename] = ->Array[0:88]{ "C:\\Users\\Mainali\\LoadRunner\\WT3_perftest_S01_w1202_v09\\data\\http.db\\resp_001_003_013.dat" }
+Argument# 11  IN  : [body_filelen] = ->0
+Argument# 11  OUT : [body_filelen] = ->88
+Argument# 12  IN  : [flags] = ->0
+Argument# 12  OUT : [flags] = ->0
+Argument# 13  IN  : [sourceipaddress] = 192.168.1.69 (4501a8c0)
+Argument# 14  IN  : [sourceportnum] = 9933
+Return Value      : (void)
+
+[Op#:    23]------------------------------------------------------------------------------
+Api Event (6054)    : Id=HTTP Proc=2704:800c90cc  Start=11774206  End=11774206  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 1
+Argument#  2  IN  : [http_id] = 4
+Argument#  3  IN  : [buflen] = ->4486
+Argument#  3  OUT : [buflen] = ->4486
+Return Value      : (void)
+
+[Op#:    24]------------------------------------------------------------------------------
+Api Event (6055)    : Id=HTTP Proc=2704:80001004  Start=11774191  End=11774206  Duration=15 msec
+Operation Name      : wplus_http_wsock_request_ex
+Argument#  1  IN  : [session_id] = 1
+Argument#  2  IN  : [http_id] = 4
+Argument#  3  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  4  IN  : [portnum] = 1080
+Argument#  5  IN  : [urladdress] = ""
+Argument#  6  IN  : [hdr_buffer] = ->Array[0:374]{ "GET /WebTours/images/webtours.png HTTP/1.1\r\n"
+							"Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5\r\n"
+							"Referer: http://127.0.0.1:1080/WebTours/header.html\r\n"
+							"Accept-Language: en-US\r\n"
+							"User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r\n"
+							"UA-CPU: AMD64\r\n"
+							"Accept-Encoding: gzip, deflate\r\n"
+							"Host: 127.0.0.1:1080\r\n"
+							"DNT: 1\r\n"
+							"Connection: Keep-Alive\r\n"
+							"\r\n"
+							"" }
+Argument#  6  OUT : [hdr_buffer] = ->Array[0:299]{ "HTTP/1.1 200 OK\r\n"
+							"Date: Mon, 20 Jul 2015 21:23:15 GMT\r\n"
+							"Server: Apache/2.2.21 (Win32)\r\n"
+							"Last-Modified: Mon, 04 Nov 2013 21:47:01 GMT\r\n"
+							"ETag: ""2000000041083-105b-4ea60db215f40""\r\n"
+							"Accept-Ranges: bytes\r\n"
+							"Content-Length: 4187\r\n"
+							"Keep-Alive: timeout=5, max=97\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Content-Type: image/png\r\n"
+							"\r\n"
+							"" }
+Argument#  7  IN  : [hdr_buflen] = ->374
+Argument#  7  OUT : [hdr_buflen] = ->299
+Argument#  8  IN  : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  8  OUT : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  9  IN  : [body_buflen] = ->0
+Argument#  9  OUT : [body_buflen] = ->0
+Argument# 10  IN  : [body_filename] = ->Array[0:0]{ NULL }
+Argument# 10  OUT : [body_filename] = ->Array[0:88]{ "C:\\Users\\Mainali\\LoadRunner\\WT3_perftest_S01_w1202_v09\\data\\http.db\\resp_001_004_012.dat" }
+Argument# 11  IN  : [body_filelen] = ->0
+Argument# 11  OUT : [body_filelen] = ->88
+Argument# 12  IN  : [flags] = ->0
+Argument# 12  OUT : [flags] = ->0
+Argument# 13  IN  : [sourceipaddress] = 192.168.1.69 (4501a8c0)
+Argument# 14  IN  : [sourceportnum] = 9933
+Return Value      : (void)
+
+[Op#:    25]------------------------------------------------------------------------------
+Api Event (6056)    : Id=WPLUS Proc=2704:2514  Start=11774206  End=11774206  Duration=0 msec
+Operation Name      : wplus_connect
+Argument#  1  IN  : [session_id] = 3
+Argument#  2  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  3  IN  : [portnum] = 1080
+Argument#  4  IN  : [local_portnum] = 0
+Argument#  5  IN  : [flags] = 0
+Return Value      : (void)
+
+[Op#:    26]------------------------------------------------------------------------------
+Api Event (6057)    : Id=HTTP Proc=2704:800ca0c9  Start=11774222  End=11774222  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 2
+Argument#  2  IN  : [http_id] = 1
+Argument#  3  IN  : [buflen] = ->1067
+Argument#  3  OUT : [buflen] = ->1067
+Return Value      : (void)
+
+[Op#:    27]------------------------------------------------------------------------------
+Api Event (6058)    : Id=HTTP Proc=2704:80002001  Start=11774128  End=11774222  Duration=94 msec
+Operation Name      : wplus_http_wsock_request_ex
+Argument#  1  IN  : [session_id] = 2
+Argument#  2  IN  : [http_id] = 1
+Argument#  3  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  4  IN  : [portnum] = 1080
+Argument#  5  IN  : [urladdress] = ""
+Argument#  6  IN  : [hdr_buffer] = ->Array[0:362]{ "GET /cgi-bin/welcome.pl?signOff=true HTTP/1.1\r\n"
+							"Accept: text/html, application/xhtml+xml, */*\r\n"
+							"Referer: http://127.0.0.1:1080/WebTours/index.htm\r\n"
+							"Accept-Language: en-US\r\n"
+							"User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r\n"
+							"UA-CPU: AMD64\r\n"
+							"Accept-Encoding: gzip, deflate\r\n"
+							"Host: 127.0.0.1:1080\r\n"
+							"DNT: 1\r\n"
+							"Connection: Keep-Alive\r\n"
+							"\r\n"
+							"" }
+Argument#  6  OUT : [hdr_buffer] = ->Array[0:374]{ "HTTP/1.1 200 OK\r\n"
+							"Date: Mon, 20 Jul 2015 21:23:15 GMT\r\n"
+							"Server: Apache/2.2.21 (Win32)\r\n"
+							"Set-Cookie: MSO=SID&1437427395&MSO_ServerErrorsProb&50&MSO_ServerLoadProb&50; path=/\r\n"
+							"Set-Cookie: MTUserInfo=; path=/; expires=Sun, 19-Jul-2015 21:23:15 GMT\r\n"
+							"Keep-Alive: timeout=5, max=100\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Transfer-Encoding: chunked\r\n"
+							"Content-Type: text/html; charset=ISO-8859-1\r\n"
+							"\r\n"
+							"" }
+Argument#  7  IN  : [hdr_buflen] = ->362
+Argument#  7  OUT : [hdr_buflen] = ->374
+Argument#  8  IN  : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  8  OUT : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  9  IN  : [body_buflen] = ->0
+Argument#  9  OUT : [body_buflen] = ->0
+Argument# 10  IN  : [body_filename] = ->Array[0:0]{ NULL }
+Argument# 10  OUT : [body_filename] = ->Array[0:88]{ "C:\\Users\\Mainali\\LoadRunner\\WT3_perftest_S01_w1202_v09\\data\\http.db\\resp_002_001_014.dat" }
+Argument# 11  IN  : [body_filelen] = ->0
+Argument# 11  OUT : [body_filelen] = ->88
+Argument# 12  IN  : [flags] = ->0
+Argument# 12  OUT : [flags] = ->0
+Argument# 13  IN  : [sourceipaddress] = 192.168.1.69 (4501a8c0)
+Argument# 14  IN  : [sourceportnum] = 9933
+Return Value      : (void)
+
+[Op#:    28]------------------------------------------------------------------------------
+Api Event (6059)    : Id=HTTP Proc=2704:800ca0c9  Start=11774222  End=11774222  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 2
+Argument#  2  IN  : [http_id] = 1
+Argument#  3  IN  : [buflen] = ->5
+Argument#  3  OUT : [buflen] = ->5
+Return Value      : (void)
+
+[Op#:    29]------------------------------------------------------------------------------
+Api Event (6060)    : Id=HTTP Proc=2704:800c90cd  Start=11774425  End=11774425  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 1
+Argument#  2  IN  : [http_id] = 5
+Argument#  3  IN  : [buflen] = ->1659
+Argument#  3  OUT : [buflen] = ->1659
+Return Value      : (void)
+
+[Op#:    30]------------------------------------------------------------------------------
+Api Event (6061)    : Id=HTTP Proc=2704:80001005  Start=11774425  End=11774425  Duration=0 msec
+Operation Name      : wplus_http_wsock_request_ex
+Argument#  1  IN  : [session_id] = 1
+Argument#  2  IN  : [http_id] = 5
+Argument#  3  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  4  IN  : [portnum] = 1080
+Argument#  5  IN  : [urladdress] = ""
+Argument#  6  IN  : [hdr_buffer] = ->Array[0:436]{ "GET /WebTours/home.html HTTP/1.1\r\n"
+							"Accept: text/html, application/xhtml+xml, */*\r\n"
+							"Referer: http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true\r\n"
+							"Accept-Language: en-US\r\n"
+							"User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r\n"
+							"UA-CPU: AMD64\r\n"
+							"Accept-Encoding: gzip, deflate\r\n"
+							"Host: 127.0.0.1:1080\r\n"
+							"DNT: 1\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Cookie: MSO=SID&1437427395&MSO_ServerErrorsProb&50&MSO_ServerLoadProb&50\r\n"
+							"\r\n"
+							"" }
+Argument#  6  OUT : [hdr_buffer] = ->Array[0:298]{ "HTTP/1.1 200 OK\r\n"
+							"Date: Mon, 20 Jul 2015 21:23:16 GMT\r\n"
+							"Server: Apache/2.2.21 (Win32)\r\n"
+							"Last-Modified: Mon, 27 May 2013 19:20:21 GMT\r\n"
+							"ETag: ""200000004106b-551-4ddb80a28a740""\r\n"
+							"Accept-Ranges: bytes\r\n"
+							"Content-Length: 1361\r\n"
+							"Keep-Alive: timeout=5, max=96\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Content-Type: text/html\r\n"
+							"\r\n"
+							"" }
+Argument#  7  IN  : [hdr_buflen] = ->436
+Argument#  7  OUT : [hdr_buflen] = ->298
+Argument#  8  IN  : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  8  OUT : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  9  IN  : [body_buflen] = ->0
+Argument#  9  OUT : [body_buflen] = ->0
+Argument# 10  IN  : [body_filename] = ->Array[0:0]{ NULL }
+Argument# 10  OUT : [body_filename] = ->Array[0:88]{ "C:\\Users\\Mainali\\LoadRunner\\WT3_perftest_S01_w1202_v09\\data\\http.db\\resp_001_005_012.dat" }
+Argument# 11  IN  : [body_filelen] = ->0
+Argument# 11  OUT : [body_filelen] = ->88
+Argument# 12  IN  : [flags] = ->0
+Argument# 12  OUT : [flags] = ->0
+Argument# 13  IN  : [sourceipaddress] = 192.168.1.69 (4501a8c0)
+Argument# 14  IN  : [sourceportnum] = 9933
+Return Value      : (void)
+
+[Op#:    31]------------------------------------------------------------------------------
+Api Event (6062)    : Id=HTTP Proc=2704:800ca0ca  Start=11774471  End=11774471  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 2
+Argument#  2  IN  : [http_id] = 2
+Argument#  3  IN  : [buflen] = ->1747
+Argument#  3  OUT : [buflen] = ->1747
+Return Value      : (void)
+
+[Op#:    32]------------------------------------------------------------------------------
+Api Event (6063)    : Id=HTTP Proc=2704:80002002  Start=11774409  End=11774487  Duration=78 msec
+Operation Name      : wplus_http_wsock_request_ex
+Argument#  1  IN  : [session_id] = 2
+Argument#  2  IN  : [http_id] = 2
+Argument#  3  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  4  IN  : [portnum] = 1080
+Argument#  5  IN  : [urladdress] = ""
+Argument#  6  IN  : [hdr_buffer] = ->Array[0:440]{ "GET /cgi-bin/nav.pl?in=home HTTP/1.1\r\n"
+							"Accept: text/html, application/xhtml+xml, */*\r\n"
+							"Referer: http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true\r\n"
+							"Accept-Language: en-US\r\n"
+							"User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r\n"
+							"UA-CPU: AMD64\r\n"
+							"Accept-Encoding: gzip, deflate\r\n"
+							"Host: 127.0.0.1:1080\r\n"
+							"DNT: 1\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Cookie: MSO=SID&1437427395&MSO_ServerErrorsProb&50&MSO_ServerLoadProb&50\r\n"
+							"\r\n"
+							"" }
+Argument#  6  OUT : [hdr_buffer] = ->Array[0:255]{ "HTTP/1.1 200 OK\r\n"
+							"Date: Mon, 20 Jul 2015 21:23:16 GMT\r\n"
+							"Server: Apache/2.2.21 (Win32)\r\n"
+							"Expires: Sun, 19 Jul 2015 21:23:16 GMT\r\n"
+							"Keep-Alive: timeout=5, max=99\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Transfer-Encoding: chunked\r\n"
+							"Content-Type: text/html; charset=ISO-8859-1\r\n"
+							"\r\n"
+							"" }
+Argument#  7  IN  : [hdr_buflen] = ->440
+Argument#  7  OUT : [hdr_buflen] = ->255
+Argument#  8  IN  : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  8  OUT : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  9  IN  : [body_buflen] = ->0
+Argument#  9  OUT : [body_buflen] = ->0
+Argument# 10  IN  : [body_filename] = ->Array[0:0]{ NULL }
+Argument# 10  OUT : [body_filename] = ->Array[0:88]{ "C:\\Users\\Mainali\\LoadRunner\\WT3_perftest_S01_w1202_v09\\data\\http.db\\resp_002_002_013.dat" }
+Argument# 11  IN  : [body_filelen] = ->0
+Argument# 11  OUT : [body_filelen] = ->88
+Argument# 12  IN  : [flags] = ->0
+Argument# 12  OUT : [flags] = ->0
+Argument# 13  IN  : [sourceipaddress] = 192.168.1.69 (4501a8c0)
+Argument# 14  IN  : [sourceportnum] = 9933
+Return Value      : (void)
+
+[Op#:    33]------------------------------------------------------------------------------
+Api Event (6064)    : Id=HTTP Proc=2704:800ca0ca  Start=11774487  End=11774487  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 2
+Argument#  2  IN  : [http_id] = 2
+Argument#  3  IN  : [buflen] = ->5
+Argument#  3  OUT : [buflen] = ->5
+Return Value      : (void)
+
+[Op#:    34]------------------------------------------------------------------------------
+Api Event (6065)    : Id=HTTP Proc=2704:800ca0cb  Start=11774534  End=11774534  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 2
+Argument#  2  IN  : [http_id] = 3
+Argument#  3  IN  : [buflen] = ->976
+Argument#  3  OUT : [buflen] = ->976
+Return Value      : (void)
+
+[Op#:    35]------------------------------------------------------------------------------
+Api Event (6066)    : Id=HTTP Proc=2704:80002003  Start=11774503  End=11774534  Duration=31 msec
+Operation Name      : wplus_http_wsock_request_ex
+Argument#  1  IN  : [session_id] = 2
+Argument#  2  IN  : [http_id] = 3
+Argument#  3  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  4  IN  : [portnum] = 1080
+Argument#  5  IN  : [urladdress] = ""
+Argument#  6  IN  : [hdr_buffer] = ->Array[0:451]{ "GET /WebTours/images/mer_login.gif HTTP/1.1\r\n"
+							"Accept: image/png, image/svg+xml, image/*;q=0.8, */*;q=0.5\r\n"
+							"Referer: http://127.0.0.1:1080/cgi-bin/nav.pl?in=home\r\n"
+							"Accept-Language: en-US\r\n"
+							"User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r\n"
+							"UA-CPU: AMD64\r\n"
+							"Accept-Encoding: gzip, deflate\r\n"
+							"Host: 127.0.0.1:1080\r\n"
+							"DNT: 1\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Cookie: MSO=SID&1437427395&MSO_ServerErrorsProb&50&MSO_ServerLoadProb&50\r\n"
+							"\r\n"
+							"" }
+Argument#  6  OUT : [hdr_buffer] = ->Array[0:297]{ "HTTP/1.1 200 OK\r\n"
+							"Date: Mon, 20 Jul 2015 21:23:16 GMT\r\n"
+							"Server: Apache/2.2.21 (Win32)\r\n"
+							"Last-Modified: Thu, 12 Jan 2012 21:30:26 GMT\r\n"
+							"ETag: ""200000004107e-2a7-4b65b74e0a080""\r\n"
+							"Accept-Ranges: bytes\r\n"
+							"Content-Length: 679\r\n"
+							"Keep-Alive: timeout=5, max=98\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Content-Type: image/gif\r\n"
+							"\r\n"
+							"" }
+Argument#  7  IN  : [hdr_buflen] = ->451
+Argument#  7  OUT : [hdr_buflen] = ->297
+Argument#  8  IN  : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  8  OUT : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  9  IN  : [body_buflen] = ->0
+Argument#  9  OUT : [body_buflen] = ->0
+Argument# 10  IN  : [body_filename] = ->Array[0:0]{ NULL }
+Argument# 10  OUT : [body_filename] = ->Array[0:88]{ "C:\\Users\\Mainali\\LoadRunner\\WT3_perftest_S01_w1202_v09\\data\\http.db\\resp_002_003_012.dat" }
+Argument# 11  IN  : [body_filelen] = ->0
+Argument# 11  OUT : [body_filelen] = ->88
+Argument# 12  IN  : [flags] = ->0
+Argument# 12  OUT : [flags] = ->0
+Argument# 13  IN  : [sourceipaddress] = 192.168.1.69 (4501a8c0)
+Argument# 14  IN  : [sourceportnum] = 9933
+Return Value      : (void)
+
+[Op#:    36]------------------------------------------------------------------------------
+Api Event (6067)    : Id=HTTP Proc=2704:800ca0cc  Start=11774549  End=11774549  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 2
+Argument#  2  IN  : [http_id] = 4
+Argument#  3  IN  : [buflen] = ->424
+Argument#  3  OUT : [buflen] = ->424
+Return Value      : (void)
+
+[Op#:    37]------------------------------------------------------------------------------
+Api Event (6068)    : Id=HTTP Proc=2704:80002004  Start=11774549  End=11774549  Duration=0 msec
+Operation Name      : wplus_http_wsock_request_ex
+Argument#  1  IN  : [session_id] = 2
+Argument#  2  IN  : [http_id] = 4
+Argument#  3  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  4  IN  : [portnum] = 1080
+Argument#  5  IN  : [urladdress] = ""
+Argument#  6  IN  : [hdr_buffer] = ->Array[0:307]{ "GET /favicon.ico HTTP/1.1\r\n"
+							"Accept: */*\r\n"
+							"UA-CPU: AMD64\r\n"
+							"Accept-Encoding: gzip, deflate\r\n"
+							"User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r\n"
+							"Host: 127.0.0.1:1080\r\n"
+							"DNT: 1\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Cookie: MSO=SID&1437427395&MSO_ServerErrorsProb&50&MSO_ServerLoadProb&50\r\n"
+							"\r\n"
+							"" }
+Argument#  6  OUT : [hdr_buffer] = ->Array[0:215]{ "HTTP/1.1 404 Not Found\r\n"
+							"Date: Mon, 20 Jul 2015 21:23:16 GMT\r\n"
+							"Server: Apache/2.2.21 (Win32)\r\n"
+							"Content-Length: 209\r\n"
+							"Keep-Alive: timeout=5, max=97\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Content-Type: text/html; charset=iso-8859-1\r\n"
+							"\r\n"
+							"" }
+Argument#  7  IN  : [hdr_buflen] = ->307
+Argument#  7  OUT : [hdr_buflen] = ->215
+Argument#  8  IN  : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  8  OUT : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  9  IN  : [body_buflen] = ->0
+Argument#  9  OUT : [body_buflen] = ->0
+Argument# 10  IN  : [body_filename] = ->Array[0:0]{ NULL }
+Argument# 10  OUT : [body_filename] = ->Array[0:88]{ "C:\\Users\\Mainali\\LoadRunner\\WT3_perftest_S01_w1202_v09\\data\\http.db\\resp_002_004_006.dat" }
+Argument# 11  IN  : [body_filelen] = ->0
+Argument# 11  OUT : [body_filelen] = ->88
+Argument# 12  IN  : [flags] = ->0
+Argument# 12  OUT : [flags] = ->0
+Argument# 13  IN  : [sourceipaddress] = 192.168.1.69 (4501a8c0)
+Argument# 14  IN  : [sourceportnum] = 9933
+Return Value      : (void)
+
+[Op#:    38]------------------------------------------------------------------------------
+Api Event (6069)    : Id=WPLUS Proc=2704:1734  Start=11779947  End=11779947  Duration=0 msec
+Operation Name      : wplus_close
+Argument#  1  IN  : [session_id] = 1
+Return Value      : (void)
+
+[Op#:    39]------------------------------------------------------------------------------
+Api Event (6070)    : Id=WPLUS Proc=2704:1734  Start=11780072  End=11780072  Duration=0 msec
+Operation Name      : wplus_close
+Argument#  1  IN  : [session_id] = 2
+Return Value      : (void)
+
+[Op#:    40]------------------------------------------------------------------------------
+Start Transaction   : WT3_T01_URL_Landing
+
+[Op#:    41]------------------------------------------------------------------------------
+End Transaction     : WT3_T01_URL_Landing
+
+[Op#:    42]------------------------------------------------------------------------------
+Start Transaction   : WT3_T02_Click_Administration_Link
+
+[Op#:    43]------------------------------------------------------------------------------
+Api Event (6071)    : Id=WPLUS Proc=2704:2f14  Start=11864437  End=11864437  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "Mainali-PC"
+Argument#  2  IN  : [ipaddress] = 192.168.1.69 (4501a8c0)
+Return Value      : (void)
+
+[Op#:    44]------------------------------------------------------------------------------
+Api Event (6072)    : Id=WPLUS Proc=2704:2f14  Start=11864437  End=11864437  Duration=0 msec
+Operation Name      : wplus_connect
+Argument#  1  IN  : [session_id] = 4
+Argument#  2  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  3  IN  : [portnum] = 1080
+Argument#  4  IN  : [local_portnum] = 0
+Argument#  5  IN  : [flags] = 0
+Return Value      : (void)
+
+[Op#:    45]------------------------------------------------------------------------------
+Api Event (6073)    : Id=HTTP Proc=2704:800cc0c9  Start=11865498  End=11865498  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 4
+Argument#  2  IN  : [http_id] = 1
+Argument#  3  IN  : [buflen] = ->4235
+Argument#  3  OUT : [buflen] = ->4235
+Return Value      : (void)
+
+[Op#:    46]------------------------------------------------------------------------------
+Api Event (6074)    : Id=HTTP Proc=2704:80004001  Start=11865451  End=11865498  Duration=47 msec
+Operation Name      : wplus_http_wsock_request_ex
+Argument#  1  IN  : [session_id] = 4
+Argument#  2  IN  : [http_id] = 1
+Argument#  3  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  4  IN  : [portnum] = 1080
+Argument#  5  IN  : [urladdress] = ""
+Argument#  6  IN  : [hdr_buffer] = ->Array[0:421]{ "GET /cgi-bin/admin.pl HTTP/1.1\r\n"
+							"Accept: text/html, application/xhtml+xml, */*\r\n"
+							"Referer: http://127.0.0.1:1080/WebTours/home.html\r\n"
+							"Accept-Language: en-US\r\n"
+							"User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r\n"
+							"UA-CPU: AMD64\r\n"
+							"Accept-Encoding: gzip, deflate\r\n"
+							"Host: 127.0.0.1:1080\r\n"
+							"DNT: 1\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Cookie: MSO=SID&1437427395&MSO_ServerErrorsProb&50&MSO_ServerLoadProb&50\r\n"
+							"\r\n"
+							"" }
+Argument#  6  OUT : [hdr_buffer] = ->Array[0:302]{ "HTTP/1.1 200 OK\r\n"
+							"Date: Mon, 20 Jul 2015 21:24:47 GMT\r\n"
+							"Server: Apache/2.2.21 (Win32)\r\n"
+							"Set-Cookie: MSO=SID&1437427395&MSO_ServerLoadProb&50&MSO_ServerErrorsProb&50; path=/\r\n"
+							"Keep-Alive: timeout=5, max=100\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Transfer-Encoding: chunked\r\n"
+							"Content-Type: text/html; charset=ISO-8859-1\r\n"
+							"\r\n"
+							"" }
+Argument#  7  IN  : [hdr_buflen] = ->421
+Argument#  7  OUT : [hdr_buflen] = ->302
+Argument#  8  IN  : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  8  OUT : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  9  IN  : [body_buflen] = ->0
+Argument#  9  OUT : [body_buflen] = ->0
+Argument# 10  IN  : [body_filename] = ->Array[0:0]{ NULL }
+Argument# 10  OUT : [body_filename] = ->Array[0:88]{ "C:\\Users\\Mainali\\LoadRunner\\WT3_perftest_S01_w1202_v09\\data\\http.db\\resp_004_001_009.dat" }
+Argument# 11  IN  : [body_filelen] = ->0
+Argument# 11  OUT : [body_filelen] = ->88
+Argument# 12  IN  : [flags] = ->0
+Argument# 12  OUT : [flags] = ->0
+Argument# 13  IN  : [sourceipaddress] = 192.168.1.69 (4501a8c0)
+Argument# 14  IN  : [sourceportnum] = 9933
+Return Value      : (void)
+
+[Op#:    47]------------------------------------------------------------------------------
+Api Event (6075)    : Id=WPLUS Proc=2704:1734  Start=11865498  End=11865498  Duration=0 msec
+Operation Name      : wplus_close
+Argument#  1  IN  : [session_id] = 3
+Return Value      : (void)
+
+[Op#:    48]------------------------------------------------------------------------------
+Api Event (6076)    : Id=HTTP Proc=2704:800cc0c9  Start=11865498  End=11865498  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 4
+Argument#  2  IN  : [http_id] = 1
+Argument#  3  IN  : [buflen] = ->2651
+Argument#  3  OUT : [buflen] = ->2651
+Return Value      : (void)
+
+[Op#:    49]------------------------------------------------------------------------------
+Api Event (6077)    : Id=HTTP Proc=2704:800cc0c9  Start=11865514  End=11865514  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 4
+Argument#  2  IN  : [http_id] = 1
+Argument#  3  IN  : [buflen] = ->5
+Argument#  3  OUT : [buflen] = ->5
+Return Value      : (void)
+
+[Op#:    50]------------------------------------------------------------------------------
+Api Event (6078)    : Id=WPLUS Proc=2704:1398  Start=11865514  End=11865514  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "Mainali-PC"
+Argument#  2  IN  : [ipaddress] = 192.168.1.69 (4501a8c0)
+Return Value      : (void)
+
+[Op#:    51]------------------------------------------------------------------------------
+Api Event (6079)    : Id=WPLUS Proc=2704:1398  Start=11865514  End=11865514  Duration=0 msec
+Operation Name      : wplus_connect
+Argument#  1  IN  : [session_id] = 5
+Argument#  2  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  3  IN  : [portnum] = 1080
+Argument#  4  IN  : [local_portnum] = 0
+Argument#  5  IN  : [flags] = 0
+Return Value      : (void)
+
+[Op#:    52]------------------------------------------------------------------------------
+Api Event (6080)    : Id=WPLUS Proc=2704:1734  Start=11871067  End=11871067  Duration=0 msec
+Operation Name      : wplus_close
+Argument#  1  IN  : [session_id] = 4
+Return Value      : (void)
+
+[Op#:    53]------------------------------------------------------------------------------
+End Transaction     : WT3_T02_Click_Administration_Link
+
+[Op#:    54]------------------------------------------------------------------------------
+Start Transaction   : WT3_T03_CheckAllBoxes
+
+[Op#:    55]------------------------------------------------------------------------------
+Api Event (6081)    : Id=WPLUS Proc=2704:1398  Start=11933951  End=11933951  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "Mainali-PC"
+Argument#  2  IN  : [ipaddress] = 192.168.1.69 (4501a8c0)
+Return Value      : (void)
+
+[Op#:    56]------------------------------------------------------------------------------
+Api Event (6082)    : Id=WPLUS Proc=2704:1398  Start=11933951  End=11933951  Duration=0 msec
+Operation Name      : wplus_connect
+Argument#  1  IN  : [session_id] = 6
+Argument#  2  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  3  IN  : [portnum] = 1080
+Argument#  4  IN  : [local_portnum] = 0
+Argument#  5  IN  : [flags] = 0
+Return Value      : (void)
+
+[Op#:    57]------------------------------------------------------------------------------
+Api Event (6083)    : Id=HTTP Proc=2704:800ce0c9  Start=11935012  End=11935012  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 6
+Argument#  2  IN  : [http_id] = 1
+Argument#  3  IN  : [buflen] = ->4235
+Argument#  3  OUT : [buflen] = ->4235
+Return Value      : (void)
+
+[Op#:    58]------------------------------------------------------------------------------
+Api Event (6084)    : Id=HTTP Proc=2704:80006001  Start=11934965  End=11935012  Duration=47 msec
+Operation Name      : wplus_http_wsock_request_ex
+Argument#  1  IN  : [session_id] = 6
+Argument#  2  IN  : [http_id] = 1
+Argument#  3  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  4  IN  : [portnum] = 1080
+Argument#  5  IN  : [urladdress] = ""
+Argument#  6  IN  : [hdr_buffer] = ->Array[0:515]{ "POST /cgi-bin/admin.pl HTTP/1.1\r\n"
+							"Accept: text/html, application/xhtml+xml, */*\r\n"
+							"Referer: http://127.0.0.1:1080/cgi-bin/admin.pl\r\n"
+							"Accept-Language: en-US\r\n"
+							"User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r\n"
+							"Content-Type: application/x-www-form-urlencoded\r\n"
+							"UA-CPU: AMD64\r\n"
+							"Accept-Encoding: gzip, deflate\r\n"
+							"Host: 127.0.0.1:1080\r\n"
+							"Content-Length: 467\r\n"
+							"DNT: 1\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Cache-Control: no-cache\r\n"
+							"Cookie: MSO=SID&1437427395&MSO_ServerLoadProb&50&MSO_ServerErrorsProb&50\r\n"
+							"\r\n"
+							"" }
+Argument#  6  OUT : [hdr_buffer] = ->Array[0:467]{ "HTTP/1.1 200 OK\r\n"
+							"Date: Mon, 20 Jul 2015 21:25:56 GMT\r\n"
+							"Server: Apache/2.2.21 (Win32)\r\n"
+							"Set-Cookie: MSO=MSO_Redirect&on&MSO_JSVerify&on&MSO_JSFormSubmit1&on&MSO_JSCalc&on&SID&1437427395&MSO_SLoad&on&MSO_Redirects&on&MSO_JSWPages&on&MSO_Comments&on&MSO_SErrors&on&MSO_JSFormSubmit2&on&MSO_ServerLoadProb&50&MSO_ServerErrorsProb&50; path=/\r\n"
+							"Keep-Alive: timeout=5, max=100\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Transfer-Encoding: chunked\r\n"
+							"Content-Type: text/html; charset=ISO-8859-1\r\n"
+							"\r\n"
+							"" }
+Argument#  7  IN  : [hdr_buflen] = ->515
+Argument#  7  OUT : [hdr_buflen] = ->467
+Argument#  8  IN  : [body_buffer] = ->Array[0:467]{ "MSO_Comments=on&MSO_JSCalc=on&MSO_JSFormSubmit1=on&MSO_JSFormSubmit2=on&MSO_JSVerify=on&MSO_JSWPages=on&MSO_Redirect=on&MSO_Redirects=on&MSO_SErrors=on&MSO_ServerErrorsProb=50&MSO_SLoad=on&MSO_ServerLoadProb=50&save=Update&.cgifields=MSO_Redirect&.cgifields=MSO_JSVerify&.cgifields=MSO_JSFormSubmit1&.cgifields=MSO_JSCalc&.cgifields=MSO_SLoad&.cgifields=MSO_Redirects&.cgifields=MSO_JSWPages&.cgifields=MSO_Comments&.cgifields=MSO_SErrors&.cgifields=MSO_JSFormSubmit2" }
+Argument#  8  OUT : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  9  IN  : [body_buflen] = ->467
+Argument#  9  OUT : [body_buflen] = ->0
+Argument# 10  IN  : [body_filename] = ->Array[0:0]{ NULL }
+Argument# 10  OUT : [body_filename] = ->Array[0:88]{ "C:\\Users\\Mainali\\LoadRunner\\WT3_perftest_S01_w1202_v09\\data\\http.db\\resp_006_001_010.dat" }
+Argument# 11  IN  : [body_filelen] = ->0
+Argument# 11  OUT : [body_filelen] = ->88
+Argument# 12  IN  : [flags] = ->0
+Argument# 12  OUT : [flags] = ->0
+Argument# 13  IN  : [sourceipaddress] = 192.168.1.69 (4501a8c0)
+Argument# 14  IN  : [sourceportnum] = 9933
+Return Value      : (void)
+
+[Op#:    59]------------------------------------------------------------------------------
+Api Event (6085)    : Id=HTTP Proc=2704:800ce0c9  Start=11935012  End=11935028  Duration=16 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 6
+Argument#  2  IN  : [http_id] = 1
+Argument#  3  IN  : [buflen] = ->3040
+Argument#  3  OUT : [buflen] = ->3040
+Return Value      : (void)
+
+[Op#:    60]------------------------------------------------------------------------------
+Api Event (6086)    : Id=WPLUS Proc=2704:1734  Start=11935028  End=11935028  Duration=0 msec
+Operation Name      : wplus_close
+Argument#  1  IN  : [session_id] = 5
+Return Value      : (void)
+
+[Op#:    61]------------------------------------------------------------------------------
+Api Event (6087)    : Id=HTTP Proc=2704:800ce0c9  Start=11935028  End=11935028  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 6
+Argument#  2  IN  : [http_id] = 1
+Argument#  3  IN  : [buflen] = ->5
+Argument#  3  OUT : [buflen] = ->5
+Return Value      : (void)
+
+[Op#:    62]------------------------------------------------------------------------------
+Api Event (6088)    : Id=WPLUS Proc=2704:1d24  Start=11935043  End=11935043  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "Mainali-PC"
+Argument#  2  IN  : [ipaddress] = 192.168.1.69 (4501a8c0)
+Return Value      : (void)
+
+[Op#:    63]------------------------------------------------------------------------------
+Api Event (6089)    : Id=WPLUS Proc=2704:1d24  Start=11935059  End=11935059  Duration=0 msec
+Operation Name      : wplus_connect
+Argument#  1  IN  : [session_id] = 7
+Argument#  2  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  3  IN  : [portnum] = 1080
+Argument#  4  IN  : [local_portnum] = 0
+Argument#  5  IN  : [flags] = 0
+Return Value      : (void)
+
+[Op#:    64]------------------------------------------------------------------------------
+Api Event (6090)    : Id=WPLUS Proc=2704:1734  Start=11940597  End=11940597  Duration=0 msec
+Operation Name      : wplus_close
+Argument#  1  IN  : [session_id] = 6
+Return Value      : (void)
+
+[Op#:    65]------------------------------------------------------------------------------
+End Transaction     : WT3_T03_CheckAllBoxes
+
+[Op#:    66]------------------------------------------------------------------------------
+Start Transaction   : WT3_T04_
+
+[Op#:    67]------------------------------------------------------------------------------
+Api Event (6091)    : Id=WPLUS Proc=2704:2f64  Start=11994838  End=11994838  Duration=0 msec
+Operation Name      : wplus_connect_ipng
+Argument#  1  IN  : [session_id] = 8
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "&\x06(\x00\x01\x1f\x17\x9a\x19r$\x05\x03[\x04Y" }
+Argument#  5  IN  : [scope_id] = 0
+Argument#  6  IN  : [portnum] = 443
+Argument#  7  IN  : [local_portnum] = 0
+Argument#  8  IN  : [flags] = 0
+Return Value      : (void)
+
+[Op#:    68]------------------------------------------------------------------------------
+Api Event (6092)    : Id=WPLUS Proc=2704:1d24  Start=11996352  End=11996367  Duration=15 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "Mainali-PC"
+Argument#  2  IN  : [ipaddress] = 192.168.1.69 (4501a8c0)
+Return Value      : (void)
+
+[Op#:    69]------------------------------------------------------------------------------
+Api Event (6093)    : Id=WPLUS Proc=2704:1734  Start=11996367  End=11996367  Duration=0 msec
+Operation Name      : wplus_close
+Argument#  1  IN  : [session_id] = 7
+Return Value      : (void)
+
+[Op#:    70]------------------------------------------------------------------------------
+Api Event (6094)    : Id=WPLUS Proc=2704:1d24  Start=11996367  End=11996383  Duration=16 msec
+Operation Name      : wplus_connect
+Argument#  1  IN  : [session_id] = 9
+Argument#  2  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  3  IN  : [portnum] = 1080
+Argument#  4  IN  : [local_portnum] = 0
+Argument#  5  IN  : [flags] = 0
+Return Value      : (void)
+
+[Op#:    71]------------------------------------------------------------------------------
+Api Event (6095)    : Id=WPLUS Proc=2704:1398  Start=11996398  End=11996414  Duration=16 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "Mainali-PC"
+Argument#  2  IN  : [ipaddress] = 192.168.1.69 (4501a8c0)
+Return Value      : (void)
+
+[Op#:    72]------------------------------------------------------------------------------
+Api Event (6096)    : Id=WPLUS Proc=2704:1398  Start=11996414  End=11996414  Duration=0 msec
+Operation Name      : wplus_connect
+Argument#  1  IN  : [session_id] = 10
+Argument#  2  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  3  IN  : [portnum] = 1080
+Argument#  4  IN  : [local_portnum] = 0
+Argument#  5  IN  : [flags] = 0
+Return Value      : (void)
+
+[Op#:    73]------------------------------------------------------------------------------
+Api Event (6097)    : Id=HTTP Proc=2704:800d10c9  Start=11996492  End=11996508  Duration=16 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 9
+Argument#  2  IN  : [http_id] = 1
+Argument#  3  IN  : [buflen] = ->914
+Argument#  3  OUT : [buflen] = ->914
+Return Value      : (void)
+
+[Op#:    74]------------------------------------------------------------------------------
+Api Event (6098)    : Id=HTTP Proc=2704:80009001  Start=11996414  End=11996508  Duration=94 msec
+Operation Name      : wplus_http_wsock_request_ex
+Argument#  1  IN  : [session_id] = 9
+Argument#  2  IN  : [http_id] = 1
+Argument#  3  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  4  IN  : [portnum] = 1080
+Argument#  5  IN  : [urladdress] = ""
+Argument#  6  IN  : [hdr_buffer] = ->Array[0:586]{ "GET /cgi-bin/welcome.pl HTTP/1.1\r\n"
+							"Accept: text/html, application/xhtml+xml, */*\r\n"
+							"Referer: http://127.0.0.1:1080/cgi-bin/admin.pl\r\n"
+							"Accept-Language: en-US\r\n"
+							"User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r\n"
+							"UA-CPU: AMD64\r\n"
+							"Accept-Encoding: gzip, deflate\r\n"
+							"Host: 127.0.0.1:1080\r\n"
+							"DNT: 1\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Cookie: MSO=MSO_Redirect&on&MSO_JSVerify&on&MSO_JSFormSubmit1&on&MSO_JSCalc&on&SID&1437427395&MSO_SLoad&on&MSO_Redirects&on&MSO_JSWPages&on&MSO_Comments&on&MSO_SErrors&on&MSO_JSFormSubmit2&on&MSO_ServerLoadProb&50&MSO_ServerErrorsProb&50\r\n"
+							"\r\n"
+							"" }
+Argument#  6  OUT : [hdr_buffer] = ->Array[0:216]{ "HTTP/1.1 200 OK\r\n"
+							"Date: Mon, 20 Jul 2015 21:26:58 GMT\r\n"
+							"Server: Apache/2.2.21 (Win32)\r\n"
+							"Keep-Alive: timeout=5, max=100\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Transfer-Encoding: chunked\r\n"
+							"Content-Type: text/html; charset=ISO-8859-1\r\n"
+							"\r\n"
+							"" }
+Argument#  7  IN  : [hdr_buflen] = ->586
+Argument#  7  OUT : [hdr_buflen] = ->216
+Argument#  8  IN  : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  8  OUT : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  9  IN  : [body_buflen] = ->0
+Argument#  9  OUT : [body_buflen] = ->0
+Argument# 10  IN  : [body_filename] = ->Array[0:0]{ NULL }
+Argument# 10  OUT : [body_filename] = ->Array[0:88]{ "C:\\Users\\Mainali\\LoadRunner\\WT3_perftest_S01_w1202_v09\\data\\http.db\\resp_009_001_006.dat" }
+Argument# 11  IN  : [body_filelen] = ->0
+Argument# 11  OUT : [body_filelen] = ->88
+Argument# 12  IN  : [flags] = ->0
+Argument# 12  OUT : [flags] = ->0
+Argument# 13  IN  : [sourceipaddress] = 192.168.1.69 (4501a8c0)
+Argument# 14  IN  : [sourceportnum] = 9933
+Return Value      : (void)
+
+[Op#:    75]------------------------------------------------------------------------------
+Api Event (6099)    : Id=HTTP Proc=2704:800d20c9  Start=11996710  End=11996710  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 10
+Argument#  2  IN  : [http_id] = 1
+Argument#  3  IN  : [buflen] = ->194
+Argument#  3  OUT : [buflen] = ->194
+Return Value      : (void)
+
+[Op#:    76]------------------------------------------------------------------------------
+Api Event (6100)    : Id=HTTP Proc=2704:8000a001  Start=11996695  End=11996726  Duration=31 msec
+Operation Name      : wplus_http_wsock_request_ex
+Argument#  1  IN  : [session_id] = 10
+Argument#  2  IN  : [http_id] = 1
+Argument#  3  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  4  IN  : [portnum] = 1080
+Argument#  5  IN  : [urladdress] = ""
+Argument#  6  IN  : [hdr_buffer] = ->Array[0:688]{ "GET /WebTours/home.html HTTP/1.1\r\n"
+							"Accept: text/html, application/xhtml+xml, */*\r\n"
+							"Referer: http://127.0.0.1:1080/cgi-bin/welcome.pl\r\n"
+							"Accept-Language: en-US\r\n"
+							"User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r\n"
+							"UA-CPU: AMD64\r\n"
+							"Accept-Encoding: gzip, deflate\r\n"
+							"Host: 127.0.0.1:1080\r\n"
+							"If-Modified-Since: Mon, 27 May 2013 19:20:21 GMT\r\n"
+							"If-None-Match: ""200000004106b-551-4ddb80a28a740""\r\n"
+							"DNT: 1\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Cookie: MSO=MSO_Redirect&on&MSO_JSVerify&on&MSO_JSFormSubmit1&on&MSO_JSCalc&on&SID&1437427395&MSO_SLoad&on&MSO_Redirects&on&MSO_JSWPages&on&MSO_Comments&on&MSO_SErrors&on&MSO_JSFormSubmit2&on&MSO_ServerLoadProb&50&MSO_ServerErrorsProb&50\r\n"
+							"\r\n"
+							"" }
+Argument#  6  OUT : [hdr_buffer] = ->Array[0:194]{ "HTTP/1.1 304 Not Modified\r\n"
+							"Date: Mon, 20 Jul 2015 21:26:58 GMT\r\n"
+							"Server: Apache/2.2.21 (Win32)\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Keep-Alive: timeout=5, max=100\r\n"
+							"ETag: ""200000004106b-551-4ddb80a28a740""\r\n"
+							"\r\n"
+							"" }
+Argument#  7  IN  : [hdr_buflen] = ->688
+Argument#  7  OUT : [hdr_buflen] = ->194
+Argument#  8  IN  : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  8  OUT : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  9  IN  : [body_buflen] = ->0
+Argument#  9  OUT : [body_buflen] = ->0
+Argument# 10  IN  : [body_filename] = ->Array[0:0]{ NULL }
+Argument# 10  OUT : [body_filename] = ->Array[0:0]{ NULL }
+Argument# 11  IN  : [body_filelen] = ->0
+Argument# 11  OUT : [body_filelen] = ->0
+Argument# 12  IN  : [flags] = ->0
+Argument# 12  OUT : [flags] = ->0
+Argument# 13  IN  : [sourceipaddress] = 192.168.1.69 (4501a8c0)
+Argument# 14  IN  : [sourceportnum] = 9933
+Return Value      : (void)
+
+[Op#:    77]------------------------------------------------------------------------------
+Api Event (6101)    : Id=HTTP Proc=2704:800d10ca  Start=11996742  End=11996742  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 9
+Argument#  2  IN  : [http_id] = 2
+Argument#  3  IN  : [buflen] = ->4234
+Argument#  3  OUT : [buflen] = ->4234
+Return Value      : (void)
+
+[Op#:    78]------------------------------------------------------------------------------
+Api Event (6102)    : Id=HTTP Proc=2704:80009002  Start=11996664  End=11996757  Duration=93 msec
+Operation Name      : wplus_http_wsock_request_ex
+Argument#  1  IN  : [session_id] = 9
+Argument#  2  IN  : [http_id] = 2
+Argument#  3  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  4  IN  : [portnum] = 1080
+Argument#  5  IN  : [urladdress] = ""
+Argument#  6  IN  : [hdr_buffer] = ->Array[0:592]{ "GET /cgi-bin/nav.pl?in=home HTTP/1.1\r\n"
+							"Accept: text/html, application/xhtml+xml, */*\r\n"
+							"Referer: http://127.0.0.1:1080/cgi-bin/welcome.pl\r\n"
+							"Accept-Language: en-US\r\n"
+							"User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r\n"
+							"UA-CPU: AMD64\r\n"
+							"Accept-Encoding: gzip, deflate\r\n"
+							"Host: 127.0.0.1:1080\r\n"
+							"DNT: 1\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Cookie: MSO=MSO_Redirect&on&MSO_JSVerify&on&MSO_JSFormSubmit1&on&MSO_JSCalc&on&SID&1437427395&MSO_SLoad&on&MSO_Redirects&on&MSO_JSWPages&on&MSO_Comments&on&MSO_SErrors&on&MSO_JSFormSubmit2&on&MSO_ServerLoadProb&50&MSO_ServerErrorsProb&50\r\n"
+							"\r\n"
+							"" }
+Argument#  6  OUT : [hdr_buffer] = ->Array[0:255]{ "HTTP/1.1 200 OK\r\n"
+							"Date: Mon, 20 Jul 2015 21:26:58 GMT\r\n"
+							"Server: Apache/2.2.21 (Win32)\r\n"
+							"Expires: Sun, 19 Jul 2015 21:26:58 GMT\r\n"
+							"Keep-Alive: timeout=5, max=99\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Transfer-Encoding: chunked\r\n"
+							"Content-Type: text/html; charset=ISO-8859-1\r\n"
+							"\r\n"
+							"" }
+Argument#  7  IN  : [hdr_buflen] = ->592
+Argument#  7  OUT : [hdr_buflen] = ->255
+Argument#  8  IN  : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  8  OUT : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  9  IN  : [body_buflen] = ->0
+Argument#  9  OUT : [body_buflen] = ->0
+Argument# 10  IN  : [body_filename] = ->Array[0:0]{ NULL }
+Argument# 10  OUT : [body_filename] = ->Array[0:88]{ "C:\\Users\\Mainali\\LoadRunner\\WT3_perftest_S01_w1202_v09\\data\\http.db\\resp_009_002_005.dat" }
+Argument# 11  IN  : [body_filelen] = ->0
+Argument# 11  OUT : [body_filelen] = ->88
+Argument# 12  IN  : [flags] = ->0
+Argument# 12  OUT : [flags] = ->0
+Argument# 13  IN  : [sourceipaddress] = 192.168.1.69 (4501a8c0)
+Argument# 14  IN  : [sourceportnum] = 9933
+Return Value      : (void)
+
+[Op#:    79]------------------------------------------------------------------------------
+Api Event (6103)    : Id=HTTP Proc=2704:800d10ca  Start=11996773  End=11996773  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 9
+Argument#  2  IN  : [http_id] = 2
+Argument#  3  IN  : [buflen] = ->163
+Argument#  3  OUT : [buflen] = ->163
+Return Value      : (void)
+
+[Op#:    80]------------------------------------------------------------------------------
+Api Event (6104)    : Id=HTTP Proc=2704:800d10cb  Start=11996804  End=11996804  Duration=0 msec
+Operation Name      : wplus_http_wsock_res_buf
+Argument#  1  IN  : [session_id] = 9
+Argument#  2  IN  : [http_id] = 3
+Argument#  3  IN  : [buflen] = ->601
+Argument#  3  OUT : [buflen] = ->601
+Return Value      : (void)
+
+[Op#:    81]------------------------------------------------------------------------------
+Api Event (6105)    : Id=HTTP Proc=2704:80009003  Start=11996804  End=11996804  Duration=0 msec
+Operation Name      : wplus_http_wsock_request_ex
+Argument#  1  IN  : [session_id] = 9
+Argument#  2  IN  : [http_id] = 3
+Argument#  3  IN  : [ipaddress] = 127.0.0.1 (0100007f)
+Argument#  4  IN  : [portnum] = 1080
+Argument#  5  IN  : [urladdress] = ""
+Argument#  6  IN  : [hdr_buffer] = ->Array[0:594]{ "GET /WebTours/JSFormSubmit.js HTTP/1.1\r\n"
+							"Accept: application/javascript, */*;q=0.8\r\n"
+							"Referer: http://127.0.0.1:1080/cgi-bin/nav.pl?in=home\r\n"
+							"Accept-Language: en-US\r\n"
+							"User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)\r\n"
+							"UA-CPU: AMD64\r\n"
+							"Accept-Encoding: gzip, deflate\r\n"
+							"Host: 127.0.0.1:1080\r\n"
+							"DNT: 1\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Cookie: MSO=MSO_Redirect&on&MSO_JSVerify&on&MSO_JSFormSubmit1&on&MSO_JSCalc&on&SID&1437427395&MSO_SLoad&on&MSO_Redirects&on&MSO_JSWPages&on&MSO_Comments&on&MSO_SErrors&on&MSO_JSFormSubmit2&on&MSO_ServerLoadProb&50&MSO_ServerErrorsProb&50\r\n"
+							"\r\n"
+							"" }
+Argument#  6  OUT : [hdr_buffer] = ->Array[0:310]{ "HTTP/1.1 200 OK\r\n"
+							"Date: Mon, 20 Jul 2015 21:26:58 GMT\r\n"
+							"Server: Apache/2.2.21 (Win32)\r\n"
+							"Last-Modified: Sun, 22 Apr 2012 09:47:02 GMT\r\n"
+							"ETag: ""2000000041086-123-4be41674b9180""\r\n"
+							"Accept-Ranges: bytes\r\n"
+							"Content-Length: 291\r\n"
+							"Keep-Alive: timeout=5, max=98\r\n"
+							"Connection: Keep-Alive\r\n"
+							"Content-Type: application/javascript\r\n"
+							"\r\n"
+							"" }
+Argument#  7  IN  : [hdr_buflen] = ->594
+Argument#  7  OUT : [hdr_buflen] = ->310
+Argument#  8  IN  : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  8  OUT : [body_buffer] = ->Array[0:0]{ NULL }
+Argument#  9  IN  : [body_buflen] = ->0
+Argument#  9  OUT : [body_buflen] = ->0
+Argument# 10  IN  : [body_filename] = ->Array[0:0]{ NULL }
+Argument# 10  OUT : [body_filename] = ->Array[0:88]{ "C:\\Users\\Mainali\\LoadRunner\\WT3_perftest_S01_w1202_v09\\data\\http.db\\resp_009_003_003.dat" }
+Argument# 11  IN  : [body_filelen] = ->0
+Argument# 11  OUT : [body_filelen] = ->88
+Argument# 12  IN  : [flags] = ->0
+Argument# 12  OUT : [flags] = ->0
+Argument# 13  IN  : [sourceipaddress] = 192.168.1.69 (4501a8c0)
+Argument# 14  IN  : [sourceportnum] = 9933
+Return Value      : (void)
+
+[Op#:    82]------------------------------------------------------------------------------
+Api Event (6106)    : Id=WPLUS Proc=2704:32bc  Start=11997210  End=11997210  Duration=0 msec
+Operation Name      : wplus_property_sz
+Argument#  1  IN  : [session_id] = 8
+Argument#  2  IN  : [name] = "SSLVersionCiphers"
+Argument#  3  IN  : [value1] = "23"
+Argument#  4  IN  : [value2] = "11"
+Argument#  5  IN  : [value3] = ""
+Argument#  6  IN  : [value4] = "ECDHE-RSA-RC4-SHA"
+Argument#  7  IN  : [value5] = "2fcf5abb18bb9c24ba5e91508ae86d770c436ca0aa1bc83e6d6c6ddb9f3fb9e6"
+Return Value      : (void)
+
+[Op#:    83]------------------------------------------------------------------------------
+Api Event (6107)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xc8" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:    84]------------------------------------------------------------------------------
+Api Event (6108)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xcd" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:    85]------------------------------------------------------------------------------
+Api Event (6109)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xc4" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:    86]------------------------------------------------------------------------------
+Api Event (6110)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xca" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:    87]------------------------------------------------------------------------------
+Api Event (6111)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xcf" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:    88]------------------------------------------------------------------------------
+Api Event (6112)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xc7" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:    89]------------------------------------------------------------------------------
+Api Event (6113)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xcc" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:    90]------------------------------------------------------------------------------
+Api Event (6114)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xc5" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:    91]------------------------------------------------------------------------------
+Api Event (6115)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xc9" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:    92]------------------------------------------------------------------------------
+Api Event (6116)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xcb" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:    93]------------------------------------------------------------------------------
+Api Event (6117)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xc6" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:    94]------------------------------------------------------------------------------
+Api Event (6118)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.199 (c7e8a26c)
+Return Value      : (void)
+
+[Op#:    95]------------------------------------------------------------------------------
+Api Event (6119)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.203 (cbe8a26c)
+Return Value      : (void)
+
+[Op#:    96]------------------------------------------------------------------------------
+Api Event (6120)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.207 (cfe8a26c)
+Return Value      : (void)
+
+[Op#:    97]------------------------------------------------------------------------------
+Api Event (6121)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.198 (c6e8a26c)
+Return Value      : (void)
+
+[Op#:    98]------------------------------------------------------------------------------
+Api Event (6122)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.196 (c4e8a26c)
+Return Value      : (void)
+
+[Op#:    99]------------------------------------------------------------------------------
+Api Event (6123)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.201 (c9e8a26c)
+Return Value      : (void)
+
+[Op#:   100]------------------------------------------------------------------------------
+Api Event (6124)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.200 (c8e8a26c)
+Return Value      : (void)
+
+[Op#:   101]------------------------------------------------------------------------------
+Api Event (6125)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.205 (cde8a26c)
+Return Value      : (void)
+
+[Op#:   102]------------------------------------------------------------------------------
+Api Event (6126)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.204 (cce8a26c)
+Return Value      : (void)
+
+[Op#:   103]------------------------------------------------------------------------------
+Api Event (6127)    : Id=WPLUS Proc=2704:2a48  Start=11997724  End=11997724  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.202 (cae8a26c)
+Return Value      : (void)
+
+[Op#:   104]------------------------------------------------------------------------------
+Api Event (6128)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.197 (c5e8a26c)
+Return Value      : (void)
+
+[Op#:   105]------------------------------------------------------------------------------
+Api Event (6129)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xc8" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:   106]------------------------------------------------------------------------------
+Api Event (6130)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xcd" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:   107]------------------------------------------------------------------------------
+Api Event (6131)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xc4" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:   108]------------------------------------------------------------------------------
+Api Event (6132)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xca" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:   109]------------------------------------------------------------------------------
+Api Event (6133)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xcf" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:   110]------------------------------------------------------------------------------
+Api Event (6134)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xc7" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:   111]------------------------------------------------------------------------------
+Api Event (6135)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xcc" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:   112]------------------------------------------------------------------------------
+Api Event (6136)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xc5" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:   113]------------------------------------------------------------------------------
+Api Event (6137)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xc9" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:   114]------------------------------------------------------------------------------
+Api Event (6138)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xcb" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:   115]------------------------------------------------------------------------------
+Api Event (6139)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xc6" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:   116]------------------------------------------------------------------------------
+Api Event (6140)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.199 (c7e8a26c)
+Return Value      : (void)
+
+[Op#:   117]------------------------------------------------------------------------------
+Api Event (6141)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.203 (cbe8a26c)
+Return Value      : (void)
+
+[Op#:   118]------------------------------------------------------------------------------
+Api Event (6142)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.207 (cfe8a26c)
+Return Value      : (void)
+
+[Op#:   119]------------------------------------------------------------------------------
+Api Event (6143)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.198 (c6e8a26c)
+Return Value      : (void)
+
+[Op#:   120]------------------------------------------------------------------------------
+Api Event (6144)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.196 (c4e8a26c)
+Return Value      : (void)
+
+[Op#:   121]------------------------------------------------------------------------------
+Api Event (6145)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.201 (c9e8a26c)
+Return Value      : (void)
+
+[Op#:   122]------------------------------------------------------------------------------
+Api Event (6146)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.200 (c8e8a26c)
+Return Value      : (void)
+
+[Op#:   123]------------------------------------------------------------------------------
+Api Event (6147)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.205 (cde8a26c)
+Return Value      : (void)
+
+[Op#:   124]------------------------------------------------------------------------------
+Api Event (6148)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.204 (cce8a26c)
+Return Value      : (void)
+
+[Op#:   125]------------------------------------------------------------------------------
+Api Event (6149)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.202 (cae8a26c)
+Return Value      : (void)
+
+[Op#:   126]------------------------------------------------------------------------------
+Api Event (6150)    : Id=WPLUS Proc=2704:2a48  Start=11997740  End=11997740  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "ocsp.msocsp.com"
+Argument#  2  IN  : [ipaddress] = 108.162.232.197 (c5e8a26c)
+Return Value      : (void)
+
+[Op#:   127]------------------------------------------------------------------------------
+Api Event (6151)    : Id=WPLUS Proc=2704:2a48  Start=11997943  End=11997943  Duration=0 msec
+Operation Name      : wplus_connect_ipng
+Argument#  1  IN  : [session_id] = 11
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "$\x00\xcb\x00 H\x00\x01\x00\x00\x00\x00l\xa2\xe8\xc8" }
+Argument#  5  IN  : [scope_id] = 0
+Argument#  6  IN  : [portnum] = 80
+Argument#  7  IN  : [local_portnum] = 0
+Argument#  8  IN  : [flags] = 0
+Return Value      : (void)
+
+[Op#:   128]------------------------------------------------------------------------------
+Api Event (6152)    : Id=WPLUS Proc=2704:1734  Start=12002233  End=12002233  Duration=0 msec
+Operation Name      : wplus_close
+Argument#  1  IN  : [session_id] = 10
+Return Value      : (void)
+
+[Op#:   129]------------------------------------------------------------------------------
+Api Event (6153)    : Id=WPLUS Proc=2704:1734  Start=12002326  End=12002326  Duration=0 msec
+Operation Name      : wplus_close
+Argument#  1  IN  : [session_id] = 9
+Return Value      : (void)
+
+[Op#:   130]------------------------------------------------------------------------------
+End Transaction     : WT3_T04_
+
+[Op#:   131]------------------------------------------------------------------------------
+Api Event (6154)    : Id=WPLUS Proc=2704:1d24  Start=12007537  End=12007537  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "mscrl.microsoft.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "&\x06(\x00\x01\x1f\x17\x9a\x19r$\x05\x03[\x04Y" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:   132]------------------------------------------------------------------------------
+Api Event (6155)    : Id=WPLUS Proc=2704:1d24  Start=12007537  End=12007537  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "mscrl.microsoft.com"
+Argument#  2  IN  : [ipaddress] = 93.184.215.200 (c8d7b85d)
+Return Value      : (void)
+
+[Op#:   133]------------------------------------------------------------------------------
+Api Event (6156)    : Id=WPLUS Proc=2704:1d24  Start=12007537  End=12007537  Duration=0 msec
+Operation Name      : wplus_gethostbyname_ipng
+Argument#  1  IN  : [name] = "mscrl.microsoft.com"
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "&\x06(\x00\x01\x1f\x17\x9a\x19r$\x05\x03[\x04Y" }
+Argument#  5  IN  : [scope_id] = 0
+Return Value      : (void)
+
+[Op#:   134]------------------------------------------------------------------------------
+Api Event (6157)    : Id=WPLUS Proc=2704:1d24  Start=12007537  End=12007537  Duration=0 msec
+Operation Name      : wplus_gethostbyname
+Argument#  1  IN  : [name] = "mscrl.microsoft.com"
+Argument#  2  IN  : [ipaddress] = 93.184.215.200 (c8d7b85d)
+Return Value      : (void)
+
+[Op#:   135]------------------------------------------------------------------------------
+Api Event (6158)    : Id=WPLUS Proc=2704:1d24  Start=12007584  End=12007584  Duration=0 msec
+Operation Name      : wplus_connect_ipng
+Argument#  1  IN  : [session_id] = 12
+Argument#  2  IN  : [family] = 23
+Argument#  3  IN  : [flowinfo] = 0
+Argument#  4  IN  : [addr] = Array[0:16]{ "&\x06(\x00\x01\x1f\x17\x9a\x19r$\x05\x03[\x04Y" }
+Argument#  5  IN  : [scope_id] = 0
+Argument#  6  IN  : [portnum] = 80
+Argument#  7  IN  : [local_portnum] = 0
+Argument#  8  IN  : [flags] = 0
+Return Value      : (void)
+
+[Op#:   136]------------------------------------------------------------------------------
+End Record          : END
+
+------------------------------------------------------------------------------------------
