@@ -2,9 +2,9 @@
 \file _ChangeLog.c
 \brief Contains a short description of changes to the set of coding and data files.
 */
-// TODO: v?? 2015.07.24 am: Fixed the web_reg_find issue with longin
 // TODO: v?? 2015.07.24 am: Add logic for handling "Internal Server Error" MSO_SErrors.
 
+// v10 2015.07.31 am: Arrange SignUp to handle error conditions
 // v10 2015.07.30 wm: Fix SignUp to return to Landing page if user cannot be added and no cancel button is on screen.
 // v10 2015.07.29 wm: Fix SignUpInOut to not login after SignUp already found.
 // v10 2015.07.29 wm: Change UserId.dat to use jaja01 instead of jojo.

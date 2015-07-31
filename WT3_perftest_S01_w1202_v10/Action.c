@@ -25,76 +25,9 @@ Action()
  		WT3_SignUp_Data();
 	 }
 
+	rc=WT3_SignUpInOut();
 
-	if( stricmp("LandingOnly",LPCSTR_RunType ) == FOUND
-	||  stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND 
-	||  stricmp("SignUp",LPCSTR_RunType ) == FOUND 
-	||  stricmp("SignInOnly",LPCSTR_RunType ) == FOUND 
-	||  stricmp("SignInOut",LPCSTR_RunType ) == FOUND 
-	){ // Do every iteration:
-		lr_save_string("WT3_T03_URL_Landing","pTransName");
-		rc=WT3_URL_Landing();
-	}else
-	if( stricmp("All",LPCSTR_RunType ) == FOUND 
-	||  stricmp("SignUpErr",LPCSTR_RunType ) == FOUND
-	||  stricmp("SignInErr",LPCSTR_RunType ) == FOUND
-	){ // Do on first iteration only:
-		if( iActionIterations == 1 ){
-			lr_save_string("WT3_T03_URL_Landing","pTransName");
-			rc=WT3_URL_Landing();
-		}
-	}
-	     
-// --- Do the rest every iteration:
-
-	if( stricmp("SignUpErr",LPCSTR_RunType ) == FOUND 
-	){ // Signing up a known user already defined:
-
-		// Try to sign up a known existing (built-in) userid and password:
-			lr_save_string("jojo","parm_userid");
-			lr_save_string("bean","parm_pwd"); 
-			
-			lr_save_string("WT3_T04_SignUp_Err","pTransName");
-	 		rc=T04_SignUp_Err();
-	}
-
-		lr_save_string(lr_eval_string("{UserIds_userid}"),"parm_userid");
-		lr_save_string(lr_eval_string("{UserIds_pwd}"),"parm_pwd");
-		wi_startPrintingInfo();
-		lr_output_message(">> Iteration=%d User=\"%s\"."
-		                  ,iActionIterations
-		                  ,lr_eval_string("{parm_userid}")		                 );
-		wi_stopPrinting();
-
-
-	if( stricmp("All",LPCSTR_RunType ) == FOUND
-	||  stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND 
-	||  stricmp("SignUp",LPCSTR_RunType ) == FOUND 
-    ){
-		lr_save_string("WT3_T05_SignUp","pTransName");
-		rc=WT3_SignUp();
-	}
-
-
-	if( stricmp("SignInErr",LPCSTR_RunType ) == FOUND 
-	){
-			lr_save_string("XXX","parm_pwd"); // error!
-			lr_save_string("WT3_T05_SignIn_Err","pTransName");
-	 		rc=T04_SignIn_Err();
-	}
-
-
-	//  stricmp("SignUpInOut" not necessary because SignUp also logs in.
-	if( stricmp("All",LPCSTR_RunType ) == FOUND
-	||  stricmp("SignInOnly",LPCSTR_RunType ) == FOUND 
-    ||  stricmp("SignInOut",LPCSTR_RunType ) == FOUND 
-    ){
-		lr_save_string("WT3_T07_SignIn","pTransName");
-		rc=WT3_SignIn();
-	}
-	
-	//// Now for the main event:
-		rc=WT3_Travel(); // to handle UseCase attribute.
+	rc=WT3_Travel(); // to handle UseCase attribute.
 
 
 	// Process SignUp becuase this app logs users in automatically after signup.

@@ -17,8 +17,101 @@ WT3_SignOut()
 
 
 	
-WT3_SignUpInOut()
-{
+WT3_SignUpInOut(){
+	int rc=LR_PASS;
+
+	if( stricmp("LandingOnly",LPCSTR_RunType ) == FOUND
+	||  stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND 
+	||  stricmp("SignUp",LPCSTR_RunType ) == FOUND 
+	||  stricmp("SignInOnly",LPCSTR_RunType ) == FOUND 
+	||  stricmp("SignInOut",LPCSTR_RunType ) == FOUND 
+	){ // Do every iteration:
+		lr_save_string("WT3_T03_URL_Landing","pTransName");
+		rc=WT3_URL_Landing();
+	}else
+	if( stricmp("All",LPCSTR_RunType ) == FOUND 
+	||  stricmp("SignUpErr",LPCSTR_RunType ) == FOUND
+	||  stricmp("SignInErr",LPCSTR_RunType ) == FOUND
+	){ // Do on first iteration only:
+		if( iActionIterations == 1 ){
+			lr_save_string("WT3_T03_URL_Landing","pTransName");
+			rc=WT3_URL_Landing();
+		}
+	}
+	     
+// --- Do the rest every iteration:
+
+	if( stricmp("SignUpErr",LPCSTR_RunType ) == FOUND 
+	){ // Signing up a known user already defined:
+
+		// Try to sign up a known existing (built-in) userid and password:
+			lr_save_string("jojo","parm_userid");
+			lr_save_string("bean","parm_pwd"); 
+			
+			lr_save_string("WT3_T04_SignUp_Err","pTransName");
+	 		rc=T04_SignUp_Err();
+	}
+
+		lr_save_string(lr_eval_string("{UserIds_userid}"),"parm_userid");
+		lr_save_string(lr_eval_string("{UserIds_pwd}"),"parm_pwd");
+		wi_startPrintingInfo();
+		lr_output_message(">> Iteration=%d User=\"%s\"."
+		                  ,iActionIterations
+		                  ,lr_eval_string("{parm_userid}")		                 );
+		wi_stopPrinting();
+
+	if( stricmp("All",LPCSTR_RunType ) == FOUND
+	|| stricmp("SignInErr",LPCSTR_RunType ) == FOUND 
+	||  stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND 
+	||  stricmp("SignUp",LPCSTR_RunType ) == FOUND 
+    ){
+		lr_save_string("WT3_T04_SignUpNow","pTransName");
+		rc=WT3_SignUpNow();
+	}
+
+
+	if( stricmp("SignInErr",LPCSTR_RunType ) == FOUND 
+	){
+			lr_save_string("XXX","parm_pwd"); // error!
+			lr_save_string("WT3_T05_SignIn_Err","pTransName");
+	 		rc=T04_SignIn_Err();
+	}
+
+		
+	if( stricmp("All",LPCSTR_RunType ) == FOUND
+	||  stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND 
+	||  stricmp("SignUp",LPCSTR_RunType ) == FOUND 
+    ){
+		lr_save_string("WT3_T06_SignUp","pTransName");
+		rc=WT3_SignUp();
+		if( rc == 0 ){// Added with no error:
+			lr_save_string("WT3_T04_SignUp_Continue","pTransName");
+			rc=WT3_SignUp_Continue();
+		}else if(rc== 1){ // rc == 1 means already added previously.
+			// DEFECT: Clicking Continue really re-submits failed data again.
+			// Drop through to Signin. TODO: Keep a counter of how many were added already?
+			// First need to get back to landing page because there is no login form.
+			if( stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND 
+		    ){
+				// Because there is no "Cancel" button in the SignUp screen when "username is taken":
+				lr_save_string("WT3_T03_URL_Landing","pTransName");
+	 			rc=WT3_URL_Landing(); // just for establishing state to signin or invoke run conditions.
+			}
+		}else{
+			// else -1 abort or retry?
+		}
+	}
+
+
+	//  stricmp("SignUpInOut" not necessary because SignUp also logs in.
+	if( stricmp("All",LPCSTR_RunType ) == FOUND
+	||  stricmp("SignInOnly",LPCSTR_RunType ) == FOUND 
+    ||  stricmp("SignInOut",LPCSTR_RunType ) == FOUND 
+    ){
+		lr_save_string("WT3_T07_SignIn","pTransName");
+		rc=WT3_SignIn();
+	}
+	
 	return 0;
 }
 
@@ -128,10 +221,22 @@ WT3_SignUp_Data(){ // one-time only.
 return 0;
 } //WT3_URL_Landing	
 
-web_link("sign up now", 
+
+WT3_SignUpNow(){
+	int rc=LR_PASS;
+	// This obtains the blank form.
+	
+	web_reg_find("Text=First time registering", "Fail=NotFound", LAST); // HTML expected in response.
+
+	wi_start_transaction();
+	web_link("sign up now",
 		"Text=sign up now", 
 		"Snapshot=t2.inf", 
 		LAST);
+	rc=wi_end_transaction();
+
+	return 0;
+}
 
 WT3_SignUp_Error(){
 	int rc=LR_PASS;
@@ -139,7 +244,6 @@ WT3_SignUp_Error(){
 	// Sign up using already registered user name and password
 	// username as jojo and password as bean.
 
-	
 
 //	web_reg_find("Text=Your username is taken", "Fail=NotFound", LAST); // Intended error message.
 	web_reg_find("Text=Your username is taken","SaveCount=DBErr_count", LAST );
@@ -171,7 +275,7 @@ WT3_SignUp(){
 
 	// signing up with new username and password to populate in database.
 
-	web_reg_find("Text=Thank you, <b>","SaveCount=T05_SignUp_savecount", LAST); // positive test
+	web_reg_find("Text=Thank you, <b>","SaveCount=SignUp_savecount", LAST); // positive test
 	web_reg_find("Text=Your username is taken","SaveCount=Err_count", LAST ); // negative test
 
 	wi_start_transaction();
@@ -200,23 +304,14 @@ WT3_SignUp(){
 		LAST);
 	rc=wi_end_transaction();
 
-	// Consider moving this to Action section because it contains a TransName:
-	if( atoi( lr_eval_string("{Err_count}") ) > 0 ){ // 1 or more Err found:
-		// This is OK TODO: handle error: retry or end script run.
-		if( stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND
-		){
-			// It's OK if user is already signed up. Sign-in.
-		}else{
-			// Because there is no "Cancel" button in the SignUp screen:
-			lr_save_string("WT3_T03_URL_Landing","pTransName");
- 			rc=WT3_URL_Landing(); // just for establishing state to invoke run conditions.
-		}
+	// Evaluate the more serious problem first:
+	if( atoi( lr_eval_string("{SignUp_savecount}") ) > 0 ){
+		rc = -1; // "Thank you not found.
 	}else{
-			//  stricmp("SignUp",LPCSTR_RunType ) == FOUND
-			lr_save_string("WT3_T04_SignUp_Continue","pTransName");
-			rc=WT3_SignUp_Continue();
+		if( atoi( lr_eval_string("{Err_count}") ) > 0 ){
+			rc = 1 ; // Signup already exists.   	
+		}
 	}
-
 	return rc;
 } //T05_SignUp
 	
