@@ -7,7 +7,7 @@ Registry settings:
 		default	yes
 	AUT
 		(Default)	
-		default	C:\Program Files (x86)\Internet Explorer\iexplore.exe http://127.0.0.1:1080/WebTours/index.htm
+		default	C:\Program Files (x86)\Internet Explorer\iexplore.exe http://localhost:8080/moodle/moodle/
 	DebugFilter
 		(Default)	
 		default	off
@@ -166,7 +166,7 @@ Registry settings:
 		default	false
 	TestDir
 		(Default)	
-		default	C:\Users\Mainali\LoadRunner\WT3_perftest_S01_w1202_v09\data\
+		default	C:\Users\Mainali\LoadRunner\WT3_perftest_S01_w1202_v10\data\
 	TrapOnClient
 		default	true
 	TrapOnMainThreadOnly

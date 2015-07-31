@@ -1,5 +1,5 @@
-EventId=4037
-RecordingNumber=6
+EventId=4084
+RecordingNumber=7
 
 ActionInfo
 ActionName=SignInOut
@@ -28,5 +28,12 @@ ActionId=4
 ActionFileSize=1016407
 ActionDeleted=0
 RecordingNumber=6
+EndActionInfo
+
+ActionName=Rec_SignUp
+ActionId=5
+ActionFileSize=72455
+ActionDeleted=0
+RecordingNumber=7
 EndActionInfo
 

@@ -1,0 +1,12 @@
+GET /cgi-bin/login.pl?username=&password=&getInfo=true HTTP/1.1
+Accept: text/html, application/xhtml+xml, */*
+Referer: http://127.0.0.1:1080/WebTours/home.html
+Accept-Language: en-US
+User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)
+UA-CPU: AMD64
+Accept-Encoding: gzip, deflate
+Host: 127.0.0.1:1080
+DNT: 1
+Connection: Keep-Alive
+Cookie: MSO=SID&1438360108&MSO_ServerErrorsProb&50&MSO_ServerLoadProb&50
+

@@ -128,6 +128,10 @@ WT3_SignUp_Data(){ // one-time only.
 return 0;
 } //WT3_URL_Landing	
 
+web_link("sign up now", 
+		"Text=sign up now", 
+		"Snapshot=t2.inf", 
+		LAST);
 
 WT3_SignUp_Error(){
 	int rc=LR_PASS;
@@ -135,10 +139,7 @@ WT3_SignUp_Error(){
 	// Sign up using already registered user name and password
 	// username as jojo and password as bean.
 
-	web_link("sign up now", 
-		"Text=sign up now", 
-		"Snapshot=t2.inf", 
-		LAST);
+	
 
 //	web_reg_find("Text=Your username is taken", "Fail=NotFound", LAST); // Intended error message.
 	web_reg_find("Text=Your username is taken","SaveCount=DBErr_count", LAST );
