@@ -295,7 +295,7 @@ WT3_SignUp(){
 		"Name=username"				,"Value={parm_userid}", ENDITEM, 
 		"Name=password"				,"Value={parm_pwd}", ENDITEM, 
 		"Name=passwordConfirm"		,"Value={parm_pwd}", ENDITEM, 
-		"Name=firstName"			,"Value=", ENDITEM, 
+		"Name=firstName"			,"Value={parm_userid}", ENDITEM,
 		"Name=lastName"				,"Value={global_unique_id}", ENDITEM, 
 		"Name=address1"				,"Value={SignUp_address1}", ENDITEM,
 		"Name=address2"				,"Value={SignUp_address2}", ENDITEM,

@@ -1,5 +1,5 @@
-EventId=4084
-RecordingNumber=7
+EventId=4226
+RecordingNumber=10
 
 ActionInfo
 ActionName=SignInOut
@@ -35,5 +35,12 @@ ActionId=5
 ActionFileSize=72455
 ActionDeleted=0
 RecordingNumber=7
+EndActionInfo
+
+ActionName=Rec_MSOErr_Userdata
+ActionId=6
+ActionFileSize=70681
+ActionDeleted=0
+RecordingNumber=10
 EndActionInfo
 

@@ -7,7 +7,7 @@ Registry settings:
 		default	yes
 	AUT
 		(Default)	
-		default	C:\Program Files (x86)\Internet Explorer\iexplore.exe http://localhost:8080/moodle/moodle/
+		default	C:\Program Files (x86)\Internet Explorer\iexplore.exe http://127.0.0.1:1080/WebTours/index.htm
 	DebugFilter
 		(Default)	
 		default	off

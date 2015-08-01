@@ -1,62 +1,61 @@
-[API Trapper      ( 580:2884)] Recording in 32-bit mode: C:\Program Files (x86)\Internet Explorer\iexplore.exe
-[API Trapper      (23dc:21a4)] Recording in 64-bit mode: C:\Program Files\Internet Explorer\IEXPLORE.EXE
-[Network Analyzer (23dc: c0c)] ------------------------------------------------------------------------------------------
-[Network Analyzer (23dc: c0c)] Load Network Traffic Analyzers:
-[Network Analyzer (23dc: c0c)]     Analyzer Module: WPLUS (value=)
-[Network Analyzer (23dc: c0c)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter_x64.dll)
-[Network Analyzer (23dc: c0c)]     + Network Analyzer: api_http_filter_x64.dll @ GetHttpProtocolAnalyzer Loaded!
-[Network Analyzer (23dc: c0c)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter_x64.dll
-[Network Analyzer (23dc: c0c)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer_x64.dll)
-[Network Analyzer (23dc: c0c)]     + Network Analyzer: WebSocketAnalyzer_x64.dll @ GetWebSocketProtocolAnalyzer Loaded!
-[Network Analyzer (23dc: c0c)] ------------------------------------------------------------------------------------------
-[Network Analyzer (23dc:20ac)] Address lookup for Mainali-PC = 192.168.1.69
-[Network Analyzer (23dc:1c34)] Address lookup for Mainali-PC = 192.168.1.69
-[Network Analyzer (23dc:1254)] Address lookup for Mainali-PC = 192.168.1.69
-[Network Analyzer (23dc:1c34)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  1)  PROXIED!
-[Web Request      (23dc:20ac)] "GET /WebTours/index.htm"   
-[Network Analyzer (23dc:20ac)]   (Sid:  1) Client -> Server @ : 298 bytes (Service=HTTP)
-[Network Analyzer (23dc:1254)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  2)  PROXIED!
-[Network Analyzer (23dc:20ac)]   (Sid:  1) Server -> Client : 664 bytes  (Service=HTTP)
-[Web Request      (23dc:20ac)] "GET /WebTours/header.html"   
-[Network Analyzer (23dc:20ac)]   (Sid:  1) Client -> Server @ : 351 bytes (Service=HTTP)
-[Network Analyzer (23dc:20ac)]   (Sid:  1) Server -> Client : 1007 bytes  (Service=HTTP)
-[Web Request      (23dc:20ac)] "GET /cgi-bin/welcome.pl?signOff=true"   
-[Network Analyzer (23dc:20ac)]   (Sid:  2) Client -> Server @ : 362 bytes (Service=HTTP)
-[Network Analyzer (23dc:20ac)]   (Sid:  2) Server -> Client : 1067 bytes  (Service=HTTP)
-[Network Analyzer (23dc:20ac)]   (Sid:  2) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      (23dc:20ac)] "GET /WebTours/images/hp_logo.png"   
-[Network Analyzer (23dc: 3a0)] Address lookup for Mainali-PC = 192.168.1.69
-[Network Analyzer (23dc:20ac)]   (Sid:  1) Client -> Server @ : 447 bytes (Service=HTTP)
-[Network Analyzer (23dc:20ac)]   (Sid:  1) Server -> Client : 898 bytes  (Service=HTTP)
-[Web Request      (23dc:20ac)] "GET /WebTours/images/webtours.png"   
-[Network Analyzer (23dc:20ac)]   (Sid:  2) Client -> Server @ : 448 bytes (Service=HTTP)
-[Network Analyzer (23dc:20ac)]   (Sid:  2) Server -> Client : 4486 bytes  (Service=HTTP)
-[Network Analyzer (23dc: 3a0)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  3)  PROXIED!
-[Web Request      (23dc:20ac)] "GET /cgi-bin/nav.pl?in=home"   
-[Network Analyzer (23dc:20ac)]   (Sid:  2) Client -> Server @ : 440 bytes (Service=HTTP)
-[Web Request      (23dc:20ac)] "GET /WebTours/home.html"   
-[Network Analyzer (23dc:20ac)]   (Sid:  1) Client -> Server @ : 436 bytes (Service=HTTP)
-[Network Analyzer (23dc:20ac)]   (Sid:  1) Server -> Client : 1659 bytes  (Service=HTTP)
-[Network Analyzer (23dc:20ac)]   (Sid:  2) Server -> Client : 1750 bytes  (Service=HTTP)
-[Network Analyzer (23dc:20ac)]   (Sid:  2) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      (23dc:20ac)] "GET /WebTours/images/mer_login.gif"   
-[Network Analyzer (23dc:20ac)]   (Sid:  2) Client -> Server @ : 451 bytes (Service=HTTP)
-[Network Analyzer (23dc:20ac)]   (Sid:  2) Server -> Client : 976 bytes  (Service=HTTP)
-[Web Request      (23dc:20ac)] "GET /favicon.ico"   
-[Network Analyzer (23dc:20ac)]   (Sid:  2) Client -> Server @ : 307 bytes (Service=HTTP)
-[Network Analyzer (23dc:20ac)]   (Sid:  2) Server -> Client : 424 bytes  (Service=HTTP)
-[Network Analyzer (23dc:20ac)]   (Sid:  1) Connection Terminated (by Server)
-[Network Analyzer (23dc:20ac)]   (Sid:  2) Connection Terminated (by Server)
-[Web Request      (23dc:20ac)] "GET /cgi-bin/login.pl?username=&password=&getInfo=true"   
-[Network Analyzer (23dc:20ac)]   (Sid:  3) Client -> Server @ : 454 bytes (Service=HTTP)
-[Network Analyzer (23dc:20ac)]   (Sid:  3) Server -> Client : 2665 bytes  (Service=HTTP)
-[Network Analyzer (23dc:20ac)]   (Sid:  3) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      (23dc:20ac)] "GET /WebTours/profileValidate.js"   
-[Network Analyzer (23dc:20ac)]   (Sid:  3) Client -> Server @ : 459 bytes (Service=HTTP)
-[Network Analyzer (23dc: 3a0)] Address lookup for Mainali-PC = 192.168.1.69
-[Network Analyzer (23dc:20ac)]   (Sid:  3) Server -> Client : 11601 bytes  (Service=HTTP)
-[Web Request      (23dc:20ac)] "GET /WebTours/images/button_next.gif"   
-[Network Analyzer (23dc:20ac)]   (Sid:  3) Client -> Server @ : 480 bytes (Service=HTTP)
-[Network Analyzer (23dc:20ac)]   (Sid:  3) Server -> Client : 1055 bytes  (Service=HTTP)
-[Network Analyzer (23dc: 3a0)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  4)  PROXIED!
-[Network Analyzer (23dc:20ac)]   (Sid:  3) Connection Terminated (by Server)
+[API Trapper      (2478:138c)] Recording in 32-bit mode: C:\Program Files (x86)\Internet Explorer\iexplore.exe
+[API Trapper      (23f8:13d8)] Recording in 64-bit mode: C:\Program Files\Internet Explorer\IEXPLORE.EXE
+[Network Analyzer (23f8:26b4)] ------------------------------------------------------------------------------------------
+[Network Analyzer (23f8:26b4)] Load Network Traffic Analyzers:
+[Network Analyzer (23f8:26b4)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer (23f8:26b4)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter_x64.dll)
+[Network Analyzer (23f8:26b4)]     + Network Analyzer: api_http_filter_x64.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer (23f8:26b4)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter_x64.dll
+[Network Analyzer (23f8:26b4)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer_x64.dll)
+[Network Analyzer (23f8:26b4)]     + Network Analyzer: WebSocketAnalyzer_x64.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer (23f8:26b4)] ------------------------------------------------------------------------------------------
+[Network Analyzer (23f8:23c8)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (23f8:156c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (23f8:281c)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (23f8:156c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  1)  PROXIED!
+[Web Request      (23f8:23c8)] "GET /WebTours/index.htm"   
+[Network Analyzer (23f8:23c8)]   (Sid:  1) Client -> Server @ : 298 bytes (Service=HTTP)
+[Network Analyzer (23f8:281c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  2)  PROXIED!
+[Network Analyzer (23f8:23c8)]   (Sid:  1) Server -> Client : 664 bytes  (Service=HTTP)
+[Web Request      (23f8:23c8)] "GET /WebTours/header.html"   
+[Network Analyzer (23f8:23c8)]   (Sid:  1) Client -> Server @ : 351 bytes (Service=HTTP)
+[Network Analyzer (23f8:23c8)]   (Sid:  1) Server -> Client : 1007 bytes  (Service=HTTP)
+[Web Request      (23f8:23c8)] "GET /cgi-bin/welcome.pl?signOff=true"   
+[Network Analyzer (23f8:23c8)]   (Sid:  2) Client -> Server @ : 362 bytes (Service=HTTP)
+[Network Analyzer (23f8:23c8)]   (Sid:  2) Server -> Client : 1083 bytes  (Service=HTTP)
+[Network Analyzer (23f8:23c8)]   (Sid:  2) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (23f8:23c8)] "GET /cgi-bin/nav.pl?in=home"   
+[Network Analyzer (23f8:23c8)]   (Sid:  2) Client -> Server @ : 456 bytes (Service=HTTP)
+[Web Request      (23f8:23c8)] "GET /WebTours/home.html"   
+[Network Analyzer (23f8:23c8)]   (Sid:  1) Client -> Server @ : 452 bytes (Service=HTTP)
+[Network Analyzer (23f8:23c8)]   (Sid:  1) Server -> Client : 1659 bytes  (Service=HTTP)
+[Network Analyzer (23f8:23c8)]   (Sid:  2) Server -> Client : 1751 bytes  (Service=HTTP)
+[Network Analyzer (23f8:23c8)]   (Sid:  2) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (23f8:23c8)] "GET /WebTours/images/mer_login.gif"   
+[Network Analyzer (23f8:23c8)]   (Sid:  2) Client -> Server @ : 467 bytes (Service=HTTP)
+[Network Analyzer (23f8:23c8)]   (Sid:  2) Server -> Client : 976 bytes  (Service=HTTP)
+[Web Request      (23f8:23c8)] "GET /favicon.ico"   
+[Network Analyzer (23f8:23c8)]   (Sid:  2) Client -> Server @ : 323 bytes (Service=HTTP)
+[Network Analyzer (23f8:23c8)]   (Sid:  2) Server -> Client : 424 bytes  (Service=HTTP)
+[Network Analyzer (23f8:23c8)]   (Sid:  1) Connection Terminated (by Server)
+[Network Analyzer (23f8:23c8)]   (Sid:  2) Connection Terminated (by Server)
+[Network Analyzer (23f8:2aa4)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (23f8:2aa4)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  3)  PROXIED!
+[Web Request      (23f8:23c8)] "GET /cgi-bin/login.pl?username=&password=&getInfo=true"   
+[Network Analyzer (23f8:23c8)]   (Sid:  3) Client -> Server @ : 470 bytes (Service=HTTP)
+[Network Analyzer (23f8:23c8)]   (Sid:  3) Server -> Client : 2694 bytes  (Service=HTTP)
+[Network Analyzer (23f8:23c8)]   (Sid:  3) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (23f8:23c8)] "GET /WebTours/images/button_next.gif"   
+[Network Analyzer (23f8:1064)] Address lookup for Mainali-PC = 192.168.1.69
+[Network Analyzer (23f8:23c8)]   (Sid:  3) Client -> Server @ : 496 bytes (Service=HTTP)
+[Network Analyzer (23f8:23c8)]   (Sid:  3) Server -> Client : 1055 bytes  (Service=HTTP)
+[Network Analyzer (23f8:1064)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  4)  PROXIED!
+[Web Request      (23f8:23c8)] "GET /WebTours/profileValidate.js"   
+[Network Analyzer (23f8:23c8)]   (Sid:  3) Client -> Server @ : 475 bytes (Service=HTTP)
+[Network Analyzer (23f8:23c8)]   (Sid:  3) Server -> Client : 11601 bytes  (Service=HTTP)
+[Network Analyzer (23f8:23c8)]   (Sid:  3) Connection Terminated (by Server)
+[Web Request      (23f8:23c8)] "POST /cgi-bin/login.pl"   
+[Network Analyzer (23f8:23c8)]   (Sid:  4) Client -> Server @ : 702 bytes (Service=HTTP)
+[Network Analyzer (23f8:23c8)]   (Sid:  4) Server -> Client : 1453 bytes  (Service=HTTP)
+[Network Analyzer (23f8:23c8)]   (Sid:  4) Server -> Client : 5 bytes  (Service=HTTP)
+[Network Analyzer (23f8:23c8)]   (Sid:  4) Connection Terminated (by Server)
