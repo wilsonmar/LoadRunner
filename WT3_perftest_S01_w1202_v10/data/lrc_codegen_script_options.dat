@@ -3,7 +3,7 @@ Registry settings:
 	General Options
 		ThinkTimeThreshold	true
 		ThinkTimeThresholdVal	3
-		GenerateRecordingLog	true
+		GenerateRecordingLog	false
 		RecordPreInvocationMessages	true
 		RecordPostInvocationMessages	true
 		RecoverDeletedActions	false
@@ -12,7 +12,7 @@ Registry settings:
 		CloseAUT	false
 		FixedThinkTime	false
 		FixedThinkTimeVal	3
-		TrapLocalServer	false
+		TrapLocalServer	true
 		GenLongStrInSeparateFile	true
 		default	100
 		DumpProceeses	true

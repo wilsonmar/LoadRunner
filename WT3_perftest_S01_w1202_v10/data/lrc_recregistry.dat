@@ -1,13 +1,13 @@
 Registry settings:
 	(Default)	
 	ActiveProtocols
-		default	QTWeb
+		default	QTWeb,local_server
 	AllowChannelHooks
 		(Default)	NO
 		default	yes
 	AUT
 		(Default)	
-		default	C:\Program Files (x86)\Internet Explorer\iexplore.exe http://127.0.0.1:1080/WebTours/index.htm
+		default	C:\Program Files (x86)\Mozilla Firefox\firefox.exe -private-window http://127.0.0.1:1080/WebTours/index.htm
 	DebugFilter
 		(Default)	
 		default	off
@@ -151,7 +151,7 @@ Registry settings:
 	GenerateDebugLogFile
 	LocalMachineIdentity
 		(Default)	
-		default	Mainali-PC
+		default	WIN-HJA4A353DRG
 	NumberOfOutputByteArrayElementsToShow
 		(Default)	-1
 	RecorderDir
@@ -166,7 +166,7 @@ Registry settings:
 		default	false
 	TestDir
 		(Default)	
-		default	C:\Users\Mainali\LoadRunner\WT3_perftest_S01_w1202_v10\data\
+		default	C:\githubs\LoadRunner\WT3_perftest_S01_w1202_v10\data\
 	TrapOnClient
 		default	true
 	TrapOnMainThreadOnly

@@ -61,7 +61,7 @@ WT3_SignUpInOut(){
 		wi_stopPrinting();
 
 	if( stricmp("All",LPCSTR_RunType ) == FOUND
-	|| stricmp("SignInErr",LPCSTR_RunType ) == FOUND 
+	||  stricmp("SignInErr",LPCSTR_RunType ) == FOUND 
 	||  stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND 
 	||  stricmp("SignUp",LPCSTR_RunType ) == FOUND 
     ){
@@ -87,7 +87,7 @@ WT3_SignUpInOut(){
 		if( rc == 0 ){// Added with no error:
 			lr_save_string("WT3_T04_SignUp_Continue","pTransName");
 			rc=WT3_SignUp_Continue();
-		}else if(rc== 1){ // rc == 1 means already added previously.
+		}else if(rc== 1 ){ // rc == 1 means already added previously.
 			// DEFECT: Clicking Continue really re-submits failed data again.
 			// Drop through to Signin. TODO: Keep a counter of how many were added already?
 			// First need to get back to landing page because there is no login form.
@@ -112,7 +112,23 @@ WT3_SignUpInOut(){
 		rc=WT3_SignIn();
 	}
 	
-	return 0;
+	return rc;
+}
+
+WT3_SignOut_handle(){
+	int rc=LR_PASS;
+	
+	// No SignOut if SignInOnly.
+	if( stricmp("All",LPCSTR_RunType ) == FOUND
+	||  stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND 
+	||  stricmp("SignUp",LPCSTR_RunType ) == FOUND 
+	||  stricmp("SignInOut",LPCSTR_RunType ) == FOUND
+	){
+		lr_save_string("WT3_T08_SignOut","pTransName");
+		rc=WT3_SignOut();
+	}
+
+	return rc;
 }
 
 WT3_SignUpInOut_Init(){ // Called from Action() on first iteration:
@@ -172,10 +188,10 @@ WT3_URL_Landing(){
 
 		// URL Landing page appears after invoking URL:
 	
-	web_reg_find("Text=Welcome to the Web Tours site", LAST);
-	wi_start_transaction();
+		web_reg_find("Text=Welcome to the Web Tours site","SaveCount=Found_count", LAST );
+		wi_start_transaction();
 
-	// regardless if( stricmp("on", lr_eval_string("{MSO_JSFormSubmit1}") ) == FOUND
+		// regardless if( stricmp("on", lr_eval_string("{MSO_JSFormSubmit1}") ) == FOUND
 	
 		// Correlatie from response <input type="hidden" name="userSession" value="116443.360064804fQiQfffpDDDDDDDDDfQDHpDDc"/
 		// Regular expression is only for Referer RequestURL containing /nav.pl:
@@ -205,7 +221,12 @@ WT3_URL_Landing(){
 
 		rc=wi_end_transaction();
 
-		break;
+		if( atoi( lr_eval_string("{Found_count}") ) <= 0 ){
+			rc = -1; // not found.
+			// cycle through loop again to retry.
+		}else{
+			break;				
+		}
 	}
 	
 return 0;		
@@ -262,8 +283,7 @@ WT3_SignUp_Error(){
 		"Name=register.x"		,"Value=40", ENDITEM, 
 		"Name=register.y"		,"Value=7", ENDITEM, 
 		LAST);
-	// TDO: 
-	// TODO: Add logic to loop thru data if error occurs.
+
 	rc=wi_end_transaction();
 
 	return 0;		
@@ -272,44 +292,51 @@ WT3_SignUp_Error(){
 	
 WT3_SignUp(){
 	int rc=LR_PASS;
-
-	// signing up with new username and password to populate in database.
-
-	web_reg_find("Text=Thank you, <b>","SaveCount=SignUp_savecount", LAST); // positive test
-	web_reg_find("Text=Your username is taken","SaveCount=Err_count", LAST ); // negative test
-
-	wi_start_transaction();
-
-	//	"Name=firstName"			,"Value={parm_userid}", ENDITEM,
-	// DEBUGGING: Blank to trigger MSO_JSVerify error.
+	int i;
+	for(i=1; i < iRequestRetries; i++){ // 5 times retry: 1,2,3,4,5
+		wi_retry_add_time( i );
 	
-	web_submit_data("T05_SignUp", 
-		"Action={WebToursPath}/cgi-bin/login.pl", 
-		"Method=POST", 
-		"TargetFrame=", 
-		"RecContentType=text/html", 
-		"Referer={WebToursPath}/cgi-bin/login.pl?username=&password=&getInfo=true", 
-		"Snapshot=t19.inf", 
-		"Mode=HTML", 
-		ITEMDATA, 
-		"Name=username"				,"Value={parm_userid}", ENDITEM, 
-		"Name=password"				,"Value={parm_pwd}", ENDITEM, 
-		"Name=passwordConfirm"		,"Value={parm_pwd}", ENDITEM, 
-		"Name=firstName"			,"Value={parm_userid}", ENDITEM,
-		"Name=lastName"				,"Value={global_unique_id}", ENDITEM, 
-		"Name=address1"				,"Value={SignUp_address1}", ENDITEM,
-		"Name=address2"				,"Value={SignUp_address2}", ENDITEM,
-		"Name=register.x"			,"Value=50", ENDITEM, 
-		"Name=register.y"			,"Value=5", ENDITEM, 
-		LAST);
-	rc=wi_end_transaction();
+		// TODO: Add logic to get another data value if a value is already taken.
 
-	// Evaluate the more serious problem first:
-	if( atoi( lr_eval_string("{SignUp_savecount}") ) > 0 ){
-		rc = -1; // "Thank you not found.
-	}else{
-		if( atoi( lr_eval_string("{Err_count}") ) > 0 ){
-			rc = 1 ; // Signup already exists.   	
+		// signing up with new username and password to populate in database.
+
+		web_reg_find("Text=Thank you, <b>","SaveCount=Found_count", LAST); // positive test
+		web_reg_find("Text=Your username is taken","SaveCount=Err_count", LAST ); // negative test
+
+		wi_start_transaction();
+
+		//	"Name=firstName"			,"Value={parm_userid}", ENDITEM,
+		// DEBUGGING: Blank to trigger MSO_JSVerify error.
+	
+		web_submit_data("T05_SignUp", 
+			"Action={WebToursPath}/cgi-bin/login.pl", 
+			"Method=POST", 
+			"TargetFrame=", 
+			"RecContentType=text/html", 
+			"Referer={WebToursPath}/cgi-bin/login.pl?username=&password=&getInfo=true", 
+			"Snapshot=t19.inf", 
+			"Mode=HTML", 
+			ITEMDATA, 
+			"Name=username"				,"Value={parm_userid}", ENDITEM, 
+			"Name=password"				,"Value={parm_pwd}", ENDITEM, 
+			"Name=passwordConfirm"		,"Value={parm_pwd}", ENDITEM, 
+			"Name=firstName"			,"Value={parm_userid}", ENDITEM,
+			"Name=lastName"				,"Value={global_unique_id}", ENDITEM, 
+			"Name=address1"				,"Value={SignUp_address1}", ENDITEM,
+			"Name=address2"				,"Value={SignUp_address2}", ENDITEM,
+			"Name=register.x"			,"Value=50", ENDITEM, 
+			"Name=register.y"			,"Value=5", ENDITEM, 
+			LAST);
+		rc=wi_end_transaction();
+
+		if( atoi( lr_eval_string("{Found_count}") ) <= 0 ){
+			rc = -1; // "Thank you not found.
+			// cycle through loop again to retry.
+		}else{
+			if( atoi( lr_eval_string("{Err_count}") ) > 0 ){
+				rc = 1 ; // Signup already exists.
+			}
+			break;				
 		}
 	}
 	return rc;

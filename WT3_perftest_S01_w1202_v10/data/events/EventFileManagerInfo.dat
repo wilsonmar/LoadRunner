@@ -1,5 +1,5 @@
-EventId=4226
-RecordingNumber=10
+EventId=4438
+RecordingNumber=11
 
 ActionInfo
 ActionName=SignInOut
@@ -12,7 +12,7 @@ EndActionInfo
 ActionName=Recording
 ActionId=2
 ActionFileSize=749115
-ActionDeleted=0
+ActionDeleted=1
 RecordingNumber=2
 EndActionInfo
 
@@ -42,5 +42,12 @@ ActionId=6
 ActionFileSize=70681
 ActionDeleted=0
 RecordingNumber=10
+EndActionInfo
+
+ActionName=Recording
+ActionId=7
+ActionFileSize=302235
+ActionDeleted=0
+RecordingNumber=11
 EndActionInfo
 

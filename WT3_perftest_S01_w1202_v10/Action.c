@@ -9,7 +9,7 @@ Action()
 	int i=0;
 	
 	     iActionIterations++; // increment from zero value defined in vuser_init.
-	 if( iActionIterations == 1){
+	 if( iActionIterations == 1){ // instead of being in vuser_init.
 		WT3_SignUpInOut_Init(); // establish variables.
   
 		lr_save_string("http://127.0.0.1:1080","WebToursPath");
@@ -25,20 +25,14 @@ Action()
  		WT3_SignUp_Data();
 	 }
 
-	rc=WT3_SignUpInOut();
+	rc=WT3_SignUpInOut(); // to handle specified RunType attribute.
 
-	rc=WT3_Travel(); // to handle UseCase attribute.
-
-
-	// Process SignUp becuase this app logs users in automatically after signup.
-	if( stricmp("All",LPCSTR_RunType ) == FOUND
-	||  stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND 
-	||  stricmp("SignUp",LPCSTR_RunType ) == FOUND 
-	||  stricmp("SignInOut",LPCSTR_RunType ) == FOUND
-	){
-		lr_save_string("WT3_T08_SignOut","pTransName");
-		rc=WT3_SignOut();
+	if( rc == LR_PASS ){
+		rc=WT3_Travel(); // to handle specified UseCase attribute.
 	}
+
+	WT3_SignOut_handle();
+	
   
 	return rc;
 }
