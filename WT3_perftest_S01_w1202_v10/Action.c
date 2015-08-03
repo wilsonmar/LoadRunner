@@ -12,7 +12,7 @@ Action()
 	 if( iActionIterations == 1){ // instead of being in vuser_init.
 		WT3_SignUpInOut_Init(); // establish variables.
   
-		lr_save_string("http://127.0.0.1:1080","WebToursPath");
+		lr_save_string("http://127.0.0.1:1080","WebToursPath"); // TODO: Convert into LoginURL RunTime Attribute.
 		lr_output_message(">> {WebToursPath}=%s", lr_eval_string("{WebToursPath}"));
 		wi_save_request_header(); // to wi_show_user_agent() later.
 		
@@ -31,8 +31,7 @@ Action()
 		rc=WT3_Travel(); // to handle specified UseCase attribute.
 	}
 
-	WT3_SignOut_handle();
+	rc=WT3_SignOut_handle();
 	
-  
 	return rc;
 }

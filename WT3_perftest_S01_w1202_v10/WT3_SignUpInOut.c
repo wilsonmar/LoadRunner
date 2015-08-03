@@ -84,21 +84,22 @@ WT3_SignUpInOut(){
     ){
 		lr_save_string("WT3_T06_SignUp","pTransName");
 		rc=WT3_SignUp();
-		if( rc == 0 ){// Added with no error:
+		if( rc == LR_PASS ){// Added with no error:
 			lr_save_string("WT3_T04_SignUp_Continue","pTransName");
 			rc=WT3_SignUp_Continue();
-		}else if(rc== 1 ){ // rc == 1 means already added previously.
-			// DEFECT: Clicking Continue really re-submits failed data again.
-			// Drop through to Signin. TODO: Keep a counter of how many were added already?
-			// First need to get back to landing page because there is no login form.
+		}else 
+			// then rc == LR_FAIL ){ // rc == 1 means already added previously.
+				// DEFECT: Clicking Continue really re-submits failed data again.
+				// First need to get back to landing page because there is no login form.
+				// Drop through to Signin. TODO: Keep a counter of how many were added already and skipped?
 			if( stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND 
 		    ){
 				// Because there is no "Cancel" button in the SignUp screen when "username is taken":
 				lr_save_string("WT3_T03_URL_Landing","pTransName");
-	 			rc=WT3_URL_Landing(); // just for establishing state to signin or invoke run conditions.
+	 			rc=WT3_URL_Landing(); // just for establishing state to signin or invoke run conitions.
 			}
 		}else{
-			// else -1 abort or retry?
+			// Ignore. 
 		}
 	}
 
@@ -221,15 +222,16 @@ WT3_URL_Landing(){
 
 		rc=wi_end_transaction();
 
-		if( atoi( lr_eval_string("{Found_count}") ) <= 0 ){
-			rc = -1; // not found.
-			// cycle through loop again to retry.
+		if( atoi( lr_eval_string("{Found_count}") ) => 1 ){
+			rc=LR_PASS;
+			break; // out of loop.			
 		}else{
-			break;				
+			// cycle through loop again to retry.
+			rc=LR_FAIL; // Fall-out of loop when retries are exhausted.
 		}
-	}
-	
-return 0;		
+	} 	
+
+	return rc;
 } //WT3_URL_Landing	
 	
 
@@ -329,14 +331,16 @@ WT3_SignUp(){
 			LAST);
 		rc=wi_end_transaction();
 
-		if( atoi( lr_eval_string("{Found_count}") ) <= 0 ){
-			rc = -1; // "Thank you not found.
-			// cycle through loop again to retry.
-		}else{
-			if( atoi( lr_eval_string("{Err_count}") ) > 0 ){
-				rc = 1 ; // Signup already exists.
-			}
+		if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
+			rc = LR_PASS;
 			break;				
+		}else 
+			if( atoi( lr_eval_string("{Err_count}") ) > 0 ){
+				rc = LR_FAIL ; // Signup already exists.
+			}
+		}else{
+			rc = LR_FAIL; // "Thank you not found.
+			// cycle through loop again to retry.
 		}
 	}
 	return rc;
