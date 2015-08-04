@@ -84,6 +84,11 @@ int wi_set_unique_id(){
 } // wi_set_unique_id
 
 
+/// Specified during debugging to Toggle Breakpoint on a function (not if statement):
+wi_noop(){
+	return 0;
+}
+
 
 wi_load_kernel32_dll(){
 	int rc=LR_PASS;

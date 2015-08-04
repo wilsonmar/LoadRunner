@@ -87,20 +87,20 @@ WT3_SignUpInOut(){
 		if( rc == LR_PASS ){// Added with no error:
 			lr_save_string("WT3_T04_SignUp_Continue","pTransName");
 			rc=WT3_SignUp_Continue();
-		}else 
-			// then rc == LR_FAIL ){ // rc == 1 means already added previously.
-				// DEFECT: Clicking Continue really re-submits failed data again.
+		}else{
+				// APP DEFECT: Clicking Continue really re-submits failed data again.
 				// First need to get back to landing page because there is no login form.
 				// Drop through to Signin. TODO: Keep a counter of how many were added already and skipped?
+	
+			//  stricmp("SignUp",LPCSTR_RunType not need Landing on err because it does Landing first anyway.
 			if( stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND 
 		    ){
 				// Because there is no "Cancel" button in the SignUp screen when "username is taken":
 				lr_save_string("WT3_T03_URL_Landing","pTransName");
 	 			rc=WT3_URL_Landing(); // just for establishing state to signin or invoke run conitions.
 			}
-		}else{
-			// Ignore. 
 		}
+		// else Ignore. 
 	}
 
 
@@ -222,7 +222,7 @@ WT3_URL_Landing(){
 
 		rc=wi_end_transaction();
 
-		if( atoi( lr_eval_string("{Found_count}") ) => 1 ){
+		if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
 			rc=LR_PASS;
 			break; // out of loop.			
 		}else{
@@ -245,20 +245,31 @@ return 0;
 } //WT3_URL_Landing	
 
 
+/// This obtains the blank SigUp input form.
 WT3_SignUpNow(){
-	int rc=LR_PASS;
-	// This obtains the blank form.
+	int rc;
+	int i;
+	for(i=1; i < iRequestRetries; i++){ // 5 times retry: 1,2,3,4,5
+		wi_retry_add_time( i );
 	
-	web_reg_find("Text=First time registering", "Fail=NotFound", LAST); // HTML expected in response.
+		web_reg_find("Text=First time registering", "Fail=NotFound", "SaveCount=Found_count", LAST );
 
-	wi_start_transaction();
-	web_link("sign up now",
-		"Text=sign up now", 
-		"Snapshot=t2.inf", 
-		LAST);
-	rc=wi_end_transaction();
+		wi_start_transaction();
+		web_link("sign up now",
+			"Text=sign up now", 
+			"Snapshot=t2.inf", 
+			LAST);
+		rc=wi_end_transaction();
 
-	return 0;
+		if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
+			rc=LR_PASS;
+			break; // out of loop.			
+		}else{
+			rc=LR_FAIL;
+		}
+	}
+
+	return rc;
 }
 
 WT3_SignUp_Error(){
@@ -330,16 +341,17 @@ WT3_SignUp(){
 			"Name=register.y"			,"Value=5", ENDITEM, 
 			LAST);
 		rc=wi_end_transaction();
-
+		wi_noop();
+		
 		if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
 			rc = LR_PASS;
-			break;				
-		}else 
+			break; // exit loop successfully.			
+		}else{ // "Thank you not found.
+			rc = LR_FAIL; 
 			if( atoi( lr_eval_string("{Err_count}") ) > 0 ){
-				rc = LR_FAIL ; // Signup already exists.
-			}
-		}else{
-			rc = LR_FAIL; // "Thank you not found.
+				// Signup already exists.
+				break; // because already found, so no need to retry SignUp.
+			} 
 			// cycle through loop again to retry.
 		}
 	}
@@ -393,31 +405,42 @@ WT3_SignIn_Error(){
 
 WT3_SignIn(){
 	int rc=LR_PASS;
-
-	// singning in with valid username and password which is just created
-	// Such as username as jojo01 and password as bean.
-
-	// TODO: If {parm_userid} is blank, return as error.
+	int i;
+	for(i=1; i < iRequestRetries; i++){ // 5 times retry: 1,2,3,4,5
+		wi_retry_add_time( i );
 	
-	// Response HTML: <blockquote>Welcome, <b>jaja01</b>, to the Web Tour
-	web_reg_find("Text=Welcome, <b>{parm_userid}</b>,", "Fail=NOTFOUND", LAST);
+		// signing in with valid username and password which is just created
+		// Such as username as jojo01 and password as bean.
 
-	wi_start_transaction();
-	web_submit_form("SignIn.pl_4", 
-		"Snapshot=t6.inf", 
-		ITEMDATA, 
-		"Name=username", "Value={parm_userid}", ENDITEM, 
-		"Name=password", "Value={parm_pwd}", ENDITEM, 
-		"Name=login.x", "Value=29", ENDITEM, 
-		"Name=login.y", "Value=10", ENDITEM, 
-		LAST);
-	rc=wi_end_transaction();
-	if(rc == LR_PASS){
-		isSignedIn = TRUE;
-	}else{
-		isSignedIn = FALSE;
+		// TODO: If {parm_userid} is blank, return as error.
+		// Response HTML: <blockquote>Welcome, <b>jaja01</b>, to the Web Tour
+		web_reg_find("Text=Welcome, <b>{parm_userid}</b>,", "Fail=NOTFOUND", "SaveCount=Found_count", LAST); // positive test
+
+		wi_start_transaction();
+		web_submit_form("SignIn.pl_4", 
+			"Snapshot=t6.inf", 
+			ITEMDATA, 
+			"Name=username", "Value={parm_userid}", ENDITEM, 
+			"Name=password", "Value={parm_pwd}", ENDITEM, 
+			"Name=login.x", "Value=29", ENDITEM, 
+			"Name=login.y", "Value=10", ENDITEM, 
+			LAST);
+		rc=wi_end_transaction();
+	
+		if(rc == LR_PASS){
+			isSignedIn = TRUE;
+		}else{
+			isSignedIn = FALSE;
+		}
+	
+		if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
+			rc = LR_PASS;
+			break; // exit loop successfully.			
+		}else{ // "Thank you not found.
+			rc = LR_FAIL; 
+		}
 	}
-	
+
 	return 0;		
 } //WT3_SignIn
 

@@ -25,13 +25,6 @@ Also contains declaration of app-specific global variables accessible from funct
 //// referenced by wi_retry_add_time() in app-specific functions:
 	#define WIN32
 	//define POSIX
-//ifdef WIN32
-//	#include <windows.h>
-//#elif _POSIX_C_SOURCE >= 199309L
-//	#include <time.h>   // for nanosleep
-//#else
-//	#include <unistd.h> // for usleep
-//	#endif
 
 
 		// TODO: 09. If not using VTS, comment out (substitute) # with //:
@@ -50,6 +43,7 @@ Also contains declaration of app-specific global variables accessible from funct
 
 	LPCSTR			LPCSTR_RunType; // controls scope of script generic ocessing (URL_Landing, SignUp, SignIn, SignOut).
 	LPCSTR			LPCSTR_UseCase; // controls scope of script functional processing (add, change, delete app data).
+	LPCSTR			LPCSTR_LandingHostPath; // Replaces http://127.0.0.1:1080
 
 		// For use by wi_set_Think_Time() & wi_start_transaction():
 	float			floatThinkTimeSecs; // numeric.
