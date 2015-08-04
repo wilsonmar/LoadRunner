@@ -14,23 +14,19 @@ Also contains declaration of app-specific global variables accessible from funct
 		
 //// Define C Statics (like built-in LR_PASS and LR_FAIL) and variables:
 	#define FOUND 0
-  //	0 = FALSE/NO in C if statements
-  //   !0 = TRUE/YES in C if statements
+  //	0       = FALSE/NO in C if statements
+  //    1 or !0 = TRUE/YES in C if statements
 	// NOTE: No semicolon after static definitions.
 
+	#define USING_WINDOWS
 	
-//// See ftp://ftp.sgi.com/opengl/contrib/blythe/advanced99/notes/node389.html	
-////     (Windows and Linux portability).
-//// For use within wi_sleep_ms(int milliseconds) // cross-platform sleep function
-//// referenced by wi_retry_add_time() in app-specific functions:
-	#define WIN32
-	//define POSIX
-
-
-		// TODO: 09. If not using VTS, comment out (substitute) # with //:
+		
+	// TODO: 09. If not using VTS, comment out (substitute) # with //:
 //define USE_VTS
 
 //// Run-Time Settings Attributes or command-line LPCSTR (LoadRunner Pointer C Strings) and associated variables:
+
+	LPCSTR			LPCSTR_HostPath; // Replaces http://127.0.0.1:1080 with {WebToursHost}
 
 	// TODO: 08. Specify 4 during script development, then 2 during test runs.
 	LPCSTR			LPCSTR_Verbosity; // used within vi_set_Verbosity_attribute() below.
@@ -41,9 +37,8 @@ Also contains declaration of app-specific global variables accessible from funct
 							//   3 = wi_startPrintingError and wi_startPrintingInfo and wi_startPrintingDebug will print.
 							//   4 = wi_startPrintingError and wi_startPrintingInfo and wi_startPrintingDebug and wi_startPrintingTrace will print.
 
-	LPCSTR			LPCSTR_RunType; // controls scope of script generic ocessing (URL_Landing, SignUp, SignIn, SignOut).
+	LPCSTR			LPCSTR_RunType; // controls scope of script generic processing (URL_Landing, SignUp, SignIn, SignOut).
 	LPCSTR			LPCSTR_UseCase; // controls scope of script functional processing (add, change, delete app data).
-	LPCSTR			LPCSTR_LandingHostPath; // Replaces http://127.0.0.1:1080
 
 		// For use by wi_set_Think_Time() & wi_start_transaction():
 	float			floatThinkTimeSecs; // numeric.

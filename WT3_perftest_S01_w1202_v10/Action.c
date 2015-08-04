@@ -14,14 +14,18 @@ Action()
 	 if( iActionIterations == 1){
 		WT3_SignUpInOut_Init(); // establish variables.
   
-		lr_save_string("http://127.0.0.1:1080","WebToursPath"); // TODO: Convert into LoginURL RunTime Attribute.
+		LPCSTR_HostPath = lr_get_attrib_string("HostPath");	// LPSTR is Attribute defined in Vuser_init. 
+		lr_save_string(LPCSTR_HostPath,"WebToursPath");
+		wi_startPrintingInfo();
 		lr_output_message(">> {WebToursPath}=%s", lr_eval_string("{WebToursPath}"));
-		wi_save_request_header(); // to wi_show_user_agent() later.
-		
+		wi_resetPrinting();
+
+		wi_save_request_header(); // to wi_show_user_agent() later.		
 		lr_save_string("WT3_T03_URL_Landing_1","pTransName");
  		rc=WT3_URL_Landing(); // just for establishing state to invoke run conditions.
  		wi_show_user_agent();
  		WT3_Config_Run_Conditions();
+ 		WT3_Print_Run_Conditions();
  		WT3_Invoke_Run_Conditions();
 
  		WT3_SignUp_Data();

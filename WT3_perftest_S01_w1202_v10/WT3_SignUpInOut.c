@@ -17,7 +17,7 @@ WT3_SignOut()
 
 
 	
-WT3_SignUpInOut(){
+WT3_SignUpInOut(){ // .c file.
 	int rc=LR_PASS;
 
 	if( stricmp("LandingOnly",LPCSTR_RunType ) == FOUND
@@ -58,7 +58,7 @@ WT3_SignUpInOut(){
 		lr_output_message(">> Iteration=%d User=\"%s\"."
 		                  ,iActionIterations
 		                  ,lr_eval_string("{parm_userid}")		                 );
-		wi_stopPrinting();
+		wi_resetPrinting();
 
 	if( stricmp("All",LPCSTR_RunType ) == FOUND
 	||  stricmp("SignInErr",LPCSTR_RunType ) == FOUND 
@@ -171,10 +171,12 @@ WT3_SignUpInOut_Init(){ // Called from Action() on first iteration:
 	//	lr_save_string("330","timezoneOffset"); // India Time, which has no daylight savings.
 	// WARNING: this number changes from 120 to 180 during daylight savings time.
 
-			lr_output_message(">> Iteration=%d timezoneOffset=\"%s\"."
+		wi_startPrintingInfo();
+		lr_output_message(">> Iteration=%d timezoneOffset=\"%s\"."
 		                  ,iActionIterations
 		                  ,lr_eval_string("{timezoneOffset}")
 		                 );
+		wi_resetPrinting();
 
 #endif // USE_TIMEZONEOFFSET
 	
@@ -215,10 +217,12 @@ WT3_URL_Landing(){
 			LAST);
 
 		// Debug level (internal / not user-level data):
+		wi_startPrintingDebug();
 		lr_output_message(">> ParamName=userSession_capture=%s for MSO_JSFormSubmit1=%s."
 	                  ,lr_eval_string("{userSession_capture}")
 	                  ,lr_eval_string("{MSO_JSFormSubmit1}")
 	                  );
+		wi_resetPrinting();
 
 		rc=wi_end_transaction();
 
@@ -441,7 +445,7 @@ WT3_SignIn(){
 		}
 	}
 
-	return 0;		
+	return rc;		
 } //WT3_SignIn
 
 
@@ -462,5 +466,5 @@ WT3_SignOut(){
 
 	} // if(isSignedIn == TRUE)
 	
-	return 0;
+	return rc;
 }//WT3_SignOut

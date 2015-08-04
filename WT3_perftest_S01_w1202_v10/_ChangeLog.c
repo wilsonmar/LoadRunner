@@ -4,6 +4,7 @@
 */
 // TODO: Add logic for handling "Internal Server Error" MSO_SErrors.
 
+// v10 2015.08.04 wm: Add print and reset function around output statements.
 // v10 2015.08.02 wm: Add retry loop to Landing and SignUp based on Found_count.
 // v10 2015.07.31 am: Arrange SignUp to handle error conditions
 // v10 2015.07.30 wm: Fix SignUp to return to Landing page if user cannot be added and no cancel button is on screen.

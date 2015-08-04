@@ -25,7 +25,7 @@
 	// wi_startPrintingInfo(){
 	// wi_startPrintingDebug(){
 	// wi_startPrintingTrace(){
-	// wi_stopPrinting(){
+	// wi_resetPrinting(){
 
 	// wi_EncodePlainToOAuth(const char *sIn, char *sOut){
 	// wi_EncodePlainToURL(const char *sIn, char *sOut){
@@ -68,7 +68,7 @@ int wi_set_unique_id(){
   	wi_startPrintingInfo();
 	lr_output_message(">> Controller=%s, Host=%s, ScenarioID=%d, Group=%s, Vuser=%d, PID=%d." 
   	                  ,my_controller_name ,my_host ,iScenarioID, vuser_group ,iVuserID, vuser_pid );
-	wi_stopPrinting();
+	wi_resetPrinting();
 	
 	sprintf( global_unique_id,"C%s.H%d.S%s.G%s.U%d.P%d"
 			,my_controller_name
@@ -95,7 +95,7 @@ wi_load_kernel32_dll(){
     static int is_kernel32_dll_loaded = FALSE; // A static C variable inside a function retains its value between invocations.
                                  // The FALSE value is assigned only on the first invocation.
 
-	#ifdef  WIN32
+	#ifdef  USING_WINDOWS
 
 	char* dll_name = "KERNEL32.DLL"; // In C:/Windows/System32 that comes with Windows.
 			// Its File Description: "Windows NT BASE API Client DLL".
@@ -111,7 +111,7 @@ wi_load_kernel32_dll(){
         }
     }
 
-	#endif // WIN32
+	#endif // USING_WINDOWS
 
 	return rc;
 }
@@ -140,7 +140,7 @@ int wi_get_vuser_pid() {
                                    // On Windows platforms, if a path is not specified,
                                    // lr_load_dll searches for the DLL using the standard sequence.
 
- 	#ifdef  WIN32
+ 	#ifdef  USING_WINDOWS
 
     // Only load the DLL the first time this function is called:
     if (is_msvcrt_dll_loaded == FALSE) {
@@ -155,7 +155,7 @@ int wi_get_vuser_pid() {
         }
     }
 
-	#endif // WIN32
+	#endif // USING_WINDOWS
 
 	return pid;
 } // wi_get_vuser_pid
@@ -175,14 +175,14 @@ int wi_set_Think_Time(){
 
   	    wi_startPrintingDebug();
 		lr_output_message(">> floatThinkTimeSecs=%8.2f from coded default.", floatThinkTimeSecs);
-		wi_stopPrinting();
+		wi_resetPrinting();
 	}else{ // use value from command attribute: // floats have 24 significant bits, double 52.
 		// Not using strtof() per http://pubs.opengroup.org/onlinepubs/009695399/functions/strtod.html
 	    floatThinkTimeSecs= atof(LPCSTR_ThinkTimeSecs); // atof() requires definition at top of file.
 
 	    wi_startPrintingDebug();
 		lr_output_message(">> Attribute floatThinkTimeSecs=%8.3f.", floatThinkTimeSecs );
-		wi_stopPrinting();
+		wi_resetPrinting();
 	 } // For ftoa see http://www.performancecompetence.com/wordpress/?p=318
 	return LR_PASS;
 } // wi_set_Think_Time()
@@ -200,7 +200,7 @@ wi_retry_add_time( int in_retries ){
 		// TODO: Calculate geometrically more time with each successive retry:
 		milliseconds = in_retries * 1000; // for now.
 
-		#ifdef WIN32
+		#ifdef USING_WINDOWS
 		if (is_kernel32_dll_loaded == FALSE) {
 			rc=wi_load_kernel32_dll(); // unresolved symbol error will occur unless library is loaded.
 			if( rc == LR_PASS ){
@@ -226,7 +226,7 @@ wi_retry_add_time( int in_retries ){
 void wi_sleep_ms(int milliseconds) // cross-platform sleep function
 {
 	// makes use of global data structures defined in vuser_init.c
-#ifdef WIN32
+#ifdef USING_WINDOWS
 //	Debugging:
 //	Sleep(milliseconds); // unresolved symbol error will occur unless library is included.
 #elif _POSIX_C_SOURCE >= 199309L
@@ -238,7 +238,7 @@ void wi_sleep_ms(int milliseconds) // cross-platform sleep function
 #else
     // Deprecated now:
     usleep(milliseconds * 1000); // uses the useconds_t structure
-#endif
+#endif // USING_WINDOWS
 }
 
 wi_save_request_header(){
@@ -262,8 +262,10 @@ wi_show_user_agent(){
    		LAST );
 
 	// {userAgent} is one of the run conditions shown one time for whole run:
+		wi_startPrintingInfo();
  	lr_output_message(">> {userAgent}=%s.", lr_eval_string("{userAgent}"));
 	// TODO: Intrepret raw agent string to summarize the browser name and version.
+		wi_resetPrinting();
 
 	return 0;
 }
@@ -308,7 +310,7 @@ int wi_end_transaction(){
 		                  ,lr_eval_string("{parmLoginUserID}")
 		                  ,lr_eval_string("{pTransName}")
 		                 );
-		wi_stopPrinting();
+		wi_resetPrinting();
 	}else{
 		lr_end_transaction(lr_eval_string("{pTransName}"),LR_AUTO);		
 	}
@@ -331,7 +333,7 @@ int wi_end_transaction(){
 		                  ,lr_eval_string("{parmLoginUserID}")
 		                 , intHttpRetCode
 		                ); // QUESTION: What does rc -1 mean?
-		wi_stopPrinting();
+		wi_resetPrinting();
 		rc=LR_FAIL;
 	}
 
@@ -420,7 +422,7 @@ wi_startPrintingTrace(){
 	return LR_PASS;
 }
 
-wi_stopPrinting(){
+wi_resetPrinting(){
 
 	lr_set_debug_message( 542 , LR_SWITCH_OFF ); // to unset all selections.
 	// Using bit-wise compare. See http://www.jds.net.au/tech-tips/loadrunner-log-options/
@@ -570,7 +572,7 @@ int vi_set_Verbosity_attribute(){
 		    lr_output_message(">> Attribute \"Verbosity\" not specified in command-line or run-time settings. Default to \"%d\"."
 					,iVerbosity
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
 		// NOTE: Don't return LR_FAIL; // fail here because default can be used.
 	}else{
 		iVerbosity=atoi(LPCSTR_Verbosity);
@@ -597,13 +599,13 @@ int vi_set_Verbosity_attribute(){
 		    lr_output_message(">> Attribute \"Verbosity\" not specified in command-line or run-time settings. Default to \"%d\"."
 					,iVerbosity
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
 
 			wi_startPrintingError();
 		    lr_output_message(">> Attribute \"Verbosity\" not recognized as valid value."
 					,iVerbosity
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
 	}
 	return LR_PASS;
 } // vi_set_Verbosity_attribute()
@@ -617,14 +619,14 @@ vi_set_RunType_attribute(){
 		    lr_output_message(">> Attribute \"RunType\" not specified in command-line or run-time settings. Default to \"%s\"."
 					,LPCSTR_RunType 
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
 	}else{ // Ensure only acceptable values were input:
 		if( stricmp("All",LPCSTR_RunType ) == FOUND ){ // Run-time Attribute "RunType" or command line option "-RunType"
 			wi_startPrintingInfo();
 		    lr_output_message(">> Attribute \"RunType\"=\"%s\"."
 					,LPCSTR_RunType 
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
 
 		}else
 		if( stricmp("LandingOnly",LPCSTR_RunType ) == FOUND ){ // Run-time Attribute "RunType" or command line option "-RunType"
@@ -632,55 +634,55 @@ vi_set_RunType_attribute(){
 		    lr_output_message(">> Attribute \"RunType\"=\"%s\"."
 					,LPCSTR_RunType 
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
        	}else
 		if( stricmp("SignUp",LPCSTR_RunType ) == FOUND ){ // Run-time Attribute "RunType" or command line option "-RunType"
 			wi_startPrintingInfo();
 		    lr_output_message(">> Attribute \"RunType\"=\"%s\"."
 					,LPCSTR_RunType 
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
        	}else
 		if( stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND ){ // Run-time Attribute "RunType" or command line option "-RunType"
 			wi_startPrintingInfo();
 		    lr_output_message(">> Attribute \"RunType\"=\"%s\"."
 					,LPCSTR_RunType 
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
        	}else
 		if( stricmp("SignInOnly",LPCSTR_RunType ) == FOUND ){ // Run-time Attribute "RunType" or command line option "-RunType"
 			wi_startPrintingInfo();
 		    lr_output_message(">> Attribute \"RunType\"=\"%s\"."
 					,LPCSTR_RunType 
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
        	}else
 		if( stricmp("SignInErr",LPCSTR_RunType ) == FOUND ){ // Run-time Attribute "RunType" or command line option "-RunType"
 			wi_startPrintingInfo();
 		    lr_output_message(">> Attribute \"RunType\"=\"%s\"."
 					,LPCSTR_RunType 
 					);
-			wi_stopPrinting();	
+			wi_resetPrinting();	
 		}else
 		if( stricmp("SignInOut",LPCSTR_RunType ) == FOUND ){ // Run-time Attribute "RunType" or command line option "-RunType"
 			wi_startPrintingInfo();
 		    lr_output_message(">> Attribute \"RunType\"=\"%s\"."
 					,LPCSTR_RunType 
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
 		}else
 		if( stricmp("NoOp",LPCSTR_RunType ) == FOUND ){ // Run-time Attribute "RunType" or command line option "-RunType"
 			wi_startPrintingInfo();
 		    lr_output_message(">> Attribute \"RunType\"=%s for no operation."
 					,LPCSTR_RunType 
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
 		}else{
 			wi_startPrintingError();
 		    lr_output_message(">> Attribute \"RunType\"=%s not valid. lr_exit() stopping script execution."
 					,LPCSTR_RunType 
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
 			lr_exit(LR_EXIT_VUSER,LR_FAIL);
 		}
 	} // if(LPCSTR_RunType==NULL)
@@ -698,7 +700,7 @@ vi_set_UseCase_attribute(){
 		    lr_output_message(">> Attribute \"UseCase\" not specified in command-line or run-time settings. Default to \"%s\"."
 					,LPCSTR_UseCase 
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
 	}else{ // Ensure only acceptable values were input:
 
 		if( stricmp("Home",LPCSTR_UseCase ) == FOUND ){ // Run-time Attribute "UseCase" or command line option "-UseCase"
@@ -706,7 +708,7 @@ vi_set_UseCase_attribute(){
 		    lr_output_message(">> Attribute \"UseCase\"=\"%s\"."
 					,LPCSTR_UseCase 
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
 
 		}else
 		if( stricmp("Book",LPCSTR_UseCase ) == FOUND ){ // Run-time Attribute "UseCase" or command line option "-UseCase"
@@ -714,7 +716,7 @@ vi_set_UseCase_attribute(){
 		    lr_output_message(">> Attribute \"UseCase\"=\"%s\"."
 					,LPCSTR_UseCase 
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
 
 		}else
 		if( stricmp("Search",LPCSTR_UseCase ) == FOUND ){ // Run-time Attribute "UseCase" or command line option "-UseCase"
@@ -722,7 +724,7 @@ vi_set_UseCase_attribute(){
 		    lr_output_message(">> Attribute \"UseCase\"=\"%s\"."
 					,LPCSTR_UseCase 
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
 
 		}else
 		if( stricmp("Itinerary",LPCSTR_UseCase ) == FOUND ){ // Run-time Attribute "UseCase" or command line option "-UseCase"
@@ -730,7 +732,7 @@ vi_set_UseCase_attribute(){
 		    lr_output_message(">> Attribute \"UseCase\"=\"%s\"."
 					,LPCSTR_UseCase 
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
 
 		}else
 		if( stricmp("All",LPCSTR_UseCase ) == FOUND ){ // Run-time Attribute "UseCase" or command line option "-UseCase"
@@ -738,7 +740,7 @@ vi_set_UseCase_attribute(){
 		    lr_output_message(">> Attribute \"UseCase\"=\"%s\"."
 					,LPCSTR_UseCase 
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
 
 		}else
 		if( stricmp("NoOp",LPCSTR_UseCase ) == FOUND ){ // Run-time Attribute "UseCase" or command line option "-UseCase"
@@ -746,13 +748,13 @@ vi_set_UseCase_attribute(){
 		    lr_output_message(">> Attribute \"UseCase\"=%s for no operation."
 					,LPCSTR_UseCase 
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
 		}else{
 			wi_startPrintingError();
 		    lr_output_message(">> Attribute \"UseCase\"=%s not valid. lr_exit() stopping script execution."
 					,LPCSTR_UseCase 
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
 			lr_exit(LR_EXIT_VUSER,LR_FAIL);
 		}
 	} // if(LPCSTR_UseCase==NULL)
@@ -770,32 +772,32 @@ vi_set_URLSource_attribute(){
 
 			wi_startPrintingInfo();
 		    lr_output_message(">> Attribute \"URLSource\" not specified in command-line or run-time settings. Default to \"%d\".", iURLSource_setting );
-			wi_stopPrinting();
+			wi_resetPrinting();
 	}else{ // Ensure only acceptable values were input:
 		if( stricmp("All",iURLSource_setting ) == FOUND ){ // Run-time Attribute "URLSource" or command line option "-URLSource"
 			wi_startPrintingInfo();
 		    lr_output_message(">> Attribute \"URLSource\"=%s."
 					,iURLSource_setting
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
        	}else
 		if( iURLSource_setting == 1 ){
 			wi_startPrintingInfo();
 		    lr_output_message(">> Attribute \"URLSource\"=%s for using file URLtoShorten.dat in script folder." ,iURLSource_setting );
-			wi_stopPrinting();
+			wi_resetPrinting();
 
 		#ifdef USE_VTS
        	}else
 		if( iURLSource_setting == 2 ){
 			wi_startPrintingInfo();
 		    lr_output_message(">> Attribute \"URLSource\"=%s for using VTS." ,iURLSource_setting);
-			wi_stopPrinting();
+			wi_resetPrinting();
 		#endif // USE_VTS
 		
 		}else{
 			wi_startPrintingError();
 		    lr_output_message(">> Attribute \"URLSource\"=%s not valid. lr_exit() stopping script execution." ,iURLSource_setting );
-			wi_stopPrinting();
+			wi_resetPrinting();
 			lr_exit(LR_EXIT_VUSER,LR_FAIL);
 		}
 	} // if(iURLSource_setting==NULL)
@@ -808,7 +810,7 @@ vi_set_URLSource_attribute(){
 	}else{
 	  	wi_startPrintingInfo();
 		lr_output_message(">> nURLtoShorten_file_recs=%d.", nURLtoShorten_file_recs);
-		wi_stopPrinting();
+		wi_resetPrinting();
 	}
 
 	#ifdef USE_VTS
@@ -821,26 +823,26 @@ vi_set_URLSource_attribute(){
 				
 				wi_startPrintingInfo();
 				lr_output_message(">> rc=%d fall-back to local data source with nURLtoShorten_file_recs=%f when iURLSource_setting=%d.", rc, nURLtoShorten_file_recs, iURLSource_setting);
-				wi_stopPrinting();
+				wi_resetPrinting();
 			}
 	    }else{
 			// Add column "shorturl" to VTS for holding output from Google API calls:
 			rc = vtc_create_column (pvci, "shorturl", &status); // status=1 is success.
 				wi_startPrintingDebug();
 				lr_output_message(">> rc=%d from vi_set_VTS3() with status=%d (should=1) when iURLSource_setting=%d.", rc, status, iURLSource_setting);
-				wi_stopPrinting();
+				wi_resetPrinting();
 			if( status == 1 ){
 				iUpdate_shorturl_in_VTS = 1; // 1=Yes
 
 				wi_startPrintingInfo();
 				lr_output_message(">> rc=%d with status=%d (should=1), so iUpdate_shorturl_in_VTS =%d (1=1Yes).", rc, status, iUpdate_shorturl_in_VTS );
-				wi_stopPrinting();
+				wi_resetPrinting();
 			}else{
 				iUpdate_shorturl_in_VTS = 0; // 0=No
 
 				wi_startPrintingInfo();
 				lr_output_message(">> rc=%d with status=%d (should=1), so iUpdate_shorturl_in_VTS =%d (0=NO).", rc, status, iUpdate_shorturl_in_VTS );
-				wi_stopPrinting();
+				wi_resetPrinting();
 			}
 	    }
     }
@@ -890,7 +892,7 @@ int vi_set_VTS3(){
 		    lr_output_message(">> Attribute \"VTS_Host\" not specified in command-line or run-time settings. Default to \"%s\"."
 					,VTS_Host_string
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
     }else{
 		sprintf( VTS_Host_string ,"%s",LPCSTR_VTS_Host);
 	} // if(LPCSTR_VTS_Host==NULL)
@@ -903,7 +905,7 @@ int vi_set_VTS3(){
 		    lr_output_message(">> Attribute \"VTS_Port\" not specified in command-line or run-time settings. Default to \"%d\"."
 					,nPort 
 					);
-			wi_stopPrinting();
+			wi_resetPrinting();
     }else{
      	nPort = atoi(LPCSTR_VTS_Port); 
 	} // if(LPCSTR_VTS_Port==NULL)
@@ -913,13 +915,13 @@ int vi_set_VTS3(){
 	if( pvci <= 0){
 	    wi_startPrintingDebug();
 		lr_error_message(">> VTS pvci=%d (non-zero).", pvci);
-		wi_stopPrinting();
+		wi_resetPrinting();
 	}else{
 		rc = vtc_get_last_error(pvci);
 		if( rc != LR_PASS ) {
 		    wi_startPrintingDebug();
 			lr_error_message(">> rc from vtc_get_last_error(pvci)=%d for VTC connection to %s port .", rc, VTS_Host_string,nPort);
-			wi_stopPrinting();
+			wi_resetPrinting();
 			return LR_FAIL; // FAIL
 		}
 
@@ -927,7 +929,7 @@ int vi_set_VTS3(){
 		vtc_column_size(pvci, "web", &nVTS_row_count);
 		wi_startPrintingInfo();
 		lr_output_message(">> nVTS_row_count=%d.", nVTS_row_count);
-		wi_stopPrinting();
+		wi_resetPrinting();
 	}
 
 	return rc;

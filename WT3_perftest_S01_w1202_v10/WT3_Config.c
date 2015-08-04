@@ -2,6 +2,10 @@
 \file WT3_Config.c
 \brief Contains functions to establish run conditions and other configurations.
 
+int WT3_Config_Run_Conditions(){
+int WT3_Print_Run_Conditions(){
+int WT3_Invoke_Run_Conditions(){
+
 */
 
 WT3_Config()
@@ -36,6 +40,12 @@ int WT3_Config_Run_Conditions(){ // after landing
 	lr_save_string("<OFF>","MSO_SLoad");
 	lr_save_string("50","MSO_ServerLoadProb");
 
+	return 0;
+}
+
+int WT3_Print_Run_Conditions(){
+
+	wi_startPrintingInfo();
 	lr_output_message(">> MSO_Comments=%s",lr_eval_string("{MSO_Comments}"));
 	lr_output_message(">> MSO_JSCalc=%s",lr_eval_string("{MSO_JSCalc}"));
 	lr_output_message(">> MSO_JSCalc=%s",lr_eval_string("{MSO_JSCalc}"));
@@ -47,9 +57,11 @@ int WT3_Config_Run_Conditions(){ // after landing
 	lr_output_message(">> MSO_Redirects=%s",lr_eval_string("{MSO_Redirects}"));
 	lr_output_message(">> MSO_SErrors=%s (%s%%)",lr_eval_string("{MSO_SErrors}"),lr_eval_string("{MSO_ServerErrorsProb}"));
 	lr_output_message(">> MSO_SLoad=%s (%s%%)",lr_eval_string("{MSO_SLoad}"),lr_eval_string("{MSO_ServerLoadProb}"));
+	wi_resetPrinting();
 
 	return 0;
 }
+
 int WT3_Invoke_Run_Conditions(){ // after landing
 	// TODO: Separate 
 
