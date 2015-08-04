@@ -31,12 +31,12 @@ int WT3_Config_Run_Conditions(){ // after landing
 	lr_save_string("<OFF>","MSO_JSCalc");
 	lr_save_string("<OFF>","MSO_JSFormSubmit1"); // Set LOGIN form's action tag to an error page. 
 	lr_save_string("<OFF>","MSO_JSFormSubmit2");
-	lr_save_string("on","MSO_JSVerify"); // Verify inputs for valid ???
+	lr_save_string("<OFF>","MSO_JSVerify"); // Verify inputs for non-blank entries.
 	lr_save_string("<OFF>","MSO_JSWPages");
 	lr_save_string("<OFF>","MSO_Redirect");
 	lr_save_string("<OFF>","MSO_Redirects");
 	lr_save_string("<OFF>","MSO_SErrors");
-	lr_save_string("50","MSO_ServerErrorsProb");
+	lr_save_string("100","MSO_ServerErrorsProb");
 	lr_save_string("<OFF>","MSO_SLoad");
 	lr_save_string("50","MSO_ServerLoadProb");
 

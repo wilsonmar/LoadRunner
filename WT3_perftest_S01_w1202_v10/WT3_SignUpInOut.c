@@ -108,6 +108,7 @@ WT3_SignUpInOut(){ // .c file.
 	if( stricmp("All",LPCSTR_RunType ) == FOUND
 	||  stricmp("SignInOnly",LPCSTR_RunType ) == FOUND 
     ||  stricmp("SignInOut",LPCSTR_RunType ) == FOUND 
+	||  stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND 
     ){
 		lr_save_string("WT3_T07_SignIn","pTransName");
 		rc=WT3_SignIn();
@@ -121,10 +122,11 @@ WT3_SignOut_handle(){
 	
 	// No SignOut if SignInOnly.
 	if( stricmp("All",LPCSTR_RunType ) == FOUND
-	||  stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND 
 	||  stricmp("SignUp",LPCSTR_RunType ) == FOUND 
 	||  stricmp("SignInOut",LPCSTR_RunType ) == FOUND
+	||  stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND 
 	){
+		iVerbosity=1; // lowest because we know it works.
 		lr_save_string("WT3_T08_SignOut","pTransName");
 		rc=WT3_SignOut();
 	}
@@ -191,7 +193,7 @@ WT3_URL_Landing(){
 
 		// URL Landing page appears after invoking URL:
 	
-		web_reg_find("Text=Welcome to the Web Tours site","SaveCount=Found_count", LAST );
+		web_reg_find("Text=Welcome to the Web Tours site","Fail=NotFound","SaveCount=Found_count", LAST );
 		wi_start_transaction();
 
 		// regardless if( stricmp("on", lr_eval_string("{MSO_JSFormSubmit1}") ) == FOUND
@@ -242,8 +244,8 @@ WT3_URL_Landing(){
 
 WT3_SignUp_Data(){ // one-time only.
 	
-	lr_save_string("POBOX 1"			,"SignUp_address1");
-	lr_save_string("Anywhere, CA 92341"	,"SignUp_address2");
+	lr_save_string("POBOX 1"			    ,"SignUp_address1");
+	lr_save_string("Beverly Hills, CA 90210","SignUp_address2");
 
 return 0;
 } //WT3_URL_Landing	
