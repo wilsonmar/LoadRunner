@@ -183,6 +183,7 @@ WT3_T23_Travel_Flight_Lookup(){
 		wi_retry_add_time( i );
 
 		web_reg_find("Text=Flight departing from","Fail=NotFound","SaveCount=Found_count", LAST );
+		web_reg_find("Text=Flight departing from","Fail=NotFound","SaveCount=Err_count", LAST );
 
 		//TODO: WT3_T23_Travel_Flight_Lookup Add Airport starting and endeing route in this function.
 		wi_start_transaction();
