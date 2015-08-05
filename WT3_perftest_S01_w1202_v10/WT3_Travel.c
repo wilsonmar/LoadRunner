@@ -36,12 +36,10 @@ WT3_Travel(){ // call from within Action.c.
 
 	if( stricmp("Search",LPCSTR_UseCase ) == FOUND
 	){
-		
 			//lr_save_string("WT3_T22_Travel_Search_Flight","pTransName");
 			//web_reg_find("Text=Find Flight", "Fail=NotFound", LAST);
 			//rc=WT3_T22_Travel_Search_Flight();
 			//if( rc != LR_PASS ){ return rc; }
-			
 
 			lr_save_string("WT3_T23_Travel_Flight_Lookup","pTransName");
 			web_reg_find("Text=Flight departing from", "Fail=NotFound", LAST);
@@ -59,7 +57,7 @@ WT3_Travel(){ // call from within Action.c.
 	){
 
 		// TODO: C int variable to specify Loops through several flights before checkout.
-		for(i=1; i<=3; i++){ // 1,2,3 (3 times)
+		// for(i=1; i<=1; i++){ // 1,2,3 (3 times)
 			
 			lr_save_string("WT3_T23_Travel_Flight_Lookup","pTransName");
 			web_reg_find("Text=Flight departing from", "Fail=NotFound", LAST);
@@ -83,7 +81,7 @@ WT3_Travel(){ // call from within Action.c.
 			rc=WT3_T27_Travel_Click_Book_Another();
 			if( rc != LR_PASS ){ return rc; }
 				
-		}//for(i=1; i<2; i++){ // 1,2,3 (3 times)
+		// }//for(i=1; i<2; i++){ // 1,2,3 (3 times)
 	}
 		
 		if( stricmp("All",LPCSTR_UseCase ) == FOUND
@@ -113,14 +111,17 @@ WT3_T20_Travel_Data(){
 	lr_save_datetime("%m/%d/%Y", DATE_NOW   ,"parm_departDate"); // 04/14/2015 format
 	lr_save_datetime("%m/%d/%Y", DATE_NOW +7,"parm_returnDate");
 	
-	// TODO: Vary departCity and returnCity each sub-iteration.
+	// TODO: Vary departCity/ID and returnCity/ID each sub-iteration randomly
 	lr_save_string("Denver","parm_departCity");
-	lr_save_string("030","parm_departCityNum");
+	lr_save_string("030","parm_departFlight");
 
 	lr_save_string("Los Angeles","parm_arriveCity");
-	lr_save_string("251","parm_arriveCityNum");
+	lr_save_string("251","parm_arriveFlight");
 
 	lr_save_string("1","parm_numPassengers");
+	lr_save_string("<OFF>","parm_roundtrip");
+	lr_save_string("None","parm_seatPref");
+	lr_save_string("Coach","parm_seatType");
 
 	return 0;
 }
@@ -149,7 +150,8 @@ WT3_T21_Travel_Home(){
 	} 	
 	return rc;
 } //WT3_T21_Travel_Home
-		
+
+			
 WT3_T22_Travel_Search_Flight(){
 	int rc=LR_PASS;
 	int i;
@@ -190,16 +192,16 @@ WT3_T23_Travel_Flight_Lookup(){
 		web_submit_form("reservations.pl",
 			"Snapshot=t34.inf",
 			ITEMDATA,
-			"Name=depart", "Value={parm_departCity}", ENDITEM,
-			"Name=departDate", "Value={parm_departDate}", ENDITEM,
-			"Name=arrive", "Value={parm_arriveCity}", ENDITEM,
-			"Name=returnDate", "Value={parm_returnDate}", ENDITEM,
-			"Name=numPassengers", "Value={parm_numPassengers}", ENDITEM,
-			"Name=roundtrip", "Value=<OFF>", ENDITEM,
-			"Name=seatPref", "Value=None", ENDITEM,
-			"Name=seatType", "Value=Coach", ENDITEM,
-			"Name=findFlights.x", "Value=40", ENDITEM,
-			"Name=findFlights.y", "Value=6", ENDITEM,
+			"Name=depart"				, "Value={parm_departCity}", ENDITEM,
+			"Name=departDate"			, "Value={parm_departDate}", ENDITEM,
+			"Name=arrive"				, "Value={parm_arriveCity}", ENDITEM,
+			"Name=returnDate"			, "Value={parm_returnDate}", ENDITEM,
+			"Name=numPassengers"		, "Value={parm_numPassengers}", ENDITEM,
+			"Name=roundtrip"			, "Value={parm_roundtrip}", ENDITEM,
+			"Name=seatPref"				, "Value={parm_seatPref}", ENDITEM,
+			"Name=seatType"				, "Value={parm_seatType}", ENDITEM,
+			"Name=findFlights.x"		, "Value=40", ENDITEM,
+			"Name=findFlights.y"		, "Value=6", ENDITEM,
 			LAST);
 	    rc=wi_end_transaction(); // 
 
@@ -222,6 +224,11 @@ WT3_T24_Find_Flight(){
 
 		web_reg_find("Text=Payment Details","Fail=NotFound","SaveCount=Found_count", LAST );
 		// WT3_T25_Travel_Payment_Details_Capture();
+		
+		// If MSO_SLoad="on", HTTP Status 503 (System Cannot Complete Request)
+		// is issued for the % time specified in MSO_ServerLoadProb.
+
+//			"Name=outboundFlight", "Value={parm_departFlight};{parm_arriveFlight};{parm_departDate}", ENDITEM, 
 		wi_start_transaction();
 		web_submit_form("reservations.pl_2", 
 			"Snapshot=t35.inf", 
@@ -358,7 +365,7 @@ WT3_T33_Travel_Check_Itinerary(){
 		// TODO: Add count of itinerary items returned, as this may impact response time.
 		web_reg_save_param_ex(
 		    "ParamName=Itineraries", 
-		    "LB=flightID\" value=\"","RB=-{{",
+		    "LB=flightID\" value=\"","RB=\"",
 		    "Ordinal=all",
 		    SEARCH_FILTERS,
 	        "Scope=body", LAST);
