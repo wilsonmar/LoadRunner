@@ -104,7 +104,6 @@ WT3_SignUpInOut(){ // .c file.
 	}
 
 
-	//  stricmp("SignUpInOut" not necessary because SignUp also logs in.
 	if( stricmp("All",LPCSTR_RunType ) == FOUND
 	||  stricmp("SignInOnly",LPCSTR_RunType ) == FOUND 
     ||  stricmp("SignInOut",LPCSTR_RunType ) == FOUND 

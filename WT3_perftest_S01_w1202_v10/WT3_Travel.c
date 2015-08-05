@@ -228,7 +228,6 @@ WT3_T24_Find_Flight(){
 		// If MSO_SLoad="on", HTTP Status 503 (System Cannot Complete Request)
 		// is issued for the % time specified in MSO_ServerLoadProb.
 
-//			"Name=outboundFlight", "Value={parm_departFlight};{parm_arriveFlight};{parm_departDate}", ENDITEM, 
 		wi_start_transaction();
 		web_submit_form("reservations.pl_2", 
 			"Snapshot=t35.inf", 
