@@ -594,12 +594,13 @@ int vi_set_Verbosity_attribute(){
 	if( iVerbosity == 5 ){
 	    web_set_max_html_param_len("20240");
 	}else{
-	   	iVerbosity=iVerbosity_default; // =default.
 		    wi_startPrintingInfo();
-		    lr_output_message(">> Attribute \"Verbosity\" not specified in command-line or run-time settings. Default to \"%d\"."
+		    lr_output_message(">> Attribute \"Verbosity\" value %d not recognized. Default to \"%d\"."
 					,iVerbosity
+					,iVerbosity_default
 					);
 			wi_resetPrinting();
+	   	iVerbosity=iVerbosity_default; // =default.
 
 			wi_startPrintingError();
 		    lr_output_message(">> Attribute \"Verbosity\" not recognized as valid value."
