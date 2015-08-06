@@ -34,6 +34,7 @@ WT3_Travel(){ // call from within Action.c.
 			if( rc != LR_PASS ){ return rc; }
 	}
 
+
 	if( stricmp("Search",LPCSTR_UseCase ) == FOUND
 	){
 			//lr_save_string("WT3_T22_Travel_Search_Flight","pTransName");
@@ -50,7 +51,8 @@ WT3_Travel(){ // call from within Action.c.
 			web_reg_find("Text=Payment Details", "Fail=NotFound", LAST);
 			rc=WT3_T24_Find_Flight();
 			if( rc != LR_PASS ){ return rc; }
-		}
+	}
+
 
 	if( stricmp("All",LPCSTR_UseCase ) == FOUND
 	||  stricmp("Book",LPCSTR_UseCase ) == FOUND
@@ -83,22 +85,30 @@ WT3_Travel(){ // call from within Action.c.
 				
 		// }//for(i=1; i<2; i++){ // 1,2,3 (3 times)
 	}
+
 		
 		if( stricmp("All",LPCSTR_UseCase ) == FOUND
 		||  stricmp("Book",LPCSTR_UseCase ) == FOUND
 		||  stricmp("Itinerary",LPCSTR_UseCase ) == FOUND
+		||  stricmp("Cancel",LPCSTR_UseCase ) == FOUND
    		){
 			lr_save_string("WT3_T33_Travel_Check_Itinerary","pTransName");
-			web_reg_find("Text=Itinerary", "Fail=NotFound", LAST);
 			rc=WT3_T33_Travel_Check_Itinerary();			
 			if( rc != LR_PASS ){ return rc; }
 		}
-				
+/*
+		if( stricmp("All",LPCSTR_UseCase ) == FOUND
+		||  stricmp("Cancel",LPCSTR_UseCase ) == FOUND
+   		){
+			lr_save_string("WT3_T34_Cancel_Checked_Itinerary","pTransName");
+			rc=WT3_T34_Cancel_Checked_Itinerary();			
+			if( rc != LR_PASS ){ return rc; }
+		}
+*/				
 		if( stricmp("All",LPCSTR_UseCase ) == FOUND
 		||  stricmp("Home",LPCSTR_UseCase ) == FOUND
    		){
 			lr_save_string("WT3_T21_Travel_Home","pTransName");
-			web_reg_find("Text=Welcome", "Fail=NotFound", LAST);
 			rc=WT3_T21_Travel_Home();
 			if( rc != LR_PASS ){ return rc; }
 		}
@@ -113,10 +123,10 @@ WT3_T20_Travel_Data(){
 	
 	// TODO: Vary departCity/ID and returnCity/ID each sub-iteration randomly
 	lr_save_string("Denver","parm_departCity");
-	lr_save_string("030","parm_departFlight");
+//	lr_save_string("030","parm_departFlight");
 
 	lr_save_string("Los Angeles","parm_arriveCity");
-	lr_save_string("251","parm_arriveFlight");
+//	lr_save_string("251","parm_arriveFlight");
 
 	lr_save_string("1","parm_numPassengers");
 	lr_save_string("<OFF>","parm_roundtrip");
@@ -138,7 +148,7 @@ WT3_T21_Travel_Home(){
 			"Alt=Home Button", 
 			"Snapshot=t32.inf", 
 			LAST);
-		rc=wi_end_transaction();
+		rc=wi_end_transaction(rc);
 
 		if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
 			rc=LR_PASS;
@@ -165,7 +175,7 @@ WT3_T22_Travel_Search_Flight(){
 			"Alt=Search Flights Button", 
 			"Snapshot=t33.inf", 
 			LAST);
-		rc=wi_end_transaction();
+		rc=wi_end_transaction(rc);
 		if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
 			rc=LR_PASS;
 			break; // out of loop.			
@@ -203,7 +213,7 @@ WT3_T23_Travel_Flight_Lookup(){
 			"Name=findFlights.x"		, "Value=40", ENDITEM,
 			"Name=findFlights.y"		, "Value=6", ENDITEM,
 			LAST);
-	    rc=wi_end_transaction(); // 
+	    rc=wi_end_transaction(rc); // 
 
 	    if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
 			rc=LR_PASS;
@@ -236,7 +246,7 @@ WT3_T24_Find_Flight(){
 			"Name=reserveFlights.x", "Value=46", ENDITEM, 
 			"Name=reserveFlights.y", "Value=11", ENDITEM, 
 			LAST);
-		 rc=wi_end_transaction();
+		 rc=wi_end_transaction(rc);
 
 	    if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
 			rc=LR_PASS;
@@ -292,7 +302,6 @@ WT3_T25_Travel_Payment_Details(){
 
 		wi_start_transaction();
 	
-		// TODO: Add sample names and addresses to reservation payment details.
 		// TODO: If one sample record is found invalid, skip to the next record set.
 	
 		web_submit_form("reservations.pl_3", 
@@ -313,13 +322,13 @@ WT3_T25_Travel_Payment_Details(){
 
   	    // if run condition MSO_SLoad="on" and selected by probability:
  	    if( atoi( lr_eval_string("{DBErr_count}") ) > 0 ){ // DBErr found:
-			rc=wi_end_transaction();
+			rc=wi_end_transaction(rc);
 				//lr_user_data_point(lr_eval_string("{pTransName}"),1); // to track retries occuring due to DBErr.
-				lr_user_data_point("DBErr_retries",1); // to track retries occuring due to DBErr.
+				lr_user_data_point("WT3_T25_Travel_Payment_Details_retries",i); // to track retries occuring due to DBErr.
 				// Continue to loop again to handle error with retry (not end script run)
  			break;
   	    }else{ // normal no error:
-			rc=wi_end_transaction();
+			rc=wi_end_transaction(rc);
 			break; // out of do/while loop.
   	    }		
 	}
@@ -348,7 +357,7 @@ WT3_T27_Travel_Click_Book_Another(){
 		"Name=Book Another.x", "Value=43", ENDITEM, 
 		"Name=Book Another.y", "Value=6", ENDITEM, 
 		LAST);
-	rc=wi_end_transaction();
+	rc=wi_end_transaction(rc);
 	return rc;
 } //WT3_T27_Travel_Click_Book_Another
 	
@@ -374,8 +383,6 @@ WT3_T33_Travel_Check_Itinerary(){
 			"Alt=Itinerary Button", 
 			"Snapshot=t42.inf", 
 			LAST);
-		rc=wi_end_transaction();
-
 		
 	    if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
 			wi_startPrintingTrace();
@@ -386,11 +393,52 @@ WT3_T33_Travel_Check_Itinerary(){
 			wi_resetPrinting();
 			
 			rc=LR_PASS;
+			rc=wi_end_transaction(rc);
 			break; // out of loop.			
 		}else{
 			// cycle through loop again to retry.
 			rc=LR_FAIL; // Fall-out of loop when retries are exhausted.
+			rc=wi_end_transaction(rc);
 		}
 	} 	
 	return rc;
-}//WT3_T33_Travel_Check_Itinerary	
+}//WT3_T33_Travel_Check_Itinerary
+
+
+WT3_T34_Cancel_Checked_Itinerary(){
+	int rc=LR_PASS;
+	int i; int x;
+	for(i=1; i < iRequestRetries; i++){ // 5 times retry: 1,2,3,4,5
+		wi_retry_add_time( i );
+
+		x=atoi( lr_eval_string("{Itineraries_count}"));
+		if( x > 0 ){ // Do this only there were itineraries listed in previous step WT3_T33_Travel_Check_Itinerary.
+
+			// Only if all have been cancelled does this message appear:
+ 			// web_reg_find("Text=No flights have been reserved","Fail=NotFound","SaveCount=Found_count", LAST );
+
+			for(i=1; i < iRequestRetries; i++){ // retry for network trouble
+				// count of Itineraries
+				wi_start_transaction();
+				web_submit_form("itinerary.pl", 
+					"Snapshot=t103.inf",
+					ITEMDATA, 
+					"Name=1", "Value=on", ENDITEM, 
+					LAST);
+					// TODO: Rather than one Name per form, Vary number of fields submitted.
+			
+			    if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
+					// TODO: Add count of itinerary items canceled, as this may impact response time.
+					rc=LR_PASS;
+					rc=wi_end_transaction(rc);
+					break; // out of loop.			
+				}else{
+					// cycle through loop again to retry.
+				}
+				rc=LR_FAIL; // Fall-out of loop when retries are exhausted.
+				rc=wi_end_transaction(rc);
+ 			}
+		} // if( atoi( lr_eval_string("{Itineraries}")) > 0 
+	} 	
+	return rc;
+}//WT3_T34_Cancel_Checked_Itinerary	

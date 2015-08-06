@@ -28,16 +28,16 @@ int WT3_Config_Run_Conditions(){ // after landing
 
 	// Switch from "<OFF>" to "on":
 	lr_save_string("<OFF>","MSO_Comments");
-	lr_save_string("<OFF>","MSO_JSCalc");
-	lr_save_string("<OFF>","MSO_JSFormSubmit1"); // Set LOGIN form's action tag to an error page. 
-	lr_save_string("<OFF>","MSO_JSFormSubmit2");
-	lr_save_string("<OFF>","MSO_JSVerify"); // Verify inputs for non-blank entries.
+	lr_save_string("on","MSO_JSCalc"); // Add JavaScript to calculate days in advance for ticket purchase. 
+	lr_save_string("<OFF>","MSO_JSFormSubmit1"); // Set LOGIN form's action tag to an error page in WT3_URL_Landing.
+	lr_save_string("<OFF>","MSO_JSFormSubmit2"); // Set RESERVATION form's action tag to an error page. 
+	lr_save_string("on","MSO_JSVerify"); // Verify inputs for non-blank entries.
 	lr_save_string("<OFF>","MSO_JSWPages");
 	lr_save_string("<OFF>","MSO_Redirect");
 	lr_save_string("<OFF>","MSO_Redirects");
 	lr_save_string("<OFF>","MSO_SErrors"); // Returns HTTP 500 (Internal Server Error) at WT3_T25_Travel_Payment_Details.
 	lr_save_string("100","MSO_ServerErrorsProb");
-	lr_save_string("<OFF>","MSO_SLoad");
+	lr_save_string("<OFF>","MSO_SLoad"); // Returns HTTP 503 (System Cannot Complete Request) at WT3_T24_Find_Flight.
 	lr_save_string("100","MSO_ServerLoadProb");
 
 	return 0;

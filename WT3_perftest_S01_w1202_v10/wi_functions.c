@@ -192,13 +192,13 @@ wi_retry_add_time( int in_retries ){
 	int rc=LR_PASS;
 	int milliseconds;
 	
-	if( in_retries <= 0 ){
-		return LR_PASS;
+	if( in_retries <= 1 ){
+		return LR_PASS; // no waiting for the first one.
 	}else{
 		// Since lr_think_time is already used:
 		// This is a cross-platforam approach to
 		// TODO: Calculate geometrically more time with each successive retry:
-		milliseconds = in_retries * 1000; // for now.
+		milliseconds = in_retries * 1000; // for now. one additional second after each successive retry.
 
 		#ifdef USING_WINDOWS
 		if (is_kernel32_dll_loaded == FALSE) {
@@ -283,7 +283,7 @@ wi_start_transaction(){
     return LR_PASS;
 } // wi_start_transaction
 
-int wi_end_transaction(){
+int wi_end_transaction(int in_rc){
 	int rc=LR_PASS;
 	int 			  intHttpRetCode;
 	int 			  intHttpMilliseconds;
@@ -300,43 +300,51 @@ int wi_end_transaction(){
 	float 			floatHttpKBytes;
 	*/
 
-	rc = lr_get_transaction_status( lr_eval_string("{pTransName}") );
-	// Using pTransName saved in wi_start_transaction before the transaction:
-	if( rc == LR_FAIL ){
-		lr_end_transaction(lr_eval_string("{pTransName}"),LR_FAIL);
-    	wi_startPrintingError();
-    	lr_error_message(">> Iteration=%d User=\"%s\" Trans=%s FAIL ERROR." 
+	if( in_rc == LR_FAIL ){
+		lr_end_transaction(lr_eval_string("{pTransName}"),LR_FAIL);		
+	}else{
+		rc=lr_get_transaction_status( lr_eval_string("{pTransName}") );
+		// Using pTransName saved in wi_start_transaction before the transaction:
+		if( rc == LR_FAIL ){
+			lr_end_transaction(lr_eval_string("{pTransName}"),LR_FAIL);
+    		wi_startPrintingError();
+    		lr_error_message(">> Iteration=%d User=\"%s\" Trans=%s FAIL ERROR." 
 		                  ,iActionIterations
 		                  ,lr_eval_string("{parmLoginUserID}")
 		                  ,lr_eval_string("{pTransName}")
 		                 );
-		wi_resetPrinting();
-	}else{
-		lr_end_transaction(lr_eval_string("{pTransName}"),LR_AUTO);		
+			wi_resetPrinting();
+		}else{
+			lr_end_transaction(lr_eval_string("{pTransName}"),LR_AUTO);		
+		}
+	
+    	// Verify bad 400 HTTP return code from server and associated response such as "{error : invalid_grant}"
+    	// using LoadRunner internal function web_get_int_property():
+		    intHttpRetCode 		= web_get_int_property(HTTP_INFO_RETURN_CODE);
+  		    intHttpSize 		= web_get_int_property(HTTP_INFO_DOWNLOAD_SIZE);
+		    intHttpMilliseconds = web_get_int_property(HTTP_INFO_DOWNLOAD_TIME);
+		  floatHttpMilliseconds = (float)intHttpMilliseconds / 1000; // Convert from milliseconds to seconds.
+
+		if (intHttpRetCode == 200 // no problem! OK
+		||  intHttpRetCode == 304 // Already cached.
+		){
+			// move on.
+			rc=LR_PASS;
+		}else{
+			// intHttpRetCode == 500
+			// intHttpRetCode == 503
+
+			wi_startPrintingError();
+   		 	lr_output_message(">> Iteration=%d User=\"%s\" HTML Return Code=%d." 
+			                  ,iActionIterations
+			                  ,lr_eval_string("{parmLoginUserID}")
+			                 , intHttpRetCode
+			                ); // QUESTION: What does rc -1 mean?
+			wi_resetPrinting();
+			rc=LR_FAIL;
+		}
 	}
-
-    // Verify bad 400 HTTP return code from server and associated response such as "{error : invalid_grant}"
-    // using LoadRunner internal function web_get_int_property():
-	    intHttpRetCode 		= web_get_int_property(HTTP_INFO_RETURN_CODE);
-  	    intHttpSize 		= web_get_int_property(HTTP_INFO_DOWNLOAD_SIZE);
-	    intHttpMilliseconds = web_get_int_property(HTTP_INFO_DOWNLOAD_TIME);
-	  floatHttpMilliseconds = (float)intHttpMilliseconds / 1000; // Convert from milliseconds to seconds.
-
-	if (intHttpRetCode == 200 // no problem! OK
-	||  intHttpRetCode == 304 // Already cached.
-	){
-		// move on.
-	}else{
-		wi_startPrintingError();
-    	lr_output_message(">> Iteration=%d User=\"%s\" HTML Return Code=%d." 
-		                  ,iActionIterations
-		                  ,lr_eval_string("{parmLoginUserID}")
-		                 , intHttpRetCode
-		                ); // QUESTION: What does rc -1 mean?
-		wi_resetPrinting();
-		rc=LR_FAIL;
-	}
-
+	
     return rc;
 } // wi_end_transaction
 
@@ -601,12 +609,6 @@ int vi_set_Verbosity_attribute(){
 					);
 			wi_resetPrinting();
 	   	iVerbosity=iVerbosity_default; // =default.
-
-			wi_startPrintingError();
-		    lr_output_message(">> Attribute \"Verbosity\" not recognized as valid value."
-					,iVerbosity
-					);
-			wi_resetPrinting();
 	}
 	return LR_PASS;
 } // vi_set_Verbosity_attribute()
@@ -729,6 +731,14 @@ vi_set_UseCase_attribute(){
 
 		}else
 		if( stricmp("Itinerary",LPCSTR_UseCase ) == FOUND ){ // Run-time Attribute "UseCase" or command line option "-UseCase"
+			wi_startPrintingInfo();
+		    lr_output_message(">> Attribute \"UseCase\"=\"%s\"."
+					,LPCSTR_UseCase 
+					);
+			wi_resetPrinting();
+
+		}else
+		if( stricmp("Cancel",LPCSTR_UseCase ) == FOUND ){ // Run-time Attribute "UseCase" or command line option "-UseCase"
 			wi_startPrintingInfo();
 		    lr_output_message(">> Attribute \"UseCase\"=\"%s\"."
 					,LPCSTR_UseCase 

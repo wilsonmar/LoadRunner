@@ -28,6 +28,7 @@ WT3_SignUpInOut(){ // .c file.
 	){ // Do every iteration:
 		lr_save_string("WT3_T03_URL_Landing","pTransName");
 		rc=WT3_URL_Landing();
+		if( rc != LR_PASS ){ return rc; }
 	}else
 	if( stricmp("All",LPCSTR_RunType ) == FOUND 
 	||  stricmp("SignUpErr",LPCSTR_RunType ) == FOUND
@@ -36,12 +37,15 @@ WT3_SignUpInOut(){ // .c file.
 		if( iActionIterations == 1 ){
 			lr_save_string("WT3_T03_URL_Landing","pTransName");
 			rc=WT3_URL_Landing();
+			if( rc != LR_PASS ){ return rc; }
 		}
 	}
+
 	     
 // --- Do the rest every iteration:
 
-	if( stricmp("SignUpErr",LPCSTR_RunType ) == FOUND 
+
+	if( stricmp("SignUpErr",LPCSTR_RunType ) == FOUND
 	){ // Signing up a known user already defined:
 
 		// Try to sign up a known existing (built-in) userid and password:
@@ -50,6 +54,7 @@ WT3_SignUpInOut(){ // .c file.
 			
 			lr_save_string("WT3_T04_SignUp_Err","pTransName");
 	 		rc=T04_SignUp_Err();
+			if( rc != LR_PASS ){ return rc; }
 	}
 
 		lr_save_string(lr_eval_string("{UserIds_userid}"),"parm_userid");
@@ -67,17 +72,17 @@ WT3_SignUpInOut(){ // .c file.
     ){
 		lr_save_string("WT3_T04_SignUpNow","pTransName");
 		rc=WT3_SignUpNow();
+		if( rc != LR_PASS ){ return rc; }
 	}
 
-
-	if( stricmp("SignInErr",LPCSTR_RunType ) == FOUND 
+	if( stricmp("SignInErr",LPCSTR_RunType ) == FOUND
 	){
 			lr_save_string("XXX","parm_pwd"); // error!
 			lr_save_string("WT3_T05_SignIn_Err","pTransName");
 	 		rc=T04_SignIn_Err();
+			if( rc != LR_PASS ){ return rc; }
 	}
 
-		
 	if( stricmp("All",LPCSTR_RunType ) == FOUND
 	||  stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND 
 	||  stricmp("SignUp",LPCSTR_RunType ) == FOUND 
@@ -102,7 +107,7 @@ WT3_SignUpInOut(){ // .c file.
 		}
 		// else Ignore. 
 	}
-
+	if( rc != LR_PASS ){ return rc; }
 
 	if( stricmp("All",LPCSTR_RunType ) == FOUND
 	||  stricmp("SignInOnly",LPCSTR_RunType ) == FOUND 
@@ -225,7 +230,7 @@ WT3_URL_Landing(){
 	                  );
 		wi_resetPrinting();
 
-		rc=wi_end_transaction();
+		rc=wi_end_transaction(rc);
 
 		if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
 			rc=LR_PASS;
@@ -264,7 +269,7 @@ WT3_SignUpNow(){
 			"Text=sign up now", 
 			"Snapshot=t2.inf", 
 			LAST);
-		rc=wi_end_transaction();
+		rc=wi_end_transaction(rc);
 
 		if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
 			rc=LR_PASS;
@@ -302,7 +307,7 @@ WT3_SignUp_Error(){
 		"Name=register.y"		,"Value=7", ENDITEM, 
 		LAST);
 
-	rc=wi_end_transaction();
+	rc=wi_end_transaction(rc);
 
 	return 0;		
 } // WT3_SignUp_Error
@@ -345,7 +350,7 @@ WT3_SignUp(){
 			"Name=register.x"			,"Value=50", ENDITEM, 
 			"Name=register.y"			,"Value=5", ENDITEM, 
 			LAST);
-		rc=wi_end_transaction();
+		rc=wi_end_transaction(rc);
 		wi_noop();
 		
 		if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
@@ -379,7 +384,7 @@ WT3_SignUp_Continue(){
 		"Mode=HTML", 
 		LAST);
 
-	rc=wi_end_transaction();
+	rc=wi_end_transaction(rc);
 	
 	return rc;
 } //WT3_SignUp_Continue
@@ -402,7 +407,7 @@ WT3_SignIn_Error(){
 		"Name=login.x", "Value=29", ENDITEM, 
 		"Name=login.y", "Value=10", ENDITEM, 
 		LAST);
-	rc=wi_end_transaction();
+	rc=wi_end_transaction(rc);
 	
 	return 0;		
 } //WT3_SignIn_Error
@@ -420,6 +425,10 @@ WT3_SignIn(){
 		// TODO: If {parm_userid} is blank, return as error.
 		// Response HTML: <blockquote>Welcome, <b>jaja01</b>, to the Web Tour
 		web_reg_find("Text=Welcome, <b>{parm_userid}</b>,", "Fail=NOTFOUND", "SaveCount=Found_count", LAST); // positive test
+		web_reg_find("Text=<h2>Server Validation Error</h2>","SaveCount=Err_count", LAST ); // When MSO_JSFormSubmit2=on
+
+		// HTTP Status-Code=404 (Not Found) for "http://127.0.0.1:1080/WebTours/images/startover.gif"  	[MsgId: MWAR-26627]
+		// HTTP Status-Code=404 (Not Found) for "http://127.0.0.1:1080/WebTours/images/splash_error2.jpg"  	[MsgId: MWAR-26627]
 
 		wi_start_transaction();
 		web_submit_form("SignIn.pl_4", 
@@ -430,7 +439,6 @@ WT3_SignIn(){
 			"Name=login.x", "Value=29", ENDITEM, 
 			"Name=login.y", "Value=10", ENDITEM, 
 			LAST);
-		rc=wi_end_transaction();
 	
 		if(rc == LR_PASS){
 			isSignedIn = TRUE;
@@ -440,9 +448,15 @@ WT3_SignIn(){
 	
 		if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
 			rc = LR_PASS;
+			rc=wi_end_transaction(rc);
 			break; // exit loop successfully.			
 		}else{ // "Thank you not found.
 			rc = LR_FAIL; 
+			if( atoi( lr_eval_string("{Err_count}") ) > 0 ){
+				rc=wi_end_transaction(rc);
+				break; // because already found, so no need to retry SignUp.
+			} 
+			// cycle through loop again to retry.
 		}
 	}
 
@@ -457,13 +471,21 @@ WT3_SignOut(){
 
 	if(isSignedIn == TRUE){
 	
-		web_reg_find("Text=Welcome to the Web Tours site", "Fail=NOTFOUND", LAST);
-		wi_start_transaction();
-		web_image("SignOff Button", 
-			"Alt=SignOff Button", 
-			"Snapshot=t7.inf", 
-			LAST);
-		rc=wi_end_transaction();
+			web_reg_find("Text=Welcome to the Web Tours site","Fail=NotFound","SaveCount=Found_count", LAST );
+			wi_start_transaction();
+			web_image("SignOff Button", 
+				"Alt=SignOff Button", 
+				"Snapshot=t7.inf", 
+				LAST);
+			
+		if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
+			rc = LR_PASS;
+			rc=wi_end_transaction(rc);
+			// break; // exit loop successfully.			
+		}else{ // not found.
+			rc = LR_FAIL; 
+			rc=wi_end_transaction(rc);
+		}
 
 	} // if(isSignedIn == TRUE)
 	

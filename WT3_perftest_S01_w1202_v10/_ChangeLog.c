@@ -4,8 +4,9 @@
 */
 // TODO: Add logic for handling "Internal Server Error" MSO_SErrors.
 // v10 2015.08.04 wm: Verify retry logic with MSO_SErrors on for 500 errors.
-
 // v10 2015.08.05 wm: Fix Verbosity value default message.
+
+// v10 2015.08.05 wm: Add Cancel Checked.
 // v10 2015.08.05 wm: Fix SignIn after SignUp.
 // v10 2015.08.04 wm: Add Itineraries count.
 // v10 2015.08.04 wm: Add print and reset function around output statements.
