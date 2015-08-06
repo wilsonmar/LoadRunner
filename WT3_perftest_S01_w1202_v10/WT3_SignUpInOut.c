@@ -103,16 +103,21 @@ WT3_SignUpInOut(){ // .c file.
 				// Because there is no "Cancel" button in the SignUp screen when "username is taken":
 				lr_save_string("WT3_T03_URL_Landing","pTransName");
 	 			rc=WT3_URL_Landing(); // just for establishing state to signin or invoke run conitions.
+	 		if( rc != LR_PASS ){ return rc; } 
+
+	 			lr_save_string("WT3_T07_SignIn","pTransName");
+				rc=WT3_SignIn();
 			}
 		}
 		// else Ignore. 
 	}
-	if( rc != LR_PASS ){ return rc; }
-
+	if( rc != LR_PASS ){ return rc; } 
+	
+	
+	// 	||  stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND SignIn is not needed because continue signs in.	
 	if( stricmp("All",LPCSTR_RunType ) == FOUND
 	||  stricmp("SignInOnly",LPCSTR_RunType ) == FOUND 
     ||  stricmp("SignInOut",LPCSTR_RunType ) == FOUND 
-	||  stricmp("SignUpInOut",LPCSTR_RunType ) == FOUND 
     ){
 		lr_save_string("WT3_T07_SignIn","pTransName");
 		rc=WT3_SignIn();

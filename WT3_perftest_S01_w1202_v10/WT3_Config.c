@@ -28,10 +28,10 @@ int WT3_Config_Run_Conditions(){ // after landing
 
 	// Switch from "<OFF>" to "on":
 	lr_save_string("<OFF>","MSO_Comments");
-	lr_save_string("on","MSO_JSCalc"); // Add JavaScript to calculate days in advance for ticket purchase. 
+	lr_save_string("<OFF>","MSO_JSCalc"); // Add JavaScript to calculate days in advance for ticket purchase. 
 	lr_save_string("<OFF>","MSO_JSFormSubmit1"); // Set LOGIN form's action tag to an error page in WT3_URL_Landing.
 	lr_save_string("<OFF>","MSO_JSFormSubmit2"); // Set RESERVATION form's action tag to an error page. 
-	lr_save_string("on","MSO_JSVerify"); // Verify inputs for non-blank entries.
+	lr_save_string("<OFF>","MSO_JSVerify"); // Verify inputs for non-blank entries.
 	lr_save_string("<OFF>","MSO_JSWPages");
 	lr_save_string("<OFF>","MSO_Redirect");
 	lr_save_string("<OFF>","MSO_Redirects");
