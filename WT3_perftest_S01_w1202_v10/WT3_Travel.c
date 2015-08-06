@@ -93,18 +93,20 @@ WT3_Travel(){ // call from within Action.c.
 		||  stricmp("Cancel",LPCSTR_UseCase ) == FOUND
    		){
 			lr_save_string("WT3_T33_Travel_Check_Itinerary","pTransName");
-			rc=WT3_T33_Travel_Check_Itinerary();			
+			rc=WT3_T33_Travel_Check_Itinerary(); // Itineraries_count is updated inside.	
 			if( rc != LR_PASS ){ return rc; }
 		}
-/*
-		if( stricmp("All",LPCSTR_UseCase ) == FOUND
-		||  stricmp("Cancel",LPCSTR_UseCase ) == FOUND
-   		){
-			lr_save_string("WT3_T34_Cancel_Checked_Itinerary","pTransName");
-			rc=WT3_T34_Cancel_Checked_Itinerary();			
-			if( rc != LR_PASS ){ return rc; }
+
+/*		if( Itineraries_count > 0 ){
+			if( stricmp("All",LPCSTR_UseCase ) == FOUND
+			||  stricmp("Cancel",LPCSTR_UseCase ) == FOUND
+   			){
+				lr_save_string("WT3_T34_Cancel_Itinerary","pTransName");
+				rc=WT3_T34_Cancel_Itinerary();			
+				if( rc != LR_PASS ){ return rc; }
+			}
 		}
-*/				
+*/
 		if( stricmp("All",LPCSTR_UseCase ) == FOUND
 		||  stricmp("Home",LPCSTR_UseCase ) == FOUND
    		){
@@ -240,6 +242,8 @@ WT3_T24_Find_Flight(){
 		// If MSO_SLoad="on", HTTP Status 503 (System Cannot Complete Request)
 		// is issued for the % time specified in MSO_ServerLoadProb.
 
+		// Table:	
+			// Denver to Los Angeles - Flight 030
 		wi_start_transaction();
 		web_submit_form("reservations.pl_2", 
 			"Snapshot=t35.inf", 
@@ -373,12 +377,14 @@ WT3_T33_Travel_Check_Itinerary(){
 		wi_retry_add_time( i );
 
 		web_reg_find("Text=Itinerary","Fail=NotFound","SaveCount=Found_count", LAST );
+//		web_reg_find("Text=No flights have been reserved","Fail=NotFound","SaveCount=No_count", LAST );
 
 		// TODO: Add count of itinerary items returned, as this may impact response time.
 		web_reg_save_param_ex(
 		    "ParamName=Itineraries", 
 		    "LB=flightID\" value=\"","RB=\"",
 		    "Ordinal=all",
+		    "NotFound=warning",
 		    SEARCH_FILTERS,
 	        "Scope=body", LAST);
 
@@ -388,14 +394,18 @@ WT3_T33_Travel_Check_Itinerary(){
 			"Snapshot=t42.inf", 
 			LAST);
 		
-	    if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
-			wi_startPrintingTrace();
-			lr_output_message(">> Itineraries_count=%s, 1st=%s."
-			                  ,lr_eval_string("{Itineraries_count}")
-			                  ,lr_eval_string("{Itineraries_1}")
-							  );
-			wi_resetPrinting();
-			
+	    if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){ // Itinerary title found.
+		 // if( atoi( lr_eval_string("{No_count}") ) != 1 ){ // Itineraries found:
+		 // lr_paramarr_len("Itineraries");
+		    if( atoi( lr_eval_string("{Itineraries_count}") ) > 0 ){ // Itineraries found:
+				Itineraries_count = atoi( lr_eval_string("{Itineraries_count}") );
+				wi_startPrintingTrace();
+				lr_output_message(">> Itineraries_count=%d, 1st=%s."
+				                  ,Itineraries_count
+				                  ,lr_eval_string("{Itineraries_1}")
+								  );
+				wi_resetPrinting();
+			}
 			rc=LR_PASS;
 			rc=wi_end_transaction(rc);
 			break; // out of loop.			
@@ -404,35 +414,87 @@ WT3_T33_Travel_Check_Itinerary(){
 			rc=LR_FAIL; // Fall-out of loop when retries are exhausted.
 			rc=wi_end_transaction(rc);
 		}
-	} 	
+	}
+
 	return rc;
 }//WT3_T33_Travel_Check_Itinerary
 
+// Thanks to Joel Splatsky at http://www.joelonsoftware.com/articles/fog0000000319.html
+char* mystrcat( char* dest, char* src )
+{
+     while (*dest) dest++;
+     while (*dest++ = *src++);
+     return --dest;
+}
 
-WT3_T34_Cancel_Checked_Itinerary(){
+WT3_T34_Cancel_Itinerary(){
 	int rc=LR_PASS;
-	int i; int x;
-	for(i=1; i < iRequestRetries; i++){ // 5 times retry: 1,2,3,4,5
-		wi_retry_add_time( i );
+	int i; int n; int x;
+	char     charDisplay[1000];
+	char     charRequest[1000];
+	char *p =charRequest;
+	
+	//  n=atoi( lr_eval_string("{Itineraries_count}"));
+	    n= Itineraries_count; // lr_paramarr_len("Itineraries");
+	wi_noop();
+	if( n <= 0 ){ return LR_PASS; } // Do below only there were itineraries listed in previous step WT3_T33_Travel_Check_Itinerary.
+    	// Loop through itineraries to build a request:
 
-		x=atoi( lr_eval_string("{Itineraries_count}"));
-		if( x > 0 ){ // Do this only there were itineraries listed in previous step WT3_T33_Travel_Check_Itinerary.
+		charRequest[0] = '\0'; // begin array for use by mystrcat().
+		for(x=1; x < n; x++){ // loop through itineraries array:
+			// add itineraries[x] to string, (snprintf() not available within LR to do bounds checking):
+			// such as "1=on&flightID=210297416-788-jC"
+			sprintf(charDisplay,"%d=on&flightID=%s",x,lr_paramarr_idx("Itineraries",x));
+			// lr_output_message(">> [%d] %s",n,charDisplay);
+			if( x > 1){
+				p = mystrcat(p,"&");
+			}
+ 				p = mystrcat(p,charDisplay);
+		}
+				p = mystrcat(p,"&removeFlights.x=53&removeFlights.y=2");
+		lr_output_message(">> p=%s",charRequest);
+	wi_noop();
+	
+		for(x=1; x<=n; x++){ // loop through itineraries array:
+		
+			// QUESTION: What determines this sequence?
+			// "Name=.cgifields", "Value=6", ENDITEM, 
+			// "Name=.cgifields", "Value=3", ENDITEM, 
+			// "Name=.cgifields", "Value=7", ENDITEM, 
+			// "Name=.cgifields", "Value=2", ENDITEM, 
+			// "Name=.cgifields", "Value=8", ENDITEM, 
+			// "Name=.cgifields", "Value=1", ENDITEM, 
+			// "Name=.cgifields", "Value=4", ENDITEM, 
+			// "Name=.cgifields", "Value=5", ENDITEM, 
 
-			// Only if all have been cancelled does this message appear:
- 			// web_reg_find("Text=No flights have been reserved","Fail=NotFound","SaveCount=Found_count", LAST );
+			sprintf(charDisplay,"&.cgifields=%d",x);
+			lr_output_message(">> [%d] %s",n,charDisplay);
+				p = mystrcat(p,charDisplay);
+		}
 
-			for(i=1; i < iRequestRetries; i++){ // retry for network trouble
+		lr_save_string(charRequest,"haha"); // convert string to parameter for use in web_custom_request().
+			lr_output_message(">> Body=%s",lr_eval_string("{haha}"));
+
+			for(x=1; i < iRequestRetries; i++){ // 5 times retry: 1,2,3,4,5
+				wi_retry_add_time( i );
+
+				// Only if all have been cancelled does this message appear:
+ 				web_reg_find("Text=No flights have been reserved","Fail=NotFound","SaveCount=Found_count", LAST );
+
 				// count of Itineraries
 				wi_start_transaction();
-				web_submit_form("itinerary.pl", 
-					"Snapshot=t103.inf",
-					ITEMDATA, 
-					"Name=1", "Value=on", ENDITEM, 
-					LAST);
-					// TODO: Rather than one Name per form, Vary number of fields submitted.
+				web_custom_request("cancel_itinerary.pl", "Method=POST",
+					"URL={WebToursPath}/cgi-bin/itinerary.pl",
+					"Body={haha}",
+					"TargetFrame=",LAST);
+				// Instead of:
+				//web_submit_form("itinerary.pl", 
+				//	"Snapshot=t103.inf",
+				//	ITEMDATA, 
+				//	"Name=1", "Value=on", ENDITEM, 
+				//	LAST);
 			
 			    if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
-					// TODO: Add count of itinerary items canceled, as this may impact response time.
 					rc=LR_PASS;
 					rc=wi_end_transaction(rc);
 					break; // out of loop.			
@@ -441,8 +503,8 @@ WT3_T34_Cancel_Checked_Itinerary(){
 				}
 				rc=LR_FAIL; // Fall-out of loop when retries are exhausted.
 				rc=wi_end_transaction(rc);
- 			}
-		} // if( atoi( lr_eval_string("{Itineraries}")) > 0 
-	} 	
+
+			} // for(x=1; i < iRequestRetries; i++)
+
 	return rc;
-}//WT3_T34_Cancel_Checked_Itinerary	
+}//WT3_T34_Cancel_Itinerary	

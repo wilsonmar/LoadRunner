@@ -84,6 +84,8 @@ Also contains declaration of app-specific global variables accessible from funct
 	int				iUpdate_shorturl_in_VTS; // 1=Yes, 0=No.
 #endif // USE_VTS
 
+// WebTours-specific global variables:
+	int Itineraries_count=0;
 
 vuser_init()
 {

@@ -1,0 +1,5 @@
+"1=on&flightID=210297416-788-jC&2=on&flightID=210297416-1557-jC&3=on&flightID=210297416-2327-jC"
+"&4=on&flightID=210297416-3096-jC&5=on&flightID=210297416-3865-jC&6=on&flightID=210297416-4634-"
+"jC&7=on&flightID=210297416-5403-jC&8=on&flightID=210297416-6173-jC&removeFlights.x=53&removeFl"
+"ights.y=2&.cgifields=6&.cgifields=3&.cgifields=7&.cgifields=2&.cgifields=8&.cgifields=1&.cgifi"
+"elds=4&.cgifields=5"

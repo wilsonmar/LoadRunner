@@ -52,10 +52,7 @@ Failed to get information of process Id: 3944
 Failed to get information of process Id: 3232
 Failed to get information of process Id: 3336
 Failed to get information of process Id: 4892
-PROCESS 0x6fc       sh.exe
-Failed to get information of process Id: 2856
 PROCESS 0x1384      ctfmon.exe
-Failed to get information of process Id: 5284
 PROCESS 0x166c      chrome.exe
 PROCESS 0x1498      chrome.exe
 PROCESS 0x11e8      chrome.exe
@@ -73,6 +70,11 @@ Failed to get information of process Id: 5176
 Failed to get information of process Id: 5860
 PROCESS 0x16e8      httpd.exe
 PROCESS 0x1698      httpd.exe
-Failed to get information of process Id: 1944
-PROCESS 0x1244      chrome.exe
-PROCESS 0xdb0       vugen.exe
+Failed to get information of process Id: 1972
+PROCESS 0xeb0       chrome.exe
+Failed to get information of process Id: 4572
+Failed to get information of process Id: 1036
+PROCESS 0x15fc      chrome.exe
+PROCESS 0xcc4       sh.exe
+Failed to get information of process Id: 6000
+PROCESS 0x1068      vugen.exe

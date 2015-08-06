@@ -1,0 +1,10 @@
+GET /WebTours/images/mer_login.gif HTTP/1.1
+Host: 127.0.0.1:1080
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0
+Accept: image/png,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://127.0.0.1:1080/cgi-bin/nav.pl?in=home
+Cookie: MSO=SID&1438893514&MSO_ServerErrorsProb&100&MSO_ServerLoadProb&100
+Connection: keep-alive
+

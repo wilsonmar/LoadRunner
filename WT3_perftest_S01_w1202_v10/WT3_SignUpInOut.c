@@ -474,6 +474,7 @@ WT3_SignIn_isSignedIn(int in_rc){
 			isSignedIn = FALSE;
 		}
 	
+	return rc;
 } // WT3_SignIn_isSignedIn()
 
 WT3_SignOut(){

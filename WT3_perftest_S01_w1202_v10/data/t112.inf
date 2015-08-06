@@ -1,0 +1,11 @@
+[t112]
+FileName1=t112.htm
+URL1=http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=itinerary
+Total=1
+ContentType=text/html
+SnapshotXmlFile=snapshot_112.xml
+RequestHeaderFile=t112_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t112_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

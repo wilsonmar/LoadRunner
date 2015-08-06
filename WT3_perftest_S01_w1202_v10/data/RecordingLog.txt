@@ -1,254 +1,138 @@
-[API Trapper      ( 41c: cf8)] Recording in 32-bit mode: C:\Program Files (x86)\Mozilla Firefox\firefox.exe
-[Network Analyzer ( 41c: cf8)] ------------------------------------------------------------------------------------------
-[Network Analyzer ( 41c: cf8)] Load Network Traffic Analyzers:
-[Network Analyzer ( 41c: cf8)]     Analyzer Module: WPLUS (value=)
-[Network Analyzer ( 41c: cf8)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter.dll)
-[Network Analyzer ( 41c: cf8)]     + Network Analyzer: api_http_filter.dll @ GetHttpProtocolAnalyzer Loaded!
-[Network Analyzer ( 41c: cf8)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter.dll
-[Network Analyzer ( 41c: cf8)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer.dll)
-[Network Analyzer ( 41c: cf8)]     + Network Analyzer: WebSocketAnalyzer.dll @ GetWebSocketProtocolAnalyzer Loaded!
-[Network Analyzer ( 41c: cf8)]     Analyzer Module: local_server (value=)
-[Network Analyzer ( 41c: cf8)] ------------------------------------------------------------------------------------------
-[Network Analyzer ( 41c: bb0)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Network Analyzer ( 41c: cf8)] Establish Listener @ 127.0.0.1:0
-[Network Analyzer ( 41c: cf8)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Network Analyzer ( 41c: cf8)] Request Connection: Remote Server @ 127.0.0.1:8930   (Service=)  (Sid=  2)  PROXIED!
-[Network Analyzer ( 41c: cf8)] Accept Connection : Service @ 127.0.0.1:8930  ,  Remote Client @ 127.0.0.1:8931
-[Network Analyzer ( 41c: bb0)]   (Sid:  3) Connection Terminated (by Client)
-[Network Analyzer ( 41c: bb0)]   (Sid:  2) Connection Terminated (by Server)
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  4)  PROXIED!
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Web Request      ( 41c: bb0)] "GET /WebTours/index.htm"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  4) Client -> Server @ : 306 bytes (Service=HTTP)
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 63.245.217.44:443   (Service=)  (Sid=  5)  PROXIED!
-[Network Analyzer ( 41c: bb0)]   (Sid:  4) Server -> Client : 664 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /WebTours/header.html"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  4) Client -> Server @ : 359 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  4) Server -> Client : 1007 bytes  (Service=HTTP)
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  6)  PROXIED!
-[Web Request      ( 41c: bb0)] "GET /WebTours/images/hp_logo.png"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  4) Client -> Server @ : 338 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  4) Server -> Client : 898 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /cgi-bin/welcome.pl?signOff=true"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  6) Client -> Server @ : 370 bytes (Service=HTTP)
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  7)  PROXIED!
-[Network Analyzer ( 41c: bb0)]   (Sid:  6) Server -> Client : 1083 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  6) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /WebTours/images/webtours.png"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  7) Client -> Server @ : 339 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  7) Server -> Client : 4487 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /cgi-bin/nav.pl?in=home"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  7) Client -> Server @ : 464 bytes (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /WebTours/home.html"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  4) Client -> Server @ : 460 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  4) Server -> Client : 1659 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  7) Server -> Client : 1752 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  7) Server -> Client : 5 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: cc4)]   (Sid:  5) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
-[Web Request      ( 41c: bb0)] "GET /WebTours/images/mer_login.gif"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  7) Client -> Server @ : 432 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  7) Server -> Client : 976 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /favicon.ico"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  7) Client -> Server @ : 389 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  7) Server -> Client : 424 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /favicon.ico"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  7) Client -> Server @ : 389 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  7) Server -> Client : 424 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: cc4)]   (Sid:  5) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES128-SHA)
-[Network Analyzer ( 41c: bb0)]   (Sid:  5) Connection Terminated (by Client)
-[Network Analyzer ( 41c: bb0)]   (Sid:  6) Connection Terminated (by Server)
-[Network Analyzer ( 41c: bb0)]   (Sid:  4) Connection Terminated (by Server)
-[Network Analyzer ( 41c: bb0)]   (Sid:  7) Connection Terminated (by Server)
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  8)  PROXIED!
-[Web Request      ( 41c: bb0)] "POST /cgi-bin/login.pl"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  8) Client -> Server @ : 642 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  8) Server -> Client : 847 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  8) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /cgi-bin/nav.pl?page=menu&in=home"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  8) Client -> Server @ : 569 bytes (Service=HTTP)
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  9)  PROXIED!
-[Network Analyzer ( 41c: bb0)]   (Sid:  8) Server -> Client : 1744 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  8) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /cgi-bin/login.pl?intro=true"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  9) Client -> Server @ : 564 bytes (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /WebTours/images/flights.gif"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  8) Client -> Server @ : 550 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  8) Server -> Client : 1023 bytes  (Service=HTTP)
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Network Analyzer ( 41c: bb0)]   (Sid:  9) Server -> Client : 1154 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  9) Server -> Client : 5 bytes  (Service=HTTP)
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 10)  PROXIED!
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Web Request      ( 41c: bb0)] "GET /WebTours/images/itinerary.gif"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 10) Client -> Server @ : 552 bytes (Service=HTTP)
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 11)  PROXIED!
-[Web Request      ( 41c: bb0)] "GET /WebTours/images/in_home.gif"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 11) Client -> Server @ : 550 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 10) Server -> Client : 1031 bytes  (Service=HTTP)
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Network Analyzer ( 41c: bb0)]   (Sid: 11) Server -> Client : 986 bytes  (Service=HTTP)
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 12)  PROXIED!
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Web Request      ( 41c: bb0)] "GET /WebTours/images/signoff.gif"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 12) Client -> Server @ : 550 bytes (Service=HTTP)
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 13)  PROXIED!
-[Network Analyzer ( 41c: bb0)]   (Sid: 12) Server -> Client : 1049 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /cgi-bin/welcome.pl?page=search"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  8) Client -> Server @ : 583 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  8) Server -> Client : 838 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  8) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /cgi-bin/nav.pl?page=menu&in=flights"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  8) Client -> Server @ : 586 bytes (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /cgi-bin/reservations.pl?page=welcome"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  9) Client -> Server @ : 587 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  8) Server -> Client : 1744 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  8) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /WebTours/images/in_flights.gif"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  8) Client -> Server @ : 556 bytes (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /WebTours/images/home.gif"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 12) Client -> Server @ : 550 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 12) Server -> Client : 985 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  8) Server -> Client : 1023 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  9) Server -> Client : 4234 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  9) Server -> Client : 455 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /WebTours/chooseFlightValidate.js"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  9) Client -> Server @ : 529 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  9) Server -> Client : 12349 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /WebTours/images/button_next.gif"   
-[Network Analyzer ( 41c: bb0)]   (Sid:  9) Client -> Server @ : 558 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid:  9) Server -> Client : 1055 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 10) Connection Terminated (by Server)
-[Network Analyzer ( 41c: bb0)]   (Sid: 11) Connection Terminated (by Server)
-[Network Analyzer ( 41c: bb0)]   (Sid:  8) Connection Terminated (by Server)
-[Network Analyzer ( 41c: bb0)]   (Sid: 12) Connection Terminated (by Server)
-[Network Analyzer ( 41c: bb0)]   (Sid: 13) Connection Terminated (by Client)
-[Network Analyzer ( 41c: bb0)]   (Sid:  9) Connection Terminated (by Server)
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 14)  PROXIED!
-[Web Request      ( 41c: bb0)] "POST /cgi-bin/reservations.pl"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 14) Client -> Server @ : 890 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 14) Server -> Client : 2847 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 14) Server -> Client : 5 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 14) Connection Terminated (by Server)
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 15)  PROXIED!
-[Web Request      ( 41c: bb0)] "POST /cgi-bin/reservations.pl"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 15) Client -> Server @ : 782 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 15) Server -> Client : 3070 bytes  (Service=HTTP)
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 16)  PROXIED!
-[Network Analyzer ( 41c: bb0)]   (Sid: 15) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /WebTours/purchaseValidate.js"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 16) Client -> Server @ : 512 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 16) Server -> Client : 12106 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /cgi-bin/welcome.pl?page=search"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 16) Client -> Server @ : 586 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 16) Server -> Client : 838 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 16) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /cgi-bin/nav.pl?page=menu&in=flights"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 16) Client -> Server @ : 586 bytes (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /cgi-bin/reservations.pl?page=welcome"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 15) Client -> Server @ : 587 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 16) Server -> Client : 1744 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 16) Server -> Client : 5 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 15) Server -> Client : 4234 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 15) Server -> Client : 450 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 15) Server -> Client : 5 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 16) Connection Terminated (by Server)
-[Network Analyzer ( 41c: bb0)]   (Sid: 15) Connection Terminated (by Server)
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 17)  PROXIED!
-[Web Request      ( 41c: bb0)] "POST /cgi-bin/reservations.pl"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 17) Client -> Server @ : 892 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 17) Server -> Client : 2851 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 17) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "POST /cgi-bin/reservations.pl"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 17) Client -> Server @ : 781 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 17) Server -> Client : 3069 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 17) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /cgi-bin/welcome.pl?page=search"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 17) Client -> Server @ : 586 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 17) Server -> Client : 838 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 17) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /cgi-bin/nav.pl?page=menu&in=flights"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 17) Client -> Server @ : 586 bytes (Service=HTTP)
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 18)  PROXIED!
-[Network Analyzer ( 41c: bb0)]   (Sid: 17) Server -> Client : 1744 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 17) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /cgi-bin/reservations.pl?page=welcome"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 18) Client -> Server @ : 587 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 18) Server -> Client : 4235 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 18) Server -> Client : 450 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 18) Server -> Client : 5 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 17) Connection Terminated (by Server)
-[Network Analyzer ( 41c: bb0)]   (Sid: 18) Connection Terminated (by Server)
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 19)  PROXIED!
-[Web Request      ( 41c: bb0)] "POST /cgi-bin/reservations.pl"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 19) Client -> Server @ : 888 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 19) Server -> Client : 2843 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 19) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "POST /cgi-bin/reservations.pl"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 19) Client -> Server @ : 781 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 19) Server -> Client : 3069 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 19) Server -> Client : 5 bytes  (Service=HTTP)
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 20)  PROXIED!
-[Web Request      ( 41c: bb0)] "GET /cgi-bin/welcome.pl?page=search"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 19) Client -> Server @ : 586 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 19) Server -> Client : 838 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 19) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /cgi-bin/nav.pl?page=menu&in=flights"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 19) Client -> Server @ : 586 bytes (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /cgi-bin/reservations.pl?page=welcome"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 20) Client -> Server @ : 587 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 19) Server -> Client : 1744 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 19) Server -> Client : 5 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 20) Server -> Client : 4235 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 20) Server -> Client : 450 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 20) Server -> Client : 5 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 19) Connection Terminated (by Server)
-[Network Analyzer ( 41c: bb0)]   (Sid: 20) Connection Terminated (by Server)
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 21)  PROXIED!
-[Web Request      ( 41c: bb0)] "POST /cgi-bin/reservations.pl"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 21) Client -> Server @ : 895 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 21) Server -> Client : 2849 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 21) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "POST /cgi-bin/reservations.pl"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 21) Client -> Server @ : 780 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 21) Server -> Client : 3067 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 21) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /cgi-bin/welcome.pl?page=search"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 21) Client -> Server @ : 586 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 21) Server -> Client : 838 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 21) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /cgi-bin/nav.pl?page=menu&in=flights"   
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Network Analyzer ( 41c: bb0)]   (Sid: 21) Client -> Server @ : 586 bytes (Service=HTTP)
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 22)  PROXIED!
-[Network Analyzer ( 41c: bb0)]   (Sid: 21) Server -> Client : 1744 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "GET /cgi-bin/reservations.pl?page=welcome"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 22) Client -> Server @ : 587 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 21) Server -> Client : 5 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 22) Server -> Client : 4235 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 22) Server -> Client : 450 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 22) Server -> Client : 5 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 21) Connection Terminated (by Server)
-[Network Analyzer ( 41c: bb0)]   (Sid: 22) Connection Terminated (by Server)
-[Network Analyzer ( 41c:1550)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
-[Network Analyzer ( 41c:1550)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 23)  PROXIED!
-[Web Request      ( 41c: bb0)] "POST /cgi-bin/reservations.pl"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 23) Client -> Server @ : 887 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 23) Server -> Client : 2845 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 23) Server -> Client : 5 bytes  (Service=HTTP)
-[Web Request      ( 41c: bb0)] "POST /cgi-bin/reservations.pl"   
-[Network Analyzer ( 41c: bb0)]   (Sid: 23) Client -> Server @ : 782 bytes (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 23) Server -> Client : 3071 bytes  (Service=HTTP)
-[Network Analyzer ( 41c: bb0)]   (Sid: 23) Server -> Client : 5 bytes  (Service=HTTP)
+[API Trapper      ( 3d4: a1c)] Recording in 32-bit mode: C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+[Network Analyzer ( 3d4: a1c)] ------------------------------------------------------------------------------------------
+[Network Analyzer ( 3d4: a1c)] Load Network Traffic Analyzers:
+[Network Analyzer ( 3d4: a1c)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer ( 3d4: a1c)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter.dll)
+[Network Analyzer ( 3d4: a1c)]     + Network Analyzer: api_http_filter.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer ( 3d4: a1c)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter.dll
+[Network Analyzer ( 3d4: a1c)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer.dll)
+[Network Analyzer ( 3d4: a1c)]     + Network Analyzer: WebSocketAnalyzer.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer ( 3d4: a1c)]     Analyzer Module: local_server (value=)
+[Network Analyzer ( 3d4: a1c)] ------------------------------------------------------------------------------------------
+[Network Analyzer ( 3d4:107c)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( 3d4: a1c)] Establish Listener @ 127.0.0.1:0
+[Network Analyzer ( 3d4: a1c)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( 3d4: a1c)] Request Connection: Remote Server @ 127.0.0.1:11590   (Service=)  (Sid=  2)  PROXIED!
+[Network Analyzer ( 3d4: a1c)] Accept Connection : Service @ 127.0.0.1:11590  ,  Remote Client @ 127.0.0.1:11591
+[Network Analyzer ( 3d4:107c)]   (Sid:  3) Connection Terminated (by Client)
+[Network Analyzer ( 3d4:107c)]   (Sid:  2) Connection Terminated (by Server)
+[Network Analyzer ( 3d4: dec)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( 3d4: dec)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  4)  PROXIED!
+[Network Analyzer ( 3d4: dec)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Web Request      ( 3d4:107c)] "GET /WebTours/index.htm"   
+[Network Analyzer ( 3d4:107c)]   (Sid:  4) Client -> Server @ : 306 bytes (Service=HTTP)
+[Network Analyzer ( 3d4: dec)] Request Connection: Remote Server @ 63.245.217.137:443   (Service=)  (Sid=  5)  PROXIED!
+[Network Analyzer ( 3d4:107c)]   (Sid:  4) Server -> Client : 664 bytes  (Service=HTTP)
+[Web Request      ( 3d4:107c)] "GET /WebTours/header.html"   
+[Network Analyzer ( 3d4:107c)]   (Sid:  4) Client -> Server @ : 359 bytes (Service=HTTP)
+[Network Analyzer ( 3d4: dec)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( 3d4:107c)]   (Sid:  4) Server -> Client : 1007 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4: dec)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  6)  PROXIED!
+[Web Request      ( 3d4:107c)] "GET /WebTours/images/hp_logo.png"   
+[Network Analyzer ( 3d4:107c)]   (Sid:  4) Client -> Server @ : 338 bytes (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  4) Server -> Client : 898 bytes  (Service=HTTP)
+[Web Request      ( 3d4:107c)] "GET /cgi-bin/welcome.pl?signOff=true"   
+[Network Analyzer ( 3d4:107c)]   (Sid:  6) Client -> Server @ : 370 bytes (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  6) Server -> Client : 1069 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4: dec)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( 3d4: dec)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  7)  PROXIED!
+[Network Analyzer ( 3d4:107c)]   (Sid:  6) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      ( 3d4:107c)] "GET /WebTours/images/webtours.png"   
+[Network Analyzer ( 3d4:107c)]   (Sid:  7) Client -> Server @ : 339 bytes (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  7) Server -> Client : 4487 bytes  (Service=HTTP)
+[Web Request      ( 3d4:107c)] "GET /cgi-bin/nav.pl?in=home"   
+[Network Analyzer ( 3d4:107c)]   (Sid:  4) Client -> Server @ : 450 bytes (Service=HTTP)
+[Web Request      ( 3d4:107c)] "GET /WebTours/home.html"   
+[Network Analyzer ( 3d4:107c)]   (Sid:  6) Client -> Server @ : 446 bytes (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  6) Server -> Client : 1659 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  4) Server -> Client : 1751 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  4) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      ( 3d4:107c)] "GET /WebTours/images/mer_login.gif"   
+[Network Analyzer ( 3d4:107c)]   (Sid:  7) Client -> Server @ : 418 bytes (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  7) Server -> Client : 976 bytes  (Service=HTTP)
+[Web Request      ( 3d4:107c)] "GET /favicon.ico"   
+[Network Analyzer ( 3d4:107c)]   (Sid:  7) Client -> Server @ : 375 bytes (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  7) Server -> Client : 424 bytes  (Service=HTTP)
+[Web Request      ( 3d4:107c)] "GET /favicon.ico"   
+[Network Analyzer ( 3d4:107c)]   (Sid:  7) Client -> Server @ : 375 bytes (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  7) Server -> Client : 424 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4:12bc)]   (Sid:  5) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer ( 3d4:12bc)]   (Sid:  5) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:DHE-RSA-AES128-SHA)
+[Network Analyzer ( 3d4:107c)]   (Sid:  5) Connection Terminated (by Client)
+[Network Analyzer ( 3d4:107c)]   (Sid:  7) Connection Terminated (by Client)
+[Network Analyzer ( 3d4:107c)]   (Sid:  4) Connection Terminated (by Client)
+[Network Analyzer ( 3d4:107c)]   (Sid:  6) Connection Terminated (by Server)
+[Network Analyzer ( 3d4: dec)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( 3d4: dec)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  8)  PROXIED!
+[Web Request      ( 3d4:107c)] "POST /cgi-bin/login.pl"   
+[Network Analyzer ( 3d4:107c)]   (Sid:  8) Client -> Server @ : 629 bytes (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  8) Server -> Client : 932 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  8) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      ( 3d4:107c)] "GET /cgi-bin/nav.pl?page=menu&in=home"   
+[Network Analyzer ( 3d4:107c)]   (Sid:  8) Client -> Server @ : 640 bytes (Service=HTTP)
+[Network Analyzer ( 3d4: dec)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( 3d4: dec)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  9)  PROXIED!
+[Network Analyzer ( 3d4:107c)]   (Sid:  8) Server -> Client : 1744 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  8) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      ( 3d4:107c)] "GET /cgi-bin/login.pl?intro=true"   
+[Network Analyzer ( 3d4:107c)]   (Sid:  9) Client -> Server @ : 635 bytes (Service=HTTP)
+[Web Request      ( 3d4:107c)] "GET /WebTours/images/flights.gif"   
+[Network Analyzer ( 3d4:107c)]   (Sid:  8) Client -> Server @ : 621 bytes (Service=HTTP)
+[Network Analyzer ( 3d4: dec)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( 3d4: dec)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 10)  PROXIED!
+[Network Analyzer ( 3d4: dec)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Web Request      ( 3d4:107c)] "GET /WebTours/images/itinerary.gif"   
+[Network Analyzer ( 3d4:107c)]   (Sid: 10) Client -> Server @ : 623 bytes (Service=HTTP)
+[Network Analyzer ( 3d4: dec)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 11)  PROXIED!
+[Network Analyzer ( 3d4:107c)]   (Sid: 10) Server -> Client : 1031 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  8) Server -> Client : 1023 bytes  (Service=HTTP)
+[Web Request      ( 3d4:107c)] "GET /WebTours/images/in_home.gif"   
+[Network Analyzer ( 3d4:107c)]   (Sid: 11) Client -> Server @ : 621 bytes (Service=HTTP)
+[Network Analyzer ( 3d4: dec)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( 3d4:107c)]   (Sid: 11) Server -> Client : 986 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4: dec)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 12)  PROXIED!
+[Network Analyzer ( 3d4: dec)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Web Request      ( 3d4:107c)] "GET /WebTours/images/signoff.gif"   
+[Network Analyzer ( 3d4:107c)]   (Sid: 12) Client -> Server @ : 621 bytes (Service=HTTP)
+[Network Analyzer ( 3d4: dec)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 13)  PROXIED!
+[Network Analyzer ( 3d4:107c)]   (Sid: 12) Server -> Client : 1049 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  9) Server -> Client : 1156 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  9) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      ( 3d4:107c)] "GET /cgi-bin/welcome.pl?page=itinerary"   
+[Network Analyzer ( 3d4:107c)]   (Sid:  8) Client -> Server @ : 657 bytes (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  8) Server -> Client : 813 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  8) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      ( 3d4:107c)] "GET /cgi-bin/nav.pl?page=menu&in=itinerary"   
+[Network Analyzer ( 3d4:107c)]   (Sid:  8) Client -> Server @ : 662 bytes (Service=HTTP)
+[Web Request      ( 3d4:107c)] "GET /cgi-bin/itinerary.pl"   
+[Network Analyzer ( 3d4:107c)]   (Sid:  9) Client -> Server @ : 645 bytes (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  9) Server -> Client : 4234 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  9) Server -> Client : 4104 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  9) Server -> Client : 3280 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  9) Server -> Client : 5 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  8) Server -> Client : 1744 bytes  (Service=HTTP)
+[Web Request      ( 3d4:107c)] "GET /WebTours/images/cancelreservation.gif"   
+[Network Analyzer ( 3d4:107c)]   (Sid:  9) Client -> Server @ : 619 bytes (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  8) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      ( 3d4:107c)] "GET /WebTours/images/cancelallreservations.gif"   
+[Network Analyzer ( 3d4:107c)]   (Sid: 12) Client -> Server @ : 623 bytes (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid: 12) Server -> Client : 1039 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  9) Server -> Client : 1128 bytes  (Service=HTTP)
+[Web Request      ( 3d4:107c)] "GET /WebTours/images/in_itinerary.gif"   
+[Network Analyzer ( 3d4:107c)]   (Sid:  8) Client -> Server @ : 631 bytes (Service=HTTP)
+[Web Request      ( 3d4:107c)] "GET /WebTours/images/home.gif"   
+[Network Analyzer ( 3d4:107c)]   (Sid: 12) Client -> Server @ : 623 bytes (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid: 12) Server -> Client : 985 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid:  8) Server -> Client : 1030 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid: 10) Connection Terminated (by Server)
+[Network Analyzer ( 3d4:107c)]   (Sid: 11) Connection Terminated (by Server)
+[Network Analyzer ( 3d4:107c)]   (Sid: 13) Connection Terminated (by Client)
+[Network Analyzer ( 3d4:107c)]   (Sid:  9) Connection Terminated (by Client)
+[Network Analyzer ( 3d4:107c)]   (Sid: 12) Connection Terminated (by Client)
+[Network Analyzer ( 3d4:107c)]   (Sid:  8) Connection Terminated (by Server)
+[Network Analyzer ( 3d4: dec)] Address lookup for WIN-HJA4A353DRG = 192.168.72.130
+[Network Analyzer ( 3d4: dec)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 14)  PROXIED!
+[Web Request      ( 3d4:107c)] "POST /cgi-bin/itinerary.pl"   
+[Network Analyzer ( 3d4:107c)]   (Sid: 14) Client -> Server @ : 1098 bytes (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid: 14) Server -> Client : 1150 bytes  (Service=HTTP)
+[Network Analyzer ( 3d4:107c)]   (Sid: 14) Server -> Client : 5 bytes  (Service=HTTP)

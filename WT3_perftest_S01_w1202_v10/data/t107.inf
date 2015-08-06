@@ -1,0 +1,11 @@
+[t107]
+FileName1=t107_in_home.gif
+URL1=http://127.0.0.1:1080/WebTours/images/in_home.gif
+Total=1
+ContentType=image/gif
+SnapshotXmlFile=snapshot_107.xml
+RequestHeaderFile=t107_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t107_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

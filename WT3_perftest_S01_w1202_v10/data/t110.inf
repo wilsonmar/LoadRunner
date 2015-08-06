@@ -1,0 +1,11 @@
+[t110]
+FileName1=t110.htm
+URL1=http://127.0.0.1:1080/cgi-bin/welcome.pl?page=itinerary
+Total=1
+ContentType=text/html
+SnapshotXmlFile=snapshot_110.xml
+RequestHeaderFile=t110_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t110_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

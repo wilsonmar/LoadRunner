@@ -1,0 +1,10 @@
+GET /cgi-bin/itinerary.pl HTTP/1.1
+Host: 127.0.0.1:1080
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://127.0.0.1:1080/cgi-bin/welcome.pl?page=itinerary
+Cookie: MSO=SID&1438893514&MSO_ServerErrorsProb&100&MSO_ServerLoadProb&100; MTUserInfo=firstName&jaja12&address2&Beverly%20Hills%2C%20CA%2090210&username&jaja12&hash&18&lastName&CNone.H1714062076.S%28null%29.GNone.U-1.P4192%0A&address1&POBOX%201&creditCard&&expDate&%0A
+Connection: keep-alive
+

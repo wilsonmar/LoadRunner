@@ -1,0 +1,11 @@
+[t101]
+FileName1=t101.htm
+URL1=http://127.0.0.1:1080/cgi-bin/nav.pl?in=home
+Total=1
+ContentType=text/html
+SnapshotXmlFile=snapshot_101.xml
+RequestHeaderFile=t101_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t101_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb
