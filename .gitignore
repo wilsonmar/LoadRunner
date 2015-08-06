@@ -36,6 +36,8 @@ Bookmarks.xml
 *.idx
 result[1234567890]*/
 mdrv.log
+TransactionsData.db
+
 # output.txt - keep to show it working on local VuGen.
 
 

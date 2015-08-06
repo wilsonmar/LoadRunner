@@ -446,15 +446,14 @@ WT3_T34_Cancel_Itinerary(){
 			// such as "1=on&flightID=210297416-788-jC"
 			sprintf(charDisplay,"%d=on&flightID=%s",x,lr_paramarr_idx("Itineraries",x));
 			// lr_output_message(">> [%d] %s",n,charDisplay);
-			if( x > 1){
+			if( x > 1){ // TODO: Replace use of mystrcat with lr_param_sprintf.
 				p = mystrcat(p,"&");
 			}
  				p = mystrcat(p,charDisplay);
 		}
 				p = mystrcat(p,"&removeFlights.x=53&removeFlights.y=2");
 		lr_output_message(">> p=%s",charRequest);
-	wi_noop();
-	
+
 		for(x=1; x<=n; x++){ // loop through itineraries array:
 		
 			// QUESTION: What determines this sequence?
@@ -474,6 +473,7 @@ WT3_T34_Cancel_Itinerary(){
 
 		lr_save_string(charRequest,"haha"); // convert string to parameter for use in web_custom_request().
 			lr_output_message(">> Body=%s",lr_eval_string("{haha}"));
+	wi_noop();
 
 			for(x=1; i < iRequestRetries; i++){ // 5 times retry: 1,2,3,4,5
 				wi_retry_add_time( i );
