@@ -148,16 +148,18 @@ WT3_T21_Travel_Home(){
 			"Alt=Home Button", 
 			"Snapshot=t32.inf", 
 			LAST);
-		rc=wi_end_transaction(rc);
 
 		if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
 			rc=LR_PASS;
+			rc=wi_end_transaction(rc);
 			break; // out of loop.			
 		}else{
 			// cycle through loop again to retry.
 			rc=LR_FAIL; // Fall-out of loop when retries are exhausted.
+			rc=wi_end_transaction(rc);
 		}
 	} 	
+
 	return rc;
 } //WT3_T21_Travel_Home
 
@@ -322,12 +324,14 @@ WT3_T25_Travel_Payment_Details(){
 
   	    // if run condition MSO_SLoad="on" and selected by probability:
  	    if( atoi( lr_eval_string("{DBErr_count}") ) > 0 ){ // DBErr found:
-			rc=wi_end_transaction(rc);
 				//lr_user_data_point(lr_eval_string("{pTransName}"),1); // to track retries occuring due to DBErr.
 				lr_user_data_point("WT3_T25_Travel_Payment_Details_retries",i); // to track retries occuring due to DBErr.
 				// Continue to loop again to handle error with retry (not end script run)
+			rc=LR_FAIL;
+			rc=wi_end_transaction(rc);
  			break;
   	    }else{ // normal no error:
+			rc=LR_PASS;
 			rc=wi_end_transaction(rc);
 			break; // out of do/while loop.
   	    }		

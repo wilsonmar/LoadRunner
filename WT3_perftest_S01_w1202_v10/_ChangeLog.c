@@ -6,6 +6,9 @@
 // v10 2015.08.04 wm: Verify retry logic with MSO_SErrors on for 500 errors.
 // v10 2015.08.05 wm: Fix Verbosity value default message.
 
+
+// v10 2015.08.06 wm: Add WT3_SignIn_isSignedIn. All trans pass.
+// v10 2015 08.06 am: Run SignUpInOut logic
 // v10 2015.08.05 wm: Add Cancel Checked.
 // v10 2015.08.05 wm: Fix SignIn after SignUp.
 // v10 2015.08.04 wm: Add Itineraries count.

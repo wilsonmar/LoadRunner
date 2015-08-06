@@ -195,7 +195,7 @@ WT3_SignUpInOut_Init(){ // Called from Action() on first iteration:
 } // WT3_SignUpInOut_Init
 	
 WT3_URL_Landing(){
-	int rc=LR_FAIL; // Unless positive if returned by sub-functions.
+	int rc=LR_PASS; // Unless positive if returned by sub-functions.
 	int i;
 	for(i=1; i < iRequestRetries; i++){ // 5 times retry: 1,2,3,4,5
 		wi_retry_add_time( i );
@@ -235,14 +235,14 @@ WT3_URL_Landing(){
 	                  );
 		wi_resetPrinting();
 
-		rc=wi_end_transaction(rc);
-
 		if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
 			rc=LR_PASS;
+			rc=wi_end_transaction(rc);
 			break; // out of loop.			
 		}else{
 			// cycle through loop again to retry.
 			rc=LR_FAIL; // Fall-out of loop when retries are exhausted.
+			rc=wi_end_transaction(rc);
 		}
 	} 	
 
@@ -445,20 +445,14 @@ WT3_SignIn(){
 			"Name=login.y", "Value=10", ENDITEM, 
 			LAST);
 	
-		if(rc == LR_PASS){
-			isSignedIn = TRUE;
-		}else{
-			isSignedIn = FALSE;
-		}
-	
 		if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
 			rc = LR_PASS;
-			rc=wi_end_transaction(rc);
+			WT3_SignIn_isSignedIn(rc);
 			break; // exit loop successfully.			
 		}else{ // "Thank you not found.
 			rc = LR_FAIL; 
 			if( atoi( lr_eval_string("{Err_count}") ) > 0 ){
-				rc=wi_end_transaction(rc);
+				WT3_SignIn_isSignedIn(rc);
 				break; // because already found, so no need to retry SignUp.
 			} 
 			// cycle through loop again to retry.
@@ -468,6 +462,19 @@ WT3_SignIn(){
 	return rc;		
 } //WT3_SignIn
 
+
+WT3_SignIn_isSignedIn(int in_rc){
+	int rc=LR_PASS;
+
+	rc=wi_end_transaction(in_rc);
+
+		if(rc == LR_PASS){
+			isSignedIn = TRUE;
+		}else{
+			isSignedIn = FALSE;
+		}
+	
+} // WT3_SignIn_isSignedIn()
 
 WT3_SignOut(){
 	int rc=LR_PASS;
