@@ -1,1 +1,91 @@
-Depart City Name,Arrive City,FlightIdDenver,Frankfurt,010Denver,London,386Denver,Los Angeles,230Denver,Paris,773Denver,Portland,450Denver,San Francisco,621Denver,Seattle,670Denver,Sydney,086Denver,Zurich,890Frankfurt,Denver,1073Frankfurt,London,0Frankfurt,Los Angeles,0Frankfurt,Paris,0Frankfurt,Portland,0Frankfurt,San Francisco,0Frankfurt,Seattle,0Frankfurt,Sydney,0Frankfurt,Zurich,0London,Denver,0London,Frankfurt,0London,Los Angeles,0London,Paris,0London,Portland,0London,San Francisco,0London,Seattle,0London,Sydney,0London,Zurich,0Los Angeles,Denver,0Los Angeles,London,0Los Angeles,Frankfurt,0Los Angeles,Paris,0Los Angeles,Portland,0Los Angeles,San Francisco,0Los Angeles,Seattle,0Los Angeles,Sydney,0Los Angeles,Zurich,0Paris,Denver,0,London,0,Los Angeles,0,Frankfurt,0,Portland,0,San Francisco,0,Seattle,0,Sydney,0,Zurich,0Portland,Denver,0,London,0,Los Angeles,0,Paris,0,Frankfurt,0,San Francisco,0,Seattle,0,Sydney,0,Zurich,0San Francisco,Denver,0,London,0,Los Angeles,0,Paris,0,Portland,0,Frankfurt,0,Seattle,0,Sydney,0,Zurich,0Seattle,Denver,0,London,0,Los Angeles,0,Paris,0,Portland,0,San Francisco,0,Frankfurt,0,Sydney,0,Zurich,0Sydney,Denver,0,London,0,Los Angeles,0,Paris,0,Portland,0,San Francisco,0,Seattle,0,Frankfurt,0,Zurich,0Zurich,Denver,0,London,0,Los Angeles,0,Paris,0,Portland,0,San Francisco,0,Seattle,0,Sydney,0,Frankfurt,0
+Depart City Name,Arrive City,FlightId
+Denver,Frankfurt,010
+Denver,London,020
+Denver,Los Angeles,030
+Denver,Paris,040
+Denver,Portland,050
+Denver,San Francisco,060
+Denver,Seattle,070
+Denver,Sydney,080
+Denver,Zurich,090
+Frankfurt,Denver,100
+Frankfurt,London,120
+Frankfurt,Los Angeles,130
+Frankfurt,Paris,140
+Frankfurt,Portland,150
+Frankfurt,San Francisco,160
+Frankfurt,Seattle,170
+Frankfurt,Sydney,180
+Frankfurt,Zurich,190
+London,Denver,200
+London,Frankfurt,210
+London,Los Angeles,230
+London,Paris,240
+London,Portland,250
+London,San Francisco,260
+London,Seattle,270
+London,Sydney,280
+London,Zurich,290
+Los Angeles,Denver,300
+Los Angeles,London,310
+Los Angeles,Frankfurt,320
+Los Angeles,Paris,340
+Los Angeles,Portland,350
+Los Angeles,San Francisco,360
+Los Angeles,Seattle,370
+Los Angeles,Sydney,380
+Los Angeles,Zurich,390
+Paris,Denver,400
+,London,410
+,Los Angeles,420
+,Frankfurt,430
+,Portland,450
+,San Francisco,460
+,Seattle,470
+,Sydney,480
+,Zurich,490
+Portland,Denver,500
+,London,510
+,Los Angeles,520
+,Paris,530
+,Frankfurt,540
+,San Francisco,560
+,Seattle,570
+,Sydney,580
+,Zurich,590
+San Francisco,Denver,600
+,London,610
+,Los Angeles,620
+,Paris,630
+,Portland,640
+,Frankfurt,650
+,Seattle,670
+,Sydney,680
+,Zurich,690
+Seattle,Denver,700
+,London,710
+,Los Angeles,720
+,Paris,730
+,Portland,740
+,San Francisco,750
+,Frankfurt,760
+,Sydney,780
+,Zurich,790
+Sydney,Denver,800
+,London,810
+,Los Angeles,820
+,Paris,830
+,Portland,840
+,San Francisco,850
+,Seattle,860
+,Frankfurt,870
+,Zurich,890
+Zurich,Denver,900
+,London,910
+,Los Angeles,920
+,Paris,930
+,Portland,940
+,San Francisco,950
+,Seattle,960
+,Sydney,970
+,Frankfurt,980
