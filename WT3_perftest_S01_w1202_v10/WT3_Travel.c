@@ -86,35 +86,34 @@ WT3_Travel(){ // call from within Action.c.
 		// }//for(i=1; i<2; i++){ // 1,2,3 (3 times)
 	}
 
-		
+	if( stricmp("All",LPCSTR_UseCase ) == FOUND
+	||  stricmp("Book",LPCSTR_UseCase ) == FOUND
+	||  stricmp("Itinerary",LPCSTR_UseCase ) == FOUND
+	||  stricmp("Cancel",LPCSTR_UseCase ) == FOUND
+	){
+		lr_save_string("WT3_T33_Travel_Check_Itinerary","pTransName");
+		rc=WT3_T33_Travel_Check_Itinerary(); // Itineraries_count is updated inside.	
+		if( rc != LR_PASS ){ return rc; }
+	}
+
+	if( Itineraries_count > 0 ){
 		if( stricmp("All",LPCSTR_UseCase ) == FOUND
-		||  stricmp("Book",LPCSTR_UseCase ) == FOUND
-		||  stricmp("Itinerary",LPCSTR_UseCase ) == FOUND
 		||  stricmp("Cancel",LPCSTR_UseCase ) == FOUND
    		){
-			lr_save_string("WT3_T33_Travel_Check_Itinerary","pTransName");
-			rc=WT3_T33_Travel_Check_Itinerary(); // Itineraries_count is updated inside.	
+			lr_save_string("WT3_T34_Cancel_Itinerary","pTransName");
+			rc=WT3_T34_Cancel_Itinerary();			
 			if( rc != LR_PASS ){ return rc; }
 		}
+	}
 
-/*		if( Itineraries_count > 0 ){
-			if( stricmp("All",LPCSTR_UseCase ) == FOUND
-			||  stricmp("Cancel",LPCSTR_UseCase ) == FOUND
-   			){
-				lr_save_string("WT3_T34_Cancel_Itinerary","pTransName");
-				rc=WT3_T34_Cancel_Itinerary();			
-				if( rc != LR_PASS ){ return rc; }
-			}
-		}
-*/
-		if( stricmp("All",LPCSTR_UseCase ) == FOUND
-		||  stricmp("Home",LPCSTR_UseCase ) == FOUND
-   		){
-			lr_save_string("WT3_T21_Travel_Home","pTransName");
-			rc=WT3_T21_Travel_Home();
-			if( rc != LR_PASS ){ return rc; }
-		}
-	
+	if( stricmp("All",LPCSTR_UseCase ) == FOUND
+	||  stricmp("Home",LPCSTR_UseCase ) == FOUND
+	){
+		lr_save_string("WT3_T21_Travel_Home","pTransName");
+		rc=WT3_T21_Travel_Home();
+		if( rc != LR_PASS ){ return rc; }
+	}
+
 	return rc;
 }
 
@@ -436,12 +435,12 @@ WT3_T34_Cancel_Itinerary(){
 	
 	//  n=atoi( lr_eval_string("{Itineraries_count}"));
 	    n= Itineraries_count; // lr_paramarr_len("Itineraries");
-	wi_noop();
+	
 	if( n <= 0 ){ return LR_PASS; } // Do below only there were itineraries listed in previous step WT3_T33_Travel_Check_Itinerary.
     	// Loop through itineraries to build a request:
 
 		charRequest[0] = '\0'; // begin array for use by mystrcat().
-		for(x=1; x < n; x++){ // loop through itineraries array:
+		for(x=1; x <= n; x++){ // loop through itineraries array:
 			// add itineraries[x] to string, (snprintf() not available within LR to do bounds checking):
 			// such as "1=on&flightID=210297416-788-jC"
 			sprintf(charDisplay,"%d=on&flightID=%s",x,lr_paramarr_idx("Itineraries",x));
@@ -455,25 +454,13 @@ WT3_T34_Cancel_Itinerary(){
 		lr_output_message(">> p=%s",charRequest);
 
 		for(x=1; x<=n; x++){ // loop through itineraries array:
-		
-			// QUESTION: What determines this sequence?
-			// "Name=.cgifields", "Value=6", ENDITEM, 
-			// "Name=.cgifields", "Value=3", ENDITEM, 
-			// "Name=.cgifields", "Value=7", ENDITEM, 
-			// "Name=.cgifields", "Value=2", ENDITEM, 
-			// "Name=.cgifields", "Value=8", ENDITEM, 
-			// "Name=.cgifields", "Value=1", ENDITEM, 
-			// "Name=.cgifields", "Value=4", ENDITEM, 
-			// "Name=.cgifields", "Value=5", ENDITEM, 
-
 			sprintf(charDisplay,"&.cgifields=%d",x);
 			lr_output_message(">> [%d] %s",n,charDisplay);
-				p = mystrcat(p,charDisplay);
+			p = mystrcat(p,charDisplay);
 		}
 
 		lr_save_string(charRequest,"haha"); // convert string to parameter for use in web_custom_request().
 			lr_output_message(">> Body=%s",lr_eval_string("{haha}"));
-	wi_noop();
 
 			for(x=1; i < iRequestRetries; i++){ // 5 times retry: 1,2,3,4,5
 				wi_retry_add_time( i );
@@ -486,13 +473,13 @@ WT3_T34_Cancel_Itinerary(){
 				web_custom_request("cancel_itinerary.pl", "Method=POST",
 					"URL={WebToursPath}/cgi-bin/itinerary.pl",
 					"Body={haha}",
-					"TargetFrame=",LAST);
-				// Instead of:
-				//web_submit_form("itinerary.pl", 
-				//	"Snapshot=t103.inf",
-				//	ITEMDATA, 
-				//	"Name=1", "Value=on", ENDITEM, 
-				//	LAST);
+					"TargetFrame=_SELF",LAST);
+					// Instead of:
+					//web_submit_form("itinerary.pl", 
+					//	"Snapshot=t103.inf",
+					//	ITEMDATA, 
+					//	"Name=1", "Value=on", ENDITEM, 
+					//	LAST);
 			
 			    if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
 					rc=LR_PASS;
@@ -505,6 +492,6 @@ WT3_T34_Cancel_Itinerary(){
 				rc=wi_end_transaction(rc);
 
 			} // for(x=1; i < iRequestRetries; i++)
-
+	// FIXME: Response should include menu frame to click home button.
 	return rc;
 }//WT3_T34_Cancel_Itinerary	
