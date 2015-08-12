@@ -98,3 +98,9 @@ ActiveRunName=result1
 WT3_T26_Travel_Invoice=
 [UserDataPoint]
 WT3_T25_Travel_Payment_Details_retries=
+[ParameterSimulation]
+NumVusers=2
+IsDurationIndefinite=0
+NumIterationsUntilCompletion=2
+IterationFromRTS=0
+NumIterationIndefinitely=1

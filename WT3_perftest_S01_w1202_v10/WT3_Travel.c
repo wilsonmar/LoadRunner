@@ -123,11 +123,13 @@ WT3_T20_Travel_Data(){
 	lr_save_datetime("%m/%d/%Y", DATE_NOW +7,"parm_returnDate");
 	
 	// TODO: Vary departCity/ID and returnCity/ID each sub-iteration randomly
-	lr_save_string("Denver","parm_departCity");
+	lr_save_string("Denver","WT3_Flights_DepartCity");
 //	lr_save_string("030","parm_departFlight");
 
-	lr_save_string("Los Angeles","parm_arriveCity");
+	lr_save_string("Los Angeles","WT3_Flights_ArriveCity");
 //	lr_save_string("251","parm_arriveFlight");
+	
+	lr_save_string("030","WT3_Flights_FlightId");
 
 	lr_save_string("1","parm_numPassengers");
 	lr_save_string("<OFF>","parm_roundtrip");
@@ -198,16 +200,16 @@ WT3_T23_Travel_Flight_Lookup(){
 		wi_retry_add_time( i );
 
 		web_reg_find("Text=Flight departing from","Fail=NotFound","SaveCount=Found_count", LAST );
-		web_reg_find("Text=Flight departing from","Fail=NotFound","SaveCount=Err_count", LAST );
+		//web_reg_find("Text=Flight from","Fail=NotFound","SaveCount=Err_count", LAST );
 
 		//TODO: WT3_T23_Travel_Flight_Lookup Add Airport starting and endeing route in this function.
 		wi_start_transaction();
 		web_submit_form("reservations.pl",
 			"Snapshot=t34.inf",
 			ITEMDATA,
-			"Name=depart"				, "Value={parm_departCity}", ENDITEM,
+			"Name=depart"				, "Value={WT3_Flights_DepartCity}", ENDITEM,
 			"Name=departDate"			, "Value={parm_departDate}", ENDITEM,
-			"Name=arrive"				, "Value={parm_arriveCity}", ENDITEM,
+			"Name=arrive"				, "Value={WT3_Flights_ArriveCity}", ENDITEM,
 			"Name=returnDate"			, "Value={parm_returnDate}", ENDITEM,
 			"Name=numPassengers"		, "Value={parm_numPassengers}", ENDITEM,
 			"Name=roundtrip"			, "Value={parm_roundtrip}", ENDITEM,
@@ -236,18 +238,19 @@ WT3_T24_Find_Flight(){
 		wi_retry_add_time( i );
 
 		web_reg_find("Text=Payment Details","Fail=NotFound","SaveCount=Found_count", LAST );
+		
 		// WT3_T25_Travel_Payment_Details_Capture();
 		
 		// If MSO_SLoad="on", HTTP Status 503 (System Cannot Complete Request)
 		// is issued for the % time specified in MSO_ServerLoadProb.
 
 		// Table:	
-			// Denver to Los Angeles - Flight 030
+			// Denver to Los Angeles - Flight {WT3_Flights_DepartCity}
 		wi_start_transaction();
 		web_submit_form("reservations.pl_2", 
 			"Snapshot=t35.inf", 
 			ITEMDATA, 
-			"Name=outboundFlight", "Value=030;251;{parm_departDate}", ENDITEM, 
+			"Name=outboundFlight", "Value={WT3_Flights_FlightId};251;{parm_departDate}", ENDITEM, 
 			"Name=reserveFlights.x", "Value=46", ENDITEM, 
 			"Name=reserveFlights.y", "Value=11", ENDITEM, 
 			LAST);
