@@ -123,14 +123,13 @@ WT3_T20_Travel_Data(){
 	lr_save_datetime("%m/%d/%Y", DATE_NOW +7,"parm_returnDate");
 	
 	// TODO: Vary departCity/ID and returnCity/ID each sub-iteration randomly
-	lr_save_string("Denver","WT3_Flights_DepartCity");
+//	lr_save_string("030","WT3_Flights_FlightId");
 //	lr_save_string("030","parm_departFlight");
+//	lr_save_string("Denver","WT3_Flights_DepartCity");
+//	lr_save_string("Los Angeles","WT3_Flights_ArriveCity");
 
-	lr_save_string("Los Angeles","WT3_Flights_ArriveCity");
 //	lr_save_string("251","parm_arriveFlight");
 	
-	lr_save_string("030","WT3_Flights_FlightId");
-
 	lr_save_string("1","parm_numPassengers");
 	lr_save_string("<OFF>","parm_roundtrip");
 	lr_save_string("None","parm_seatPref");
@@ -200,7 +199,17 @@ WT3_T23_Travel_Flight_Lookup(){
 		wi_retry_add_time( i );
 
 		web_reg_find("Text=Flight departing from","Fail=NotFound","SaveCount=Found_count", LAST );
-		//web_reg_find("Text=Flight from","Fail=NotFound","SaveCount=Err_count", LAST );
+
+		// Response Text to capture: name="outboundFlight" value="820;1441;08/12/2015"
+		web_reg_save_param_ex("ParamName=outboundFlight"
+		,"LB=name=\"outboundFlight\" value=\""
+		,"RB=\""
+		,"Ordinal=1"
+		,"SaveLen=-1"
+		,SEARCH_FILTERS
+        ,"Scope=body"
+        ,LAST );
+			// 		,"DFEs=UrlEncoding"
 
 		//TODO: WT3_T23_Travel_Flight_Lookup Add Airport starting and endeing route in this function.
 		wi_start_transaction();
@@ -221,6 +230,11 @@ WT3_T23_Travel_Flight_Lookup(){
 	    rc=wi_end_transaction(rc); // 
 
 	    if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
+	    	
+			wi_startPrintingTrace();
+	    	lr_output_message(">> {outboundFlight}=%s", lr_eval_string("{outboundFlight}") );
+			wi_resetPrinting();
+
 			rc=LR_PASS;
 			break; // out of loop.			
 		}else{
@@ -244,16 +258,17 @@ WT3_T24_Find_Flight(){
 		// If MSO_SLoad="on", HTTP Status 503 (System Cannot Complete Request)
 		// is issued for the % time specified in MSO_ServerLoadProb.
 
-		// Table:	
-			// Denver to Los Angeles - Flight {WT3_Flights_DepartCity}
+		// TODO: Do Round-Trip (_RT) as well as one-way (_1W)
+		// Table: Denver to Los Angeles - Flight 30 in {WT3_Flights_DepartCity}
 		wi_start_transaction();
 		web_submit_form("reservations.pl_2", 
 			"Snapshot=t35.inf", 
 			ITEMDATA, 
-			"Name=outboundFlight", "Value={WT3_Flights_FlightId};251;{parm_departDate}", ENDITEM, 
+			"Name=outboundFlight", "Value={outboundFlight}", ENDITEM, 
 			"Name=reserveFlights.x", "Value=46", ENDITEM, 
 			"Name=reserveFlights.y", "Value=11", ENDITEM, 
 			LAST);
+			// QUESTION: What is the "251"?
 		 rc=wi_end_transaction(rc);
 
 	    if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
@@ -476,7 +491,7 @@ WT3_T34_Cancel_Itinerary(){
 				web_custom_request("cancel_itinerary.pl", "Method=POST",
 					"URL={WebToursPath}/cgi-bin/itinerary.pl",
 					"Body={haha}",
-					"TargetFrame=_SELF",LAST);
+					"TargetFrame=body",LAST);
 					// Instead of:
 					//web_submit_form("itinerary.pl", 
 					//	"Snapshot=t103.inf",

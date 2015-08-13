@@ -105,7 +105,7 @@ WT3_SignUpInOut(){ // .c file.
 	 			rc=WT3_URL_Landing(); // just for establishing state to signin or invoke run conitions.
 	 		if( rc != LR_PASS ){ return rc; } 
 
-	 			lr_save_string("WT3_T07_SignIn","pTransName");
+	 			lr_save_string("WT3_T07_SignIn_X","pTransName");
 				rc=WT3_SignIn();
 			}
 		}
@@ -339,7 +339,7 @@ WT3_SignUp(){
 		web_submit_data("T05_SignUp", 
 			"Action={WebToursPath}/cgi-bin/login.pl", 
 			"Method=POST", 
-			"TargetFrame=", 
+			"TargetFrame=body", 
 			"RecContentType=text/html", 
 			"Referer={WebToursPath}/cgi-bin/login.pl?username=&password=&getInfo=true", 
 			"Snapshot=t19.inf", 
