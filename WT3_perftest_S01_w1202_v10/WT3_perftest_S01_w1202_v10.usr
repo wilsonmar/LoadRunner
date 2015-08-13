@@ -90,7 +90,7 @@ vuser_end=cci
 [TransactionsOrder]
 Order="WT3_T26_Travel_Invoice"
 [StateManagement]
-LastReplayStatus=2
+LastReplayStatus=1
 [ActiveReplay]
 LastReplayedRunName=result1
 ActiveRunName=result1

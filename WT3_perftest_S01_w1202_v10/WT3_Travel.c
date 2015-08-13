@@ -96,16 +96,28 @@ WT3_Travel(){ // call from within Action.c.
 		if( rc != LR_PASS ){ return rc; }
 	}
 
-	if( Itineraries_count > 0 ){
+	if( Itineraries_count <= 0 ){
+		return LR_PASS;
+	}
+	
 		if( stricmp("All",LPCSTR_UseCase ) == FOUND
 		||  stricmp("Cancel",LPCSTR_UseCase ) == FOUND
    		){
 			lr_save_string("WT3_T34_Cancel_Itinerary","pTransName");
 			rc=WT3_T34_Cancel_Itinerary();			
 			if( rc != LR_PASS ){ return rc; }
+			
+			// Because the menu frame doesn't appear:
+			lr_save_string("WT3_T03_URL_Landing_T","pTransName");
+	 		rc=WT3_URL_Landing(); // just for establishing state to signin or invoke run conitions.
+		 	if( rc != LR_PASS ){ return rc; } 
+		 	
+			lr_save_string("WT3_T07_SignIn_T","pTransName");
+			rc=WT3_SignIn();
+		 	if( rc != LR_PASS ){ return rc; } 
 		}
-	}
 
+/*
 	if( stricmp("All",LPCSTR_UseCase ) == FOUND
 	||  stricmp("Home",LPCSTR_UseCase ) == FOUND
 	){
@@ -113,6 +125,7 @@ WT3_Travel(){ // call from within Action.c.
 		rc=WT3_T21_Travel_Home();
 		if( rc != LR_PASS ){ return rc; }
 	}
+*/
 
 	return rc;
 }
@@ -128,10 +141,10 @@ WT3_T20_Travel_Data(){
 //	lr_save_string("Denver","WT3_Flights_DepartCity");
 //	lr_save_string("Los Angeles","WT3_Flights_ArriveCity");
 
-//	lr_save_string("251","parm_arriveFlight");
+//	lr_save_string("251","parm_Flight_Cose");
 	
 	lr_save_string("1","parm_numPassengers");
-	lr_save_string("<OFF>","parm_roundtrip");
+	lr_save_string("<OFF>","parm_roundtrip"); // TODO: Record and use an attribute to control variation.
 	lr_save_string("None","parm_seatPref");
 	lr_save_string("Coach","parm_seatType");
 
@@ -166,13 +179,16 @@ WT3_T21_Travel_Home(){
 } //WT3_T21_Travel_Home
 
 			
-WT3_T22_Travel_Search_Flight(){
+WT3_T22_Travel_Search_Flight(){ // Find Flight is the response heading.
 	int rc=LR_PASS;
 	int i;
 	for(i=1; i < iRequestRetries; i++){ // 5 times retry: 1,2,3,4,5
 		wi_retry_add_time( i );
 
 		web_reg_find("Text=Find Flight","Fail=NotFound","SaveCount=Found_count", LAST );
+		
+		// TODO: Capture list returned to identify the ordinal on list and its values.
+
 		wi_start_transaction();
 		// Click "Fights" button on Home screen after login:
 		web_image("Search Flights Button", 
@@ -204,7 +220,7 @@ WT3_T23_Travel_Flight_Lookup(){
 		web_reg_save_param_ex("ParamName=outboundFlight"
 		,"LB=name=\"outboundFlight\" value=\""
 		,"RB=\""
-		,"Ordinal=1"
+		,"Ordinal=ALL"
 		,"SaveLen=-1"
 		,SEARCH_FILTERS
         ,"Scope=body"
@@ -232,7 +248,7 @@ WT3_T23_Travel_Flight_Lookup(){
 	    if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
 	    	
 			wi_startPrintingTrace();
-	    	lr_output_message(">> {outboundFlight}=%s", lr_eval_string("{outboundFlight}") );
+	    	lr_output_message(">> {outboundFlight}=%s", lr_eval_string("{outboundFlight_1}") ); // hard coded first one.
 			wi_resetPrinting();
 
 			rc=LR_PASS;
@@ -258,17 +274,18 @@ WT3_T24_Find_Flight(){
 		// If MSO_SLoad="on", HTTP Status 503 (System Cannot Complete Request)
 		// is issued for the % time specified in MSO_ServerLoadProb.
 
+		// TODO: Select another flight option other than the first row.
+		
 		// TODO: Do Round-Trip (_RT) as well as one-way (_1W)
 		// Table: Denver to Los Angeles - Flight 30 in {WT3_Flights_DepartCity}
 		wi_start_transaction();
 		web_submit_form("reservations.pl_2", 
 			"Snapshot=t35.inf", 
 			ITEMDATA, 
-			"Name=outboundFlight", "Value={outboundFlight}", ENDITEM, 
+			"Name=outboundFlight", "Value={outboundFlight_1}", ENDITEM, 
 			"Name=reserveFlights.x", "Value=46", ENDITEM, 
 			"Name=reserveFlights.y", "Value=11", ENDITEM, 
 			LAST);
-			// QUESTION: What is the "251"?
 		 rc=wi_end_transaction(rc);
 
 	    if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
@@ -469,11 +486,17 @@ WT3_T34_Cancel_Itinerary(){
  				p = mystrcat(p,charDisplay);
 		}
 				p = mystrcat(p,"&removeFlights.x=53&removeFlights.y=2");
-		lr_output_message(">> p=%s",charRequest);
+				wi_startPrintingTrace();
+				lr_output_message(">> p=%s",charRequest);
+				wi_resetPrinting();
 
 		for(x=1; x<=n; x++){ // loop through itineraries array:
 			sprintf(charDisplay,"&.cgifields=%d",x);
+			
+				wi_startPrintingTrace();
 			lr_output_message(">> [%d] %s",n,charDisplay);
+				wi_resetPrinting();
+
 			p = mystrcat(p,charDisplay);
 		}
 
@@ -491,7 +514,7 @@ WT3_T34_Cancel_Itinerary(){
 				web_custom_request("cancel_itinerary.pl", "Method=POST",
 					"URL={WebToursPath}/cgi-bin/itinerary.pl",
 					"Body={haha}",
-					"TargetFrame=body",LAST);
+					"TargetFrame=_SELF",LAST);
 					// Instead of:
 					//web_submit_form("itinerary.pl", 
 					//	"Snapshot=t103.inf",

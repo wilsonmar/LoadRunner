@@ -103,7 +103,7 @@ WT3_SignUpInOut(){ // .c file.
 				// Because there is no "Cancel" button in the SignUp screen when "username is taken":
 				lr_save_string("WT3_T03_URL_Landing","pTransName");
 	 			rc=WT3_URL_Landing(); // just for establishing state to signin or invoke run conitions.
-	 		if( rc != LR_PASS ){ return rc; } 
+		 		if( rc != LR_PASS ){ return rc; } 
 
 	 			lr_save_string("WT3_T07_SignIn_X","pTransName");
 				rc=WT3_SignIn();

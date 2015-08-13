@@ -10,6 +10,7 @@
 // v10 2015.08.12 wm: Add _SELF to SignUp TargetFrame
 
 
+// v10 2015.08.12 wm: Add Landing and SignIn after Cancel Itinerary.
 // v10 2015.08.12 wm: Add outboundFlight capture in WT3_T23_Travel_Flight_Lookup for WT3_T24_Find_Flight
 // v10 2015.08.06 wm: Add WT3_SignIn_isSignedIn. All trans pass.
 // v10 2015 08.06 am: Run SignUpInOut logic
