@@ -1,13 +1,13 @@
 Registry settings:
 	(Default)	
 	ActiveProtocols
-		default	QTWeb,local_server
+		default	QTWeb
 	AllowChannelHooks
 		(Default)	NO
 		default	yes
 	AUT
 		(Default)	
-		default	C:\Program Files (x86)\Mozilla Firefox\firefox.exe -private-window http://127.0.0.1:1080/WebTours/index.htm
+		default	C:\Program Files (x86)\Internet Explorer\iexplore.exe http://127.0.0.1:1080/WebTours/index.htm
 	DebugFilter
 		(Default)	
 		default	off
@@ -151,7 +151,7 @@ Registry settings:
 	GenerateDebugLogFile
 	LocalMachineIdentity
 		(Default)	
-		default	WIN-HJA4A353DRG
+		default	Mainali-PC
 	NumberOfOutputByteArrayElementsToShow
 		(Default)	-1
 	RecorderDir
