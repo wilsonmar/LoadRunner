@@ -2,15 +2,14 @@
 \file _ChangeLog.c
 \brief Contains a short description of changes to the set of coding and data files.
 */
-// TODO: Add logic for handling "Internal Server Error" MSO_SErrors.
-//v10 2015.08.13 am: Record Rec_Roundtrip_Ticket
-//v10 2015.08.12 am: Import WT3_Flights_v01.csv file. Parameter FlightId and Add lr_save_string WT3_Flights_FlightId
+
+// v10 2015.08.15 wm: Add returnFlight Round-Trip to one-way outboundFlight
+// v10 2015.08.13 am: Record Rec_Roundtrip_Ticket
+// v10 2015.08.12 am: Import WT3_Flights_v01.csv file. Parameter FlightId and Add lr_save_string WT3_Flights_FlightId
 // v10 2015.08.04 wm: Verify retry logic with MSO_SErrors on for 500 errors.
 // v10 2015.08.?? wm: Fix Verbosity value default message.
 
 // v10 2015.08.12 wm: Add _SELF to SignUp TargetFrame
-
-
 // v10 2015.08.12 wm: Add Landing and SignIn after Cancel Itinerary.
 // v10 2015.08.12 wm: Add outboundFlight capture in WT3_T23_Travel_Flight_Lookup for WT3_T24_Find_Flight
 // v10 2015.08.06 wm: Add WT3_SignIn_isSignedIn. All trans pass.

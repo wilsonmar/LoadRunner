@@ -14,6 +14,27 @@
 
 */
 
+WT3_T20_Travel_Data(){
+	int x;
+	
+	lr_save_datetime("%m/%d/%Y", DATE_NOW       			,"parm_departDate"); // 04/14/2015 format
+	lr_save_datetime("%m/%d/%Y", DATE_NOW + (7 * ONE_DAY)	,"parm_returnDate"); // Hard coded 7 days?
+	
+	// Do 80% round-trip based on random selection:
+	x=rand() % 100; // random number between 0 and 100 (using % modulo operator).
+	if( x >= 80 ){
+		lr_save_string("on","parm_roundtrip");
+	}else{
+		lr_save_string("<OFF>","parm_roundtrip"); // one-way.
+	} // TODO: Record and use an attribute to control variation "<OFF>" to "on".
+
+	lr_save_string("1","parm_numPassengers");
+	lr_save_string("None","parm_seatPref");
+	lr_save_string("Coach","parm_seatType");
+
+	return 0;
+}
+
 WT3_Travel(){ // call from within Action.c.
 	int rc=LR_PASS; int i=0;
 
@@ -130,26 +151,6 @@ WT3_Travel(){ // call from within Action.c.
 	return rc;
 }
 
-WT3_T20_Travel_Data(){
-	
-	lr_save_datetime("%m/%d/%Y", DATE_NOW   ,"parm_departDate"); // 04/14/2015 format
-	lr_save_datetime("%m/%d/%Y", DATE_NOW +7,"parm_returnDate");
-	
-	// TODO: Vary departCity/ID and returnCity/ID each sub-iteration randomly
-//	lr_save_string("030","WT3_Flights_FlightId");
-//	lr_save_string("030","parm_departFlight");
-//	lr_save_string("Denver","WT3_Flights_DepartCity");
-//	lr_save_string("Los Angeles","WT3_Flights_ArriveCity");
-
-//	lr_save_string("251","parm_Flight_Cose");
-	
-	lr_save_string("1","parm_numPassengers");
-	lr_save_string("<OFF>","parm_roundtrip"); // TODO: Record and use an attribute to control variation.
-	lr_save_string("None","parm_seatPref");
-	lr_save_string("Coach","parm_seatType");
-
-	return 0;
-}
 
 WT3_T21_Travel_Home(){
 	int rc=LR_PASS;	
@@ -216,16 +217,17 @@ WT3_T23_Travel_Flight_Lookup(){
 
 		web_reg_find("Text=Flight departing from","Fail=NotFound","SaveCount=Found_count", LAST );
 
-		// Response Text to capture: name="outboundFlight" value="820;1441;08/12/2015"
+		// Capture Response Text for use in next transaction: name="outboundFlight" value="820;1441;08/12/2015"
 		web_reg_save_param_ex("ParamName=outboundFlight"
 		,"LB=name=\"outboundFlight\" value=\""
-		,"RB=\""
-		,"Ordinal=ALL"
-		,"SaveLen=-1"
-		,SEARCH_FILTERS
-        ,"Scope=body"
-        ,LAST );
+		,"RB=\"", "Ordinal=ALL","SaveLen=-1"
+		,SEARCH_FILTERS,"Scope=body",LAST );
 			// 		,"DFEs=UrlEncoding"
+
+		web_reg_save_param_ex("ParamName=returnFlight","NotFound=warning"
+		,"LB=name=\"returnFlight\" value=\""
+		,"RB=\"", "Ordinal=ALL","SaveLen=-1"
+		,SEARCH_FILTERS,"Scope=body",LAST );
 
 		//TODO: WT3_T23_Travel_Flight_Lookup Add Airport starting and endeing route in this function.
 		wi_start_transaction();
@@ -249,6 +251,7 @@ WT3_T23_Travel_Flight_Lookup(){
 	    	
 			wi_startPrintingTrace();
 	    	lr_output_message(">> {outboundFlight}=%s", lr_eval_string("{outboundFlight_1}") ); // hard coded first one.
+	    	lr_output_message(">> {returnFlight}=%s", lr_eval_string("{returnFlight_1}") ); // hard coded first one.
 			wi_resetPrinting();
 
 			rc=LR_PASS;
@@ -263,30 +266,48 @@ WT3_T23_Travel_Flight_Lookup(){
 	
 WT3_T24_Find_Flight(){
 	int rc=LR_PASS;
-	int i;
+	int i; int x; char temp[32];
 	for(i=1; i < iRequestRetries; i++){ // 5 times retry: 1,2,3,4,5
 		wi_retry_add_time( i );
 
 		web_reg_find("Text=Payment Details","Fail=NotFound","SaveCount=Found_count", LAST );
-		
-		// WT3_T25_Travel_Payment_Details_Capture();
-		
+
 		// If MSO_SLoad="on", HTTP Status 503 (System Cannot Complete Request)
 		// is issued for the % time specified in MSO_ServerLoadProb.
 
-		// TODO: Select another flight option other than the first row.
-		
-		// TODO: Do Round-Trip (_RT) as well as one-way (_1W)
-		// Table: Denver to Los Angeles - Flight 30 in {WT3_Flights_DepartCity}
+		// Select flight option randomly rather than always the first row:
+		x=( rand() % 3 ) + 1; // random number between 0 and 3 (for 0,1,2,3 = 4 values).
+		// Assemble lr_ parm name based on index number that starts from 1.
+		sprintf( temp, "{outboundFlight_%d}", x);
+		// lr_save_string(lr_eval_string("{outboundFlight_1}"),"outboundFlight_x");
+		lr_save_string(lr_eval_string(temp),"outboundFlight_x");
+
 		wi_start_transaction();
-		web_submit_form("reservations.pl_2", 
-			"Snapshot=t35.inf", 
-			ITEMDATA, 
-			"Name=outboundFlight", "Value={outboundFlight_1}", ENDITEM, 
-			"Name=reserveFlights.x", "Value=46", ENDITEM, 
-			"Name=reserveFlights.y", "Value=11", ENDITEM, 
-			LAST);
-		 rc=wi_end_transaction(rc);
+		// Using parm_roundtrip defined in WT3_T20_Travel_Data(){
+		if( strcmp( "on",lr_eval_string("{parm_roundtrip}") ) == FOUND ){
+
+			x=( rand() % 3 ) + 1; // random number between 0 and 3 (for 0,1,2,3 = 4 values).
+			sprintf( temp, "{returnFlight_%d}", x);
+			lr_save_string(lr_eval_string(temp),"returnFlight_x");
+		
+			web_submit_form("reservations.pl_1", 
+				"Snapshot=t35.inf", 
+				ITEMDATA, 
+				"Name=outboundFlight", "Value={outboundFlight_x}", ENDITEM, 
+				"Name=returnFlight", "Value={returnFlight_x}", ENDITEM, 
+				"Name=reserveFlights.x", "Value=46", ENDITEM, 
+				"Name=reserveFlights.y", "Value=11", ENDITEM, 
+				LAST);
+		}else{ // "<OFF>" = One way trip:
+			web_submit_form("reservations.pl_1",
+				"Snapshot=t35.inf", 
+				ITEMDATA, 
+				"Name=outboundFlight", "Value={outboundFlight_x}", ENDITEM, 
+				"Name=reserveFlights.x", "Value=46", ENDITEM, 
+				"Name=reserveFlights.y", "Value=11", ENDITEM, 
+				LAST);
+		}
+		rc=wi_end_transaction(rc);
 
 	    if( atoi( lr_eval_string("{Found_count}") ) >= 1 ){
 			rc=LR_PASS;
@@ -299,35 +320,6 @@ WT3_T24_Find_Flight(){
 	return rc;
 } // WT3_T24_Find_Flight
 
-WT3_T25_Travel_Payment_Details_Capture(){
-
-/*
-	web_reg_save_param_ex("ParamName=SignUp_firstName"
-		,"LB/IC=??"
-		,"RB/IC=??"
-		,"Ordinal=1"
-		,"SaveLen=-1"
-		,"DFEs=UrlEncoding"
-		,SEARCH_FILTERS
-        ,"Scope=body"
-        ,LAST );
- 
-	web_reg_save_param_ex("ParamName=SignUp_lastName" 
-		,"LB/IC=???"
-		,"RB/IC=???"
-		,"Ordinal=1"
-		,"SaveLen=-1"
-		,"DFEs=UrlEncoding"
-		,SEARCH_FILTERS
-        ,"Scope=body"
-        ,LAST );
- 	web_reg_save_param_ex("ParamName=SignUp_address1"
-
-	web_reg_save_param_ex("ParamName=SignUp_address2"
-*/
-
-	return 0;
-}
 WT3_T25_Travel_Payment_Details(){
 	int rc=LR_FAIL; // Unless positive if returned by sub-functions.
 	int i;

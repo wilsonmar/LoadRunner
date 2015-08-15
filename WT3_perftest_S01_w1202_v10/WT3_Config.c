@@ -63,9 +63,8 @@ int WT3_Print_Run_Conditions(){
 }
 
 int WT3_Invoke_Run_Conditions(){ // after landing
-	// TODO: Separate 
 
-	web_link("administration", 
+	web_link("administration",
 		"Text=administration", 
 		"Snapshot=t2.inf", 
 		LAST);

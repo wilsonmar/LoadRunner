@@ -89,6 +89,7 @@ Also contains declaration of app-specific global variables accessible from funct
 
 vuser_init()
 {
+	srand(time(NULL)); // Seed random number rand().
 	return 0;
 }
 
