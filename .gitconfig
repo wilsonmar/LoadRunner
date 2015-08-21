@@ -14,7 +14,11 @@
   added = yellow
   changed = green
   untracked = cyan
-  
+# Accepted colours are normal, black, red, green, yellow, blue, magenta, cyan, and white
+# as well a single optional modifier bold, dim, ul, blink, or reverse. 
+# If two colours are given the first is the foreground, and the second is the background.
+
+
 # From https://bitbucket.org/durdn/cfg/src/42ef643cd38718311315c8ab32527297147fec5c/.gitconfig?at=master
 # core {{{
 [core]
