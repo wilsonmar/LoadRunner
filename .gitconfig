@@ -14,6 +14,7 @@
   added = yellow
   changed = green
   untracked = cyan
+  deleted = red
 # Accepted colours are normal, black, red, green, yellow, blue, magenta, cyan, and white
 # as well a single optional modifier bold, dim, ul, blink, or reverse. 
 # If two colours are given the first is the foreground, and the second is the background.
