@@ -482,6 +482,8 @@ WT3_SignOut(){
 	
 	// Siging off from the application:
 
+	lr_set_debug_message(LR_MSG_CLASS_JIT_LOG_ON_ERROR, LR_SWITCH_ON); // ON = "output Log ONLY when error occurs"
+
 	if(isSignedIn == TRUE){
 	
 			web_reg_find("Text=Welcome to the Web Tours site","Fail=NotFound","SaveCount=Found_count", LAST );

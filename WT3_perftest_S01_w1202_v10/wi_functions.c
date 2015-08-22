@@ -350,28 +350,35 @@ int wi_end_transaction(int in_rc){
 
 		
 wi_setPrinting(){
-	
-	if( iVerbosity >= 1 ){
+	// Use RTS to determine what to store during runs.
+		lr_set_debug_message( debug_message_level_in_rts , LR_SWITCH_ON );
+
+	// But actually output only if the verbosity is high enough:
+	if( iVerbosity >= 0 ){ // nothing but lr_output_message() after wi_startPrintingError();
+		lr_set_debug_message( LR_MSG_CLASS_JIT_LOG_ON_ERROR, LR_SWITCH_ON ); // LR_SWITCH_ON (=512) means suppress output.
+		lr_set_debug_message( LR_MSG_CLASS_BRIEF_LOG  , LR_SWITCH_ON ); // (1) (Standard) logging.
+	}else
+	if( iVerbosity >= 1 ){ // nothing but lr_output_message() after wi_startPrintingInfo();
 		lr_set_debug_message( LR_MSG_CLASS_JIT_LOG_ON_ERROR, LR_SWITCH_OFF ); // LR_SWITCH_OFF (=0) means stop suppressing output.
 		lr_set_debug_message( LR_MSG_CLASS_BRIEF_LOG  , LR_SWITCH_ON ); // (1) (Standard) logging.
 	}else
-	if( iVerbosity >= 2 ){
+	if( iVerbosity >= 2 ){ // nothing but lr_output_message() after wi_startPrintingTrace() but no Data returned by server
 		lr_set_debug_message( LR_MSG_CLASS_JIT_LOG_ON_ERROR, LR_SWITCH_OFF ); // LR_SWITCH_OFF (=0) means stop suppressing output.
 		lr_set_debug_message( LR_MSG_CLASS_BRIEF_LOG  , LR_SWITCH_ON ); // (1) (Standard) logging.
 	}else
-	if( iVerbosity >= 3 ){
+	if( iVerbosity >= 3 ){ // nothing but lr_output_message() after wi_startPrintingDebug() AND Data returned by server.
 		lr_set_debug_message( LR_MSG_CLASS_JIT_LOG_ON_ERROR, LR_SWITCH_OFF ); // LR_SWITCH_OFF (=0) means stop suppressing output.
 		lr_set_debug_message( LR_MSG_CLASS_BRIEF_LOG  , LR_SWITCH_ON ); // (1) (Standard) logging.
 		// No LR_MSG_CLASS_PARAMETERS because
 	}else
-	if( iVerbosity >= 4 ){
+	if( iVerbosity >= 4 ){ // nothing but lr_output_message() after wi_startPrintingTrace() but no Data returned by server.
 		lr_set_debug_message( LR_MSG_CLASS_JIT_LOG_ON_ERROR, LR_SWITCH_OFF ); // LR_SWITCH_OFF (=0) means stop suppressing output.
 		lr_set_debug_message( LR_MSG_CLASS_BRIEF_LOG  , LR_SWITCH_ON ); // (1) (Standard) logging.
 		lr_set_debug_message( LR_MSG_CLASS_RESULT_DATA, LR_SWITCH_ON );
 		lr_set_debug_message( LR_MSG_CLASS_FULL_TRACE , LR_SWITCH_ON ); 
 		// No LR_MSG_CLASS_PARAMETERS because
 	}else
-	if( iVerbosity >= 5 ){
+	if( iVerbosity >= 5 ){ // nothing but lr_output_message() after wi_startPrintingDebug() AND Data returned by server.
 		lr_set_debug_message( LR_MSG_CLASS_JIT_LOG_ON_ERROR, LR_SWITCH_OFF ); // LR_SWITCH_OFF (=0) means stop suppressing output.
 		lr_set_debug_message( LR_MSG_CLASS_EXTENDED_LOG, LR_SWITCH_ON ); // (16) Extended logging.
 		lr_set_debug_message( LR_MSG_CLASS_RESULT_DATA, LR_SWITCH_ON );

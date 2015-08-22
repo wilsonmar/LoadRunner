@@ -86,10 +86,33 @@ Also contains declaration of app-specific global variables accessible from funct
 
 // WebTours-specific global variables:
 	int Itineraries_count=0;
-
+	unsigned int debug_message_level_in_rts;
+	
 vuser_init()
 {
-	srand(time(NULL)); // Seed random number rand().
+	// To show only output from lr_output_message commands, in RTS, uncheck Enable Logging & Always send messages.
+	// To list Run-Time Settings at start of run, select Advanced Trace and checkbox Extended Log.
+	debug_message_level_in_rts = lr_get_debug_message(); // get the current log level
+	lr_output_message(">> Runtime Settings lr_debug_message_level=%d.",debug_message_level_in_rts);
+	// Per http://www.jds.net.au/tech-tips/loadrunner-log-options/
+	//                                                                   Verbosity
+	// "Log when error occurs.." = LR_MSG_CLASS_JIT_LOG_ON_ERROR = 512   0
+	// "Standard log"            = LR_MSG_CLASS_BRIEF_LOG        =  1    1
+	// "Extended log"            = LR_MSG_CLASS_EXTENDED_LOG     = 16    2
+	// "Parameter substitution"  = LR_MSG_CLASS_PARAMETERS       =  4    5
+	// "Data returned by server" = LR_MSG_CLASS_RESULT_DATA      =  2    3
+	// "Advanced Trace"          = LR_MSG_CLASS_FULL_TRACE       =  8    4
+//	lr_set_debug_message(LR_MSG_CLASS_PARAMETERS, LR_SWITCH_OFF );
+//	lr_set_debug_message(LR_MSG_CLASS_EXTENDED_LOG | LR_MSG_CLASS_RESULT_DATA | LR_MSG_CLASS_FULL_TRACE, LR_SWITCH_ON );
+	lr_set_debug_message(LR_MSG_CLASS_JIT_LOG_ON_ERROR, LR_SWITCH_OFF); // OFF = Save to buffer but not print.
+
+	// Verbosity works on lr_output_message depending on wi_startPrintingInfo();
+	// Verbosity = 0 does not display anything except Error messages.
+	// Verbosity = 1 displays only Error and Info messages defining run conditions.
+	// Verbosity = 2 displays Trace messages of data used as well as Error and Info but NO Data returned by server.
+	// Verbosity = 3 displays Trace messages of data used as well as Error and Info, and Data returned by server.
+	// Verbosity = 4 displays Debug messages as well as Trace, Error and Info but NO Data returned by server.
+	// Verbosity = 5 displays Debug messages as well as Trace, Error and Info AND Data returned by server.
 	return 0;
 }
 

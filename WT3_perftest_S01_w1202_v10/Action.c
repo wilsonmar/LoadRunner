@@ -12,6 +12,8 @@ Action()
 	/// Call functions only during the first iteration, as if they were inside vuser_init().
 	     iActionIterations++; // increment from zero value defined in vuser_init.
 	 if( iActionIterations == 1){
+		srand(time(NULL)); // Seed random number rand().
+		
 		WT3_SignUpInOut_Init(); // establish variables.
   
 		LPCSTR_HostPath = lr_get_attrib_string("HostPath");	// LPSTR is Attribute defined in Vuser_init. 
