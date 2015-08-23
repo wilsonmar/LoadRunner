@@ -214,7 +214,7 @@ int vi_set_UserIds_file_recs(){
 	}
 			UserIds_file_recs = UserIds_file_rec - 1; // -1 to account for header row.
 			wi_startPrintingInfo();
-			lr_output_message(">> UserIds_file_recs=%d, {UserIds_userid}=%s."
+			lr_error_message(">> UserIds_file_recs=%d, {UserIds_userid}=%s."
 			                 , UserIds_file_recs, lr_eval_string("{UserIds_userid}"));
 			wi_resetPrinting();   	
 wi_noop();
