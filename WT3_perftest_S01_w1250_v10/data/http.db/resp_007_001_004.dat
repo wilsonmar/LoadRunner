@@ -1,0 +1,39 @@
+e11
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>Flight Selections</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body bgcolor="#E0E7F1">
+<style>blockquote {font-family: tahoma; font-size : 10pt}H1 {font-family: tahoma; font-size : 22pt; color: #993333}small {font-family: tahoma; font-size : 8pt}H3 {font-family: tahoma; font-size : 10pt; color: black}TD {font-family: tahoma; font-size : 10pt; color: black}</style><BR/><BR/><h1><font color="#003366">&nbsp;&nbsp;<b>Find Flight</font></b></h1><blockquote>
+<form method="post" action="reservations.pl" enctype="application/x-www-form-urlencoded">
+
+<center>
+<!-- From Denver (0) To Los Angeles (3) -->
+<table cellspacing="2" border="0" width="50%">
+<blockquote>Flight departing from <B>Denver</B> to <B>Los Angeles</B> on <B>08/14/2015</B><BR/><BR/><tr bgcolor="#5E7884"><td align="center"><font color="white"><B>Flight</B></font>
+      		<td align="center"><font color="white"><B>Departure time</B>
+      		<td align="center"><font color="white"><B>Cost</B>
+<tr bgcolor="#EFF2F7"><td align="center"><input type="radio" name="outboundFlight" value="030;251;08/14/2015" checked="checked" >Blue Sky Air 030<td align="center">8am<td align="center">$ 251</TD></TR><tr bgcolor="#EFF2F7"><td align="center"><input type="radio" name="outboundFlight" value="031;224;08/14/2015">Blue Sky Air 031<td align="center">1pm<td align="center">$ 224</TD></TR><tr bgcolor="#EFF2F7"><td align="center"><input type="radio" name="outboundFlight" value="032;238;08/14/2015">Blue Sky Air 032<td align="center">5pm<td align="center">$ 238</TD></TR><tr bgcolor="#EFF2F7"><td align="center"><input type="radio" name="outboundFlight" value="033;206;08/14/2015">Blue Sky Air 033<td align="center">11pm<td align="center">$ 206</TD></TR></table>
+
+<P>
+<!-- From Los Angeles (3) To Denver (0) -->
+<table cellspacing="2" border="0" width="50%">
+<blockquote>Flight departing from <B>Los Angeles</B> to <B>Denver</B> on <B>08/15/2015</B><BR/><BR/><tr bgcolor="#5E7884"><td align="center"><font color="white"><B>Flight</B></font>
+      		<td align="center"><font color="white"><B>Departure time</B>
+      		<td align="center"><font color="white"><B>Cost</B>
+<tr bgcolor="#EFF2F7"><td align="center"><input type="radio" name="returnFlight" value="300;251;08/15/2015" checked="checked" >Blue Sky Air 300<td align="center">8am<td align="center">$ 251</TD></TR><tr bgcolor="#EFF2F7"><td align="center"><input type="radio" name="returnFlight" value="301;224;08/15/2015">Blue Sky Air 301<td align="center">1pm<td align="center">$ 224</TD></TR><tr bgcolor="#EFF2F7"><td align="center"><input type="radio" name="returnFlight" value="302;238;08/15/2015">Blue Sky Air 302<td align="center">5pm<td align="center">$ 238</TD></TR><tr bgcolor="#EFF2F7"><td align="center"><input type="radio" name="returnFlight" value="303;206;08/15/2015">Blue Sky Air 303<td align="center">11pm<td align="center">$ 206</TD></TR></table>
+
+<input type="hidden" name="numPassengers" value="1"  /><input type="hidden" name="advanceDiscount" value="0"  /><input type="hidden" name="seatType" value="Coach"  /><input type="hidden" name="seatPref" value="None"  />
+<P><center><table width=80% cellspacing=1><tr><td align=center>
+<input type="image" name="reserveFlights" src="/WebTours/images/button_next.gif" border="0" />
+<td>&nbsp;<td align=center></table></center></form></center>
+</blockquote>
+
+</body>
+</html>
+0
+

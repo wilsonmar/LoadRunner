@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Date: Thu, 06 Aug 2015 20:38:45 GMT
+Server: Apache/2.2.21 (Win32)
+Expires: 5s
+Set-Cookie: MTUserInfo=firstName&jaja12&address2&Beverly%20Hills%2C%20CA%2090210&username&jaja12&hash&18&lastName&CNone.H1714062076.S%28null%29.GNone.U-1.P4192%0A&address1&POBOX%201&creditCard&&expDate&%0A; path=/
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=ISO-8859-1
+

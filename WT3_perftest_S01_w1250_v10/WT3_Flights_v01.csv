@@ -1,0 +1,94 @@
+DepartCity,ArriveCity,FlightId
+Denver,Frankfurt,010
+Denver,London,020
+Denver,Los Angeles,030
+Denver,Paris,040
+Denver,Portland,050
+Denver,San Francisco,060
+Denver,Seattle,070
+Denver,Sydney,080
+Denver,Zurich,090
+Frankfurt,Denver,100
+Frankfurt,London,120
+Frankfurt,Los Angeles,130
+Frankfurt,Paris,140
+Frankfurt,Portland,150
+Frankfurt,San Francisco,160
+Frankfurt,Seattle,170
+Frankfurt,Sydney,180
+Frankfurt,Zurich,190
+London,Denver,200
+London,Frankfurt,210
+London,Los Angeles,230
+London,Paris,240
+London,Portland,250
+London,San Francisco,260
+London,Seattle,270
+London,Sydney,280
+London,Zurich,290
+Los Angeles,Denver,300
+Los Angeles,London,310
+Los Angeles,Frankfurt,320
+Los Angeles,Paris,340
+Los Angeles,Portland,350
+Los Angeles,San Francisco,360
+Los Angeles,Seattle,370
+Los Angeles,Sydney,380
+Los Angeles,Zurich,390
+Paris,Denver,400
+Paris,London,410
+Paris,Los Angeles,420
+Paris,Frankfurt,430
+Paris,Portland,450
+Paris,San Francisco,460
+Paris,Seattle,470
+Paris,Sydney,480
+Paris,Zurich,490
+Portland,Denver,500
+Portland,London,510
+Portland,Los Angeles,520
+Portland,Paris,530
+Portland,Frankfurt,540
+Portland,San Francisco,560
+Portland,Seattle,570
+Portland,Sydney,580
+Portland,Zurich,590
+San Francisco,Denver,600
+San Francisco,London,610
+San Francisco,Los Angeles,620
+San Francisco,Paris,630
+San Francisco,Portland,640
+San Francisco,Frankfurt,650
+San Francisco,Seattle,670
+San Francisco,Sydney,680
+San Francisco,Zurich,690
+Seattle,Denver,700
+Seattle,London,710
+Seattle,Los Angeles,720
+Seattle,Paris,730
+Seattle,Portland,740
+Seattle,San Francisco,750
+Seattle,Frankfurt,760
+Seattle,Sydney,780
+Seattle,Zurich,790
+Sydney,Denver,800
+Sydney,London,810
+Sydney,Los Angeles,820
+Sydney,Paris,830
+Sydney,Portland,840
+Sydney,San Francisco,850
+Sydney,Seattle,860
+Sydney,Frankfurt,870
+Sydney,Zurich,890
+Zurich,Denver,900
+Zurich,London,910
+Zurich,Los Angeles,920
+Zurich,Paris,930
+Zurich,Portland,940
+Zurich,San Francisco,950
+Zurich,Seattle,960
+Zurich,Sydney,970
+Zurich,Frankfurt,980
+
+
+

@@ -1,0 +1,3 @@
+"advanceDiscount=0&depart=Paris&departDate=08%2F02%2F2015&arrive=Portland&returnDate=08%2F03%2F"
+"2015&numPassengers=1&seatPref=None&seatType=Coach&findFlights.x=35&findFlights.y=8&.cgifields="
+"roundtrip&.cgifields=seatType&.cgifields=seatPref"

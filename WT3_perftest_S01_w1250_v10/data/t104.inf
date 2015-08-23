@@ -1,0 +1,11 @@
+[t104]
+FileName1=t104.htm
+URL1=http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home
+Total=1
+ContentType=text/html
+SnapshotXmlFile=snapshot_104.xml
+RequestHeaderFile=t104_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t104_ResponseHeader.txt
+[ProtocolInfo]
+ProtocolId=QTWeb

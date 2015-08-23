@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK
+Date: Thu, 09 Apr 2015 17:55:15 GMT
+Expires: Thu, 09 Apr 2015 17:55:15 GMT
+Cache-Control: private, max-age=86400
+Content-Type: text/javascript; charset=UTF-8
+Content-Language: en
+X-Content-Type-Options: nosniff
+Content-Disposition: attachment; filename="f.txt"
+Content-Encoding: gzip
+Server: HTTP server (unknown)
+X-XSS-Protection: 1; mode=block
+Alternate-Protocol: 443:quic,p=0.5
+Transfer-Encoding: chunked
+
