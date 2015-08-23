@@ -190,6 +190,36 @@ WT3_SignUpInOut_Init(){ // Called from Action() on first iteration:
 	return 0;
 } // WT3_SignUpInOut_Init
 
+int vi_set_UserIds_file_recs(){
+	// Count how many rows by looping through the UserIds dat file: 	
+
+	int UserIds_file_rec=2; // beging looping from second row after saving first row's value:
+	lr_save_string(lr_eval_string("{UserIds_userid}"),"UserIds_userid_first"); // save value to recognize looping back to a processed item.
+	lr_advance_param("UserIds_use"); // Increment file one record.
+
+	// Loop through file until the first value appears again:
+	while( 1==1 ){ // true
+		// Catch if cycled back to first row, assuming userids are unique in the file:
+		if( stricmp( lr_eval_string("{UserIds_userid_first}"),lr_eval_string("{UserIds_userid}") ) == FOUND ){
+			return UserIds_file_rec - 1; // out of this function.
+		}else{
+			lr_advance_param("UserIds_use"); // Increment param file one row.
+			UserIds_file_rec = UserIds_file_rec + 1;
+
+			wi_startPrintingInfo();
+			lr_output_message(">> UserIds_file_rec=%d UserIds=%s", UserIds_file_rec, lr_eval_string("{UserIds_userid}"));
+			wi_resetPrinting();   	
+		}
+		wi_noop();
+	}
+
+			wi_startPrintingInfo();
+			lr_output_message(">> UserIds_file_recs=%d UserIds=%s", UserIds_file_recs, lr_eval_string("{UserIds_userid}"));
+			wi_resetPrinting();   	
+wi_noop();
+
+	return LR_FAIL;
+} // vi_set_UserIds_file_recs()
 
 WT3_Get_UserId_Data(){
 
@@ -223,29 +253,8 @@ WT3_Get_UserId_Data(){
 	}
 
 wi_noop();
+
 } // WT3_Get_SignIn_Data();
-
-int vi_set_UserIds_file_recs(){
-	// Count how many rows by looping through the UserIds dat file: 	
-
-	int UserIds_file_rec=2; // beging looping from second row after saving first row's value:
-	lr_save_string(lr_eval_string("{UserIds_use}"),"UserIds_first"); // save value to recognize looping back to a processed item.
-	lr_advance_param("UserIds_use"); // Increment file one record.
-
-	// Loop through file until the first value appears again:
-	while( 1==1 ){ // true
-		// Catch if cycled back to first row:
-		if( stricmp( lr_eval_string("{UserIds_userid_first}"),lr_eval_string("{UserIds_userid}") ) == FOUND ){
-			return UserIds_file_rec - 1;
-		}else{
-			lr_advance_param("UserIds_use"); // Increment file one record.
-			UserIds_file_rec = UserIds_file_rec + 1;
-			// lr_output_message(">> UserIds_file_rec=%d UserIds=%s", UserIds_file_rec, lr_eval_string("{UserIds_userid}"));
-		}
-	}
-	
-	return LR_FAIL;
-} // vi_set_UserIds_file_recs()
 
 
 WT3_URL_Landing(){

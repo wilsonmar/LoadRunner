@@ -13,7 +13,10 @@ Action()
 	     iActionIterations++; // increment from zero value defined in vuser_init.
 	 if( iActionIterations == 1){
 		srand(time(NULL)); // Seed random number rand().
-		
+
+		UserIds_file_recs=vi_set_UserIds_file_recs(); 
+			lr_error_message(">> rc=%d",rc);
+			if( UserIds_file_recs <= 0 ){ rc = UserIds_file_recs; return rc; }
 		WT3_SignUpInOut_Init(); // establish variables.
   
 		LPCSTR_HostPath = lr_get_attrib_string("HostPath");	// LPSTR is Attribute defined in Vuser_init. 

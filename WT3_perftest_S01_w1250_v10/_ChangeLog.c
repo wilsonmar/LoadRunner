@@ -3,6 +3,7 @@
 \brief Contains a short description of changes to the set of coding and data files.
 */
 
+// v10 2015.08.23 wm: Add UserIds.dat count during init.
 // v10 2015.08.15 wm: Add returnFlight Round-Trip to one-way outboundFlight
 // v10 2015.08.13 am: Record Rec_Roundtrip_Ticket
 // v10 2015.08.12 am: Import WT3_Flights_v01.csv file. Parameter FlightId and Add lr_save_string WT3_Flights_FlightId

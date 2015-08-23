@@ -47,8 +47,8 @@ Also contains declaration of app-specific global variables accessible from funct
 	LPCSTR			LPCSTR_URLSource; // 1=local .dat file, 2=VTS, 3=Google spreadsheet online?, 4=MySQL?.
 	int				      iURLSource_default = 2;
 	int 			      iURLSource_setting;
-	long			UserIds_file_recs; // counter of rows available.
-	long			UserIds_index; // like i = index thru table.
+	int				UserIds_file_recs; // counter of rows available.
+	int				UserIds_index; // like i = index thru table.
 	int				UserIds_done; // counter of rows processed.
 
 //// Global variables used within wi_functions.c - don't change:
