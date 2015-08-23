@@ -214,7 +214,7 @@ int vi_set_UserIds_file_recs(){
 	}
 
 			wi_startPrintingInfo();
-			lr_output_message(">> UserIds_file_recs=%d UserIds=%s", UserIds_file_recs, lr_eval_string("{UserIds_userid}"));
+			lr_error_message(">> UserIds_file_recs=%d UserIds=%s", UserIds_file_recs, lr_eval_string("{UserIds_userid}"));
 			wi_resetPrinting();   	
 wi_noop();
 
@@ -222,12 +222,13 @@ wi_noop();
 } // vi_set_UserIds_file_recs()
 
 WT3_Get_UserId_Data(){
-
+	int i;
+wi_noop();
 	// If {UserIds_use} is set to advance Sequential Each Iteration:
 	// Set n to number of rows in UserIds table: 
 	if( UserIds_file_recs > 0 ){ // As long as there are known to be rows in the table:
-		for( UserIds_index=1; UserIds_index < UserIds_file_recs +1; UserIds_index++ ){
-			// Loop to skip data records marked No for usage.
+		for( i=1; i < UserIds_file_recs +1; i++ ){
+			// Loop to skip data records marked "No" for usage.
 			// Referencing data in file UserIds.dat:
 			if( stricmp("n",lr_eval_string("{UserIds_use}")) == FOUND ){ // stricmp matches on "n" or "N".
 				wi_startPrintingTrace();
@@ -250,6 +251,7 @@ WT3_Get_UserId_Data(){
 		}
 		lr_save_string(lr_eval_string("{UserIds_userid}"),"parm_userid");
 		lr_save_string(lr_eval_string("{UserIds_pwd}")   ,"parm_pwd");
+		UserIds_done = UserIds_done +1;
 	}
 
 wi_noop();

@@ -48,7 +48,6 @@ Also contains declaration of app-specific global variables accessible from funct
 	int				      iURLSource_default = 2;
 	int 			      iURLSource_setting;
 	int				UserIds_file_recs; // counter of rows available.
-	int				UserIds_index; // like i = index thru table.
 	int				UserIds_done; // counter of rows processed.
 
 //// Global variables used within wi_functions.c - don't change:
