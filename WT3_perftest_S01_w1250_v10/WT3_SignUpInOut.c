@@ -201,7 +201,7 @@ int vi_set_UserIds_file_recs(){
 	while( 1==1 ){ // true
 		// Catch if cycled back to first row, assuming userids are unique in the file:
 		if( stricmp( lr_eval_string("{UserIds_userid_first}"),lr_eval_string("{UserIds_userid}") ) == FOUND ){
-			return UserIds_file_rec - 1; // out of this function.
+			break; // out of this loop.
 		}else{
 			lr_advance_param("UserIds_use"); // Increment param file one row.
 			UserIds_file_rec = UserIds_file_rec + 1;
@@ -212,9 +212,10 @@ int vi_set_UserIds_file_recs(){
 		}
 		wi_noop();
 	}
-
+			UserIds_file_recs = UserIds_file_rec - 1; // -1 to account for header row.
 			wi_startPrintingInfo();
-			lr_error_message(">> UserIds_file_recs=%d UserIds=%s", UserIds_file_recs, lr_eval_string("{UserIds_userid}"));
+			lr_output_message(">> UserIds_file_recs=%d, {UserIds_userid}=%s."
+			                 , UserIds_file_recs, lr_eval_string("{UserIds_userid}"));
 			wi_resetPrinting();   	
 wi_noop();
 

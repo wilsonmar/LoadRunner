@@ -1,4 +1,4 @@
-Virtual User Script started at : 8/23/2015 3:51:31 PM
+Virtual User Script started at : 8/23/2015 4:09:02 PM
 Starting action vuser_init.
 Web Turbo Replay of LoadRunner 12.50.0 for Windows 7; build 1096 (Aug 23 2015 16:55:24)  	[MsgId: MMSG-27143]
 Run mode: HTML  	[MsgId: MMSG-26993]
@@ -7,8 +7,8 @@ Run-Time Settings file: "C:\githubs\wilsonmar\LoadRunner\WT3_perftest_S01_w1250_
 Vuser directory: "C:\githubs\wilsonmar\LoadRunner\WT3_perftest_S01_w1250_v10"  	[MsgId: MMSG-27052]
 Vuser output directory: "C:\githubs\wilsonmar\LoadRunner\WT3_perftest_S01_w1250_v10"  	[MsgId: MMSG-27050]
 Operating system's current working directory: "c:\githubs\wilsonmar\loadrunner\wt3_perftest_s01_w1250_v10"  	[MsgId: MMSG-27048]
-UTC (GMT) start date/time   : 2015-08-23 21:51:31  	[MsgId: MMSG-26992]
-LOCAL start date/time       : 2015-08-23 15:51:31  	[MsgId: MMSG-26991]
+UTC (GMT) start date/time   : 2015-08-23 22:09:02  	[MsgId: MMSG-26992]
+LOCAL start date/time       : 2015-08-23 16:09:02  	[MsgId: MMSG-26991]
 Local daylight-Savings-Time : Yes  	[MsgId: MMSG-26990]
 Some of the Run-Time Settings:  	[MsgId: MMSG-27142]
     Download non-HTML resources: Yes  	[MsgId: MMSG-27018]
@@ -48,14 +48,42 @@ Running Vuser...
 Starting iteration 1.
 Starting action Action.
 WT3_SignUpInOut.c(197): Notify: Next row for parameter UserIds_userid = 1 [table  = UserIds_userid].
-WT3_SignUpInOut.c(197): Notify: Parameter Substitution: parameter "UserIds_userid" =  "jaja14"
-WT3_SignUpInOut.c(197): Notify: Saving Parameter "UserIds_userid_first = jaja14".
+WT3_SignUpInOut.c(197): Notify: Parameter Substitution: parameter "UserIds_userid" =  "jaja01"
+WT3_SignUpInOut.c(197): Notify: Saving Parameter "UserIds_userid_first = jaja01".
 WT3_SignUpInOut.c(198): Notify: Next row for parameter UserIds_use = 2 [table  = UserIds_use].
 WT3_SignUpInOut.c(198): Notify: Getting new value for parameter 'UserIds_use': table = 'UserIds.dat' column = '0' row = '2'.
-WT3_SignUpInOut.c(203): Notify: Parameter Substitution: parameter "UserIds_userid_first" =  "jaja14"
+WT3_SignUpInOut.c(203): Notify: Parameter Substitution: parameter "UserIds_userid_first" =  "jaja01"
 WT3_SignUpInOut.c(203): Notify: Next row for parameter UserIds_userid = 2 [table  = UserIds_userid].
 WT3_SignUpInOut.c(203): Notify: Getting new value for parameter 'UserIds_userid': table = 'UserIds.dat' column = '1' row = '2'.
-WT3_SignUpInOut.c(203): Notify: Parameter Substitution: parameter "UserIds_userid" =  "jaja15"
+WT3_SignUpInOut.c(203): Notify: Parameter Substitution: parameter "UserIds_userid" =  "jaja02"
 WT3_SignUpInOut.c(206): Notify: Next row for parameter UserIds_use = 3 [table  = UserIds_use].
 WT3_SignUpInOut.c(206): Notify: Getting new value for parameter 'UserIds_use': table = 'UserIds.dat' column = '0' row = '3'.
+wi_functions.c(613): >> Attribute "Verbosity" value 9 not recognized. Default to "4".
+wi_functions.c(69): >> Controller=None, Host=WIN-HJA4A353DRG, ScenarioID=0, Group=None, Vuser=-1, PID=4864.
+wi_functions.c(658): >> Attribute "RunType"="SignUpInOut".
+wi_functions.c(758): >> Attribute "UseCase"="All".
+wi_functions.c(184): >> Attribute floatThinkTimeSecs=   0.000.
+Action.c(25): >> {WebToursPath}=http://127.0.0.1:1080
+WT3_SignUpInOut.c(298): >> ParamName=userSession_capture=116676.205427299zAAVfDcpDVzzzzzHDzAAQpVQDQ for MSO_JSFormSubmit1={MSO_JSFormSubmit1}.
+wi_functions.c(266): >> {userAgent}=Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0).
+WT3_Config.c(49): >> MSO_Comments=<OFF>
+WT3_Config.c(50): >> MSO_JSCalc=<OFF>
+WT3_Config.c(51): >> MSO_JSCalc=<OFF>
+WT3_Config.c(52): >> MSO_JSFormSubmit1=<OFF>
+WT3_Config.c(53): >> MSO_JSFormSubmit2=<OFF>
+WT3_Config.c(54): >> MSO_JSVerify=<OFF>
+WT3_Config.c(55): >> MSO_JSWPages=<OFF>
+WT3_Config.c(56): >> MSO_Redirect=<OFF>
+WT3_Config.c(57): >> MSO_Redirects=<OFF>
+WT3_Config.c(58): >> MSO_SErrors=<OFF> (100%)
+WT3_Config.c(59): >> MSO_SLoad=<OFF> (100%)
+WT3_SignUpInOut.c(298): >> ParamName=userSession_capture=116676.205427299zAAVfDcpDVzzzzzHDzAAQpVQDQ for MSO_JSFormSubmit1=<OFF>.
+WT3_SignUpInOut.c(236): >> Iteration=1 Use="N", User="jaja01" skipped [in WT3_Get_SignIn_Data].
+WT3_Travel.c(253): >> {outboundFlight}=340;438;08/23/2015
+WT3_Travel.c(254): >> {returnFlight}=430;438;08/30/2015
+WT3_Travel.c(429): >> Itineraries_count=1, 1st=210308905-110140-jC.
+WT3_Travel.c(482): >> p=1=on&flightID=210308905-110140-jC&removeFlights.x=53&removeFlights.y=2
+WT3_Travel.c(489): >> [1] &.cgifields=1
+WT3_Travel.c(496): >> Body=1=on&flightID=210308905-110140-jC&removeFlights.x=53&removeFlights.y=2&.cgifields=1
+WT3_SignUpInOut.c(298): >> ParamName=userSession_capture=116676.206561361zAAVfDcpDHfDzAAQpVQtcf for MSO_JSFormSubmit1=<OFF>.
 Vuser Terminated.

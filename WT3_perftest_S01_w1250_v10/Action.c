@@ -12,7 +12,8 @@ Action()
 	/// Call functions only during the first iteration, as if they were inside vuser_init().
 	     iActionIterations++; // increment from zero value defined in vuser_init.
 	 if( iActionIterations == 1){
-		srand(time(NULL)); // Seed random number rand().
+
+	     	srand(time(NULL)); // Seed random number rand().
 
 		UserIds_file_recs=vi_set_UserIds_file_recs(); 
 			if( UserIds_file_recs <= 0 ){ return UserIds_file_recs; }
