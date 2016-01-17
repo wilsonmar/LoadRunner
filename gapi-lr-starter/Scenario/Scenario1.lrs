@@ -14,7 +14,7 @@ GlobalDir=
 }
 
 {ScenarioPrivateConfig
-Path=C:\dev\GoogleOAuth2\Scenario\Scenario1.lrs
+Path=C:\gits\wlsonmar\LoadRunner\gapi-lr-starter\Scenario\Scenario1.lrs
 Author=marw
 Subject=Scenario1
 Description=
@@ -24,7 +24,7 @@ Groups=1
 Vusers=1
 Tranzactions=1
 Rendezvous=0
-Result_file=c:\dev\googleoauth2\scenario\res0\res0.lrr
+Result_file=C:\gits\wlsonmar\LoadRunner\gapi-lr-starter\Scenario\res0\res0.lrr
 ResCleanName=res1
 ResSymName=
 DEFAULT_NFS_LESS_MODE=1
@@ -1033,7 +1033,7 @@ Auto_Y_Scale=1
 DefaultMsrAutoScale=0
 Granularities=-1
 MeasurementCount=0
-Description=Displays the number of attempted server connections during each second of the scenario run. A server connection is retried when the initial connection was unauthorized, when proxy authentication is required, when the initial connection was closed by the server, when the initial connection to the server could not be made, or when the server was initially unable to resolve the load generator’s IP address.
+Description=Displays the number of attempted server connections during each second of the scenario run. A server connection is retried when the initial connection was unauthorized, when proxy authentication is required, when the initial connection was closed by the server, when the initial connection to the server could not be made, or when the server was initially unable to resolve the load generatorÂ’s IP address.
 [19]
 MeasurementsDelimiter=|||
 HelpContext=566
@@ -4043,56 +4043,106 @@ XMLData=<Mediators distribution = "1" enabled= "1" ><Mediator type= "SARM" enabl
 }
 
 {ScenarioSchedulerConfig
-<?xml version="1.0" encoding="utf-16"?>
-<LoadTest>
-  <Schedulers>
-    <CurrentSchedulerId>1</CurrentSchedulerId>
-    <StartMode>
-      <StartModeType>Immediately</StartModeType>
-      <StartModes>
-        <Immediately />
-        <DelayAfterLTStart>0</DelayAfterLTStart>
-        <StartAt>2013-09-27T21:24:42.4056665-06:00</StartAt>
-      </StartModes>
-    </StartMode>
-    <Scheduler ID="1">
-      <Name>Schedule 1</Name>
-      <Manual>
-        <SchedulerType>Global</SchedulerType>
-        <Global>
-          <Scheduling>
-            <IsDefaultScheduler>true</IsDefaultScheduler>
-            <DynamicScheduling>
-              <Run>
-                <StartCondition>
-                  <PrevAction />
-                </StartCondition>
-                <TotalVusersNumber>1</TotalVusersNumber>
-              </Run>
-              <Duration>
-                <StartCondition>
-                  <PrevAction />
-                </StartCondition>
-                <RunFor>300</RunFor>
-              </Duration>
-              <RampDownAll>
-                <StartCondition>
-                  <PrevAction />
-                </StartCondition>
-                <Batch>
-                  <Count>5</Count>
-                  <Interval>30</Interval>
-                </Batch>
-              </RampDownAll>
-            </DynamicScheduling>
-          </Scheduling>
-        </Global>
-        <Groups>
-          <InitAllBeforeStart>false</InitAllBeforeStart>
-        </Groups>
-      </Manual>
-    </Scheduler>
-  </Schedulers>
+<?xml version="1.0" encoding="utf-16"?>
+
+<LoadTest>
+
+  <Schedulers>
+
+    <CurrentSchedulerId>1</CurrentSchedulerId>
+
+    <StartMode>
+
+      <StartModeType>Immediately</StartModeType>
+
+      <StartModes>
+
+        <Immediately />
+
+        <DelayAfterLTStart>0</DelayAfterLTStart>
+
+        <StartAt>2013-09-27T21:24:42.4056665-06:00</StartAt>
+
+      </StartModes>
+
+    </StartMode>
+
+    <Scheduler ID="1">
+
+      <Name>Schedule 1</Name>
+
+      <Manual>
+
+        <SchedulerType>Global</SchedulerType>
+
+        <Global>
+
+          <Scheduling>
+
+            <IsDefaultScheduler>true</IsDefaultScheduler>
+
+            <DynamicScheduling>
+
+              <Run>
+
+                <StartCondition>
+
+                  <PrevAction />
+
+                </StartCondition>
+
+                <TotalVusersNumber>1</TotalVusersNumber>
+
+              </Run>
+
+              <Duration>
+
+                <StartCondition>
+
+                  <PrevAction />
+
+                </StartCondition>
+
+                <RunFor>300</RunFor>
+
+              </Duration>
+
+              <RampDownAll>
+
+                <StartCondition>
+
+                  <PrevAction />
+
+                </StartCondition>
+
+                <Batch>
+
+                  <Count>5</Count>
+
+                  <Interval>30</Interval>
+
+                </Batch>
+
+              </RampDownAll>
+
+            </DynamicScheduling>
+
+          </Scheduling>
+
+        </Global>
+
+        <Groups>
+
+          <InitAllBeforeStart>false</InitAllBeforeStart>
+
+        </Groups>
+
+      </Manual>
+
+    </Scheduler>
+
+  </Schedulers>
+
 </LoadTest>
 }
 
