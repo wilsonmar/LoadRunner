@@ -13,14 +13,16 @@ That's the setting in the scenario file in the Scenario folder within this scrip
 
 Google's API was chosen as the system under test since Google has provides a well-documented implementation of their JWT (Java Web Toolkit) which more and more enterprises are adopting.
 
-CAUTION: Before running this script, create your own Google API account and paste the keys into the keys text files.
+## To use this script 
 
-To use this script within LoadRunner on a Windows machine:
-
- 0. Install LoadRunner 11.52
- 0. Install a git client 
- 0. Make a folder 
- 1. Clone this repo within that folder
+ 1. Install LoadRunner 11.52 on a Windows machine.
+ 2. Install a git client.
+ 3. Make a folder.
+ 4. Clone this repo within that folder (after creating an account on Github.com, if you haven't already).
+ 5. Create your own Google API account (if you haven't already).
+ 6. Paste keys from your Google account into the keys text file.
+ 7. Open this script within VuGen LoadRunner.
+ 8. Double-click the scenario file within the Scenario folder.
 
 ## Files in this repo
 * <strong>.gitignore</strong> is used by the collaborators of this repo for git clients to automatically block some files from being updated to github.com.
