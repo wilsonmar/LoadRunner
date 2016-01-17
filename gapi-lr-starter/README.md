@@ -22,7 +22,11 @@ Google's API was chosen as the system under test since Google has provides a wel
  5. Create your own Google API account (if you haven't already).
  6. Paste keys from your Google account into the keys text file.
  7. Open this script within VuGen LoadRunner.
- 8. Double-click the scenario file within the Scenario folder.
+ 8. Execute the script.
+
+ 9. Double-click the Scenario1.lrs file within the Scenario folder.
+ 10. Change the Script folder to point to the path to this repo on your hard disk.
+ 11. Change the Results folder path.
 
 ## Files in this repo
 * <strong>.gitignore</strong> is used by the collaborators of this repo for git clients to automatically block some files from being updated to github.com.
