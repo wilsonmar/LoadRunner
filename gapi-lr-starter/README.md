@@ -25,3 +25,5 @@ To use this script within LoadRunner on a Windows machine:
 The <strong>.gitignore</strong> file in this repo is used by the collaborators of this repo for git clients to automatically block some files from being updated to github.com.
 
 The <strong>output.txt</strong> file in this repo is saved from the last run of this script using VuGen, with verbosity set to maximum.
+
+The <strong>lr_js_date_lib.js</strong> file is copied from <a target="_blank" href="https://github.com/wilsonmar/LoadRunner/tree/master/random_birthdate_js"> the random_birthday_js</a> sample script from the same author (Wilson Mar at wilsonmar+github@gmail.com).
