@@ -11,7 +11,7 @@ This repo's name includes <strong>starter</strong> because it contains examples 
 CAUTION: Although the example script here is meant for stress testing, the script in this repo should not be run by more than one virtual users over more than a few seconds because it accesses a production site with usage limits.
 That's the setting in the scenario file in the Scenario folder within this script.
 
-Google's API was chosen as the system under test since Google has provides a well-documented implementation of their JWT (Java Web Toolkit) that more and more enterprises are adopting.
+Google's API was chosen as the system under test since Google has provides a well-documented implementation of their JWT (Java Web Toolkit) which more and more enterprises are adopting.
 
 CAUTION: Before running this script, create your own Google API account and paste the keys into the keys text files.
 
@@ -23,3 +23,5 @@ To use this script within LoadRunner on a Windows machine:
  1. Clone this repo within that folder
 
 The <strong>.gitignore</strong> file in this repo is used by the collaborators of this repo for git clients to automatically block some files from being updated to github.com.
+
+The <strong>output.txt</strong> file in this repo is saved from the last run of this script using VuGen, with verbosity set to maximum.
