@@ -1,2 +1,2 @@
-vts1_Server,vts1_Port
-localhost,8888
+vts_a_Host,vts_a_Port
+localhost,8787

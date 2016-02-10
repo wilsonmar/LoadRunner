@@ -8,6 +8,7 @@
 		// wi_start_transaction()
 		// wi_end_transaction()
 		// wi_startPrintingError()
+		// wi_startPrintingWarning()
 		// wi_startPrintingInfo()
 		// wi_startPrintingDebug()
 		// wi_startPrintingTrace()
@@ -50,34 +51,32 @@
 
 	// For google_apis:
 	LPCSTR			LPCSTR_URLSource; // 1=local .dat file, 2=VTS, 3=Google spreadsheet online?, 4=MySQL?.
-	int				      iURLSource_default = 2;
+	int				      iURLSource_default = 1;
 	int 			      iURLSource_setting;
 	// For use by vi_set_pURLtoShorten_file_recs() of local file URLtoShorten.dat:
 	long			nURLtoShorten_file_recs; // counter of rows available.
 	long			nURLtoShorten_index; // like i.
 	int				nURLtoShorten_done; // counter of rows processed.
 
-	// TODO: 09. If not using VTS, comment out (substitute) # with //:
+	// TODO: 09. If not using VTS, comment out (substitute) # with // in this next line:
 #define USE_VTS
 #ifdef  USE_VTS
-	// For use by VTS within vi_set_VTS3() below.
 	// TODO: 10. Follow instructions in the Getting Started Hands-on Guide to install VTS, invoke VTS, and import data into it.
 	// 		Invoke VTS from Windows 7 Start > All Programs > HP Software > Virtual Table Server.
 	//		This invokes "C:\Program Files (x86)\HP\LoadRunner\bin\spsConfig.hta" -launchVtsUI
-	//		QUESTION: From Windows 8?
 	// TODO: 11. Import data before starting this script : Start > All Programs > HP Software > HP LoadRunner > Tools > Virtual Table Server.
-	LPCSTR			LPCSTR_VTS_Host;
-	//char*			       VTS_Host_default="localhost"; 
-	char*		           VTS_Host_string; // = LPCSTR_VTS_Host; // "localhost"; // vts1_Server; //"localhost";
+	//LPCSTR			LPCSTR_VTS_Host;
+	char*			       VTS_Host_default="localhost"; 
+	char*		           VTS_Host_string; // "localhost"; // filled with vts_a_Host;
 
-	LPCSTR			LPCSTR_VTS_Port;
-	//int					  nVTS_Port_default=8888;
-	int				          nPort; // = int(LPCSTR_VTS_Port); // int(vts1_Port); // 4000 is installation default; // or 8888;
+	//LPCSTR			LPCSTR_VTS_Port;
+	int					  VTS_nPort_default=8787;
+	int				          nPort; // = int(LPCSTR_VTS_Port); // int(vts_a_Server); // 4000 is installation default; // or 8888;
 
 	int				      nVTS_row_count; // &colcount
 	int				iUpdate_shorturl_in_VTS; // 1=Yes, 0=No.
 
-// TODO: 13. If not using QR image generation, comment out (substitute) # with //:
+// TODO: 13. If not using QR image generation, comment out (substitute) # with // in this next line:
 #define GEN_QR
 #ifdef  GEN_QR
 	LPCSTR			LPCSTR_SaveImageYN; // controls whether to get/get_google_short_url_qrcode_qrcode();
@@ -226,14 +225,14 @@ int wi_set_Think_Time(){
 	  	   floatThinkTimeSecs=floatThinkTimeSecs_default; // Default unless changed for subsequent transactions.
 
   	    wi_startPrintingDebug();
-		lr_output_message(">> floatThinkTimeSecs=%8.2f from coded default.", floatThinkTimeSecs);
+		lr_output_message(">> Attribute \"floatThinkTimeSecs\"=%8.2f from coded default.", floatThinkTimeSecs);
 		wi_stopPrinting();
 	}else{ // use value from command attribute: // floats have 24 significant bits, double 52.
 		// Not using strtof() per http://pubs.opengroup.org/onlinepubs/009695399/functions/strtod.html
 	    floatThinkTimeSecs= atof(LPCSTR_ThinkTimeSecs); // atof() requires definition at top of file.
 
 	    wi_startPrintingDebug();
-		lr_output_message(">> Attribute floatThinkTimeSecs=%8.3f.", floatThinkTimeSecs );
+		lr_output_message(">> Attribute \"floatThinkTimeSecs\"=%8.3f.", floatThinkTimeSecs );
 		wi_stopPrinting();
 	 } // For ftoa see http://www.performancecompetence.com/wordpress/?p=318
 	return LR_PASS;
@@ -292,6 +291,16 @@ int wi_end_transaction(){
 } // wi_end_transaction
 
 wi_startPrintingError(){
+
+		lr_set_debug_message( 542 , LR_SWITCH_OFF ); // to unset all selections.
+		lr_set_debug_message( LR_MSG_CLASS_JIT_LOG_ON_ERROR, LR_SWITCH_ON ); // LR_SWITCH_ON (=1) means suppress output.
+	if( iVerbosity >= 1 ){
+		lr_set_debug_message( LR_MSG_CLASS_JIT_LOG_ON_ERROR, LR_SWITCH_OFF ); // LR_SWITCH_OFF (=0) means stop suppressing output.
+		lr_set_debug_message( LR_MSG_CLASS_BRIEF_LOG  , LR_SWITCH_ON ); // (1) (Standard) logging.
+	}
+	return LR_PASS;
+}
+wi_startPrintingWarning(){
 
 		lr_set_debug_message( 542 , LR_SWITCH_OFF ); // to unset all selections.
 		lr_set_debug_message( LR_MSG_CLASS_JIT_LOG_ON_ERROR, LR_SWITCH_ON ); // LR_SWITCH_ON (=1) means suppress output.
@@ -576,29 +585,24 @@ vi_set_URLSource_attribute(){
 		    lr_output_message(">> Attribute \"URLSource\" not specified in command-line or run-time settings. Default to \"%d\".", iURLSource_setting );
 			wi_stopPrinting();
 	}else{ // Ensure only acceptable values were input:
-		if( stricmp("All",iURLSource_setting ) == FOUND ){ // Run-time Attribute "URLSource" or command line option "-URLSource"
-			wi_startPrintingInfo();
-		    lr_output_message(">> Attribute \"URLSource\"=%s."
-					,iURLSource_setting
-					);
-			wi_stopPrinting();
-       	}else
+	   	iURLSource_setting = atoi(LPCSTR_URLSource);
+	   	
 		if( iURLSource_setting == 1 ){
 			wi_startPrintingInfo();
-		    lr_output_message(">> Attribute \"URLSource\"=%s for using file URLtoShorten.dat in script folder." ,iURLSource_setting );
+		    lr_output_message(">> Attribute \"URLSource\"=%d for using file URLtoShorten.dat in script folder." ,iURLSource_setting );
 			wi_stopPrinting();
 
 		#ifdef USE_VTS
        	}else
 		if( iURLSource_setting == 2 ){
 			wi_startPrintingInfo();
-		    lr_output_message(">> Attribute \"URLSource\"=%s for using VTS." ,iURLSource_setting);
+		    lr_output_message(">> Attribute \"URLSource\"=%d for using VTS." ,iURLSource_setting);
 			wi_stopPrinting();
 		#endif // USE_VTS
 		
 		}else{
 			wi_startPrintingError();
-		    lr_output_message(">> Attribute \"URLSource\"=%s not valid. lr_exit() stopping script execution." ,iURLSource_setting );
+		    lr_output_message(">> Attribute \"URLSource\"=%d not valid. lr_exit() stopping script execution." ,iURLSource_setting );
 			wi_stopPrinting();
 			lr_exit(LR_EXIT_VUSER,LR_FAIL);
 		}
@@ -686,33 +690,34 @@ int vi_set_VTS3(){
 	// See blog by its developer at http://h30499.www3.hp.com/t5/HP-LoadRunner-and-Performance/The-New-Virtual-Table-Server-VTS-in-LoadRunner-11-52/ba-p/6069435#.Ukt79rHnb4Y
 	// HP Support article at http://support.openview.hp.com/selfsolve/document/KM305130
 
-       LPCSTR_VTS_Host = lr_get_attrib_string("VTS_Host"); // from Run-time settings Attributes or command line.
- 	if(LPCSTR_VTS_Host==NULL){                 // Not specified in Run-Time Settings Attributes or command line.
- 	          VTS_Host_string="localhost"; // VTS_Host_default; // such as "localhost"; 
+    // Get host and port # from vts1.dat
 
-			wi_startPrintingInfo();
-		    lr_output_message(">> Attribute \"VTS_Host\" not specified in command-line or run-time settings. Default to \"%s\"."
-					,VTS_Host_string
+    if( lr_eval_string("{vts_a_Host}") == NULL){
+			wi_startPrintingWarning();
+		    lr_output_message(">> File parameter \"vts_a_Host\" is NULL. Default to \"%s\"."
+					,VTS_Host_default
 					);
 			wi_stopPrinting();
+		sprintf( VTS_Host_string ,"%s",VTS_Host_default);
     }else{
-		sprintf( VTS_Host_string ,"%s",LPCSTR_VTS_Host);
-	} // if(LPCSTR_VTS_Host==NULL)
-       
+    	VTS_Host_string = lr_eval_string("{vts_a_Host}");
+	}
 
-       LPCSTR_VTS_Port = lr_get_attrib_string("VTS_Port"); // from Run-time settings Attributes or command line.
- 	if(LPCSTR_VTS_Port==NULL){             // Not specified in Run-Time Settings Attributes or command line.
- 	             nPort=8787; // nVTS_Port_default; // such as 8787 or 8888;
-		    wi_startPrintingInfo();
-		    lr_output_message(">> Attribute \"VTS_Port\" not specified in command-line or run-time settings. Default to \"%d\"."
-					,nPort 
+ 	if( lr_eval_string("{vts_a_Port}")==NULL){
+		    wi_startPrintingWarning();
+		    lr_output_message(">> File parameter \"vts_a_Port\" is NULL. Default to \"%s\"."
+					,VTS_nPort_default
 					);
 			wi_stopPrinting();
+			nPort = VTS_nPort_default;
     }else{
-     	nPort = atoi(LPCSTR_VTS_Port); 
-	} // if(LPCSTR_VTS_Port==NULL)
+    	nPort = atoi( lr_eval_string("{vts_a_Port}") );
+	}
 
     /// Connect using LoadRunner native functions:
+			wi_startPrintingInfo();
+			lr_output_message(">> vtc_connect Host=%s, Port=%d.", VTS_Host_string, nPort);
+			wi_stopPrinting();
  		pvci = vtc_connect( VTS_Host_string , nPort , VTOPT_KEEP_ALIVE ); // VTS_Host_string
 	if( pvci <= 0){
 	    wi_startPrintingDebug();

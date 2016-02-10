@@ -17,7 +17,7 @@
 *
 * This script needs these globals defined at the top of vuser_init file :
 	LPCSTR			LPCSTR_URLSource; // 1=local .dat file, 2=VTS, 3=Google spreadsheet online?, 4=MySQL?.
-	int				      iURLSource_default = 2;
+	int				      iURLSource_default = 1;
 	int 			      iURLSource_setting;
 
 	// For use by vi_set_pURLtoShorten_file_recs() of local file URLtoShorten.dat:
@@ -186,7 +186,7 @@ get_long_url_to_shorten(){
 
 	}else{
 		wi_startPrintingError();
-       	lr_output_message(">> iURLSource_setting=%s is invalid.", iURLSource_setting);
+       	lr_output_message(">> iURLSource_setting=%d is invalid.", iURLSource_setting);
 		wi_stopPrinting();
 		rc=LR_FAIL; // This would be a programming error since editing occurred before this.
 	} // if( iURLSource_setting 
