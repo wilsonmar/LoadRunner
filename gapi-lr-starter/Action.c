@@ -28,25 +28,19 @@
 
 // These manual actions are described (with sample screen prints) in another document:
 	// TODO: 01. Obtain your own credentials from the Google APIs Console at https://console.developers.google.com/project (formerly https://code.google.com/apis/console/b/0/) 
-
-	// Rather than using a command like lr_save_string("123456789012@developer.gserviceaccount.com","GoogleAPIServiceEmail");
 	// TODO: 02. Update file google_urlshortener_credentials.dat 1st field with the Google API Project name assigned to you by Google.
-
 	// TODO: 03. Update file google_urlshortener_credentials.dat 2nd field with the Google Service Email assigned to you by Google.
 	// TODO: 04. Update file google_urlshortener_credentials.dat 3rd field with the GoogleAPIFingerprin prefix assigned to you by Google.
 
 
 // Functions in this file are repeated for each Action iteration, defined in the sequence below (in calling hierarchy):
-	// Action()
-
-		
 Action(){
 	int rc=LR_PASS;
 
-	// TODO: 05. At the Google API Console, generate the Public key infrastructure fingerprint private file.
+	// TODO: 05. At the Google API Console, generate the Public key infrastructure fingerprint private file contents.
 	// TODO: 06. Save the fingerprint file as file "google-urlshortener.p12" file in the script folder.
 	// TODO: 07. If you don't want to use the default name for the fingerprint file "notasecret", change it here:
-				lr_save_string("google_urlshortener.p12","pServicePrivateKeyFile");
+				lr_save_string("google_urlshortener.p12","pServicePrivateKeyFile"); // into parameter pServicePrivateKeyFile.
 
 	    iActionIterations++; // increment from zero value defined in vuser_init.
 	if( iActionIterations == 1 ){ // The first interation only (instead of putting this in vuser_init):
@@ -86,8 +80,8 @@ Action(){
 	#endif // GEN_QR
 
 
-	// FUTURE ENHANCEMENTS: FIXME: Use web_rest() to not send User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT)
-	//  Add retrieval of URL shortened:
+	// FUTURE ENHANCEMENTS: FIXME: Use web_rest() to not send default User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT)
+	//  Add retrieval of URL and URL shortened to confirm.
 	//  Add recognition of expired token and get new token using refresh token instead of auth token.
 	//  Add other Google APIs, Amazon APIs, etc. using same data:
 	//  set_google_other_api();

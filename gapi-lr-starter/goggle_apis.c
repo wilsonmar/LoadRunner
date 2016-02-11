@@ -4,16 +4,15 @@
 *
 * Functions defined in this file:
 *
-*	get_long_url_to_shorten()
+*	get_long_url_from_short_url()
 *	get_google_short_url()
-*		set_oauthhelper_dll()
+*		set_oauthhelper_dll() one time
 *		get_pJWTAssertion()
 *		get_google_access_token()
 *		update_shorturl_in_VTS()
 *			set_pShortHostKey_from_url(char* strURL)
 *		get_google_short_url_qrcode()
 *			set_gen_QR_attribute()
-*	get_long_url_from_short_url()
 *
 * This script needs these globals defined at the top of vuser_init file :
 	LPCSTR			LPCSTR_URLSource; // 1=local .dat file, 2=VTS, 3=Google spreadsheet online?, 4=MySQL?.
@@ -118,81 +117,6 @@ get_google_short_url(){
 	return rc;
 } // get_google_short_url()
 
-get_long_url_from_short_url(){
-	int rc=LR_PASS;
-	int i=0;
-	
-	// FIXME: Re
-	
-	return rc;
-} // get_long_url_from_short_url()
-
-get_long_url_to_shorten(){
-	int rc=LR_PASS;
-	int i=0;
-	
-	if( iURLSource_setting == 1 && nURLtoShorten_file_recs > 0 ){
-		for( nURLtoShorten_index=1; nURLtoShorten_index < nURLtoShorten_file_recs +1; nURLtoShorten_index++ ){
-			// Loop to skip data records marked No for usage.
-			// Referencing data in file URLtoShorten.dat:
-			if( stricmp( "N", lr_eval_string("{pURL_use}") ) == FOUND ){
-				lr_advance_param("pURL_long"); // Increment file one record.
-			} // else fall through to use it.
-		}
-		lr_save_string(lr_eval_string("{pURL_use}"),"pURLtoShorten");
-
-	#ifdef USE_VTS
-	}else
-	if( iURLSource_setting == 2 ){ // (use VTS)
-
-		// ENHANCEMENT: The alternative to this loop is to use an increment.
-
-		// Scan through the VTS table from top to bottom.
-		// If short_url is not blank in VTS table, it's alreadry processed, so skip to next row:
-		for( i=1; i <= nVTS_row_count; i++ ){
-			rc = vtc_query_column(pvci, "web", i, &outvalue); // retrieve single field from a designated row.
-			if( outvalue == NULL || sizeof( outvalue ) <= 0 ){ // there is no longURL, so skip that row;
-				wi_startPrintingTrace();
-				lr_output_message(">> row %d \"web\" value is blank. Skipping to next row. rc=%d.", i, rc);
-				wi_stopPrinting();
-			}else{
-				rc = vtc_query_column(pvci, "shorturl", i, &shorturl); // retrieve single field from a designated row.
-				// FIXME: Why is rc=10111 ?
-				if( shorturl == NULL || sizeof( shorturl ) <= 0 ){ // a blank cell, so it needs a shorturl.
-					lr_save_string(outvalue,"pURLtoShorten");
-					wi_startPrintingTrace();
-					lr_output_message(">> row %d \"shorturl\" is needed for \"web\"=%s. rc=%d.", i, lr_eval_string("{pURLtoShorten}"), rc);
-					wi_stopPrinting();
-					vtc_free(outvalue);
-					rc=0; // FIXME: Why need to override rc=10111 again?
-					break; // break out of loop for this script to get a shorturl for the web URL in VTS.
-				}else{ 
-					// there is a shortURL already, so cycle back up to top for another
-					// unless this is the last row in the table:
-					if( i == nVTS_row_count ){
-						wi_startPrintingTrace();
-						lr_output_message(">> Last row at %d has a shorturl of \"%s\". So no more to process.", i, shorturl);
-						wi_stopPrinting();
-						vtc_free(shorturl);
-						rc = LR_FAIL;
-					}
-				}
-	   		}
-		} // for loop
-
-	#endif // USE_VTS
-
-	// ENHANCEMENT: else option to retrieve from on-line Google spreadsheet, etc.
-
-	}else{
-		wi_startPrintingError();
-       	lr_output_message(">> iURLSource_setting=%d is invalid.", iURLSource_setting);
-		wi_stopPrinting();
-		rc=LR_FAIL; // This would be a programming error since editing occurred before this.
-	} // if( iURLSource_setting 
-	
-	return rc;
-} // get_long_url_to_shorten()
 
 set_oauthhelper_dll(){ // Called by get_pJWTAssertion() interations:
 

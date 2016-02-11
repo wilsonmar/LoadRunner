@@ -27,6 +27,9 @@
 		// vi_set_pURLtoShorten_file_recs()
 		// vi_set_VTS3()
 
+		//	get_long_url_to_shorten()
+		//  verify_long_url()
+
 // VuGen files require explicit declaration of C functions that do not return integers. 
 // Function prototypes below force the intepreter to save chars in read/write memory, which
 // serves to avoid Error: "C interpreter runtime error - memory violation error" during replay. 
@@ -84,6 +87,9 @@
 	char*			       strOutputLogFolder;
 #endif // GEN_QR
 
+	int				bool_verify_long_url = 0; // 1=Yes, 0=No.
+
+
 	// Naming based on examples within HP Function Reference:
 	PVCI2			pvci = 0; // Windows internal process handle number.
 	char 			**outValues  = NULL; // ** defines a C array.
@@ -114,6 +120,7 @@
 	char			tempString1[2560];
 	char			tempString2[2560];
 	char*			token;
+
 
 vuser_init(){
 
@@ -278,7 +285,7 @@ int wi_end_transaction(){
 	){
 		// move on.
 	}else{
-		wi_startPrintingError();
+		wi_startPrintingInfo();
     	lr_error_message(">> HTML Return Code=%d, pJSONResponse=%s." 
 		                 , intHttpRetCode
 		                 , lr_eval_string("{pJSONResponse}") 
@@ -744,4 +751,132 @@ int vi_set_VTS3(){
 #endif // USE_VTS
 
 
-// END SCRIPT FILE //
+get_long_url_from_short_url(){
+	int rc=LR_PASS;
+	int i=0;
+	
+	// FIXME: Re
+	
+	return rc;
+} // get_long_url_from_short_url()
+
+
+get_long_url_to_shorten(){
+	int rc=LR_PASS;
+	int i=0;
+	
+	if( iURLSource_setting == 1 && nURLtoShorten_file_recs > 0 ){
+		for( nURLtoShorten_index=1; nURLtoShorten_index < nURLtoShorten_file_recs +1; nURLtoShorten_index++ ){
+			// Loop to skip data records marked No for usage.
+			// Referencing data in file URLtoShorten.dat:
+			if( stricmp( "N", lr_eval_string("{pURL_use}") ) == FOUND ){
+				lr_advance_param("pURL_long"); // Increment file one record.
+			} // else fall through to use it.
+		}
+		lr_save_string(lr_eval_string("{pURL_use}"),"pURLtoShorten");
+
+	#ifdef USE_VTS
+	}else
+	if( iURLSource_setting == 2 ){ // (use VTS)
+
+		// ENHANCEMENT: The alternative to this loop is to use an increment.
+
+		// Scan through the VTS table from top to bottom.
+		// If short_url is not blank in VTS table, it's alreadry processed, so skip to next row:
+		for( i=1; i <= nVTS_row_count; i++ ){
+			rc = vtc_query_column(pvci, "web", i, &outvalue); // retrieve single field from a designated row.
+			if( outvalue == NULL || sizeof( outvalue ) <= 0 ){ // there is no longURL, so skip that row;
+				wi_startPrintingTrace();
+				lr_output_message(">> row %d \"web\" value is blank. Skipping to next row. rc=%d.", i, rc);
+				wi_stopPrinting();
+			}else{
+				rc = vtc_query_column(pvci, "shorturl", i, &shorturl); // retrieve single field from a designated row.
+				// FIXME: Why is rc=10111 ?
+				if( shorturl == NULL || sizeof( shorturl ) <= 0 ){ // a blank cell, so it needs a shorturl.
+					lr_save_string(outvalue,"pURLtoShorten");
+					wi_startPrintingTrace();
+					lr_output_message(">> row %d \"shorturl\" is needed for \"web\"=%s. rc=%d.", i, lr_eval_string("{pURLtoShorten}"), rc);
+					wi_stopPrinting();
+
+					vtc_free(outvalue);
+					rc=0; // FIXME: Why need to override rc=10111 again?
+					break; // break out of loop for this script to get a shorturl for the web URL in VTS.
+				}else{ 
+					// there is a shortURL already, so cycle back up to top for another
+					// unless this is the last row in the table:
+					if( i == nVTS_row_count ){
+						wi_startPrintingTrace();
+						lr_output_message(">> Last row at %d has a shorturl of \"%s\". So no more to process.", i, shorturl);
+						wi_stopPrinting();
+						vtc_free(shorturl);
+						rc = LR_FAIL;
+					}
+				}
+	   		}
+		} // for loop
+
+	#endif // USE_VTS
+
+	// FIXME: ENHANCEMENT: else option to retrieve from on-line Google spreadsheet, etc.
+		if( rc== LR_PASS){
+			if( stricmp("All",LPCSTR_RunType ) == FOUND ){ // Run-time Attribute "RunType" or command line option "-RunType"
+				lr_save_string("verify_long_url" ,"pTransSequence");
+				rc=verify_long_url(); // to obtain LR parameter {pShortURL} by calling get_google_access_token() which calls get_pJWTAssertion().
+			}		
+		}
+	}else{
+		wi_startPrintingError();
+       	lr_output_message(">> iURLSource_setting=%d is invalid.", iURLSource_setting);
+		wi_stopPrinting();
+		rc=LR_FAIL; // This would be a programming error since editing occurred before this.
+	} // if( iURLSource_setting 
+	
+	return rc;
+} // get_long_url_to_shorten()
+
+
+verify_long_url(){
+	int rc=LR_PASS;
+
+	// STRATEGY: Surround each custom function with a flag to contorl invocation:
+	if( bool_verify_long_url != 1 ){ // 1=Yes
+		lr_save_string(lr_eval_string("{pURLtoShorten}"),"pURLtoShorten");
+		return rc;
+	}else{
+		lr_save_string("Generic1","pTransName");
+		rc=wi_generic_html_get(); // references lr_eval_string("{pURLtoShorten}") 
+		if( rc == LR_PASS ){ // OK (HTTP 200, 201, 301)
+			wi_startPrintingDebug();
+    	   	lr_output_message(">> URL=%s, rc=%d.", lr_eval_string("{pURLtoShorten}"), rc);
+			wi_stopPrinting();
+		}else{
+			wi_startPrintingError();
+    	   	lr_output_message(">> URL=%s, HTTP=%d.", lr_eval_string("{pURLtoShorten}"), rc);
+			wi_stopPrinting();
+			rc=LR_FAIL; // URL returns 404 or contains unusable stuff.
+		}
+	}
+
+	// 	int	bURLtoShorten_success=LR_PASS;
+
+	return rc;
+}
+
+wi_generic_html_get(){ // input: {pURLtoShorten} and {pTransName}
+	int rc=LR_PASS;
+
+	    wi_start_transaction(); // based on {pTransName}
+		web_url(lr_eval_string("{pTransName}"),
+			"URL={pURLtoShorten}",
+			"TargetFrame=",
+    		"Resource=0",
+			"RecContentType=text/html", 
+			"Snapshot=t1.inf", 
+			"Mode=HTML",
+			LAST);
+		rc = wi_end_transaction();
+
+	return rc;
+}
+
+// END vuser_int SCRIPT FILE //
