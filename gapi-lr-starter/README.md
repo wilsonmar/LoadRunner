@@ -36,3 +36,7 @@ Google's API was chosen as the system under test since Google has provides a wel
 * <strong>lr_js_date_lib.js</strong> is copied from <a target="_blank" href="https://github.com/wilsonmar/LoadRunner/tree/master/random_birthdate_js"> the random_birthday_js</a> sample script from the same author (Wilson Mar at wilsonmar+github@gmail.com).
 
 * <strong>oauthhelper.dll</strong> is copyrighted by Phillip Mayhew.
+* <strong>vuser_init.c</strong> contains global variable definitions.
+* <strong>action.c</strong> contains main loop functions.
+* <strong>wi_library.c</strong> contains utility functions used by many scripts.
+
