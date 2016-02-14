@@ -15,7 +15,7 @@ Generating the date provides "cleansed" data for testing
 without exposing actual data values to possible identity theft.
 
 * Generating birthdates enable data values to have a pre-determined range of values
-  that impacts how often certain processeing functions are invoked.
+  that impacts how often certain processing functions are invoked.
 
 
 ## <a name="date_techniques"></a> Date Handling Coding Techniques
