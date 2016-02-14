@@ -100,12 +100,12 @@ execution can pause there during debugging. For example, at the return statement
 
 CHALLENGE: Add the javascript file among Extra Files in your LoadRunner script.
 
- 1. Paste the calling code at an approprite spot in your LoadRunner script.
+ 1. Paste the calling code at an appropriate spot in your LoadRunner script.
  2. Right-click on Extra Files within the VuGen Solution Explorer.
  3. Specify the JavaScript file name.
 
 
-    PROTIP: Specify Doxygen tags for automatic generation of cross-reference documentation, whith
+    PROTIP: Specify Doxygen tags for automatic generation of cross-reference documentation, with
     sample code to call the function.
 
     CHALLENGE: Immediately after creating a file, at the top of the file add Doxygen tags.
