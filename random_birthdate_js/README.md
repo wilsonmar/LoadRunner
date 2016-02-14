@@ -48,7 +48,7 @@ And more importantly, work to overcome miscommunication between the tester and d
 ### <a name="lr_call_js"> Completed Script Walkthrough</a>
 
 1. If you do not want to install a Git client on your machine, 
-   click "Download ZIP" to downloaded into your machine's Downloads folder
+   click "Download ZIP" to download into your machine's Downloads folder
    a file named random_birthdate_js-master.zip, which is the MASTER branch.
 
 The remainder of this page explains how the script was created.
