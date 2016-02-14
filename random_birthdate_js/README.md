@@ -385,8 +385,8 @@ function randomWorkingAdultAge(){
 ```
 
 If you want to use a different set of statistics, just replace the array containing the same format.
-A future enhancement may be to externalize the arrary as a JSON file so that other age distributions can be specified by
-simplying putting another file in the script, or specifying the file path in another run-time attribute.
+A future enhancement may be to externalize the array as a JSON file so that other age distributions can be specified by
+simply putting another file in the script, or specifying the file path in another run-time attribute.
 
 The age from the array is used to calculate the year of birth through subtraction from the current year.
 
