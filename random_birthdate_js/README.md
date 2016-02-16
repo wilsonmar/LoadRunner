@@ -79,14 +79,31 @@ CHALLENGE: Call a JavaScript library to return a text string into a LoadRunner p
     	}
     ```
 
-3. Execute the script.
-4. Notice the Error message on the Replay log.
+3. Declare return code in the action file.
+
+```
+ Action(){
+    int rc=0;
+    	web_js_run(
+        	"Code=getWorkingAdultRandomBirthDate('YYYY-MM-DD');",
+	        "ResultParam=BirthYYYYMMDD",
+        	SOURCES,
+        	"File=lr_js_date_lib.js", ENDITEM,
+        	LAST);
+    		// web_js_reset() not invoked to leave js code in memory for repeated calls.
+    		
+    return rc;
+  }
+  ```
+
+4. Execute the script.
+5. Notice the Error message on the Replay log.
 
 ```
 Action.c(3): Error -35052: Step 'web_js_run' requires that JavaScript engine be enabled in the Run-Time Settings  	[MsgId: MERR-35052]
 ```
 
-5.Enable running JavaScript code in Run-Time Settings.
+6.Enable running JavaScript code in Run-Time Settings.
 
 ```
  Run-Time Settings > Internet Protocol > Preferences > Set advanced options > Options > JavaScript > Enable running JavaScript code
@@ -158,6 +175,11 @@ CHALLENGE: Initially, return a static value in the format expected to ensure tha
     The comments notes this is the birthdate of a 25-year old.
 
 6. Run (and debug) the LoadRunner script to the block.
+7. In order to view the output message on the replay log for the date to be displayed, paste this code into the action section below web_js_run code.
+
+```
+lr_output_message(">> birth_date=\"%s\" rc=%d.", lr_eval_string("{birth_date_iso}"), rc);
+```
 
 
 ### <a name="debug_js_file"></a> Debug JavaScript Outside LoadRunner
