@@ -74,6 +74,7 @@ CHALLENGE: Call a JavaScript library to return a text string into a LoadRunner p
         	"File=lr_js_date_lib.js", ENDITEM,
         	LAST);
     		// web_js_reset() not invoked to leave js code in memory for repeated calls.
+    		
     return 0;
     	}
     ```
