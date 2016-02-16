@@ -113,7 +113,8 @@ CHALLENGE: Add the javascript file among Extra Files in your LoadRunner script.
 
  1. Paste the calling code at an appropriate spot in your LoadRunner script.
  2. Right-click on Extra Files within the VuGen Solution Explorer.
- 3. Specify the JavaScript file name.
+ 3. Click on Create New File
+ 4. Specify the JavaScript file name such as lr_js_date_lib.js
 
 
     PROTIP: Specify Doxygen tags for automatic generation of cross-reference documentation, with
@@ -121,7 +122,7 @@ CHALLENGE: Add the javascript file among Extra Files in your LoadRunner script.
 
     CHALLENGE: Immediately after creating a file, at the top of the file add Doxygen tags.
 
- 4. Copy the sample JavaScript multi-line comment and paste it at the top of new file lr_js_date_lib.js.
+ 5. Copy the sample JavaScript multi-line comment and paste it at the top of new file lr_js_date_lib.js.
 
     ```
     /* /file lr_js_date_lib.js
