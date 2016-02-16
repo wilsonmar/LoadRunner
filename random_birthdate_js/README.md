@@ -96,8 +96,9 @@ CHALLENGE: Call a JavaScript library to return a text string into a LoadRunner p
   }
   ```
 
-4. Execute the script.
-5. Notice the Error message on the Replay log.
+4.Execute the script.
+
+5.Notice the Error message on the Replay log.
 
 ```
 Action.c(3): Error -35052: Step 'web_js_run' requires that JavaScript engine be enabled in the Run-Time Settings  	[MsgId: MERR-35052]
