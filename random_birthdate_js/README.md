@@ -86,6 +86,12 @@ CHALLENGE: Call a JavaScript library to return a text string into a LoadRunner p
 Action.c(3): Error -35052: Step 'web_js_run' requires that JavaScript engine be enabled in the Run-Time Settings  	[MsgId: MERR-35052]
 ```
 
+5.Enable running JavaScript code in Run-Time Settings.
+
+```
+ Run-Time Settings > Internet Protocol > Preferences > Set advanced options > Options > JavaScript > Enable running JavaScript code
+ ```
+
 ### <a name="add_js_file"></a> Add JavaScript Files in LoadRunner
 
 
