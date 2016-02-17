@@ -196,9 +196,15 @@ The remainder of this document defines how you can create your own.
 
 CHALLENGE: Define JavaScript and HTML that takes the place of how LoadRunner calls the underlying JavaScript functions.
 
-1. Create your own account.
-2. Create a new file.
-3. Paste this at the top of the JavaScript pane:
+1. Create your own account by going to http://jsfiddle.net
+2. Click on Sign In > Sign up
+3. Enter E-mail address, Username, Password and Password Confirmation.
+4. Type the text for ReCapticha
+5. Click Create account.
+6. Edit your profile.
+7. Click Save.
+8. Click on Editor.
+9. Paste this at the top of the JavaScript pane:
 
     ```
     'use strict';
@@ -219,7 +225,7 @@ CHALLENGE: Define JavaScript and HTML that takes the place of how LoadRunner cal
 
     CAUTION: Single quotes are used within JavaScript functios because there may be double quotes surrounding them.
 
-4. Paste this into the HTML pane:
+10.Paste this into the HTML pane:
 
     ```
     <form>
