@@ -206,16 +206,109 @@ CHALLENGE: Define JavaScript and HTML that takes the place of how LoadRunner cal
 8. Click on Editor.
 9. Paste this at the top of the JavaScript pane:
 
-    ```
+ ```
     'use strict';
+function web_js_run(){
+    var Birth_YYYYMMDD;
+    Birth_YYYYMMDD = getWorkingAdultBirthDate('YYYYMMDD');
+    // alert(Birth_YYYYMMDD);
+    document.getElementById('result').innerHTML = Birth_YYYYMMDD;
+}
 
-    function web_js_run(){
-    var birth_date;
-        birth_date = getWorkingAdultRandomBirthDate('YYYY-MM-DD');
-        // alert("birth_date=" + birth_date);
-        document.getElementById('result').innerHTML = birth_date;
+function getWorkingAdultBirthDate( in_format ){
+    // Example at: http://jsfiddle.net/3nyjurtc/13/
+    var formatted_date;
+    var f_year, f_month, f_mday;
+    var working_age;
+    var now = new Date();
+    //var now = new Date("Feburary 29, 2012 01:15:00"); // last leap year.
+    var isLeapYear;
+    var iDays_in_month;
+    
+    // PROTIP: For better readability, use JavaScript line continuation character:
+/*
+    formatted_date.concat( now.getFullYear() \
+        , ( now.getFullYear() +1 ) \
+        ,   now.getDate() \
+        );
+*/
+    document.getElementById('today').innerHTML = now;
+
+    // Ignoring natural variation in likelihood of each age being picked:
+    working_age = randomWorkerAge();
+    // For debugging:
+    document.getElementById('working_age').innerHTML = working_age;
+
+    // PROTIP: Keep values in numeric type for calculations until formatting.
+    f_year  = now.getFullYear() - working_age ;
+
+    f_month = randomIntFromInterval(1,12);
+    if ( f_month <= 9 ){ // zero fill:
+       f_month=  "0" + f_month;
     }
-    ```
+
+    // **** Generate random day of month ::
+    // alert("DEBUGGING: " + f_mday +" "+ now.getDate() );
+    if( f_month == 2){
+        isLeapYear = isLeapYear( f_year );
+        if( isLeapYear ){
+            f_mday = randomIntFromInterval(1,29);
+        }else{
+            f_mday = randomIntFromInterval(1,28);
+        }
+    }else{
+        iDays_in_month = daysInMonth( f_month, f_year );
+        f_mday = randomIntFromInterval(1,iDays_in_month);
+    }
+    if( f_mday <= 9 ){ // zero fill:
+        f_mday = "0" + f_mday;
+    }
+         
+    // **** Format date ::
+    // f_year  = f_year.toString();
+
+          if( in_format = 'YYYYMMDD' ){
+        formatted_date = f_year + f_month + f_mday;
+    }else if( in_format = 'YYYY/MM/DD'){
+        formatted_date = f_year +"/"+ f_month +"/"+ f_mday;
+    }else if( in_format = 'MM/DD/YYYY'){
+        formatted_date = f_month +"/"+ f_mday +"/"+ f_year;
+    }else if( in_format = 'DD/MM/YYYY'){
+        formatted_date = f_mday +"/"+ f_month +"/"+ f_year;
+    }else{
+        alert("Only YYYYMMDD is recognized now.");
+    }
+
+    return formatted_date;
+}
+
+function randomWorkerAge(){
+    // PROTIP: This is in a common function (business rule)
+    // because working age can change over time.
+    return randomIntFromInterval(18,65);
+}
+
+function isLeapYear( yr ){
+    // http://www.wikiwand.com/en/Leap_year#/Algorithm
+    if (typeof yr == "string") { 
+        yr=parseInt(yr);
+    }   
+    return !((yr % 4) || (!(yr % 100) && (yr % 400)));
+}
+
+function randomIntFromInterval(min,max){
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+function daysInMonth(iMonth, iYear){
+	return 32 - new Date(iYear, iMonth, 32).getDate();
+}
+
+function formatDate( iYear, iMonth, iMday, format_code ){
+	return "2023/12/30"; // static response during dev.
+}
+ ```
+
 
     The `use strict` directive tells JavaScript to ensure that variables are specifically defined 
     by a statement such as `var Birth_date`.
