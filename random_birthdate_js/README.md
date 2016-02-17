@@ -121,7 +121,7 @@ Action.c(3): Error -35052: Step 'web_js_run' requires that JavaScript engine be 
 
 
 
-2. While you are there, right-click on the LoadRunner code line **after** this and set a **Breakpoint** so 
+While you are there, right-click on the LoadRunner code line **after** this and set a **Breakpoint** so 
 execution can pause there during debugging. For example, at the return statement.
 
 
