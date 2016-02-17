@@ -334,6 +334,18 @@ function formatDate( iYear, iMonth, iMday, format_code ){
     Result: <span id="result">YYYY-MM-DD</span>
     ```
 
+11.Click on Update inorder to Save.
+
+12.Click on Run.
+
+13.Click on Click me!
+
+14.Observe the Today's Date,Age and Date Of Birth.
+
+15.Click again on Click me! 
+
+16.Observe the Age and Date Of Birth changes randomly.
+
 
 ### <a name="format_return_value"></a> Define Return Values in Variables
 
