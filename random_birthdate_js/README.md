@@ -111,11 +111,8 @@ Action.c(3): Error -35052: Step 'web_js_run' requires that JavaScript engine be 
 
    This occured because the JavaScript engine is disabled by default on new scripts. 
 
-6.Enable running JavaScript code in Run-Time Settings.
+6.Enable running JavaScript code in Run-Time Settings > Internet Protocol > Preferences > Set advanced options > Options > JavaScript > Enable running JavaScript code.
 
-   ```
- Run-Time Settings > Internet Protocol > Preferences > Set advanced options > Options > JavaScript > Enable running JavaScript code
-    ```
 
 ### <a name="add_js_file"></a> Add JavaScript Files in LoadRunner
 
