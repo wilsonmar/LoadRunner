@@ -204,7 +204,7 @@ CHALLENGE: Define JavaScript and HTML that takes the place of how LoadRunner cal
 6. Edit your profile.
 7. Click Save.
 8. Click on Editor.
-9. Paste this at the top of the JavaScript pane:
+9. Paste this code at the top of the JavaScript pane:
 
  ```
     'use strict';
@@ -318,7 +318,7 @@ function formatDate( iYear, iMonth, iMday, format_code ){
 
     CAUTION: Single quotes are used within JavaScript functios because there may be double quotes surrounding them.
 
-10.Paste this into the HTML pane:
+10.Paste this code into the HTML pane:
 
     ```
     <form>
