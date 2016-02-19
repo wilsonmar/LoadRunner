@@ -4,6 +4,9 @@ generates random birthdates, provided in Github
 as an example of how to call a JavaScript function from inside LoadRunner,
 explained one step at a time.
 
+Alternately, you can step through the script in this repo,
+which presents the product after following the process below.
+
 ## <a name="random_birthdays"></a> Why Random Birthdays?
 
 Generating a birth date randomly can be useful and expedient during testing:
