@@ -58,7 +58,7 @@ The remainder of this page explains how the script was created.
 
 CHALLENGE: Call a JavaScript library to return a text string into a LoadRunner parameter.
 
-1. In LoadRunner VuGen, create a new C script file.
+1. In LoadRunner VuGen, create a new C script file, protocol <strong>Web (HTTP/HTML)</strong>.
 
    In this initial exercise, we just want to invoke a shell.
 
@@ -79,7 +79,10 @@ CHALLENGE: Call a JavaScript library to return a text string into a LoadRunner p
     	}
     ```
 
-3. Declare return code in the action file.
+    I think it's a good idea to put a comment about using web_js_reset() even if it's not used because
+    the design of the function may or may not depend on it to clear out data from previous iterations.
+
+3. Declare return code (rc) in the action file.
 
 ```
  Action(){
@@ -96,22 +99,25 @@ CHALLENGE: Call a JavaScript library to return a text string into a LoadRunner p
   }
   ```
 
+  The assumption is that a return code of zero is "good" / valid.
+
 4.Execute the script.
 
 5.Notice the Error message on the Replay log.
 
-```
+   ```
 Action.c(3): Error -35052: Step 'web_js_run' requires that JavaScript engine be enabled in the Run-Time Settings  	[MsgId: MERR-35052]
-```
+   ```
+
+   This occured because the JavaScript engine is disabled by default on new scripts. 
 
 6.Enable running JavaScript code in Run-Time Settings.
 
-```
+   ```
  Run-Time Settings > Internet Protocol > Preferences > Set advanced options > Options > JavaScript > Enable running JavaScript code
- ```
+    ```
 
 ### <a name="add_js_file"></a> Add JavaScript Files in LoadRunner
-
 
     BTW, instead of a hard-coded string, the input parameter can come from a LoadRunner parameter already defined:
 
@@ -119,10 +125,8 @@ Action.c(3): Error -35052: Step 'web_js_run' requires that JavaScript engine be 
     "Code=getWorkingAdultRandomBirthDate(LR.getParam('YYYY-MM-DD'));",
     ```
 
-
-
-While you are there, right-click on the LoadRunner code line **after** this and set a **Breakpoint** so 
-execution can pause there during debugging. For example, at the return statement.
+   While you are there, right-click on the LoadRunner code line **after** this and set a **Breakpoint** so 
+   execution can pause there during debugging. For example, at the return statement.
 
 
 ### <a name="add_js_file"></a> Add JavaScript Files in LoadRunner
@@ -178,9 +182,9 @@ CHALLENGE: Initially, return a static value in the format expected to ensure tha
 6. Run (and debug) the LoadRunner script to the block.
 7. In order to view the output message on the replay log for the date to be displayed, paste this code into the action section below web_js_run code.
 
-```
+   ```
 lr_output_message(">> birth_date=\"%s\" rc=%d.", lr_eval_string("{birth_date_iso}"), rc);
-```
+   ```
 
 
 ### <a name="debug_js_file"></a> Debug JavaScript Outside LoadRunner
