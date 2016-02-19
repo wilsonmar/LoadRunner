@@ -78,8 +78,13 @@ CHALLENGE: Call a JavaScript library to return a text string into a LoadRunner p
     return 0;
     	}
     ```
-
-    I think it's a good idea to put a comment about using web_js_reset() even if it's not used because
+   `getWorkingAdultRandomBirthDate('YYYY-MM-DD');",`
+   is a function defined within file `lr_js_date_lib.js`.
+   
+   Parameter `YYYY-MM-DD` provides a specification to the function on how to format the expected response
+   in the resulting `BirthYYYYMMDD` LoadRunner parameter. The parameter name provides a clue about the contents. 
+   
+   I think it's a good idea to put a comment about using web_js_reset() even if it's not used because
     the design of the function may or may not depend on it to clear out data from previous iterations.
 
 3. Declare return code (rc) in the action file.
