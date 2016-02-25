@@ -1,0 +1,158 @@
+Virtual User Script started at : 2/24/2016 10:36:11 PM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.50.0 for Windows 7; build 1096 (Feb 24 2016 16:55:24)  	[MsgId: MMSG-27143]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)  	[MsgId: MMSG-26988]
+Run-Time Settings file: "C:\WM\2016_Projects_With_WM\WT3_JavaScript\WT3_PerfTest_S01_WJS1250\WT3_PerfTest_S01_WJS1250_v04\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.js(22): Notify: Transaction "WT3_T03_URL_Landing" started.
+Action.js(25): web.regSaveParamEx started  	[MsgId: MMSG-26355]
+Action.js(25): Registering web.regSaveParamEx was successful  	[MsgId: MMSG-26390]
+Action.js(36): web.regFind started  	[MsgId: MMSG-26355]
+Action.js(36): Registering web.regFind was successful  	[MsgId: MMSG-26390]
+Action.js(43): web.url("index.htm") started  	[MsgId: MMSG-26355]
+Action.js(43): Notify: Parameter Substitution: parameter "pProtocolHostPort" =  "http://127.0.0.1:1080"
+Action.js(43): Detected non-resource "http://127.0.0.1:1080/WebTours/header.html" in "http://127.0.0.1:1080/WebTours/index.htm"  	[MsgId: MMSG-26574]
+Action.js(43): Detected non-resource "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" in "http://127.0.0.1:1080/WebTours/index.htm"  	[MsgId: MMSG-26574]
+Action.js(43): Found resource "http://127.0.0.1:1080/WebTours/images/hp_logo.png" in HTML "http://127.0.0.1:1080/WebTours/header.html"  	[MsgId: MMSG-26659]
+Action.js(43): Found resource "http://127.0.0.1:1080/WebTours/images/webtours.png" in HTML "http://127.0.0.1:1080/WebTours/header.html"  	[MsgId: MMSG-26659]
+Action.js(43): Detected non-resource "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true"  	[MsgId: MMSG-26574]
+Action.js(43): Detected non-resource "http://127.0.0.1:1080/WebTours/home.html" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true"  	[MsgId: MMSG-26574]
+Action.js(43): Found resource "http://127.0.0.1:1080/WebTours/images/mer_login.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home"  	[MsgId: MMSG-26659]
+Action.js(43): Notify: Saving Parameter "userSession = 117972.861320373zAziccQpAftVzzzHDztAQpDHtDcf".
+Action.js(43): Registered web_reg_find successful for "Text=Web Tours" (count=6)  	[MsgId: MMSG-26364]
+Action.js(43): web.url("index.htm") was successful, 10080 body bytes, 2419 header bytes, 24 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.js(55): Notify: Transaction "WT3_T03_URL_Landing" ended with a "Pass" status (Duration: 1.7776 Wasted Time: 0.2795).
+Action.js(65): Notify: Transaction "WT3_T04_SignUpNow" started.
+Action.js(67): web.url("login.pl") started  	[MsgId: MMSG-26355]
+Action.js(67): Found resource "http://127.0.0.1:1080/WebTours/profileValidate.js" in HTML "http://127.0.0.1:1080/cgi-bin/login.pl?username=&password=&getInfo=true"  	[MsgId: MMSG-26659]
+Action.js(67): Found resource "http://127.0.0.1:1080/WebTours/images/button_next.gif" in HTML "http://127.0.0.1:1080/cgi-bin/login.pl?username=&password=&getInfo=true"  	[MsgId: MMSG-26659]
+Action.js(67): web.url("login.pl") was successful, 14475 body bytes, 838 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.js(79): Notify: Transaction "WT3_T04_SignUpNow" ended with a "Pass" status (Duration: 0.4374 Wasted Time: 0.0550).
+Action.js(81): Notify: Transaction "WT3_T05_SignUp" started.
+Action.js(84): web.submitForm("login.pl_2") started  	[MsgId: MMSG-26355]
+Action.js(84): Notify: Next row for parameter UserIds_userid = 1 [table  = UserIds_userid].
+Action.js(84): Notify: Parameter Substitution: parameter "UserIds_userid" =  "test02"
+Action.js(84): Notify: Next row for parameter UserIds_pwd = 1 [table  = UserIds_pwd].
+Action.js(84): Notify: Parameter Substitution: parameter "UserIds_pwd" =  "bean"
+Action.js(84): Notify: Next row for parameter UserIds_pwd = 1 [table  = UserIds_pwd].
+Action.js(84): Notify: Parameter Substitution: parameter "UserIds_pwd" =  "bean"
+Action.js(84): Submitting form to "http://127.0.0.1:1080/cgi-bin/login.pl", Target Frame="info"  	[MsgId: MMSG-27978]
+Action.js(84): Resource "http://127.0.0.1:1080/WebTours/images/button_next.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.js(84): web.submitForm("login.pl_2") was successful, 1079 body bytes, 346 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.js(102): Notify: Transaction "WT3_T05_SignUp" ended with a "Pass" status (Duration: 0.1300 Wasted Time: 0.0022).
+Action.js(106): Notify: Transaction "WT3_T07_SignIn" started.
+Action.js(108): web.regFind started  	[MsgId: MMSG-26355]
+Action.js(108): Registering web.regFind was successful  	[MsgId: MMSG-26390]
+Action.js(114): web.submitData("login.pl") started  	[MsgId: MMSG-26355]
+Action.js(114): Notify: Parameter Substitution: parameter "pProtocolHostPort" =  "http://127.0.0.1:1080"
+Action.js(114): Notify: Parameter Substitution: parameter "pProtocolHostPort" =  "http://127.0.0.1:1080"
+Action.js(114): Notify: Parameter Substitution: parameter "userSession" =  "117972.861320373zAziccQpAftVzzzHDztAQpDHtDcf"
+Action.js(114): Notify: Next row for parameter UserIds_userid = 1 [table  = UserIds_userid].
+Action.js(114): Notify: Parameter Substitution: parameter "UserIds_userid" =  "test02"
+Action.js(114): Notify: Next row for parameter UserIds_pwd = 1 [table  = UserIds_pwd].
+Action.js(114): Notify: Parameter Substitution: parameter "UserIds_pwd" =  "bean"
+Action.js(114): Detected non-resource "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home" in "http://127.0.0.1:1080/cgi-bin/login.pl"  	[MsgId: MMSG-26574]
+Action.js(114): Detected non-resource "http://127.0.0.1:1080/cgi-bin/login.pl?intro=true" in "http://127.0.0.1:1080/cgi-bin/login.pl"  	[MsgId: MMSG-26574]
+Action.js(114): Found resource "http://127.0.0.1:1080/WebTours/images/flights.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+Action.js(114): Found resource "http://127.0.0.1:1080/WebTours/images/itinerary.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+Action.js(114): Found resource "http://127.0.0.1:1080/WebTours/images/in_home.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+Action.js(114): Found resource "http://127.0.0.1:1080/WebTours/images/signoff.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=home"  	[MsgId: MMSG-26659]
+Action.js(114): Registered web_reg_find successful for "Text=Welcome" (count=2)  	[MsgId: MMSG-26364]
+Action.js(114): web.submitData("login.pl") was successful, 5781 body bytes, 2025 header bytes, 36 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.js(135): Notify: Transaction "WT3_T07_SignIn" ended with a "Pass" status (Duration: 0.2440 Wasted Time: 0.0058).
+Action.js(138): Notify: Transaction "WT3_T22_Travel_Search_Flight" started.
+Action.js(140): web.regFind started  	[MsgId: MMSG-26355]
+Action.js(140): Registering web.regFind was successful  	[MsgId: MMSG-26390]
+Action.js(148): web.regSaveParamEx started  	[MsgId: MMSG-26355]
+Action.js(148): Registering web.regSaveParamEx was successful  	[MsgId: MMSG-26390]
+Action.js(159): web.regSaveParamEx started  	[MsgId: MMSG-26355]
+Action.js(159): Registering web.regSaveParamEx was successful  	[MsgId: MMSG-26390]
+Action.js(169): web.image("Search Flights Button") started  	[MsgId: MMSG-26355]
+Action.js(169): Image-linking to "http://127.0.0.1:1080/cgi-bin/welcome.pl?page=search", Target Frame="body"  	[MsgId: MMSG-27993]
+Action.js(169): Detected non-resource "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=flights" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?page=search"  	[MsgId: MMSG-26574]
+Action.js(169): Detected non-resource "http://127.0.0.1:1080/cgi-bin/reservations.pl?page=welcome" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?page=search"  	[MsgId: MMSG-26574]
+Action.js(169): Found resource "http://127.0.0.1:1080/WebTours/images/in_flights.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=flights"  	[MsgId: MMSG-26659]
+Action.js(169): Resource "http://127.0.0.1:1080/WebTours/images/itinerary.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.js(169): Found resource "http://127.0.0.1:1080/WebTours/images/home.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=flights"  	[MsgId: MMSG-26659]
+Action.js(169): Resource "http://127.0.0.1:1080/WebTours/images/signoff.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.js(169): Resource "http://127.0.0.1:1080/WebTours/images/button_next.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.js(169): Notify: Saving Parameter "departDate = 02/25/2016".
+Action.js(169): Notify: Saving Parameter "returnDate = 02/26/2016".
+Action.js(169): Registered web_reg_find successful for "Text=Find Flight" (count=1)  	[MsgId: MMSG-26364]
+Action.js(169): web.image("Search Flights Button") was successful, 7758 body bytes, 1319 header bytes, 43 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.js(179): Notify: Transaction "WT3_T22_Travel_Search_Flight" ended with a "Pass" status (Duration: 0.5594 Wasted Time: 0.0077).
+Action.js(182): Notify: Transaction "WT3_T23_Travel_Flight_Lookup" started.
+Action.js(184): web.regFind started  	[MsgId: MMSG-26355]
+Action.js(184): Registering web.regFind was successful  	[MsgId: MMSG-26390]
+Action.js(192): web.regSaveParamEx started  	[MsgId: MMSG-26355]
+Action.js(192): Registering web.regSaveParamEx was successful  	[MsgId: MMSG-26390]
+Action.js(202): web.submitForm("reservations.pl") started  	[MsgId: MMSG-26355]
+Action.js(202): Notify: Parameter Substitution: parameter "WT3_Flights_DepartCity" =  "Seattle"
+Action.js(202): Notify: Parameter Substitution: parameter "departDate" =  "02/25/2016"
+Action.js(202): Notify: Next row for parameter WT3_Flights_ArriveCity = 65 [table  = WT3_Flights_ArriveCity].
+Action.js(202): Notify: Parameter Substitution: parameter "WT3_Flights_ArriveCity" =  "London"
+Action.js(202): Notify: Parameter Substitution: parameter "returnDate" =  "02/26/2016"
+Action.js(202): Submitting form to "http://127.0.0.1:1080/cgi-bin/reservations.pl", Target Frame=""  	[MsgId: MMSG-27978]
+Action.js(202): Notify: Saving Parameter "outboundFlight = 720;565;02/25/2016".
+Action.js(202): Resource "http://127.0.0.1:1080/WebTours/images/button_next.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.js(202): Registered web_reg_find successful for "Text=Flight departing from" (count=1)  	[MsgId: MMSG-26364]
+Action.js(202): web.submitForm("reservations.pl") was successful, 2438 body bytes, 255 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.js(222): Notify: Transaction "WT3_T23_Travel_Flight_Lookup" ended with a "Pass" status (Duration: 0.9317 Wasted Time: 0.0021).
+Action.js(225): Notify: Transaction "WT3_T24_Find_Flight" started.
+Action.js(227): web.regFind started  	[MsgId: MMSG-26355]
+Action.js(227): Registering web.regFind was successful  	[MsgId: MMSG-26390]
+Action.js(234): web.submitForm("reservations.pl_2") started  	[MsgId: MMSG-26355]
+Action.js(234): Notify: Parameter Substitution: parameter "outboundFlight" =  "720;565;02/25/2016"
+Action.js(234): Submitting form to "http://127.0.0.1:1080/cgi-bin/reservations.pl", Target Frame=""  	[MsgId: MMSG-27978]
+Action.js(234): Resource "http://127.0.0.1:1080/WebTours/images/button_next.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.js(234): Registered web_reg_find successful for "Text=Payment Details" (count=1)  	[MsgId: MMSG-26364]
+Action.js(234): web.submitForm("reservations.pl_2") was successful, 2674 body bytes, 255 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.js(247): Notify: Transaction "WT3_T24_Find_Flight" ended with a "Pass" status (Duration: 0.1624 Wasted Time: 0.0017).
+Action.js(250): Notify: Transaction "WT3_T25_Travel_Payment_Details" started.
+Action.js(252): web.regFind started  	[MsgId: MMSG-26355]
+Action.js(252): Registering web.regFind was successful  	[MsgId: MMSG-26390]
+Action.js(259): web.submitForm("reservations.pl_3") started  	[MsgId: MMSG-26355]
+Action.js(259): Submitting form to "http://127.0.0.1:1080/cgi-bin/reservations.pl", Target Frame=""  	[MsgId: MMSG-27978]
+Action.js(259): Found resource "http://127.0.0.1:1080/WebTours/images/bookanother.gif" in HTML "http://127.0.0.1:1080/cgi-bin/reservations.pl"  	[MsgId: MMSG-26659]
+Action.js(259): Registered web_reg_find successful for "Text=Invoice" (count=2)  	[MsgId: MMSG-26364]
+Action.js(259): web.submitForm("reservations.pl_3") was successful, 3269 body bytes, 652 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.js(278): Notify: Transaction "WT3_T25_Travel_Payment_Details" ended with a "Pass" status (Duration: 0.2017 Wasted Time: 0.0022).
+Action.js(281): Notify: Transaction "WT3_T33_Travel_Check_Itinerary" started.
+Action.js(283): web.regFind started  	[MsgId: MMSG-26355]
+Action.js(283): Registering web.regFind was successful  	[MsgId: MMSG-26390]
+Action.js(290): web.image("Itinerary Button") started  	[MsgId: MMSG-26355]
+Action.js(290): Image-linking to "http://127.0.0.1:1080/cgi-bin/welcome.pl?page=itinerary", Target Frame="body"  	[MsgId: MMSG-27993]
+Action.js(290): Detected non-resource "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=itinerary" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?page=itinerary"  	[MsgId: MMSG-26574]
+Action.js(290): Detected non-resource "http://127.0.0.1:1080/cgi-bin/itinerary.pl" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?page=itinerary"  	[MsgId: MMSG-26574]
+Action.js(290): Resource "http://127.0.0.1:1080/WebTours/images/flights.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.js(290): Found resource "http://127.0.0.1:1080/WebTours/images/in_itinerary.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?page=menu&in=itinerary"  	[MsgId: MMSG-26659]
+Action.js(290): Resource "http://127.0.0.1:1080/WebTours/images/home.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.js(290): Resource "http://127.0.0.1:1080/WebTours/images/signoff.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.js(290): Found resource "http://127.0.0.1:1080/WebTours/images/cancelreservation.gif" in HTML "http://127.0.0.1:1080/cgi-bin/itinerary.pl"  	[MsgId: MMSG-26659]
+Action.js(290): Found resource "http://127.0.0.1:1080/WebTours/images/cancelallreservations.gif" in HTML "http://127.0.0.1:1080/cgi-bin/itinerary.pl"  	[MsgId: MMSG-26659]
+Action.js(290): Registered web_reg_find successful for "Text=Itinerary" (count=3)  	[MsgId: MMSG-26364]
+Action.js(290): web.image("Itinerary Button") was successful, 6979 body bytes, 1616 header bytes, 36 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.js(299): Notify: Transaction "WT3_T33_Travel_Check_Itinerary" ended with a "Pass" status (Duration: 0.2337 Wasted Time: 0.0046).
+Action.js(302): Notify: Transaction "WT3_T08_SignOut" started.
+Action.js(304): web.regFind started  	[MsgId: MMSG-26355]
+Action.js(304): Registering web.regFind was successful  	[MsgId: MMSG-26390]
+Action.js(311): web.image("SignOff Button") started  	[MsgId: MMSG-26355]
+Action.js(311): Image-linking to "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=1", Target Frame="body"  	[MsgId: MMSG-27993]
+Action.js(311): Detected non-resource "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=1"  	[MsgId: MMSG-26574]
+Action.js(311): Detected non-resource "http://127.0.0.1:1080/WebTours/home.html" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=1"  	[MsgId: MMSG-26574]
+Action.js(311): Retrieving data from cache for "http://127.0.0.1:1080/WebTours/home.html"  	[MsgId: MMSG-26558]
+Action.js(311): Resource "http://127.0.0.1:1080/WebTours/images/mer_login.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
+Action.js(311): Registered web_reg_find successful for "Text=Welcome" (count=1)  	[MsgId: MMSG-26364]
+Action.js(311): web.image("SignOff Button") was successful, 2174 body bytes, 630 header bytes, 24 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.js(320): Notify: Transaction "WT3_T08_SignOut" ended with a "Pass" status (Duration: 0.2696 Wasted Time: 0.0026).
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.
