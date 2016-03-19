@@ -188,7 +188,7 @@ CHALLENGE: Initially, return a static value in the format expected to ensure tha
 7. In order to view the output message on the replay log for the date to be displayed, paste this code into the action section below web_js_run code.
 
    ```
-lr_output_message(">> birth_date=\"%s\" rc=%d.", lr_eval_string("{birth_date_iso}"), rc);
+lr_output_message(">> birth_date=\"%s\" rc=%d.", lr_eval_string("{BirthYYYYMMDD}"), rc);
    ```
 
 
