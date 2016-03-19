@@ -781,6 +781,13 @@ function formatDate( f_year, f_month, f_mday, in_format ){
 	return formatted_date;
 }
     ```
+    
+    3.Run the LoadRunner script.
+    4.Observe in Replay Log Output: Date of Birth is generated.
+    5.Run the LoadRunner script again and observe the different Date of Birth this time.
+    
+    Using the above technique you can generate Random Date of Birth.
+    
 
 ### <a name="js_parsing"></a> Enable JavaScript Parsing in LoadRunner
 
