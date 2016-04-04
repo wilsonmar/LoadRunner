@@ -1,2 +1,0 @@
-"username=test00&password={PasswordParameter}&passwordConfirm=bean&firstName=&lastName=&address"
-"1=&address2=&register.x=53&register.y=3"
