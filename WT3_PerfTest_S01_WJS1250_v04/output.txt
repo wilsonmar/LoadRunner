@@ -1,0 +1,19 @@
+Virtual User Script started at : 4/1/2016 7:22:44 PM
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.50.0 for Windows 7; build 1096 (Apr 01 2016 16:55:24)  	[MsgId: MMSG-27143]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)  	[MsgId: MMSG-26988]
+Run-Time Settings file: "C:\githubs\wilsonmar\LoadRunner\WT3_PerfTest_S01_WJS1250_v04\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+WT3_SignUpInOut.js(8): Notify: Next row for parameter UserIds_userid = 1 [table  = UserIds_userid].
+WT3_SignUpInOut.js(8): Notify: Parameter Substitution: parameter "UserIds_userid" =  "test13"
+WT3_SignUpInOut.js(8): ----->>>>Welcome ! You are Logged In as test13
+Abort was called from an action.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

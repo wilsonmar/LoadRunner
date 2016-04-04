@@ -1,0 +1,18 @@
+97d
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>User Information</title>
+<script src="/WebTours/profileValidate.js" type="text/JavaScript"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body bgcolor="#E0E7F1">
+<style>blockquote {font-family: tahoma; font-size : 10pt}H1 {font-family: tahoma; font-size : 22pt; color: #993333}small {font-family: tahoma; font-size : 8pt}H3 {font-family: tahoma; font-size : 10pt; color: black}TD {font-family: tahoma; font-size : 10pt; color: black}</style><BR/><center><H1><b><font color="#003366">Customer Profile</font></b></H1></center><blockquote><tr><td><B>First time registering? Please complete the form below.</B><BR/>Please choose a username and password combination for your account.<BR/>We'd also like some additional contact information for yourself. We'll use it as default shipping and billing information when making all your travel arrangements.<P><tr><td align=center><form method="post" action="login.pl" enctype="application/x-www-form-urlencoded" target="info" onsubmit>
+<table><tr><td align="left"><blockquote>Username : </td> <td align="left"><input type="text" name="username"  size="20" /></td></tr> <tr><td align="left"><blockquote>Password : </td> <td align="left"><input type="password" name="password"  size="20" /></td></tr> <tr><td align="left"><blockquote>Confirm : </td> <td align="left"><input type="password" name="passwordConfirm"  size="20" /></td></tr> <tr><td> </td></tr> <tr><td align="left"><blockquote>First Name : </td> <td align="left"><input type="text" name="firstName"  size="20" /></td></tr> <tr><td align="left"><blockquote>Last Name : </td> <td align="left"><input type="text" name="lastName"  size="20" /></td></tr> <tr><td align="left"><blockquote>Street Address : </td> <td align="left"><input type="text" name="address1"  size="30" /></td></tr> <tr><td align="left"><blockquote>City/State/Zip : </td> <td align="left"><input type="text" name="address2"  size="30" /></td></tr> <tr><td align="left">&nbsp;</td> <td align="right">&nbsp;</td></tr> <tr><td align="center" colspan="2"><input type="image" name="register" src="/WebTours/images/button_next.gif" border="0" /></td></tr></table></form></table></blockquote>
+</body>
+</html>
+
+0
+
