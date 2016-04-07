@@ -1,7 +1,7 @@
-
-// V05 2016.04.01 am : Tested Ouput Message with function testme().  
-// V05 2016.04.01 am : Create WT3_SignUpInOut.js,WT3_Travel.js,wi_utilities.js and WT3_Configs.js files under Extra files.
-// V05 2016.04.01 am : Create WT3_SignUpInOut,WT3_Travel,wi_utilities Action files and removed.
+//
+// V04 2016.04.01 am : Tested Ouput Message with function testme().  
+// V04 2016.04.01 am : Create WT3_SignUpInOut.js,WT3_Travel.js,wi_utilities.js and WT3_Configs.js files under Extra files.
+// V04 2016.04.01 am : Create WT3_SignUpInOut,WT3_Travel,wi_utilities Action files and removed.
 // V03 2016.02.24 am : Add use coloumn with userid and password to keep track of signup users.(Y/N)
 // V03 2016.02.24 am : Add usernames to userId and password File.
 // V03 2016.02.24 am : Parameterize Depart and Arrival City and ran with Random settings for departure with 3 users.

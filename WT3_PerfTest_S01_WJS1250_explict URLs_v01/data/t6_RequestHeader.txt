@@ -1,0 +1,15 @@
+POST /cgi-bin/reservations.pl HTTP/1.1
+Accept: text/html, application/xhtml+xml, */*
+Referer: http://127.0.0.1:1080/cgi-bin/reservations.pl
+Accept-Language: en-US
+User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)
+Content-Type: application/x-www-form-urlencoded
+UA-CPU: AMD64
+Accept-Encoding: gzip, deflate
+Host: 127.0.0.1:1080
+Content-Length: 283
+DNT: 1
+Connection: Keep-Alive
+Cache-Control: no-cache
+Cookie: MSO=SID&1459998615&MSO_ServerErrorsProb&100&MSO_ServerLoadProb&100; MTUserInfo=firstName&Jojo&address2&&username&jojo&hash&47&lastName&Bean%0A&address1&&creditCard&&expDate&%0A
+
