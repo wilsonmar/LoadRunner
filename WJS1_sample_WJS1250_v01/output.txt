@@ -1,0 +1,21 @@
+Warning: Failed to get session identifiers from NV transaction manager.
+Warning: Not connected to NV transaction manager.
+wi_library.js(10): >> vuser id: -1, scenario id: None, Group: 0.
+wi_library.js(15): >> vuser id: -1, scenario id: 0, Group: undefined are expected in VuGen.
+wi_library.js(40): >> Run-Time Settings > Log DebugMessage level=0.
+wi_library.js(45): >>   [_] Enable logging =1.
+wi_library.js(48): >>   Send messages:
+wi_library.js(53): >>       [X] Always =512.
+wi_library.js(56): >>   Detail level:
+wi_library.js(60): >>   [X] Standard log =16.
+wi_library.js(66): >>       [_] Parameter substitution =4.
+wi_library.js(72): >>       [_] Data returned by server =2
+wi_library.js(78): >>       [_] Advanced trace =8
+Warning: The transaction name is empty or not equal.
+Warning: Not connected to NV transaction manager.
+Action.js(10): >> vuser id: -1, scenario id: 0, Group: undefined are expected in VuGen.
+Warning: The transaction name is empty or not equal.
+Warning: Not connected to NV transaction manager.
+Warning: The transaction name is empty or not equal.
+Warning: Not connected to NV transaction manager.
+Vuser Terminated.

@@ -1,0 +1,341 @@
+[API Trapper      ( 3e4: e34)] Recording in 32-bit mode: C:\Program Files (x86)\Internet Explorer\iexplore.exe
+[API Trapper      (1194: 964)] Recording in 64-bit mode: C:\Program Files\Internet Explorer\IEXPLORE.EXE
+[Network Analyzer (1194: d70)] ------------------------------------------------------------------------------------------
+[Network Analyzer (1194: d70)] Load Network Traffic Analyzers:
+[Network Analyzer (1194: d70)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer (1194: d70)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter_x64.dll)
+[Network Analyzer (1194: d70)]     + Network Analyzer: api_http_filter_x64.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer (1194: d70)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter_x64.dll
+[Network Analyzer (1194: d70)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer_x64.dll)
+[Network Analyzer (1194: d70)]     + Network Analyzer: WebSocketAnalyzer_x64.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer (1194: d70)]     Analyzer Module: local_server (value=)
+[Network Analyzer (1194: d70)] ------------------------------------------------------------------------------------------
+[Network Analyzer (1194: e44)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: ae4)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:110c)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: ae4)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  1)  PROXIED!
+[Network Analyzer (1194:110c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  2)  PROXIED!
+[Web Request      (1194: e44)] "GET /WebTours/index.htm"   
+[Network Analyzer (1194: e44)]   (Sid:  1) Client -> Server @ : 298 bytes (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid:  1) Server -> Client : 664 bytes  (Service=HTTP)
+[Web Request      (1194: e44)] "GET /WebTours/header.html"   
+[Network Analyzer (1194: e44)]   (Sid:  1) Client -> Server @ : 351 bytes (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid:  1) Server -> Client : 1007 bytes  (Service=HTTP)
+[Web Request      (1194: e44)] "GET /cgi-bin/welcome.pl?signOff=true"   
+[Network Analyzer (1194: e44)]   (Sid:  2) Client -> Server @ : 362 bytes (Service=HTTP)
+[Web Request      (1194: e44)] "GET /WebTours/images/hp_logo.png"   
+[Network Analyzer (1194: e44)]   (Sid:  1) Client -> Server @ : 373 bytes (Service=HTTP)
+[Network Analyzer (1194:110c)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: e44)]   (Sid:  1) Server -> Client : 898 bytes  (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid:  2) Server -> Client : 1021 bytes  (Service=HTTP)
+[Network Analyzer (1194:110c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  3)  PROXIED!
+[Web Request      (1194: e44)] "GET /WebTours/images/webtours.png"   
+[Network Analyzer (1194: e44)]   (Sid:  1) Client -> Server @ : 374 bytes (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid:  2) Server -> Client : 5 bytes  (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid:  1) Server -> Client : 4486 bytes  (Service=HTTP)
+[Network Analyzer (1194: cac)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: 2d4)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Web Request      (1194: e44)] "GET /cgi-bin/nav.pl?in=home"   
+[Network Analyzer (1194: e44)]   (Sid:  2) Client -> Server @ : 394 bytes (Service=HTTP)
+[Web Request      (1194: e44)] "GET /WebTours/home.html"   
+[Network Analyzer (1194: e44)]   (Sid:  1) Client -> Server @ : 390 bytes (Service=HTTP)
+[Network Analyzer (1194: ae4)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: e44)]   (Sid:  1) Server -> Client : 1659 bytes  (Service=HTTP)
+[Network Analyzer (1194: cac)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid=  4)  PROXIED!
+[Network Analyzer (1194:1288)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: 2d4)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid=  5)  PROXIED!
+[Network Analyzer (1194: ae4)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid=  6)  PROXIED!
+[Network Analyzer (1194: e44)]   (Sid:  2) Server -> Client : 1750 bytes  (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid:  2) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (1194: e44)] "GET /WebTours/images/mer_login.gif"   
+[Network Analyzer (1194: e44)]   (Sid:  1) Client -> Server @ : 405 bytes (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid:  1) Server -> Client : 977 bytes  (Service=HTTP)
+[Network Analyzer (1194: 878)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:1288)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid=  7)  PROXIED!
+[Network Analyzer (1194: 878)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid=  8)  PROXIED!
+[Web Request      (1194: e44)] "GET /favicon.ico"   
+[Network Analyzer (1194: e44)]   (Sid:  1) Client -> Server @ : 261 bytes (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid:  1) Server -> Client : 424 bytes  (Service=HTTP)
+[Network Analyzer (1194: a48)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: a48)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid=  9)  PROXIED!
+[Network Analyzer (1194:11f8)]   (Sid:  6) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194:11f8)]   (Sid:  6) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194:13fc)]   (Sid:  8) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194:13fc)]   (Sid:  8) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194: c58)]   (Sid:  4) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194: c58)]   (Sid:  4) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194:1090)]   (Sid:  5) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194:1090)]   (Sid:  5) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194: 8a0)]   (Sid:  7) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194: 8a0)]   (Sid:  7) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194: fdc)]   (Sid:  9) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194: fdc)]   (Sid:  9) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194: e44)]   (Sid:  2) Connection Terminated (by Server)
+[Network Analyzer (1194: e44)]   (Sid:  1) Connection Terminated (by Server)
+[Network Analyzer (1194: b4c)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: d20)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: a50)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: b4c)] Request Connection: Remote Server @ 184.25.56.196:80   (Service=)  (Sid= 10)  PROXIED!
+[Network Analyzer (1194: d20)] Request Connection: Remote Server @ 184.25.56.196:80   (Service=)  (Sid= 11)  PROXIED!
+[Network Analyzer (1194: a50)] Request Connection: Remote Server @ 184.25.56.196:80   (Service=)  (Sid= 12)  PROXIED!
+[Network Analyzer (1194: b4c)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: b4c)] Request Connection: Remote Server @ 184.25.56.196:80   (Service=)  (Sid= 13)  PROXIED!
+[Network Analyzer (1194: a50)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: a50)] Request Connection: Remote Server @ 184.25.56.196:80   (Service=)  (Sid= 14)  PROXIED!
+[Network Analyzer (1194: a50)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: a50)] Request Connection: Remote Server @ 184.25.56.196:80   (Service=)  (Sid= 15)  PROXIED!
+[Network Analyzer (1194:1054)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:1054)] Request Connection: Remote Server @ 198.41.215.185:80   (Service=)  (Sid= 16)  PROXIED!
+[Network Analyzer (1194: a10)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: c40)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:110c)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: a10)] Request Connection: Remote Server @ 198.41.215.185:80   (Service=)  (Sid= 17)  PROXIED!
+[Network Analyzer (1194: a3c)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: c40)] Request Connection: Remote Server @ 198.41.215.185:80   (Service=)  (Sid= 18)  PROXIED!
+[Network Analyzer (1194:110c)] Request Connection: Remote Server @ 198.41.215.185:80   (Service=)  (Sid= 19)  PROXIED!
+[Network Analyzer (1194:13c0)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: a3c)] Request Connection: Remote Server @ 198.41.215.185:80   (Service=)  (Sid= 20)  PROXIED!
+[Network Analyzer (1194:13c0)] Request Connection: Remote Server @ 198.41.215.185:80   (Service=)  (Sid= 21)  PROXIED!
+[Network Analyzer (1194: e44)]   (Sid:  8) Connection Terminated (by Client)
+[Network Analyzer (1194: e44)]   (Sid:  6) Connection Terminated (by Client)
+[Network Analyzer (1194: e44)]   (Sid:  4) Connection Terminated (by Client)
+[Network Analyzer (1194: e44)]   (Sid:  5) Connection Terminated (by Client)
+[Network Analyzer (1194: e44)]   (Sid:  7) Connection Terminated (by Client)
+[Network Analyzer (1194: e44)]   (Sid:  9) Connection Terminated (by Client)
+[Network Analyzer (1194:1164)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: fc4)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:1160)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:1164)] Request Connection: Remote Server @ 72.21.81.200:80   (Service=)  (Sid= 22)  PROXIED!
+[Network Analyzer (1194:1160)] Request Connection: Remote Server @ 72.21.81.200:80   (Service=)  (Sid= 23)  PROXIED!
+[Network Analyzer (1194: fc4)] Request Connection: Remote Server @ 72.21.81.200:80   (Service=)  (Sid= 24)  PROXIED!
+[Network Analyzer (1194: c34)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: c34)] Request Connection: Remote Server @ 72.21.81.200:80   (Service=)  (Sid= 25)  PROXIED!
+[Network Analyzer (1194:1328)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:1328)] Request Connection: Remote Server @ 72.21.81.200:80   (Service=)  (Sid= 26)  PROXIED!
+[Network Analyzer (1194: dbc)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: dbc)] Request Connection: Remote Server @ 72.21.81.200:80   (Service=)  (Sid= 27)  PROXIED!
+[Network Analyzer (1194: e44)]   (Sid: 16) Connection Terminated (by Server)
+[Network Analyzer (1194: e44)]   (Sid: 17) Connection Terminated (by Server)
+[Network Analyzer (1194: e44)]   (Sid: 19) Connection Terminated (by Server)
+[Network Analyzer (1194: e44)]   (Sid: 18) Connection Terminated (by Server)
+[Network Analyzer (1194: e44)]   (Sid: 20) Connection Terminated (by Server)
+[Network Analyzer (1194: e44)]   (Sid: 21) Connection Terminated (by Server)
+[Network Analyzer (1194: e44)]   (Sid: 10) Server -> Client : 414 bytes 
+[Network Analyzer (1194: e44)]   (Sid: 10) Connection Terminated (by Server)
+[Network Analyzer (1194: e44)]   (Sid: 11) Server -> Client : 414 bytes 
+[Network Analyzer (1194: e44)]   (Sid: 11) Connection Terminated (by Server)
+[Network Analyzer (1194: e44)]   (Sid: 12) Server -> Client : 414 bytes 
+[Network Analyzer (1194: e44)]   (Sid: 12) Connection Terminated (by Server)
+[Network Analyzer (1194: e44)]   (Sid: 13) Server -> Client : 414 bytes 
+[Network Analyzer (1194: e44)]   (Sid: 13) Connection Terminated (by Server)
+[Network Analyzer (1194: e44)]   (Sid: 14) Server -> Client : 414 bytes 
+[Network Analyzer (1194: e44)]   (Sid: 14) Connection Terminated (by Server)
+[Network Analyzer (1194: e44)]   (Sid: 15) Server -> Client : 414 bytes 
+[Network Analyzer (1194: e44)]   (Sid: 15) Connection Terminated (by Server)
+[Web Request      (1194: e44)] "POST /cgi-bin/login.pl"   
+[Network Analyzer (1194: e44)]   (Sid:  3) Client -> Server @ : 596 bytes (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid:  3) Server -> Client : 847 bytes  (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid:  3) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (1194: e44)] "GET /cgi-bin/nav.pl?page=menu&in=home"   
+[Network Analyzer (1194: e44)]   (Sid:  3) Client -> Server @ : 499 bytes (Service=HTTP)
+[Network Analyzer (1194:1328)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:1328)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 28)  PROXIED!
+[Network Analyzer (1194: dbc)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: e44)]   (Sid:  3) Server -> Client : 1744 bytes  (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid:  3) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (1194: e44)] "GET /cgi-bin/login.pl?intro=true"   
+[Network Analyzer (1194: e44)]   (Sid: 28) Client -> Server @ : 494 bytes (Service=HTTP)
+[Network Analyzer (1194: dbc)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid= 29)  PROXIED!
+[Web Request      (1194: e44)] "GET /WebTours/images/flights.gif"   
+[Network Analyzer (1194: e44)]   (Sid:  3) Client -> Server @ : 523 bytes (Service=HTTP)
+[Network Analyzer (1194: c34)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: fc4)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: c34)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 30)  PROXIED!
+[Web Request      (1194: e44)] "GET /WebTours/images/in_home.gif"   
+[Network Analyzer (1194: e44)]   (Sid: 30) Client -> Server @ : 523 bytes (Service=HTTP)
+[Network Analyzer (1194: fc4)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 31)  PROXIED!
+[Network Analyzer (1194: e44)]   (Sid: 30) Server -> Client : 986 bytes  (Service=HTTP)
+[Web Request      (1194: e44)] "GET /WebTours/images/signoff.gif"   
+[Network Analyzer (1194:1160)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: e44)]   (Sid: 31) Client -> Server @ : 523 bytes (Service=HTTP)
+[Web Request      (1194: e44)] "GET /WebTours/images/itinerary.gif"   
+[Network Analyzer (1194: e44)]   (Sid: 30) Client -> Server @ : 525 bytes (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid: 31) Server -> Client : 1049 bytes  (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid: 30) Server -> Client : 1030 bytes  (Service=HTTP)
+[Network Analyzer (1194:1160)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 32)  PROXIED!
+[Network Analyzer (1194:1164)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: e44)]   (Sid:  3) Server -> Client : 1023 bytes  (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid: 28) Server -> Client : 1154 bytes  (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid: 28) Server -> Client : 5 bytes  (Service=HTTP)
+[Network Analyzer (1194: fc4)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:1328)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:1164)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid= 33)  PROXIED!
+[Network Analyzer (1194: d38)]   (Sid: 29) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194: d38)]   (Sid: 29) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194:1328)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid= 34)  PROXIED!
+[Network Analyzer (1194: fc4)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid= 35)  PROXIED!
+[Network Analyzer (1194:13e8)]   (Sid: 34) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194:13e8)]   (Sid: 34) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194:1290)]   (Sid: 33) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194:1290)]   (Sid: 33) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194: 67c)]   (Sid: 35) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194: 67c)]   (Sid: 35) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194: e44)]   (Sid: 29) Connection Terminated (by Client)
+[Network Analyzer (1194: e44)]   (Sid: 34) Connection Terminated (by Client)
+[Network Analyzer (1194:1328)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:1328)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid= 36)  PROXIED!
+[Network Analyzer (1194: e44)]   (Sid: 33) Connection Terminated (by Client)
+[Network Analyzer (1194: e44)]   (Sid: 35) Connection Terminated (by Client)
+[Network Analyzer (1194: 6f4)]   (Sid: 36) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194: 6f4)]   (Sid: 36) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194: e44)]   (Sid: 36) Connection Terminated (by Client)
+[Web Request      (1194: e44)] "GET /cgi-bin/welcome.pl?page=search"   
+[Network Analyzer (1194: e44)]   (Sid: 28) Client -> Server @ : 513 bytes (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid: 28) Server -> Client : 838 bytes  (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid: 28) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (1194: e44)] "GET /cgi-bin/nav.pl?page=menu&in=flights"   
+[Network Analyzer (1194: e44)]   (Sid: 28) Client -> Server @ : 516 bytes (Service=HTTP)
+[Web Request      (1194: e44)] "GET /cgi-bin/reservations.pl?page=welcome"   
+[Network Analyzer (1194: e44)]   (Sid:  3) Client -> Server @ : 517 bytes (Service=HTTP)
+[Network Analyzer (1194: fc4)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: fc4)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid= 37)  PROXIED!
+[Network Analyzer (1194: e44)]   (Sid: 28) Server -> Client : 1744 bytes  (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid: 28) Server -> Client : 5 bytes  (Service=HTTP)
+[Web Request      (1194: e44)] "GET /WebTours/images/in_flights.gif"   
+[Network Analyzer (1194: e44)]   (Sid: 28) Client -> Server @ : 529 bytes (Service=HTTP)
+[Web Request      (1194: e44)] "GET /WebTours/images/home.gif"   
+[Network Analyzer (1194: e44)]   (Sid: 30) Client -> Server @ : 523 bytes (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid: 30) Server -> Client : 985 bytes  (Service=HTTP)
+[Network Analyzer (1194: dbc)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: e44)]   (Sid: 28) Server -> Client : 1023 bytes  (Service=HTTP)
+[Network Analyzer (1194: c34)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: e44)]   (Sid:  3) Server -> Client : 4234 bytes  (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid:  3) Server -> Client : 286 bytes  (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid: 31) Connection Terminated (by Server)
+[Network Analyzer (1194: dbc)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid= 38)  PROXIED!
+[Web Request      (1194: e44)] "GET /WebTours/images/button_next.gif"   
+[Network Analyzer (1194: e44)]   (Sid:  3) Client -> Server @ : 531 bytes (Service=HTTP)
+[Network Analyzer (1194: 480)]   (Sid: 37) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194: e44)]   (Sid:  3) Server -> Client : 1055 bytes  (Service=HTTP)
+[Network Analyzer (1194: 480)]   (Sid: 37) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194: c34)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid= 39)  PROXIED!
+[Network Analyzer (1194: e5c)]   (Sid: 38) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194:1164)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:1160)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: e5c)]   (Sid: 38) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194: d00)]   (Sid: 39) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194: d00)]   (Sid: 39) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194:1164)] Request Connection: Remote Server @ 72.21.81.200:443   (Service=)  (Sid= 40)  PROXIED!
+[Network Analyzer (1194:1160)] Request Connection: Remote Server @ 72.21.81.200:443   (Service=)  (Sid= 41)  PROXIED!
+[Network Analyzer (1194: 144)]   (Sid: 40) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer (1194: 144)]   (Sid: 40) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194: f68)]   (Sid: 41) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer (1194: f68)]   (Sid: 41) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194: e44)]   (Sid: 37) Connection Terminated (by Client)
+[Network Analyzer (1194: e44)]   (Sid: 38) Connection Terminated (by Client)
+[Network Analyzer (1194: e44)]   (Sid: 39) Connection Terminated (by Client)
+[Network Analyzer (1194:1288)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: fc4)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:1288)] Request Connection: Remote Server @ 204.79.197.200:443   (Service=)  (Sid= 42)  PROXIED!
+[Network Analyzer (1194: fc4)] Request Connection: Remote Server @ 204.79.197.200:443   (Service=)  (Sid= 43)  PROXIED!
+[Network Analyzer (1194: 8f4)]   (Sid: 42) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194: e44)]   (Sid: 30) Connection Terminated (by Server)
+[Network Analyzer (1194: 8f4)]   (Sid: 42) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194: e44)]   (Sid: 28) Connection Terminated (by Server)
+[Network Analyzer (1194:1048)]   (Sid: 43) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194:1048)]   (Sid: 43) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194: e44)]   (Sid:  3) Connection Terminated (by Server)
+[Network Analyzer (1194:1160)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: e44)]   (Sid: 40) Connection Terminated (by Client)
+[Network Analyzer (1194: e44)]   (Sid: 41) Connection Terminated (by Client)
+[Network Analyzer (1194:1160)] Request Connection: Remote Server @ 72.21.81.200:443   (Service=)  (Sid= 44)  PROXIED!
+[Network Analyzer (1194:  d4)]   (Sid: 44) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES128-SHA)
+[Network Analyzer (1194:  d4)]   (Sid: 44) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194: e44)]   (Sid: 22) Connection Terminated (by Client)
+[Network Analyzer (1194: e44)]   (Sid: 23) Connection Terminated (by Client)
+[Network Analyzer (1194: e44)]   (Sid: 24) Connection Terminated (by Client)
+[Web Request      (1194: e44)] "GET /IE10/1152921505002013023/iecompatviewlist.xml"   
+[Network Analyzer (1194: e44)]   (Sid: 44) Client -> Server @ : 275 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid: 25) Connection Terminated (by Client)
+[Network Analyzer (1194: e44)]   (Sid: 26) Connection Terminated (by Client)
+[Network Analyzer (1194: e44)]   (Sid: 27) Connection Terminated (by Client)
+[Network Analyzer (1194: e44)]   (Sid: 44) Server -> Client : 467 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid: 44) Server -> Client : 16383 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid: 44) Server -> Client : 6880 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1194: fc4)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: e44)]   (Sid: 42) Connection Terminated (by Client)
+[Network Analyzer (1194: fc4)] Request Connection: Remote Server @ 204.79.197.200:443   (Service=)  (Sid= 45)  PROXIED!
+[Network Analyzer (1194: e44)]   (Sid: 43) Connection Terminated (by Client)
+[Network Analyzer (1194:1108)]   (Sid: 45) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194:1108)]   (Sid: 45) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Web Request      (1194: e44)] "GET /iedomainsuggestions/ie10/201604/suggestions.en-US"   
+[Network Analyzer (1194: e44)]   (Sid: 45) Client -> Server @ : 330 bytes (SSL)(Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid: 45) Server -> Client : 2981 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid: 45) Server -> Client : 8192 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid: 45) Server -> Client : 7866 bytes (SSL) (Service=HTTP)
+[Network Analyzer (1194:1164)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:1164)] Request Connection: Remote Server @ 198.41.215.183:80   (Service=)  (Sid= 46)  PROXIED!
+[Network Analyzer (1194: dbc)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: dbc)] Request Connection: Remote Server @ 198.41.215.183:80   (Service=)  (Sid= 47)  PROXIED!
+[API Trapper      ( b50:1320)] Recording in 64-bit mode: C:\Program Files\Java\jre7\bin\javaw.exe
+[Network Analyzer (1194:1288)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:1288)] Request Connection: Remote Server @ 198.41.215.183:80   (Service=)  (Sid= 48)  PROXIED!
+[Network Analyzer (1194: cac)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: cac)] Request Connection: Remote Server @ 198.41.215.183:80   (Service=)  (Sid= 49)  PROXIED!
+[API Trapper      (13b8: 6dc)] Recording in 64-bit mode: C:\Program Files\Java\jre7\bin\javaw.exe
+[API Trapper      ( b80: e2c)] Recording in 64-bit mode: C:\Program Files\Java\jre7\bin\javaw.exe
+[Network Analyzer (1194:1288)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: cac)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: cac)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid= 50)  PROXIED!
+[Network Analyzer (1194:1288)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid= 51)  PROXIED!
+[Network Analyzer (1194: db0)]   (Sid: 50) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194: db0)]   (Sid: 50) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194: fe0)]   (Sid: 51) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194: fe0)]   (Sid: 51) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[API Trapper      ( 42c: 694)] Recording in 64-bit mode: C:\Program Files\Java\jre7\bin\jp2launcher.exe
+[API Trapper      ( 568: 508)] Recording in 64-bit mode: C:\Program Files\Java\jre7\bin\java.exe
+[Network Analyzer (1194: e44)]   (Sid: 50) Connection Terminated (by Client)
+[Network Analyzer (1194: e44)]   (Sid: 46) Connection Terminated (by Server)
+[Network Analyzer (1194: e44)]   (Sid: 47) Connection Terminated (by Server)
+[Web Request      (1194: e44)] "POST /cgi-bin/reservations.pl"   
+[Network Analyzer (1194: e44)]   (Sid: 32) Client -> Server @ : 843 bytes (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid: 32) Server -> Client : 2683 bytes  (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid: 32) Server -> Client : 5 bytes  (Service=HTTP)
+[Network Analyzer (1194:1288)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:1288)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid= 52)  PROXIED!
+[Network Analyzer (1194: c44)]   (Sid: 52) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194: c44)]   (Sid: 52) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194: e44)]   (Sid: 52) Connection Terminated (by Client)
+[Network Analyzer (1194: e44)]   (Sid: 48) Connection Terminated (by Server)
+[Network Analyzer (1194: e44)]   (Sid: 49) Connection Terminated (by Server)
+[Network Analyzer (1194: e44)]   (Sid: 32) Connection Terminated (by Server)
+[Network Analyzer (1194: a48)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:1288)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:1288)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 53)  PROXIED!
+[Network Analyzer (1194: a48)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 54)  PROXIED!
+[Network Analyzer (1194:1164)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:1288)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: e44)]   (Sid: 51) Connection Terminated (by Client)
+[Network Analyzer (1194: e44)]   (Sid: 53) Connection Terminated (by Client)
+[Network Analyzer (1194: e44)]   (Sid: 54) Connection Terminated (by Client)
+[Network Analyzer (1194: dbc)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:1164)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 55)  PROXIED!
+[Web Request      (1194: e44)] "POST /cgi-bin/reservations.pl"   
+[Network Analyzer (1194: e44)]   (Sid: 55) Client -> Server @ : 734 bytes (Service=HTTP)
+[Network Analyzer (1194:1288)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid= 56)  PROXIED!
+[Network Analyzer (1194: dbc)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid= 57)  PROXIED!
+[Network Analyzer (1194: e44)]   (Sid: 55) Server -> Client : 2957 bytes  (Service=HTTP)
+[Network Analyzer (1194: e44)]   (Sid: 55) Server -> Client : 5 bytes  (Service=HTTP)
+[Network Analyzer (1194:1164)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194:1164)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid= 58)  PROXIED!
+[Network Analyzer (1194:1220)]   (Sid: 57) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194:1220)]   (Sid: 57) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194: 748)]   (Sid: 58) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194: 748)]   (Sid: 58) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194: e44)]   (Sid: 57) Connection Terminated (by Client)
+[Network Analyzer (1194: cac)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130
+[Network Analyzer (1194: e44)]   (Sid: 58) Connection Terminated (by Client)
+[Network Analyzer (1194: cac)] Request Connection: Remote Server @ 64.4.54.165:443   (Service=)  (Sid= 59)  PROXIED!
+[Network Analyzer (1194: 540)]   (Sid: 59) Negotiate Proxy -> Server SSL Handshake (ssl:TLSv1.1, ciphers:ECDHE-RSA-AES256-SHA)
+[Network Analyzer (1194: 540)]   (Sid: 59) Negotiate Client -> Proxy SSL Handshake (ssl:TLSv1.2, ciphers:AES128-SHA256)
+[Network Analyzer (1194:1288)] Address lookup for WIN-HJA4A353DRG = 192.168.230.130

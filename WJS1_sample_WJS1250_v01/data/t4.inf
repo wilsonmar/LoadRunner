@@ -1,0 +1,13 @@
+[t4]
+FileName1=t4_iecompatviewlist.xml
+URL1=https://iecvlist.microsoft.com/IE10/1152921505002013023/iecompatviewlist.xml
+Total=2
+ContentType=text/xml
+SnapshotXmlFile=snapshot_4.xml
+RequestHeaderFile=t4_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t4_ResponseHeader.txt
+FileName2=t4_suggestions.html
+URL2=https://ieonline.microsoft.com/iedomainsuggestions/ie10/201604/suggestions.en-US
+[ProtocolInfo]
+ProtocolId=QTWeb
