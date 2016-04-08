@@ -11,13 +11,10 @@
 
 function vuser_init()
 {
-var msg_level;
-	msg_level = wi_msg_level_at_entry;
-
+		
     wi_library_init();
-
 	wi_msg_level_print( wi_msg_level_at_entry );
 
-	   return 0;
+	return 0;
 }
 

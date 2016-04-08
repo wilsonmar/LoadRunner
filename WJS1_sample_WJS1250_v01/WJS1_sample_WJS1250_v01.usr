@@ -60,4 +60,6 @@ LastReplayStatus=1
 LastReplayedRunName=result1
 ActiveRunName=result1
 [ManuallyExtraFiles]
+md5.js=
+sha1.js=
 wi_library.js=

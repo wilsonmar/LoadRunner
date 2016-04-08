@@ -1,1 +1,0 @@
-"security_token=&ie_document_mode=10"
