@@ -1,0 +1,11 @@
+[t12]
+FileName1=t12.htm
+URL1=http://api.bing.com/qsml.aspx?query=http%3A%2F%2Fgoo.gl%2FSR00.i&maxwidth=32765&rowheight=20&sectionHeight=200&FORM=IE10SS&market=en-US
+Total=1
+RequestHeaderFile=t12_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t12_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_12.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

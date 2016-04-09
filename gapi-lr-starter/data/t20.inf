@@ -1,0 +1,15 @@
+[t20]
+FileName1=t20.htm
+URL1=http://api.bing.com/qsml.aspx?query=http%3A%2F%2Fgoo.gl%2FSR00.qr&maxwidth=32765&rowheight=20&sectionHeight=200&FORM=IE10SS&market=en-US
+Total=3
+RequestHeaderFile=t20_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t20_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_20.xml
+FileName2=t20_chart.png
+URL2=http://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=H&chl=http://goo.gl/SR00
+FileName3=t20_favicon.ico
+URL3=http://chart.googleapis.com/favicon.ico
+[ProtocolInfo]
+ProtocolId=QTWeb

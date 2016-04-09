@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Encoding: gzip
+Date: Fri, 13 Feb 2015 17:39:14 GMT
+Expires: Fri, 13 Feb 2015 17:39:14 GMT
+Cache-Control: private, max-age=0
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Server: GSE
+Alternate-Protocol: 443:quic,p=0.08
+Transfer-Encoding: chunked
+
