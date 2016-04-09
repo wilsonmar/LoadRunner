@@ -1,0 +1,10 @@
+GET /l6MS.info HTTP/1.1
+Accept: text/html, application/xhtml+xml, */*
+Accept-Language: en-US
+User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)
+UA-CPU: AMD64
+Accept-Encoding: gzip, deflate
+Host: goo.gl
+DNT: 1
+Connection: Keep-Alive
+

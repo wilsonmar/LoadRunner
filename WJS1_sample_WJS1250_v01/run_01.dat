@@ -1,0 +1,9 @@
+run_URL,run_transname,run_chance
+http://www.microsoft.com,T01_landing_ms,100
+http://www.google.com,T01_landing_google,100
+http://www.expedia.com,T01_landing_expedia,100
+http://www.sap.com,T01_landing_sap,100
+http://www.hotmail.com,T01_landing_hm,100
+http://www.hpe.com,T01_landing_hpe,100
+http://www.hp.com,T01_landing_hp,100
+http://www.wilsonmar.com,T01_landing_wm,100

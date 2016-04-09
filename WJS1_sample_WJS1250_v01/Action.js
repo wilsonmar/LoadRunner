@@ -7,17 +7,14 @@
 
 function Action()
 {
- 	lr.thinkTime(10.5); // You cannot use standard parameterization for any arguments in this function.
+    var rc=0;
+   
+    // TODO: Loop thru file run_01.dat
+	// rc=WJS1_Access_landing( run_TransName, run_URL, run_chance);
+    
+	rc=WJS1_Access_landing( "T01_landing","http://127.0.0.1:1080/WebTours/index.htm",100);
+	if( rc != 0 ){ return rc; }
 
- 	var trans_random_number = 72.3;
-        wi_random_seed = Math.random() * 100 ;
- 	if( wi_random_seed <= trans_random_number ){
-		lr.outputMessage(">> Within range. wi_random_seed = " + wi_random_seed + " <= " + trans_random_number );
-		// Do stuff.
- 	}else{
-		lr.outputMessage(">> Out of range. wi_random_seed = " + wi_random_seed + " NOT <= " + trans_random_number );
-	}
-
-	return 0;
+	return rc;
 }
 

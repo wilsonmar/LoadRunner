@@ -1,0 +1,62 @@
+[General]
+Type=Multi
+DefaultCfg=default.cfg
+ParameterFile=gapi-lr-starter.prm
+GlobalParameterFile=
+NewFunctionHeader=1
+RunType=cci
+ActionLogicExt=action_logic
+MajorVersion=12
+MinorVersion=50
+LastActiveAction=Action
+ActiveTypes=QTWeb
+GenerateTypes=QTWeb
+AdditionalTypes=QTWeb
+DevelopTool=Vugen
+LastModifyVer=12.50.0.0
+ParamLeftBrace={
+ParamRightBrace=}
+ScriptLanguage=C
+DisableRegenerate=0
+Description=
+[Actions]
+vuser_init=vuser_init.c
+Action=Action.c
+goggle_apis=goggle_apis.c
+vuser_end=vuser_end.c
+[RunLogicFiles]
+Default Profile=default.usp
+[VuserProfiles]
+Profiles=Default Profile
+[CfgFiles]
+Default Profile=default.cfg
+[ExtraFiles]
+globals.h=
+[Modified Actions]
+vuser_init=1
+Action=1
+goggle_apis=1
+vuser_end=1
+[Recorded Actions]
+vuser_init=0
+Action=0
+goggle_apis=0
+vuser_end=0
+[Replayed Actions]
+vuser_init=1
+Action=1
+goggle_apis=1
+vuser_end=1
+[Interpreters]
+vuser_init=cci
+Action=cci
+goggle_apis=cci
+vuser_end=cci
+[TransactionsOrder]
+Order=
+[StateManagement]
+LastReplayStatus=1
+[ActiveReplay]
+LastReplayedRunName=result1
+ActiveRunName=result1
+ActiveIterationName=Iteration1

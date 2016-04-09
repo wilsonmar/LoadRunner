@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=utf-8
+Expires: -1
+Vary: Accept-Encoding
+Server: Microsoft-IIS/8.5
+X-UA-Compatible: IE=10
+P3P: CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+Content-Length: 324
+Date: Fri, 13 Feb 2015 17:39:51 GMT
+Connection: keep-alive
+Set-Cookie: _FS=mkt=en-US&NU=1; domain=.bing.com; path=/
+Set-Cookie: _SS=SID=4024CFACD8AB4EDCA7B8FF6DC31ACAEB; domain=.bing.com; path=/
+Set-Cookie: MUID=22F5C73351A469892C9EC07E50B76950; expires=Sun, 12-Feb-2017 17:39:51 GMT; domain=.bing.com; path=/
+Set-Cookie: SRCHD=D=3745059&AF=IE10SS; expires=Sun, 12-Feb-2017 17:39:51 GMT; domain=.bing.com; path=/
+Set-Cookie: SRCHUID=V=2&GUID=430BCC2D1E304180BD0243874C7DE4B9; expires=Sun, 12-Feb-2017 17:39:51 GMT; path=/
+Set-Cookie: SRCHUSR=AUTOREDIR=0&GEOVAR=&DOB=20150213; expires=Sun, 12-Feb-2017 17:39:51 GMT; domain=.bing.com; path=/
+

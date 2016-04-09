@@ -1,68 +1,35 @@
-Warning: Failed to get NV emulation handle.
-Virtual User Script started at : 4/8/2016 9:17:41 AM
+Virtual User Script started at : 4/9/2016 4:37:06 AM
 Starting action vuser_init.
-Web Turbo Replay of LoadRunner 12.50.0 for Windows 7; build 1096 (Apr 08 2016 16:55:24)  	[MsgId: MMSG-27143]
+Web Turbo Replay of LoadRunner 12.50.0 for Windows 7; build 1096 (Apr 09 2016 16:55:24)  	[MsgId: MMSG-27143]
 Run mode: HTML  	[MsgId: MMSG-26993]
 Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)  	[MsgId: MMSG-26988]
 Run-Time Settings file: "C:\LRMaster1\WJS1_sample_WJS1250_v01\\default.cfg"  	[MsgId: MMSG-27141]
-Vuser directory: "C:\LRMaster1\WJS1_sample_WJS1250_v01"  	[MsgId: MMSG-27052]
-Vuser output directory: "C:\LRMaster1\WJS1_sample_WJS1250_v01"  	[MsgId: MMSG-27050]
-Operating system's current working directory: "C:\LRMaster1\WJS1_sample_WJS1250_v01"  	[MsgId: MMSG-27048]
-UTC (GMT) start date/time   : 2016-04-08 15:17:41  	[MsgId: MMSG-26992]
-LOCAL start date/time       : 2016-04-08 09:17:41  	[MsgId: MMSG-26991]
-Local daylight-Savings-Time : Yes  	[MsgId: MMSG-26990]
-Some of the Run-Time Settings:  	[MsgId: MMSG-27142]
-    Download non-HTML resources: Yes  	[MsgId: MMSG-27018]
-    Verification checks: No  	[MsgId: MMSG-27017]
-    Convert from/to UTF-8: No  	[MsgId: MMSG-27016]
-    Simulate a new user each iteration: Yes  	[MsgId: MMSG-27009]
-    Non-critical item errors as warnings: Yes  	[MsgId: MMSG-27008]
-    HTTP errors as warnings: No  	[MsgId: MMSG-27007]
-    WinInet replay instead of Sockets: No  	[MsgId: MMSG-27006]
-    HTTP version: 1.1  	[MsgId: MMSG-27005]
-    Keep-Alive HTTP connections: Yes  	[MsgId: MMSG-27004]
-    Max self Meta refresh updates: 2  	[MsgId: MMSG-27003]
-    No proxy is used (direct connection to the Internet)  	[MsgId: MMSG-27171]
-    DNS caching: Yes  	[MsgId: MMSG-27035]
-    Simulate browser cache: Yes  	[MsgId: MMSG-27034]
-        Cache URLs requiring content (e.g., HTMLs): Yes  	[MsgId: MMSG-27033]
-            Additional URLs requiring content: None  	[MsgId: MMSG-27032]
-        Check for newer versions every visit to the page: No  	[MsgId: MMSG-27031]
-    Page download timeout (sec): 120  	[MsgId: MMSG-27030]
-    Resource Page Timeout is a Warning: No  	[MsgId: MMSG-27029]
-    ContentCheck enabled: Yes  	[MsgId: MMSG-27028]
-    ContentCheck script-level file: "C:\LRMaster1\WJS1_sample_WJS1250_v01\LrwiAedScript.xml"  	[MsgId: MMSG-27027]
-    Enable Web Page Breakdown: Yes  	[MsgId: MMSG-27026]
-    Enable connection data points: Yes  	[MsgId: MMSG-27023]
-    Process socket after reschedule: Yes  	[MsgId: MMSG-27022]
-    Snapshot on error: No  	[MsgId: MMSG-27021]
-    Define each step as a transaction: No  	[MsgId: MMSG-27020]
-    Read beyond Content-Length: No  	[MsgId: MMSG-26994]
-    Parse HTML Content-Type: TEXT  	[MsgId: MMSG-26999]
-    Graph hits per second and HTTP status codes: Yes  	[MsgId: MMSG-26998]
-    Graph response bytes per second: Yes  	[MsgId: MMSG-26997]
-    Graph pages per second: No  	[MsgId: MMSG-26996]
-    Web recorder version ID: 10  	[MsgId: MMSG-26995]
-wi_library.js(26): >> Unix Date =1460128661
-wi_library.js(27): >> Date.now()=1460128661228 = 2016-017-017 9:17:41 AM
-wi_library.js(31): >> wi_random_seed = 55.36019844003022
-wi_library.js(33): >> randomGUID = 616e1841-4cbc-6774-40f4-bd4ebd626030
-wi_library.js(39): >> vuser id: -1, scenario id: 0, Group: "undefined" are expected in VuGen.
-wi_library.js(71): >> Run-Time Settings > Log DebugMessage level:
-wi_library.js(76): >>   [_] Enable logging = 1.
-wi_library.js(79): >>   Send messages:
-wi_library.js(84): >>   [X] Always = 512.
-wi_library.js(87): >>   Detail level:
-wi_library.js(89): >>   [X] Extended log = 16.
-wi_library.js(95): >>       [X] Parameter substitution = 4.
-wi_library.js(101): >>       [X] Data returned by server = 2.
-wi_library.js(107): >>       [X] Advanced trace = 8.
+wi_library.js(67): >> Run-Time Settings > Log DebugMessage level: 1.
+wi_library.js(75): >>   [X] Enable Logging = 1.
+wi_library.js(77): >>   Send messages: 
+wi_library.js(82): >>   [X] Always = 512.
+wi_library.js(85): >>   Detail level:
+wi_library.js(89): >>   [X] Standard log = 16.
+wi_library.js(95): >>       [_] Parameter substitution = 4.
+wi_library.js(101): >>       [_] Data returned by server = 2.
+wi_library.js(107): >>       [_] Advanced trace = 8.
+wi_library.js(31): >> wi_msg_level_at_init = 1.
+wi_library.js(34): >> Unix Date =1460198226
+wi_library.js(35): >> Date.now()=1460198226381 = 2016-04-09 4:37:06 AM
+wi_library.js(38): >> wi_random_seed = 24.142885953187943
+wi_library.js(41): >> HostName=WIN-HJA4A353DRG.
+wi_library.js(44): >> VuserIp=.
+wi_library.js(48): >> vuserId: -1, ScenarioId: 0, Group: "undefined" are expected in VuGen.
 Ending action vuser_init.
 Running Vuser...
 Starting iteration 1.
 Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
 Starting action Action.
-Action.js(14): >> Within range. wi_random_seed = 55.36019844003022 <= 72.3
+wi_library.js(242): >> trans=T01_landing, url=http://127.0.0.1:1080/WebTours/index.htm
+wi_library.js(274): Notify: Transaction "T01_landing" started.
+wi_library.js(246): web.url("T01_landing") started  	[MsgId: MMSG-26355]
+wi_library.js(246): web.url("T01_landing") was successful, 366 body bytes, 298 header bytes  	[MsgId: MMSG-26386]
+wi_library.js(289): Notify: Transaction "T01_landing" ended with a "Pass" status (Duration: 0.1297 Wasted Time: 0.0951).
 Ending action Action.
 Ending iteration 1.
 Ending Vuser...

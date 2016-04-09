@@ -1,0 +1,15 @@
+POST /api/shorten HTTP/1.1
+Accept: */*
+Content-Type: application/x-www-form-urlencoded
+Referer: http://goo.gl/
+Accept-Language: en-US
+UA-CPU: AMD64
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)
+Host: goo.gl
+Content-Length: 1077
+DNT: 1
+Connection: Keep-Alive
+Cache-Control: no-cache
+Cookie: authed=1
+

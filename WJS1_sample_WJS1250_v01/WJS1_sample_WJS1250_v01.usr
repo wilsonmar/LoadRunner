@@ -1,7 +1,7 @@
 [General]
 Type=Multi
 DefaultCfg=default.cfg
-ParameterFile=
+ParameterFile=WJS1_sample_WJS1250_v01.prm
 GlobalParameterFile=
 NewFunctionHeader=1
 RunType=JsExt-Interpreter
@@ -23,6 +23,7 @@ Description=
 vuser_init=vuser_init.js
 Action=Action.js
 Recording=Recording.js
+WJS1_Access=WJS1_Access.js
 vuser_end=vuser_end.js
 [RunLogicFiles]
 Default Profile=default.usp
@@ -36,21 +37,25 @@ globals.js=
 vuser_init=1
 Action=1
 Recording=1
+WJS1_Access=1
 vuser_end=1
 [Recorded Actions]
 vuser_init=1
 Action=1
 Recording=1
+WJS1_Access=0
 vuser_end=1
 [Replayed Actions]
 vuser_init=1
 Action=1
 Recording=1
+WJS1_Access=1
 vuser_end=1
 [Interpreters]
 vuser_init=JsExt-Interpreter
 Action=JsExt-Interpreter
 Recording=JsExt-Interpreter
+WJS1_Access=JsExt-Interpreter
 vuser_end=JsExt-Interpreter
 [TransactionsOrder]
 Order=
@@ -63,3 +68,4 @@ ActiveRunName=result1
 md5.js=
 sha1.js=
 wi_library.js=
+WJS1_Access.js=

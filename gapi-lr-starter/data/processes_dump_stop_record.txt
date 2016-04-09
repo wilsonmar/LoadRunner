@@ -1,0 +1,70 @@
+Failed to get information of process Id: 0
+Failed to get information of process Id: 4
+Failed to get information of process Id: 256
+Failed to get information of process Id: 344
+Failed to get information of process Id: 436
+Failed to get information of process Id: 444
+Failed to get information of process Id: 480
+Failed to get information of process Id: 536
+Failed to get information of process Id: 552
+Failed to get information of process Id: 560
+Failed to get information of process Id: 668
+Failed to get information of process Id: 744
+Failed to get information of process Id: 832
+Failed to get information of process Id: 880
+Failed to get information of process Id: 904
+Failed to get information of process Id: 940
+Failed to get information of process Id: 684
+Failed to get information of process Id: 1124
+Failed to get information of process Id: 1184
+Failed to get information of process Id: 1272
+Failed to get information of process Id: 1412
+Failed to get information of process Id: 1420
+Failed to get information of process Id: 1468
+Failed to get information of process Id: 1632
+Failed to get information of process Id: 1660
+Failed to get information of process Id: 1776
+Failed to get information of process Id: 1868
+Failed to get information of process Id: 1884
+PROCESS 0x768       netsession_win.exe
+Failed to get information of process Id: 1904
+PROCESS 0x7cc       netsession_win.exe
+Failed to get information of process Id: 1204
+PROCESS 0x688       adobearm.exe
+Failed to get information of process Id: 2516
+Failed to get information of process Id: 2620
+Failed to get information of process Id: 2672
+Failed to get information of process Id: 2740
+Failed to get information of process Id: 2780
+Failed to get information of process Id: 2924
+Failed to get information of process Id: 1236
+Failed to get information of process Id: 3516
+Failed to get information of process Id: 3616
+Failed to get information of process Id: 3628
+Failed to get information of process Id: 3712
+Failed to get information of process Id: 3760
+Failed to get information of process Id: 3904
+Failed to get information of process Id: 3312
+Failed to get information of process Id: 2848
+Failed to get information of process Id: 3328
+Failed to get information of process Id: 1848
+Failed to get information of process Id: 4256
+Failed to get information of process Id: 1312
+Failed to get information of process Id: 1056
+Failed to get information of process Id: 4548
+Failed to get information of process Id: 4616
+Failed to get information of process Id: 432
+Failed to get information of process Id: 4364
+Failed to get information of process Id: 3056
+Failed to get information of process Id: 5084
+Failed to get information of process Id: 1680
+PROCESS 0x1154      chrome.exe
+PROCESS 0x1008      chrome.exe
+PROCESS 0xd4        chrome.exe
+PROCESS 0xf70       sh.exe
+Failed to get information of process Id: 1432
+PROCESS 0x100c      vugen.exe
+Failed to get information of process Id: 2096
+Failed to get information of process Id: 2760
+Failed to get information of process Id: 1572
+Failed to get information of process Id: 4284
