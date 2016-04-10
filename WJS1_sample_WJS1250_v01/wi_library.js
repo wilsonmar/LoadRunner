@@ -5,6 +5,7 @@
  */
 
 // Global variable definitions:
+var wi_RunType;
 var wi_msg_level_at_init;
 var wi_unix_start_timestamp;
 var wi_random_seed;
@@ -206,18 +207,13 @@ function wi_displayTime() {
     return str;
 }
 
-function wi_zeroFill(number, size) {
-// https://gist.github.com/andrewrk/4382935#file-test-js-L7
-  number = number.toString();
-  while (number.length < size) number = "0" + number;
-  return number;
-}
-
 function wi_random_guid( number, size) {
     var s4=function() {return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);};
     var randomGUID=function(){return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();}
     return randomGUID;
 }
+
+///////////////////////////////////////////////////  Generic LoadRunner library functions:
 
 function wi_web_url_html( in_trans , in_url ){
    var rc=0;
@@ -239,7 +235,7 @@ function wi_web_url( in_trans , in_url, in_mode ){
    var rc=0;
    
    // Trace:
-   lr.outputMessage(">> trans=" + in_trans + ", url=" + in_url );
+   lr.outputMessage(">> trans=" + in_trans + ", url=" + in_url + ", mode="+ in_mode );
 
    wi_StartTrans( in_trans );
    

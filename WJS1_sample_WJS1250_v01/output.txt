@@ -1,35 +1,38 @@
-Virtual User Script started at : 4/9/2016 4:37:06 AM
+Virtual User Script started at : 4/9/2016 3:16:48 PM
 Starting action vuser_init.
 Web Turbo Replay of LoadRunner 12.50.0 for Windows 7; build 1096 (Apr 09 2016 16:55:24)  	[MsgId: MMSG-27143]
 Run mode: HTML  	[MsgId: MMSG-26993]
 Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)  	[MsgId: MMSG-26988]
 Run-Time Settings file: "C:\LRMaster1\WJS1_sample_WJS1250_v01\\default.cfg"  	[MsgId: MMSG-27141]
-wi_library.js(67): >> Run-Time Settings > Log DebugMessage level: 1.
-wi_library.js(75): >>   [X] Enable Logging = 1.
-wi_library.js(77): >>   Send messages: 
-wi_library.js(82): >>   [X] Always = 512.
-wi_library.js(85): >>   Detail level:
-wi_library.js(89): >>   [X] Standard log = 16.
-wi_library.js(95): >>       [_] Parameter substitution = 4.
-wi_library.js(101): >>       [_] Data returned by server = 2.
-wi_library.js(107): >>       [_] Advanced trace = 8.
-wi_library.js(31): >> wi_msg_level_at_init = 1.
-wi_library.js(34): >> Unix Date =1460198226
-wi_library.js(35): >> Date.now()=1460198226381 = 2016-04-09 4:37:06 AM
-wi_library.js(38): >> wi_random_seed = 24.142885953187943
-wi_library.js(41): >> HostName=WIN-HJA4A353DRG.
-wi_library.js(44): >> VuserIp=.
-wi_library.js(48): >> vuserId: -1, ScenarioId: 0, Group: "undefined" are expected in VuGen.
+wi_library.js(68): >> Run-Time Settings > Log DebugMessage level: 1.
+wi_library.js(76): >>   [X] Enable Logging = 1.
+wi_library.js(78): >>   Send messages: 
+wi_library.js(83): >>   [X] Always = 512.
+wi_library.js(86): >>   Detail level:
+wi_library.js(90): >>   [X] Standard log = 16.
+wi_library.js(96): >>       [_] Parameter substitution = 4.
+wi_library.js(102): >>       [_] Data returned by server = 2.
+wi_library.js(108): >>       [_] Advanced trace = 8.
+wi_library.js(32): >> wi_msg_level_at_init = 1.
+wi_library.js(35): >> Unix Date =1460236608
+wi_library.js(36): >> Date.now()=1460236608920 = 2016-04-09 15:16:48 PM
+wi_library.js(39): >> wi_random_seed = 87.22462644800544
+wi_library.js(42): >> HostName=WIN-HJA4A353DRG.
+wi_library.js(45): >> VuserIp=.
+wi_library.js(49): >> vuserId: -1, ScenarioId: 0, Group: "undefined" are expected in VuGen.
 Ending action vuser_init.
 Running Vuser...
 Starting iteration 1.
 Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
 Starting action Action.
-wi_library.js(242): >> trans=T01_landing, url=http://127.0.0.1:1080/WebTours/index.htm
-wi_library.js(274): Notify: Transaction "T01_landing" started.
-wi_library.js(246): web.url("T01_landing") started  	[MsgId: MMSG-26355]
-wi_library.js(246): web.url("T01_landing") was successful, 366 body bytes, 298 header bytes  	[MsgId: MMSG-26386]
-wi_library.js(289): Notify: Transaction "T01_landing" ended with a "Pass" status (Duration: 0.1297 Wasted Time: 0.0951).
+Action.js(12): >> Iteration=1.
+Action.js(22): >> trans=T01_landing_wt3, url=http://127.0.0.1:1080/WebTours/index.htm, mode=100
+WJS1_Access.js(12): >> Trans T01_landing_wt3 wi_random_seed 58.395239058882 <= 100.
+wi_library.js(238): >> trans=T01_landing_wt3, url=http://127.0.0.1:1080/WebTours/index.htm, mode=HTTP
+wi_library.js(270): Notify: Transaction "T01_landing_wt3" started.
+wi_library.js(242): web.url("T01_landing_wt3") started  	[MsgId: MMSG-26355]
+wi_library.js(242): web.url("T01_landing_wt3") was successful, 366 body bytes, 298 header bytes  	[MsgId: MMSG-26386]
+wi_library.js(285): Notify: Transaction "T01_landing_wt3" ended with a "Pass" status (Duration: 0.1015 Wasted Time: 0.0894).
 Ending action Action.
 Ending iteration 1.
 Ending Vuser...

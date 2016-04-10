@@ -1,7 +1,7 @@
 //"'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 //" Script Title       : 
-//" Script Description : 
-//"                      
+//" Script Description : More etails are at http://wilsonmar.github.io/javascript-in-loadrunner
+//"                                     and http://wilsonmar.github.io/loadrunner-javascript-coding
 //"                      
 //" Script Author      : Wilson Mar
 //" Script Date        : Tue Apr 05 13:15:10 2016
@@ -15,6 +15,6 @@ function vuser_init()
 	
     rc=wi_library_init();
     
-	return 0;
+	return rc;
 }
 

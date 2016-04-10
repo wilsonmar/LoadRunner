@@ -9,9 +9,9 @@ function WJS1_Access_landing( in_trans , in_url, in_chance){
         wi_random_seed = Math.random() * 100 ;
  	if( wi_random_seed <= in_chance ){
         // Debug:
-      	//lr.outputMessage(">> Trans " + in_trans + 
-        //                 " wi_random_seed " + wi_random_seed + " <= " + in_chance +".");
-		// Do stuff:
+      	lr.outputMessage(">> Trans " + in_trans + 
+                         " wi_random_seed " + wi_random_seed + " <= " + in_chance +".");
+		// Do stuff using a generic library function:
 		rc=wi_web_url_http( in_trans , in_url );
 		if( rc != 0 ){ return rc; }
  	}else{
@@ -29,4 +29,8 @@ function WJS1_Access_SignUp()
 function WJS1_Access_SignIn()
 function WJS1_Access_SignOut()
 function WJS1_Access_Reset_Password()
+
+Negative test cases:
+function WJS1_Access_SignUp_error()
+function WJS1_Access_SignIn_error()
 */

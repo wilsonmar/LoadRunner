@@ -1,3 +1,8 @@
+[parameter:pIteration]
+Format="%d"
+OriginalValue=""
+Type="CurrentIteration"
+ParamName="pIteration"
 [parameter:run_TransName]
 Delimiter=","
 ParamName="run_TransName"

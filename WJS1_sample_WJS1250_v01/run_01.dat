@@ -1,4 +1,5 @@
 run_URL,run_transname,run_chance
+http://127.0.0.1:1080/WebTours/index.htm,T01_landing_wt3,100
 http://www.microsoft.com,T01_landing_ms,100
 http://www.google.com,T01_landing_google,100
 http://www.expedia.com,T01_landing_expedia,100
