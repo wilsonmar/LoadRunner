@@ -1,6 +1,6 @@
-Virtual User Script started at : 4/9/2016 3:16:48 PM
+Virtual User Script started at : 4/10/2016 4:34:30 AM
 Starting action vuser_init.
-Web Turbo Replay of LoadRunner 12.50.0 for Windows 7; build 1096 (Apr 09 2016 16:55:24)  	[MsgId: MMSG-27143]
+Web Turbo Replay of LoadRunner 12.50.0 for Windows 7; build 1096 (Apr 10 2016 16:55:24)  	[MsgId: MMSG-27143]
 Run mode: HTML  	[MsgId: MMSG-26993]
 Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)  	[MsgId: MMSG-26988]
 Run-Time Settings file: "C:\LRMaster1\WJS1_sample_WJS1250_v01\\default.cfg"  	[MsgId: MMSG-27141]
@@ -14,25 +14,39 @@ wi_library.js(96): >>       [_] Parameter substitution = 4.
 wi_library.js(102): >>       [_] Data returned by server = 2.
 wi_library.js(108): >>       [_] Advanced trace = 8.
 wi_library.js(32): >> wi_msg_level_at_init = 1.
-wi_library.js(35): >> Unix Date =1460236608
-wi_library.js(36): >> Date.now()=1460236608920 = 2016-04-09 15:16:48 PM
-wi_library.js(39): >> wi_random_seed = 87.22462644800544
+wi_library.js(35): >> Unix Date =1460284470
+wi_library.js(36): >> Date.now()=1460284470830 = 2016-04-10 4:34:30 AM
+wi_library.js(39): >> wi_random_seed = 10.90735294856131
 wi_library.js(42): >> HostName=WIN-HJA4A353DRG.
 wi_library.js(45): >> VuserIp=.
 wi_library.js(49): >> vuserId: -1, ScenarioId: 0, Group: "undefined" are expected in VuGen.
+vuser_init.js(37): >> RunDataIn ="FILE", wi_file_count finds 8 rows.
 Ending action vuser_init.
 Running Vuser...
 Starting iteration 1.
 Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
 Starting action Action.
-Action.js(12): >> Iteration=1.
-Action.js(22): >> trans=T01_landing_wt3, url=http://127.0.0.1:1080/WebTours/index.htm, mode=100
-WJS1_Access.js(12): >> Trans T01_landing_wt3 wi_random_seed 58.395239058882 <= 100.
+Action.js(13): >> Action Iteration=1.
+Action.js(22): >> RunDataIn_rows=8 for {run_URL}.
+Action.js(27): >> 1, row=1, trans=T01_landing_wt3, url=http://127.0.0.1:1080/WebTours/index.htm, chance=100
 wi_library.js(238): >> trans=T01_landing_wt3, url=http://127.0.0.1:1080/WebTours/index.htm, mode=HTTP
 wi_library.js(270): Notify: Transaction "T01_landing_wt3" started.
 wi_library.js(242): web.url("T01_landing_wt3") started  	[MsgId: MMSG-26355]
 wi_library.js(242): web.url("T01_landing_wt3") was successful, 366 body bytes, 298 header bytes  	[MsgId: MMSG-26386]
-wi_library.js(285): Notify: Transaction "T01_landing_wt3" ended with a "Pass" status (Duration: 0.1015 Wasted Time: 0.0894).
+wi_library.js(285): Notify: Transaction "T01_landing_wt3" ended with a "Pass" status (Duration: 0.1184 Wasted Time: 0.1044).
+Action.js(27): >> 1, row=2, trans=T01_landing_ms, url=http://www.microsoft.com, chance=100
+wi_library.js(238): >> trans=T01_landing_ms, url=http://www.microsoft.com, mode=HTTP
+wi_library.js(270): Notify: Transaction "T01_landing_ms" started.
+wi_library.js(242): web.url("T01_landing_ms") started  	[MsgId: MMSG-26355]
+wi_library.js(242): Error -27796: Could not resolve address of host www.microsoft.com  	[MsgId: MERR-27796]
+wi_library.js(242): web.url("T01_landing_ms") highest severity level was "ERROR", 0 body bytes, 0 header bytes  	[MsgId: MMSG-26388]
+wi_library.js(242): Notify: Transaction "T01_landing_ms" ended with a "Fail" status (Duration: 12.0249 Wasted Time: 0.0008).
+wi_library.js(242): Notify: Transaction "T01_landing_ms" has 1 error message(s).
+wi_library.js(242): Notify: The 1st error message associated with transaction "T01_landing_ms" is "Error -27796: Could not resolve address of host www.microsoft.com"
+wi_library.js(242): Error: Call function 'web.url' in script 'C:\LRMaster1\WJS1_sample_WJS1250_v01\wi_library.js' error.
+wi_library.js(230): Error: Call function 'wi_web_url' in script 'C:\LRMaster1\WJS1_sample_WJS1250_v01\wi_library.js' error.
+WJS1_Access.js(16): Error: Call function 'wi_web_url_http' in script 'C:\LRMaster1\WJS1_sample_WJS1250_v01\WJS1_Access.js' error.
+Action.js(32): Error: Call function 'WJS1_Access_landing' in script 'C:\LRMaster1\WJS1_sample_WJS1250_v01\Action.js' error.
 Ending action Action.
 Ending iteration 1.
 Ending Vuser...

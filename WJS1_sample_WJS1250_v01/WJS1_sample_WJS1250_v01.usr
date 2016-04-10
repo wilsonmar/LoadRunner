@@ -60,7 +60,7 @@ vuser_end=JsExt-Interpreter
 [TransactionsOrder]
 Order=
 [StateManagement]
-LastReplayStatus=1
+LastReplayStatus=2
 [ActiveReplay]
 LastReplayedRunName=result1
 ActiveRunName=result1
@@ -69,3 +69,9 @@ md5.js=
 sha1.js=
 wi_library.js=
 WJS1_Access.js=
+[ParameterSimulation]
+NumVusers=3
+IsDurationIndefinite=1
+NumIterationsUntilCompletion=1
+IterationFromRTS=1
+NumIterationIndefinitely=1

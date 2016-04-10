@@ -285,7 +285,40 @@ function wi_EndTrans( in_trans , in_rc ){
       lr.endTransaction( in_trans, lr.AUTO );
    }
 
-  return rc;
+   return 0;
+}
+
+
+function wi_file_count( in_parm ){
+  // Loop through a parm to return the number of rows found.
+  // CAUTION: This only works if there are no duplicates of the first key in the file.
+  // This is until I find a built-in function to do this.
+  
+	var rc=0; count=1; 
+//	var RunDataIn_key; // using global variable 
+	var in_parm_row_1;
+	   var go_on_flag=0;
+	
+		RunDataIn_key = lr.evalString(in_parm);
+		in_parm_row_1 = RunDataIn_key; 
+		// Debug:
+		// lr.outputMessage(">> count="+ count +", rc="+ rc +", " + in_parm +"="+ RunDataIn_key +".");
+
+	while( go_on_flag == 0 ){
+		// WARNING: Each access (even by a message function advances the row pointer).
+		rc=lr.advanceParam( "{run_URL}" ); // advance to next row in file. Expected rc=-1.
+
+		RunDataIn_key = lr.evalString(in_parm);
+		if( in_parm_row_1 == RunDataIn_key ){
+			go_on_flag = 1; // break out of while loop.
+		}else{
+			count = count + 1;
+			// Debug:
+			// lr.outputMessage(">> count="+ count +", rc="+ rc +", " + in_parm +"="+ RunDataIn_key +".");
+		}
+    }
+  
+  return count;
 }
 
 
@@ -301,4 +334,6 @@ function wi_capture_user_agent(){
     }
   );
 }
+
+
 // END
