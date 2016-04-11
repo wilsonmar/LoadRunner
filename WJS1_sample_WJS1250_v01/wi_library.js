@@ -5,12 +5,11 @@
  */
 
 // Global variable definitions:
-var wi_RunType;
-var wi_msg_level_at_init;
 var wi_unix_start_timestamp;
-var wi_random_seed;
+var wi_msg_level_at_init;
 var wi_HostName;
 var wi_VuserIp;
+var wi_random_seed;
 
 function wi_library_init(){
 
@@ -28,7 +27,6 @@ function wi_library_init(){
     wi_msg_level_print();
 
     wi_msg_force_print();
-
     lr.outputMessage(">> wi_msg_level_at_init = " + wi_msg_level_at_init +".");
    
 	// new Date('Jan 1, 2039') / 1000 | 0 == -2117514496
@@ -41,8 +39,8 @@ function wi_library_init(){
 	wi_HostName = lr.getHostName();
     lr.outputMessage(">> HostName=" + wi_HostName + ".");
 
-    wi_VuserIp = lr.getVuserIp();
-    lr.outputMessage(">> VuserIp=" + wi_VuserIp + ".");
+    wi_VuserIp = lr.getVuserIp(); // FIXME: VuserIp returning blank instead of an IP.
+    lr.outputMessage(">> VuserIp=" + wi_VuserIp + "."); 
 
        result = lr.whoami();
    if( result[0] == -1 ){
@@ -54,7 +52,7 @@ function wi_library_init(){
              );
    }
 
-   wi_msg_restore_print();
+   wi_msg_print_reset();
    return 0;
 }
 
@@ -85,13 +83,13 @@ function wi_msg_level_print(){
 
        lr.outputMessage(">>   Detail level:");
        if (msg_level & lr.MSG_CLASS_EXTENDED_LOG ){
-         	lr.outputMessage(">>   [X] Extended log = " + lr.MSG_CLASS_EXTENDED_LOG + ".");
+           lr.outputMessage(">>   [X] Extended log = " + lr.MSG_CLASS_EXTENDED_LOG + ".");
        }else{
-          	lr.outputMessage(">>   [X] Standard log = " + lr.MSG_CLASS_EXTENDED_LOG + ".");
+           lr.outputMessage(">>   [X] Standard log = " + lr.MSG_CLASS_EXTENDED_LOG + ".");
        }
 
        if( msg_level & lr.MSG_CLASS_PARAMETERS ){
-            lr.outputMessage(">>       [X] Parameter substitution = " + lr.MSG_CLASS_PARAMETERS + ".");
+           lr.outputMessage(">>       [X] Parameter substitution = " + lr.MSG_CLASS_PARAMETERS + ".");
        }else{
            lr.outputMessage(">>       [_] Parameter substitution = " + lr.MSG_CLASS_PARAMETERS + ".");
        }
@@ -110,7 +108,7 @@ function wi_msg_level_print(){
 
    } // Enabled logging
 
-   wi_msg_restore_print();
+   wi_msg_print_reset();
 
    return 0;
 }
@@ -126,7 +124,7 @@ function wi_msg_force_print(){
 }
 
 
-function wi_msg_restore_print(){
+function wi_msg_print_reset(){
 
     lr.setDebugMessage( wi_msg_level_at_init );
 
@@ -148,14 +146,28 @@ function wi_msg_restore_print(){
             lr.setDebugMessage( lr.MSG_CLASS_EXTENDED_LOG, lr.SWITCH_OFF ); // off = show.
         }
 
+        if( (wi_msg_level_at_init & lr.MSG_CLASS_PARAMETERS) == lr.MSG_CLASS_PARAMETERS ){
+            lr.setDebugMessage( lr.MSG_CLASS_PARAMETERS, lr.SWITCH_ON ); // off = show.
+    	}else{
+            lr.setDebugMessage( lr.MSG_CLASS_PARAMETERS, lr.SWITCH_OFF ); // off = show.
+        }
+    
         if( (wi_msg_level_at_init & lr.MSG_CLASS_FULL_TRACE) == lr.MSG_CLASS_FULL_TRACE ){
             lr.setDebugMessage( lr.MSG_CLASS_FULL_TRACE, lr.SWITCH_ON ); // off = show.
     	}else{
             lr.setDebugMessage( lr.MSG_CLASS_FULL_TRACE, lr.SWITCH_OFF ); // off = show.
         }
     
+        if( (wi_msg_level_at_init & lr.MSG_CLASS_RESULT_DATA) == lr.MSG_CLASS_RESULT_DATA ){
+            lr.setDebugMessage( lr.MSG_CLASS_RESULT_DATA, lr.SWITCH_ON ); // off = show.
+    	}else{
+            lr.setDebugMessage( lr.MSG_CLASS_RESULT_DATA, lr.SWITCH_OFF ); // off = show.
+        }
+
     return 0;
 }
+
+///////////////////////////////////////////////////////////////////////////////////
 
 function wi_TimeStamp(){ // 24 hour time:
     var now = new Date();
@@ -215,29 +227,23 @@ function wi_random_guid( number, size) {
 
 ///////////////////////////////////////////////////  Generic LoadRunner library functions:
 
-function wi_web_url_html( in_trans , in_url ){
+
+function wi_web_url_retries( in_trans , in_url, in_mode , in_title ){
    var rc=0;
-   var in_mode="HTML";
    
-   rc=wi_web_url( in_trans , in_url , in_mode );
+   for(var i = 0; i < nRetries; i++ ){ 
+       rc=wi_web_url( in_trans , in_url , in_mode , in_title );
+       if( rc == 0 ){ break; }
+      // else loop back to for.
+   }
+   
    return rc;
 }
 
-function wi_web_url_http( in_trans , in_url ){
-   var rc=0;
-   var in_mode="HTTP";
-   
-   rc=wi_web_url( in_trans , in_url, in_mode );
-   return rc;
-}
-
-function wi_web_url( in_trans , in_url, in_mode ){
+function wi_web_url( in_trans , in_url , in_mode , in_title ){
    var rc=0;
    
-   // Trace:
-   lr.outputMessage(">> trans=" + in_trans + ", url=" + in_url + ", mode="+ in_mode );
-
-   wi_StartTrans( in_trans );
+   WJS1_Config_StartTrans( in_trans, in_title );
    
    web.url({
     name : in_trans, 
@@ -252,40 +258,9 @@ function wi_web_url( in_trans , in_url, in_mode ){
 
    // rc = custom edits here raise (<title>)
 
-   rc=wi_EndTrans( in_trans , rc );
+   rc=WJS1_Config_EndTrans( in_trans , rc );
 
    return rc;
-}
-
-function wi_StartTrans( in_trans ){
-    var rc=0;
-    
-    // lr.outputMessage(">> in_trans=" + in_trans );
-    
- 	lr.thinkTime(1.5); // Cannot use std. parameterization for  arguments?
-
-    // Capture generic itmes:
-    // wi_capture_user_agent();
-
-    lr.startTransaction( in_trans );
-
-    return rc;
-}
-
-
-function wi_EndTrans( in_trans , in_rc ){
-  var rc=0;
-
-    // Check HTML return code:
-    // ???
-
-   if( in_rc != 0 ){
-      lr.endTransaction( in_trans, lr.FAIL );
-   }else{
-      lr.endTransaction( in_trans, lr.AUTO );
-   }
-
-   return 0;
 }
 
 
@@ -295,32 +270,66 @@ function wi_file_count( in_parm ){
   // This is until I find a built-in function to do this.
   
 	var rc=0; count=1; 
-//	var RunDataIn_key; // using global variable 
+	//  RunDataIn_key; // using global variable 
 	var in_parm_row_1;
-	   var go_on_flag=0;
-	
-		RunDataIn_key = lr.evalString(in_parm);
+	var go_on_flag=0;
+	var in_parm_format = "{"+ in_parm +"}";
+    var run_row_id;
+    	
+		//	WJS1_Config_print_debug();
+		//	lr.outputMessage(">> in_parm="+ in_parm +" & in_parm_format = " + in_parm_format +".");
+		//  wi_msg_print_reset();
+
+	    RunDataIn_key = lr.evalString( in_parm_format );
 		in_parm_row_1 = RunDataIn_key; 
-		// Debug:
-		// lr.outputMessage(">> count="+ count +", rc="+ rc +", " + in_parm +"="+ RunDataIn_key +".");
+
+	  	// TODO: Compare row Id in file against counter so duplicate values can occur. 
+		// if( count != lr.evalString( "{run_row_id}") ){
+		//	WJS1_Config_print_error();
+		//	lr.outputMessage(">> count="+ count +", run_row_id="+ lr.evalString( "{run_row_id}" ) +".");
+		//    wi_msg_print_reset();		   	
+		//}
 
 	while( go_on_flag == 0 ){
-		// WARNING: Each access (even by a message function advances the row pointer).
-		rc=lr.advanceParam( "{run_URL}" ); // advance to next row in file. Expected rc=-1.
+		// This loop assumes Update Value on Each Iteration, the default.
+		// WARNING: if parm is set to Update Value on Each occurance, every access (even by a message function) advances the row pointer.
+		rc=lr.advanceParam( in_parm ); // advance to next row in file. Expected rc=-1.
 
-		RunDataIn_key = lr.evalString(in_parm);
+		RunDataIn_key = lr.evalString( in_parm_format );
 		if( in_parm_row_1 == RunDataIn_key ){
 			go_on_flag = 1; // break out of while loop.
 		}else{
 			count = count + 1;
-			// Debug:
-			// lr.outputMessage(">> count="+ count +", rc="+ rc +", " + in_parm +"="+ RunDataIn_key +".");
+
+			WJS1_Config_print_debug();
+			lr.outputMessage(">> count="+ count +", rc="+ rc +", " + in_parm +"="+ RunDataIn_key +".");
+		    wi_msg_print_reset();
 		}
     }
+  
+  // TODO: Ignore file rows marked anything but "Y" or "Yes" or "yes" or "y" or blank.
   
   return count;
 }
 
+
+function wi_strip_braces( in_count_parm ){
+    var newString = in_count_parm;
+	
+	if( newString.substr(1) == "{" ){
+		newString = in_count_parm.substr(1);
+	}else{
+		newString = in_count_parm;
+	}
+
+	if( in_count_parm.substr(0, myString.length-1) == "}" ){
+		newString = newString.substr(0, myString.length-1);
+	}else{
+		// newString same.
+	}
+ 
+    return newstring;
+}
 
 function wi_capture_user_agent(){
 
