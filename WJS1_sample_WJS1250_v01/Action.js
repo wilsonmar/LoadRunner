@@ -15,6 +15,8 @@ function Action(){
     rc=WJS1_Access_loop();
     if( rc != 0 ){ return rc; }
 
+    // TODO: Use sha1.js to authenticate calls to REST API
+    
     return rc;
 }
 

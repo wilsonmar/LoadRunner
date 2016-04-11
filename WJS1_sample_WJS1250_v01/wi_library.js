@@ -225,6 +225,10 @@ function wi_random_guid( number, size) {
     return randomGUID;
 }
 
+function wi_CapitalizeExtractFirstLetter(string){
+    return string.charAt(0).toUpperCase();
+}
+
 ///////////////////////////////////////////////////  Generic LoadRunner library functions:
 
 
@@ -243,19 +247,49 @@ function wi_web_url_retries( in_trans , in_url, in_mode , in_title ){
 function wi_web_url( in_trans , in_url , in_mode , in_title ){
    var rc=0;
    
+   json_put_string="";
+   json_post_file_path="";
+
    WJS1_Config_StartTrans( in_trans, in_title );
    
-   web.url({
-    name : in_trans, 
-    url :  in_url, 
-    targetFrame : '', 
-    resource : 0, 
-    recContentType : 'text/html', 
-    referer : '', 
-    snapshot : 't1.inf', 
-    mode : in_mode
-   });
-
+   if( in_mode == "PUT" ){
+     rc=web.customRequest({
+       stepName : in_trans, 
+       url :      in_url, 
+       method:"PUT",
+       encType : "application/json",
+       resource : 0, 
+       recContentType : 'text/html', 
+       mode : 'HTTP',
+       body : '{json_put_string}'
+      });
+   	
+   }else
+   if( in_mode == "POST" ){
+     rc=web.customRequest({
+       stepName : in_trans, 
+       url :      in_url, 
+       method:"PUT",
+       encType : "application/json",
+       resource : 0, 
+       recContentType : 'text/html', 
+       mode : 'HTTP',
+       bodyFilePath: '{json_post_file_path}'
+      });
+   	  // This requires select Tools > Options > Scripting > Script Management and add .json to the Allowed Extensions list.
+   	
+   }else{
+     rc=web.url({
+       name : in_trans, 
+       url :  in_url, 
+       targetFrame : '', 
+       resource : 0, 
+       recContentType : 'text/html', 
+       referer : '', 
+       snapshot : 't1.inf', 
+       mode : in_mode
+      });
+   }
    // rc = custom edits here raise (<title>)
 
    rc=WJS1_Config_EndTrans( in_trans , rc );
@@ -263,6 +297,18 @@ function wi_web_url( in_trans , in_url , in_mode , in_title ){
    return rc;
 }
 
+function wi_post( in_trans , in_url , in_mode , in_title ){
+   var rc=0;
+   
+   WJS1_Config_StartTrans( in_trans, in_title );
+   
+
+   // rc = custom edits here raise (<title>)
+
+   rc=WJS1_Config_EndTrans( in_trans , rc );
+
+   return rc;
+}
 
 function wi_file_count( in_parm ){
   // Loop through a parm to return the number of rows found.
@@ -330,19 +376,5 @@ function wi_strip_braces( in_count_parm ){
  
     return newstring;
 }
-
-function wi_capture_user_agent(){
-
-  web.regSaveParamEx(
-    {
-      paramName : 'userAgent', 
-      lb : 'User-Agent: ', 
-      rb : '\\r\\n', 
-      scope : 'Head', 
-      requestUrl : ''
-    }
-  );
-}
-
 
 // END
