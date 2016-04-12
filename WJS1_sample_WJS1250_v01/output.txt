@@ -1,9 +1,9 @@
-Virtual User Script started at : 4/11/2016 3:15:52 PM
+Virtual User Script started at : 4/12/2016 9:25:06 AM
 Starting action vuser_init.
-Web Turbo Replay of LoadRunner 12.50.0 for Windows 7; build 1096 (Apr 11 2016 16:55:24)  	[MsgId: MMSG-27143]
+Web Turbo Replay of LoadRunner 12.50.0 for Windows 7; build 1096 (Apr 12 2016 16:55:24)  	[MsgId: MMSG-27143]
 Run mode: HTML  	[MsgId: MMSG-26993]
 Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows; Trident/6.0)  	[MsgId: MMSG-26988]
-Run-Time Settings file: "C:\githubs\wilsonmar\LoadRunner\WJS1_sample_WJS1250_v01\\default.cfg"  	[MsgId: MMSG-27141]
+Run-Time Settings file: "C:\LRMaster1\WJS1_sample_WJS1250_v01\\default.cfg"  	[MsgId: MMSG-27141]
 wi_library.js(66): >> Run-Time Settings > Log DebugMessage level: 18.
 wi_library.js(74): >>   [X] Enable Logging = 1.
 wi_library.js(76): >>   Send messages: 
@@ -14,10 +14,10 @@ wi_library.js(94): >>       [_] Parameter substitution = 4.
 wi_library.js(98): >>       [X] Data returned by server = 2.
 wi_library.js(106): >>       [_] Advanced trace = 8.
 wi_library.js(30): >> wi_msg_level_at_init = 18.
-wi_library.js(33): >> Unix Date =1460405752
-wi_library.js(34): >> Date.now()=1460405752776 = 2016-04-11 15:15:52 PM
-wi_library.js(37): >> wi_random_seed = 48.72785897459835
-wi_library.js(40): >> HostName=Mainali-PC.
+wi_library.js(33): >> Unix Date =1460474706
+wi_library.js(34): >> Date.now()=1460474706983 = 2016-04-12 9:25:06 AM
+wi_library.js(37): >> wi_random_seed = 41.97260627988726
+wi_library.js(40): >> HostName=WIN-HJA4A353DRG.
 wi_library.js(43): >> VuserIp=.
 wi_library.js(47): >> vuserId: -1, ScenarioId: 0, Group: "undefined" are expected in VuGen.
 vuser_init.js(34): >> Retries in Run-Time Settings Attributes = 1.
@@ -31,50 +31,28 @@ Starting iteration 1.
 Starting action Action.
 Action.js(12): >> Action Iteration=1.
 WJS1_Access.js(43): >> RunDataIn_rows=3 based on assumed unique {run_URL}.
-WJS1_Access.js(52): >> 1, row=1, #=1, use=Y, trans=T01_landing_wt3, url=http://127.0.0.1:1080/WebTours/index.htm, chance=100, chance=Web Tours
-WJS1_Access.js(82): >> Trans T01_landing_wt3 wi_random_seed 66.59009987488389 <= 100.
+WJS1_Access.js(52): >> 1, row=1, #=1, use=Y, trans=T01_landing_wt3, url=http://127.0.0.1:1080/WebTours/index.htm, chance=, chance="Web Tours"
+WJS1_Access.js(92): >> Trans T01_landing_wt3 not selected for execution. wi_random_seed = 63.2 NOT <= .
+WJS1_Access.js(52): >> 1, row=2, #=2, use=Y, trans=T01_landing_ms, url=http://127.0.0.1:1080/WebTours/index.htm, chance=100, chance=Microsoft ý Official Home Page
+WJS1_Access.js(82): >> Trans T01_landing_ms wi_random_seed 61.51084916200489 <= 100.
 WJS1_Config.js(31): lr_think_time: 0.50 seconds.
 WJS1_Config.js(35): web.regFind started  	[MsgId: MMSG-26355]
 WJS1_Config.js(35): Registering web.regFind was successful  	[MsgId: MMSG-26390]
-WJS1_Config.js(46): Notify: Transaction "T01_landing_wt3" started.
-wi_library.js(282): web.url("T01_landing_wt3") started  	[MsgId: MMSG-26355]
-wi_library.js(282): t=3478ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
+WJS1_Config.js(46): Notify: Transaction "T01_landing_ms" started.
+wi_library.js(282): web.url("T01_landing_ms") started  	[MsgId: MMSG-26355]
+wi_library.js(282): t=3419ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
 wi_library.js(282):     HTTP/1.1 200 OK\r\n
-wi_library.js(282):     Date: Mon, 11 Apr 2016 20:15:53 GMT\r\n
+wi_library.js(282):     Date: Tue, 12 Apr 2016 15:25:07 GMT\r\n
 wi_library.js(282):     Server: Apache/2.2.21 (Win32)\r\n
-wi_library.js(282):     Last-Modified: Mon, 27 May 2013 19:20:21 GMT\r\n
-wi_library.js(282):     ETag: "2000000048ac9-16e-4ddb80a28a740"\r\n
+wi_library.js(282):     Last-Modified: Mon, 27 May 2013 20:20:21 GMT\r\n
+wi_library.js(282):     ETag: "3000000020091-16e-4ddb8e0bc4b40"\r\n
 wi_library.js(282):     Accept-Ranges: bytes\r\n
 wi_library.js(282):     Content-Length: 366\r\n
 wi_library.js(282):     Keep-Alive: timeout=5, max=100\r\n
 wi_library.js(282):     Connection: Keep-Alive\r\n
 wi_library.js(282):     Content-Type: text/html\r\n
 wi_library.js(282):     \r\n
-wi_library.js(282): t=3491ms: 366-byte response body for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
-wi_library.js(282):     <HTML>\n
-wi_library.js(282):     <HEAD>\n
-wi_library.js(282):     <title>Web Tours</title>\n
-wi_library.js(282):     <frameset rows = "65,*" border="1" bordercolor="#E0E7F1">\n
-wi_library.js(282):     <frame name="header" src="header.html" scrolling="no" noresize="noresize" marginheight="2"
-wi_library.js(282):      marginwidth="2"/>\n
-wi_library.js(282):     <frame name="body" src="/cgi-bin/welcome.pl?signOff=true" scrolling="auto" noresize="nores
-wi_library.js(282):     ize" marginheight="2" marginwidth="2" />\n
-wi_library.js(282):     </frameset>\n
-wi_library.js(282):     </HEAD>\n
-wi_library.js(282):     </HTML>\n
-wi_library.js(282):     \n
-wi_library.js(282): Registered web_reg_find successful for "Text=Web Tours" (count=1)  	[MsgId: MMSG-26364]
-wi_library.js(282): web.url("T01_landing_wt3") was successful, 366 body bytes, 298 header bytes  	[MsgId: MMSG-26386]
-WJS1_Config.js(68): Notify: Transaction "T01_landing_wt3" ended with a "Pass" status (Duration: 0.1655 Wasted Time: 0.1157).
-WJS1_Access.js(52): >> 1, row=2, #=2, use=Y, trans=T01_landing_ms, url=http://127.0.0.1:1080/WebTours/index.htm, chance=100, chance=Microsoft ý Official Home Page
-WJS1_Access.js(82): >> Trans T01_landing_ms wi_random_seed 19.484921358525753 <= 100.
-WJS1_Config.js(31): lr_think_time: 0.50 seconds.
-WJS1_Config.js(35): web.regFind started  	[MsgId: MMSG-26355]
-WJS1_Config.js(35): Registering web.regFind was successful  	[MsgId: MMSG-26390]
-WJS1_Config.js(46): Notify: Transaction "T01_landing_ms" started.
-wi_library.js(282): web.url("T01_landing_ms") started  	[MsgId: MMSG-26355]
-wi_library.js(282): Retrieving data from cache for "http://127.0.0.1:1080/WebTours/index.htm"  	[MsgId: MMSG-26558]
-wi_library.js(282): t=4227ms: 366-byte response body retrieved from cache for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=2)
+wi_library.js(282): t=3430ms: 366-byte response body for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
 wi_library.js(282):     <HTML>\n
 wi_library.js(282):     <HEAD>\n
 wi_library.js(282):     <title>Web Tours</title>\n
@@ -88,9 +66,9 @@ wi_library.js(282):     </HEAD>\n
 wi_library.js(282):     </HTML>\n
 wi_library.js(282):     \n
 wi_library.js(282): Registered web.regFind successful for "Text=Microsoft ý Official Home Page"  	[MsgId: MMSG-26362]
-wi_library.js(282): web.url("T01_landing_ms") was successful, 0 body bytes, 0 header bytes  	[MsgId: MMSG-26386]
+wi_library.js(282): web.url("T01_landing_ms") was successful, 366 body bytes, 298 header bytes  	[MsgId: MMSG-26386]
 WJS1_Config.js(59): >> Title not found.
-WJS1_Config.js(68): Notify: Transaction "T01_landing_ms" ended with a "Pass" status (Duration: 0.0890 Wasted Time: 0.0010).
+WJS1_Config.js(68): Notify: Transaction "T01_landing_ms" ended with a "Pass" status (Duration: 0.1482 Wasted Time: 0.1030).
 Ending action Action.
 Starting action WJS1_Config.
 Ending action WJS1_Config.
