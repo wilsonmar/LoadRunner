@@ -10,6 +10,9 @@ var wi_msg_level_at_init;
 var wi_HostName;
 var wi_VuserIp;
 var wi_random_seed;
+var wi_http_download_bytes;
+var wi_http_download_ms;
+
 
 function wi_library_init(){
 
@@ -232,16 +235,38 @@ function wi_CapitalizeExtractFirstLetter(string){
 ///////////////////////////////////////////////////  Generic LoadRunner library functions:
 
 
-function wi_web_url_retries( in_trans , in_url, in_mode , in_title ){
+function wi_web_url_retries( in_trans , in_prep, in_url, in_mode , in_title ){
    var rc=0;
    
+   rc=wi_web_url_prep( in_prep );
+       if( rc != 0 ){ return rc; }
+
    for(var i = 0; i < nRetries; i++ ){ 
-       rc=wi_web_url( in_trans , in_url , in_mode , in_title );
-       if( rc == 0 ){ break; }
-      // else loop back to for.
+       rc=wi_web_url( in_trans , in_prep, in_url , in_mode , in_title );
+       if( rc != 0 ){ return rc; }
+      // else loop back to top of for loop above.
    }
    
    return rc;
+}
+
+
+function wi_web_url_prep( in_prep ){
+   var rc=0;
+   
+    if( "X" == in_prep ){
+   	
+    }else
+    if( "Y" == in_prep ){
+   	
+ 	}else
+    if( "Y" == in_prep ){
+	
+    }else{
+   	
+    }
+    	
+    return rc;
 }
 
 function wi_web_url( in_trans , in_url , in_mode , in_title ){
@@ -265,6 +290,19 @@ function wi_web_url( in_trans , in_url , in_mode , in_title ){
       });
    	
    }else
+   if( in_mode == "GET" ){
+     rc=web.customRequest({
+       stepName : in_trans, 
+       url :      in_url, 
+       method:"PUT",
+       encType : "application/json",
+       resource : 0, 
+       recContentType : 'text/html', 
+       mode : 'HTTP',
+       body : ''
+      });
+   	
+   }else
    if( in_mode == "POST" ){
      rc=web.customRequest({
        stepName : in_trans, 
@@ -276,7 +314,7 @@ function wi_web_url( in_trans , in_url , in_mode , in_title ){
        mode : 'HTTP',
        bodyFilePath: '{json_post_file_path}'
       });
-   	  // This requires select Tools > Options > Scripting > Script Management and add .json to the Allowed Extensions list.
+   	  // This requires VuGen Tools > Options > Scripting > Script Management and add ".json|" to the Allowed Extensions list.
    	
    }else{
      rc=web.url({
@@ -375,6 +413,37 @@ function wi_strip_braces( in_count_parm ){
 	}
  
     return newstring;
+}
+
+
+function wi_http_response_capture_check(){
+	
+	var wi_http_return_code;
+
+ // var wi_http_request_bytes;
+ // var wi_http_response_bytes;
+ // var wi_http_last_err;
+    
+    // Return code  in HTTP response header:
+    wi_http_return_code    = web.getIntProperty( web.HTTP_INFO_RETURN_CODE ); // value=1. The return code
+    if(    wi_http_return_code >= 400 ){
+    	rc=wi_http_return_code;
+    }
+    
+    // Global vars:
+    // Size in bytes of the last download, including the header, body, and communications overhead (for example, NTLM negotiation).
+    wi_http_download_bytes = web.getIntProperty( web.HTTP_INFO_DOWNLOAD_SIZE ); // value= 2 
+    // Time in milliseconds of the last download:
+    wi_http_download_ms    = web.getIntProperty( web.HTTP_INFO_DOWNLOAD_TIME ); // value= 3 
+
+    // Accumulated size of all headers and bodies since the first time web.getIntProperty was issued with HTTP_INFO_TOTAL_REQUEST_STAT.
+    // wi_http_request_bytes = web.getIntProperty( web.HTTP_INFO_TOTAL_REQUEST_STAT ); // value= 4 
+    // accumulated size, including header and body, of all responses since the first time web.getIntProperty was issued with HTTP_INFO_TOTAL_RESPONSE_STAT
+    // wi_http_response_bytes = web.getIntProperty( web.HTTP_INFO_TOTAL_RESPONSE_STAT ); // value= 5 
+    // last socket error. On timeout, web.getIntProperty(HTTP_INFO_LAST_SOCKET_ERROR) returns 10060. For other errors, see the socket documentation.
+    // wi_http_last_err = web.getIntProperty( web.HTTP_INFO_LAST_SOCKET_ERROR ); // value= 6 
+   
+    return rc;
 }
 
 // END
