@@ -1,4 +1,4 @@
-Virtual User Script started at : 4/13/2016 12:51:06 PM
+Virtual User Script started at : 4/13/2016 5:50:52 PM
 Starting action vuser_init.
 Web Turbo Replay of LoadRunner 12.50.0 for Windows 7; build 1096 (Apr 13 2016 16:55:24)  	[MsgId: MMSG-27143]
 Run mode: HTML  	[MsgId: MMSG-26993]
@@ -14,9 +14,9 @@ wi_library.js(97): >>       [_] Parameter substitution = 4.
 wi_library.js(101): >>       [X] Data returned by server = 2.
 wi_library.js(109): >>       [_] Advanced trace = 8.
 wi_library.js(33): >> wi_msg_level_at_init = 18.
-wi_library.js(36): >> Unix Date =1460569866
-wi_library.js(37): >> Date.now()=1460569866183 = 2016-04-13 12:51:06 PM
-wi_library.js(40): >> wi_random_seed = 9.016835037618876
+wi_library.js(36): >> Unix Date =1460587852
+wi_library.js(37): >> Date.now()=1460587853015 = 2016-04-13 17:50:53 PM
+wi_library.js(40): >> wi_random_seed = 40.16688116826117
 wi_library.js(43): >> HostName=Mainali-PC.
 wi_library.js(46): >> VuserIp=.
 wi_library.js(50): >> vuserId: -1, ScenarioId: 0, Group: "undefined" are expected in VuGen.
@@ -32,17 +32,17 @@ Starting action Action.
 Action.js(12): >> Action Iteration=1.
 WJS1_Access.js(44): >> RunDataIn_rows=3 based on assumed unique {run_URL}.
 WJS1_Access.js(59): >> 1, row=1, #=1, use=Y, trans=T01_landing_wt3, chance=, chance=, chance=, url=http://127.0.0.1:1080/WebTours/index.htm, chance="Web Tours"
-WJS1_Access.js(104): >> Trans T01_landing_wt3 not selected for execution. wi_random_seed = 70.8 NOT <= .
+WJS1_Access.js(104): >> Trans T01_landing_wt3 not selected for execution. wi_random_seed = 6.3 NOT <= .
 WJS1_Access.js(59): >> 1, row=2, #=2, use=Y, trans=T01_landing_ms, chance=100, chance=X, chance=HTTP, url=http://127.0.0.1:1080/WebTours/index.htm, chance=Microsoft ý Official Home Page
-WJS1_Access.js(94): >> Trans T01_landing_ms wi_random_seed 92.96149984002113 <= 100.
+WJS1_Access.js(94): >> Trans T01_landing_ms wi_random_seed 6.433205120265484 <= 100.
 WJS1_Config.js(34): lr_think_time: 0.50 seconds.
 WJS1_Config.js(38): web.regFind started  	[MsgId: MMSG-26355]
 WJS1_Config.js(38): Registering web.regFind was successful  	[MsgId: MMSG-26390]
 WJS1_Config.js(49): Notify: Transaction "T01_landing_ms" started.
 wi_library.js(283): web.url("T01_landing_ms") started  	[MsgId: MMSG-26355]
-wi_library.js(283): t=5485ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
+wi_library.js(283): t=13113ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
 wi_library.js(283):     HTTP/1.1 200 OK\r\n
-wi_library.js(283):     Date: Wed, 13 Apr 2016 17:51:07 GMT\r\n
+wi_library.js(283):     Date: Wed, 13 Apr 2016 22:50:54 GMT\r\n
 wi_library.js(283):     Server: Apache/2.2.21 (Win32)\r\n
 wi_library.js(283):     Last-Modified: Mon, 27 May 2013 19:20:21 GMT\r\n
 wi_library.js(283):     ETag: "2000000048ac9-16e-4ddb80a28a740"\r\n
@@ -52,7 +52,7 @@ wi_library.js(283):     Keep-Alive: timeout=5, max=100\r\n
 wi_library.js(283):     Connection: Keep-Alive\r\n
 wi_library.js(283):     Content-Type: text/html\r\n
 wi_library.js(283):     \r\n
-wi_library.js(283): t=5499ms: 366-byte response body for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
+wi_library.js(283): t=13155ms: 366-byte response body for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
 wi_library.js(283):     <HTML>\n
 wi_library.js(283):     <HEAD>\n
 wi_library.js(283):     <title>Web Tours</title>\n
@@ -72,7 +72,7 @@ wi_library.js(421): web.getIntProperty started  	[MsgId: MMSG-26355]
 wi_library.js(421): web.getIntProperty was successful  	[MsgId: MMSG-26392]
 wi_library.js(428): web.getIntProperty started  	[MsgId: MMSG-26355]
 wi_library.js(428): web.getIntProperty was successful  	[MsgId: MMSG-26392]
-WJS1_Config.js(73): Notify: Transaction "T01_landing_ms" ended with a "Pass" status (Duration: 0.2691 Wasted Time: 0.1279).
+WJS1_Config.js(73): Notify: Transaction "T01_landing_ms" ended with a "Pass" status (Duration: 4.1335 Wasted Time: 0.4967).
 Ending action Action.
 Starting action WJS1_Config.
 Ending action WJS1_Config.
