@@ -1,9 +1,9 @@
-Virtual User Script started at : 4/13/2016 9:55:38 AM
+Virtual User Script started at : 4/13/2016 11:54:00 AM
 Starting action vuser_init.
 Web Turbo Replay of LoadRunner 12.50.0 for Windows 7; build 1096 (Apr 13 2016 16:55:24)  	[MsgId: MMSG-27143]
 Run mode: HTML  	[MsgId: MMSG-26993]
 Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows; Trident/6.0)  	[MsgId: MMSG-26988]
-Run-Time Settings file: "C:\LRMaster1\WJS1_sample_WJS1250_v01\\default.cfg"  	[MsgId: MMSG-27141]
+Run-Time Settings file: "C:\githubs\wilsonmar\LoadRunner\WJS1_sample_WJS1250_v01\\default.cfg"  	[MsgId: MMSG-27141]
 wi_library.js(69): >> Run-Time Settings > Log DebugMessage level: 18.
 wi_library.js(77): >>   [X] Enable Logging = 1.
 wi_library.js(79): >>   Send messages: 
@@ -14,10 +14,10 @@ wi_library.js(97): >>       [_] Parameter substitution = 4.
 wi_library.js(101): >>       [X] Data returned by server = 2.
 wi_library.js(109): >>       [_] Advanced trace = 8.
 wi_library.js(33): >> wi_msg_level_at_init = 18.
-wi_library.js(36): >> Unix Date =1460562938
-wi_library.js(37): >> Date.now()=1460562938276 = 2016-04-13 9:55:38 AM
-wi_library.js(40): >> wi_random_seed = 18.137569166719913
-wi_library.js(43): >> HostName=WIN-HJA4A353DRG.
+wi_library.js(36): >> Unix Date =1460566440
+wi_library.js(37): >> Date.now()=1460566440727 = 2016-04-13 11:54:00 AM
+wi_library.js(40): >> wi_random_seed = 21.30339271388948
+wi_library.js(43): >> HostName=Mainali-PC.
 wi_library.js(46): >> VuserIp=.
 wi_library.js(50): >> vuserId: -1, ScenarioId: 0, Group: "undefined" are expected in VuGen.
 vuser_init.js(34): >> Retries in Run-Time Settings Attributes = 1.
@@ -32,27 +32,27 @@ Starting action Action.
 Action.js(12): >> Action Iteration=1.
 WJS1_Access.js(44): >> RunDataIn_rows=3 based on assumed unique {run_URL}.
 WJS1_Access.js(59): >> 1, row=1, #=1, use=Y, trans=T01_landing_wt3, chance=, chance=, chance=, url=http://127.0.0.1:1080/WebTours/index.htm, chance="Web Tours"
-WJS1_Access.js(104): >> Trans T01_landing_wt3 not selected for execution. wi_random_seed = 28.6 NOT <= .
+WJS1_Access.js(104): >> Trans T01_landing_wt3 not selected for execution. wi_random_seed = 7.2 NOT <= .
 WJS1_Access.js(59): >> 1, row=2, #=2, use=Y, trans=T01_landing_ms, chance=100, chance=X, chance=HTTP, url=http://127.0.0.1:1080/WebTours/index.htm, chance=Microsoft ý Official Home Page
-WJS1_Access.js(94): >> Trans T01_landing_ms wi_random_seed 32.12691859807819 <= 100.
+WJS1_Access.js(94): >> Trans T01_landing_ms wi_random_seed 10.830260161310434 <= 100.
 WJS1_Config.js(34): lr_think_time: 0.50 seconds.
 WJS1_Config.js(38): web.regFind started  	[MsgId: MMSG-26355]
 WJS1_Config.js(38): Registering web.regFind was successful  	[MsgId: MMSG-26390]
 WJS1_Config.js(49): Notify: Transaction "T01_landing_ms" started.
 wi_library.js(283): web.url("T01_landing_ms") started  	[MsgId: MMSG-26355]
-wi_library.js(283): t=3563ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
+wi_library.js(283): t=8383ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
 wi_library.js(283):     HTTP/1.1 200 OK\r\n
-wi_library.js(283):     Date: Wed, 13 Apr 2016 15:55:39 GMT\r\n
+wi_library.js(283):     Date: Wed, 13 Apr 2016 16:54:01 GMT\r\n
 wi_library.js(283):     Server: Apache/2.2.21 (Win32)\r\n
-wi_library.js(283):     Last-Modified: Mon, 27 May 2013 20:20:21 GMT\r\n
-wi_library.js(283):     ETag: "3000000020091-16e-4ddb8e0bc4b40"\r\n
+wi_library.js(283):     Last-Modified: Mon, 27 May 2013 19:20:21 GMT\r\n
+wi_library.js(283):     ETag: "2000000048ac9-16e-4ddb80a28a740"\r\n
 wi_library.js(283):     Accept-Ranges: bytes\r\n
 wi_library.js(283):     Content-Length: 366\r\n
 wi_library.js(283):     Keep-Alive: timeout=5, max=100\r\n
 wi_library.js(283):     Connection: Keep-Alive\r\n
 wi_library.js(283):     Content-Type: text/html\r\n
 wi_library.js(283):     \r\n
-wi_library.js(283): t=3575ms: 366-byte response body for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
+wi_library.js(283): t=8399ms: 366-byte response body for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
 wi_library.js(283):     <HTML>\n
 wi_library.js(283):     <HEAD>\n
 wi_library.js(283):     <title>Web Tours</title>\n
@@ -72,7 +72,7 @@ wi_library.js(421): web.getIntProperty started  	[MsgId: MMSG-26355]
 wi_library.js(421): web.getIntProperty was successful  	[MsgId: MMSG-26392]
 wi_library.js(428): web.getIntProperty started  	[MsgId: MMSG-26355]
 wi_library.js(428): web.getIntProperty was successful  	[MsgId: MMSG-26392]
-WJS1_Config.js(73): Notify: Transaction "T01_landing_ms" ended with a "Pass" status (Duration: 0.1771 Wasted Time: 0.1067).
+WJS1_Config.js(73): Notify: Transaction "T01_landing_ms" ended with a "Pass" status (Duration: 0.5366 Wasted Time: 0.2271).
 Ending action Action.
 Starting action WJS1_Config.
 Ending action WJS1_Config.
