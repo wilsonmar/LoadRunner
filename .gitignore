@@ -34,6 +34,7 @@ Bookmarks.xml
 
 # Files created during script replay (definitely don't need these)
 *.idx
+*.har
 result[1234567890]*/
 mdrv.log
 TransactionsData.db
