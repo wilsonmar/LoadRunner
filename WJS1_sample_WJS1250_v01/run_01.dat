@@ -1,4 +1,4 @@
-use,Think,transname,chance,prep,URL,title,id
-yes,0,T01_landing_wt3,,,http://127.0.0.1:1080/WebTours/index.htm,"Web Tours",1
-Yo,1,T01_landing_ms,100,X,http://www.microsoft.com,Microsoft – Official Home Page,2
-Y,1.5,T01_landing_google,100,Y,http://www.google.com,,3
+use,Think,transname,chance,prep,mode,URL,title,id
+yes,0,T01_landing_wt3,,,,http://127.0.0.1:1080/WebTours/index.htm,"Web Tours",1
+Yo,1,T01_landing_ms,100,X,,http://www.microsoft.com,Microsoft – Official Home Page,2
+Y,1.5,T01_landing_google,100,Y,,http://www.google.com,,3

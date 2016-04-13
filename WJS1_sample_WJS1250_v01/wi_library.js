@@ -232,52 +232,12 @@ function wi_CapitalizeExtractFirstLetter(string){
     return string.charAt(0).toUpperCase();
 }
 
-///////////////////////////////////////////////////  Generic LoadRunner library functions:
 
-
-function wi_web_url_retries( in_trans , in_prep, in_url, in_mode , in_title ){
+function wi_web_url( in_trans , in_url , in_mode ){
    var rc=0;
-   
-   rc=wi_web_url_prep( in_prep );
-       if( rc != 0 ){ return rc; }
-
-   for(var i = 0; i < nRetries; i++ ){ 
-       rc=wi_web_url( in_trans , in_prep, in_url , in_mode , in_title );
-       if( rc != 0 ){ return rc; }
-      // else loop back to top of for loop above.
-   }
-   
-   return rc;
-}
-
-
-function wi_web_url_prep( in_prep ){
-   var rc=0;
-   
-    if( "X" == in_prep ){
-   	
-    }else
-    if( "Y" == in_prep ){
-   	
- 	}else
-    if( "Y" == in_prep ){
-	
-    }else{
-   	
-    }
-    	
-    return rc;
-}
-
-function wi_web_url( in_trans , in_url , in_mode , in_title ){
-   var rc=0;
-   
-   json_put_string="";
-   json_post_file_path="";
-
-   WJS1_Config_StartTrans( in_trans, in_title );
    
    if( in_mode == "PUT" ){
+   	
      rc=web.customRequest({
        stepName : in_trans, 
        url :      in_url, 
@@ -291,6 +251,7 @@ function wi_web_url( in_trans , in_url , in_mode , in_title ){
    	
    }else
    if( in_mode == "GET" ){
+   	
      rc=web.customRequest({
        stepName : in_trans, 
        url :      in_url, 
@@ -304,6 +265,7 @@ function wi_web_url( in_trans , in_url , in_mode , in_title ){
    	
    }else
    if( in_mode == "POST" ){
+   	
      rc=web.customRequest({
        stepName : in_trans, 
        url :      in_url, 
@@ -316,7 +278,8 @@ function wi_web_url( in_trans , in_url , in_mode , in_title ){
       });
    	  // This requires VuGen Tools > Options > Scripting > Script Management and add ".json|" to the Allowed Extensions list.
    	
-   }else{
+   }else{ // assume HTTP or HTML in in_mode
+   	
      rc=web.url({
        name : in_trans, 
        url :  in_url, 
@@ -330,10 +293,39 @@ function wi_web_url( in_trans , in_url , in_mode , in_title ){
    }
    // rc = custom edits here raise (<title>)
 
-   rc=WJS1_Config_EndTrans( in_trans , rc );
-
    return rc;
 }
+
+/* web.customRequest(
+{  
+   stepName:"<string>",
+   url:"<string>",
+   method:"<string>",
+   targetFrame:"<string>",
+   encType:"<string>",
+   recContentType:"<string>",
+   referer:"<string>",
+   bodyUnicode:"<string>",
+   bodyBinary:"<string>",
+   body:"<string>",
+   bodyFilePath:"<string>",
+   resource:"<string>",
+   resourceByteLimit:"<string>",
+   snapshot:"<string>",
+   mode:"<string>",
+   extraResBaseDir:"<string>",
+   userAgent:"<string>",
+   contentEncoding:"<string>",
+   rawBody:{  
+      content:"<string>",
+      length:"<string>"
+   },
+   "extraRes":[{  
+      url:"<string>",
+      referer:"<string>"
+   }]
+}
+*/
 
 function wi_post( in_trans , in_url , in_mode , in_title ){
    var rc=0;
@@ -418,6 +410,7 @@ function wi_strip_braces( in_count_parm ){
 
 function wi_http_response_capture_check(){
 	
+	var rc=0;
 	var wi_http_return_code;
 
  // var wi_http_request_bytes;
@@ -434,7 +427,7 @@ function wi_http_response_capture_check(){
     // Size in bytes of the last download, including the header, body, and communications overhead (for example, NTLM negotiation).
     wi_http_download_bytes = web.getIntProperty( web.HTTP_INFO_DOWNLOAD_SIZE ); // value= 2 
     // Time in milliseconds of the last download:
-    wi_http_download_ms    = web.getIntProperty( web.HTTP_INFO_DOWNLOAD_TIME ); // value= 3 
+    // wi_http_download_ms    = web.getIntProperty( web.HTTP_INFO_DOWNLOAD_TIME ); // value= 3 
 
     // Accumulated size of all headers and bodies since the first time web.getIntProperty was issued with HTTP_INFO_TOTAL_REQUEST_STAT.
     // wi_http_request_bytes = web.getIntProperty( web.HTTP_INFO_TOTAL_REQUEST_STAT ); // value= 4 

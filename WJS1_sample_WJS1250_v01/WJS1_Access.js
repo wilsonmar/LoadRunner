@@ -1,10 +1,9 @@
 function WJS1_Access(){
-	
 	return 0;
 }
 
 // Called by Action.js:
-function WJS1_Access_loop(){
+function WJS1_Access_landing_loops(){
     var rc=0;
     var i=0;
 
@@ -14,16 +13,17 @@ function WJS1_Access_loop(){
     }else
  	if( RunDataIn === "1"){
     	// Example of a hard-coded call:
-     	rc=WJS1_Access_landing( "T01_landing","http://127.0.0.1:1080/WebTours/index.htm",100,"XXXX");
+     	rc=WJS1_Access_landing_random( "T01_landing",100,"HTML","http://127.0.0.1:1080/WebTours/index.htm","XXXX");
 
     }else
 	if( RunDataIn === "FILE"){ // Loop thru file run_01.dat
 
-		rc=WJS1_Access_loop_file();
+		rc=WJS1_Access_landing_loop_file();
 		
     }else
 	if( RunDataIn === "VTS"){
 		// TODO: Update results in VTS
+		// rc=WJS1_Access_landing_loop_VTS();
 
     }else{
 	    WJS1_Config_print_error();
@@ -35,7 +35,7 @@ function WJS1_Access_loop(){
    return rc;
 }
 
-function WJS1_Access_loop_file(){
+function WJS1_Access_landing_loop_file(){
     var rc=0; 
     var run_use_cap;
 
@@ -54,14 +54,18 @@ function WJS1_Access_loop_file(){
 	                 + ", #="+ lr.evalString("{run_row_id}") 
 	                 + ", use=" + run_use_cap
 	                 + ", trans=" + lr.evalString("{run_TransName}")
-	                 + ", url=" + RunDataIn_key
 	                 + ", chance="+ lr.evalString("{run_chance}") 
+	                 + ", chance="+ lr.evalString("{run_prep}") 
+	                 + ", chance="+ lr.evalString("{run_mode}") 
+	                 + ", url=" + RunDataIn_key
 	                 + ", chance="+ lr.evalString("{run_title}") 
 	                );
 		    wi_msg_print_reset();
 
 		    if( run_use_cap == "Y" ){
-				rc=WJS1_Access_landing( lr.evalString("{run_TransName}"), RunDataIn_key, lr.evalString("{run_chance}"), lr.evalString("{run_title}") );
+				rc=WJS1_Access_landing_random( lr.evalString("{run_TransName}"), lr.evalString("{run_chance}"),  lr.evalString("{run_prep}") 
+		    	                             , lr.evalString("{run_mode}") 
+		    	                             , RunDataIn_key, lr.evalString("{run_title}") );
 				// if( rc != 0 ){ return rc; }				
 			}
 			
@@ -74,8 +78,9 @@ function WJS1_Access_loop_file(){
    return rc;
 }
 
-function WJS1_Access_landing( in_trans , in_url, in_chance, in_title ){
+function WJS1_Access_landing_random( in_trans , in_chance , in_prep , in_mode , in_url , in_title ){
     var rc=0;
+
 	    wi_random_seed = Math.random() * 100 ;
  	if( wi_random_seed <= in_chance ){
         WJS1_Config_print_debug();
@@ -83,7 +88,7 @@ function WJS1_Access_landing( in_trans , in_url, in_chance, in_title ){
   		wi_msg_print_reset();
 
       	// Do stuff using a generic library function:
-		rc=wi_web_url_retries( in_trans , in_url , "HTTP", in_title );
+		rc=WJS1_Access_landing_retries( in_trans  , in_prep , in_mode , in_url , in_title );
 
     }else{
         var n = wi_random_seed.toFixed(1);
@@ -97,40 +102,53 @@ function WJS1_Access_landing( in_trans , in_url, in_chance, in_title ){
 }
 
 
+function WJS1_Access_landing_retries( in_trans , in_prep , in_mode , in_url , in_title ){
+   var rc=0;
+   var i =0;
+   
+      rc=WJS1_Access_landing_prep( in_prep ); // prepare global strings.
+       if( rc != 0 ){ return rc; }
 
-function WJS1_Access_REST_API( in_trans , in_url, in_chance, in_title ){
-/*
-{  
-   stepName:"<string>",
-   url:"<string>",
-   method:"<string>",
-   targetFrame:"<string>",
-   encType:"<string>",
-   recContentType:"<string>",
-   referer:"<string>",
-   bodyUnicode:"<string>",
-   bodyBinary:"<string>",
-   body:"<string>",
-   bodyFilePath:"<string>",
-   resource:"<string>",
-   resourceByteLimit:"<string>",
-   snapshot:"<string>",
-   mode:"<string>",
-   extraResBaseDir:"<string>",
-   userAgent:"<string>",
-   contentEncoding:"<string>",
-   rawBody:{  
-      content:"<string>",
-      length:"<string>"
-   },
-   "extraRes":[{  
-      url:"<string>",
-      referer:"<string>"
-   }]
+   for( i = 0; i < nRetries; i++ ){ 
+       	
+        WJS1_Config_StartTrans( in_trans, in_title );
+   
+		rc=wi_web_url( in_trans , in_url , in_mode );
+		
+	    rc=WJS1_Config_EndTrans( in_trans , rc );
+        if( rc != 0 ){ return rc; }
+        // else loop back to top of for loop above.
+   }
+   
+   return rc;
 }
-*/
-	return rc;
+
+
+function WJS1_Access_landing_prep( in_prep ){
+   var rc=0;
+   
+    if( "X" == in_prep ){
+	    json_put_string="";
+   		json_post_file_path="";
+   	
+    }else
+    if( "Y" == in_prep ){
+ 
+   	
+ 	}else
+    if( "Z" == in_prep ){
+	
+   	
+    }else{
+	   	WJS1_Config_print_error();
+		lr.errorMessage(">> in_prep="+ in_prep +" not recognized."); 
+	    wi_msg_print_reset();
+	    rc=213; // number specific to this.
+    }
+    	
+    return rc;
 }
+
 
 /*
 function WJS1_Access_SignUp_error(){

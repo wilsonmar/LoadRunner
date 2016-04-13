@@ -25,6 +25,9 @@ function WJS1_Config_print_debug(){
    return 0;
 }
 
+
+
+
 function WJS1_Config_StartTrans( in_trans , in_title ){
     var rc=0;
 
@@ -60,14 +63,18 @@ function WJS1_Config_EndTrans( in_trans , in_rc ){
     	wi_msg_print_reset();
     }
 
-    // TODO: Check HTML return code.
+    rc=wi_http_response_capture_check();
     
+    // TODO: Save response info into a log.
+
     if( in_rc != 0 ){
        lr.endTransaction( in_trans, lr.FAIL );
     }else{
        lr.endTransaction( in_trans, lr.AUTO );
     }
-
-    return 0;
+    
+    // TODO: Add web.cacheCleanup( ); if applicable.
+    // TODO: Add web.cleanupCookies( ); if applicable.
+    
+    return rc;
 }
-

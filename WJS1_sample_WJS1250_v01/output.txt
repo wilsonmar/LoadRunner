@@ -1,29 +1,29 @@
-Virtual User Script started at : 4/12/2016 9:25:06 AM
+Virtual User Script started at : 4/12/2016 7:37:29 PM
 Starting action vuser_init.
 Web Turbo Replay of LoadRunner 12.50.0 for Windows 7; build 1096 (Apr 12 2016 16:55:24)  	[MsgId: MMSG-27143]
 Run mode: HTML  	[MsgId: MMSG-26993]
 Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows; Trident/6.0)  	[MsgId: MMSG-26988]
 Run-Time Settings file: "C:\LRMaster1\WJS1_sample_WJS1250_v01\\default.cfg"  	[MsgId: MMSG-27141]
-wi_library.js(66): >> Run-Time Settings > Log DebugMessage level: 18.
-wi_library.js(74): >>   [X] Enable Logging = 1.
-wi_library.js(76): >>   Send messages: 
-wi_library.js(81): >>   [X] Always = 512.
-wi_library.js(84): >>   Detail level:
-wi_library.js(86): >>   [X] Extended log = 16.
-wi_library.js(94): >>       [_] Parameter substitution = 4.
-wi_library.js(98): >>       [X] Data returned by server = 2.
-wi_library.js(106): >>       [_] Advanced trace = 8.
-wi_library.js(30): >> wi_msg_level_at_init = 18.
-wi_library.js(33): >> Unix Date =1460474706
-wi_library.js(34): >> Date.now()=1460474706983 = 2016-04-12 9:25:06 AM
-wi_library.js(37): >> wi_random_seed = 41.97260627988726
-wi_library.js(40): >> HostName=WIN-HJA4A353DRG.
-wi_library.js(43): >> VuserIp=.
-wi_library.js(47): >> vuserId: -1, ScenarioId: 0, Group: "undefined" are expected in VuGen.
+wi_library.js(69): >> Run-Time Settings > Log DebugMessage level: 18.
+wi_library.js(77): >>   [X] Enable Logging = 1.
+wi_library.js(79): >>   Send messages: 
+wi_library.js(84): >>   [X] Always = 512.
+wi_library.js(87): >>   Detail level:
+wi_library.js(89): >>   [X] Extended log = 16.
+wi_library.js(97): >>       [_] Parameter substitution = 4.
+wi_library.js(101): >>       [X] Data returned by server = 2.
+wi_library.js(109): >>       [_] Advanced trace = 8.
+wi_library.js(33): >> wi_msg_level_at_init = 18.
+wi_library.js(36): >> Unix Date =1460511449
+wi_library.js(37): >> Date.now()=1460511449401 = 2016-04-12 19:37:29 PM
+wi_library.js(40): >> wi_random_seed = 79.44211477879435
+wi_library.js(43): >> HostName=WIN-HJA4A353DRG.
+wi_library.js(46): >> VuserIp=.
+wi_library.js(50): >> vuserId: -1, ScenarioId: 0, Group: "undefined" are expected in VuGen.
 vuser_init.js(34): >> Retries in Run-Time Settings Attributes = 1.
 vuser_init.js(53): >> RunDataIn UpperCased = FILE.
-wi_library.js(351): >> count=2, rc=0, run_URL=http://www.microsoft.com.
-wi_library.js(351): >> count=3, rc=0, run_URL=http://www.google.com.
+wi_library.js(381): >> count=2, rc=0, run_URL=http://www.microsoft.com.
+wi_library.js(381): >> count=3, rc=0, run_URL=http://www.google.com.
 vuser_init.js(70): >> RunDataIn ="FILE", wi_file_count finds 3 rows assuming no dups.
 Ending action vuser_init.
 Running Vuser...
@@ -31,44 +31,280 @@ Starting iteration 1.
 Starting action Action.
 Action.js(12): >> Action Iteration=1.
 WJS1_Access.js(43): >> RunDataIn_rows=3 based on assumed unique {run_URL}.
-WJS1_Access.js(52): >> 1, row=1, #=1, use=Y, trans=T01_landing_wt3, url=http://127.0.0.1:1080/WebTours/index.htm, chance=, chance="Web Tours"
-WJS1_Access.js(92): >> Trans T01_landing_wt3 not selected for execution. wi_random_seed = 63.2 NOT <= .
-WJS1_Access.js(52): >> 1, row=2, #=2, use=Y, trans=T01_landing_ms, url=http://127.0.0.1:1080/WebTours/index.htm, chance=100, chance=Microsoft ý Official Home Page
-WJS1_Access.js(82): >> Trans T01_landing_ms wi_random_seed 61.51084916200489 <= 100.
-WJS1_Config.js(31): lr_think_time: 0.50 seconds.
-WJS1_Config.js(35): web.regFind started  	[MsgId: MMSG-26355]
-WJS1_Config.js(35): Registering web.regFind was successful  	[MsgId: MMSG-26390]
-WJS1_Config.js(46): Notify: Transaction "T01_landing_ms" started.
-wi_library.js(282): web.url("T01_landing_ms") started  	[MsgId: MMSG-26355]
-wi_library.js(282): t=3419ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
-wi_library.js(282):     HTTP/1.1 200 OK\r\n
-wi_library.js(282):     Date: Tue, 12 Apr 2016 15:25:07 GMT\r\n
-wi_library.js(282):     Server: Apache/2.2.21 (Win32)\r\n
-wi_library.js(282):     Last-Modified: Mon, 27 May 2013 20:20:21 GMT\r\n
-wi_library.js(282):     ETag: "3000000020091-16e-4ddb8e0bc4b40"\r\n
-wi_library.js(282):     Accept-Ranges: bytes\r\n
-wi_library.js(282):     Content-Length: 366\r\n
-wi_library.js(282):     Keep-Alive: timeout=5, max=100\r\n
-wi_library.js(282):     Connection: Keep-Alive\r\n
-wi_library.js(282):     Content-Type: text/html\r\n
-wi_library.js(282):     \r\n
-wi_library.js(282): t=3430ms: 366-byte response body for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
-wi_library.js(282):     <HTML>\n
-wi_library.js(282):     <HEAD>\n
-wi_library.js(282):     <title>Web Tours</title>\n
-wi_library.js(282):     <frameset rows = "65,*" border="1" bordercolor="#E0E7F1">\n
-wi_library.js(282):     <frame name="header" src="header.html" scrolling="no" noresize="noresize" marginheight="2"
-wi_library.js(282):      marginwidth="2"/>\n
-wi_library.js(282):     <frame name="body" src="/cgi-bin/welcome.pl?signOff=true" scrolling="auto" noresize="nores
-wi_library.js(282):     ize" marginheight="2" marginwidth="2" />\n
-wi_library.js(282):     </frameset>\n
-wi_library.js(282):     </HEAD>\n
-wi_library.js(282):     </HTML>\n
-wi_library.js(282):     \n
-wi_library.js(282): Registered web.regFind successful for "Text=Microsoft ý Official Home Page"  	[MsgId: MMSG-26362]
-wi_library.js(282): web.url("T01_landing_ms") was successful, 366 body bytes, 298 header bytes  	[MsgId: MMSG-26386]
-WJS1_Config.js(59): >> Title not found.
-WJS1_Config.js(68): Notify: Transaction "T01_landing_ms" ended with a "Pass" status (Duration: 0.1482 Wasted Time: 0.1030).
+WJS1_Access.js(52): >> 1, row=1, #=1, use=Y, trans=T01_landing_wt3, chance=, chance=, chance=, url=http://127.0.0.1:1080/WebTours/index.htm, chance="Web Tours"
+WJS1_Access.js(97): >> Trans T01_landing_wt3 not selected for execution. wi_random_seed = 37.7 NOT <= .
+WJS1_Access.js(52): >> 1, row=2, #=2, use=Y, trans=T01_landing_ms, chance=100, chance=X, chance=, url=http://127.0.0.1:1080/WebTours/index.htm, chance=Microsoft ý Official Home Page
+WJS1_Access.js(87): >> Trans T01_landing_ms wi_random_seed 53.50270427297801 <= 100.
+WJS1_Config.js(34): lr_think_time: 0.50 seconds.
+WJS1_Config.js(38): web.regFind started  	[MsgId: MMSG-26355]
+WJS1_Config.js(38): Registering web.regFind was successful  	[MsgId: MMSG-26390]
+WJS1_Config.js(49): Notify: Transaction "T01_landing_ms" started.
+wi_library.js(283): web.url("T01_landing_ms") started  	[MsgId: MMSG-26355]
+wi_library.js(283): t=3486ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
+wi_library.js(283):     HTTP/1.1 200 OK\r\n
+wi_library.js(283):     Date: Wed, 13 Apr 2016 01:37:30 GMT\r\n
+wi_library.js(283):     Server: Apache/2.2.21 (Win32)\r\n
+wi_library.js(283):     Last-Modified: Mon, 27 May 2013 20:20:21 GMT\r\n
+wi_library.js(283):     ETag: "3000000020091-16e-4ddb8e0bc4b40"\r\n
+wi_library.js(283):     Accept-Ranges: bytes\r\n
+wi_library.js(283):     Content-Length: 366\r\n
+wi_library.js(283):     Keep-Alive: timeout=5, max=100\r\n
+wi_library.js(283):     Connection: Keep-Alive\r\n
+wi_library.js(283):     Content-Type: text/html\r\n
+wi_library.js(283):     \r\n
+wi_library.js(283): t=3497ms: 366-byte response body for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
+wi_library.js(283):     <HTML>\n
+wi_library.js(283):     <HEAD>\n
+wi_library.js(283):     <title>Web Tours</title>\n
+wi_library.js(283):     <frameset rows = "65,*" border="1" bordercolor="#E0E7F1">\n
+wi_library.js(283):     <frame name="header" src="header.html" scrolling="no" noresize="noresize" marginheight="2"
+wi_library.js(283):      marginwidth="2"/>\n
+wi_library.js(283):     <frame name="body" src="/cgi-bin/welcome.pl?signOff=true" scrolling="auto" noresize="nores
+wi_library.js(283):     ize" marginheight="2" marginwidth="2" />\n
+wi_library.js(283):     </frameset>\n
+wi_library.js(283):     </HEAD>\n
+wi_library.js(283):     </HTML>\n
+wi_library.js(283):     \n
+wi_library.js(283): Detected non-resource "http://127.0.0.1:1080/WebTours/header.html" in "http://127.0.0.1:1080/WebTours/index.htm"  	[MsgId: MMSG-26574]
+wi_library.js(283): Detected non-resource "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" in "http://127.0.0.1:1080/WebTours/index.htm"  	[MsgId: MMSG-26574]
+wi_library.js(283): t=3507ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/header.html" (RelFrameId=1.1, Internal ID=2)
+wi_library.js(283):     HTTP/1.1 200 OK\r\n
+wi_library.js(283):     Date: Wed, 13 Apr 2016 01:37:30 GMT\r\n
+wi_library.js(283):     Server: Apache/2.2.21 (Win32)\r\n
+wi_library.js(283):     Last-Modified: Mon, 27 May 2013 20:20:21 GMT\r\n
+wi_library.js(283):     ETag: "500000001f461-2c6-4ddb8e0bc4b40"\r\n
+wi_library.js(283):     Accept-Ranges: bytes\r\n
+wi_library.js(283):     Content-Length: 710\r\n
+wi_library.js(283):     Keep-Alive: timeout=5, max=100\r\n
+wi_library.js(283):     Connection: Keep-Alive\r\n
+wi_library.js(283):     Content-Type: text/html\r\n
+wi_library.js(283):     \r\n
+wi_library.js(283): t=3509ms: 710-byte response body for "http://127.0.0.1:1080/WebTours/header.html" (RelFrameId=1.1, Internal ID=2)
+wi_library.js(283):     <!DOCTYPE html>\n
+wi_library.js(283):     <HTML xmlns="http://www.w3.org/1999/xhtml">\n
+wi_library.js(283):     <HEAD></HEAD>\n
+wi_library.js(283):     <BODY bgcolor="#003366" leftmargin="0" marginheight="0" marginwidth="0" topmargin="0">\n
+wi_library.js(283):     \t\t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n
+wi_library.js(283):     bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \n
+wi_library.js(283):     \t\t<table width="100%" border="0" cellspacing="0" cellpadding="0">\n
+wi_library.js(283):     \t\t\t<tr>\n
+wi_library.js(283):     \t\t\t\t<td align="left" valign="middle" width="50%"><img src="images/hp_logo.png" alt="" 
+wi_library.js(283):     height="45" width="69" align="absmiddle" border="0"/><img src="images/webtours.png" alt=""
+wi_library.js(283):      height="45" width="130" align="absmiddle" border="0"/></td>\n
+wi_library.js(283):     \t\t\t\t<td align="right"></td>\n
+wi_library.js(283):     \t\t\t\t<td></td>\n
+wi_library.js(283):     \t\t\t</tr>\n
+wi_library.js(283):     \t\t</table>\n
+wi_library.js(283):     \t</BODY>\n
+wi_library.js(283):     </HTML>
+wi_library.js(283): Found resource "http://127.0.0.1:1080/WebTours/images/hp_logo.png" in HTML "http://127.0.0.1:1080/WebTours/header.html"  	[MsgId: MMSG-26659]
+wi_library.js(283): Found resource "http://127.0.0.1:1080/WebTours/images/webtours.png" in HTML "http://127.0.0.1:1080/WebTours/header.html"  	[MsgId: MMSG-26659]
+wi_library.js(283): t=3514ms: 297-byte response headers for "http://127.0.0.1:1080/WebTours/images/hp_logo.png" (RelFrameId=, Internal ID=4)
+wi_library.js(283):     HTTP/1.1 200 OK\r\n
+wi_library.js(283):     Date: Wed, 13 Apr 2016 01:37:30 GMT\r\n
+wi_library.js(283):     Server: Apache/2.2.21 (Win32)\r\n
+wi_library.js(283):     Last-Modified: Thu, 12 Jan 2012 22:30:26 GMT\r\n
+wi_library.js(283):     ETag: "500000001f46e-259-4b65c4b744480"\r\n
+wi_library.js(283):     Accept-Ranges: bytes\r\n
+wi_library.js(283):     Content-Length: 601\r\n
+wi_library.js(283):     Keep-Alive: timeout=5, max=99\r\n
+wi_library.js(283):     Connection: Keep-Alive\r\n
+wi_library.js(283):     Content-Type: image/png\r\n
+wi_library.js(283):     \r\n
+wi_library.js(283): t=3518ms: 601-byte response body for "http://127.0.0.1:1080/WebTours/images/hp_logo.png" (RelFrameId=, Internal ID=4)
+wi_library.js(283): t=3519ms: 300-byte response headers for "http://127.0.0.1:1080/WebTours/images/webtours.png" (RelFrameId=, Internal ID=5)
+wi_library.js(283):     HTTP/1.1 200 OK\r\n
+wi_library.js(283):     Date: Wed, 13 Apr 2016 01:37:30 GMT\r\n
+wi_library.js(283):     Server: Apache/2.2.21 (Win32)\r\n
+wi_library.js(283):     Last-Modified: Mon, 04 Nov 2013 22:47:02 GMT\r\n
+wi_library.js(283):     ETag: "300000002007c-105b-4ea61b1c44580"\r\n
+wi_library.js(283):     Accept-Ranges: bytes\r\n
+wi_library.js(283):     Content-Length: 4187\r\n
+wi_library.js(283):     Keep-Alive: timeout=5, max=100\r\n
+wi_library.js(283):     Connection: Keep-Alive\r\n
+wi_library.js(283):     Content-Type: image/png\r\n
+wi_library.js(283):     \r\n
+wi_library.js(283): t=3520ms: 4187-byte response body for "http://127.0.0.1:1080/WebTours/images/webtours.png" (RelFrameId=, Internal ID=5)
+wi_library.js(283): t=3550ms: 328-byte response headers for "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" (RelFrameId=1.2, Internal ID=3)
+wi_library.js(283):     HTTP/1.1 200 OK\r\n
+wi_library.js(283):     Date: Wed, 13 Apr 2016 01:37:30 GMT\r\n
+wi_library.js(283):     Server: Apache/2.2.21 (Win32)\r\n
+wi_library.js(283):     Set-Cookie: MSO=SID&1460511450; path=/\r\n
+wi_library.js(283):     Set-Cookie: MTUserInfo=; path=/; expires=Tue, 12-Apr-2016 01:37:30 GMT\r\n
+wi_library.js(283):     Keep-Alive: timeout=5, max=100\r\n
+wi_library.js(283):     Connection: Keep-Alive\r\n
+wi_library.js(283):     Transfer-Encoding: chunked\r\n
+wi_library.js(283):     Content-Type: text/html; charset=ISO-8859-1\r\n
+wi_library.js(283):     \r\n
+wi_library.js(283): t=3552ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" (RelFrameId=1.2, Internal ID=3)
+wi_library.js(283):     2ae\r\n
+wi_library.js(283): t=3552ms: 2-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" (RelFrameId=1.2, Internal ID=3)
+wi_library.js(283):     \r\n
+wi_library.js(283): t=3552ms: 686-byte chunked response body for "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" (RelFrameId=1.2, Internal ID=3)
+wi_library.js(283):     <!-- \n
+wi_library.js(283):      A Session ID has been created and loaded into a cookie called MSO.\n
+wi_library.js(283):      Also, the server options have been loaded into the cookie called\n
+wi_library.js(283):      MSO as well.  The server options can be set via the Admin page.\n
+wi_library.js(283):      --->\n
+wi_library.js(283):     \n
+wi_library.js(283):     <html>\n
+wi_library.js(283):     <title>Web Tours</title>\n
+wi_library.js(283):        <!-- Frame Set -->\n
+wi_library.js(283):        <frameset cols="160,*" border="1" frameborder="1">\n
+wi_library.js(283):           <!-- Navigation Frame -->\n
+wi_library.js(283):           <frame src="nav.pl?in=home" name="navbar" marginheight="2" marginwidth="2" \n
+wi_library.js(283):                 noresize="noresize" scrolling="auto"/>\n
+wi_library.js(283):           <!-- Home Frame -->\n
+wi_library.js(283):           <frame src="/WebTours/home.html" name="info" marginheight="2" marginwidth="2" \n
+wi_library.js(283):                 noresize="noresize" scrolling="auto"/>\n
+wi_library.js(283):        </frameset>\n
+wi_library.js(283):     </html>\n
+wi_library.js(283):     \n
+wi_library.js(283):     </body>\n
+wi_library.js(283):     </html>
+wi_library.js(283): Detected non-resource "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true"  	[MsgId: MMSG-26574]
+wi_library.js(283): Detected non-resource "http://127.0.0.1:1080/WebTours/home.html" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true"  	[MsgId: MMSG-26574]
+wi_library.js(283): t=3555ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true" (RelFrameId=1.2, Internal ID=3)
+wi_library.js(283):     0\r\n
+wi_library.js(283):     \r\n
+wi_library.js(283): t=3565ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/home.html" (RelFrameId=1.2.2, Internal ID=7)
+wi_library.js(283):     HTTP/1.1 200 OK\r\n
+wi_library.js(283):     Date: Wed, 13 Apr 2016 01:37:30 GMT\r\n
+wi_library.js(283):     Server: Apache/2.2.21 (Win32)\r\n
+wi_library.js(283):     Last-Modified: Mon, 27 May 2013 20:20:21 GMT\r\n
+wi_library.js(283):     ETag: "500000001f462-551-4ddb8e0bc4b40"\r\n
+wi_library.js(283):     Accept-Ranges: bytes\r\n
+wi_library.js(283):     Content-Length: 1361\r\n
+wi_library.js(283):     Keep-Alive: timeout=5, max=99\r\n
+wi_library.js(283):     Connection: Keep-Alive\r\n
+wi_library.js(283):     Content-Type: text/html\r\n
+wi_library.js(283):     \r\n
+wi_library.js(283): t=3568ms: 1361-byte response body for "http://127.0.0.1:1080/WebTours/home.html" (RelFrameId=1.2.2, Internal ID=7)
+wi_library.js(283):     <HTML>\n
+wi_library.js(283):     <HEAD>\n
+wi_library.js(283):     \t<title>Web Tours</title>\n
+wi_library.js(283):     </HEAD>\n
+wi_library.js(283):     <style>\n
+wi_library.js(283):     \tblockquote {font-family: tahoma; font-size : 10pt}\n
+wi_library.js(283):     \tH1 {font-family: tahoma; font-size : 22pt; color: #003366}\n
+wi_library.js(283):     \tsmall {font-family: tahoma; font-size : 8pt}\n
+wi_library.js(283):     \tH3{font-family: tahoma; font-size : 10pt; color: black}\n
+wi_library.js(283):     \tA {FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: black; FONT-FAMILY: Tahoma; TEXT-DECORATIO
+wi_library.js(283):     N: none}\n
+wi_library.js(283):     \tA:hover{ FONT-WEIGHT: bold; FONT-SIZE: 10pt; COLOR: #993333; FONT-FAMILY: Tahoma;TEXT-DE
+wi_library.js(283):     CORATION: underline}\n
+wi_library.js(283):     \tTD {font-family: tahoma; font-size : 10pt; color: black}\n
+wi_library.js(283):     </style>\n
+wi_library.js(283):     <body bgcolor="#e0e7f1">\n
+wi_library.js(283):     <BR/>\n
+wi_library.js(283):     <BR/>\n
+wi_library.js(283):     <BR/>\n
+wi_library.js(283):     <br/>\n
+wi_library.js(283):     <table border="0">\n
+wi_library.js(283):     <tr><td></td></tr>\n
+wi_library.js(283):     <TR><TD></TD></TR>\n
+wi_library.js(283):     <TR><TD>\n
+wi_library.js(283):     <blockquote>\n
+wi_library.js(283):     <H1><b>Web Tours</b></H1>\n
+wi_library.js(283):     Welcome to the Web Tours site.\n
+wi_library.js(283):     <br/>\n
+wi_library.js(283):     To make reservations,please enter your account information to the left.\n
+wi_library.js(283):     <br/>\n
+wi_library.js(283):     If you haven't registered yet, <A href="/cgi-bin/login.pl?username=&amp;password=&amp;getI
+wi_library.js(283):     nfo=true" ><B>sign up now</B></A> to get access to all our resources.\n
+wi_library.js(283):     <br/>\n
+wi_library.js(283):     To configure the server options, use <A href="/cgi-bin/admin.pl" target="body" ><b>adminis
+wi_library.js(283):     tration</b></A> link.\n
+wi_library.js(283):     <br/><br/><br/><br/><br/><br/>\n
+wi_library.js(283):     <br/><small>\n
+wi_library.js(283):     This product uses parts of the SMT Kernel, Copyright (c) 1991-99 <A href="http://www.imati
+wi_library.js(283):     x.com" target="new"><B><small>iMatix Corporation</small></B></A> \n
+wi_library.js(283):     </small>\n
+wi_library.js(283):     </blockquote></TD>\n
+wi_library.js(283):     <TD></TD></TR>\n
+wi_library.js(283):     </table>\n
+wi_library.js(283):     </body>\n
+wi_library.js(283):     </HTML>\n
+wi_library.js(283): t=3620ms: 255-byte response headers for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.2.1, Internal ID=6)
+wi_library.js(283):     HTTP/1.1 200 OK\r\n
+wi_library.js(283):     Date: Wed, 13 Apr 2016 01:37:30 GMT\r\n
+wi_library.js(283):     Server: Apache/2.2.21 (Win32)\r\n
+wi_library.js(283):     Expires: Tue, 12 Apr 2016 01:37:30 GMT\r\n
+wi_library.js(283):     Keep-Alive: timeout=5, max=98\r\n
+wi_library.js(283):     Connection: Keep-Alive\r\n
+wi_library.js(283):     Transfer-Encoding: chunked\r\n
+wi_library.js(283):     Content-Type: text/html; charset=ISO-8859-1\r\n
+wi_library.js(283):     \r\n
+wi_library.js(283): t=3622ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.2.1, Internal ID=6)
+wi_library.js(283):     5cc\r\n
+wi_library.js(283): t=3622ms: 2-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.2.1, Internal ID=6)
+wi_library.js(283):     \r\n
+wi_library.js(283): t=3623ms: 1484-byte chunked response body for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.2.1, Internal ID=6)
+wi_library.js(283):     <!DOCTYPE html\n
+wi_library.js(283):     \tPUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"\n
+wi_library.js(283):     \t "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n
+wi_library.js(283):     <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">\n
+wi_library.js(283):     <head>\n
+wi_library.js(283):     <title>Web Tours Navigation Bar</title>\n
+wi_library.js(283):     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />\n
+wi_library.js(283):     </head>\n
+wi_library.js(283):     <body bgcolor="#E0E7F1">\n
+wi_library.js(283):     <style>\n
+wi_library.js(283):     blockquote {font-family: tahoma; font-size : 10pt}\n
+wi_library.js(283):     H1 {font-family: tahoma; font-size : 22pt; color: #993333}\n
+wi_library.js(283):     H3 {font-family: tahoma; font-size : 10pt; color: black}\n
+wi_library.js(283):     small {font-family: tahoma; font-size : 8pt}\n
+wi_library.js(283):     </style>\n
+wi_library.js(283):     <form method="post" action="/cgi-bin/login.pl" target="body">\n
+wi_library.js(283):     <input type="hidden" name="userSession" value="118307.934386391zAiftztpDHfDzfVcpHizcf"/>\n
+wi_library.js(283):     <table border="0"><tr><td>&nbsp;</td>\n
+wi_library.js(283):     <td>&nbsp;</td></tr>\n
+wi_library.js(283):     <tr><td>&nbsp;</td>\n
+wi_library.js(283):     <td>&nbsp;</td></tr>\n
+wi_library.js(283):     <tr><td>&nbsp;</td>\n
+wi_library.js(283):     <td><small>&nbsp;Username</small></td></tr>\n
+wi_library.js(283):     <tr><td>&nbsp;</td>\n
+wi_library.js(283):     <td><input type="text" name="username" value="" size="14" maxlength="14"/></td></tr>\n
+wi_library.js(283):     <tr><td>&nbsp;</td>\n
+wi_library.js(283):     <td><small>&nbsp;Password</small></td>\n
+wi_library.js(283):     <tr><td>&nbsp;</td>\n
+wi_library.js(283):     <td><input type="password" name="password" value="" size="14" maxlength="14"/></td></tr>\n
+wi_library.js(283):     <tr><td>&nbsp;</td>\n
+wi_library.js(283):     <td>&nbsp;</td></tr>\n
+wi_library.js(283):     <tr><td>&nbsp;</td>\n
+wi_library.js(283):     <td><input type="image" name="login" value="Login" alt="Login" border="1" \n
+wi_library.js(283):     src="/WebTours/images/mer_login.gif"/></td></tr>\n
+wi_library.js(283):     <tr><td>&nbsp;</td><td>&nbsp;</td></tr>\n
+wi_library.js(283):     </table><input type="hidden" name="JSFormSubmit" value="off"/>\n
+wi_library.js(283):     </form>\n
+wi_library.js(283):     \n
+wi_library.js(283):     </body>\n
+wi_library.js(283):     </html>\n
+wi_library.js(283): Found resource "http://127.0.0.1:1080/WebTours/images/mer_login.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home"  	[MsgId: MMSG-26659]
+wi_library.js(283): t=3627ms: 5-byte chunked response overhead for "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" (RelFrameId=1.2.1, Internal ID=6)
+wi_library.js(283):     0\r\n
+wi_library.js(283):     \r\n
+wi_library.js(283): t=3629ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/images/mer_login.gif" (RelFrameId=, Internal ID=8)
+wi_library.js(283):     HTTP/1.1 200 OK\r\n
+wi_library.js(283):     Date: Wed, 13 Apr 2016 01:37:30 GMT\r\n
+wi_library.js(283):     Server: Apache/2.2.21 (Win32)\r\n
+wi_library.js(283):     Last-Modified: Thu, 12 Jan 2012 22:30:26 GMT\r\n
+wi_library.js(283):     ETag: "1600000001f590-2a7-4b65c4b744480"\r\n
+wi_library.js(283):     Accept-Ranges: bytes\r\n
+wi_library.js(283):     Content-Length: 679\r\n
+wi_library.js(283):     Keep-Alive: timeout=5, max=98\r\n
+wi_library.js(283):     Connection: Keep-Alive\r\n
+wi_library.js(283):     Content-Type: image/gif\r\n
+wi_library.js(283):     \r\n
+wi_library.js(283): t=3631ms: 679-byte response body for "http://127.0.0.1:1080/WebTours/images/mer_login.gif" (RelFrameId=, Internal ID=8)
+wi_library.js(283): Registered web.regFind successful for "Text=Microsoft ý Official Home Page"  	[MsgId: MMSG-26362]
+wi_library.js(283): web.url("T01_landing_ms") was successful, 10074 body bytes, 2372 header bytes, 24 chunking overhead bytes  	[MsgId: MMSG-26385]
+WJS1_Config.js(62): >> Title not found.
+wi_library.js(421): web.getIntProperty started  	[MsgId: MMSG-26355]
+wi_library.js(421): web.getIntProperty was successful  	[MsgId: MMSG-26392]
+wi_library.js(428): web.getIntProperty started  	[MsgId: MMSG-26355]
+wi_library.js(428): web.getIntProperty was successful  	[MsgId: MMSG-26392]
+WJS1_Config.js(73): Notify: Transaction "T01_landing_ms" ended with a "Pass" status (Duration: 0.2920 Wasted Time: 0.1154).
 Ending action Action.
 Starting action WJS1_Config.
 Ending action WJS1_Config.
