@@ -28,8 +28,8 @@ StartRow="1"
 OutOfRangePolicy="ContinueWithLast"
 [parameter:pIteration]
 Format="%d"
-Type="CurrentIteration"
 OriginalValue=""
+Type="CurrentIteration"
 ParamName="pIteration"
 [parameter:run_use]
 Delimiter=","

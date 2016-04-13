@@ -38,6 +38,7 @@ function WJS1_Access_landing_loops(){
 function WJS1_Access_landing_loop_file(){
     var rc=0; 
     var run_use_cap;
+    var run_mode;
 
         WJS1_Config_print_info();
 	    lr.outputMessage(">> RunDataIn_rows=" + RunDataIn_rows +" based on assumed unique "+ "{run_URL}" +".");
@@ -48,6 +49,12 @@ function WJS1_Access_landing_loop_file(){
 	    for (i = 1; i < RunDataIn_rows; i++){
 	    	// NOTE: Using value in global RunDataIn_key retrieved in wi_file_count() within wi_library.js.
 	    	run_use_cap = wi_CapitalizeExtractFirstLetter( lr.evalString("{run_use}") );
+
+	    	run_mode=lr.evalString("{run_mode}");
+	    	if( run_mode == "" ){
+	    		run_mode = "HTML";
+	    	}
+
 		    WJS1_Config_print_trace();
 			lr.outputMessage(">> "+ lr.evalString("{pIteration}") 
 	                 + ", row=" + i
