@@ -5,26 +5,29 @@
  */
 
 // Global variable definitions:
-var wi_unix_start_timestamp;
 var wi_msg_level_at_init;
-var wi_HostName;
-var wi_VuserIp;
-var wi_random_seed;
 var wi_http_download_bytes;
 var wi_http_download_ms;
-
 
 function wi_library_init(){
 
     // Create a new JavaScript object of number of seconds since Jan. 1, 1970:
+		 	if (!Date.now) { // for IE8.
+		        Date.now = function() { return new Date().getTime(); }
+			}else{
+				Date.now();
+			}
+
     // var wi_unix_start_timestamp = Math.round(+new Date()/1000);
-    var wi_unix_start_timestamp = Math.floor(Date.now() /1000); // converts Date.now() to Unix time 10 digits.
-  
-	if (!Date.now) {
-        Date.now = function() { return new Date().getTime(); }
-	}else{
-		Date.now();
-	}
+    // var wi_unix_start_timestamp = Math.floor(Date.now() /1000); // converts Date.now() to Unix time 10 digits.
+    var wi_unix_start_timestamp = (function () {
+       var timestamp = 0;
+       return function () { 
+       	    timestamp = Math.floor(Date.now() /1000); // not Math.round(+new Date()/1000);
+       	    return timestamp;
+       }
+       })();
+    
 
     wi_msg_level_at_init=lr.getDebugMessage(); // current settings.
     wi_msg_level_print();
@@ -33,32 +36,102 @@ function wi_library_init(){
     lr.outputMessage(">> wi_msg_level_at_init = " + wi_msg_level_at_init +".");
    
 	// new Date('Jan 1, 2039') / 1000 | 0 == -2117514496
-	lr.outputMessage(">> Unix Date =" + wi_unix_start_timestamp );
-	lr.outputMessage(">> Date.now()=" + Date.now() + " = " + wi_displayTime() );
+	lr.outputMessage(">> Unix Date =" + wi_unix_start_timestamp() );
+	wi_spin_ms(1000); // 1000 ms = 1 second
+	lr.outputMessage(">> Unix Date =" + wi_unix_start_timestamp() +" = "+ wi_displayTime() );
 
-	wi_random_seed = Math.random() * 100 ;
+	var wi_random_seed = Math.random() * 100 ;
 	lr.outputMessage(">> wi_random_seed = " + wi_random_seed );
 
-	wi_HostName = lr.getHostName();
+	var wi_HostName = lr.getHostName();
     lr.outputMessage(">> HostName=" + wi_HostName + ".");
 
-    wi_VuserIp = lr.getVuserIp(); // FIXME: VuserIp returning blank instead of an IP.
+    var wi_VuserIp = lr.getVuserIp(); // FIXME: VuserIp returning blank instead of an IP.
     lr.outputMessage(">> VuserIp=" + wi_VuserIp + "."); 
 
-       result = lr.whoami();
-   if( result[0] == -1 ){
+    var result = lr.whoami();
+    if( result[0] == -1 ){
        lr.outputMessage(">> vuserId: -1, ScenarioId: 0, Group: \"undefined\" are expected in VuGen.");
-   }else{
+    }else{
    	   lr.outputMessage(">> vuserId: " + result[0]+
               ", ScenarioId: "+ result[1] +
               ", Group: \"" + result[2] + "\"."
              );
-   }
+    }
 
-   wi_msg_print_reset();
-   return 0;
+    wi_msg_print_reset();
+    return 0;
 }
 
+function wi_random_pct( in_chance ){ // percent out of 100%
+   return wi_random_seed = Math.random() * 100 ;
+}
+
+function wi_spin_ms(milliseconds){
+	// From http://stackoverflow.com/questions/19389200/javascript-sleep-delay-wait-function
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+        if ((new Date().getTime() - start) > milliseconds){
+              break;
+        }
+    }
+}
+
+
+function wi_TimeStamp(){ // 24 hour time:
+    var now = new Date();
+    return ( now.getFullYear() + "-" +
+            (zeroFill( now.getMonth() + 1) ,2) + '-' +
+            (zeroFill( now.getDate()) ,2) + ' ' +
+             now.getHours() + ':' +
+             ((now.getMinutes() < 10)
+                 ? ("0" + now.getMinutes())
+                 : (now.getMinutes())) + ':' +
+             ((now.getSeconds() < 10)
+                 ? ("0" + now.getSeconds())
+                 : (now.getSeconds())
+            )
+           );
+}
+
+function wi_displayTime( ) {
+              var now = new Date()
+    var month   = now.getMonth();
+    var days    = now.getDate();
+    var hours   = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+    var str = "";
+
+        month = 1 + month; // fix JavaScript bug begin count from zero.
+    if (month < 10) {
+        month = "0" + month;
+    }
+    if (days < 10) {
+        days = "0" + days;
+    }
+    str += now.getFullYear() + '-' + month + '-' + days + ' ';
+
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+    if (seconds < 10) {
+        seconds = "0" + seconds;
+    }
+    str += hours + ":" + minutes + ":" + seconds + " ";
+    if(hours > 11){
+        str += "PM";
+    } else {
+        str += "AM";
+    }
+    return str;
+}
+
+function wi_random_guid( number, size) {
+    var s4=function() {return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);};
+    var randomGUID=function(){return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();}
+    return randomGUID;
+}
 
 function wi_msg_level_print(){
 
@@ -170,63 +243,6 @@ function wi_msg_print_reset(){
     return 0;
 }
 
-///////////////////////////////////////////////////////////////////////////////////
-
-function wi_TimeStamp(){ // 24 hour time:
-    var now = new Date();
-    return ( now.getFullYear() + "-" +
-            (zeroFill( now.getMonth() + 1) ,2) + '-' +
-            (zeroFill( now.getDate()) ,2) + ' ' +
-             now.getHours() + ':' +
-             ((now.getMinutes() < 10)
-                 ? ("0" + now.getMinutes())
-                 : (now.getMinutes())) + ':' +
-             ((now.getSeconds() < 10)
-                 ? ("0" + now.getSeconds())
-                 : (now.getSeconds())
-            )
-           );
-}
-
-function wi_displayTime() {
-
-              var now = new Date()
-    var month   = now.getMonth();
-    var days    = now.getDate();
-    var hours   = now.getHours();
-    var minutes = now.getMinutes();
-    var seconds = now.getSeconds();
-    var str = "";
-
-        month = 1 + month; // fix JavaScript bug begin count from zero.
-    if (month < 10) {
-        month = "0" + month;
-    }
-    if (days < 10) {
-        days = "0" + days;
-    }
-    str += now.getFullYear() + '-' + month + '-' + days + ' ';
-
-    if (minutes < 10) {
-        minutes = "0" + minutes;
-    }
-    if (seconds < 10) {
-        seconds = "0" + seconds;
-    }
-    str += hours + ":" + minutes + ":" + seconds + " ";
-    if(hours > 11){
-        str += "PM";
-    } else {
-        str += "AM";
-    }
-    return str;
-}
-
-function wi_random_guid( number, size) {
-    var s4=function() {return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);};
-    var randomGUID=function(){return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();}
-    return randomGUID;
-}
 
 function wi_CapitalizeExtractFirstLetter(string){
     return string.charAt(0).toUpperCase();
@@ -292,50 +308,6 @@ function wi_web_url( in_trans , in_url , in_mode ){
       });
    }
    // rc = custom edits here raise (<title>)
-
-   return rc;
-}
-
-/* web.customRequest(
-{  
-   stepName:"<string>",
-   url:"<string>",
-   method:"<string>",
-   targetFrame:"<string>",
-   encType:"<string>",
-   recContentType:"<string>",
-   referer:"<string>",
-   bodyUnicode:"<string>",
-   bodyBinary:"<string>",
-   body:"<string>",
-   bodyFilePath:"<string>",
-   resource:"<string>",
-   resourceByteLimit:"<string>",
-   snapshot:"<string>",
-   mode:"<string>",
-   extraResBaseDir:"<string>",
-   userAgent:"<string>",
-   contentEncoding:"<string>",
-   rawBody:{  
-      content:"<string>",
-      length:"<string>"
-   },
-   "extraRes":[{  
-      url:"<string>",
-      referer:"<string>"
-   }]
-}
-*/
-
-function wi_post( in_trans , in_url , in_mode , in_title ){
-   var rc=0;
-   
-   WJS1_Config_StartTrans( in_trans, in_title );
-   
-
-   // rc = custom edits here raise (<title>)
-
-   rc=WJS1_Config_EndTrans( in_trans , rc );
 
    return rc;
 }

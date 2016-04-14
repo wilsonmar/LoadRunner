@@ -18,8 +18,27 @@ var nThinkTimeSecs   = Number(ThinkTimeSecs);
 
 function vuser_init(){
     var rc=0; var TextString;
-	
+
+    // FIXME: Use JavaScript closures instead of global variables. But LR returns is not defined error.
+    (function(){ // scoping scoping function.
+       var nThinkTimeSecs = {
+         secs: 0,
+         update: function() {
+         	this.secs = Number( lr.getAttribString("ThinkTimeSecs") );
+         },
+         show: function() {
+            return this.secs;
+         }
+       };
+    })();
+
     rc=wi_library_init();
+
+    //  Error: 'ReferenceError: ThinkTimeSecs is not defined'.
+   	// nThinkTimeSecs.update();
+    // WJS1_Config_print_warning();
+    // lr.outputMessage(">> nThinkTimeSecs.show() = "+ nThinkTimeSecs.show() +".");
+	//  wi_msg_print_reset();
 
 //    
         TextString = lr.getAttribString("Retries");   // maximum number of retries before giving up.
