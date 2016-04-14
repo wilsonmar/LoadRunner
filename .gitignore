@@ -38,6 +38,7 @@ result[1234567890]*/
 mdrv.log
 TransactionsData.db
 *.har
+*.shunra
 
 # output.txt - keep to show it working on local VuGen.
 
