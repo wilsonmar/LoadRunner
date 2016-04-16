@@ -1,19 +1,19 @@
-Virtual User Script started at : 4/15/2016 7:08:57 PM
+Virtual User Script started at : 4/16/2016 2:56:24 PM
 Starting action vuser_init.
-Web Turbo Replay of LoadRunner 12.50.0 for Windows 7; build 1096 (Apr 15 2016 16:55:24)  	[MsgId: MMSG-27143]
+Web Turbo Replay of LoadRunner 12.50.0 for Windows 7; build 1096 (Apr 16 2016 16:55:24)  	[MsgId: MMSG-27143]
 Run mode: HTML  	[MsgId: MMSG-26993]
 Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows; Trident/6.0)  	[MsgId: MMSG-26988]
-Run-Time Settings file: "C:\LRMaster1\WJS1_sample_WJS1250_v01\\default.cfg"  	[MsgId: MMSG-27141]
+Run-Time Settings file: "C:\githubs\wilsonmar\LoadRunner\WJS1_sample_WJS1250_v01\\default.cfg"  	[MsgId: MMSG-27141]
 wi_library.js(65): >> wi_msg_level_at_init = 18.
-wi_library.js(68): >> Unix Date =1460768937.
-wi_library.js(70): >> Unix Date =1460768938 = 2016-04-15 19:08:58 PM.
-wi_library.js(73): >> wi_random_seed = 3.4425091929733753.
-wi_library.js(76): >> HostName=WIN-HJA4A353DRG.
+wi_library.js(68): >> Unix Date =1460836584.
+wi_library.js(70): >> Unix Date =1460836585 = 2016-04-16 14:56:25 PM.
+wi_library.js(73): >> wi_random_seed = 57.730658538639545.
+wi_library.js(76): >> HostName=Mainali-PC.
 wi_library.js(79): >> VuserIp=.
 wi_library.js(83): >> vuserId: -1, ScenarioId: 0, Group: "undefined" are expected in VuGen.
 vuser_init.js(41): >> Retries in Run-Time Settings Attributes = 1.
 vuser_init.js(60): >> RunDataIn UpperCased = FILE.
-wi_library.js(382): >> count=2, rc=0, run_URL=http://www.microsoft.com.
+wi_library.js(382): >> count=2, rc=0, run_URL=https://www.microsoft.com.
 wi_library.js(382): >> count=3, rc=0, run_URL=http://www.google.com.
 vuser_init.js(77): >> RunDataIn ="FILE", wi_file_count finds 3 rows assuming no dups.
 Ending action vuser_init.
@@ -21,28 +21,28 @@ Running Vuser...
 Starting iteration 1.
 Starting action Action.
 Action.js(12): >> Action Iteration=1.
-WJS1_Access.js(48): >> RunDataIn_rows=3 based on assumed unique {run_URL}.
-WJS1_Access.js(64): >> 1, row=1, #=1 Chance blank, changed to 100.
-WJS1_Access.js(76): >> 1, row=1, #=1, use=Y, trans=T01_landing_wt3, chance=100, prep=, mode=, url=http://127.0.0.1:1080/WebTours/index.htm, title="Web Tours"
-WJS1_Access.js(96): >> Trans T01_landing_wt3 random_pct 0.0 <= 100.
+WJS1_Access.js(49): >> RunDataIn_rows=3 based on assumed unique {run_URL}.
+WJS1_Access.js(66): >> 1, row=1, #=1 Chance blank, changed to 100.
+WJS1_Access.js(78): >> 1, row=1, #=1, use=Y, trans=T01_landing_wt3, chance=100, prep=, mode=, url=http://127.0.0.1:1080/WebTours/index.htm, title="Web Tours"
+WJS1_Access.js(98): >> Trans T01_landing_wt3 random_pct 0.0 <= 100.
 WJS1_Config.js(34): lr_think_time: 0.50 seconds.
 WJS1_Config.js(38): web.regFind started  	[MsgId: MMSG-26355]
 WJS1_Config.js(38): Registering web.regFind was successful  	[MsgId: MMSG-26390]
 WJS1_Config.js(49): Notify: Transaction "T01_landing_wt3" started.
 wi_library.js(328): web.url("T01_landing_wt3") started  	[MsgId: MMSG-26355]
-wi_library.js(328): t=4406ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
+wi_library.js(328): t=51920ms: 298-byte response headers for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
 wi_library.js(328):     HTTP/1.1 200 OK\r\n
-wi_library.js(328):     Date: Sat, 16 Apr 2016 01:08:59 GMT\r\n
+wi_library.js(328):     Date: Sat, 16 Apr 2016 19:57:13 GMT\r\n
 wi_library.js(328):     Server: Apache/2.2.21 (Win32)\r\n
-wi_library.js(328):     Last-Modified: Mon, 27 May 2013 20:20:21 GMT\r\n
-wi_library.js(328):     ETag: "3000000020091-16e-4ddb8e0bc4b40"\r\n
+wi_library.js(328):     Last-Modified: Mon, 27 May 2013 19:20:21 GMT\r\n
+wi_library.js(328):     ETag: "2000000048ac9-16e-4ddb80a28a740"\r\n
 wi_library.js(328):     Accept-Ranges: bytes\r\n
 wi_library.js(328):     Content-Length: 366\r\n
 wi_library.js(328):     Keep-Alive: timeout=5, max=100\r\n
 wi_library.js(328):     Connection: Keep-Alive\r\n
 wi_library.js(328):     Content-Type: text/html\r\n
 wi_library.js(328):     \r\n
-wi_library.js(328): t=4416ms: 366-byte response body for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
+wi_library.js(328): t=51935ms: 366-byte response body for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=1)
 wi_library.js(328):     <HTML>\n
 wi_library.js(328):     <HEAD>\n
 wi_library.js(328):     <title>Web Tours</title>\n
@@ -62,39 +62,26 @@ wi_library.js(422): web.getIntProperty started  	[MsgId: MMSG-26355]
 wi_library.js(422): web.getIntProperty was successful  	[MsgId: MMSG-26392]
 wi_library.js(429): web.getIntProperty started  	[MsgId: MMSG-26355]
 wi_library.js(429): web.getIntProperty was successful  	[MsgId: MMSG-26392]
-WJS1_Config.js(73): Notify: Transaction "T01_landing_wt3" ended with a "Pass" status (Duration: 0.1707 Wasted Time: 0.0998).
-WJS1_Access.js(76): >> 1, row=2, #=2, use=Y, trans=T01_landing_ms, chance=100, prep=X, mode=HTTP, url=http://127.0.0.1:1080/WebTours/index.htm, title=Microsoft ý Official Home Page
-WJS1_Access.js(96): >> Trans T01_landing_ms random_pct 0.0 <= 100.
+WJS1_Config.js(73): Notify: Transaction "T01_landing_wt3" ended with a "Pass" status (Duration: 0.2673 Wasted Time: 0.1429).
+WJS1_Access.js(78): >> 1, row=2, #=2, use=Y, trans=T01_landing_ms, chance=100, prep=X, mode=HTTP, url=https://www.microsoft.com, title=Microsoft ý Official Home Page
+WJS1_Access.js(98): >> Trans T01_landing_ms random_pct 0.0 <= 100.
 WJS1_Config.js(34): lr_think_time: 0.50 seconds.
 WJS1_Config.js(38): web.regFind started  	[MsgId: MMSG-26355]
 WJS1_Config.js(38): Registering web.regFind was successful  	[MsgId: MMSG-26390]
 WJS1_Config.js(49): Notify: Transaction "T01_landing_ms" started.
 wi_library.js(328): web.url("T01_landing_ms") started  	[MsgId: MMSG-26355]
-wi_library.js(328): Retrieving data from cache for "http://127.0.0.1:1080/WebTours/index.htm"  	[MsgId: MMSG-26558]
-wi_library.js(328): t=5165ms: 366-byte response body retrieved from cache for "http://127.0.0.1:1080/WebTours/index.htm" (RelFrameId=1, Internal ID=2)
-wi_library.js(328):     <HTML>\n
-wi_library.js(328):     <HEAD>\n
-wi_library.js(328):     <title>Web Tours</title>\n
-wi_library.js(328):     <frameset rows = "65,*" border="1" bordercolor="#E0E7F1">\n
-wi_library.js(328):     <frame name="header" src="header.html" scrolling="no" noresize="noresize" marginheight="2"
-wi_library.js(328):      marginwidth="2"/>\n
-wi_library.js(328):     <frame name="body" src="/cgi-bin/welcome.pl?signOff=true" scrolling="auto" noresize="nores
-wi_library.js(328):     ize" marginheight="2" marginwidth="2" />\n
-wi_library.js(328):     </frameset>\n
-wi_library.js(328):     </HEAD>\n
-wi_library.js(328):     </HTML>\n
-wi_library.js(328):     \n
+wi_library.js(328): Error -27778: [GENERAL_MSG_CAT_SSL_ERROR]connect to host "www.microsoft.com" failed: [10054] Connection reset by peer  	[MsgId: MERR-27778]
 wi_library.js(328): Registered web.regFind successful for "Text=Microsoft ý Official Home Page"  	[MsgId: MMSG-26362]
-wi_library.js(328): web.url("T01_landing_ms") was successful, 0 body bytes, 0 header bytes  	[MsgId: MMSG-26386]
-WJS1_Config.js(62): >> Title not found.
-wi_library.js(422): web.getIntProperty started  	[MsgId: MMSG-26355]
-wi_library.js(422): web.getIntProperty was successful  	[MsgId: MMSG-26392]
-wi_library.js(429): web.getIntProperty started  	[MsgId: MMSG-26355]
-wi_library.js(429): web.getIntProperty was successful  	[MsgId: MMSG-26392]
-WJS1_Config.js(73): Notify: Transaction "T01_landing_ms" ended with a "Pass" status (Duration: 0.0850 Wasted Time: 0.0011).
+wi_library.js(328): web.url("T01_landing_ms") highest severity level was "ERROR", 0 body bytes, 0 header bytes  	[MsgId: MMSG-26388]
+wi_library.js(328): Notify: Transaction "T01_landing_ms" ended with a "Fail" status (Duration: 1.6172 Wasted Time: 1.1340).
+wi_library.js(328): Notify: Transaction "T01_landing_ms" has 1 error message(s).
+wi_library.js(328): Notify: The 1st error message associated with transaction "T01_landing_ms" is "Error -27778: [GENERAL_MSG_CAT_SSL_ERROR]connect to host "www.microsoft.com" failed: [10054] Connection reset by peer"
+wi_library.js(328): Error: Call function 'web.url' in script 'C:\githubs\wilsonmar\LoadRunner\WJS1_sample_WJS1250_v01\wi_library.js' error.
+WJS1_Access.js(142): Error: Call function 'wi_web_url' in script 'C:\githubs\wilsonmar\LoadRunner\WJS1_sample_WJS1250_v01\WJS1_Access.js' error.
+WJS1_Access.js(116): Error: Call function 'WJS1_Access_landing_retries' in script 'C:\githubs\wilsonmar\LoadRunner\WJS1_sample_WJS1250_v01\WJS1_Access.js' error.
+WJS1_Access.js(21): Error: Call function 'WJS1_Access_landing_loop_file' in script 'C:\githubs\wilsonmar\LoadRunner\WJS1_sample_WJS1250_v01\WJS1_Access.js' error.
+Action.js(15): Error: Call function 'WJS1_Access_landing_loops' in script 'C:\githubs\wilsonmar\LoadRunner\WJS1_sample_WJS1250_v01\Action.js' error.
 Ending action Action.
-Starting action WJS1_Config.
-Ending action WJS1_Config.
 Ending iteration 1.
 Ending Vuser...
 Starting action vuser_end.

@@ -43,6 +43,7 @@ function WJS1_Access_landing_loop_file(){
     var in_prep="";
     var in_chance="";
     var random_pct=0;
+    var RunDataIn_key="";
 
         WJS1_Config_print_info();
 	    lr.outputMessage(">> RunDataIn_rows=" + RunDataIn_rows +" based on assumed unique "+ "{run_URL}" +".");
@@ -50,7 +51,8 @@ function WJS1_Access_landing_loop_file(){
 
 	    // FIXME: RunDataIn_key one off from associated transname.
 	    for (i = 1; i < RunDataIn_rows; i++){
-	    	
+	    	RunDataIn_key  = lr.evalString("{run_URL}");
+
 	    	// NOTE: Using value in global RunDataIn_key retrieved in wi_file_count() within wi_library.js.
 	    	run_use_cap = wi_CapitalizeExtractFirstLetter( lr.evalString("{run_use}") );
 			in_trans  = lr.evalString("{run_TransName}");
