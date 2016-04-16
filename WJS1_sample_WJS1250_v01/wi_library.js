@@ -4,10 +4,50 @@
  * See http://wilsonmar.github.io/javascript-for-loadrunner/ for details.
  */
 
+var wi_msg_level = ( function() {
+    var wi_msg_level_init=0,
+    
+    init = function() {
+        wi_msg_level_init = lr.getDebugMessage();
+    },
+    
+    at_init = function() {
+        return wi_msg_level_init;
+    };
+    
+    return { // Public:
+        init: init,
+        at_init: at_init
+    }
+})();
+
+    var wi_unix_start_timestamp = (function () { // converts Date.now() to Unix time 10 digits.
+       var timestamp = 0;
+       return function () { 
+       	    timestamp = Math.floor(Date.now() /1000); // not Math.round(+new Date()/1000);
+       	    return timestamp;
+       }
+    })();
+    
+
+    // FIXME: Use JavaScript closures instead of global variables. But LR returns is not defined error.
+    (function(){ // scoping scoping function.
+       var nThinkTimeSecs = {
+         secs: 0,
+         update: function() {
+         	this.secs = Number( lr.getAttribString("ThinkTimeSecs") );
+         },
+         show: function() {
+            return this.secs;
+         }
+       };
+    })();
+
+
 // Global variable definitions:
-var wi_msg_level_at_init;
 var wi_http_download_bytes;
 var wi_http_download_ms;
+
 
 function wi_library_init(){
 
@@ -18,30 +58,19 @@ function wi_library_init(){
 				Date.now();
 			}
 
-    // var wi_unix_start_timestamp = Math.round(+new Date()/1000);
-    // var wi_unix_start_timestamp = Math.floor(Date.now() /1000); // converts Date.now() to Unix time 10 digits.
-    var wi_unix_start_timestamp = (function () {
-       var timestamp = 0;
-       return function () { 
-       	    timestamp = Math.floor(Date.now() /1000); // not Math.round(+new Date()/1000);
-       	    return timestamp;
-       }
-       })();
-    
 
-    wi_msg_level_at_init=lr.getDebugMessage(); // current settings.
-    wi_msg_level_print();
+    wi_msg_level.init();
 
     wi_msg_force_print();
-    lr.outputMessage(">> wi_msg_level_at_init = " + wi_msg_level_at_init +".");
+    lr.outputMessage(">> wi_msg_level_at_init = " + wi_msg_level.at_init() +".");
    
 	// new Date('Jan 1, 2039') / 1000 | 0 == -2117514496
-	lr.outputMessage(">> Unix Date =" + wi_unix_start_timestamp() );
+	lr.outputMessage(">> Unix Date =" + wi_unix_start_timestamp()  + ".");
 	wi_spin_ms(1000); // 1000 ms = 1 second
-	lr.outputMessage(">> Unix Date =" + wi_unix_start_timestamp() +" = "+ wi_displayTime() );
+	lr.outputMessage(">> Unix Date =" + wi_unix_start_timestamp() +" = "+ wi_displayTime()  + ".");
 
 	var wi_random_seed = Math.random() * 100 ;
-	lr.outputMessage(">> wi_random_seed = " + wi_random_seed );
+	lr.outputMessage(">> wi_random_seed = " + wi_random_seed  + ".");
 
 	var wi_HostName = lr.getHostName();
     lr.outputMessage(">> HostName=" + wi_HostName + ".");
@@ -194,7 +223,7 @@ function wi_msg_force_print(){
 
         lr.setDebugMessage( lr.MSG_CLASS_JIT_LOG_ON_ERROR, lr.SWITCH_OFF ); // off = show.
         lr.setDebugMessage( 30 ); // off = show.
-   //     lr.setDebugMessage( lr.MSG_CLASS_BRIEF_LOG, lr.SWITCH_ON );
+   //   lr.setDebugMessage( lr.MSG_CLASS_BRIEF_LOG, lr.SWITCH_ON );
 
    return 0;
 }
@@ -202,39 +231,39 @@ function wi_msg_force_print(){
 
 function wi_msg_print_reset(){
 
-    lr.setDebugMessage( wi_msg_level_at_init );
+	lr.setDebugMessage( wi_msg_level.at_init() );
 
-    if( wi_msg_level_at_init == 0 ){
+	if( wi_msg_level.at_init() == 0 ){
         lr.setDebugMessage( lr.MSG_CLASS_BRIEF_LOG, lr.SWITCH_OFF );
     }else{
         lr.setDebugMessage( lr.MSG_CLASS_BRIEF_LOG, lr.SWITCH_ON );
     }
 
-        if( (wi_msg_level_at_init & lr.MSG_CLASS_JIT_LOG_ON_ERROR) == lr.MSG_CLASS_JIT_LOG_ON_ERROR ){
+        if( (wi_msg_level.at_init() & lr.MSG_CLASS_JIT_LOG_ON_ERROR) == lr.MSG_CLASS_JIT_LOG_ON_ERROR ){
             lr.setDebugMessage( lr.MSG_CLASS_JIT_LOG_ON_ERROR, lr.SWITCH_ON ); // off = show.
     	}else{
             lr.setDebugMessage( lr.MSG_CLASS_JIT_LOG_ON_ERROR, lr.SWITCH_OFF ); // off = show.
         }
     
-        if( (wi_msg_level_at_init & lr.MSG_CLASS_EXTENDED_LOG) == lr.MSG_CLASS_EXTENDED_LOG ){
+        if( (wi_msg_level.at_init() & lr.MSG_CLASS_EXTENDED_LOG) == lr.MSG_CLASS_EXTENDED_LOG ){
             lr.setDebugMessage( lr.MSG_CLASS_EXTENDED_LOG, lr.SWITCH_ON ); // off = show.
     	}else{
             lr.setDebugMessage( lr.MSG_CLASS_EXTENDED_LOG, lr.SWITCH_OFF ); // off = show.
         }
 
-        if( (wi_msg_level_at_init & lr.MSG_CLASS_PARAMETERS) == lr.MSG_CLASS_PARAMETERS ){
+        if( (wi_msg_level.at_init() & lr.MSG_CLASS_PARAMETERS) == lr.MSG_CLASS_PARAMETERS ){
             lr.setDebugMessage( lr.MSG_CLASS_PARAMETERS, lr.SWITCH_ON ); // off = show.
     	}else{
             lr.setDebugMessage( lr.MSG_CLASS_PARAMETERS, lr.SWITCH_OFF ); // off = show.
         }
     
-        if( (wi_msg_level_at_init & lr.MSG_CLASS_FULL_TRACE) == lr.MSG_CLASS_FULL_TRACE ){
+        if( (wi_msg_level.at_init() & lr.MSG_CLASS_FULL_TRACE) == lr.MSG_CLASS_FULL_TRACE ){
             lr.setDebugMessage( lr.MSG_CLASS_FULL_TRACE, lr.SWITCH_ON ); // off = show.
     	}else{
             lr.setDebugMessage( lr.MSG_CLASS_FULL_TRACE, lr.SWITCH_OFF ); // off = show.
         }
     
-        if( (wi_msg_level_at_init & lr.MSG_CLASS_RESULT_DATA) == lr.MSG_CLASS_RESULT_DATA ){
+        if( (wi_msg_level.at_init() & lr.MSG_CLASS_RESULT_DATA) == lr.MSG_CLASS_RESULT_DATA ){
             lr.setDebugMessage( lr.MSG_CLASS_RESULT_DATA, lr.SWITCH_ON ); // off = show.
     	}else{
             lr.setDebugMessage( lr.MSG_CLASS_RESULT_DATA, lr.SWITCH_OFF ); // off = show.
