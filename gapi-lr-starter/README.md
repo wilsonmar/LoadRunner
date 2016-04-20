@@ -15,7 +15,7 @@ Google's API was chosen as the system under test since Google has provides a wel
 
 ## To use this script 
 
- 1. Install LoadRunner 11.52 on a Windows machine.
+ 1. Install LoadRunner on a Windows machine.
  2. Install a git client.
  3. Make a folder.
  4. Clone this repo within that folder (after creating an account on Github.com, if you haven't already).
