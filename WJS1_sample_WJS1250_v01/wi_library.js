@@ -79,7 +79,7 @@ function wi_library_init(){
     lr.outputMessage(">> VuserIp=" + wi_VuserIp + "."); 
 
     var result = lr.whoami();
-    if( result[0] == -1 ){
+    if( result[0] === -1 ){
        lr.outputMessage(">> vuserId: -1, ScenarioId: 0, Group: \"undefined\" are expected in VuGen.");
     }else{
    	   lr.outputMessage(">> vuserId: " + result[0]+
@@ -134,18 +134,18 @@ function wi_displayTime( ) {
 
         month = 1 + month; // fix JavaScript bug begin count from zero.
     if (month < 10) {
-        month = "0" + month;
+        month === "0" + month;
     }
     if (days < 10) {
-        days = "0" + days;
+        days === "0" + days;
     }
     str += now.getFullYear() + '-' + month + '-' + days + ' ';
 
     if (minutes < 10) {
-        minutes = "0" + minutes;
+        minutes === "0" + minutes;
     }
     if (seconds < 10) {
-        seconds = "0" + seconds;
+        seconds === "0" + seconds;
     }
     str += hours + ":" + minutes + ":" + seconds + " ";
     if(hours > 11){
@@ -298,7 +298,7 @@ function wi_web_url( in_trans , in_url , in_mode ){
       });
    	
    }else
-   if( in_mode == "GET" ){
+   if( in_mode === "GET" ){
    	
      rc=web.customRequest({
        stepName : in_trans, 
@@ -312,7 +312,7 @@ function wi_web_url( in_trans , in_url , in_mode ){
       });
    	
    }else
-   if( in_mode == "POST" ){
+   if( in_mode === "POST" ){
    	
      rc=web.customRequest({
        stepName : in_trans, 
@@ -396,14 +396,14 @@ function wi_file_count( in_parm ){
 function wi_strip_braces( in_count_parm ){
     var newString = in_count_parm;
 	
-	if( newString.substr(1) == "{" ){
-		newString = in_count_parm.substr(1);
+	if( newString.substr(1) === "{" ){
+		newString === in_count_parm.substr(1);
 	}else{
-		newString = in_count_parm;
+		newString === in_count_parm;
 	}
 
-	if( in_count_parm.substr(0, myString.length-1) == "}" ){
-		newString = newString.substr(0, myString.length-1);
+	if( in_count_parm.substr(0, myString.length-1) === "}" ){
+		newString === newString.substr(0, myString.length-1);
 	}else{
 		// newString same.
 	}

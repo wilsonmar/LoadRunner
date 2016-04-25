@@ -56,7 +56,7 @@ function WJS1_Config_EndTrans( in_trans , in_rc ){
   var rc=0;
 
     // Check web response captured by regFind into LoadRunner parameters:
-    if( lr.evalString("{title_found_count}") == 0 ){
+    if( lr.evalString("{title_found_count}") === 0 ){
         // Not found
 		WJS1_Config_print_error();
     	lr.outputMessage(">> Title not found.");
@@ -67,7 +67,7 @@ function WJS1_Config_EndTrans( in_trans , in_rc ){
     
     // TODO: Save response info into a log.
 
-    if( in_rc != 0 ){
+    if( in_rc !== 0 ){
        lr.endTransaction( in_trans, lr.FAIL );
     }else{
        lr.endTransaction( in_trans, lr.AUTO );

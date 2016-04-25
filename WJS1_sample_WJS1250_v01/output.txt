@@ -1,33 +1,33 @@
-Virtual User Script started at : 4/25/2016 1:55:11 PM
+Virtual User Script started at : 4/25/2016 4:28:47 PM
 Starting action vuser_init.
 Web Turbo Replay of LoadRunner 12.50.0 for Windows 7; build 1096 (Apr 25 2016 16:55:24)  	[MsgId: MMSG-27143]
 Run mode: HTML  	[MsgId: MMSG-26993]
 Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows; Trident/6.0)  	[MsgId: MMSG-26988]
-Run-Time Settings file: "C:\LoadRunner\WJS1_sample_WJS1250_v01\\default.cfg"  	[MsgId: MMSG-27141]
+Run-Time Settings file: "C:\githubs\wilsonmar\LoadRunner\WJS1_sample_WJS1250_v01\\default.cfg"  	[MsgId: MMSG-27141]
 wi_library.js(65): >> wi_msg_level_at_init = 18.
-wi_library.js(68): >> Unix Date =1461614111.
-wi_library.js(70): >> Unix Date =1461614112 = 2016-04-25 13:55:12 PM.
-wi_library.js(73): >> wi_random_seed = 8.080246625468135.
-wi_library.js(76): >> HostName=WIN-HJA4A353DRG.
+wi_library.js(68): >> Unix Date =1461619727.
+wi_library.js(70): >> Unix Date =1461619728 = 2016-4-25 16:28:48 PM.
+wi_library.js(73): >> wi_random_seed = 4.56359873060137.
+wi_library.js(76): >> HostName=Mainali-PC.
 wi_library.js(79): >> VuserIp=.
 wi_library.js(83): >> vuserId: -1, ScenarioId: 0, Group: "undefined" are expected in VuGen.
-vuser_init.js(41): >> Retries in Run-Time Settings Attributes = 1.
-vuser_init.js(60): >> RunDataIn UpperCased = FILE.
+vuser_init.js(43): >> Retries in Run-Time Settings Attributes = 1.
+vuser_init.js(62): >> RunDataIn UpperCased = FILE.
 wi_library.js(385): >> count=2, rc=0, run_URL=http://www.microsoft.com/.
 wi_library.js(385): >> count=3, rc=0, run_URL=http://127.0.0.1:1080/WebTours/index.htm.
 wi_library.js(385): >> count=4, rc=0, run_URL=https://www.google.com/?gws_rd=ssl.
-vuser_init.js(77): >> RunDataIn ="FILE", wi_file_count finds 4 rows assuming no dups.
+vuser_init.js(79): >> RunDataIn ="FILE", wi_file_count finds 4 rows assuming no dups.
 Ending action vuser_init.
 Running Vuser...
 Starting iteration 1.
 Starting action Action.
 Action.js(12): >> Action Iteration=1.
 WJS1_Access.js(49): >> RunDataIn_rows=4 based on assumed unique {run_URL}.
-WJS1_Access.js(78): >> 1, row=1, #=1, use=Y, trans=T01_REST_SPOTIFY, chance=100, prep=Y, mode=get, url=http://ws.spotify.com/search/1/album?q=foo, title=
+WJS1_Access.js(78): >> 1, row=1, #=1, use=Y, trans=T01_REST_SPOTIFY, chance=100, prep=Y, mode=GET, url=http://ws.spotify.com/search/1/album?q=foo, title=
 WJS1_Access.js(98): >> Trans T01_REST_SPOTIFY random_pct 0.0 <= 100.
 WJS1_Config.js(34): lr_think_time: 0.50 seconds.
 WJS1_Config.js(49): Notify: Transaction "T01_REST_SPOTIFY" started.
-wi_library.js(315): Notify: Transaction "T01_REST_SPOTIFY" ended with a "Stop" status (Duration: 49.1447).
+WJS1_Config.js(51): Notify: Transaction "T01_REST_SPOTIFY" ended with a "Stop" status (Duration: 6.1057).
 Abort was called from an action.
 Ending Vuser...
 Starting action vuser_end.

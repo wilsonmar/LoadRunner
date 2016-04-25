@@ -13,7 +13,7 @@ function Action(){
     wi_msg_print_reset();
 
     rc=WJS1_Access_landing_loops();
-    if( rc != 0 ){ return rc; }
+    if( rc !== 0 ){ return rc; }
 
     // TODO: Use sha1.js to authenticate calls to REST API
     

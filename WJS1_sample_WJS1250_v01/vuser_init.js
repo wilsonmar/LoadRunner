@@ -16,7 +16,7 @@ var  RunType;        // controls scope of script generic processing (URL_Landing
 var  ThinkTimeSecs   = lr.getAttribString("ThinkTimeSecs");
 var nThinkTimeSecs   = Number(ThinkTimeSecs);
 
-// FIXME: Use == in if's and !==. (Anil)
+// FIXME: Use === in if's and !==. (Anil)
 
 function vuser_init(){
     var rc=0; var TextString;
@@ -32,7 +32,7 @@ function vuser_init(){
 
 //    
         TextString = lr.getAttribString("Retries");   // maximum number of retries before giving up.
-    if( TextString === undefined || TextString == 0 ){
+    if( TextString === undefined || TextString === 0 ){
     	nRetries = 1; // FIXME: Retires not defined in RTS, yet not recognized as such in code.
    	    WJS1_Config_print_warning();
     	lr.outputMessage(">> Retries not defined in Run-Time Settings Attributes. Using default "+ nRetries +".");

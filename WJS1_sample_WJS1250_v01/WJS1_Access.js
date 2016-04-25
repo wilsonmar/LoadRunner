@@ -60,7 +60,7 @@ function WJS1_Access_landing_loop_file(){
 	    	in_mode   = lr.evalString("{run_mode}");
 	    	in_title  = lr.evalString("{run_title}");
 		   		in_chance = lr.evalString("{run_chance}");
-	    	if( in_chance == "" ){
+	    	if( in_chance === "" ){
 		   			in_chance = Number(100); // 100% chance of
 	  				WJS1_Config_print_trace();
 					lr.outputMessage(">> "+ lr.evalString("{pIteration}") 
@@ -69,7 +69,7 @@ function WJS1_Access_landing_loop_file(){
 	      	   		 + " Chance blank, changed to " + in_chance +".");
 	  				wi_msg_print_reset();
 	    	}
-	    	if( in_mode == "" ){
+	    	if( in_mode === "" ){
 	    		in_mode = "HTTP"; // or "HTML" to retrieve links in HTML as well.
 	    	}
 
@@ -88,11 +88,11 @@ function WJS1_Access_landing_loop_file(){
 	                );
 		    wi_msg_print_reset();
 
-		    if( "Y" != run_use_cap ){
+		    if( "Y" !== run_use_cap ){
 				continue; // jump to top of for loop with new iteration.
 			}
 		    
-		    if( random_pct != wi_random_pct() ){
+		    if( random_pct !== wi_random_pct() ){
 			 	if( random_pct <= in_chance ){
 	  				WJS1_Config_print_debug();
 	      	   		lr.outputMessage(">> Trans " + in_trans + " random_pct " + random_pct.toFixed(1) + " <= " 
@@ -116,7 +116,7 @@ function WJS1_Access_landing_loop_file(){
 		    	                             , in_title
  		    	                             );
    			
-			// if( rc != 0 ){ return rc; }
+			// if( rc !== 0 ){ return rc; }
 			// Next row:
 		  		// RunDataIn_key = lr.evalString("{run_URL}"); // This increments if run_URL has Update Value on: Each occurance. 
 				lr.advanceParam( "run_URL" ); // advance key not needed if run_URL has Update Value on: Each occurance. 
@@ -133,7 +133,7 @@ function WJS1_Access_landing_retries( in_trans , in_prep , in_mode , in_url , in
    var i =0;
    
       rc=WJS1_Access_landing_prep( in_prep ); // prepare global strings.
-       if( rc != 0 ){ return rc; }
+       if( rc !== 0 ){ return rc; }
 
    for( i = 0; i < nRetries; i++ ){ 
        	
@@ -142,7 +142,7 @@ function WJS1_Access_landing_retries( in_trans , in_prep , in_mode , in_url , in
 		rc=wi_web_url( in_trans , in_url , in_mode );
 		
 	    rc=WJS1_Config_EndTrans( in_trans , rc );
-        if( rc != 0 ){ return rc; }
+        if( rc !== 0 ){ return rc; }
         // else loop back to top of for loop above.
    }
    
@@ -153,20 +153,20 @@ function WJS1_Access_landing_retries( in_trans , in_prep , in_mode , in_url , in
 function WJS1_Access_landing_prep( in_prep ){
    var rc=0;
    
-    if( "X" == in_prep ){
+    if( "X" === in_prep ){
 	    json_put_string="";
    		json_post_file_path="";
    	
     }else
-    if( "Y" == in_prep ){
+    if( "Y" === in_prep ){
  
    	
  	}else
-    if( "Z" == in_prep ){
+    if( "Z" === in_prep ){
 	
    	
  	}else
-    if( "" == in_prep ){
+    if( "" === in_prep ){
    		// OK.
     }else{
 	   	WJS1_Config_print_error();
