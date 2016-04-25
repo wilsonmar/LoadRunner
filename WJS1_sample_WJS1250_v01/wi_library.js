@@ -281,6 +281,9 @@ function wi_CapitalizeExtractFirstLetter(string){
 function wi_web_url( in_trans , in_url , in_mode ){
    var rc=0;
    
+   // TODO: Make REST API to return JSON (no authentication) based on https://www.lynda.com/API-tutorials/Effective-Design-RESTful-APIs/166777-2.html
+   // https://shkspr.mobi/blog/2014/04/wanted-simple-apis-without-authentication/
+   
    if( in_mode == "PUT" ){
    	
      rc=web.customRequest({

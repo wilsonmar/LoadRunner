@@ -16,11 +16,13 @@ var  RunType;        // controls scope of script generic processing (URL_Landing
 var  ThinkTimeSecs   = lr.getAttribString("ThinkTimeSecs");
 var nThinkTimeSecs   = Number(ThinkTimeSecs);
 
+// FIXME: Use == in if's and !==. (Anil)
+
 function vuser_init(){
     var rc=0; var TextString;
 
     rc=wi_library_init();
-    if( rc != 0 ){ return rc; }
+    if( rc !== 0 ){ return rc; }
 
     //  Error: 'ReferenceError: ThinkTimeSecs is not defined'.
    	// nThinkTimeSecs.update();
