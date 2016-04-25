@@ -326,14 +326,14 @@ function wi_web_url( in_trans , in_url , in_mode ){
    }else{ // assume HTTP or HTML in in_mode
    	
      rc=web.url({
-       name : in_trans, 
-       url :  in_url, 
-       targetFrame : '', 
-       resource : 0, 
+       name           : in_trans, 
+       url            : in_url, 
+       targetFrame    : '', 
+       resource       : 0, 
        recContentType : 'text/html', 
-       referer : '', 
-       snapshot : 't1.inf', 
-       mode : in_mode
+       referer        : '', 
+       snapshot       : 't1.inf', 
+       mode           : in_mode
       });
    }
    // rc = custom edits here raise (<title>)
