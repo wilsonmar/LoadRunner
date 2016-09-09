@@ -1,0 +1,169 @@
+Virtual User Script started at : 2016-09-09 10:55:17
+TruClient Replay for LoadRunner 12.53.0, build 1203. OS: Windows 7, initialized on 2016/09/09 at 10:55:17 (0000.000s)
+t=00001494ms: ** 2: Evaluate JavaScript code // Log of run conditions....getUserIP );    ** started    [MsgId: MMSG-205180]
+t=00001496ms: document.lastModified=09/09/2016 10:55:18    [MsgId: MMSG-205180]
+t=00001498ms: >> LR.scriptDir=C:\githubs\wilsonmar\LoadRunner\WT3_perftest_S02_TCFF1253_v01\    [MsgId: MMSG-205180]
+t=00001498ms: >> LR.outputDir=C:\githubs\wilsonmar\LoadRunner\WT3_perftest_S02_TCFF1253_v01\    [MsgId: MMSG-205180]
+t=00001499ms: >> LR.userId=-1    [MsgId: MMSG-205180]
+t=00001500ms: >> LR.scenarioId=0    [MsgId: MMSG-205180]
+t=00001500ms: >> LR.groupName=None    [MsgId: MMSG-205180]
+t=00001501ms: >> LR.getUserIP=function () { 
+			var args = Array.prototype.slice.call(arguments, 0), err; 
+			var errors = TC_NS.Schema.validate(args, schemas[funcName]); 
+			if (errors.length) { 
+				err = new Error(apiName + "." + funcName + "(\"" + args.join("\",\"") + "\") " + errors.join('\n')); 
+				err.name = TC_NS.ArgsContext.API_ERROR_INVALID_ARGUMENTS; 
+				throw err; 
+			} 
+			try { return origFunc.apply(window, args); 
+			} catch(ex) { 
+				var msg = ""; 
+				if (ex instanceof TC_NS.APIError) { 
+					err = new Error(apiName + "." + funcName + "(\"" + args.join("\",\"") + "\") " + ex.toString()); 
+					err.name = TC_NS.ArgsContext.API_ERROR_INVALID_ARGUMENTS_RUNTIME; 
+				} 
+				else { 
+					err = new Error(apiName + "." + funcName + " " + ex.toString()); 
+					err.name = TC_NS.ArgsContext.API_ERROR_UNEXPECTED; 
+				} 
+				throw err; 
+			} 
+		}    [MsgId: MMSG-205180]
+t=00001705ms: ** 2: Evaluate JavaScript code // Log of run conditions....getUserIP );    ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00001718ms: ** 3: Evaluate JavaScript code // document. items : // ...ocEmbeds ); //=  ** started    [MsgId: MMSG-205180]
+t=00001720ms: document.readyState=complete    [MsgId: MMSG-205180]
+t=00001721ms: document.referrer=    [MsgId: MMSG-205180]
+t=00001721ms: document.URL=about:blank    [MsgId: MMSG-205180]
+t=00001721ms: document.doctype=null    [MsgId: MMSG-205180]
+t=00001722ms: document.domain=null    [MsgId: MMSG-205180]
+t=00001722ms: document.documentURI=about:blank    [MsgId: MMSG-205180]
+t=00001722ms: document.cookie=    [MsgId: MMSG-205180]
+t=00001722ms: document.head=[object HTMLHeadElement]    [MsgId: MMSG-205180]
+t=00001723ms: document.anchors=[object HTMLCollection]    [MsgId: MMSG-205180]
+t=00001723ms: document.embeds=[object HTMLCollection]    [MsgId: MMSG-205180]
+t=00001926ms: ** 3: Evaluate JavaScript code // document. items : // ...ocEmbeds ); //=  ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+Running Vuser...
+Starting iteration 1.
+Notify: Transaction "T03_WT3_URL_Landing" started.
+t=00002748ms: ** 1: Navigate to "http://127.0.0.1:1080/WebTours/index.htm" ** started    [MsgId: MMSG-205180]
+t=00005972ms: ** 1: Navigate to http://127.0.0.1:1080/WebTours/index.htm ** successfully completed with end event 'Document Loaded'    [MsgId: MMSG-205180]
+Notify: Transaction "T03_WT3_URL_Landing" ended with a "Pass" status (Duration: 3.2320 Wasted Time: 0.2050).
+t=00006083ms: ** 2: Verify  sign up now's "Visible Text" Contain sign up now ** started    [MsgId: MMSG-205180]
+t=00006360ms: ** 2: Verify  sign up now's "Visible Text" Contain sign up now ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+Notify: Transaction "T04_WT3_SignUp_Error" started.
+t=00006870ms: ** 3: Click on sign up now link ** started    [MsgId: MMSG-205180]
+t=00007509ms: ** 3: Click on sign up now link ** successfully completed with end event 'Step synchronous network completed'    [MsgId: MMSG-205180]
+t=00008016ms: ** 4: Click on Username  textbox ** started    [MsgId: MMSG-205180]
+t=00008305ms: ** 4: Click on Username  textbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00008822ms: ** 5: Type jojo in Username  textbox ** started    [MsgId: MMSG-205180]
+t=00010971ms: ** 5: Type jojo in Username  textbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00011483ms: ** 6: Type **** in Password  passwordbox ** started    [MsgId: MMSG-205180]
+t=00013378ms: ** 6: Type **** in Password  passwordbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00013889ms: ** 7: Type **** in Confirm  passwordbox ** started    [MsgId: MMSG-205180]
+t=00016010ms: ** 7: Type **** in Confirm  passwordbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00016523ms: ** 8: Click on register button ** started    [MsgId: MMSG-205180]
+t=00017154ms: ** 8: Click on register button ** successfully completed with end event 'Step synchronous network completed'    [MsgId: MMSG-205180]
+Notify: Transaction "T04_WT3_SignUp_Error" ended with a "Pass" status (Duration: 10.2970 Wasted Time: 3.5080).
+t=00017173ms: ** 9: Verify  Your username is taken....'s "Visible Text" Contain Your username is taken. ... a unique name). ** started    [MsgId: MMSG-205180]
+t=00017459ms: ** 9: Verify  Your username is taken....'s "Visible Text" Contain Your username is taken. ... a unique name). ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+Notify: Transaction "T05_WT3_SignUp" started.
+t=00017973ms: ** 10: Click on jojo textbox ** started    [MsgId: MMSG-205180]
+t=00018285ms: ** 10: Click on jojo textbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00018775ms: ** 11: Type jojo102 in jojo textbox ** started    [MsgId: MMSG-205180]
+t=00022288ms: ** 11: Type jojo102 in jojo textbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00022799ms: ** 12: Type **** in Password  passwordbox ** started    [MsgId: MMSG-205180]
+t=00024738ms: ** 12: Type **** in Password  passwordbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00025248ms: ** 13: Type **** in Confirm  passwordbox ** started    [MsgId: MMSG-205180]
+t=00026974ms: ** 13: Type **** in Confirm  passwordbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00027487ms: ** 14: Click on First Name  textbox ** started    [MsgId: MMSG-205180]
+t=00027791ms: ** 14: Click on First Name  textbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00028302ms: ** 15: Type whatever in First Name  textbox ** started    [MsgId: MMSG-205180]
+t=00031723ms: ** 15: Type whatever in First Name  textbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00032233ms: ** 16: Type whatever in Last Name  textbox ** started    [MsgId: MMSG-205180]
+t=00035646ms: ** 16: Type whatever in Last Name  textbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00036158ms: ** 17: Type whatever in Street Address  textbox ** started    [MsgId: MMSG-205180]
+t=00039642ms: ** 17: Type whatever in Street Address  textbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00040157ms: ** 18: Type whatever in City/State/Zip  textbox ** started    [MsgId: MMSG-205180]
+t=00043494ms: ** 18: Type whatever in City/State/Zip  textbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00044006ms: ** 19: Click on register button ** started    [MsgId: MMSG-205180]
+t=00044731ms: ** 19: Click on register button ** successfully completed with end event 'Step synchronous network completed'    [MsgId: MMSG-205180]
+Notify: Transaction "T05_WT3_SignUp" ended with a "Pass" status (Duration: 26.7730 Wasted Time: 6.5080).
+Notify: Transaction "T08_WT3_SignIn_Error" started.
+t=00045243ms: ** 20: Click on Username textbox ** started    [MsgId: MMSG-205180]
+t=00045509ms: ** 20: Click on Username textbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00046017ms: ** 21: Type jojo in Username textbox ** started    [MsgId: MMSG-205180]
+t=00048057ms: ** 21: Type jojo in Username textbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00048563ms: ** 22: Type *** in Password passwordbox ** started    [MsgId: MMSG-205180]
+t=00049961ms: ** 22: Type *** in Password passwordbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00050469ms: ** 23: Click on Login button ** started    [MsgId: MMSG-205180]
+t=00051188ms: ** 23: Click on Login button ** successfully completed with end event 'Step synchronous network completed'    [MsgId: MMSG-205180]
+Notify: Transaction "T08_WT3_SignIn_Error" ended with a "Pass" status (Duration: 5.9550 Wasted Time: 2.3020).
+t=00051202ms: ** 24: Verify  Web Tours Error   Incorrect...'s "Visible Text" Contain Web Tours Error - Incorrect Password ** started    [MsgId: MMSG-205180]
+t=00051484ms: ** 24: Verify  Web Tours Error   Incorrect...'s "Visible Text" Contain Web Tours Error - Incorrect Password ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+Notify: Transaction "T12_WT3_SignIn" started.
+t=00051994ms: ** 25: Click on Username textbox ** started    [MsgId: MMSG-205180]
+t=00052276ms: ** 25: Click on Username textbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00052792ms: ** 26: Type jojo102 in Username textbox ** started    [MsgId: MMSG-205180]
+t=00055006ms: ** 26: Type jojo102 in Username textbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00055517ms: ** 27: Type **** in Password passwordbox ** started    [MsgId: MMSG-205180]
+t=00057017ms: ** 27: Type **** in Password passwordbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00057527ms: ** 28: Click on Login button ** started    [MsgId: MMSG-205180]
+t=00058363ms: ** 28: Click on Login button ** successfully completed with end event 'Step synchronous network completed'    [MsgId: MMSG-205180]
+Notify: Transaction "T12_WT3_SignIn" ended with a "Pass" status (Duration: 6.3810 Wasted Time: 2.3110).
+t=00058382ms: ** 29: Verify  Welcome, 's "Visible Text" Contain Welcome, jojo102, to the...hen you're done! ** started    [MsgId: MMSG-205180]
+t=00058657ms: ** 29: Verify  Welcome, 's "Visible Text" Contain Welcome, jojo102, to the...hen you're done! ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+Notify: Transaction "WT3_T21_Travel_Home" started.
+t=00059176ms: ** 30: Click on Home Button image ** started    [MsgId: MMSG-205180]
+t=00060387ms: ** 30: Click on Home Button image ** successfully completed with end event 'Step synchronous network completed'    [MsgId: MMSG-205180]
+Notify: Transaction "WT3_T21_Travel_Home" ended with a "Pass" status (Duration: 1.2260 Wasted Time: 0.2010).
+t=00060404ms: ** 31: Verify  Search Flights Button's "Visible Text" Contain [Value] ** started    [MsgId: MMSG-205180]
+t=00060681ms: ** 31: Verify  Search Flights Button's "Visible Text" Contain [Value] ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+Notify: Transaction "WT3_T22_Travel_Search_Flight" started.
+t=00061194ms: ** 32: Click on Search Flights Button image ** started    [MsgId: MMSG-205180]
+t=00062582ms: ** 32: Click on Search Flights Button image ** successfully completed with end event 'Step synchronous network completed'    [MsgId: MMSG-205180]
+Notify: Transaction "WT3_T22_Travel_Search_Flight" ended with a "Pass" status (Duration: 1.4020 Wasted Time: 0.2030).
+t=00062598ms: ** 33: Verify  Find Flight's "Visible Text" Contain Find Flight ** started    [MsgId: MMSG-205180]
+t=00062930ms: ** 33: Verify  Find Flight's "Visible Text" Contain Find Flight ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+Notify: Transaction "WT3_T23_Travel_Flight_Lookup" started.
+t=00063444ms: ** 34: Select Los Angeles from Arrival City  listbox ** started    [MsgId: MMSG-205180]
+t=00063574ms: ** 34: Select Los Angeles from Arrival City  listbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00064083ms: ** 35: Click on findFlights button ** started    [MsgId: MMSG-205180]
+t=00064853ms: ** 35: Click on findFlights button ** successfully completed with end event 'Step synchronous network completed'    [MsgId: MMSG-205180]
+Notify: Transaction "WT3_T23_Travel_Flight_Lookup" ended with a "Pass" status (Duration: 1.4230 Wasted Time: 0.7030).
+t=00064878ms: ** 36: Verify  Flight departing from...'s "Visible Text" Contain Flight departing from ** started    [MsgId: MMSG-205180]
+t=00065166ms: ** 36: Verify  Flight departing from...'s "Visible Text" Contain Flight departing from ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+Notify: Transaction "WT3_T24_Find_Flight" started.
+t=00065684ms: ** 37: Click on reserveFlights button ** started    [MsgId: MMSG-205180]
+t=00066423ms: ** 37: Click on reserveFlights button ** successfully completed with end event 'Step synchronous network completed'    [MsgId: MMSG-205180]
+Notify: Transaction "WT3_T24_Find_Flight" ended with a "Pass" status (Duration: 0.7530 Wasted Time: 0.2010).
+t=00066442ms: ** 38: Verify  Payment Details's "Visible Text" Contain Payment Details ** started    [MsgId: MMSG-205180]
+t=00066760ms: ** 38: Verify  Payment Details's "Visible Text" Contain Payment Details ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+Notify: Transaction "WT3_T25_Travel_Payment_Details" started.
+t=00067273ms: ** 39: Click on Credit Card  textbox ** started    [MsgId: MMSG-205180]
+t=00067569ms: ** 39: Click on Credit Card  textbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00068072ms: ** 40: Type 123456789 in Credit Card  textbox ** started    [MsgId: MMSG-205180]
+t=00071912ms: ** 40: Type 123456789 in Credit Card  textbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00072429ms: ** 41: Click on Exp Date  textbox ** started    [MsgId: MMSG-205180]
+t=00072733ms: ** 41: Click on Exp Date  textbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00073246ms: ** 42: Type 12/20 in Exp Date  textbox ** started    [MsgId: MMSG-205180]
+t=00075192ms: ** 42: Type 12/20 in Exp Date  textbox ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+t=00075702ms: ** 43: Click on buyFlights button ** started    [MsgId: MMSG-205180]
+t=00076382ms: ** 43: Click on buyFlights button ** successfully completed with end event 'Step synchronous network completed'    [MsgId: MMSG-205180]
+Notify: Transaction "WT3_T25_Travel_Payment_Details" ended with a "Pass" status (Duration: 9.1210 Wasted Time: 3.0030).
+t=00076396ms: ** 44: Verify  Invoice's "Visible Text" Contain Invoice ** started    [MsgId: MMSG-205180]
+t=00076666ms: ** 44: Verify  Invoice's "Visible Text" Contain Invoice ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+Notify: Transaction "WT3_T33_Travel_Check_Itinerary" started.
+t=00077178ms: ** 45: Double click Itinerary Button image ** started    [MsgId: MMSG-205180]
+t=00077988ms: ** 45: Double click Itinerary Button image ** successfully completed with end event 'Step synchronous network completed'    [MsgId: MMSG-205180]
+Notify: Transaction "WT3_T33_Travel_Check_Itinerary" ended with a "Pass" status (Duration: 0.8240 Wasted Time: 0.2000).
+t=00078011ms: ** 46: Verify  Itinerary's "Visible Text" Contain Itinerary ** started    [MsgId: MMSG-205180]
+t=00078292ms: ** 46: Verify  Itinerary's "Visible Text" Contain Itinerary ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+Notify: Transaction "T34_WT3_SignOut" started.
+t=00078806ms: ** 47: Click on SignOff Button image ** started    [MsgId: MMSG-205180]
+t=00079461ms: ** 47: Click on SignOff Button image ** successfully completed with end event 'Step synchronous network completed'    [MsgId: MMSG-205180]
+Notify: Transaction "T34_WT3_SignOut" ended with a "Pass" status (Duration: 0.6690 Wasted Time: 0.2000).
+t=00079477ms: ** 48: Verify  administration's "Visible Text" Contain administration ** started    [MsgId: MMSG-205180]
+t=00079743ms: ** 48: Verify  administration's "Visible Text" Contain administration ** successfully completed with end event 'Action completed'    [MsgId: MMSG-205180]
+Ending iteration 1.
+Ending Vuser...
+Vuser Terminated.
