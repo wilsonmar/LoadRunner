@@ -1,6 +1,6 @@
-Virtual User Script started at : 4/5/2016 7:19:23 PM
+Virtual User Script started at : 10/3/2016 9:13:18 AM
 Starting action vuser_init.
-Web Turbo Replay of LoadRunner 12.50.0 for Windows 7; build 1096 (Apr 05 2016 16:55:24)  	[MsgId: MMSG-27143]
+Web Turbo Replay of LoadRunner 12.53.0 for Windows 7; build 1203 (Oct 03 2016 19:13:20)  	[MsgId: MMSG-26983]
 Run mode: HTML  	[MsgId: MMSG-26993]
 Replay user agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Win64; x64; Trident/6.0)  	[MsgId: MMSG-26988]
 Run-Time Settings file: "C:\githubs\wilsonmar\LoadRunner\WT3_PerfTest_S01_WJS1250_v04\\default.cfg"  	[MsgId: MMSG-27141]
@@ -23,16 +23,16 @@ WT3_SignUpInOut.js(27): Found resource "http://127.0.0.1:1080/WebTours/images/we
 WT3_SignUpInOut.js(27): Detected non-resource "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true"  	[MsgId: MMSG-26574]
 WT3_SignUpInOut.js(27): Detected non-resource "http://127.0.0.1:1080/WebTours/home.html" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=true"  	[MsgId: MMSG-26574]
 WT3_SignUpInOut.js(27): Found resource "http://127.0.0.1:1080/WebTours/images/mer_login.gif" in HTML "http://127.0.0.1:1080/cgi-bin/nav.pl?in=home"  	[MsgId: MMSG-26659]
-WT3_SignUpInOut.js(27): Notify: Saving Parameter "userSession = 118258.563304982zAicQctpifDztQHpftQV".
+WT3_SignUpInOut.js(27): Notify: Saving Parameter "userSession = 119522.397650871zVtHQDDpDcQVzzzHDziiHpfQQQHf".
 WT3_SignUpInOut.js(27): Registered web_reg_find successful for "Text=Web Tours" (count=6)  	[MsgId: MMSG-26364]
-WT3_SignUpInOut.js(27): web.url("index.htm") was successful, 10072 body bytes, 2419 header bytes, 24 chunking overhead bytes  	[MsgId: MMSG-26385]
-WT3_SignUpInOut.js(40): Notify: Transaction "WT3_T03_URL_Landing" ended with a "Pass" status (Duration: 0.8353 Wasted Time: 0.3818).
+WT3_SignUpInOut.js(27): web.url("index.htm") was successful, 10080 body bytes, 2419 header bytes, 24 chunking overhead bytes  	[MsgId: MMSG-26385]
+WT3_SignUpInOut.js(40): Notify: Transaction "WT3_T03_URL_Landing" ended with a "Pass" status (Duration: 0.4106 Wasted Time: 0.1205).
 WT3_SignUpInOut.js(42): Notify: Transaction "WT3_T04_SignUpNow" started.
 WT3_SignUpInOut.js(44): web.url("login.pl") started  	[MsgId: MMSG-26355]
 WT3_SignUpInOut.js(44): Found resource "http://127.0.0.1:1080/WebTours/profileValidate.js" in HTML "http://127.0.0.1:1080/cgi-bin/login.pl?username=&password=&getInfo=true"  	[MsgId: MMSG-26659]
 WT3_SignUpInOut.js(44): Found resource "http://127.0.0.1:1080/WebTours/images/button_next.gif" in HTML "http://127.0.0.1:1080/cgi-bin/login.pl?username=&password=&getInfo=true"  	[MsgId: MMSG-26659]
 WT3_SignUpInOut.js(44): web.url("login.pl") was successful, 14475 body bytes, 838 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
-WT3_SignUpInOut.js(56): Notify: Transaction "WT3_T04_SignUpNow" ended with a "Pass" status (Duration: 0.3678 Wasted Time: 0.0233).
+WT3_SignUpInOut.js(56): Notify: Transaction "WT3_T04_SignUpNow" ended with a "Pass" status (Duration: 0.1938 Wasted Time: 0.0149).
 WT3_SignUpInOut.js(58): Notify: Transaction "WT3_T05_SignUp" started.
 WT3_SignUpInOut.js(60): web.submitForm("login.pl_2") started  	[MsgId: MMSG-26355]
 WT3_SignUpInOut.js(60): Notify: Next row for parameter UserIds_userid = 1 [table  = UserIds_userid].
@@ -44,14 +44,14 @@ WT3_SignUpInOut.js(60): Notify: Parameter Substitution: parameter "UserIds_pwd" 
 WT3_SignUpInOut.js(60): Submitting form to "http://127.0.0.1:1080/cgi-bin/login.pl", Target Frame="info"  	[MsgId: MMSG-27978]
 WT3_SignUpInOut.js(60): Resource "http://127.0.0.1:1080/WebTours/images/button_next.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
 WT3_SignUpInOut.js(60): web.submitForm("login.pl_2") was successful, 1079 body bytes, 347 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
-WT3_SignUpInOut.js(78): Notify: Transaction "WT3_T05_SignUp" ended with a "Pass" status (Duration: 0.2461 Wasted Time: 0.0058).
+WT3_SignUpInOut.js(78): Notify: Transaction "WT3_T05_SignUp" ended with a "Pass" status (Duration: 0.4286 Wasted Time: 0.0050).
 WT3_SignUpInOut.js(82): web.regFind started  	[MsgId: MMSG-26355]
 WT3_SignUpInOut.js(82): Registering web.regFind was successful  	[MsgId: MMSG-26390]
 WT3_SignUpInOut.js(88): Notify: Transaction "WT3_T07_SignIn" started.
 WT3_SignUpInOut.js(90): web.submitData("login.pl") started  	[MsgId: MMSG-26355]
 WT3_SignUpInOut.js(90): Notify: Parameter Substitution: parameter "pProtocolHostPort" =  "http://127.0.0.1:1080"
 WT3_SignUpInOut.js(90): Notify: Parameter Substitution: parameter "pProtocolHostPort" =  "http://127.0.0.1:1080"
-WT3_SignUpInOut.js(90): Notify: Parameter Substitution: parameter "userSession" =  "118258.563304982zAicQctpifDztQHpftQV"
+WT3_SignUpInOut.js(90): Notify: Parameter Substitution: parameter "userSession" =  "119522.397650871zVtHQDDpDcQVzzzHDziiHpfQQQHf"
 WT3_SignUpInOut.js(90): Notify: Next row for parameter UserIds_userid = 1 [table  = UserIds_userid].
 WT3_SignUpInOut.js(90): Notify: Parameter Substitution: parameter "UserIds_userid" =  "test23"
 WT3_SignUpInOut.js(90): Notify: Next row for parameter UserIds_pwd = 1 [table  = UserIds_pwd].
@@ -67,7 +67,7 @@ WT3_SignUpInOut.js(90): web.submitData("login.pl") was successful, 5781 body byt
 WT3_SignUpInOut.js(111): Notify: Next row for parameter UserIds_userid = 1 [table  = UserIds_userid].
 WT3_SignUpInOut.js(111): Notify: Parameter Substitution: parameter "UserIds_userid" =  "test23"
 WT3_SignUpInOut.js(111): ----->>>>Welcome ! You are Logged In as test23
-WT3_SignUpInOut.js(113): Notify: Transaction "WT3_T07_SignIn" ended with a "Pass" status (Duration: 0.4823 Wasted Time: 0.0106).
+WT3_SignUpInOut.js(113): Notify: Transaction "WT3_T07_SignIn" ended with a "Pass" status (Duration: 0.3335 Wasted Time: 0.0077).
 WT3_SignUpInOut.js(116): Notify: Transaction "WT3_T08_SignOut" started.
 WT3_SignUpInOut.js(119): web.image("SignOff Button") started  	[MsgId: MMSG-26355]
 WT3_SignUpInOut.js(119): Image-linking to "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=1", Target Frame="body"  	[MsgId: MMSG-27993]
@@ -75,8 +75,8 @@ WT3_SignUpInOut.js(119): Detected non-resource "http://127.0.0.1:1080/cgi-bin/na
 WT3_SignUpInOut.js(119): Detected non-resource "http://127.0.0.1:1080/WebTours/home.html" in "http://127.0.0.1:1080/cgi-bin/welcome.pl?signOff=1"  	[MsgId: MMSG-26574]
 WT3_SignUpInOut.js(119): Retrieving data from cache for "http://127.0.0.1:1080/WebTours/home.html"  	[MsgId: MMSG-26558]
 WT3_SignUpInOut.js(119): Resource "http://127.0.0.1:1080/WebTours/images/mer_login.gif" is in the cache already and will not be downloaded again  	[MsgId: MMSG-26655]
-WT3_SignUpInOut.js(119): web.image("SignOff Button") was successful, 2175 body bytes, 630 header bytes, 24 chunking overhead bytes  	[MsgId: MMSG-26385]
-WT3_SignUpInOut.js(129): Notify: Transaction "WT3_T08_SignOut" ended with a "Pass" status (Duration: 0.4285 Wasted Time: 0.0048).
+WT3_SignUpInOut.js(119): web.image("SignOff Button") was successful, 2171 body bytes, 630 header bytes, 24 chunking overhead bytes  	[MsgId: MMSG-26385]
+WT3_SignUpInOut.js(129): Notify: Transaction "WT3_T08_SignOut" ended with a "Pass" status (Duration: 0.2469 Wasted Time: 0.0057).
 Ending action Action.
 Ending iteration 1.
 Ending Vuser...
