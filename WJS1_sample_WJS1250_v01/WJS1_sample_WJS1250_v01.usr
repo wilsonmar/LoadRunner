@@ -67,7 +67,7 @@ vuser_end=JsExt-Interpreter
 [TransactionsOrder]
 Order=
 [StateManagement]
-LastReplayStatus=2
+LastReplayStatus=1
 [ActiveReplay]
 LastReplayedRunName=result1
 ActiveRunName=result1
