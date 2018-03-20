@@ -2,7 +2,7 @@ This script is intended for instructor-guided use during on-site live hands-on c
 
 The preference here is to place documentation in the script itself rather than in external documents.
 
-This repo's name includes <strong>starter</strong> because it contains examples of how to code many of the constructs needed in advanced scripts in productive use:
+This repo's name includes <strong>starter</strong> because it contains an <strong>example</strong> of how to code many of the constructs needed in advanced scripts in productive use:
 
  * VTS (Virtual Table Server) provided within LoadRunner.
  * A library of utility functions.
@@ -29,6 +29,7 @@ Google's API was chosen as the system under test since Google has provides a wel
  11. Change the Results folder path.
 
 ## Files in this repo
+
 * <strong>.gitignore</strong> is used by the collaborators of this repo for git clients to automatically block some files from being updated to github.com.
 
 * <strong>output.txt</strong> is saved from the last run of this script using VuGen, with verbosity set to maximum.
@@ -39,4 +40,12 @@ Google's API was chosen as the system under test since Google has provides a wel
 * <strong>vuser_init.c</strong> contains global variable definitions.
 * <strong>action.c</strong> contains main loop functions.
 * <strong>wi_library.c</strong> contains utility functions used by many scripts.
+
+
+## Additional Info
+
+A description of coding for JWT in C# is at:
+https://www.red-gate.com/simple-talk/dotnet/c-programming/jwt-authentication-microservices-net/
+
+
 
